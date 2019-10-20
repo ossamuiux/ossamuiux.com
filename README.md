@@ -2,6 +2,9 @@
 수강생 포트폴리오 사이트
 
 ## 기술
-### html
-### css
-### javascript
+<ul>
+<li>html</li>
+<li>css</li>
+<li>javascript</li>
+</ul>
+
