@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>현대자동차 이벤트</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$('.sub1_con>div:gt(0)').hide();
+	
+	$('.sub1_menu li').click(function(){
+		var num=$(this).index();
+		$('.sub1_con>div').hide();
+		$('.sub1_con>div').eq(num).show();
+		
+		$('.sub1_menu li').removeClass('on');	
+		$(this).addClass('on');
+	});
+	
+	$('.mhi_gnb1 li').eq(0).mouseenter(function(){
+		$('.sub1_con>div').hide();
+		$('.sub1_con>div').eq(0).show();
+		
+		
+		$('.sub1_menu li').removeClass('on');
+		$('.sub1_menu li').eq(0).addClass('on');		
+	});
+	
+	var sw=true;
+	$('.family button').click(function(){
+		sw = !sw; 
+		console.log(sw)
+		if(sw==true){
+			$('.family .family_list').hide();
+			$('.family .btn').removeClass('on');
+		} else {
+			$('.family .family_list').show();
+			$('.family .btn').addClass('on');
+		}
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+    <div class="header">
+        <div class="top_header">
+            <div class="top_header_inner">
+                <div class="thi_gnb">
+                    <ul class="thi_util">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="member.html">회원가입</a></li>
+                        <li><a href="#">마이현대</a></li>
+                        <li><a href="#">현대소식</a></li>
+                    </ul>
+                    <div class="thi_search">
+                        <input type="text">
+                        <button type="submit">검색</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle_header">
+            <div class="middle_header_inner">
+                <h1><a href="index.html"><img src="images/logo.png" alt="현대자동차"></a></h1>
+                <div class="mhi_gnb">
+                    <ul class="mhi_gnb1">
+                        <li>
+                        <a href="#">차량</a>
+                        <div class="sub1">
+                        <ul class="sub1_menu">
+                        <li class="sub1_btn on"><a href="#">ALL</a></li>
+                        <li class="sub1_btn"><a href="#">승용</a></li>
+                        <li class="sub1_btn"><a href="#">RV</a></li>
+                        <li class="sub1_btn"><a href="#">택시/상용/버스</a></li>
+                        </ul>
+                        <div class="sub1_con">
+                        <div class="sub1_con1">
+                            <ul>
+                            <li><a href="#"><img src="images/menu_car01.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car18.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car04.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car08.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car05.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car06.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car07.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car17.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car11.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car10.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car09.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car15.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car19.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car20.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car16.gif" alt=""></a></li>
+                            </ul>
+                            <ul>
+                            <li><a href="#"><img src="images/menu_rv01.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv06.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv02.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv05.gif" alt=""></a></li>
+                            </ul>
+                            <ul>
+                            <li><a href="#"><img src="images/menu_c_use01.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use02.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv04.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use14.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use04.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use05.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use06.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use12.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use08.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use09.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use10.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use11.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use13.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use07.gif" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="sub1_con2">
+                            <ul>
+                            <li><a href="#"><img src="images/menu_car01.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car18.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car04.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car08.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car05.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car06.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car07.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car17.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car11.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car10.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car09.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car15.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car19.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car20.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_car16.gif" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="sub1_con3">
+                            <ul>
+                            <li><a href="#"><img src="images/menu_rv01.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv06.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv02.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv05.gif" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="sub1_con4">
+                            <ul>
+                            <li><a href="#"><img src="images/menu_c_use01.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use02.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_rv04.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use14.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use04.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use05.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use06.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use12.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use08.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use09.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use10.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use11.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use13.gif" alt=""></a></li>
+                            <li><a href="#"><img src="images/menu_c_use07.gif" alt=""></a></li>
+                            </ul>
+                        </div>
+                        </div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="#">구매정보</a>
+                        <ul class="sub">
+                        <li><a href="#">견적내기</a></li>
+                        <li><a href="#">경쟁차 비교</a></li>
+                        <li><a href="#">카달로그 신청</a></li>
+                        <li><a href="sale.html">이달의 구매혜택</a></li>
+                        <li><a href="#">영업망 안내</a></li>
+                        <li><a href="#">구매상담 신청</a></li>
+                        <li><a href="#">구매가이드</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="#">체험하기</a>
+                        <ul class="sub">
+                        <li><a href="#">시승예약</a></li>
+                        <li><a href="#">예약내용조회</a></li>
+                        <li><a href="#">시승센터 및 보유차량</a></li>
+                        </ul>
+                        
+                        </li>
+                        <li>
+                        <a href="#">이벤트</a>
+                        <ul class="sub">
+                        <li><a href="event.html">진행중인 이벤트</a></li>
+                        <li><a href="#">지난 이벤트</a></li>
+                        </ul>
+                        
+                        </li>
+                    </ul>
+                    <ul class="mhi_gnb2">
+                    	<li>
+                        <a href="#">블루멤버스</a>
+                            <ul class="sub">
+                                <li><a href="#">블루멤버스 안내</a></li>
+                                <li><a href="#">서비스 네트워크</a></li>
+                                <li><a href="#">주요서비스 안내</a></li>
+                                <li><a href="#">취급 설명서</a></li>
+                                <li><a href="#">부픔가격조회</a></li>
+                                <li><a href="#">정비공임조회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">블루링크</a></li>
+                        <li><a href="#">기업정보</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main event">
+    <div class="top_main">
+        <div class="main_navi">
+           <a href="index.html"><img src="images/house-home-real_estate-property-glyph-16.png" alt=""></a><span> > 이벤트 ></span><em> 진행중인 이벤트</em>
+        </div>
+        <div class="main_tit">
+            <h2>진행중인 이벤트</h2>
+            <p>고객님을 위한 스페셜 이벤트 - 즐거운 행운과 경품을 만나보세요!</p>
+        </div>	
+    </div>
+    <div class="wrap">
+        <div class="eve_section">
+            <div class="eve1">
+                <div class="eve_top">
+                    <img src="images/event_01.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>The Brilliant Motor Festival</h3>
+                    <p>기 간 : 2016-04-28 ~ 2016-05-22<br>대 상 : 모든회원</p></a>
+                </div>
+            </div>
+            <div class="eve1 eve2">
+                <div class="eve_top">
+                    <img src="images/event_02.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>2030고객 1박 2일 렌탈 이벤트</h3>
+                    <p>기 간 : 2016-04-18 ~ 2016-05-18<br>대 상 : 모든회원</p></a>
+                </div>
+            </div>
+            <div class="eve1 eve2">
+                <div class="eve_top">
+                    <img src="images/event_03.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>합리적인 가격! 현대자동차 개인리스</h3>
+                    <p>기 간 : 2016-04-01 ~ 2016-04-30<br>대 상 : 차량구매회원</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="eve_section">
+            <div class="eve1">
+                <div class="eve_top">
+                    <img src="images/event_04.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>RV 아웃도어 라이프 - 봄나들이 지원</h3>
+                    <p>기 간 : 2016-04-01 ~ 2016-04-30<br>대 상 : 차량구매회원</p></a>
+                </div>
+            </div>
+            <div class="eve1 eve2">
+                <div class="eve_top">
+                    <img src="images/event_05.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>승용 주요차종 이자부담 ZERO</h3>
+                    <p>기 간 : 2016-04-01 ~ 2016-04-30<br>대 상 : 차량구매회원</p></a>
+                </div>
+            </div>
+            <div class="eve1 eve2">
+                <div class="eve_top">
+                    <img src="images/event_06.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>아이오닉에 반하다 프로모션</h3>
+                    <p>기 간 : 2016-04-01 ~ 2016-04-30<br>대 상 : 차량구매회원</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="eve_section">
+            <div class="eve1">
+                <div class="eve_top">
+                    <img src="images/event_07.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>무료 카셰어링 시승</h3>
+                    <p>기 간 : 2016-04-07 ~ 2016-05-06<br>대 상 : 모든회원</p></a>
+                </div>
+            </div>
+            <div class="eve1 eve2">
+                <div class="eve_top">
+                    <img src="images/event_08.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>달라진 투싼 FEVER 를 찾아라</h3>
+                    <p>기 간 : 2016-03-17 ~ 2016-04-30<br>대 상 : 모든회원</p></a>
+                </div>
+            </div>
+            <div class="eve1 eve2">
+                <div class="eve_top">
+                    <img src="images/event_01.jpg" alt="">
+                </div>
+                <div class="eve_bottom">
+                    <a href="#"><h3>The Brilliant Motor Festival</h3>
+                    <p>기 간 : 2016-04-28 ~ 2016-05-22<br>대 상 : 모든회원</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="btn_page">
+            <a href="#"><img src="images/left.png" alt=""></a>
+            <a href="#">1</a>
+            <a href="#"><img src="images/right.png" alt=""></a>
+        </div>
+    </div>
+ </div>   
+<div class="footer">
+    <div class="footer_inner">
+        <h2><img src="images/footer_rogo.png" alt="현대자동차"></h2>
+        <ul class="footer_util">
+            <li><a href="#">개인정보 취급 · 처리방침</a></li>
+            <li><a href="#">윤리경영 사이버감사실</a></li>
+            <li><a href="#">전자공고</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">고객센터 080-600-6000</a></li>
+        </ul>
+        <div class="family">
+        <button type="button" class="btn">Family Site</button>
+            <div class="family_list">
+                <ul>
+                    <li><a href="#">현대자동차 브랜드사이트</a></li>
+                    <li><a href="#">전북 현대모터스 축구단</a></li>
+                    <li><a href="#">한국 자동차산업 연구소</a></li>
+                    <li><a href="#">동반성장 사이트</a></li>
+                    <li><a href="#">블루링크</a></li>
+                    <li><a href="#">현대자동차 CSR</a></li>
+                    <li><a href="#">키즈현대</a></li>
+                    <li><a href="#">제네시스 공식 웹사이트</a></li>
+                    <li><a href="#">현대자동차 그룹</a></li>
+                    <li><a href="#">블루멤버스</a></li>
+                    <li><a href="#">현대 모터스튜디오</a></li>
+                </ul>
+                <button type="button">Close</button>
+            </div>
+        </div>
+        <p>COPYRIGHT 2015 HYUNDAI MOTOR COMPANY ALL RIGHRS RESERVED</p>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

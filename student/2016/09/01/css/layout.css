@@ -1,0 +1,67 @@
+@charset "utf-8";
+body {font:13px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+p,a {color:#6d6d6d;}
+
+
+
+/******************헤더 fixed********************/
+.header {width:200px; position:fixed; left:0; top:0;  background:#fbfbfb; z-index:9999;}
+
+/*로고*/
+.header h1 {padding:40px 35px 39px; border-bottom:1px solid #058c91;}
+
+/*주메뉴*/
+.gnb>li>a {font-size:18px; display:block; padding-left:20px; line-height:49px; background:url(../img/main_arrow.png) #0aa3a9 no-repeat 160px center; color:#FFF; border-bottom:1px solid #058c91;}
+.gnb>li>a.on {background-image:url(../img/main_arrow01.png);}
+
+/*서브메뉴*/
+.gnb>li .sub {padding:10px 0; display:none;}
+.gnb>li .sub li a {font-size:14px; display:block; padding-left:20px; color:#6d6d6d; line-height:28px;}
+.gnb>li .sub li a:hover {color:#0aa3a9;}
+
+
+/*sns 아이콘*/
+.header .sns_btn {overflow:hidden; padding:20px 20px;}
+.header .sns_btn li {float:left; padding-left:16px;}
+.header .sns_btn li:first-child {padding-left:0;}
+
+/*검색창*/
+.header .search {width:158px; border:1px solid #d9d9d9; margin-left:18px; background:#FFF;}
+.header .search legend {position:absolute; left:0; top:-99999px;}
+.header .search .input_wrap {position:relative; float:left;}
+.header .search .input_wrap label {position:absolute; left:5px; top:9px;}
+.header .search .input_wrap input {height:35px; border:none; width:125px; vertical-align:middle; margin-left:5px;}
+.header .search button {width:16px; height:16px; background:url(../img/search_icon.png) no-repeat; border:none; font-size:0; cursor:pointer; margin:10px 0 0 5px;}
+
+/*탭메뉴*/
+.header .top_menu .lnb {width:200px; overflow:hidden; margin-top:50px; background:#0aa3a9;}
+.header .top_menu .lnb li {float:left; width:100px; text-align:center; line-height:25px; background:url(../img/line_03.gif) no-repeat left center;}
+.header .top_menu .lnb li:first-child {background:none;}
+.header .top_menu .lnb li a {color:#FFF;}
+
+/*언어 국기*/
+.header .top_menu .language {overflow:hidden; margin-top:10px;}
+.header .top_menu .language li {float:left; width:100px; text-align:center;}
+
+
+/*footer*/
+
+/*개인정보취급방침*/
+.footer_wrap {padding-bottom:30px;}
+.footer_wrap ul {margin-top:20px; border-bottom:1px solid #e5e5e5; border-top:1px solid #e5e5e5; background:#f0f0f0; height:70px;}
+.footer_wrap ul li {padding-left:20px; font-size:12px; padding-top:5px;}
+.footer_wrap ul li:first-child a {color:#2f2f2f;}
+
+/*주소 전화번호 copyright*/
+.footer_wrap .footer {font-size:12px; margin-top:30px; padding-left:20px;}
+.footer_wrap .footer p {margin-top:10px; color:#6d6d6d;}
+.footer_wrap .footer .address {color:#6d6d6d; margin-top:10px;}
+
+
+
+
+
+
+
+
+

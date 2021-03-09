@@ -1,0 +1,138 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+body {font:12px '나눔고딕','nanum gothic','돋움',dotum,sans-serif;}
+img {border:none;}
+ul,ol {list-style:none;}
+a { color:#000; text-decoration:none;}
+body {min-width:1000px; background:#1c1c1c;}
+div {outline:none;}
+
+
+
+
+
+
+
+
+
+/*탑메뉴*/
+
+.header_wrap {width:100%; height:140px; background:url(../img/bg_top.jpg) repeat-x;}
+.header {width:1000px; height:140px; margin:0 auto;}
+.header .top_menu {float:right; margin-top:10px;}
+.header .top_menu li {float:left; margin-left:10px; background:url(../img/bar.png) no-repeat left center; padding-left:10px;}
+.header .top_menu li a {color:#FFF;}
+.header .top_menu li:first-child {background:none; margin-left:0; padding-left:0;}
+
+.header h2 {margin:0 auto; display:block; width:115px; height:43px; padding-top:37px;}
+
+.header .gnb {margin-top:8px;}
+.header .gnb ul {overflow:hidden;}
+.header .gnb ul li { float:left;}
+.header .gnb ul li a { display:block;}
+.header .gnb ul li .clio {background:url(../img/gnb_01.png) no-repeat; width:166px; height:50px; text-indent:-9999px;}
+.header .gnb ul li .pro {background:url(../img/gnb_02.png) no-repeat; width:166px; height:50px; text-indent:-9999px;}
+.header .gnb ul li .eve {background:url(../img/gnb_03.png) no-repeat; width:166px; height:50px; text-indent:-9999px;}
+.header .gnb ul li .com {background:url(../img/gnb_04.png) no-repeat; width:166px; height:50px; text-indent:-9999px;}
+.header .gnb ul li .sns {background:url(../img/gnb_05.png) no-repeat; width:166px; height:50px; text-indent:-9999px;}
+.header .gnb ul li .ser {background:url(../img/gnb_06.png) no-repeat; width:166px; height:50px; text-indent:-9999px;}
+
+.header .gnb ul li .clio:hover {background:url(../img/gnb_hover_01.png) no-repeat;}
+.header .gnb ul li .pro:hover {background:url(../img/gnb_hover_02.png) no-repeat;}
+.header .gnb ul li .eve:hover {background:url(../img/gnb_hover_03.png) no-repeat;}
+.header .gnb ul li .com:hover {background:url(../img/gnb_hover_04.png) no-repeat;}
+.header .gnb ul li .sns:hover {background:url(../img/gnb_hover_05.png) no-repeat;}
+
+
+/*슬라이더*/
+
+.main .slider {position:relative; overflow:hidden;}
+
+
+.slick-prev {background:url(../img/slider_btn_prev.png) no-repeat; position:absolute; left:50px; width:40px; top:40%; height:66px; z-index:999; text-indent:-9999px; outline:none;  border:none; cursor:pointer;}
+.slick-next {background:url(../img/slider_btn_next.png) no-repeat; position:absolute; right:50px; width:40px; top:40%; height:66px; z-index:999; text-indent:-9999px; outline:none; border:none; cursor:pointer;}
+
+
+
+
+
+
+
+
+
+
+/*노티스*/
+
+.main .notice {margin:0 auto; width:1000px; margin-top:20px; overflow:hidden;}
+.main .notice .tit { width:1000px; height:23px;}
+.main .notice h3 {color:#FFF; font-size:18px; letter-spacing:-0.25px; float:left; display:block;}
+.main .notice span {width:889px; height:1px; background:#fe1a65; display:block; float:left; margin-top:11px; margin-left:5px;}
+
+.main .notice .notice_box { width:1000px; overflow:hidden; margin-top:20px;}
+.main .notice .notice_box img { float:left;}
+.main .notice .notice_box2 {margin-left:20px; float:left;}
+.main .notice .notice_box2 li {margin-top:20px;}
+.main .notice .notice_box2 li a { height:203px; display:block; width:280px;}
+.main .notice .notice_box2 li:first-child {margin-top:0;}
+
+
+/*프로덕트*/
+
+.main .products {width:1000px; margin:0 auto;}
+.main .products .tit {width:1000px; height:23px; margin-top:20px;}
+.main .products h3 {color:#FFF; font-size:18px; letter-spacing:-0.25px; float:left; display:block; }
+.main .products span {width:860px; height:1px; background:#fe1a65; display:block; float:left; margin-top:11px; margin-left:5px;}
+
+.main .products_box {width:1000px; margin-top:20px; overflow:hidden;}
+.main .products_box a {width:320px; height:320px; display:block; float: left; margin-left:20px;}
+.main .products_box a:first-child {margin-left:0;}
+
+.main .products_box .pro_01 {background:url(../img/product_01.jpg) no-repeat; text-indent:-9999px;}
+.main .products_box .pro_02 {background:url(../img/product_02.jpg) no-repeat; text-indent:-9999px;}
+.main .products_box .pro_03 {background:url(../img/product_03.jpg) no-repeat; text-indent:-9999px;}
+.main .products_box .pro_04 {background:url(../img/product_04.jpg) no-repeat; text-indent:-9999px; margin-top:20px; margin-left:0;}
+.main .products_box .pro_05 {background:url(../img/product_05.jpg) no-repeat; text-indent:-9999px; margin-top:20px;}
+.main .products_box .pro_06 {background:url(../img/product_06.jpg) no-repeat; text-indent:-9999px; margin-top:20px;}
+
+.main .products_box .pro_01:hover {background:url(../img/pro_hover_01.png) no-repeat;}
+.main .products_box .pro_02:hover {background:url(../img/pro_hover_02.png) no-repeat;}
+.main .products_box .pro_03:hover {background:url(../img/pro_hover_03.png) no-repeat;}
+.main .products_box .pro_04:hover {background:url(../img/pro_hover_04.png) no-repeat;}
+.main .products_box .pro_05:hover {background:url(../img/pro_hover_05.png) no-repeat;}
+.main .products_box .pro_06:hover {background:url(../img/pro_hover_06.png) no-repeat;}
+
+
+/*이벤트*/
+
+.main .event {width:1000px; margin:0 auto; margin-top:20px; overflow:hidden;}
+.main .event .txt {width:1000px; height:23px;}
+.main .event h3 {color:#FFF; font-size:18px; letter-spacing:-0.25px; float:left; display:block; }
+.main .event span {width:897px; height:1px; background:#fe1a65; display:block; float:left; margin-top:11px; margin-left:5px;}
+
+.main .event_box { width:1000px; overflow: hidden; padding-top:20px; margin-bottom:80px;}
+.main .event_box li {display:block; float:left; margin-left:20px;}
+.main .event_box li:first-child{margin-left:0;}
+
+
+
+
+/*footer*/
+
+
+.footer_wrap {width:100%; height:200px; border-top:1px solid #fe1a65;}
+.footer { width:1000px; height:220px; margin:0 auto; }
+.footer .logo {float:left; margin-top:50px; margin-right:40px;}
+.footer .txt  {float:left; margin-top:50px;}
+.footer .txt p {color:#FFF; font-size:12px; letter-spacing:-0.5px; margin-bottom:10px;}
+.footer .txt .p1 {margin-bottom:20px;}
+.footer .txt strong {color:#fff; font-weight:bold;}
+
+.footer .txt2 {float:right; margin-top:50px;}
+.footer .txt2 li {float:left; margin-left:10px; background:url(../img/bar.png) no-repeat left center; padding-left:10px;}
+.footer .txt2 li:first-child {background:none;}
+.footer .txt2 li a { color:#fff; }
+.footer .txt2 li a span {color:#fe1a65; font-weight:bold;}
+.footer .txt2 .sns {float:right; margin-top:37px;}
+.footer .txt2 .sns a {margin-left:7px;}
+
+

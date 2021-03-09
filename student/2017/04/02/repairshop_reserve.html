@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Bespectacled">
+  <meta name="description" content="This is my project.">
+  <meta name="keywords" content="웹퍼블리셔,웹표준,웹접근성">
+  <meta name="robots" content="all">
+  <meta name="format-detection" content="telephone=no">
+  <!-- <meta property="og:title" content="오리온">
+  <meta property="og:url" content="https://www.orionworld.com/">
+  <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+  <meta property="og:description" content="꼬북칩, 포카칩, 스윙칩, 오징어 땅콩, 오! 감자"> -->
+  <title>리뉴얼작업 뮤직포스</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png"> -->
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> -->
+  <!-- <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'> -->
+  <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+  <link href="css/hamburgers.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]>
+    <p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+    <a style="color:#f57c00;" href="http://www.microsoft.com/korea/ie" target="_blank" >익스플로러,</a>
+    <a style="color:#f57c00;" href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+    <a style="color:#f57c00;" href="http://kr.opera.com/download/" target="_blank">오페라,</a>
+    <a style="color:#f57c00;" href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+    <a style="color:#f57c00;" href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+  <![endif]-->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=4dNCMV4WdfPNW0kmCfUA"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(function() {
+        $("#reserveDate").datepicker({
+          nextText: '다음 달',
+          prevText: '이전 달',
+          minDate: 0,
+          maxDate: "+7D",
+          dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+          monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          dateFormat: "yy-mm-dd",
+          regional: "ko",
+          beforeShowDay: function(date) {
+            var day = date.getDay();
+            console.log([(day != 0)]);
+            return [(day != 0)];
+          }
+        });
+      }); //datepicker 달력보이기
+
+
+
+    })
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="뮤직포스">
+        </a>
+      </h1>
+      <div class="gnb_wrap">
+        <div class="gnb">
+          <h2 class="blind">주요서비스</h2>
+          <ul>
+            <li>
+              <a href="new_product.html">신상품</a>
+            </li>
+            <li>
+              <a href="#">쇼핑몰</a>
+            </li>
+            <li>
+              <a href="#">중고장터</a>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+            </li>
+            <li>
+              <a href="#">뮤직포스리뷰</a>
+            </li>
+            <li>
+              <a href="repairshop.html">리페어샵</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <h2 class="blind">유틸리티</h2>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="hamburger hamburger--spin m_btn_gnb">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </header>
+    <main id="main" class="repairshop reserve">
+      <div class="main_cover"></div>
+      <div class="sub_visual">
+        <h2>뮤직포스 리페어샵</h2>
+        <p>오랜실전 경험과 끝임없는 연구! 완벽함을 더하겠습니다.</p>
+        <div class="align_wrap_block">
+          <ul class="tag">
+            <li>#일렉</li>
+            <li>#어쿠스틱</li>
+            <li>#베이스</li>
+            <li>#이펙터</li>
+            <li>#엠프</li>
+          </ul>
+        </div>
+        <a href="repairshop_reserve.html" class="btn btn_reserve">예약하기</a>
+      </div>
+      <div class="reserve_section1">
+        <div class="container">
+          <div class="title">
+            <h2>예약하기</h2>
+            <h3>나의 문의 / 예약내역</h3>
+          </div>
+          <div class="write_wrap">
+            <form action="">
+              <fieldset>
+                <legend class="blind">리페어샵 예약하기</legend>
+                <table>
+                  <tr>
+                    <th>이름</th>
+                    <td>
+                      <input type="text" id="userName">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>연락처</th>
+                    <td class="reserve_number">
+                      <select name="" id="userNumber">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select>
+                      <span class="hyphen">-</span>
+                      <input type="text" id="userNumber2" maxlength="4">
+                      <span class="hyphen">-</span>
+                      <input type="text" id="userNumber3" maxlength="4">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>예약시간</th>
+                    <td>
+                      <input type="text" id="reserveDate" placeholder="날짜선택" readonly>
+                      <select id="reserveTime">
+                        <option value="">시간선택</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="10:00">16:00</option>
+                        <option value="10:00">17:00</option>
+                        <option value="10:00">18:00</option>
+                        <option value="10:00">19:00</option>
+                        <option value="10:00">20:00</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>제목</th>
+                    <td>
+                      <input type="text" id="reserveTitle">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>내용</th>
+                    <td class="reserve_content">
+                      <div class="bg_wrap">
+                        <textarea name="content" id="#" rows="15"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사진등록</th>
+                    <td class="reserve_attach">
+                      <div class="bg_wrap">
+                        <a class="btn_attach" href="#">
+                          <img src="images/btn_plus.png" alt="사진등록">
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="category_wrap">
+                    <th class="pt15">종류</th>
+                    <td class="pt20">
+                      <input type="radio" name="category" value="electric">일렉기타
+                      <input type="radio" name="category" value="acoustic">어쿠스틱기타
+                      <br>
+                      <input type="radio" name="category" value="bass">베이스기타
+                      <input type="radio" name="category" value="effect">이팩터
+                      <input type="radio" name="category" value="amp">엠프
+                    </td>
+                  </tr>
+                </table>
+                <p class="btn_wrap">
+                  <input type="submit" title="예약하기" value="예약하기" alt="예약하기" id="reserveSubmit" class="btn">
+                </p>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>
+        <h2 class="blind">소셜미디어</h2>
+        <ul class="sns">
+          <li>
+            <a href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <h2 class="blind">회사정보</h2>
+        <ul class="info">
+          <li>
+            <a href="#">회사소개</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">개인정보취급방침</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+      </p>
+      <p class="address">서울 강남구 역삼동 797 지하1층 뮤직포스</p>
+      <p class="copyright">Copyright (c) music force global All rights reserved.</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

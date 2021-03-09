@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=980">
+<title>이정연 포트폴리오</title>
+<meta name="description" content="디자이너 이정연 포트폴리오">
+<meta property="og:type" content="site">
+<meta property="og:title" content="디자이너 이정연 포트폴리오">
+<meta property="og:url" content="http://adora37.dothome.co.kr/ljyPortfolio/intro.html">
+<meta property="og:image" content="http://adora37.dothome.co.kr/ljyPortfolio/img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="main-header">
+            <div class="container-fluid">
+                <!-- box header -->
+                <div class="box-header">
+                    <div class="box-logo">
+                        <a href="index.html"><img src="img/img_7/back.png" alt=""></a>
+                    </div>
+                    <!-- box-nav -->
+                    <a class="box-primary-nav-trigger" href="#0">
+                        <span class="box-menu-icon"></span>
+                    </a>
+                    <!-- box-primary-nav-trigger -->
+                </div>
+                <!-- end box header -->
+                <!-- nav -->
+                <nav>
+                    <ul class="box-primary-nav">
+                        <li class="box-label">LEE JEONG YEON</li>
+                        <li><a href="index.html">Home</a><i class="ion-ios-circle-filled color"></i></li>
+                        <li><a href="about_me.html">About me</a></li>
+                        <li><a href="yeonstagram.html">yeonstagram</a></li>
+                        <li><a href="yeontoon.html">yeonstoon</a></li>
+                        <li><a href="twosomeplace.html">twosome place</a></li>
+                        <li><a href="catsome.html">Catsome</a></li>
+                        <li><a href="#">Event project</a></li>
+                        <li><a href="portfolio_web.html">Web page design</a></li>
+                        <li><a href="portfolio_drawing.html">Illustration drawing</a></li>
+                        <li><a href="portfolio_other_work.html">Other work</a></li>
+                    </ul>
+                </nav>
+                <!-- end nav -->
+            </div>
+        </header>
+        <div id="container" class="about_me">
+            <div class="sub1_header">
+                <div class="header_txt">
+                    <h1>About me</h1>
+                </div>
+            </div>
+            <div class="sub1_main">
+                <img class="img1" src="img/img_1/img1.png" alt="">
+                <img class="img2" src="img/img_1/img2.png" alt="">
+                <img class="img3" src="img/img_1/img3.png" alt="">
+                <img class="img4" src="img/img_1/img4.png" alt="">
+                <img class="img5" src="img/img_1/img5.png" alt="">
+                <img class="img6" src="img/img_1/img6.png" alt="">
+            </div>
+            <div class="sub1_footer">
+                <img src="img/img_1/bg2_2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="btn_top">
+        <a href="#">top</a></div>
+    </div>
+<script>
+var leftEl=$('#container.about_me .sub1_main .img1');
+var leftEl2=$('#container.about_me .sub1_main .img2');
+var leftEl3=$('#container.about_me .sub1_main .img3');
+var leftEl4=$('#container.about_me .sub1_main .img4');
+var leftEl5=$('#container.about_me .sub1_main .img5');
+var leftEl6=$('#container.about_me .sub1_main .img6');
+
+
+$(window).scroll(function(){
+    var posY=$(window).scrollTop();
+    var posY2=posY-4500;
+    var posY3=posY-4650;
+    var posY4=posY-5300;
+    var posY5=posY-5770;
+    var posY6=posY-6500;
+    var posY7=posY-7200;
+    console.log(posY);
+
+
+    if(posY>=4500 && posY<4800){
+    //캐릭터 이동할 스크롤 위치 - 들어오는 거리(이동되는 거리를 더함)
+        leftEl.css({'transform':'translate('+posY2+'px,'+posY2+'px)','opacity':posY2/300});
+    }
+    if(posY>=4650 && posY<4950){
+        leftEl2.css({'transform':'translate('+(-posY3)+'px,'+posY3+'px)','opacity':posY3/300}); 
+    }
+    if(posY>=5100 && posY<5750){
+        leftEl3.css({'transform':'translate('+posY4+'px,'+posY4+'px)','opacity':posY4/300});
+    }
+    if(posY>=5770 && posY<6100){
+        leftEl4.css({'transform':'translate('+(-posY5)+'px,'+posY5+'px)','opacity':posY5/300});
+    }
+    if(posY>=6500 && posY<7050){
+        leftEl5.css({'transform':'translate('+posY6+'px,'+posY6+'px)','opacity':posY6/300});
+    }
+    if(posY>=7200 && posY<7800){
+        leftEl6.css({'transform':'translate('+(-posY7)+'px,'+posY7+'px)','opacity':posY7/300});
+    }
+    
+    
+
+//    if(posY>=500 && posY<1000){
+//        rightEl.css('transform','translate('+(-posY2)+'px,'+posY2+'px)');
+//    }
+});
+</script> 
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

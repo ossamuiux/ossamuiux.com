@@ -1,0 +1,543 @@
+/* 메인, 서브 포함 공통된 코드들을 모아놓는다 */
+/* 공통스타일로 들어가는 것들 : 테이블, 슬라이더 페이지네이션, 폼요소 스타일, 게시판테이블, 색관련
+   초기화 CSS코드, 폰트관련, 표 및 게시판테이블, 폼요소스타일(input, textarea, select, button) , 퀵메뉴, header, footer, main, sub page 공통 레이아웃 스타일 */
+
+@charset "utf-8";
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-weight: 300;
+  src: url(../font/NanumSquareRoundL.eot);
+  src: local('NanumSquareRoundL'),
+       local('NanumSquareRoundL'),
+       url(../font/NanumSquareRoundL.eot?#iefix) format("embedded-opentype"),
+       url(../font/NanumSquareRoundL.woff) format("woff"); 
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-weight: 400;
+  src: url(../font/NanumSquareRoundR.eot);
+  src: local('NanumSquareRoundR'),
+       local('NanumSquareRoundR'),
+       url(../font/NanumSquareRoundR.eot?#iefix) format("embedded-opentype"),
+       url(../font/NanumSquareRoundR.woff) format("woff"); 
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-weight: 700;
+  src: url(../font/NanumSquareRoundB.eot);
+  src: local('NanumSquareRoundB'),
+       local('NanumSquareRoundB'),
+       url(../font/NanumSquareRoundB.eot?#iefix) format("embedded-opentype"),
+       url(../font/NanumSquareRoundB.woff) format("woff"); 
+}
+
+@font-face {
+  font-family: 'LotteMartHappy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/LotteMartHappyMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartHappy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/LotteMartHappyBold.woff') format('woff');
+}
+
+* {box-sizing: border-box;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;vertical-align: top;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+button,input {border-radius: 0; margin: 0;padding: 0;}
+button {cursor: pointer;}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none}
+iframe {overflow: hidden;margin: 0;padding: 0;border: 0}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+table {border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%;}
+input,button,select,label {vertical-align: middle;}
+
+/* -webkit-text-size-adjust:none; 
+모바일 브라우저에서 글자크기 자동확대 방지*/
+body {line-height: 1.5; -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
+
+
+body,input,select,textarea,button,table {
+    font-family: 'NanumSquareRound', sans-serif;
+    font-size: 13px;
+}
+
+html,body {height: 100%;}
+#wrap {min-width: 320px; height: 100%;}
+
+
+/****************** 공통스타일 ******************/
+
+/* input 공통스타일 */
+input[type='text'] {
+    height: 45px;
+    background: #f6f6f6;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    color: #292929;
+    font-size: 16px;
+}
+
+/* selct 공통스타일 */
+select {
+    width: 130px;
+    height: 45px;
+    border: 2px solid #ddd;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: -0.05em;
+    /* 화살표 없애기 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    background: #fff;
+    /***************/
+}
+/* 화살표 없애기 익스플로러 */
+select::-ms-expand {display: none;}
+
+.select_wrap {position: relative; display: inline-block;}
+
+.select_wrap:before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -4px;
+    width: 12px;
+    height: 7px;
+    background: url(../images/icon_select_arr.png) no-repeat;
+    background-size: 12px;
+}
+
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #292929;
+    outline: none;
+    background: #f6f6f6;
+    border: none;
+    resize: none;
+    border-radius: 0;
+}
+
+.file_wrap {position: relative;}
+
+.file_wrap:before {
+    content: '';
+    position: absolute;
+    right: 96px;
+    top: 50%;
+    margin-top: -8px;
+    background: #dadada;
+    width: 2px;
+    height: 16px;
+}
+
+.file_wrap:after {
+    content: '파일선택';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -13px;
+    color: #009223;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* input[type='file'] 공통스타일 */
+input[type='file'] {
+    width: 98px;
+    height: 41px;
+    margin-left: -4px;
+    opacity: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    position: relative;
+    z-index: 5;
+}
+
+/* checkbox 공통스타일 */
+label {
+    font-size: 16px;
+    color: #292929;
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+    display: inline-block;
+    line-height: 30px;
+}
+
+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    border: 2px solid #dadada;
+    background: #fff;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 0;
+    height: 19px;
+    background: url(../images/icon_checkbox.png) no-repeat;
+    background-size: 24px;
+    transition: all 0.3s;
+}
+
+/* + :  인접한 요소(인접형제선택) 선택 */
+input[type="checkbox"]:checked+label:after {
+    width: 24px;
+}
+
+/* 드래그(글자선택) 안됨 */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+::-moz-selection { background: #cbcef0; }
+::selection { background: #cbcef0; }
+
+/*인덱스*/
+#header {
+    position: relative;
+}
+
+#header .left_header {
+    width: 48px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 5px 0 10px rgba(61,61,61,0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    border-top: 3px solid #3498db;
+}
+
+#header .left_header.on {
+    border-top-color: #fff;
+}
+
+#header .btn_menu {
+    width: 20px;
+    height: 20px;
+    background: url(../image/header_gnb1.png) no-repeat 50% 50%;
+    background-size: 20px;
+    border: none;
+    outline: none;
+    text-indent: -9999px;
+    margin: 13px 0 0 15px; 
+}
+
+#header .util {
+    position: absolute;
+    left: 0;
+    bottom: 110px;
+    text-align: center;
+}
+
+#header .util li {
+    float: left;
+    width: 48px;
+    height: 36px;
+}
+
+#header .util .login {
+    width: 48px;
+    height: 36px;
+    display: block;
+    padding-top: 9px;
+}
+
+#header .util .login img {
+    width: 18px;
+}
+
+#header .util .btn_search_modal {
+    background: url(../image/search.png) no-repeat 50% 50%;
+    background-size: 18px;
+    width: 48px;
+    height: 36px;
+    border: none;
+    outline: none;
+    text-indent: -9999px;
+    display: inline-block;
+}
+
+#header .util .lang {
+    width: 48px;
+    height: 36px;
+    color: #fff;
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    line-height: 19px;
+    padding-top: 9px;
+    position: relative;
+}
+
+#header .util .lang:before {
+    content: 'KR';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background: #3498db;
+    border-radius: 100%;
+    margin-left: -9px;
+    transform: translate(0, -50%);
+}
+
+#header .dimm {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000000;
+    display: none;
+}
+
+#header .gnb_wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    border-bottom-right-radius: 80px;
+    transform: translateX(100%);
+}
+
+#header .gnb_wrap.on {transform: translateX(0%);}
+
+#header .gnb_wrap .btn_menu_close {
+    width: 20px;
+    height: 20px;
+    background: url(../image/header_gnb2.png) no-repeat 50% 50%;
+    background-size: 20px;
+    border: none;
+    outline: none;
+    text-indent: -9999px;
+    margin: 13px 0 0 15px; 
+}
+
+#header .gnb_wrap .top_gnb {
+    border-top: 3px solid #3498db;
+    margin-bottom: 30px;
+}
+
+#header .gnb_wrap .top_gnb .logo {
+    float: right;
+    margin: 13px 15px 13px 0; 
+    width: 92px;
+}
+
+#header .gnb_wrap .top_gnb .logo img {
+    width: 100%;
+}
+
+#header .gnb_wrap .top_gnb .gnb_txt {
+    margin: 40px 0 0 15px;
+}
+
+#header .gnb_wrap .top_gnb .gnb_txt img {
+    width: 233px;
+}
+
+#header .gnb_wrap .gnb_scroll {
+    height: calc(100% - 170px);
+    overflow: auto;
+    margin-left: 15px;
+}
+
+#header .gnb_wrap .gnb_scroll .gnb {
+    padding-bottom: 50px;
+    margin-left: 33px;
+    display: block;
+    line-height: 50px;
+}
+
+#header .gnb_wrap .gnb_scroll .gnb>li>a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'LotteMartHappy', sans-serif;
+    color: #3498db;
+}
+
+#header .gnb_wrap .gnb_scroll .gnb .depth2 {
+    padding: 7px 0 18px 0;
+    display: none;
+}
+
+#header .gnb_wrap .gnb_scroll .gnb .depth2 a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3d3d3d;
+    display: block;
+    line-height: 35px;
+    margin-left: 10px;
+    position: relative;
+    text-indent: 5px;
+}
+
+#header .gnb_wrap .gnb_scroll .gnb .depth2 a:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 16px;
+    width: 7px;
+    height: 1px;
+    background: #3498db;
+}
+
+#main .section1 .top_header {
+    background: #fff;
+    height: 60px;
+    border-top: 3px solid #3498db;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    z-index: 300;
+}
+
+#main .section1 .top_header .logo {
+    float: right;
+    margin: 13px 15px 13px 0; 
+    width: 92px;
+}
+
+#main .section1 .top_header .logo img {
+    width: 100%;
+}
+
+#footer {
+    background: url(../image/footer_bg.png) no-repeat left bottom;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+#footer .footer_inner {
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    bottom: 23px;
+}
+
+#footer .footer_inner .footer_logo {
+    margin-bottom: 20px;
+}
+
+#footer .footer_inner .footer_logo img {
+    width: 105px;
+    height: 35px;
+}
+
+#footer .footer_inner .footer_menu {
+    float: right;
+    margin-bottom: 15px;
+}
+
+#footer .footer_inner .footer_menu li {
+    float: left;
+    padding: 0 11px;
+    position: relative;
+}
+
+#footer .footer_inner .footer_menu li:before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 3px;
+    width: 1px;
+    height: 12px;
+    background: #eeeeee;
+}
+
+#footer .footer_inner .footer_menu li:first-child:before {
+    display: none;
+}
+
+#footer .footer_inner .footer_menu li:first-child {
+    padding-left: 0;
+}
+
+#footer .footer_inner .footer_menu li:last-child {
+    padding-right: 0;
+}
+
+#footer .footer_inner .footer_menu li a {
+    color: #eeeeee;
+    font-size: 13px;
+    letter-spacing: -0.1em;
+}
+
+
+#footer .footer_inner .footer_menu li:nth-child(2) a {
+    font-weight: 700;
+}
+
+#footer .footer_inner .copy {
+    color: #eeeeee;
+    line-height: 22px;
+    font-size: 11px;
+    letter-spacing: -0.03em;
+}
+
+#footer .footer_inner .copy .copyright {
+    font-size: 9px;
+    font-weight: 700;
+    color: #0a5082;
+    margin-top: 10px;
+    letter-spacing: -0.03em;
+}

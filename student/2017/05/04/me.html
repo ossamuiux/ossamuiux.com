@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200">
+<link rel="shortcut icon" type="image/x-icon" href="http://milkbebe.dothome.co.kr/favicon_ky.ico" />
+<title>DesignWatch</title>
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/circle-progress.min.js"></script>
+<script type="text/javascript" src="js/jquery.illuminate.0.7.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+	$('.circle').circleProgress({
+		value: 0,
+		size: 120,
+		lineCap:'round',
+		fill: {
+		  gradient:["#01bffb", "#0160ee"]
+		}
+	});
+	
+	$('.circle2').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#ff0e48", "#ffab96"]
+		}
+	});
+
+	$('.circle3').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#4daefd", "#03effd"]
+		}
+	});
+
+	$('.circle4').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#ffffff", "#33a9dc"]
+		}
+	});
+
+	$('.circle5').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#fa7296", "#fdda48"]
+		}
+	});	
+
+	$('.circle6').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#f0db4f", "#323330"]
+		}
+	});	
+	
+	$('.circle7').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#ffffff", "#f0652a"]
+		}
+	});	
+	
+	$('.circle8').circleProgress({
+		value: 0,
+		size: 120,
+		fill: {
+		  gradient:["#ffffff", "#08743b"]
+		}
+	});	
+				
+	var isMove = false; //프로그레스 바가 실행되는지에 대한 여부 판단
+	var isMove2 = false;
+	
+	$(window).scroll(function() {
+		var num = $(this).scrollTop();
+		
+		if(num>=1200 && isMove==false){
+			$('.circle').circleProgress({
+				value: 0.90
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*90) + '<em>%</em>');
+			  isMove = true
+			});
+			
+			$('.circle2').circleProgress({
+				value: 0.50
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*50) + '<em>%</em>');
+			});
+			
+			$('.circle3').circleProgress({
+				value: 0.70
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*70) + '<em>%</em>');
+			});
+
+			$('.circle4').circleProgress({
+				value: 0.80
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*80) + '<em>%</em>');
+			});
+
+			$('.circle5').circleProgress({
+				value: 0.80
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*80) + '<em>%</em>');
+			});
+			
+			$('.circle6').circleProgress({
+				value: 0.50
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*50) + '<em>%</em>');
+			});
+			
+			$('.circle7').circleProgress({
+				value: 0.80
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*80) + '<em>%</em>');
+			});
+			
+			$('.circle8').circleProgress({
+				value: 0.80
+			}).on('circle-animation-progress',function(event,animationProgress) {
+			  $(this).find('strong').html(Math.round(animationProgress*80) + '<em>%</em>');
+			});
+			
+			
+		}//if 끝
+		console.log(num,isMove);
+		if(num == 0){			
+			$('.circle').circleProgress({
+				value: 0
+			}).on('circle-animation-progress',function(event,animationProgress){
+			  $(this).find('strong').html(Math.round(animationProgress*0) + '<em>%</em>');
+			  isMove = false;
+			});
+		}
+		
+		//섹션3 텍스트애니메이션
+		if(num>=2200 && isMove2==false){
+			$('.section3_inner1_txt').addClass('on')(function() {
+			  isMove2 = true;
+			});
+		}
+		
+		if(num == 0){			
+			$('.section3_inner1_txt').removeClass('on')(function(){
+			  isMove2 = false;
+			});
+		}
+		
+	});
+/*
+	$('.circle2').circleProgress({
+		gradient: ["#ff4a19", "#260600"]
+
+  $('.circle3').circleProgress({
+      gradient: ["#78cff5", "#0769ad"]
+
+  $('.circle4').circleProgress({
+      gradient: ["#ffffff", "#33a9dc"]
+
+  $('.circle5').circleProgress({
+      gradient: ["#ff7c00", "#261300"]
+
+  $('.circle6').circleProgress({
+      gradient: ["#f0db4f", "#323330"]
+
+  $('.circle7').circleProgress({
+      gradient: ["#ffffff", "#f0652a"]
+
+  $('.circle8').circleProgress({
+      gradient: ["#ffffff", "#08743b"]
+*/
+	
+	
+	
+	$(window).scroll(function() {
+		
+		
+	});
+
+	
+});
+</script>
+
+
+</head>
+
+<body>
+	<div id="header">
+    	<button class="btn_x" type="button">
+            <span></span>
+            <span></span>
+            <span></span>        
+        </button>
+    	<img class="profile" src="images/main.png" alt="">
+        <div class="quick_menu">
+        	<div class="quick_txt_wrap">
+            	<ul class="quick_txt">
+                	<li><a href="main.html">HOME</a></li>
+                    <li><a href="profile.html">내 소개</a></li>
+                    <li><a href="">리뉴얼 사이트</a></li>
+                    <li><a href="">반응형 사이트</a></li>
+                    <li><a href="">휴대폰 테마</a></li>
+                </ul>
+                <ul class="profile">
+                <li>이귀영</li>
+                <li style="color:#ef5350;">010.7444.2920(이구이영)</li>
+                <li>mmilkbebe@gmail.com</li>
+                <li>kakaotalk) milkybebe</li>
+                <li>LINE) milkbebe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<div id="main_me">
+    	<div class="section1">
+        	<div class="section1_wrap">
+            	<img src="images/me-section1_logo.png" alt="">
+            </div>
+        </div>
+        <div class="section2">
+        	<div class="section2_wrap">
+            	<div class="circle_left">
+                	<div class="circle circle1">
+                        <strong>0</strong>
+                    </div>
+                	<div class="circle circle2">
+                        <strong>0</strong>
+                    </div> 
+                	<div class="circle circle3">
+                        <strong>0</strong>
+                    </div>
+                	<div class="circle circle4">
+                        <strong>0</strong>
+                    </div> 
+                </div>
+                <div class="circle_right">
+                	<div class="circle circle5">
+                        <strong>0</strong>
+                    </div>
+                	<div class="circle circle6">
+                        <strong>0</strong>
+                    </div>
+                	<div class="circle circle7">
+                        <strong>0</strong>
+                    </div>
+                	<div class="circle circle8">
+                        <strong>0</strong>
+                    </div>                                                            
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+        	<div class="section3_wrap">
+            	<div class="section3_inner1">
+                	<div class="section3_inner1_txt">
+                        <h2>"신나게 달려보자고!"</h2>
+                        <strong>즐거움</strong><img class="star star1" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <p>신나는 스피드와 즐거움을 돋우워주는 분위기 메이커.<br> 
+                        흥부자의 흥 광역기로  모두를 즐겁게 합니다.<br>
+                        학창시절의 행사부장과 부과대표, 단체활동의 장기자랑 등 다수의 전적이 있으며<br>
+                        노래방 탬버린 자진모리장단 스킬을 보유하고 있습니다.<br>
+                        즐거운 모임엔 절대로 빠지는 법이 없어 분위기를 띄워야 할 장소에서 맹활약을 할 캐릭터입니다.</p>
+                    </div>
+                    <img class="character lucio" src="images/me-lucio.png" alt="">
+                    <span class="character_border character_border1"></span>
+                </div>
+            	<div class="section3_inner2">
+                    <img class="character mercy" src="images/me-mercy.png" alt="">                
+                	<div class="section3_inner2_txt">
+                        <h2>"누가 의사를 찾으셨나요?"</h2>
+                        <strong>치유력</strong><img class="star star1" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <p>신나는 스피드와 즐거움을 돋우워주는 분위기 메이커.<br> 
+                        흥부자의 흥 광역기로  모두를 즐겁게 합니다.<br>
+                        학창시절의 행사부장과 부과대표, 단체활동의 장기자랑 등 다수의 전적이 있으며<br>
+                        노래방 탬버린 자진모리장단 스킬을 보유하고 있습니다.<br>
+                        즐거운 장소엔 절대로 빠지는 법이 없어 분위기를 띄워야 할 장소에서 맹활약을 할 캐릭터입니다.</p>
+                    </div>
+                    <span class="character_border character_border2"></span>
+                </div>
+            	<div class="section3_inner3">
+                	<div class="section3_inner3_txt">
+                        <h2>"게임을 하면 이겨야지!"</h2>
+                        <strong>끈기, 인내심, 체력</strong><img class="star star1" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <img class="star" src="images/me-star.png" alt="">
+                        <p>시작을 하면 끝을 봐야 직성이 풀리는 깡다구, 그리고 그 성격이 낳은 성실함.<br>
+                        한 번 계약을 맺어 시작한 일은 절대 소홀히 하는 법이 없습니다.<br>
+                        전 업계 업무 특성상 24시간 3교대 로테이션 근무와 하루 16시간씩 몇 달간의 야근속에서도<br>
+                        단 한 번도 무단결근을 한 적이 없으며, 어느 겨울철 노로바이스에 걸렸음에도<br>
+                        팀의 바쁜 스케쥴이 걱정되어 꾸역꾸역 출근을 했다가 대표님이 집으로 귀가조치 시킨 일례는<br>
+                        전설처럼 내려오고 있습니다.</p>
+                    </div>
+                    <img class="character dva" src="images/me-dva.png" alt="">
+                    <span class="character_border character_border3"></span>
+                </div>                                
+            </div>
+        </div>
+        <div class="footer">
+        	<div class="footer_inner">
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

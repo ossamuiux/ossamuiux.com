@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ALPENSIA</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*주메뉴*/
+	//아코디언메뉴 - 클릭했을때 펼쳐지고 다시 클릭했을때는 닫아지게
+	//그리고 다른 메뉴를 클릭했을때도 닫아지게
+	$('.gnb li').click(function(){
+		$('.gnb li').not(this).find('.sub').slideUp(200).removeClass('on');
+		$('.gnb li').not(this).find('a').removeClass('on');
+		//console.log($(this).find('.sub').hasClass('on'));
+		//hasClass - 변수를 판단하기 어려울때 가상으로 on을 걸었다 뺐다 하면서
+		//on이 있을때와 없을때를 판단하는 근거로 활용
+		if($(this).find('.sub').hasClass('on')){
+			$(this).find('.sub').removeClass('on').slideUp(200);
+			$(this).find('a').removeClass('on');
+		} else {
+			$(this).find('.sub').addClass('on').slideDown(200);
+			$(this).find('a').addClass('on');
+		}
+	});
+	$('.gnb>li>a').click(function(e){
+		e.preventDefault();
+	});
+	
+	
+	
+	
+	/*search버튼*/
+	$('.search .input_wrap').click(function(e){
+		e.preventDefault();
+		$(this).find('label').hide();
+	});
+	
+	$('.search .input_wrap').focusout(function(e){
+		e.preventDefault();
+		if($(this).find('input').val()==''){
+			$(this).find('label').show();
+		}
+	});
+	
+	$('.header').slimScroll({
+		width:'200px',
+        height: '100%'
+    });
+	//헤더 제이쿼리
+	
+	//공지사항 탭메뉴 
+	$('.notice1:gt(0)').hide();
+	
+	var num;
+	
+	$('.list_btn li').click(function(e){
+		e.preventDefault();
+		num=$(this).index();
+		$('.notice1').hide();//notice1전부 끄기(초기화)
+		$('.notice1').eq(num).show();
+		
+	});
+	
+	$('.list_btn ul li').click(function(e){
+		e.preventDefault();
+		$('.list_btn li a').removeClass('on');
+		$(this).find('a').addClass('on');
+	});
+	
+	//첫페이/마지막페이지 보기 버튼
+	$('.list_btn .prev_btn').click(function(){
+		$('.notice1').hide();
+		$('.notice1').eq(0).show();
+		$('.list_btn li a').removeClass('on');
+		$('.list_btn li .prev').addClass('on');
+	});
+	
+	$('.list_btn .next_btn').click(function(){
+		$('.notice1').hide();
+		$('.notice1').eq(2).show();
+		$('.list_btn li a').removeClass('on');
+		$('.list_btn li .next').addClass('on');
+	});
+	
+	
+	
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<h1><a href="index.html"><img src="img/logo.png" alt="알펜시아"></a></h1>
+    <ul class="gnb">
+    	<li>
+        	<a href="#">온라인예약</a>
+            <ul class="sub">
+            	<li><a href="reservation.html">객실예약</a></li>
+                <li><a href="#">단체예약</a></li>
+                <li><a href="#">골프예약</a></li>
+                <li><a href="#">객실추첨예약</a></li>
+                <li><a href="#">알펜시아시즌권구매</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">이벤트&amp;할인</a>
+            <ul class="sub">
+            	<li><a href="event.html">패키지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">할인</a></li>
+                <li><a href="#">사이버쿠폰할인</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">숙박&amp;컨벤션</a>
+            <ul class="sub">
+            	<li><a href="convention.html">알펜시아 호텔</a></li>
+                <li><a href="#">홀리데이 인&amp;스위트</a></li>
+                <li><a href="#">컨벤션센터</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">레져&amp;편의</a>
+            <ul class="sub">
+            	<li><a href="ski.html">스키 보드</a></li>
+                <li><a href="#">트룬C.C회원제</a></li>
+                <li><a href="#">700골프클럽대중제</a></li>
+                <li><a href="#">오션700</a></li>
+                <li><a href="#">알파인코스터</a></li>
+                <li><a href="#">스포츠파크</a></li>
+                <li><a href="#">스키점프대(전망대)</a></li>
+                <li><a href="#">콘서트홀</a></li>
+                <li><a href="#">생태학습원</a></li>
+                <li><a href="#">뮤직텐트</a></li>
+                <li><a href="#">리테일빌리지</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">리조트소개</a>
+            <ul class="sub">
+            	<li><a href="#">현장소식</a></li>
+                <li><a href="#">홍보관</a></li>
+                <li><a href="#">사이버투어</a></li>
+                <li><a href="#">날씨정보</a></li>
+                <li><a href="#">주변관광안내</a></li>
+                <li><a href="#">종합이용요금</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">대중교통</a></li>
+                <li><a href="#">전화번호</a></li>
+                <li><a href="#">채용정보</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">고객센터</a>
+            <ul class="sub">
+            	<li><a href="notice_list.html">공지사항</a></li>
+                <li><a href="#">분양회원서비스</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">고객의소리</a></li>
+                <li><a href="#">분실물센터</a></li>
+                <li><a href="#">사이트운영정책</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sns_btn">
+    	<li><a href="#"><img src="img/twitter_icon.png" alt="트위터"></a></li>
+        <li><a href="#"><img src="img/facebook_icon.png" alt="페이스북"></a></li>
+        <li><a href="#"><img src="img/blog_icon.png" alt="블로그"></a></li>
+        <li><a href="#"><img src="img/magazine_icon.png" alt="매거진"></a></li>        
+    </ul>
+    <div class="search">
+    	<form action="" method="">
+            <!--form 요소를 묶어주는 그룹태그-->
+            <fieldset>
+            <legend>게시판검색</legend>
+            <div class="input_wrap">
+                <label for="box">Search</label>
+                <input type="text" id="box">
+            </div>
+            <button type="submit">검색버튼</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="top_menu">
+    	<ul class="lnb">
+        	<li><a href="login.html">로그인</a></li>
+            <li><a href="join.html">회원가입</a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/korea.png" alt="한국어"></a></li>
+            <li><a href="#"><img src="img/usa.png" alt="영어"></a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/japan.png" alt="일본어"></a></li>
+            <li><a href="#"><img src="img/china.png" alt="중국어"></a></li>
+        </ul>
+    </div>
+    <div class="footer_wrap">
+    	<ul>
+        	<li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="footer">
+        	<p>강원도 평창군 대관령면<br>솔봉로 325</p>
+            <p>Tel. 033-339-0000</p>
+            <address class="address">
+            Copyright(C)<br>Gangwondo Development<br>Corporation.<br>All Rights Reserved.
+            </address>
+        </div>
+    </div>
+</div>
+<div class="main notice notice_list">
+	<form id="frm">
+    	<fieldset>
+        	<legend>공지사항(리스트)</legend>
+            <div class="section">
+                <div class="head">
+                    <h1>공지사항</h1>
+                    <ul>
+                        <li><a href="index.html"><img src="img/home_btn.png" alt="홈버튼"></a></li>
+                        <li class="lst"><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="tit">
+                    <h3>알펜시아 리조트의 소식을 발빠르게 만나보세요.</h3>
+                    <p>공지사항, 상품안내 등의 소식 등을 모아 고객 여러분께 빠르게 전달해 드립니다.</p>
+                </div>
+            </div>
+            <div class="search_wrap">
+            	<select>
+                	<option>제목</option>
+                    <option>내용</option>
+                </select>
+                <input type="text" class="txt">
+                <button type="button">검색</button>
+            </div>
+            <table class="notice1">
+              <tr>
+                <th class="grp2">No.</th>
+                <th class="grp">분류</th>
+                <th colspan="4" class="tit1">제목</th>
+                <th class="grp">등록일</th>
+                <th class="grp1">조회</th>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>공통</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">알펜시아 클럽하우스 레스토랑 알트랑</a></td>
+                <td>2015.12.30</td>
+                <td>806</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>이벤트</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">새해맞이 스키장 송구영신 이벤트</a></td>
+                <td>2015.12.28</td>
+                <td>169</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">마사지체험 힐링쉼터</a></td>
+                <td>2015.12.24</td>
+                <td>217</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>대회</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">제5회 에쓰-오일 알펜시아 FIS컵 국제알파인 스키대회</a></td>
+                <td>2015.12.22</td>
+                <td>114</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>이벤트</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">호텔 겨울성수기 뷔폐</a></td>
+                <td>2015.12.18</td>
+                <td>757</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>이벤트</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">15/16 동계시즌 스키장, 오션700 이용고객 감사이벤트</a></td>
+                <td>2015.12.17</td>
+                <td>35</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>이벤트</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">알펜시아 프리미엄 가족콘서트</a></td>
+                <td>2015.12.14</td>
+                <td>3937</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>호텔</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">눈썰매패키지</a></td>
+                <td>2015.12.08</td>
+                <td>458</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>호텔</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">2016 스파패키지</a></td>
+                <td>2015.12.08</td>
+                <td>241</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="notice_view.html">강원도민을 위한 할인 안내</a></td>
+                <td>2015.12.04</td>
+                <td>305</td>
+              </tr>
+            </table>
+            <table class="notice1">
+              <tr>
+                <th class="grp2">No.</th>
+                <th class="grp">분류</th>
+                <th colspan="4" class="tit1">제목</th>
+                <th class="grp">등록일</th>
+                <th class="grp1">조회</th>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="#">특별할인 프로모션</a></td>
+                <td>2015.12.04</td>
+                <td>301</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>공지</td>
+                <td colspan="4" class="tit"><a href="#">2015/2016스키장 오픈!</a></td>
+                <td>2015.11.26</td>
+                <td>6396</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>공지</td>
+                <td colspan="4" class="tit"><a href="#">	스위트 앤 스위트 패키지</a></td>
+                <td>2015.11.05</td>
+                <td>402</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>호텔/콘도</td>
+                <td colspan="4" class="tit"><a href="#">겨울패키지</a></td>
+                <td>2015.11.02</td>
+                <td>555</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="#">시설 보수 휴장 안내</a></td>
+                <td>2015.10.16</td>
+                <td>585</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>호텔/콘도</td>
+                <td colspan="4" class="tit"><a href="#">관광주간패키지</a></td>
+                <td>2015.10.01</td>
+                <td>278</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>호텔</td>
+                <td colspan="4" class="tit"><a href="#">특별한 추석을 위한 특선 저녁 뷔페</a></td>
+                <td>2015.09.25</td>
+                <td>255</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>스키/보드</td>
+                <td colspan="4" class="tit"><a href="#">2015 시즌보관락카</a></td>
+                <td>2015.09.03</td>
+                <td>2444</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>골프</td>
+                <td colspan="4" class="tit"><a href="#">50%할인</a></td>
+                <td>2015.09.02</td>
+                <td>696</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>호텔/콘도</td>
+                <td colspan="4" class="tit"><a href="#">가을패키지</a></td>
+                <td>2015.08.28</td>
+                <td>391</td>
+              </tr>
+            </table>
+            <table class="notice1">
+              <tr>
+                <th class="grp2">No.</th>
+                <th class="grp">분류</th>
+                <th colspan="4" class="tit1">제목</th>
+                <th class="grp">등록일</th>
+                <th class="grp1">조회</th>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>호텔/콘도</td>
+                <td colspan="4" class="tit"><a href="#">오션700패키지</a></td>
+                <td>2015.08.28</td>
+                <td>305</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>스키/보드</td>
+                <td colspan="4" class="tit"><a href="#">2015/2016 알펜시아 스키시즌권 4차판매 개시!</a></td>
+                <td>2015.08.28</td>
+                <td>14589</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>공지</td>
+                <td colspan="4" class="tit"><a href="#">MBC 무한도전 '영동고속도로 가요제' 안내</a></td>
+                <td>2015.08.11</td>
+                <td>1941</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>공지</td>
+                <td colspan="4" class="tit"><a href="#">조정래작가 사인회</a></td>
+                <td>2015.08.05</td>
+                <td>267</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>이벤트</td>
+                <td colspan="4" class="tit"><a href="#">부띠아울렛 여름 바캉스 시즌 할인행사</a></td>
+                <td>2015.07.29</td>
+                <td>445</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="#">아쿠아로빅/레크레이션 이벤트</a></td>
+                <td>2015.07.22</td>
+                <td>255</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="#">오션700 운영시간 안내</a></td>
+                <td>2015.07.22</td>
+                <td>3284</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>오션 700</td>
+                <td colspan="4" class="tit"><a href="#">앤젤리쉬&amp;아쿠아바 오픈!!</a></td>
+                <td>2015.07.20</td>
+                <td>387</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>패키지</td>
+                <td colspan="4" class="tit"><a href="#">cool breeze PKG</a></td>
+                <td>2015.07.16</td>
+                <td>257</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>공지</td>
+                <td colspan="4" class="tit"><a href="#">제12회 대관령국제음악제</a></td>
+                <td>2015.07.15</td>
+                <td>732</td>
+              </tr>
+            </table>
+            <div class="list_btn">
+            	<button type="button" class="prev_btn">처음페이지</button>
+            	<button type="button" class="prev_btn1">이전페이지</button>
+            	<ul>
+                	<li><a href="#" class="on prev">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#" class="next">3</a></li>
+                </ul>
+                <button type="button" class="next_btn1">다음페이지</button>
+                <button type="button" class="next_btn">마지막페이지</button>
+                <a href="notice_wirte.html" class="wirte">1:1 상담</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+
+

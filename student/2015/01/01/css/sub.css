@@ -1,0 +1,142 @@
+@charset "utf-8"; 
+
+a{color:#333130;}
+
+
+.main {width:1098px; height:1511px; border:1px solid #e6e5e5; margin:10px auto;}
+
+/*좌측 메뉴 -제목*/
+.main .left_box {width:168px;   float:left; margin-left:30px; margin-top:80px;  }
+.main .left_box .tit {height:68px; border-bottom:3px solid #213d2a;}
+.main .left_box .tit h2 {font-size:24px; font-weight:bold; color:#de3608;}
+.main .left_box .tit p {font-size:12px; font-weight:bold; color:#bab6b3; margin-bottom:25px}
+
+/*좌측메뉴 - 메뉴 */
+.main .left_box .txt {margin-top:32px; }
+.main .left_box .txt .lnb>li {padding:10px 0; border-bottom:1px dotted #e2e0df; }
+.main .left_box .txt .lnb>li>a {font-weight:bold; font-size:15px; color:#908d8b; background:url(../images/bar.png) no-repeat left center;padding-left:6px; }
+.main .left_box .txt .lnb li a:hover {color:#de3608;}
+
+
+/*좌측메뉴 - 메뉴 2단메뉴 피자종류 */
+.main .left_box .txt .lnb li .depth2 {margin-top:10px; padding:10px 0 10px 10px; background:#f8f8f8; display:none; font-size:9px; }
+.main .left_box .txt .lnb li .depth2 li {padding-bottom:10px;  font-size:11px; color:#908d8b; }
+.main .left_box .txt .lnb li .depth2>li>span {color:#908d8b; font-size:11px;}
+.main .left_box .txt .lnb li .depth2 .last {padding:0px;}
+.main .left_box .txt .lnb li .depth2 li a {color:#908d8b;}
+.main .left_box .txt .lnb li .depth2 li a:hover {color:#de3608;}
+
+.main .left_box .txt .lnb li .depth2 li .depth3 {margin-top:5px; }
+.main .left_box .txt .lnb li .depth2 li .depth3>li {padding-bottom:5px;}
+.main .left_box .txt .lnb li .depth2 li .depth3>li:last-child {padding:0;}
+.main .left_box .txt .lnb li .depth2 li .depth3>li>a {display:inline-block; text-indent:15px; color:#908d8b; font-size:11px;}
+.main .left_box .txt .lnb li .depth2 li .depth3>li>a:hover {color:#de3608;}
+
+
+/*우측 내용-*/
+.main .right_box {float:right; width:800px; margin-top:80px; margin-right:50px; position:relative;}
+.main .right_box .tit {height:68px; border-bottom:3px solid #213d2a;  }
+.main .right_box .tit h2 {font-size:24px; font-weight:bold; color:#33130; }
+.main .right_box .tit p {font-size:12px; font-weight:bold; color:#bab6b3; margin-bottom:25px}
+
+/*우측 내용-신메뉴*/
+.main .right_box .new_menu {background:url(../images/nmenu160318.jpg) no-repeat; width:800px; height:1097px; margin-top:32px;}
+.main .right_box .order { width:250px; height:50px; background:#de3608 url(../images/menu_cart.png) no-repeat 30% center; display:block; margin:20px auto; color:#fff; text-align:center; line-height:50px; font-weight:bold; font-size:20px; border-radius:10px; text-indent:45px; }
+
+
+/*우측 내용-인기메뉴*/
+.main .right_box .popular_menu {margin-top:32px; }
+.main .right_box .popular_menu .pizza {width:254px; height:360px; border:1px solid #a29e9e; margin-right:16px; margin-bottom:20px; float:left;position:relative; }
+/*우측 내용-인기메뉴 : 가격표*/
+.main .right_box .popular_menu .pizza img {margin:10px 11px 10px 9px;  }
+.main .right_box .popular_menu .pizza h3 {font-size:16px; font-weight:bold; text-align:center; height:38px;}
+.main .right_box .popular_menu .pizza .price_wrap {margin:20px 18px 10px; z-index:100; position:relative;}
+.main .right_box .popular_menu .pizza .price_wrap label {font-size:12px; display:inline-block; }
+.main .right_box .popular_menu .pizza .price_wrap input { vertical-align:middle; margin-top:-2px;}
+.main .right_box .popular_menu .pizza .price_wrap .regular {color:#f37304;}
+.main .right_box .popular_menu .pizza .price_wrap .large {color:#cb1919;}
+.main .right_box .popular_menu .pizza .price_wrap .txt {margin-right:2px;}
+.main .right_box .popular_menu .pizza .price_wrap a span {line-height:18px;}
+
+.main .right_box .popular_menu .last {margin-right:0;}
+/*우측 내용-인기메뉴 : 마우스오버시 메뉴선택창*/
+.main .right_box .popular_menu .pizza .menu_opt_wrap{width:254px; height:500px; border:2px solid #de3608; position:absolute; left:-2px; top:-1px; z-index:30; display:none;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt {background:#fff; position:absolute; left:0; top:350px; height:150px; }
+/*도우선택*/
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_select {position:relative;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_select ul .select_btn {border:1px solid #7e7d7d; margin:0 auto; width:200px; height:25px; display:block; text-align:center; line-height:25px; color:#7e7d7d; background: url(../images/bg_menusel.gif) no-repeat 95% center;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_select ul .select_btn.on {background-image:url(../images/bg_menuselOn.gif);}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_select ul .slide_select { border:1px solid #7e7d7d;  width:200px; position:absolute; left:26px; top:25px; text-align:center; line-height:20px; border-top:none; background:#fff; display:none;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_select ul .slide_select li a { color:#7e7d7d;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_select ul .slide_select li a:hover {color:#de3608;}
+/*장바구니,바로구매 아이콘*/
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu {margin:15px 26px; }
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap {height:44px;} 
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap  li {float:left;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap  li a {background:url(../images/ic_memu01.gif) no-repeat center center ;border:2px solid #bbbbbb;  width:38px; height:40px; display:inline-block; padding:0 13px; border-radius:5px 0 0 5px;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap  li a:hover { border-color:#de3608;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap  li .icon {border-right:1px solid #bbbbbb;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap  li .icon1 {border-right:1px solid #bbbbbb; border-left:1px solid #bbbbbb; border-radius:0; background-image:url(../images/menu_icon.gif); width:40px;}
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .icon_menu .icon_wrap li .icon2 {border-radius:0 5px 5px 0; background-image:url(../images/menu_icon1.gif); border-left:1px solid #bbbbbb ;}
+
+/*피자설명*/
+.main .right_box .popular_menu .pizza .menu_opt_wrap .menu_opt .menu_txt p { font-size:11px; text-align:center;}
+
+/*피자상세설명 팝업*/
+.main .right_box .popular_menu .pizza .pop_up {position:fixed; top:50%; left:50%; width:805px; height:440px; background:#fff; z-index:300; border-radius:8px; border:2px solid #000; margin-left:-305px; margin-top:-222px; display:none;}
+.main .right_box .popular_menu .pizza .pop_up .left{float:left; width:300px; } /*img는 inline엘리먼트라 가로크기지정해줘*/
+.main .right_box .popular_menu .pizza .pop_up h2 {font-weight:bold; font-size:20px; margin:20px 0 10px 23px;}
+.main .right_box .popular_menu .banban .pop_up h2 { margin-bottom:0;}
+.main .right_box .popular_menu .pizza .pop_up p {margin-left:23px; font-weight:bold; font-size:15px;}
+.main .right_box .popular_menu .pizza .pop_up img {margin:20px 0 0 23px;}
+/*가격*/
+.main .right_box .popular_menu .pizza .pop_up .left  .price_wrap { margin:20px 0 10px 26px; }
+.main .right_box .popular_menu .pizza .pop_up .left  .price_wrap a {font-size:13px; font-weight:bold;}
+/*도우선택*/
+.main .right_box .popular_menu .pizza .pop_up .left  .menu_select { position:relative; margin:20px 0 0 37px}
+.main .right_box .popular_menu .pizza .pop_up .left  .menu_select .select_btn {border:1px solid #7e7d7d;  width:200px; height:23px; display:block; text-align:center; line-height:25px; color:#7e7d7d; background: url(../images/bg_menusel.gif) no-repeat 95% center;}
+.main .right_box .popular_menu .pizza .pop_up .left .menu_select .select_btn.on {background-image:url(../images/bg_menuselOn.gif);}
+.main .right_box .popular_menu .pizza .pop_up .left .menu_select .slide_select {border:1px solid #7e7d7d;  width:200px; position:absolute; left:0; top:25px; text-align:center; line-height:20px; border-top:none; background:#fff; display:none;}
+.main .right_box .popular_menu .pizza .pop_up .left .menu_select .slide_select li {width:200px;}
+.main .right_box .popular_menu .pizza .pop_up .left .menu_select .slide_select li a { color:#7e7d7d;}
+.main .right_box .popular_menu .pizza .pop_up .left .menu_select .slide_select li a:hover {color:#de3608;}
+
+
+
+/*팝업오른쪽 박슨*/
+.main .right_box .popular_menu .pizza .pop_up .right {float:left;  margin-top:70px; background:#fff; position:relative; }
+.main .right_box .popular_menu .pizza .pop_up .right h3 {font-size:14px; color:#606060; height:20px; text-align:left; margin-left:23px; line-height:16px; margin-bottom:20px;}
+.main .right_box .popular_menu .banban .pop_up .right h3 {margin-bottom:0;}
+.main .right_box .popular_menu .pizza .pop_up .right p {color:#6d6865; font-size:12px; padding:20px 0; line-height:15px;}
+.main .right_box .popular_menu .pizza .pop_up .right p strong {font-weight:800; color:#333; }
+.main .right_box .popular_menu .pizza .pop_up .right p em {display:block; color:#6d6865; text-indent:54px; }
+/*원산지보기*/
+.main .right_box .popular_menu .pizza .pop_up .right  .detail {color:#fff; display:inline-block; border-radius:5px; float:right; margin-top:12px; background:#066; width:73px; height:20px; text-align:center; line-height:20px; font-size:12px; position:absolute; right:20px; top:30%;}
+.main .right_box .popular_menu .banban .pop_up .right  .detail {right:15px; top:17%;}
+/*표*/
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 { margin-left:30px; color: #7e7d7d;}
+.main .right_box .popular_menu .banban .pop_up .right .tbl_style2 {margin-left:23px; }
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 caption {font-size:12px; padding-bottom:10px;}
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 thead tr th {font-size:10px; border:1px solid #999; padding:2px 1px; width:40px; vertical-align:middle; }
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 thead tr .first {width:70px;}
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 thead tr .third {width:50px;}
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 thead tr th strong{font-size:4px; }
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 tbody {font-size:10px;}
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 tbody tr {text-align:center; border:1px solid #bbbbbb;}
+.main .right_box .popular_menu .pizza .pop_up .right .tbl_style2 tbody tr td {border:1px solid #999; vertical-align:middle; padding:2px;}
+/*장바구니,구매 아이콘*/
+.main .right_box .popular_menu .pizza .pop_up .right .icon a {float:left; display:block; width:218px; height:30px;  border:1px solid #fff; margin-top:3px; background:#C30 url(../images/icon_cart.png) no-repeat 30% center; background-size:22px; color:#fff; font-weight:bold; line-height:30px; text-align:center; text-indent:30px;}
+.main .right_box .popular_menu .pizza .pop_up .right .icon .cart {margin-left:23px; border-radius:5px 0 0 5px;}
+.main .right_box .popular_menu .pizza .pop_up .right .icon .buy { border-radius:0 5px 5px 0; background-image:url(../images/icon_buy.png); background-size:21px;}
+
+
+.main .right_box .popular_menu .pizza .close_btn {background:#fff url(../images/close_btn.png) no-repeat center center; position:fixed; left:50%; top:50%; width:50px; height:50px; background-size: 50px; z-index:300; border:2px solid #000; border-radius:0 8px 8px 0; margin-left:502px; margin-top:-217px; display:none;}
+.cover {position:fixed; width:100%; height:100%; background:url(../images/Untitled-1.png); z-index:250; display:none;}
+
+
+/*우측내용-location*/
+.main .right_box .location {position:absolute; top:0; right:0; }
+.main .right_box .location li {float:left;  padding-left:20px;  background:url(../images/location.png) no-repeat 5px center;} 
+.main .right_box .location li:first-child {background:none; padding:0;}
+.main .right_box .location li a {font-size:12px; }
+.main .right_box .location li .new {color:#de3608; }

@@ -1,0 +1,408 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+@font-face {
+  font-family: 'abandar';
+  font-style: normal;
+  src: local('abandar'),
+       local('abandar'),
+       url(../font/abandar.woff) format('woff'),
+       url(../font/abandar.ttf) format('truetype');
+}
+
+body,select,button,input,textarea,table {font-family: 'abandar','맑은 고딕', 'malgun gothic', '돋움', dotum, sans-serif;font-size: 16px;}
+html {height: 100%;}
+body {min-width:1100px; background: #191645;}
+
+#wrap {position: relative;}
+
+
+#header {position: absolute; left: 50%; top: 30px; z-index: 999; width: 1100px; height: 140px; transform: translateX(-50%);}
+
+#header .logo {float:left;}
+
+/*gnb*/
+#header .gnb_bar {float: right; position: relative;}
+#header .gnb {position: absolute; right: 0; top: 30px;}
+#header .gnb>li {float: left; margin: 0 45px;}
+
+/*gnb 호버시 효과*/
+#header .gnb>li:hover:before {content: '어디서나'; position: absolute; left:42px; top: 0; color: #fff; font-size: 18px;}
+#header .gnb>li:hover span {opacity: 0;}
+#header .gnb>li:nth-child(2):hover:before {content: '가장 빛나는'; position: absolute; left:190px; top: 0; color: #fff; font-size: 18px;}
+#header .gnb>li:nth-child(3):hover:before {content: '별'; position: absolute; left:420px; top: 0; color: #fff; font-size: 18px;}
+
+#header .gnb>li>a {color: #fff; font-size: 18px;}
+
+/*메인*/
+#main { position: relative; height: 980px; background: url(../images/main_planet.png) no-repeat center bottom; z-index: 100;}
+#main .main_visual {position: absolute; left: 50%; top:150px; transform:translateX(-50%); width: 1100px; z-index: 100; }
+
+/*배경 별 반짝이는 효과*/
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+#main .stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:747px;
+}
+
+#main .stars {
+  background:#191645 url(../images/stars.png) repeat top center;
+}
+
+#main .twinkling{
+  background:transparent url(../images/twinkling.png) repeat top center;
+  z-index:1;
+    -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+
+/*메인 가운데 하트 행성*/
+
+
+
+/*글자 타이핑 효과*/
+@-webkit-keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+#main .main_visual .heart {margin-left:380px;}
+
+#main .main_visual h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40); 
+    color: #fff; 
+    font-size: 38px;  
+    margin: 40px 0 0 220px;
+}
+
+
+
+
+
+/****************Aboutme*********************/
+#main.aboutme { background: none; height: auto;}
+#main.aboutme .sub_planet {background: url(../images/main_planet.png) no-repeat center bottom;  height: 233px;  padding-top: 760px;}
+
+#main.aboutme .sub_visual {width: 1100px;
+    position: absolute; left:50%; top: 520px; transform: translate(-50%,-50%); z-index: 300;}
+
+#main.aboutme .sub_visual h2 {color: #fff; font-size: 36px; text-align: center; margin-bottom: 40px;}
+#main.aboutme .sub_visual strong {color: #ee9d2a;}
+
+#main.aboutme .section1 {width: 1100px; margin: 0 auto; position: relative;}
+
+/*상단 우주여행 글박스*/
+#main.aboutme .section1 .planetbox1 {margin-top: 80px; }
+#main.aboutme .section1 p {color: #ee9d2a; font-size:20px; position: absolute; left: 50%; top: 113px; transform: translateX(-50%); text-align: center;}
+#main.aboutme .section1 strong {color: #eee;}
+
+/*프로필&스킬*/
+#main.aboutme .contents { width: 1100px; margin:123px auto 0 auto; padding-bottom:170px;}
+#main.aboutme .profile {overflow: hidden;}
+#main.aboutme .profile .skillbox {float: left;}
+#main.aboutme .contents .profile .gold {margin-left: 110px; float:left;}
+
+/*행성 사전 정보 글*/
+#main.aboutme .contents .profile .profile_txt {float: right; margin-right: 160px;}
+
+#main.aboutme .contents .profile .profile_txt h3 {color: #ee9d2a; font-size: 20px;}
+#main.aboutme .contents .profile .profile_txt p {color: #eee; margin-top: 8px; padding-bottom: 10px;}
+
+/*행성 능력*/
+#main.aboutme .contents .profile .profile_txt .ability_box li {margin: 7px 0; overflow: hidden;}
+#main.aboutme .contents .profile .profile_txt .ability_box li h4 {float: left;}
+#main.aboutme .contents .profile .profile_txt .ability_box li .bar_wrap {width: 200px; height: 32px; border-radius: 32px; background: #fff; float: right; margin-right: 70px; overflow: hidden; position: relative;}
+
+/*퍼센트 바*/
+
+@keyframes moveBar1 {100%{transform: translateX(-10px);}}
+@keyframes moveBar2 {100%{transform: translateX(-25px);}}
+@keyframes moveBar3 {100%{transform: translateX(-30px);}}
+@keyframes moveBar4 {100%{transform: translateX(-40px);}}
+@keyframes moveBar5 {100%{transform: translateX(-20px);}}
+@keyframes moveBar6 {100%{transform: translateX(-10px);}}
+
+#main.aboutme .contents .profile .profile_txt .ability_box li .bar_wrap .bar {
+    width: 100%;
+    height: 32px;
+    border-radius: 32px;
+    background: #ee284b;
+    float: left;
+    line-height: 32px;
+    transform: translateX(-200px);
+    opacity: 0;
+    
+}
+
+#main.aboutme .contents .profile.on .profile_txt .ability_box li .bar_wrap .bar {
+    animation: moveBar1 1s ease-in-out forwards;
+    opacity: 1;
+    
+}
+#main.aboutme .contents .profile.on .profile_txt .ability_box li:nth-child(2) .bar_wrap .bar {
+    animation: moveBar2 1s ease-in-out forwards;
+    opacity: 1;
+}
+#main.aboutme .contents .profile.on .profile_txt .ability_box li:nth-child(3) .bar_wrap .bar {
+    animation: moveBar3 1s ease-in-out forwards;
+    opacity: 1;
+}
+#main.aboutme .contents .profile.on .profile_txt .ability_box li:nth-child(4) .bar_wrap .bar {
+    animation: moveBar4 1s ease-in-out forwards;
+    opacity: 1;
+}
+#main.aboutme .contents .profile.on .profile_txt .ability_box li:nth-child(5) .bar_wrap .bar {
+    animation: moveBar5 1s ease-in-out forwards;
+    opacity: 1;
+}
+#main.aboutme .contents .profile.on .profile_txt .ability_box li:nth-child(6) .bar_wrap .bar {
+    animation: moveBar6 1s ease-in-out forwards;
+    opacity: 1;
+}
+
+#main.aboutme .contents .profile.on .profile_txt .ability_box li .bar_wrap span {position: absolute; left: 10px; top: 5px; color: #fff; z-index: 500;}
+
+/*능력 캐릭터*/
+#main.aboutme .contents .profile .profile_txt .ability_ch {float:right; margin:-130px -160px 0 0;}
+
+/*경험부분*/
+#main.aboutme .contents .experience {margin-top: 80px; overflow: hidden;}
+#main.aboutme .contents .experience .exbox{float: left;}
+#main.aboutme .contents .experience strong {color: #ee9d2a;}
+#main.aboutme .contents .experience p {color: #eee; float: left; margin: 60px 0 0 100px; font-size: 20px;}
+
+
+/*경험밑에 이미지와 글*/
+#main.aboutme .contents .ex_contents {overflow: hidden; margin-top: 70px;}
+#main.aboutme .contents .ex_contents li {margin: 35px 0; overflow: hidden;}
+#main.aboutme .contents .ex_contents li:first-child {margin-top: 0;}
+#main.aboutme .contents .ex_contents li h3 {float: left;}
+#main.aboutme .contents .ex_contents li .tit_wrap {float:right; margin: 25px 60px 0 0;}
+#main.aboutme .contents .ex_contents li .tit {font-family: 'abandar'; color: #ee9d2a; font-size: 20px;}
+#main.aboutme .contents .ex_contents li p { color: #eee; font-family: 'Nanum Gothic'; margin-top: 10px; font-size: 15px;}
+
+/*하단 passion*/
+#main.aboutme .contents .passion {margin-top: 50px; overflow: hidden;}
+#main.aboutme .contents .passion .passion_box{float: left;}
+#main.aboutme .contents .passion .passion_txt_wrap {float: left; margin: 10px 0 0 110px;}
+#main.aboutme .contents .passion p { color: #eee;  font-family: 'Nanum Gothic'; margin-top: 10px;}
+#main.aboutme .contents .passion .passion_txt {color: #ee9d2a;   font-family: 'abandar'; font-size: 20px;}
+
+/*마지막 선택*/
+#main.aboutme .choice {background: url(../images/aboutme_planetbox1.png) no-repeat center bottom; height: 154px; margin-top: 80px;}
+#main.aboutme .choice .planetbox1 {margin-top: 80px; }
+
+#main.aboutme .choice h3 {color: #eee; font-size:18px;  text-align: center; padding-top: 25px;}
+#main.aboutme .choice p {color: #eee; font-size:18px;  text-align: center;}
+#main.aboutme .choice .warning {font-size: 14px; top: 200px; color: #ea637b;}
+
+/*선택 모달*/
+#main.aboutme .modal_choice {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000;}
+#main.aboutme .modal_choice .modal_choice_inner {width: 880px;   position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+
+#main.aboutme .modal_choice .modal_choice_inner .yes {margin-left: 170px;}
+#main.aboutme .modal_choice .modal_choice_inner h2 {color: #fff; font-size: 20px; text-align: center; margin-top: 50px;}
+#main.aboutme .modal_choice .modal_choice_inner .btn_close {background:transparent url(../images/choice_close.png) no-repeat ; position: absolute; right: 0; top: 10px; width: 32px; height: 32px;}
+#main.aboutme .modal_choice .btn_close {outline:none;}
+
+#main.aboutme .choice .yesno {margin-top:80px;}
+#main.aboutme .choice .yesno .yes_txt {font-size:40px; margin-left:300px;}
+#main.aboutme .choice .yesno h4 {color:#fff;  float:left; font-size:12px; margin-left:400px; line-height:30px; cursor:pointer;}
+
+
+/**************메인 리디자인 ****************************************************************************************************************************************/
+#main.redesign { background: none; height: auto;}
+#main.redesign  .sub_clouds{background: url(../images/mainproject_clouds.png) no-repeat center bottom;  height: 233px;  padding-top: 760px;}
+
+#main.redesign .sub2_visual {width: 1100px; margin: 0 auto; position: relative;}
+#main.redesign .sub2_visual .ship {position: absolute; left:50%; top: 560px; transform: translate(-50%,-50%);}
+
+/*화살표*/
+#main.redesign .sub2_visual .prev_wrap {float:left; margin-top: 470px;}
+#main.redesign .sub2_visual .prev_wrap p {color: #fff; margin: 15px 0 0 14px;}
+
+#main.redesign .sub2_visual .next_wrap {float:right; margin-top: 470px;}
+#main.redesign .sub2_visual .next_wrap p {color: #fff; margin: 15px 0 0 11px;}
+
+/*상단 목업*/
+#main.redesign .section1_project {width: 100%; background: #8ed6da; }
+#main.redesign .section1_project .section1_project_inner {width: 1100px; height: 1000px; margin: 0 auto; position: relative;}
+#main.redesign .section1_project .section1_project_inner h2 {font-size: 30px; text-align: center; padding-top: 60px; color: #393939;}
+
+/*캐릭터 버튼*/
+#main.redesign .section1_project .section1_project_inner .site_btn {text-align: center; margin-top: 30px;}
+#main.redesign .section1_project .section1_project_inner .site_btn .document {margin-top: 10px;}
+
+#main.redesign .section1_project .section1_project_inner .main_mockup {margin:-50px 0 0 100px;}
+
+/*미션*/
+#main.redesign .section2_project {background: url(../images/mainproject_misson.jpg) no-repeat center center; width: 100%; height: 916px;}
+
+/*페이지 디테일*/
+#main.redesign .section3_project {background: url(../images/mainproject_detail.jpg) no-repeat center center; width: 100%; height: 5584px;}
+
+
+
+
+
+
+/***************모바일*******************************************************************************************************************/
+#main.mobile { background: none; height: auto;}
+#main.mobile  .sub_clouds{background: url(../images/mainproject_clouds.png) no-repeat center bottom;  height: 233px;  padding-top: 760px;}
+
+#main.mobile .sub3_visual {width: 1100px; margin: 0 auto; position: relative;}
+#main.mobile .sub3_visual .ship {position: absolute; left:50%; top: 560px; transform: translate(-50%,-50%);}
+
+/*화살표*/
+#main.mobile .sub3_visual .prev_wrap {float:left; margin-top: 470px;}
+#main.mobile .sub3_visual .prev_wrap p {color: #fff; margin: 15px 0 0 14px;}
+
+#main.mobile .sub3_visual .next_wrap {float:right; margin-top: 470px;}
+#main.mobile .sub3_visual .next_wrap p {color: #fff; margin: 15px 0 0 11px;}
+
+/*상단 목업*/
+#main.mobile .section1_mobile {background: url(../images/mobile_01.jpg) no-repeat center center; width: 100%; height: 768px;}
+
+#main.mobile .section1_mobile_inner {width: 1100px; margin: 0 auto;}
+
+#main.mobile .section1_mobile_inner .mobile_btn {float: right;}
+#main.mobile .section1_mobile_inner .mobile_btn .moriginal {margin: 130px -230px 0 0;}
+#main.mobile .section1_mobile_inner .mobile_btn .mrenewal {margin: 185px 120px 0 0;}
+
+/*미션*/
+#main.mobile .section2_mobile {background: url(../images/mobile_misson.jpg) no-repeat center center; width: 100%; height: 743px;}
+
+/*디테일*/
+#main.mobile .section3_mobile {background: url(../images/mobile_detail.jpg) no-repeat center center; width: 100%; height: 3807px;}
+
+
+/**************이벤트********************************************************************************************************************************************/
+#main.event { background: none; height: auto;}
+#main.event .sub_clouds{background: url(../images/mainproject_clouds.png) no-repeat center bottom;  height: 233px;  padding-top: 760px;}
+
+#main.event .sub4_visual {width: 1100px; margin: 0 auto; position: relative;}
+#main.event .sub4_visual .ship {position: absolute; left:50%; top: 560px; transform: translate(-50%,-50%);}
+
+/*화살표*/
+#main.event .sub4_visual .prev_wrap {float:left; margin-top: 470px;}
+#main.event .sub4_visual .prev_wrap p {color: #fff; margin: 15px 0 0 14px;}
+
+#main.event .sub4_visual .next_wrap {float:right; margin-top: 470px;}
+#main.event .sub4_visual .next_wrap p {color: #fff; margin: 15px 0 0 11px;}
+
+/*더샘*/
+#main.event .section1_event {background: url(../images/event_01.jpg) no-repeat center center; width: 100%; }
+#main.event .section1_event .section1_event_inner {width: 1100px; margin:0 auto; position: relative; height: 745px;}
+#main.event .section1_event .event_btn {position: absolute; left: 30px; bottom: 10px;}
+
+/*롯데제과*/
+#main.event .section2_event {background: url(../images/event_02.jpg) no-repeat center center; width: 100%; height: 745px;}
+#main.event .section2_event .section2_event_inner {width: 1100px; margin:0 auto; position: relative; height: 745px;}
+#main.event .section2_event .event_btn { position: absolute; left: 30px; bottom: 10px;}
+
+/*대한극장*/
+#main.event .section3_event {background: url(../images/event_03.jpg) no-repeat center center; width: 100%; height: 745px;}
+#main.event .section3_event .section3_event_inner {width: 1100px; margin:0 auto; position: relative; height: 745px;}
+#main.event .section3_event .event_btn {position: absolute; left: 30px; bottom: 10px;}
+
+
+
+
+/************더샘 이벤트**************/
+#main.thesame { background: #f1f3f3; height: 100%;}
+
+#main.thesame .thesame_inner {background: url(../images/event_thesame.jpg) no-repeat center center; height: 3000px;}
+
+
+/************롯데 이벤트**************/
+#main.lotte { background: #f1f3f3; height: 100%;}
+
+#main.lotte .lotte_inner {background: url(../images/event_lotte.jpg) no-repeat center center;  height: 3000px;}
+
+
+/************대한극장 이벤트**************/
+#main.daehan { background: #f1f3f3; height: 100%;}
+
+#main.daehan .daehan_inner {background: url(../images/event_daehan.jpg) no-repeat center center;  height: 2000px;}
+
+
+
+
+/**************반응형 ****************************************************************************************************************************************/
+#main.responsive { background: none; height: auto;}
+#main.responsive  .sub_clouds{background: url(../images/mainproject_clouds.png) no-repeat center bottom;  height: 233px;  padding-top: 760px;}
+
+#main.responsive .sub4_visual {width: 1100px; margin: 0 auto; position: relative;}
+#main.responsive .sub4_visual .ship {position: absolute; left:50%; top: 560px; transform: translate(-50%,-50%);}
+
+/*화살표*/
+#main.responsive .sub4_visual .prev_wrap {float:left; margin-top: 470px;}
+#main.responsive .sub4_visual .prev_wrap p {color: #fff; margin: 15px 0 0 14px;}
+
+#main.responsive .sub4_visual .next_wrap {float:right; margin-top: 470px;}
+#main.responsive .sub4_visual .next_wrap p {color: #fff; margin: 15px 0 0 11px;}
+
+/*상단 목업*/
+#main.responsive .section1_project {width: 100%; background: #8ed6da; }
+#main.responsive .section1_project .section1_project_inner {width: 1100px; height: 1000px; margin: 0 auto; position: relative;}
+#main.responsive .section1_project .section1_project_inner h2 {font-size: 30px; text-align: center; padding-top: 60px; color: #393939;}
+
+/*캐릭터 버튼*/
+#main.responsive .section1_project .section1_project_inner .site_btn {text-align: center; margin-top: 30px;}
+#main.responsive .section1_project .section1_project_inner .site_btn .document {margin-top: 10px;}
+
+#main.responsive .section1_project .section1_project_inner .main_mockup {margin:-20px 0 0 100px;}
+
+/*미션*/
+#main.responsive .section2_project {background: url(../images/responsive_misson.jpg) no-repeat center center; width: 100%; height: 916px;}
+
+/*페이지 디테일*/
+#main.responsive .section3_project {background: url(../images/responsive_pagedetail_01.jpg) no-repeat center center; width: 100%; height: 1608px;}
+
+#main.responsive .section4_project {background: url(../images/responsive_pagedetail_02.jpg) no-repeat center center; width: 100%; height: 1303px;}
+
+#main.responsive .section5_project {background: url(../images/responsive_pagedetail_03.jpg) no-repeat center center; width: 100%; height: 1982px;}
+
+
+
+
+/*푸터*/
+#footer {width:100%; height:200px; background:#ea637b;}
+#footer .footer_me {width:1100px; margin:0 auto;}
+
+#footer .footer_me .thanks {float:left; margin-top:50px;}
+#footer .footer_me h3 {color:#fff; font-size:30px;  text-indent:40px; float:left; margin-top:80px;}
+#footer .footer_me p {float:right; color:#fff; text-align:right; margin-top:90px;}
+
+/*top버튼*/
+#footer .btn_top {position:fixed; left:50%; bottom:30px; width:50px; height:50px;  background:url(../images/top_btn.png) no-repeat 0 -0; display:block; margin-left:620px; z-index: 9999; display: none;}
+#footer .btn_top.on {background: url(../images/top_btn_click.png) no-repeat 0 0; width: 50px; height: 60px; display: block; margin-left: 620px; z-index: 9999;}
+
+
+
+
+
+
+
+
+
+
+

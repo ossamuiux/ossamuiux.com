@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0; /*0은 none과 같은*/
+	font-size: 100%; /*모든 캐그의 폰트크기를 body에 맞춤*/
+	font: inherit; /*모든캐그의 폰트를 body에서 상속받음*/
+	vertical-align: top;
+	/*xhtml 1.0 독타입에서는 baseline
+	html5 독타입에서는 img의 아래쪽 간격을 없애기위해 top을 써야함!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+/* HTML5 display-role reset for older browsers */
+/*html5에 추가된 시멘틱엘리먼트 ie8이하에서는 인라인처리되므로 block으로 변경해줌*/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section main {
+	display: block;
+}
+body {
+	line-height: 1.5; /*body폰트크기의 *140% 13px*1.4=18.2px*/ /*보통 1.5기준*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none; /*인용구*/
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {text-decoration:none;}
+
+/*모바일사파리(아이폰)에서 가로모드 뷰포트변경시 텍스트크기가 자동조절될 경우를 방지*/
+body {-webkit-text-size-adjust:none;}

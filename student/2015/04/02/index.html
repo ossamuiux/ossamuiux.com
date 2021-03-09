@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Portfolio by Ha Kyung Gwon</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+	var num;
+	var num2;
+	var num3;
+	var sw=0;
+		
+	//모바일버튼의 메뉴
+	$('.m_btn').click(function(e){
+			e.preventDefault();
+			
+			if(sw==0){
+			$(this).addClass('on');
+			$('.m_gnb').stop().animate({'left':'0'},400);	
+			sw=1;
+		} else {
+			$(this).removeClass('on');
+			$('.m_gnb').stop().animate({'left':'-241px'},400);	
+			sw=0;
+		}	
+	});	
+	
+	$('.m_gnb li').click(function(e){
+		e.preventDefault();
+		
+		num3=$(this).index();
+		if(num3==0){
+			$('html,body').animate({'scrollTop':'0'},400);
+		} else if(num3==1){
+			$('html,body').animate({'scrollTop':'950'},400);
+		} else if(num3==2){
+			$('html,body').animate({'scrollTop':'1900'},400);
+		} else if(num3==3){
+			$('html,body').animate({'scrollTop':'2850'},400);
+		} else {
+			$('html,body').animate({'scrollTop':'3800'},400);
+		}
+	});
+		
+	$('.content .btn1').click(function(e){
+		e.preventDefault();
+		$('html,body').animate({'scrollTop':'950px'},800);
+	});
+	
+	$(window).scroll(function(e){
+		e.preventDefault();
+		//console.log(num);
+		num=$(this).scrollTop();
+		
+		if(num>=0 && num<950){
+			$('.page_btn a').removeClass('on');//나머지것들 on클래스 꺼줘
+			$('.page_btn li:eq(0)').find('a').addClass('on');//a에서 찾으니 .find사용
+		} else if(num>=950 && num<1900){
+			$('.page_btn a').removeClass('on');
+			$('.page_btn li:eq(1)').find('a').addClass('on');
+		} else if(num>=1900 && num<2850){
+			$('.page_btn a').removeClass('on');
+			$('.page_btn li:eq(2)').find('a').addClass('on');
+		} else if(num>=2850 && num<3800){
+			$('.page_btn a').removeClass('on');
+			$('.page_btn li:eq(3)').find('a').addClass('on');
+		} else {
+			$('.page_btn a').removeClass('on');
+			$('.page_btn li:eq(4)').find('a').addClass('on');
+		}
+	});
+	
+	$('.page_btn li').click(function(e){
+		e.preventDefault();
+		
+		num2=$(this).index();
+		if(num2==0){
+			$('html,body').animate({'scrollTop':'0'},400);
+		} else if(num2==1){
+			$('html,body').animate({'scrollTop':'950'},400);
+		} else if(num2==2){
+			$('html,body').animate({'scrollTop':'1900'},400);
+		} else if(num2==3){
+			$('html,body').animate({'scrollTop':'2850'},400);
+		} else {
+			$('html,body').animate({'scrollTop':'3800'},400);
+		}
+	});
+	
+	//work부분 효과
+	$('.design li').mouseenter(function(){
+		$(this).find('span').stop().fadeIn(300);
+	});
+	
+	$('.design li').mouseleave(function(){
+		$(this).find('span').stop().fadeOut(300);
+	});
+	
+	/*$('.content4 li').mouseenter(function(){
+		$(this).find('.square_width').animate({'width':'126px'},100,function(){
+			$(this).parent().find('.square_width2').animate({'height':'127px'},100,function(){
+				$(this).parent().find('.square_width3').animate({'width':'126px'},100,function(){
+					$(this).parent().find('.square_width4').animate({'height':'126px'},100);
+				});
+			});
+		});	
+	});
+	
+	$('.content4 li').mouseleave(function(){
+		$(this).find('.square_width4').stop().animate({'height':'0px'},100,function(){
+			$(this).parent().find('.square_width3').stop().animate({'width':'0px'},100,function(){
+				$(this).parent().find('.square_width2').stop().animate({'height':'0px'},100,function(){
+					$(this).parent().find('.square_width').stop().animate({'width':'0px'},100);
+				});
+			});
+		});	
+	});*/
+	
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<a href="#" class="m_btn"><span></span><em></em></a>
+    <div class="m_gnb">
+    	<ul class="menu">
+        	<li><a href="#" class="menu1">Home</a></li>
+            <li><a href="#" class="menu2">Info</a></li>
+            <li><a href="#" class="menu3">Work</a></li>
+            <li><a href="#" class="menu4">VDL Project</a></li>
+            <li><a href="#" class="menu5">친절한렌탈샵 Project</a></li>
+        </ul>
+    </div>
+</div>
+<ul class="page_btn">
+	<li><a href="#" class="on">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+</ul>
+<div class="section1">
+	<div class="content">
+        <div class="section1_title">
+            <h1><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+            <h2><img src="img/section1_title.png" alt=""></h2>
+        </div>
+        <a href="#" class="btn1"><img src="img/section1_btn.png" alt=""></a>
+    </div>
+</div>
+<div class="section2">
+	<div class="content2">
+    	<h2>WHO AM I</h2>
+    	<img src="img/bg_img.png" alt="">
+        <div class="introduction">
+            <div class="introduce01">
+                <h4>PROFILE</h4>
+                <p class="txt">Name<br>Birth<br>Mobile<br>E-mail</p>
+                <p class="txt txt01">권하경<br>92.09.20<br>010.8703.8544<br>akdlro@naver.com</p>
+            </div>
+            <div class="introduce01 introduce02">
+                <h4>LICENSE</h4>
+                <p class="txt">2014.02<br>2013.11<br>2013.03<br>2011.08</p>
+                <p class="txt txt01">Microsoft Office Specialist 2007Master<br>컴퓨터활용능력 2급<br>GTQ포토샵 1급<br>자동차 운전 면허증</p>
+            </div>
+            <div class="introduce01 introduce03 introduce04">
+                <h4>EDUCATION</h4>
+                <p class="txt">2015.07 ~ 12<br>2014.02 졸업<br>2010.02 졸업</p>
+                <p class="txt txt01">노원 하이미디어컴퓨터학원<br>경복대학 (컴퓨터정보과)<br>청원여자고등학교</p>
+            </div>
+            <div class="introduce01 introduce03 introduce05">
+                <h4>CAREER</h4>
+                <p class="txt">2014.06 ~ 2015.05</p>
+                <p class="txt txt01">(주)slc컴퍼니</p>
+            </div>
+            <div class="introduce01 introduce03 introduce06">
+                <h4>SKILL</h4>
+                <img src="img/section2_img.png" alt="">
+                <p class="txt txt02">기업형사이트 퍼블리싱가능<br>모바일사이트 퍼블리싱 가능<br>제이쿼리를 활용한 UI스크립트 구현가능 (라이브러리 활용가능)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section3">
+	<div class="content3">
+    	<h2>MY WORK</h2>
+        <div class="design">
+        	<h4>Mobile</h4>
+            <ul>
+            	<li>
+                	<a href="#">
+                    	<span><em></em></span>
+                    	<img src="img/section3_img01.jpg" alt="">
+                        <p class="txt">도그박스</p>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<span><em></em></span>
+                    	<img src="img/section3_img02.jpg" alt="">
+                        <p class="txt">나눔치과</p>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<span><em></em></span>
+                    	<img src="img/section3_img03.jpg" alt="">
+                        <p class="txt">유니디지텍</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="design design2">
+        	<h4>Design</h4>
+            <ul>
+            	<li>
+                	<a href="#">
+                    	<span><em></em></span>
+                    	<img src="img/section3_img04.jpg" alt="">
+                        <p class="txt">살롱드 마샬 (web design)</p>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<span><em></em></span>
+                    	<img src="img/section3_img05.jpg" alt="">
+                        <p class="txt">유심 (상세 페이지)</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="section4">
+	<div class="content4">
+    	<h2>VDL PROJECT</h2>
+        <div class="project">
+        	<a href="vdl/index.html" target="_blank" class="computer"><img src="img/project1_computer.png" alt=""></a>
+            <a href="#" class="phone"><img src="img/project1_phone.png" alt=""></a>
+        </div>
+        <ul>
+        	<li>
+            	<a href="http://www.vdlcosmetics.com/index.jsp" target="_blank">
+                	<em></em>
+                    <span>ORIGINAL<br>SITE</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>       
+            </li>
+            <li>
+            	<a href="vdl/index.html" target="_blank">
+                	<em></em>
+                    <span>RENEWAL<br>SITE</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<em></em>
+                    <span class="txt01">MOBILE</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<em></em>
+                    <span class="txt02">MORE<br>ABOUT</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="section5">
+	<div class="content5">
+    	<h2><span>친절한렌탈샵</span> PROJECT</h2>
+        <div class="project">
+        	<a href="http://kk0524.cafe24.com/1212/ski" target="_blank" class="computer"><img src="img/project2_computer.png" alt=""></a>
+            <a href="#" class="phone"><img src="img/project2_phone.png" alt=""></a>
+        </div>
+        <ul>
+        	<li>
+            	<a href="http://www.kindrental.com/" target="_blank">
+                	<em></em>
+                    <span>ORIGINAL<br>SITE</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>       
+            </li>
+            <li>
+            	<a href="vdl/index.html">
+                	<em></em>
+                    <span>RENEWAL<br>SITE</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<em></em>
+                    <span class="txt01">MOBILE</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<em></em>
+                    <span class="txt02">MORE<br>ABOUT</span>
+                    <div class="square_width"></div>
+                    <div class="square_width2"></div>
+                    <div class="square_width3"></div>
+                    <div class="square_width4"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<div class="info">
+        	<ul>
+                <li><img src="img/footer_phone.png" alt=""><span>010.8703.8544</span></li>
+                <li><img src="img/footer_email.png" alt=""><span>akdlro@naver.com</span></li>
+                <li><img src="img/footer_pc.png" alt=""><span>gkrudzz.dothome.co.kr</span></li>
+            </ul>
+        </div>
+        <p>Copyright ⓒ 2015. All Rights Reserved.</p>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

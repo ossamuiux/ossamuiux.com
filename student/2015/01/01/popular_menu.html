@@ -1,0 +1,1288 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1350">
+<title>메뉴/인기메뉴 피자에땅</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$('.main .left_box .txt .lnb>li').mouseenter(function(){
+		
+		$('.depth2').stop().slideUp();
+		$(this).find('.depth2').stop().slideDown();
+	});
+	
+	$('.main .left_box .txt .lnb li .depth2, .main .left_box .txt .lnb>li ').mouseleave(function(){
+	$(this).find('.depth2').stop().slideUp();
+	});
+	
+	$('.main .left_box .txt .lnb>li a').click(function(){
+		
+		$('pizza').find('.depth2').stop().slideDown();
+	});
+	
+	$('.main .left_box .txt .lnb li .depth2, .main .left_box .txt .lnb>li ').mouseleave(function(){
+		$(this).find('.depth2').stop().slideUp();
+	});
+	
+	
+	$('.depth3 li').eq(0).click(function(e){
+		e.preventDefault();
+		$('.main .pizza').eq(0).find('.pop_up, .close_btn').show();
+		$('.cover').show();
+	});
+	
+	$('.depth2 li').click(function(e){
+		e.preventDefault();
+		
+		var num2=$(this).index();
+		$('.main .pizza').eq(num2+1).find('.pop_up, .close_btn').show();
+		$('.cover').show();
+
+	});
+
+	
+	
+	$('.pizza').mouseenter(function(e){
+		if(e.target==this){
+			$(this).find('.menu_opt_wrap').show();
+		}
+	});
+
+	
+	$('.pizza').mouseleave(function(){
+		$(this).find('.menu_opt_wrap').hide();
+	});
+	
+	$('.menu_opt .icon_menu .icon_wrap .icon').click(function(e){
+		e.preventDefault();
+		$(this).parents('.pizza').find('.pop_up, .close_btn').show();
+		$('.cover').show();
+	});
+	
+	$('.close_btn').click(function(e){
+		e.preventDefault();
+		$('.pop_up, .close_btn').hide();
+		$('.cover').fadeOut(50);
+	});
+
+	
+	
+	var sw1=0;	
+	$('.select_btn').click(function(e){
+		e.preventDefault();
+		
+		if (sw1==0) {
+			$('.slide_select').show();
+			$('.select_btn').addClass('on');
+			sw1=1;
+		
+		} else {
+			$('.slide_select').hide();
+			$('.select_btn').removeClass('on');
+		
+			sw1=0;
+		}
+	});	
+	
+});
+
+</script>
+</head>
+
+<body>
+<!--헤더-->
+<div class="cover"></div>
+<div class="header_wrap">
+	<div class="top_wrap">
+    	<div class="top">
+        	<ul class="util">
+            	<li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">가맹점모집</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <h1><a href="index.html"><img src="images/logo.png" alt="피자에땅"></a></h1>
+        <div class="gnb_wrap">
+            <ul class="gnb">
+                <li><a href="new_menu.html">피자</a></li>
+                <li><a href="#">특가메뉴</a></li>
+                <li><a href="#">음료&amp;사이드</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">에땅소식</a></li>
+            </ul>
+            <a href="#" class="order" >온라인주문</a> 
+        </div>                   
+    </div>
+    <div class="sub_wrap">
+    	<div class="banner">
+        	<a href="#"><img src="images/banner.jpg" alt=""></a>
+        </div>
+        <div class="menu_wrap">
+            <ul>
+                <li><a href="new_menu.html">신메뉴</a></li>
+                <li><a href="popular_menu.html">인기메뉴</a></li>
+                <li><a href="#">프리미어</a></li>
+                <li><a href="#">스페셜</a></li>
+                <li><a href="#">클래식</a></li>
+                <li><a href="#">이탈리안</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">히트박스</a></li>
+                <li><a href="#">1+1주문</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">파스타&amp;리조또</a></li>
+                <li><a href="#">사이드</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">소스</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">매장찾기</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">홍보센터</a></li>
+                <li><a href="#">공모전</a></li>
+            </ul>
+        </div>               
+	</div>   
+</div>
+<div class="header_fix">
+	<div class="header">
+        <h1><a href="index.html"><img src="images/fix_logo.png" alt="피자에땅"></a></h1>
+        <div class="gnb_wrap">
+            <ul class="gnb">
+                <li><a href="new_menu.html">피자</a></li>
+                <li><a href="#">특가메뉴</a></li>
+                <li><a href="#">음료&amp;사이드</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">에땅소식</a></li>
+            </ul>
+            <a href="#" class="order" >온라인주문</a> 
+        </div>                   
+    </div>
+    <div class="sub_wrap">
+        <div class="banner">
+            <a href="#"><img src="images/banner.jpg" alt=""></a>
+        </div>
+        <div class="menu_wrap">
+            <ul>
+                <li><a href="new_menu.html">신메뉴</a></li>
+                <li><a href="popular_menu.html">인기메뉴</a></li>
+                <li><a href="#">프리미어</a></li>
+                <li><a href="#">스페셜</a></li>
+                <li><a href="#">클래식</a></li>
+                <li><a href="#">이탈리안</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">히트박스</a></li>
+                <li><a href="#">1+1주문</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">파스타&amp;리조또</a></li>
+                <li><a href="#">사이드</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">소스</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">매장찾기</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">홍보센터</a></li>
+                <li><a href="#">공모전</a></li>
+            </ul>
+        </div>               
+	</div>   
+</div>
+<div class="quick_wrap">
+	<h1>Quick Menu</h1>
+    <ul class="quick_menu">
+    	<li><a href="#">로그인</a></li>
+        <li><a href="#" class="quick1">재주문</a></li>
+        <li><a href="#" class="quick2">장바구니</a></li>
+        <li><a href="#" class="quick3">추천메뉴</a></li>
+        <li><a href="#" class="qr"></a></li>
+    </ul>
+    <a href="#" class="top_btn"><img src="images/btn_skyTop.gif" alt="탑버튼"></a>
+    <a href="#" class="cart_num">0</a>
+</div>
+<!--메인-->
+	<div class="main">
+	<div class="left_box">
+    	<div class="tit">
+            <h2>피자</h2>
+            <p>피자메뉴소개</p>
+        </div>
+        <div class="txt">
+			<ul class="lnb">
+            	<li class="new"><a href="new_menu.html">신메뉴</a></li>
+                <li class="best">
+                	<a href="popular_menu.html">인기메뉴</a>
+					<ul class="depth2">
+                        <li><span>반반한피자</span>
+                        	<ul class="depth3">
+                            	<li><a class="popular_menu" href="#">-핫 바비큐+씨푸드</a></li>
+                                <li><a class="popular_menu" href="#">-포테이토베이컨+미트소시지</a></li>
+                            </ul>
+                        </li>
+						<li><a class="popular_menu" href="#">맵 피자</a></li>
+                        <li><a class="popular_menu" href="#">달 피자</a></li>
+                        <li><a class="popular_menu" href="#">슈퍼 불고기피자</a></li>
+                        <li><a class="popular_menu" href="#">슈퍼 고구마피자</a></li>
+                        <li><a class="popular_menu" href="#">슈퍼 바비큐피자</a></li>
+                        <li class="last"><a class="menu" href="#">슈퍼 콤비네이션피자</a></li>
+                    </ul>                    
+                </li>
+                <li>
+                	<a href="#">프리미엄</a>
+                    <ul class="depth2">
+                        <li><span>반반한피자</span>
+                        	<ul class="depth3">
+                            	<li><a href="#">-핫 바비큐+씨푸드</a></li>
+                                <li><a href="#">-포테이토베이컨+미트소시지</a></li>
+                            </ul>
+                        </li>
+						<li><a href="#">미트 블라썸</a></li>
+                        <li><a href="#">미트소시지</a></li>
+                        <li><a href="#">포테이토베이컨</a></li>
+                        <li><a href="#">씨푸드</a></li>
+                        <li><a href="#">핫바비큐</a></li>
+                        <li class="last"><a href="#">파스트라미</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">스페셜</a>
+                    <ul class="depth2">
+						<li><a href="#">맵 피자</a></li>
+                        <li><a href="#">달 피자</a></li>
+                        <li><a href="#">슈퍼 불고기피자</a></li>
+                        <li><a href="#">슈퍼 고구마피자</a></li>
+                        <li><a href="#">슈퍼 바비큐피자</a></li>
+                        <li class="last"><a href="#">슈퍼 콤비네이션피자</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">클래식</a>
+                    <ul class="depth2">
+						<li><a href="#">고구마</a></li>
+                        <li><a href="#">수퍼슈프림</a></li>
+                        <li><a href="#">불고기피자</a></li>
+                        <li><a href="#">페페로니</a></li>
+                        <li class="last"><a href="#">치즈피자</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">이탈리안</a>
+                    <ul class="depth2">
+                        <li class="last"><a href="#">콜로새우</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right_box">
+    	<div class="tit">
+        	<h2>피자</h2>
+            <p>인기메뉴</p>
+        </div>
+        <div class="location">
+        	<ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">피자</a></li>
+                <li><a class="new" href="new_menu.html">인기메뉴</a></li>
+            </ul>
+        </div>
+        <div class="popular_menu">
+        	<div class="product">
+            	<div class="pizza banban">
+                	<img src="images/NEW_PZ_BANBAN_A_L.jpg" alt="반반한피자 핫바비큐+씨푸드">
+                	<h3>반반한피자<br>핫 바비큐+씨푸드</h3>
+                    <div class="price_wrap">
+                        <input type="radio" name="banban_a_l" checked="checked"><label class="large txt">L-23,900   (1판)</label>
+                        <input type="radio" name="banban_a_l" ><label class="large">L-35,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                        <li><a href="#">피타 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>매콤달콤한 바비큐와<br>신선한 알새우&생선살의 씨푸드가 <br>사이좋게 반반</div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>반반한피자</h2>
+                            <p>(핫 바비큐+씨푸드)</p>
+                            <img class="img1" src="images/NEW_PZ_BANBAN_A_L.jpg" alt="반한피자 핫바비큐+씨푸드">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pop_banban_a_l" checked="checked"><label class="large txt">L-23,900   (1판)</label>
+                                <input type="radio" name="pop_banban_a_l" ><label class="large">L-35,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                    <li><a href="#">피타 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>매콤달콤한 바비큐와 신선한 알새우&amp;생선살의 씨푸드가 사이좋게 반반</h3>
+                            <p><strong>주요토핑 :</strong>핫 바비큐,핫 치킨, 알새우, 피쉬가리아게, 베이컨 등 풍부한토핑</p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup style="width:48px;">
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first" >도우</th>
+                                            <th>총중량<br><strong>(g/ml)</strong></th>
+                                            <th class="third">1회 제공량<br><strong>(g)</strong></th>
+                                            <th>조각수<br><strong>(조각)</strong></th>
+                                            <th>열량<br><strong>(kcal)</strong></th>
+                                            <th>당류<br><strong>(g)</strong></th>
+                                            <th>단백질<br><strong>(g)</strong></th>
+                                            <th>포화지방<br><strong>(g)</strong></th>
+                                            <th>나트륨<br><strong>(mg)</strong></th>
+										</tr>
+                                    </thead>
+									<tbody>
+                                    <tr>
+                                        <td>핫바베큐<br>(스크린L) </td>
+                                        <td>1248</td>
+                                        <td>156</td>
+                                        <td>1</td>
+                                        <td>417</td>
+                                        <td>9</td>
+                                        <td>19</td>
+                                        <td>7</td>
+                                        <td>175</td>
+                                    </tr>
+                                    <tr>
+                                        <td>씨푸드<br>(스크린L)</td>
+                                        <td>1278</td>
+                                        <td>160</td>
+                                        <td>1</td>
+                                        <td>394</td>
+                                        <td>5</td>
+                                        <td>16</td>
+                                        <td>9</td>
+                                        <td>201</td>
+                                    </tr>
+                                    <tr>
+                                        <td>핫바베큐<br>(피타)</td>
+                                        <td>868</td>
+                                        <td>109</td>
+                                        <td>1</td>
+                                        <td>289</td>
+                                        <td>6</td>
+                                        <td>18</td>
+                                        <td>6</td>
+                                        <td>336</td>
+                                    </tr>
+                                    <tr>
+                                        <td>씨푸드<br>(피타)</td>
+                                        <td>874</td>
+                                        <td>109</td>
+                                        <td>1</td>
+                                        <td>295</td>
+                                        <td>3</td>
+                                        <td>13</td>
+                                        <td>8</td>
+                                        <td>312</td>
+                                    </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>                    
+                </div>
+                <div class="pizza banban">
+                	<img src="images/NEW_PZ_BANBAN_B_L.jpg" alt="반반한피자 포테이토베이컨 미트소시지">
+                	<h3>반반한피자<br>포테이토베이컨+미트소시지</h3>
+                    <div class="price_wrap">
+                        <input type="radio" name="banban_b_l" checked="checked"><label class="large txt">L-23,900   (1판)</label>
+                        <input type="radio" name="banban_b_l" ><label class="large">L-35,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                        <li><a href="#">피타 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>감칠맛 나는 포테이토 베이컨과 <br>육즙 가득 미트소시지가 <br>한판에 풍성하게 반반</div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>반반한피자</h2>
+                            <p>(포테이토베이컨+미트소시지)</p>
+                            <img class="img1" src="images/NEW_PZ_BANBAN_B_L.jpg" alt="반반한피자 포테이토베이컨 미트소시지">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pop_banban_b_l" checked="checked"><label class="large txt">L-23,900   (1판)</label>
+                                <input type="radio" name="pop_banban_b_l" ><label class="large">L-35,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                    <li><a href="#">피타 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>감칠맛 나는 포테이토 베이컨과 육즙 가득 미트소시지가 한판에 풍성하게 반반</h3>
+                            <p><strong>주요토핑 :</strong>다양한맛의 감자, 보코치니, 베이컨, 소시지, 카나디안 햄, 미니함박 등</p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first"  >도우</th>
+                                            <th>총중량<strong>(g/ml)</strong></th>
+                                            <th class="third">1회 제공량<strong>(g)</strong></th>
+                                            <th>조각수<strong>(조각)</strong></th>
+                                            <th>열량<strong>(kcal)</strong></th>
+                                            <th>당류<strong>(g)</strong></th>
+                                            <th>단백질<strong>(g)</strong></th>
+                                            <th>포화지방<strong>(g)</strong></th>
+                                            <th>나트륨<strong>(mg)</strong></th>
+                                    	</tr>
+                                    </thead>
+									<tbody>
+                                    	<tr>
+                                        	<td>포테이토베이컨<br>(스크린L) </td>
+                                            <td>1250</td>
+                                            <td>156</td>
+                                            <td>1</td>
+                                            <td>394</td>
+                                            <td>6</td>
+                                            <td>14</td>
+                                            <td>8</td>
+                                            <td>93</td>
+                                        </tr>
+                                        <tr>
+                                            <td>미트소시지<br>(스크린L) </td>
+                                            <td>1356</td>
+                                            <td>170</td>
+                                            <td>1</td>
+                                            <td>660</td>
+                                            <td>7</td>
+                                            <td>16</td>
+                                            <td>12</td>
+                                            <td>102</td>
+                                        </tr>
+                                        <tr>
+                                            <td>포테이토베이컨<br>(피타) </td>
+                                            <td>902</td>
+                                            <td>113</td>
+                                            <td>1</td>
+                                            <td>297</td>
+                                            <td>5</td>
+                                            <td>13</td>
+                                            <td>7</td>
+                                            <td>198</td>
+                                        </tr>
+                                        <tr>
+                                            <td>미트소시지<br>(피타)</td>
+                                            <td>964</td>
+                                            <td>121</td>
+                                            <td>1</td>
+                                            <td>348</td>
+                                            <td>3</td>
+                                            <td>14</td>
+                                            <td>11</td>
+                                            <td>365</td>
+                                    	</tr>
+                                     </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>                   
+                </div>
+                <div class="pizza last">
+                	<img src="images/NEW_pz_map_l.jpg" alt="맵피자">
+                	<h3>맵 피자</h3>
+                    <div class="price_wrap">
+                    	<input type="radio" name="map_l" checked="checked"><label class="regular">R-15,900 (1판)</label>
+                        <input type="radio" name="map_l" ><label class="regular">R-24,900 (2판)</label>
+                        <input type="radio" name="map_l" ><label class="large txt">L-18,900   (1판)</label>
+                        <input type="radio" name="map_l" ><label class="large">L-29,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>프로방스전통 야채스튜,<br> 아라비아따 소스와 바비큐치킨의 맛이 조화로운<br>매콤한 피자의 위너</p></div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>맵피자</h2>
+                            <img class="img1" src="images/NEW_pz_map_l.jpg" alt="맵피자">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pop_map_l" checked="checked"><label class="regular">R-15,900 (1판)</label>
+                                <input type="radio" name="pop_map_l" ><label class="regular">R-24,900 (2판)</label>
+                                <input type="radio" name="pop_map_l" ><label class="large txt">L-18,900   (1판)</label>
+                                <input type="radio" name="pop_map_l" ><label class="large">L-29,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>프로방스전통 야채스튜, 아라비아따 소스와 바비큐치킨의 맛이 조화로운 <br>매콤한 피자의 위너</h3>
+                            <p><strong>주요토핑 :</strong>양념반달감자, 핫바비큐토핑, 로스트3종야채, 파인애플,<br><em>매운피자소스, 렌치소스, 파슬리</em></p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first">도우</th>
+                                            <th>총중량<span>(g/ml)</span></th>
+                                            <th class="third">1회 제공량<span>(g)</span></th>
+                                            <th>조각수<span>(조각)</span></th>
+                                            <th>열량<span>(kcal)</span></th>
+                                            <th>당류<span>(g)</span></th>
+                                            <th>단백질<span>(g)</span></th>
+                                            <th>포화지방<span>(g)</span></th>
+                                            <th>나트륨<span>(mg)</span></th>
+										</tr>
+                                    </thead>
+									<tbody>
+                                    <tr>
+                                        <td>스크린L</td>
+                                        <td>1142</td>
+                                        <td>143</td>
+                                        <td>1</td>
+                                        <td>402</td>
+                                        <td>4</td>
+                                        <td>19</td>
+                                        <td>8</td>
+                                        <td>211</td>
+                                    </tr>
+                                    <tr>
+                                        <td>스크린R</td>
+                                        <td>685</td>
+                                        <td>228</td>
+                                        <td>2</td>
+                                        <td>614</td>
+                                        <td>6</td>
+                                        <td>29</td>
+                                        <td>13</td>
+                                        <td>332</td>
+                                    </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>                                       
+                </div>
+            	<div class="pizza">
+                	<img src="images/NEW_pz_dal_l.jpg" alt="달피자">
+                	<h3>달 피자</h3>
+                    <div class="price_wrap">
+                    	<input type="radio" name="pz_dal_l" checked="checked"><label class="regular">R-15,900 (1판)</label>
+                        <input type="radio" name="pz_dal_l"><label class="regular">R-24,900 (2판)</label>
+                        <input type="radio" name="pz_dal_l"><label class="large txt">L-18,900   (1판)</label>
+                        <input type="radio" name="pz_dal_l"><label class="large">L-29,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>다섯 가지 치즈와 달콤한 허니가<br> 알새우와 같이 사르르 녹는-<br>달달한 피자의 위너</p></div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>달피자</h2>
+                            <img class="img1" src="images/NEW_pz_dal_l.jpg" alt="달피자">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pz_dal_l" checked="checked"><label class="regular">R-15,900 (1판)</label>
+                                <input type="radio" name="pz_dal_l"><label class="regular">R-24,900 (2판)</label>
+                                <input type="radio" name="pz_dal_l"><label class="large txt">L-18,900   (1판)</label>
+                                <input type="radio" name="pz_dal_l"><label class="large">L-29,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>다섯 가지 치즈와 달콤한 허니가 알새우와 같이 사르르 녹는- <br>달달한 피자의 위너</h3>
+                            <p><strong>주요토핑 :</strong>크림치즈무스, 제니코크림치즈, 리코타, 알새우, 구운통마늘, 파인애플, <em>렌치소스</em></p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first">도우</th>
+                                            <th>총중량(g/ml)</th>
+                                            <th class="third">1회 제공량(g)</th>
+                                            <th>조각수(조각)</th>
+                                            <th>열량(kcal)</th>
+                                            <th>당류(g)</th>
+                                            <th>단백질(g)</th>
+                                            <th>포화지방(g)</th>
+                                            <th>나트륨(mg)</th>
+										</tr>
+                                    </thead>
+									<tbody>
+                                    <tr>
+                                        <td>스크린R</td>
+                                        <td>570</td>
+                                        <td>190</td>
+                                        <td>2</td>
+                                        <td>603</td>
+                                        <td>8</td>
+                                        <td>23</td>
+                                        <td>13</td>
+                                        <td>131</td>
+                                    </tr>
+                                    <tr>
+                                        <td>스크린L</td>
+                                        <td>950</td>
+                                        <td>119</td>
+                                        <td>1</td>
+                                        <td>396</td>
+                                        <td>5</td>
+                                        <td>15</td>
+                                        <td>9</td>
+                                        <td>86</td>
+                                    </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>
+                </div>
+                <div class="pizza">
+                	<img src="images/NEW_PZ_SP_BP_L.jpg" alt="슈퍼불고기 피자">
+                	<h3>슈퍼 불고기피자</h3>
+                    <div class="price_wrap">
+                    	<input type="radio" name="sp_bp_l" checked="checked"><label class="regular">R-14,900 (1판)</label>
+                        <input type="radio" name="sp_bp_l"><label class="regular">R-24,900 (2판)</label>
+                        <input type="radio" name="sp_bp_l"><label class="large txt">L-17,900   (1판)</label>
+                        <input type="radio" name="sp_bp_l"><label class="large">L-28,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>불고기에 치즈와 달콤한 소스를 듬뿍 담은 <br>슈퍼불고기 피자</p></div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>슈퍼 불고기피자</h2>
+                            <img class="img1" src="images/NEW_PZ_SP_BP_L.jpg" alt="슈퍼불고기 피자">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pop_sp_bp_l" checked="checked"><label class="regular">R-14,900 (1판)</label>
+                                <input type="radio" name="pop_sp_bp_l"><label class="regular">R-24,900 (2판)</label>
+                                <input type="radio" name="pop_sp_bp_l"><label class="large txt">L-17,900   (1판)</label>
+                                <input type="radio" name="pop_sp_bp_l"><label class="large">L-28,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>불고기에 치즈와 달콤한 소스를 듬뿍 담은 슈퍼불고기 피자</h3>
+                            <p><strong>주요토핑 :</strong>뉴불고기소스, 불고기토핑, 양파, 피망, 새송이 버섯<em>　</em></p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first">도우</th>
+                                            <th>총중량(g/ml)</th>
+                                            <th class="third">1회 제공량(g)</th>
+                                            <th>조각수(조각)</th>
+                                            <th>열량(kcal)</th>
+                                            <th>당류(g)</th>
+                                            <th>단백질(g)</th>
+                                            <th>포화지방(g)</th>
+                                            <th>나트륨(mg)</th>
+										</tr>
+                                    </thead>
+									<tbody>
+                                    <tr>
+                                        <td>스크린L</td>
+                                        <td>974</td>
+                                        <td>122</td>
+                                        <td>1</td>
+                                        <td>361</td>
+                                        <td>7</td>
+                                        <td>17</td>
+                                        <td>8</td>
+                                        <td>181</td>
+                                    </tr>
+                                    <tr>
+                                        <td>스크린R</td>
+                                        <td>584</td>
+                                        <td>195</td>
+                                        <td>2</td>
+                                        <td>548</td>
+                                        <td>11</td>
+                                        <td>27</td>
+                                        <td>13</td>
+                                        <td>283</td>
+                                    </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>
+                </div>
+                <div class="pizza last">
+                	<img src="images/NEW_PZ_SP_P_L.jpg" alt="슈퍼고구마 피자">
+                	<h3>슈퍼 고구마피자</h3>
+                    <div class="price_wrap">
+                    	<input type="radio" name="sp_p_l" checked="checked"><label class="regular" >R-14,900 (1판)</label>
+                        <input type="radio" name="sp_p_l"><label class="regular" >R-24,900 (2판)</label>
+                        <input type="radio" name="sp_p_l"><label class="large txt">L-17,900   (1판)</label>
+                        <input type="radio" name="sp_p_l"><label class="large">L-28,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                        <li><a href="#">피타 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>스위티한 고구마에 크리미한 <br>갈릭크림치즈 소스와 치즈를 풍성하게 담은 <br>슈퍼고구마피자</p></div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>슈퍼 고구마피자</h2>
+                            <img class="img1" src="images/NEW_PZ_SP_P_L.jpg" alt="">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pop_sp_p_l" checked="checked"><label class="regular" >R-14,900 (1판)</label>
+                                <input type="radio" name="pop_sp_p_l"><label class="regular" >R-24,900 (2판)</label>
+                                <input type="radio" name="pop_sp_p_l"><label class="large txt">L-17,900   (1판)</label>
+                                <input type="radio" name="pop_sp_p_l"><label class="large">L-28,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>스위티한 고구마에 크리미한 갈릭크림치즈 소스와 치즈를 풍성하게 담은 <br>슈퍼고구마피자</h3>
+                            <p><strong>주요토핑 :</strong>뉴고구마무스, 스코므햄, 스위트콘, 크린베리, 아몬드슬라이스, <em>갈릭크림치즈소스</em></p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first">도우</th>
+                                            <th>총중량(g/ml)</th>
+                                            <th class="third">1회 제공량(g)</th>
+                                            <th>조각수(조각)</th>
+                                            <th>열량(kcal)</th>
+                                            <th>당류(g)</th>
+                                            <th>단백질(g)</th>
+                                            <th>포화지방(g)</th>
+                                            <th>나트륨(mg)</th>
+                                        </tr>
+                                    </thead>
+									<tbody>
+                                        <tr>
+                                            <td>스크린L</td>
+                                            <td>1020</td>
+                                            <td>128</td>
+                                            <td>1</td>
+                                            <td>394</td>
+                                            <td>3</td>
+                                            <td>18</td>
+                                            <td>8</td>
+                                            <td>164</td>
+                                        </tr>
+                                        <tr>
+                                            <td>스크린R</td>
+                                            <td>612</td>
+                                            <td>204</td>
+                                            <td>2</td>
+                                            <td>600</td>
+                                            <td>5</td>
+                                            <td>28</td>
+                                            <td>13</td>
+                                            <td>256</td>
+                                        </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>
+                </div>
+                <div class="pizza">
+                	<img src="images/NEW_PZ_SP_BBQ_L.jpg" alt="슈퍼 바비큐피자">
+                	<h3>슈퍼 바비큐피자</h3>
+                    <div class="price_wrap">
+                    	<input type="radio" name="sp_bbq_l" checked="checked"><label class="regular">R-14,900 (1판)</label>
+                        <input type="radio" name="sp_bbq_l"><label class="regular">R-24,900 (2판)</label>
+                        <input type="radio" name="sp_bbq_l"><label class="large txt">L-17,900   (1판)</label>
+                        <input type="radio" name="sp_bbq_l"><label class="large">L-28,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                        <li><a href="#">피타 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>스모크 바비큐가 가득 담긴, <br>풍부하고 진한 바비큐향의 <br>슈퍼바비큐피자</p></div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>슈퍼 바비큐피자</h2>
+                            <img class="img1" src="images/NEW_PZ_SP_BBQ_L.jpg" alt="">                            
+                            <div class="price_wrap">
+                                <input type="radio" name="pop_sp_bbq_l" checked="checked"><label class="regular">R-14,900 (1판)</label>
+                                <input type="radio" name="pop_sp_bbq_l"><label class="regular">R-24,900 (2판)</label>
+                                <input type="radio" name="pop_sp_bbq_l"><label class="large txt">L-17,900   (1판)</label>
+                                <input type="radio" name="pop_sp_bbq_l"><label class="large">L-28,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                    <li><a href="#">피타 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>스모크 바비큐가 가득 담긴, 풍부하고 진한 바비큐향의 슈퍼바비큐피자</h3>
+                            <p><strong>주요토핑 :</strong>체다치즈, 베이컨, 양파, 차그릴허브치킨, 파인애플, 방울토마토, <em>브레드 다이스, 스모크BBQ소스</em></p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first">도우</th>
+                                            <th>총중량(g/ml)</th>
+                                            <th class="third">1회 제공량(g)</th>
+                                            <th>조각수(조각)</th>
+                                            <th>열량(kcal)</th>
+                                            <th>당류(g)</th>
+                                            <th>단백질(g)</th>
+                                            <th>포화지방(g)</th>
+                                            <th>나트륨(mg)</th>
+										</tr>
+                                    </thead>
+									<tbody>
+                                        <tr>
+                                            <td>스크린L</td>
+                                            <td>1080</td>
+                                            <td>135</td>
+                                            <td>1</td>
+                                            <td>382</td>
+                                            <td>9</td>
+                                            <td>17</td>
+                                            <td>6</td>
+                                            <td>156</td>
+                                        </tr>
+                                        <tr>
+                                            <td>스크린R</td>
+                                            <td>648</td>
+                                            <td>216</td>
+                                            <td>2</td>
+                                            <td>582</td>
+                                            <td>14</td>
+                                            <td>27</td>
+                                            <td>10</td>
+                                            <td>244</td>
+                                        </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>
+                </div>
+                <div class="pizza">
+                	<img src="images/NEW_PZ_SP_CB_L.jpg" alt="슈퍼 콤비네이션피자">
+                	<h3>슈퍼 콤비네이션피자</h3>
+                    <div class="price_wrap">
+                    	<input type="radio" name="sp_cb_l" checked="checked"><label class="regular" >R-14,900 (1판)</label>
+                        <input type="radio" name="sp_cb_l"><label class="regular" >R-24,900 (2판)</label>
+                        <input type="radio" name="sp_cb_l"><label class="large txt">L-17,900   (1판)</label>
+                        <input type="radio" name="sp_cb_l"><label class="large">L-28,900   (2판)</label>
+                    </div>
+                    <div class="menu_opt_wrap">
+                    	<div class="menu_opt">
+                    		<div class="menu_select">
+                                <ul>
+                                    <a class="select_btn" href="#">도우선택</a>
+                                    <ul class="slide_select">
+                                        <li><a href="#">스크린 도우타입</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="icon_menu">
+                                <ul class="icon_wrap">
+                                    <li><a href="#" class="icon"></a></li>
+                                    <li><a href="#" class="icon1"></a></li>
+                                    <li><a href="#" class="icon2"></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu_txt"><p>블랙 올리브와 페퍼로니가 <br>다양한 토핑드과 만나 더욱 풍부해진 맛</p></div>
+                        </div>
+                    </div>
+                    <div class="pop_up">
+                    	<div class="left">
+                            <h2>슈퍼 콤비네이션 피자</h2>
+                            <img class="img1" src="images/NEW_PZ_SP_CB_L.jpg" alt="슈퍼 콤비네이션피자">                            
+                            <div class="price_wrap">
+                                <label class="regular" ><input type="radio" name="pop_sp_cb_l" checked="checked">R-14,900 (1판)</label>
+                                <label class="regular" ><input type="radio" name="pop_sp_cb_l">R-24,900 (2판)</label>
+                                <label class="large txt"><input type="radio" name="pop_sp_cb_l">L-17,900   (1판)</label>
+                                <label class="large"><input type="radio" name="pop_sp_cb_l">L-28,900   (2판)</label>
+                            </div>
+                            <div class="menu_select">
+                                <a class="select_btn" href="#">도우선택</a>
+                                <ul class="slide_select">
+                                    <li><a href="#">스크린 도우타입</a></li>
+                                </ul>
+                        	</div>
+                    	</div>
+                        <div class="right">
+                            <h3>블랙 올리브와 페퍼로니가 다양한 토핑드과 만나 더욱 풍부해진 맛</h3>
+                            <p><strong>주요토핑 :</strong>페퍼로니, 카나디안햄, 미트토핑, 베이컨, 블랙올리브<em>　</em></p>
+                            <a class="detail" href="#">원산지보기</a>
+	                        <table class="tbl_style2">
+									<caption>제품 성분 리스트</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+                                            <th class="first">도우</th>
+                                            <th>총중량(g/ml)</th>
+                                            <th class="third">1회 제공량(g)</th>
+                                            <th>조각수(조각)</th>
+                                            <th>열량(kcal)</th>
+                                            <th>당류(g)</th>
+                                            <th>단백질(g)</th>
+                                            <th>포화지방(g)</th>
+                                            <th>나트륨(mg)</th>
+										</tr>
+                                    </thead>
+									<tbody>
+                                        <tr>
+                                            <td>스크린L</td>
+                                            <td>1020</td>
+                                            <td>128</td>
+                                            <td>1</td>
+                                            <td>394</td>
+                                            <td>7</td>
+                                            <td>16</td>
+                                            <td>9</td>
+                                            <td>161</td>
+                                        </tr>
+                                        <tr>
+                                            <td>스크린R</td>
+                                            <td>612</td>
+                                            <td>204</td>
+                                            <td>2</td>
+                                            <td>600</td>
+                                            <td>11</td>
+                                            <td>25</td>
+                                            <td>14</td>
+                                            <td>251</td>
+                                        </tr>
+                                    </tbody>
+								</table> 
+                            <p><strong>가격</strong>* 특수상권 지역은 가격이 상이할 수 이습니다. (리조트, 제주&amp;도서산간 지역 등)</p>
+                            <div class="icon">
+                                <a class="cart" href="#">장바구니 넣기</a>
+                                <a class="buy" href="#">바로구매 하기</a>
+                            </div>
+                        </div>
+                	</div>
+                    <a href="#" class="close_btn"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--푸터-->
+<div class="footer_wrap">
+	<div class="footer">
+    	<div class="footer_left">
+    		<h2><a href="index.html"><img src="images/foot_logo.png" alt="피자에땅"></a></h2>
+            <div class="information">
+            	<p>서울시 양천구 곰달래로 2길 26<br>사업자등록번호 : 201-81-62229<br>통신판매업 : 제 2016-서울양천-0007호<br>대표이사 : 공재기<br> 개인정보관리 책임자 : 박종열<br>FAX ; 02-2606-8377<br>Copyright ⓒ 2014 PIZZAETANG. ALL RIGHT RESERVED</p>
+            </div>
+    	</div>
+        <div class="footer_right">
+        	<ul class="foot_menu">
+            	<li><a href="#">가맹점 안내</a></li>
+                <li><a href="#" class="strong">개인정보 취급방침</a></li>
+                <li><a href="#">이메일 무단 수집 거부</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <ul class="foot_menu second">
+            	<li><a href="#">인재채용</a></li>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">업체제안 etang2015@pizzaetang.com</a></li>
+            </ul>
+            <ul class="sns">
+            	<li><a href="https://www.facebook.com/pizzaetang3651" class="sns1" target="_blank">페이스북</a></li>
+                <li><a href="#" class="sns2">인스타그램</a></li>
+                <li><a href="#" class="sns3">블로그</a></li>
+            </ul>
+            <div class="call">
+            	<p>주문전화 <br><strong>1688-3651</strong></p>
+                <p>가맹문의 <br><strong>080-870-1003</strong></p>
+            </div>
+            <div class="family">
+            	<a href="#" class="btn">Family Site</a>
+            	<ul>
+                    <li><a href="http://www.oppadak.co.kr/" target="_blank" title="오븐에빠진닭 새창열림">오븐에빠진닭</a></li>
+                    <li><a href="http://www.dondonburiburi.co.kr/main/main.php" target="_blank" title="돈돈 부리부리 새창열림">돈돈 부리부리</a></li>
+                    <li><a href="http://www.bonjok.co.kr/" target="_blank" title="본능족으로 새창열림">본능족으로</a></li>
+				</ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700');
+    
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;vertical-align: top;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+button,input {border-radius: 0; margin: 0;padding: 0;}
+button {cursor: pointer;}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none}
+iframe {overflow: hidden;margin: 0;padding: 0;border: 0}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+table {border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%;}
+input,button,select,label {vertical-align: middle;}
+
+/* -webkit-text-size-adjust:none; 
+모바일 브라우저에서 글자크기 자동확대 방지*/
+body {line-height: 1.5; -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
+
+html, body {height: 100%;}
+
+body,input,select,textarea,button,table {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+    line-height: 1.5;
+    color: #333;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* user-scalable=yes 로 설정하고 폰트크기를 16px로 하면 아이폰에서 클릭시 확대 없어짐*/
+input[type='text'], input[type='password'] {font-size: 16px;}
+
+#wrap {background: #f1f1f1; min-width: 1520px;}
+
+/* header */
+#header {
+    height: 50px;
+    background: #fff;
+    box-shadow: 0px 4px 8px -3px rgba(17, 17, 17, .065);
+    padding: 0 32px 0 25px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
+    min-width: 1060px;
+}
+
+#header .menu {
+    float: left;
+    background: url(../images/menu.png) no-repeat 0% 50%;
+    width: 30px;
+    height: 32px;
+    border: none;
+    outline: none;
+    text-indent: -9999px;
+    margin: 10px 14px 0 0;
+}
+
+#header .logo {float: left;margin-top: 14px;}
+
+#header .search_wrap {float: left; margin-left: 72px;}
+#header .search_wrap .search_box {width: 564px; height: 28px; border: 1px solid #ccc; border-radius: 3px 0 0 3px; padding-left: 10px; margin-top: 10px; outline: none;}
+input::placeholder {color: #ccc;}
+#header .search_wrap .btn_search {
+    text-indent: -9999px;
+    outline: none;
+    background: #f8f8f8 url(../images/btn_search.png) no-repeat 50% 50%;
+    border: 1px solid #ccc;
+    border-radius: 0 3px 3px 0;
+    width: 65px;
+    height: 30px;
+    margin: 9px 0 0 -6px;
+}
+
+#header .right_header {float: right; margin-top: 10px;}
+#header .right_header .icon2 {margin: 0 15px;}
+
+/* gnb */
+.gnb_wrap {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    height: 100%;
+    background: #fff;
+    width: 240px;
+    display: block;
+    z-index: 999;
+}
+.gnb_wrap.on {display: none;}
+
+.gnb_wrap .gnb>li.active {background: #dcdcdc;}
+.gnb_wrap .gnb>li.active .depth2 a {background: #fff;}
+.gnb_wrap .gnb>li.active .depth2 a:hover {background: #c6c6c6;}
+.gnb_wrap .gnb>li a:hover {background: #c6c6c6;}
+.gnb_wrap .gnb>li:last-child.on .triangle {transform: rotateZ(180deg);}
+
+.gnb_wrap .gnb {border-bottom: 1px solid #e2e2e2; padding: 15px 0;}
+.gnb_wrap .gnb .triangle {float: right; margin-right: 23px;}
+.gnb_wrap .gnb a {display: block; color: #333; line-height: 40px; padding-left: 25px;}
+.gnb_wrap .gnb a img {margin-right: 12px;}
+.gnb_wrap .gnb .depth2 {display: none;}
+.gnb_wrap .gnb .depth2 li {text-indent: 26px;}
+
+.gnb_wrap .profile {padding: 15px 25px;}
+.gnb_wrap .profile img {float: left;}
+.gnb_wrap .profile p {float: left; margin-left: 10px; line-height: 45px;}
+
+/* footer */
+#footer {margin-left: 240px; padding: 30px 0; text-align: center;}
+#footer.on {margin-left: 0;}
+
+#footer .copyright {font-size: 15px; color: #898989; text-transform: uppercase; margin-top: 15px; line-height: 1;}
+
+
+
+/* slider navigation */
+#container .slider_wrap .swiper-button-disabled {opacity: 0;}
+#container .slider_wrap .swiper-button-prev {
+    background: url(../images/slide_navi.png) no-repeat 50% 50%;
+    width: 37px;
+    height: 70px;
+    left: -77px;
+}
+#container .slider_wrap .swiper-button-next {
+    background: url(../images/slide_navi.png) no-repeat 50% 50%;
+    width: 37px;
+    height: 70px;
+    transform: rotateZ(180deg);
+    right: -77px;
+}
+
+
+
+/* slider btn */
+.btn_wrap {
+    position: absolute;
+    left: 69px;
+    bottom: 170px;
+}
+
+.btn_wrap .btn_pdf, .btn_renew, .btn_origin {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 40px;
+    color: #fff;
+    background: #c81823;
+    text-align: center;
+    margin-right: 10px;
+    transform: scale(1,1);
+    transition: transform 0.3s;
+}
+.btn_wrap .btn_pdf:hover, .btn_renew:hover, .btn_origin:hover {transform: scale(1.1,1.1);}
+.btn_wrap .btn_origin {
+    width: 148px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #c81823;
+    color: #c81823;
+}

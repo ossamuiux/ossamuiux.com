@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Hello I'm BeomHwa</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.gnb li').click(function(e){
+		e.preventDefault();
+		
+		var num=$(this).index();
+		
+		if(num==0){
+			$('html,body').stop().animate({'scrollTop':'0'},500);
+		} else if(num==1){
+			$('html,body').stop().animate({'scrollTop':'1000'},500);
+		} else if(num==2){
+			$('html,body').stop().animate({'scrollTop':'2000'},500);
+		} else if(num==3){
+			$('html,body').stop().animate({'scrollTop':'3000'},500);
+		} else {
+			$('html,body').stop().animate({'scrollTop':'4000'},500);
+		}
+	});
+	
+	$('.read').click(function(){
+		$('html,body').stop().animate({'scrollTop':'1000'},500);
+	});
+	
+	$('.connect').click(function(){
+		$('html,body').stop().animate({'scrollTop':'4400'},500);
+	});
+	
+	$('.re_img').colorbox({rel:'re_img'});
+	$('.project2_imgbox').colorbox({rel:'project2_imgbox'});
+	$('.work_01').colorbox({rel:'work_01'});
+	$('.work_02').colorbox({rel:'work_02'});
+	$('.work_03').colorbox({rel:'work_03'});
+	$('.work_04').colorbox({rel:'work_04'});
+	$('.work_05').colorbox({rel:'work_05'});
+	$('.work_06').colorbox({rel:'work_06'});
+	$('.work_08').colorbox({rel:'work_09'});
+});
+</script>
+</head>
+
+<body>
+<div class="section1">
+	<div class="header_wrap">
+    	<div class="header">
+        	<div class="gnb">
+                <ul>
+                    <li><a class="main" href="#">main</a></li>
+                    <li><a class="profile" href="#">profile</a></li>
+                    <li><a class="project" href="#">project</a></li>
+                    <li><a class="project2" href="#">project2</a></li>
+                    <li><a class="work" href="#">work</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+    	<img class="tit" src="img/title.png" alt="">
+        <img class="beomhwa" src="img/beomhwa.png" alt="">
+        <img class="border" src="img/main_border.png" alt="">
+        <img class="tit2" src="img/tit2.png" alt="">
+        <a class="read" href="#"><img class="read" src="img/readmore.png" alt=""></a>
+        <img class="btn" src="img/down_arrow.png" alt="">
+    </div>
+</div>
+<div class="section2">
+	<div class="main">
+    	<img class="small_tit" src="img/profile.png" alt="">
+        <div class="box1">
+        	<img class="photo" src="img/photo.png" alt="">
+            <img class="edu" src="img/education_img.png" alt="">
+            <img class="ski" src="img/skill_img.png" alt="">
+        </div>
+        <div class="box2">
+        	<div class="tit_box">
+                <img class="ed" src="img/mini_tit_ed.png" alt="">
+                <img class="pr" src="img/mini_tit_pr.png" alt="">
+                <img class="sk" src="img/mini_tit_sk.png" alt="">
+            </div>
+            <div class="txt_box">
+            	<img class="edu" src="img/edu_txt.png" alt="">
+                <img class="pro" src="img/pro_txt.png" alt="">
+                <img class="ski" src="img/ski_txt.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section3">
+	<div class="main">
+        <img class="small_tit" src="img/project.png" alt="">
+        <div class="box">
+        	<div class="or_box">
+            	<img src="img/pro_or_img.png" alt="">
+                <img class="bar" src="img/underbar.png" alt="">
+                <img class="txt" src="img/project_or_txt.png" alt="">
+                <a href="http://www.caffe-pascucci.co.kr/" target="_blank"  title="새창 열기"><img class="btn" src="img/click_btn.png" alt=""></a>
+            </div>
+            <div class="re_box">
+            	<a class="re_img" href="img/project_re_img.jpg"><img src="img/pro_re_img.png" alt=""></a>
+                <img class="bar" src="img/underbar.png" alt="">
+                <img class="txt" src="img/project_re_txt.png" alt="">
+                <a href="http://kin5648.dothome.co.kr/portfolio/pascucci/" target="_blank"  title="새창 열기"><img class="btn" src="img/click_btn.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section4">
+	<div class="main">
+    	<div class="main">
+            <img class="small_tit" src="img/project-2.png" alt="">
+        </div>
+        <div class="box_or">
+        	<h3><img src="img/or_txt.png" alt=""></h3>
+            <a href="http://www.clio.co.kr/" target="_blank" title="새창 열기"><img src="img/click_btn_small.png"  alt=""></a>
+            <div class="or_img"></div>
+        </div>
+        <div class="box_re">
+        	<a class="project2_imgbox" href="img/project2_re_img.jpg"><div class="re_img"></div></a>
+            <div class="txt_box">
+                <a class="re_btn" href="http://kin5648.dothome.co.kr/portfolio/clio/" target="_blank"  title="새창 열기"><img src="img/click_btn_small.png" alt=""></a>
+                <h3 class="re_txt"><img src="img/re_txt.png" alt=""></h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section5">
+	<div class="main">
+        <img class="small_tit" src="img/work.png" alt="">
+		<div class="work_box">
+            <div class="work_box_01">
+                <a class="work_01" href="img/work_main_01.jpg">work_01</a>
+                <a class="work_02" href="img/work_main_02.jpg">work_02</a>
+                <a class="work_03" href="img/work_main_03.jpg">work_03</a>
+            </div>
+            <div class="work_box_02">
+            	<a class="work_04" href="img/work_main_04.jpg">work_04</a>
+                <a class="work_05" href="img/work_main_05.jpg">work_05</a>
+                <a class="work_06" href="img/work_main_06.jpg" >work_06</a>
+                <a class="work_07" >work_07</a>
+            </div>
+            <div class="work_box_03">
+                <a class="work_08" href="img/work_main_08.jpg">work_08</a>
+                <a class="work_09" >work_09</a>
+                <a class="work_10" >work_10</a>
+            </div>
+        </div>
+        <img class="vd" src="img/vd.png" alt="">
+        <a class="connect" href="#"><img class="cm" src="img/connect.png" alt=""></a>
+        <img class="cm" src="img/down_arrow.png" alt="">
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footet">
+    	<div class="box_wrap">
+        	<div class="box">
+            	<img class="footer_img" src="img/footer_imgpng_01.png" alt="">
+            </div>
+            <div class="box">
+            	<img class="footer_img" src="img/footer_imgpng_02.png" alt="">
+            </div>
+            <div class="box">
+            	<img class="footer_img" src="img/footer_imgpng_03.png" alt="">
+            </div>
+            <div class="box">
+            	<img class="footer_img" src="img/footer_imgpng_04.png" alt="">
+            </div>
+        </div>
+        <div class="box_wrap2">
+        	<div class="box">
+            	<img class="footer_txt" src="img/footer_txt_01.png" alt="">
+            </div>
+            <div class="box">
+            	<img class="footer_txt" src="img/footer_txt_02.png" alt="">
+            </div>
+            <div class="box">
+            	<img class="footer_txt" src="img/footer_txt_03.png" alt="">
+            </div>
+            <div class="box">
+            	<img class="footer_txt" src="img/footer_txt_04.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

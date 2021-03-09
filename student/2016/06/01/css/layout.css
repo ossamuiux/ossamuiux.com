@@ -1,0 +1,181 @@
+@charset "utf-8";
+/*
+.eot는 익스전용포맷
+.woff는 구글크롬용포맷
+.ttf는 기타브라우져용
+*/
+
+/*font-face : 웹폰트 불러오는 것*/
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+body,button,select,input {font-family:'나눔 고딕','Nanum Gothic','돋움',dotum,sans-serif; font-size:14px; width:100%;}
+body {background:#f3f3f3; min-width:1202px;}
+
+/*로그인팝업*/
+.login_popup {background:url(../images/login_bg.png) repeat; left:0; top:0; width:100%; height:100%; position:fixed; z-index:2; display:none;}
+.login_popup .login_box {width:638px; height:422px;background-color:#fff; position:fixed; left:50%; top:200px; margin-left:-269px;}
+
+/*닫기버튼*/
+.login_popup .login_box .close {width:17px; height:17px; position:absolute; top:10px; right:10px;}
+
+.login_box .login_box_inner {margin:50px 49px; height:325px;}
+.login_box_inner .login_section1 {overflow:hidden; padding-bottom:10px; border-bottom:2px solid #0078ac;}
+.login_box_inner .login_section1 h2 {width:127px; height:24px; float:left;}
+.login_box_inner .login_section1 a {float:right; width:139px; height:24px; border:1px solid #ffc854; color:#ffc854; font-size:12px; line-height:24px; text-align:center;}
+
+.login_box_inner .login_section2 {margin-top:40px; overflow:hidden;}
+/*로그인 패스워드 부분*/
+.login_section2 .login_wrap {float:left;}
+.login_section2 .login_wrap .id {overflow:hidden; margin-top:-1px;}
+.login_section2 .login_wrap .id p {color:#000; float:left; line-height: 41px;}
+.login_section2 .login_wrap .id .login {background:url(../images/login_box.png) no-repeat center center; float:left; width:291px; height:41px; border:none; margin-left:33px; outline:none; padding:0 15px;}
+.login_section2 .login_wrap .pw {overflow:hidden; margin-top:5px;}
+.login_section2 .login_wrap .pw p {color:#000; float:left; line-height: 41px; }
+.login_section2 .login_wrap .pw .pw2 {background:url(../images/login_box.png) no-repeat center center; float:left; width:291px; height:41px; border:none; margin-left:20px; outline:none; padding:0 15px;}
+.login_section2 .btn_login {float:right; width:129px; height:85px; background:#ffc854; outline:none; border:none; color:#fff; font-size:17px; line-height:85px; text-align:center;}
+
+/*아이디저장, 찾기 부분*/
+.login_box_inner .check {margin:10px 0 0 75px;}
+.login_box_inner .check input {vertical-align:middle; width:13px; }
+.login_box_inner .check label {font-size:12px; vertical-align:middle;}
+.login_box_inner .check a {color:#686868; font-size:13px; text-decoration:underline; margin-left:110px;}
+.login_box_inner .check input {vertical-align:middle;}
+
+/*회원가입부분*/
+.login_box_inner .login_section3 {margin-top:30px; background:url(../images/login_box2.png) no-repeat center center; overflow:hidden;}
+.login_section3 .login_txt {padding: 30px 35px; float:left;}
+.login_section3 .login_txt .login_txt1 {font-weight:bold; font-size:15px; color:#000;}
+.login_section3 .login_txt .login_txt2 {font-weight:bold; font-size:13px; color:#797979; margin-top:3px;}
+
+.login_section3 a {width:99px; height:24px; background-color:#c39023; color:#fff; font-size:12px; float:right; margin-right:40px; margin-top: 40px; line-height:24px; text-align:center;}
+
+/*익스 x 버튼 없애기/ 패스워드창 x 없애기*/
+.login_wrap .id input[type=text]::-ms-clear {display: none;}
+
+/*************************************************** side 메뉴 ***************************************************************************/
+.side {  overflow:hidden;}
+
+/*닫힘*/
+.side_s {position:absolute; left:50%; top:300px; margin-left:617px;}
+.side_s .side_con {background:url(../images/side_sbg.png) no-repeat center center; width:66px; height:383px;  float:left; vertical-align:middle;}
+.side_con ul li a {width:50px; height:44px; display:block; margin-left:4px;}
+.side_con ul li a img {margin:2px auto 0; display:block; padding-top:13px;}
+/*open버튼*/
+.side .side_open {float:left; margin:2px 0 0 -10px;}
+.side .side_open button {background:url(../images/side_open.jpg) no-repeat center center; width:22px; height:57px; border:none; outline:none; text-indent:-9999px;}
+
+
+/*펼침*/
+.side_b {position:absolute; left:50%; top:300px; margin-left:617px; display:none;}
+.side_b .side_bcon {background:url(../images/side_bbg.png) no-repeat center center; width:145px; height:383px;  float:left;}
+/*아이콘*/
+.side_bcon .side_con {float:left; margin-top:1px;}
+.side_b .side_bcon .side_bcon_inner {height:320px;} 
+.side_bcon .side_con a {display:block; width:57px; height:44px;}
+/*글씨*/
+.side_bcon .side_bcon_txt {float:left; line-height:45px; font-size:11px; font-weight:bold; margin-top:1px; }
+.side_bcon .side_bcon_txt a {display:block; width:72px; height:44px;}
+.side_bcon .side_bcon_txt p { margin-top:2px; color:#333;}
+.side_bcon .side_bcon_txt p.bcon_txt6 {line-height:16px;padding-top:5px; height:45px; display:block;}
+/*top버튼*/
+.side_bcon .side_top {margin:323px 0 0 2px; text-align:center;}
+.side_bcon .side_top img {margin-top:3px;}
+.side_bcon .side_top a  {display:block; width:129px; height:45px; padding-top:5px;}
+.side_bcon .side_top p {font-size:11px; color:#000; font-weight:bold;}
+/*close버튼*/
+.side .side_close {float:left; margin:2px 0 0 -10px;}
+.side .side_close button {background:url(../images/side_close.jpg) no-repeat center center; width:22px; height:57px; border:none; outline:none; text-indent:-9999px;}
+
+/**************************************************** 헤더 *****************************************************************************/
+.header .header_inner {width:1202px; margin:0 auto; position:relative;}
+.header .header_inner .top_header {height: 150px; margin:0 auto;}
+
+.top_header h1{position:absolute; left:50%; margin-left:-85px; margin-top:20px;}
+/*로그인~고객센터*/
+.top_header .top_header_wrap {float:right;}
+.top_header .top_header_wrap .util {margin-top:40px;  overflow:hidden;}
+.top_header .top_header_wrap .util li {float:left; margin-left:18px;}
+.top_header .top_header_wrap .util li a {font-size:15px; color:#0078ac;}
+
+/*검색*/
+.top_header .top_header_wrap .search {float:right; display:inline-block; margin-top:10px; margin-right:-5px;}
+.search input {outline:none; width:171px; height:15px; font-size:12px; color:#000; font-weight:bold; padding:6px 0 6px 9px; border:1px solid #0078ac;}
+.search .btn_search {width:12px; height:12px; background:url(../images/search.png) no-repeat center center; text-indent:-9999px; border:none; outline:none; vertical-align:middle; margin-left:-25px;}
+
+/**************************************메뉴바**********************************************************/
+
+/*gnb - 이부분은 무조건 overflox:hidden을 주면 안된다.*/
+.header_inner .gnb{background:url(../images/gnb_bar.png) no-repeat center top; height:71px; padding-left:186px;}
+.header_inner .gnb>li {float:left; position:relative;}
+.header_inner .gnb>li>a {display:block; font-size:20px; font-weight:bold; color:#fff; margin:14px 35px;}
+.header_inner .gnb>li:first-child>a {margin-left:0;}
+.header_inner .gnb li ul .point {width:147px; height:48px; margin:-78px 0 0 -6px;;}
+.header_inner .gnb>li:hover .point .point_inner {background:url(../images/gnb_point.png) no-repeat center center; width:27px; height:17px; position:absolute; left:50%; top:-46px; margin-left:-14px;}
+
+/*.gnb .sub*/
+.header_inner .gnb .sub {background:#f3f3f3; width:137px; padding:33px 5px 8px; margin-top:40px; position:absolute; display:none; z-index:1; border:1px solid #fff;}
+/*hover시 폰트사이즈가 커져도 li의 height를 지정하면 전체 크기가 커지지 않는다*/
+.header_inner .gnb .sub li {height:37px; }
+.header_inner .gnb ul.sub1 {margin-left:-35px;}
+.header_inner .gnb ul.sub2 {margin-left:14px;}
+.header_inner .gnb ul.sub3 {margin-left:15px;}
+.header_inner .gnb ul.sub4 {margin-left:30px;}
+
+.header_inner .gnb .sub a {font-size:14px; color:#0078ac; font-weight:bold; display:block; padding:8px; text-align:center;}
+.header_inner .gnb .sub li a:hover {font-size:15px; color:#000; text-decoration:underline;}
+
+/*주 메뉴에 마우스오버시 서브메뉴보이기*/
+.gnb>li:hover .sub {display:block;}
+
+
+/****************************************footer************************************************/
+.footer {border-top:1px solid #fff;}
+.footer .footer_inner {width:1202px; margin:0 auto; height:274px;}
+.footer_inner h1 {width:150px; height:96px; margin:80px 0 0 25px; float:left;}
+
+/*글씨부분*/
+.footer_inner .info {height:150px; margin:50px 0 0 45px; float:left;}
+.footer_inner .info .con1 {overflow:hidden;}
+.footer_inner .info .con1 ul li {float:left; display:inline-block; padding:0 10px; background:url(../images/bar.png) no-repeat left center;}
+.footer_inner .info .con1 ul li:first-child {background:none; padding-left:0;}
+.footer_inner .info .con1 ul li a {font-size:13px; color:#9c9c9c; font-weight:bold;}
+.footer_inner .info .con1 ul li.pd a {color:#0078ac;}
+
+.footer_inner .info .con2 {margin-top:15px;}
+.footer_inner .info .con2 p {font-size:12px; color:#aea9a9; line-height:21px;}
+.footer_inner .info .con2 p a {color:#6b6969;}
+.footer_inner .info .con2 p span {color:#7e7e7e; font-weight:bold; margin-left:5px; padding-right:3px;}
+.footer_inner .info .con2 p span.first {margin-left:0;}
+
+.footer_inner .info .con3 {margin-top:10px;}
+.footer_inner .info .con3 p {color:#7e7e7e; font-size:12px; font-weight:bold;}
+
+/*하나은행 부분*/
+.footer_inner .hana {background:url(../images/hanabank_bar.png) no-repeat center center; float:right; margin:35px 15px 0 0; width:292px; height:181px; position:relative;}
+.footer_inner .hana a {position:absolute; top:132px; left:54px; width:116px; height:23px;}

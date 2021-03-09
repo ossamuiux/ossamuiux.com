@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">    
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>코엑스 아쿠아리움</title>
+<meta name="description" content="COEX AQUARIUM">
+<meta name="viewport" content="width=1200">
+<meta property="og:type" content="site">
+<meta property="og:title" content="코엑스 아쿠아리움">
+<meta property="og:url" content="http://dltnwjd0112.dothome.co.kr/aquarium/">
+<meta property="og:image" content="http://dltnwjd0112.dothome.co.kr/aquarium/opengraph.png">
+<meta property="og:description" content="COEX AQUARIUM">
+<link rel="shortcut icon" type="image/x-icon" href="/aquarium/favicon.ico">
+<!--css 연결순서 : 외부 라이브러리, 프로젝트용 css-->
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<!--js 연결순서(기능이 큰 순서대로) : 제이쿼리 API, 제이쿼리 UI, 외부 라이브러리, 프로젝트용 js-->
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="top_header">
+                <div class="top_header_inner">
+                    <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="로고"></a></h1>
+                    <ul class="top_menu">
+                        <li>
+                            <ul class="my_info">
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Join</a></li>                               
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="btn_search1" type="button">search</button>
+                            <div class="search_wrap">
+                                <form>
+                                    <fieldset>
+                                        <legend class="blind">전체검색</legend>
+                                        <input class="input_search" type="text" placeholder="검색어를 입력하세요">
+                                        <button class="btn_search2" type="submit" title="검색버튼">검색</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="lang">
+                                <li><a href="#">KR</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_header">
+                <ul class="gnb">
+                    <li>
+                        <a href="company.html">회사소개</a>
+                        <div class="depth2_wrap gnb1">
+                            <ul class="depth2">
+                                <li><a href="company.html">소개</a></li>
+                                <li><a href="#">비전</a></li>
+                                <li><a href="#">연혁</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="themazone.html">아쿠아리움 둘러보기</a>
+                        <div class="depth2_wrap gnb2">
+                            <ul class="depth2">
+                                <li><a href="themazone.html">테마존 안내</a></li>
+                                <li><a href="#">전시생물 소개</a></li>
+                                <li><a href="#">기념품샵</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">관람안내</a>
+                        <div class="depth2_wrap gnb3">
+                            <ul class="depth2">
+                                <li><a href="#">관람시간 / 요금</a></li>
+                                <li><a href="#">할인정보</a></li>
+                                <li><a href="#">먹이주기 프로그램</a></li>
+                                <li><a href="#">연간회원안내</a></li>
+                                <li><a href="#">가족권 안내</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">단체관람</a>
+                        <div class="depth2_wrap gnb4">
+                            <ul class="depth2">
+                                <li><a href="#">단체 / 패키지 예약</a></li>
+                                <li><a href="#">단체관람예약</a></li>
+                                <li><a href="#">단체혜택</a></li>
+                                <li><a href="#">연계학습장소</a></li>
+                                <li><a href="#">교통 / 주차</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">모바일 티켓</a>
+                        <div class="depth2_wrap gnb5">
+                            <ul class="depth2">
+                                <li><a href="#">티켓 구매하기</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">아쿠아스토리</a>
+                        <div class="depth2_wrap gnb6">
+                            <ul class="depth2">
+                                <li><a href="#">아쿠아뉴스</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">아쿠아스토리</a></li>
+                                <li><a href="#">아쿠아리스트 소개</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <div class="depth2_wrap gnb7">
+                            <ul class="depth2">
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">메일문의</a></li>
+                                <li><a href="#">공간임대</a></li>
+                                <li><a href="#">사이트맵</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="container" class="themazone">
+           <div class="sub_bg">
+                <div class="sub_bg_txt">
+                    <p>Thema Zone</p>
+                </div>
+            </div>
+            <div class="location_wrap">
+                <div class="location_inner">
+                    <ul class="location">
+                        <li><a href="index.html"><img src="images/icon_home.png" alt="홈"></a></li>
+                        <li>아쿠아리움 둘러보기</li>
+                        <li>
+                            <a href="themazone.html">테마존 안내</a>
+                            <ul class="depth2">
+                                <li class="active"><a href="company.html">테마존 안내</a></li>
+                                <li><a href="#">전시생물 소개</a></li>
+                                <li><a href="#">기념품샵</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="sub_section1">
+                    <h2 class="intro_tit">테마존 안내</h2>
+                    <p class="intro_txt">'환상적인 물의 여행'이란 테마로 구성된 16개의 코엑스아쿠아리움만의 특별한 테마존을 소개합니다.</p>
+                    <div class="themazone_wrap">
+                        <h3>테마존 관람 순서 및 안내</h3>
+                        <p>물의 판타지로 들어서 신나는 여행의 탐험지도 읽기로 시작해보세요. 우리는 정겨운 터, 예스러운 풍경을 감상하고 익숙한 것과 새로운 것의 경계에<br>서있습니다. 초현실 속 물의 나라로 들어가 지구의 허파를 품은 아마존 강을 따라서 쌍방향 체험 키즈 사이언스 아쿠아리움 강이 끝나고 나타난 바다가<br>시작되는 곳에는 무엇이 있을까요? 이 곳에서는 산호와 열대어가 그리는 걸작의 세계 통해 아이들은 꿈을 펼칩니다.무시무시한 상어 극장과<br>우리의 친구 매너티와 물범이야기를 물의 여행의 성대한 축제와 함께 즐겨보세요.시간을 멎게 하는 아름다운 모든 경계에는 꽃이 피고,<br>물이 흙으로 되돌아 올 때 다음 여행을 기약하며-</p>
+                        <div class="themazone_box">
+                            <a href="#"><img src="images/thema_icon1.png" alt="체크인"></a>
+                            <a href="#"><img src="images/thema_icon2.png" alt="무지개라운지"></a>
+                            <a href="#"><img src="images/thema_icon3.png" alt="우리터 우리 물고기"></a>
+                            <a href="#"><img src="images/thema_icon4.png" alt="한국의 정원"></a>
+                            <a href="#"><img src="images/thema_icon5.png" alt="상상 물고기 나라"></a>
+                            <a href="#"><img src="images/thema_icon6.png" alt="아마조니아 월드"></a>
+                            <a href="#"><img src="images/thema_icon7.png" alt="마린터치 연구소"></a>
+                            <a href="#"><img src="images/thema_icon8.png" alt="맹그로브와 해변"></a>
+                            <a href="#"><img src="images/thema_icon9.png" alt="산호미술관"></a>
+                            <a href="#"><img src="images/thema_icon10.png" alt="바다 왕국"></a>
+                            <a href="#"><img src="images/thema_icon11.png" alt="아름다운 해양마을"></a>
+                            <a href="#"><img src="images/thema_icon12.png" alt="딥블루 광장"></a>
+                            <a href="#"><img src="images/thema_icon13.png" alt="해저터널"></a>
+                            <a href="#"><img src="images/thema_icon14.png" alt="심해의 화원"></a>
+                            <a href="#"><img src="images/thema_icon15.png" alt="펭귄들의 놀이터"></a>
+                            <a href="#"><img src="images/thema_icon16.png" alt="선물상점"></a>
+                        </div>
+                        <ul class="side_thema">
+                            <li><a href="#" class="btn_thema">체크인</a></li>
+                            <li><a href="#" class="btn_thema">무지개라운지</a></li>
+                            <li><a href="#" class="btn_thema">우리터 우리 물고기</a></li>
+                            <li><a href="#" class="btn_thema">한국의 정원</a></li>
+                            <li><a href="#" class="btn_thema">상상 물고기 나라</a></li>
+                            <li><a href="#" class="btn_thema">아마조니아 월드</a></li>
+                            <li><a href="#" class="btn_thema">마린터치 연구소</a></li>
+                            <li><a href="#" class="btn_thema">맹그로브와 해변</a></li>
+                            <li><a href="#" class="btn_thema">산호미술관</a></li>
+                            <li><a href="#" class="btn_thema">바다 왕국</a></li>
+                            <li><a href="#" class="btn_thema">아름다운 해양마을</a></li>
+                            <li><a href="#" class="btn_thema">딥블루 광장</a></li>
+                            <li><a href="#" class="btn_thema">해저터널</a></li>
+                            <li><a href="#" class="btn_thema">심해의 화원</a></li>
+                            <li><a href="#" class="btn_thema">펭귄들의 놀이터</a></li>
+                            <li><a href="#" class="btn_thema">선물상점</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub_section2">
+                    <h3>부대시설 안내</h3>
+                    <ul class="sidezone">
+                        <li>
+                            <a href="#"><img src="images/sidezone1.png" alt="수유실"></a>
+                            <p>수유실</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/sidezone2.png" alt="물품보관함"></a>
+                            <p>물품 보관함</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/sidezone3.png" alt="카페어울림"></a>
+                            <p>카페 어울림</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/sidezone4.png" alt="갤러리아쿠아"></a>
+                            <p>갤러리 아쿠아</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub_section3">
+                    <h3>층별안내</h3>
+                    <table>
+                        <caption class="blind">시설현황</caption>
+                        <colgroup>
+                          <col style="width: 10%">
+                          <col style="width: 15%">
+                          <col style="width: 75%">
+                       </colgroup>
+                        <tr class="table1">
+                            <th>1층</th>
+                            <td>테마존</td>
+                            <td class="thema_name1">무지개 라운지, 우리터 우리 물고기, 한국의 정원, 상상 물고기 나라, 아마조니아월드</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">B1층</th>
+                            <td>편의시설</td>
+                            <td class="deviation">아쿠아리움 입·출구, 티켓박스, 화장실, 수유실</td>
+                        </tr>
+                        <tr>
+                            <td>부대시설</td>
+                            <td class="side">안내센터, 연간회원센터, 가족권수령처, 선물상점, 교육실</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">B2층</th>
+                            <td>테마존</td>
+                            <td class="thema_name2">마린터치 연구소, 맹그로브와 해변, 산호 미술관, 바다 왕국, 아름다운 해양마을, 딥블루 광장, 해저터널, 심해의 화원, 펭귄들의 꿈동산</td>
+                        </tr>
+                        <tr>
+                            <td>편의시설</td>
+                            <td class="toilet">화장실</td>
+                        </tr>
+                        <tr>
+                            <td>부대시설</td>
+                            <td class="cafe">카페 어울림, 간이 스낵바</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h2 class="footer_logo"><img src="images/footer_logo.png" alt="로고"></h2>
+            <div class="menu_wrap">
+                <ul class="footer_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">채용안내</a></li>
+                </ul>
+                <address>서울특별시 강남구 영동대로 513 코엑스아쿠아리움 TEL : 02.700.7200<span></span>FAX : 02.700.7299<span></span>이메일 : aquazigi@coexaqua.com<br>(주)서울오션아쿠아리움<span></span>대표이사 양수용<span></span>사업자등록번호 211-86-49403<span></span>통신판매업신고 2014-서울강남-00715호 </address>
+                <p class="copy">COPYRIGHT 2013 BY COEX AQUARIUM. ALL RIGHT RESERVED.</p>
+            </div>
+            <div class="btn_top">
+                <a href="#">Top</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

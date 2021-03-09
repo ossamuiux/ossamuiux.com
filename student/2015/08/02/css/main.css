@@ -1,0 +1,96 @@
+@charset "utf-8";
+body,button,input {font:12px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+div:focus{outline:none;}
+a {text-decoration:none;}
+
+
+
+
+
+
+body {background:#1d2a3a; min-width:1200px;}
+
+/*메뉴 아이콘*/
+.gnb {position:fixed; right:20px; top:300px; z-index:9999;}
+.gnb_menu li {margin-bottom:5px;}
+.gnb_menu li a {display:block; background:url(../img/home_icon.png) no-repeat; width:61px; height:61px; text-indent:-9999px;}
+
+.gnb_menu li .btn2 {background:url(../img/info_icon.png) no-repeat;}
+.gnb_menu li .btn3 {background:url(../img/project_icon.png) no-repeat;}
+.gnb_menu li .btn4 {background:url(../img/work_icon.png) no-repeat;}
+
+/*아이콘 후버*/
+.gnb_menu li:hover .btn1 {background:url(../img/home_icon_hover.png) no-repeat;}
+.gnb_menu li:hover .btn2 {background:url(../img/info_icon_hover.png) no-repeat;}
+.gnb_menu li:hover .btn3 {background:url(../img/project_icon_hover.png) no-repeat;}
+.gnb_menu li:hover .btn4 {background:url(../img/work_icon_hover.png) no-repeat;}
+
+/*인트로*/
+.section1 {width:100%; height:1000px; background:url(../img/intro_bg.jpg) no-repeat center center;}
+.section1 .intro {width:1100px; height:800px; margin:0 auto; position:relative; padding-top:200px;} 
+.section1 .intro .txt {margin:0 auto; display:block;}
+.section1 .intro .arrow {position:absolute; left:50%; bottom:45px; margin-left:-35px; transition:all 0.3s ease-out;}
+.section1 .intro .arrow:hover {transform:translate(0,30px);}
+.section1 .intro .star {position:absolute; left:50%; top:150px; margin-left:-550px; animation:box_move 1s infinite alternate ease-in;}
+@keyframes box_move {
+    from {transform:scale(0.5);}
+	to {transform:scale(1);}
+}
+
+.section1 .intro .star2 {margin-left:350px; top:650px; animation:point_move 1s infinite alternate ease-out;}
+@keyframes point_move {
+    from {transform:scale(1);}
+	to {transform:scale(0.5);}
+}
+
+/*프로필*/
+.section2 {height:1000px; overflow:hidden;}
+.section2 .info {width:1100px; margin:0 auto;}
+.section2 .info h1 {text-align:center; padding-top:200px;}
+.section2 .info h1 .tit_star {margin:-53px -30px 0 0; animation:star_move 1s infinite alternate ease-in-out;}
+@keyframes star_move {
+    from {transform:scale(1);}
+	to {transform:scale(0.7);}
+}
+.section2 .info .profile {margin:50px auto 0;}
+
+.section2 .info .star_bg {margin:-50px 0 0 -150px;}
+.section2 .info .star_bg2 {margin:-600px 0 0 1180px;}
+
+/*메인 프로젝트*/
+.section3 {height:1300px;}
+.section3 .project {width:1100px; margin:0 auto;}
+.section3 .project h1 {text-align:center; padding-top:100px;}
+.section3 .project h1 .tit_star {margin:-58px -30px 0 0; animation:star_move 1s infinite alternate ease-out;}
+
+.section3 .project .old {width:1100px; margin-top:70px; position:relative;}
+.section3 .project .old .txt1 {margin-left:28px;}
+
+.section3 .project .old .link .more {display:block; width:569px; height:267px; background:url(../img/project_hover_bg.png); position:absolute; left:0; top:0; display:none;}
+.section3 .project .old .link .more h3 {font-size:20px; font-weight:bold; letter-spacing:-0.5px; color:#1d2437; background:url(../img/project_hover_btn.png) no-repeat center 70%; text-align:center; line-height:230px ;}
+.section3 .project .old .link:hover .more {display:block;}
+
+.section3 .project .old.new .txt2 {margin:10px 0 0 30px;}
+.section3 .project .old.new .link .more {width:381px; height:521px;}
+.section3 .project .old.new .link .more h3 {background-position-x:50%; line-height:230px; margin-top:80px;}
+
+
+/*기타 작업물*/
+.section4 {height:1000px;}
+.section4 .work {width:1100px; margin:0 auto;}
+.section4 .work h1{text-align:center; padding-top:50px;}
+.section4 .work h1 .tit_star {margin:-55px -30px 0 0; animation:star_move 1s infinite alternate ease-out;}
+
+.section4 .work ul {height:480px; margin-top:50px;}
+.section4 .work ul li {float:left; margin-left:10px; position:relative;}
+.section4 .work ul li a {width:353px; height:473px; display:inline-block;}
+.section4 .work ul li a h3 {width:355px; height:473px; position:absolute; left:0; top:0; background:url(../img/work_bg.png); text-align:center; line-height:470px; color:#1d2437; font-size:16px; font-weight:bold; transition:all 0.5s ease-out; opacity:1;}
+.section4 .work ul li a:hover h3 {opacity:0;}
+.section4 .work ul li a span {width:200px; height:50px; position:absolute; left:50%; top:209px; margin-left:-100px; border-bottom:2px solid #1d2437; border-top:2px solid #1d2437; transition:all 0.5s ease-out; opacity:1;}
+.section4 .work ul li a:hover span {transform:scaleX(0.1); opacity:0;}
+
+.section4 .work .star_bg {margin:-50px 0 0 -200px;}
+.section4 .work .star_bg2 {margin:-720px 0 0 1100px;}
+
+
+

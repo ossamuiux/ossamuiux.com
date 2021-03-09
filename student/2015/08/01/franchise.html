@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>바빈스커피</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	//gt(0)은 필터선택자이며 두번째요소부터 마지막까지 선택(예:숫자값이 1이면 세번째부터~)
+	$('.store_content>div:gt(0)').hide();
+	//var : 변수 선언, num : 그룹이름(영어로 지정)
+	var num;
+	
+	$('.store_list li').click(function(){
+		//탭메뉴클릭시 모든 a의 on클래스 삭제
+		$('.store_list li a').removeClass('on');
+		//클릭한 a에만 on클래스 걸기
+		$(this).find('a').addClass('on');
+		
+		num=$(this).index();
+		//console.log(num);
+		$('.store_content>div').hide();
+		$('.store_content>div').eq(num).show();
+	});
+});
+
+</script>
+</head>
+
+<body>
+<div class="header_wrap franchise_header">
+	<div class="top_wrap">
+    	<div class="top">
+    		<a href="index.html"><img src="img/logo.png" alt="바빈스커피"></a>
+        </div>
+    </div>
+    <div class="gnb_wrap">
+    	<div class="gnb">
+        	<ul class="gnb_menu">
+            	<li><a href="brand.html">Brand<span></span></a>
+                    <ul class="sub">
+                    	<li><a href="brand.html">Babeans is</a></li>
+                        <li><a href="#">Brunch</a></li>
+                        <li><a href="#">Babeans B.I</a></li>
+                        <li><a href="#">Babeans bean</a></li>
+                        <li><a href="#">Education center</a></li>
+                    </ul>
+                </li>
+                <li><a href="menu.html">Menu<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="menu.html">New& Hot</a></li>
+                        <li><a href="#">Coffee</a></li>
+                        <li><a href="#">Bbrunch</a></li>
+                        <li><a href="#">Dessert</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul>
+                </li>
+                <li><a class="on" href="franchise.html">Franchise<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="franchise.html">바빈스 Style</a></li>
+                        <li><a href="#">개설절차</a></li>
+                        <li><a href="#">창업비용</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1:1 상담신청</a></li>
+                        <li><a href="#">창업설명회 신청</a></li>
+                        <li><a href="#">Location</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Store<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">Store</a></li>
+                        <li><a href="#">New Store</a></li>
+                        <li><a href="#">점주님 공간</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">News<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">Nnotice</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Event</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main franchise">
+	<div class="visual_wrap">
+    	<div class="visual">
+        	<h1>바빈스 Style</h1>
+            <p>"세계가 인정한 스페셜티 100% 아라비카 원두를 블랜딩한 <br>
+고품질의 커피와 다양한 브런치와 디저트를 즐길 수 있는 문화공간을 지향합니다." </p>
+            <ul>
+            	<li><a href="#"><img src="img/home_btn.png" alt=""></a></li>
+                <li><a href="#">Franchise</a></li>
+                <li><a class="is" href="#">바빈스 Style</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="product1">
+    	<span></span>
+    	<h2>인테리어 컨셉</h2>
+        <h3>스타일리쉬한 인테리어와 고객과 점주 모두가 소통할수 있는 문화공간 지향</h3>
+        <p>바빈스 인테리어는 누구나 쉽게 들어와 편히 쉴수 있게, 심플하면서 따뜻함을 느낄수 있는 네츄럴 스타일을 조화롭게 디자인 하였습니다.<br>
+바빈스를 찾는 고객이 부담스럽지 않게 빈티지한 디자인 요소를 현대감각적인 콘크리트 소재와 조화를 이루어 언제나 친숙한 매장처럼 다가서도록하여<br>
+세련되고 편안한 감성의 명품 디자인으로 고객뿐만아니라 창업자의 품격까지 높이는 공간을 연출합니다.</p>
+		<img src="img/franchise_img.jpg" alt="">
+    </div>
+    <div class="product2">
+    	<span></span>
+        <h2>인테리어 스타일</h2>
+        <div class="txt">
+            <h3>빈티지한 감성과 모던미 추구</h3>
+            <p>20~30대 여성고객의 Needs를 세련된 모던&빈티지 스타일로 디자인하여 품격있고 세련된 분위기를 연출합니다.</p>
+        </div>
+        <div class="txt">
+            <h3>고객을 위한 여유로운 휴식공간</h3>
+            <p>고객을 최우선으로 하는 자리배치와 동선 설계를 통해 자연스럽고 편안한 공간에서 커피와 브런치, 여유로운 휴식을 즐기실 수 있습니다.</p>
+        </div>
+        <div class="txt">
+            <h3>합리적인 인테리어 비용</h3>
+            <p>모던, 빈티지한 라이프 스타일을 경험할 수 있는 특별한 공간 및 특별한 인테리어를 합리적인 가격에 제공하며, 각 점포 상황에 최적화된 인테리어를 제시함으로써<br>
+고객과 가맹점주 모두가 만족 할 수 있습니다. </p>
+        </div>
+        <img src="img/franchise_dot_line.png" alt="">
+    </div>
+    <div class="product3">
+    	<div class="tit">
+        	<img src="img/franchise_sec3_dots.png" alt="">
+            <img src="img/franchise_sec3_dots.png" alt="">
+            <img src="img/franchise_sec3_dots.png" alt="">
+            <h2>가맹점 인테리어 보기</h2>
+        </div>
+        <div class="store">
+        	<ul class="store_list">
+                <li><img src="img/franchise_store01.png" alt=""></li>
+                <li><img src="img/franchise_store02.png" alt=""></li>
+                <li><img src="img/franchise_store03.png" alt=""></li>
+                <li><img src="img/franchise_store04.png" alt=""></li>
+                <li><img src="img/franchise_store05.png" alt=""></li>
+                <li><img src="img/franchise_store06.png" alt=""></li>
+                <li><img src="img/franchise_store07.png" alt=""></li>
+                <li><img src="img/franchise_store08.png" alt=""></li>
+            </ul>
+            <img class="arrow" src="img/franchise_store_arrow.png" alt="">
+            <div class="store_content">
+            	<div><img src="img/franchise_store_img01.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img02.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img03.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img04.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img05.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img06.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img07.jpg" alt=""></div>
+                <div><img src="img/franchise_store_img08.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+        <ul>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">회사소개</a></li>
+        </ul>
+        <p>㈜ 퍼스트에이엔티  대표이사 : 백 호 근  사업자번호 : 105-86-43818<br>주소 : 경기도 고양시 덕양구 행신동 713 GL프라자 2층  전화 : 1588-0672  팩스 : 02-717-9976</p>
+        <p class="copy">Copyright ⓒ (주)퍼스트에이엔티 All Rights Reserved.</p>
+        <a class="blog" href="#"><img src="img/blog_btn.png" alt=""></a>
+    </div>
+</div>
+</body>
+</html>

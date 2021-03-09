@@ -1,0 +1,84 @@
+@charset "utf-8";
+body {font-family:'맑은고딕','malgun gothic','돋움',dotum,sans-serif; font-size:16px; letter-spacing:-0.05em;}
+
+
+/*인트로*/
+.section1 {height:1000px; background:url(../images/intro.jpg) no-repeat center top; margin:0 auto; position:relative; }
+.section1 .page_btn { width:370px; margin:0 auto;}
+.section1 .page_btn li {float:left; margin-top:10px;}
+.section1 .arrow img { position:absolute; right:48% ;top:940px;}
+
+/*자기소개페이지*/
+.section2 { height:1000px;background:url(../images/bg.jpg) repeat-x;}
+
+.section2 .page_1{ width:1200px; margin:0 auto;position:relative;}
+.section2 .page_1 li:first-child { margin-left:60px;}
+.section2 .page_1 .me {position:absolute; left:300px; top:40px;}
+.section2 .page_1 .me_img { position:absolute; left:50px; top:0; margin-top:660px;}
+.section2 .page_1 .arrow_1 { position:absolute; right:48%;top:940px;}
+
+
+/*작업물 페이지*/
+.section3 {height:1000px; background:url(../images/bg2.jpg) repeat-x;position:relative;}
+.section3 .page2 {width:1200px; margin:0 auto;position:relative;}
+.section3 .page2 h2 { width:312px;margin:0 auto; padding-top:40px;}
+
+
+.section3 .page2 .work_list {width:831px; margin:0 auto; margin-top:30px; position:relative;}
+
+
+/*마우스오버*/
+.section3 .page2 .work_list .slick-slide>div {position:relative;}
+.section3 .page2 .work_list .slick-slide>div .cover {position:absolute; left:0; top:0;display:none; }
+.section3 .page2 .work_list .slick-slide>div:hover .cover {display:block;}
+
+
+/*좌우화살표커스텀*/
+.section3 .page2 .work_list .slick-prev { position:absolute; left:-100px; top:50%; z-index:999; cursor:pointer; width:80px; height:77px; background:url(../images/arrow3.png) no-repeat; text-indent:-9999px; margin-top:-38px;border:none; outline:none;}
+
+
+.section3 .page2 .work_list .slick-next { position:absolute; right:-100px; top:50%; z-index:999; cursor:pointer; width:80px; height:77px; background:url(../images/arrow2.png) no-repeat; text-indent:-9999px; border:none; margin-top:-38px; outline:none;}
+
+
+.section3 .page2 .arrow1 a { position:absolute; left:48%; bottom:-100px;}
+
+
+
+
+/*모달팝업*/
+.section3 .modal {position:fixed; left:0; top:0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index:999; display:none;}
+.section3 .modal .slimScrollDiv { margin:-275px auto 0; top:50%;}
+.section3 .modal .close_btn {position:absolute; left:50%; top:50%; font-size:30px; color:#FFF; font-weight:bold; margin-top:-350px; margin-left:-15px;}
+
+
+
+
+
+
+/*리뉴얼 프로젝트*/
+.section4 {height:1000px; background:url(../images/bg3.jpg) repeat-x;}
+.section4 .project { width:1200px; margin:0 auto;}
+.section4 .project h2 { width:312px;margin:0 auto; padding-top:30px;}
+.section4 .project h3 {width:332px; margin:0 auto; padding-top:60px;}
+.section4 .project .first li { float:left; margin:15px 70px;}
+.section4 .project .text_btn { height:70px;display:inline-block;}
+.section4 .project .text_btn li{margin-left:220px;}
+.section4 .project .text_btn .mb{padding-left:60px;}
+
+/*클릭버튼*/
+.section4 .project .click_btn li{float:left;}
+.section4 .project .click_btn li:first-child {margin-left:150px;}
+.section4 .project .click_btn .second li:first-child{margin-left:230px; }
+
+.section4 .project .arrow5 {position:absolute; left:48%; margin-top:85px;}
+
+
+/*에필로그 페이지*/
+.section5 {height:1000px; background:url(../images/bg4.jpg) repeat-x;}
+.section5 .epilogue {width:1200px; margin:0 auto; }
+
+.section5 .epilogue h2 {width:312px;margin:0 auto; padding-top:10px;}
+.section5 .epilogue h3 { margin-left:100px; margin-top:30px;}
+
+
+

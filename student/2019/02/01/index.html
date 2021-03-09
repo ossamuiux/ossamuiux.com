@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">    
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>코엑스 아쿠아리움</title>
+<meta name="description" content="COEX AQUARIUM">
+<meta name="viewport" content="width=1200">
+<meta property="og:type" content="site">
+<meta property="og:title" content="코엑스 아쿠아리움">
+<meta property="og:url" content="http://dltnwjd0112.dothome.co.kr/aquarium/">
+<meta property="og:image" content="http://dltnwjd0112.dothome.co.kr/aquarium/opengraph.png">
+<meta property="og:description" content="COEX AQUARIUM">
+<link rel="shortcut icon" type="image/x-icon" href="/aquarium/favicon.ico">
+<!--css 연결순서 : 외부 라이브러리, 프로젝트용 css-->
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<!--js 연결순서(기능이 큰 순서대로) : 제이쿼리 API, 제이쿼리 UI, 외부 라이브러리, 프로젝트용 js-->
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="top_header">
+                <div class="top_header_inner">
+                    <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="로고"></a></h1>
+                    <ul class="top_menu">
+                        <li>
+                            <ul class="my_info">
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Join</a></li>                               
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="btn_search1" type="button">search</button>
+                            <div class="search_wrap">
+                                <form>
+                                    <fieldset>
+                                        <legend class="blind">전체검색</legend>
+                                        <input class="input_search" type="text" placeholder="검색어를 입력하세요">
+                                        <button class="btn_search2" type="submit" title="검색버튼">검색</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="lang">
+                                <li><a href="#">KR</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_header">
+                <ul class="gnb">
+                    <li>
+                        <a href="company.html">회사소개</a>
+                        <div class="depth2_wrap gnb1">
+                            <ul class="depth2">
+                                <li><a href="company.html">소개</a></li>
+                                <li><a href="#">비전</a></li>
+                                <li><a href="#">연혁</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="themazone.html">아쿠아리움 둘러보기</a>
+                        <div class="depth2_wrap gnb2">
+                            <ul class="depth2">
+                                <li><a href="themazone.html">테마존 안내</a></li>
+                                <li><a href="#">전시생물 소개</a></li>
+                                <li><a href="#">기념품샵</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">관람안내</a>
+                        <div class="depth2_wrap gnb3">
+                            <ul class="depth2">
+                                <li><a href="#">관람시간 / 요금</a></li>
+                                <li><a href="#">할인정보</a></li>
+                                <li><a href="#">먹이주기 프로그램</a></li>
+                                <li><a href="#">연간회원안내</a></li>
+                                <li><a href="#">가족권 안내</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">단체관람</a>
+                        <div class="depth2_wrap gnb4">
+                            <ul class="depth2">
+                                <li><a href="#">단체 / 패키지 예약</a></li>
+                                <li><a href="#">단체관람예약</a></li>
+                                <li><a href="#">단체혜택</a></li>
+                                <li><a href="#">연계학습장소</a></li>
+                                <li><a href="#">교통 / 주차</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">모바일 티켓</a>
+                        <div class="depth2_wrap gnb5">
+                            <ul class="depth2">
+                                <li><a href="#">티켓 구매하기</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">아쿠아스토리</a>
+                        <div class="depth2_wrap gnb6">
+                            <ul class="depth2">
+                                <li><a href="#">아쿠아뉴스</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">아쿠아스토리</a></li>
+                                <li><a href="#">아쿠아리스트 소개</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <div class="depth2_wrap gnb7">
+                            <ul class="depth2">
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">메일문의</a></li>
+                                <li><a href="#">공간임대</a></li>
+                                <li><a href="#">사이트맵</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="slider_wrap">
+                <div class="swiper-container main_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/main_visual_bg1.png" alt="메인비쥬얼1">
+                            <div class="main_tit">
+                                <img src="images/main_visual_txt1.png" alt="메인텍스트1">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/main_visual_bg2.png" alt="메인비쥬얼2">
+                            <div class="main_tit">
+                                <img src="images/main_visual_txt1.png" alt="메인텍스트1">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/main_visual_bg3.png" alt="메인비쥬얼3">
+                            <div class="main_tit">
+                                <img src="images/main_visual_txt1.png" alt="메인텍스트1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container main_slider2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide section1"></div>
+                        <div class="swiper-slide section2"></div>
+                        <div class="swiper-slide section3"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="section1">
+                <div class="play_ground_wrap">
+                    <ul class="play_gruond">
+                        <li><img src="images/section1_txt1.png" alt="play ground"></li>
+                        <li><img src="images/section1_txt2.png" alt="슬로건"></li>
+                    </ul>
+                    <div class="aquarium_guide_wrap">
+                        <h2>Aquarium Guide</h2>
+                        <ul class="aquarium_guide">
+                            <li>
+                                <div class="play_icon">
+                                    <h3>이용시간</h3>
+                                    <img class="clock" src="images/play_icon1.png" alt="이용시간">
+                                </div>
+                                <a href="#">자세히 보기</a>
+                            </li>
+                            <li>
+                                <div class="play_icon">
+                                    <h3>전시관 안내</h3>
+                                    <img class="exhibit" src="images/play_icon2_1.png" alt="전시관 안내">
+                                    <img class="exhibit_fish" src="images/play_icon2_2.png" alt="전시관 안내">
+                                </div>
+                                <a href="#">자세히 보기</a>
+                            </li>
+                            <li>
+                                <div class="play_icon">
+                                    <h3>테마존</h3>
+                                    <img class="thema" src="images/play_icon3_1.png" alt="테마존">
+                                    <img class="thema_top1" src="images/play_icon3_2.png" alt="테마존">
+                                    <img class="thema_top2" src="images/play_icon3_3.png" alt="테마존">
+                                </div>
+                                <a href="#">자세히 보기</a>
+                            </li>
+                            <li>
+                                <div class="play_icon">
+                                    <h3>모바일 티켓</h3>
+                                    <img class="mobile" src="images/play_icon4_1.png" alt="모바일 티켓">
+                                    <img class="mobile_ticket" src="images/play_icon4_2.png" alt="모바일 티켓">
+                                </div>
+                                <a href="#">자세히 보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="aqua_list_video_wrap">
+                    <h3>AQUA STORY</h3>
+                    <p>코엑스아쿠아리움에 살고 있는 생물들에 대한 소식을 알려드립니다</p>
+                    <a class="btn_more" href="#"><img src="images/btn_more.png" alt="더보기">더보기</a>
+                    <ul class="aqua_list_video">
+                        <li>
+                            <a href="#"><img src="images/modal_video1.png" alt="모달1"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/modal_video2.png" alt="모달2"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/modal_video3.png" alt="모달3"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aqua_story_wrap">
+                    <div class="aqua_story_modal_wrap">
+                        <div class="aqua_story_modal">
+                        <iframe width="880" height="540" src="about:blank" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button class="btn_close" type="button">유튜브 모달 팝업</button>
+                        </div>
+                        <div class="aqua_story_modal">
+                        <iframe width="880" height="540" src="about:blank" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button class="btn_close" type="button">유튜브 모달 팝업</button>
+                        </div>
+                        <div class="aqua_story_modal">
+                        <iframe width="880" height="540" src="about:blank" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button class="btn_close" type="button">유튜브 모달 팝업</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="aqua_event_wrap">
+                    <h3>EVENT</h3>
+                    <p>아쿠아리움에서 진행되는 새로운 이벤트를 만나보세요</p>
+                    <a class="btn_more" href="#"><img src="images/btn_more.png" alt="더보기">더보기</a>
+                    <ul class="aqua_event">
+                        <li>
+                            <a href="#"><img src="images/event_bg1.png" alt="이벤트1"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/event_bg2.png" alt="이벤트2"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sns_wrap">
+                    <h3>SNS</h3>
+                    <ul class="sns">
+                        <li><a href="#">페이스북</a></li>
+                        <li><a href="#">인스타그램</a></li>
+                        <li><a href="#">유튜브</a></li>
+                        <li><a href="#">트위터</a></li>
+                        <li><a href="#">트위터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h2 class="footer_logo"><img src="images/footer_logo.png" alt="로고"></h2>
+            <div class="menu_wrap">
+                <ul class="footer_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">채용안내</a></li>
+                </ul>
+                <address>서울특별시 강남구 영동대로 513 코엑스아쿠아리움 TEL : 02.700.7200<span></span>FAX : 02.700.7299<span></span>이메일 : aquazigi@coexaqua.com<br>(주)서울오션아쿠아리움<span></span>대표이사 양수용<span></span>사업자등록번호 211-86-49403<span></span>통신판매업신고 2014-서울강남-00715호 </address>
+                <p class="copy">COPYRIGHT 2013 BY COEX AQUARIUM. ALL RIGHT RESERVED.</p>
+            </div>
+            <div class="btn_top">
+                <a href="#">Top</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* main 애니메이션 */
+@keyframes moveMain {
+    20% {left:-42px;}
+    100% {left: 74%;}
+}
+
+@keyframes moveMain2 {
+    60% {left:-42px;}
+    100% {left: 0;}
+}
+
+#container {width:100%; height: 100%; min-height: 360px; position: absolute; left: 0; top: 0;}
+#container.on {animation: moveMain 0.95s cubic-bezier(0.19, 1, 0.22, 1) forwards;}
+#container.on2 {animation: moveMain2 0.55s forwards;}
+#container.on .left_main {padding-left: 34px;}
+#container.on .left_main .bottom_main {left: 34px;}
+
+/* 메인 왼쪽 컨텐츠 */
+#container .left_main {float: left; width: 50%; height: 100%; padding:0 34px 0 75px; position: relative;}
+
+
+#container .left_main .keyword {font-size: 13px; margin-top: 12px; color: #a3a3a3;}
+#container .left_main .keyword .m_br {display: none;}
+#container .left_main .keyword span {color: #cccccc;}
+
+#container .left_main .bottom_main {position: absolute; left: 75px; top: 50%; margin-top: -30px; height: 52%; padding-right: 34px;}
+#container .left_main .bottom_main .tit {font-size: 5vh;line-height: 1.2;}
+#container .left_main .bottom_main .copy2 {position: absolute; left: 0; bottom: 0; font-size: 13px; white-space: nowrap;}
+#container .left_main .bottom_main .copy2 a {margin-left: 80px; position: relative; display: inline-block; width: 90px;}
+#container .left_main .bottom_main .copy2 a:after {content: '';position: absolute;left: 0;bottom: 1px;width:0;height: 1px;background: #1c1c1c; transition: all 0.3s;}
+#container .left_main .bottom_main .copy2 a:hover:after {width: 100%;}
+
+/* 메인 오른쪽 컨텐츠*/
+#container .right_main {float: left;width:50%;height: 100%; border-left:1px solid #e5e5e5; position: relative;}
+
+#container .right_main .btn_main_slider {background: url(../images/iconfinder_arrow_left.png) no-repeat 50% 50%; left: 4px; width:36px; height: 36px; outline: none; margin-top: -115px;}
+#container .right_main .btn_main_slider.swiper-button-next {left: 50px; background-image: url(../images/iconfinder_arrow_right.png);}
+
+/* 마우스 애니메이션 */
+#container .right_main .scroll_down {position: absolute; left: 350px;top: 50%;margin-top: -115px;width: 24px;height: 38px;border: 2px solid #979797;border-radius: 24px;z-index: 100;}
+
+@keyframes scrollDown {
+  10% {transform: translateY(0); opacity: 1; }
+  100% {transform: translateY(8px); opacity: 0; }
+}
+
+#container .right_main .scroll_down:before {content: '';display: block;opacity: 0;position: absolute;left: 50%;top: 8px;margin-left: -1px;width: 2px;height: 10px;background: #979797;animation: scrollDown 1s cubic-bezier(.15,.41,.69,.94) infinite;}
+
+/* 메인 슬라이더 커서 커스텀, 익스 grab커서 지원안함, 크롬 개발자도구 열면 커서변경 안됨 */
+#container .right_main .main_slider {height: 100%; cursor: move; cursor: grab;}
+#container .right_main .main_slider:active {cursor: grabbing;}
+
+#container .right_main .main_slider>.swiper-wrapper>.swiper-slide {width:384px !important; padding: 0 0px; transition: all 0.5s; background: #fff;}
+#container .right_main .main_slider>.swiper-wrapper>.swiper-slide:before {content: '';position: absolute;left: -1px;top: 0;width:1px;height: 100%;background: #e5e5e5;}
+#container .right_main .main_slider>.swiper-wrapper>.swiper-slide .tit {color: #e5e5e5; font-size: 95px; font-weight: 700; line-height: 1; padding: 0 10px; transition: all 0.5s;}
+
+#container .right_main .main_slider>.swiper-wrapper>.swiper-slide.swiper-slide-active {background: #f8f8f8;}
+#container .right_main .main_slider>.swiper-wrapper>.swiper-slide.swiper-slide-active .tit {color:#a3a3a3;}
+
+#container .right_main .main_slider>.swiper-scrollbar {bottom:17px; height: 3px; background: rgba(0,0,0,.2); left: 10px; right: 10px; width: auto;}
+#container .right_main .main_slider>.swiper-scrollbar .swiper-scrollbar-drag {height: 5px; top: -1px; background: #e91e63; border-radius: 5px;}
+
+/* 메인 수강생 작업물 슬라이더 */
+#container .right_main .main_slider .list_student {position: absolute;left: 0;top: 50%;height: 50%;width: 100%;margin-top: -60px; padding: 0 10px;}
+#container .right_main .main_slider .list_student .swiper-slide {margin-bottom: 15px; height: auto;}
+#container .right_main .main_slider .list_student .swiper-slide:last-child {margin-bottom: 0;}
+#container .right_main .main_slider .list_student .swiper-slide .training_time {float: right;}
+
+#container .right_main .main_slider .list_student .link_student:after {content: ''; display: block; clear: both;}
+#container .right_main .main_slider .list_student .link_student a {width: calc(33.33% - 6px);float: left;font-size: 13px;margin:5px 9px 0 0;}
+#container .right_main .main_slider .list_student .link_student a:first-child {width:100%;}
+#container .right_main .main_slider .list_student .link_student a:last-child {margin-right: 0px;}
+#container .right_main .main_slider .list_student .link_student h4 {line-height: 1;}
+#container .right_main .main_slider .list_student .link_student img {max-width: 100%;border: 3px solid #ffffff;box-shadow: 0 0 3px rgba(0,0,0,0.2); margin-top: 5px;}
+#container .right_main .main_slider .list_student .link_student a:hover img {border-color:#E91E63;}
+
+#container .right_main .main_slider .list_student .swiper-scrollbar {right:0; top: 0; width:1px; height: 100%; background: #e5e5e5;}
+#container .right_main .main_slider .list_student .swiper-scrollbar .swiper-scrollbar-drag {background: #1c1c1c;}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+    #container .left_main .bottom_main .tit {font-size: 4vw;}
+}
+
+@media screen and (max-width:767px) {
+    #container .left_main {padding: 0 17px 0 58px;}
+    #container.on .left_main {padding-left: 17px;padding-right: 58px;}
+    #container.on .left_main .bottom_main {left: 17px; padding-right: 34px;}
+    
+    #container .left_main .keyword {line-height: 1.3;}
+    #container .left_main .keyword .m_br {display: block;}
+    
+    #container .left_main .bottom_main {left: 58px; padding-right: 17px; margin-top:-22px;}
+    #container .left_main .bottom_main .tit {font-size: 5vw;}
+    
+    #container .left_main .bottom_main .copy2 {white-space: normal;}
+    #container .left_main .bottom_main .copy2 a {margin-left: 0; display: block;}
+    
+    /* 마우스 애니메이션 */
+    #container .right_main .scroll_down {
+        left:auto;
+        right: 10px;
+    }
+    
+    #container .right_main .main_slider>.swiper-wrapper>.swiper-slide {width:100% !important;}
+    #container .right_main .main_slider>.swiper-wrapper>.swiper-slide .tit {font-size: 12.4vw; margin-top: 12px; line-height: 0.75;}
+    
+    #container .right_main .main_slider .list_student .link_student a {width: calc(33.33% - 4px); margin: 5px 6px 0 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

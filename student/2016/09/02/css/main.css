@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+
+
+/****************메인****************/
+
+/*메인 슬라이더*/
+.main .main_slider img {width:100%;}
+
+/*메인 슬라이더 페이지 버튼*/
+.main .main_slider .slick-dots {position:absolute; left:50%; bottom:0; margin-left:-20px;}
+.main .main_slider .slick-dots li {float:left;}
+.main .main_slider .slick-dots li:first-child {padding-left:0;}
+.main .main_slider .slick-dots li button {width:30px; height:30px; background:url(../img/dot02.png) no-repeat center center; border:none; text-indent:-9999px; background-size:10px;}
+.main .main_slider .slick-dots li.slick-active button {background-image:url(../img/dot01.png);}
+
+/*공지사항*/
+.main .notice {padding:0 10px;}
+.main .notice h2 {font-size:15px; padding-top:20px;}
+
+.main .notice ul {margin-top:15px; overflow:hidden;}
+.main .notice ul li {margin-top:10px;}
+.main .notice ul li:first-child {margin-top:0;}
+.main .notice ul li a {display:block;}
+.main .notice ul li em {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; display:inline-block;}
+.main .notice ul li span {display:inline-block; float:right; color:#0aa3a9;}
+
+/*이벤트/패키지 슬라이더*/
+.main .event_slider {margin-top:20px;}
+.main .event_slider img {width:100%;}
+.main .event_slider .slick-slide {position:relative;}
+.main .event_slider p {z-index:1000; background:rgba(0, 0, 0, 0.5); height:30px; width:100%; color:#FFF; line-height:30px; position:absolute; left:0; bottom:0;}
+.main .event_slider p span {margin-left:10px;}
+
+/*이벤트/패키지 슬라이더 페이지 버튼*/
+.main .event_slider .slick-dots {height:35px; text-align:center; background:#f0f0f0;}
+.main .event_slider .slick-dots li {display:inline-block;}
+.main .event_slider .slick-dots li button {width:35px; height:35px; border:none; background:url(../img/dot04.png) no-repeat center center; text-indent:-9999px; background-size:10px;}
+.main .event_slider .slick-dots li.slick-active button {background-image:url(../img/dot03.png);}
+
+/*아이콘*/
+.main .icon {height:70px; border-bottom:1px solid #CCC; border-top:1px solid #CCC;}
+.main .icon li {width:25%; float:left; background:url(../img/icon01.png) no-repeat center 14px; background-size:32px; position:relative;}
+.main .icon li:nth-child(2) {background-image:url(../img/icon02.png); background-position:center 10px;}
+.main .icon li:nth-child(3) {background-image:url(../img/icon03.png); background-position:center 18px;}
+.main .icon li:nth-child(4) {background-image:url(../img/icon04.png); background-position:center 10px;}
+.main .icon li a {display:block; height:25px; text-align:center; padding-top:45px;}
+
+.main .icon li:before {content:''; position:absolute; left:0; top:10px; width:1px; height:50px; background:#CCC;}
+.main .icon li:first-child:before {display:none;}
+
+
+
+
+
+
+
+
+
+
+

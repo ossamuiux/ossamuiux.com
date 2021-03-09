@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">  
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<!--안드로이드는 사용자확대축소 막히지만 아이폰 사파리브라우져는 안됨-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">-->
+<!--아이폰사파리 전화번호 자동링크방지-->
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="종합패션유통,여성복,남성복,골프웨어,스포츠,학생복,제화잡화 등 브랜드소개.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="패션그룹형지">
+<meta property="og:url" content="http://wjsthfwod2.dothome.co.kr/hyungJi">
+<meta property="og:image" content="http://wjsthfwod2.dothome.co.kr/hyungJi_logo.png">
+<meta property="og:description" content="종합패션유통,여성복,남성복,골프웨어,스포츠,학생복,제화잡화 등 브랜드소개.">
+<title>패션그룹형지</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="home_icon.png">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=BMeAr4Hu6A1nC_oXdmX4&submodules=geocoder"></script>	
+<script src="js/main.js"></script>
+</head>  
+<body>
+<div id="wrap">
+    <header id="header">
+        <button type="button" class="btn_menu">메뉴열기</button>
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+        <button type="button" class="btn_language">랭귀지</button>
+        <div class="m_menu">
+            <ul class="gnb">
+                <li>
+                    <a href="#">BRAND</a>
+                    <ul class="depth2">
+                        <li class="on">
+                            <a href="women.html">WOMEN</a>
+                            <ul class="depth3">
+                                <li><a href="#">크로커다일레이디</a></li>
+                                <li><a href="#">올리비아 하슬러</a></li>
+                                <li><a href="#">샤트렌</a></li>
+                                <li><a href="#">라젤로</a></li>
+                                <li><a href="#">캐리스 노트</a></li>
+                                <li><a href="#">스테파넬</a></li>
+                                <li><a href="#">끌레몽뜨</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">MEN</a>
+                            <ul class="depth3">
+                                <li><a href="#">예작</a>
+                                <li><a href="#">본</a>
+                                <li><a href="#">월비</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">SHOES&amp;BAG</a>
+                            <ul class="depth3">
+                                <li><a href="#">까스텔바작 BAG&amp;ACC</a></li>
+                                <li><a href="#">에스콰이아</a></li>
+                                <li><a href="#">에스콰이아 콜렉션</a></li>
+                                <li><a href="#">영에이지</a></li>
+                                <li><a href="#">포트폴리오</a></li>
+                                <li><a href="#">소노비</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">SPORT</a>
+                            <ul class="depth3">
+                                <li><a href="#">와일드로즈</a></li>
+                                <li><a href="#">까스텔바작</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">LIVING</a>
+                            <ul class="depth3">
+                                <li><a href="#">까스텔바작 HOME</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">CHANNEL</a>
+                    <ul class="depth">
+                        <li><a href="#">형지뉴스</a></li>
+                        <li><a href="#">언론보도</a></li>
+                        <li><a href="#">수상내역</a></li>
+                        <li><a href="#">영상갤러리</a></li>
+                    </ul>
+                </li>
+                <li> 
+                    <a href="#">COMPANY</a>
+                    <ul class="depth">
+                        <li><a href="company.html">형지소개</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">비전&amp;미션</a></li>
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="employ.html">행복인재</a></li>
+                    </ul>
+                </li>
+                <li>     
+                    <a href="#">SUPPORT</a>
+                    <ul class="depth">
+                        <li><a href="#">여성후원</a></li>
+                        <li><a href="#">아동후원</a></li>
+                        <li><a href="#">교육후원</a></li>
+                        <li><a href="#">문화후원</a></li>
+                        <li><a href="#">긴급구호</a></li>
+                        <li><a href="#">행복드림</a></li>
+                    </ul>
+                </li>  
+                <li>   
+                    <a href="family.html">FAMILY</a>
+                    <ul class="depth">
+                        <li><a href="#">형지I&amp;C</a></li>
+                        <li><a href="#">형지 엘리트</a></li>
+                        <li><a href="#">형지 에스콰이아</a></li>
+                        <li><a href="#">아트몰링 부산본점</a></li>
+                        <li><a href="#">아트몰링 장안점</a></li>
+                        <li><a href="#">패션라운지</a></li>
+                    </ul>
+                </li>        
+            </ul>
+        </div>
+        <div class="m_lang">
+            <a class="on" href="#">KR</a>
+            <a href="#">EN</a>
+        </div>
+    </header>
+    <main id="women_visual">
+        <img src="images/women_visual.jpg" alt="">
+    </main>
+    <section class="swiper-container women_section1">
+        <div class="swiper-wrapper lnb">  
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb01.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec01.jpg" alt="">
+                    <div class="box">
+                        <h3>CROCODILE</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb02.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec02.jpg" alt="">
+                    <div class="box">
+                        <h3>CHATELAINE</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb03.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec03.jpg" alt="">
+                    <div class="box">
+                        <h3>Olivia Hassler</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+</div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb04.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec04.jpg" alt="">
+                    <div class="box">
+                        <h3>RAGELLO</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+</div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb05.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec05.jpg" alt="">
+                    <div class="box">
+                        <h3>Carries Note</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+</div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb06.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec06.jpg" alt="">
+                    <div class="box">
+                        <h3>STEFANEL</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="images/women/gnb07.jpg" alt="">
+                    <img class="box_visual" src="images/women/sec07.jpg" alt="">
+                    <div class="box">
+                        <h3>CLAMONT</h3>
+                        <p>이태리 프리미엄<br>니트웨어 하우스.<br>내츄럴하고 모던한 요소를<br> 더한 컨템포러리 스타일을<br>제시합니다.<br>본연의 내추럴 &amp; 보헤미안<br>감성의<br>스타일을 추구합니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <section class="women_section2">
+        <h2>NEW ITEM</h2>
+        <div class="swiper-container women_section2_inner">
+            <div class="swiper-wrapper item">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item01.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>stripe sleeve blouse</h4>
+                            <p>\112,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item02.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>silket green blouse</h4>
+                            <p>\140,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item03.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item04.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item05.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item06.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item07.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item08.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/women/item09.png" alt="">
+                        <div class="item_info">
+                            <h3>STEFANAL</h3>
+                            <h4>navy unbal ops</h4>
+                            <p>\150,000</p>
+                        </div>
+                    </a>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer_inner">
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">윤리신문고</a></li>
+                <li><a href="#">사생건의함</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+            <address>패션그룹형지(주) 서울시 강남구 논현로 322 형지빌딩</address>
+            <p>대표번호 : 1599-7222</p>
+            <div class="family">
+                <button type="button" class="btn_family ">FAMLIY SITE</button>
+                <ul class="family_list">
+                    <li><a href="#">형지 I&amp;C</a></li>
+                    <li><a href="#">형지 엘리트</a></li>
+                    <li><a href="#">형지 에스콰이아</a></li>
+                    <li><a href="#">아트몰링 부산본점</a></li>
+                    <li><a href="#">아트몰링 장안점</a></li>
+                    <li><a href="#">패션라운지</a></li>
+                </ul>
+            </div>    
+        </div>    
+    </footer>
+</div> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

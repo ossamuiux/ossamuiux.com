@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>pascucci</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.gnb').mouseenter(function(){
+		$('.sub_wrap').stop().slideDown();
+	});
+	
+	$('.header_wrap').mouseleave(function(){
+		$('.sub_wrap').stop().slideUp();
+	});
+	
+	var num=0;
+	
+	$('.fm').click(function(){
+		if(num==0){
+			$('.fm_menu').show();
+			num=1;
+		} else {
+			$('.fm_menu').hide();
+			num=0;
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+        <div class="top_menu">
+            <ul>
+                <li><a href="#" class="login">LOGIN</a></li>
+                <li class="join"><a href="#">JOIN</a></li>
+                <li><a href="#"><img src="img/facebook.png" alt="facebook">facebook</a></li>
+                <li><a href="#"><img src="img/instagram.png" alt="instagram">instagram</a></li>
+            </ul>
+        </div>
+        <h1><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+        <div class="gnb_wrap">
+            <ul class="gnb">
+                <li><a href="story.html" class="story">STORY</a></li>
+                <li>
+                    <a href="coffee.html" class="pro">PRODUCTS</a>
+                </li>
+                <li>
+                    <a href="#" class="fra">FRANCHISE</a>
+                </li>
+                <li>
+                    <a href="#" class="eve">EVENT</a>
+                </li>
+                <li>
+                    <a href="#" class="sto">STORE</a>
+                </li>
+                <li>
+                    <a href="#" class="cus">CUSTOMER</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub_wrap">
+        <div class="sub">
+            <ul>
+                <li><a href="#">브랜드스토리</a></li>
+                <li><a href="#">커피스토리</a></li>
+            </ul>
+            <ul>
+                <li><a href="coffee.html">Coffee</a></li>
+                <li><a href="#">Beverage</a></li>
+                <li><a href="#">Bakery</a></li>
+                <li><a href="#">Gelato</a></li>
+                <li><a href="#">MD</a></li>
+                <li><a href="#">On-line shop</a></li>
+                <li><a href="#">영양성분표</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">CAFFE PASCUCCI</a></li>
+                <li><a href="#">가맹 개설 안내</a></li>
+                <li><a href="#">추천점포</a></li>
+                <li><a href="#">정보공개서</a></li>
+                <li><a href="#">가맹설명회 안내</a></li>
+                <li><a href="#">FAQ/가맹문의</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">진행 중 이벤트</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">매장소식</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">제휴혜택</a></li>
+                <li><a href="#">1:1 문의하기</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main">
+	<h3><img src="img/home.png" alt=""> > STORY > <span>브랜드스토리</span></h3>
+    <div class="sub_menu">
+    	<ul>
+        	<li><a href="story.html" class="on">STORY</a>
+            	<ul class="menu">
+                	<li><a href="story.html" class="on">브랜드스토리</a></li>
+                    <li><a href="#">커피스토리</a></li>
+                </ul>
+            </li>
+            <li><a href="coffee.html">PRODUCTS</a>
+            </li>
+            <li><a href="#">FRANCHISE</a>
+            </li>
+            <li><a href="#">EVENT</a>
+            </li>
+            <li><a href="#">STORE</a>
+            </li>
+            <li><a href="#">CUSTOMER</a>
+            </li>
+        </ul>
+    </div>
+    <div class="contents">
+    	<div class="box1">
+            <h1>브랜드 스토리</h1>
+            <p>장인정신을 바탕으로 각자 맡은바 최선을 다하는 파스쿠찌 정신은 오늘도 빛나고 있습니다.</p>
+        </div>
+        <div class="box2">
+            <h2>Brand History</h2>
+            <div class="tit_01">
+            	<div class="list">
+                	<h4><strong>01</strong><br>Since<br><em>1883</em></h4>
+                </div>
+                <div class="txt">
+                    <h5>19세기, 에스프레소의<br>고향인 <span>이탈리아</span> 에서 출발</h5>
+                    <p>카페 파스쿠찌가 처음 등장한 것은 19세기 말,
+                    안토니오 파스쿠찌에 의해 몬테펠트로에서
+                    시작되었으며, 아들인 마리오 파스쿠찌가 원두를 
+                    주석냄비에 볶아 새로운 맛과 향을 만드는
+                    실험을 성공시키면서 본격적인 사업을 전개했습니다.
+                    </p>
+                </div>
+                <img src="img/list_img_01.jpg" alt="">
+            </div>
+        </div>
+        <div class="box2">
+            <div class="tit_01">
+                <div class="list">
+                    <h4><strong>02</strong><br>~<br><em>1946</em></h4>
+                </div>
+                <div class="txt">
+                    <h5><span>에스프레소 추출법</span>을<br>업계 최초로 도입</h5>
+                    <p>파스쿠찌는 몬테체리뇨네 지역을 거점으로 확산하였고,
+                    1946년에 접어들면서 장비를 이용한 에스프레소 추출법
+                    을 업계 최초로 도입했으며, 로스팅 기계의 도입과 생산
+                    라인을 구축함으로써 생산량 확대 및 고품질 원두생산이
+                    가능한 환경을 마련했습니다.
+                    </p>
+                </div>
+                <img class="list_02" src="img/list_img_02.jpg" alt="">
+            </div>
+        </div>
+        <div class="box2">
+            <div class="tit_01">
+                <div class="list">
+                    <h4><strong>03</strong><br>In<br>Korea</h4>
+                </div>
+                <div class="txt_03">
+                    <h5>세계 20여개국
+                    40개 도시에<br>
+                    진출한<br>
+                    <span>글로벌 브랜드</span></h5>
+                    <p>현재 파스쿠찌는 이탈리아, 영국, 미국 등 전 세계 20여 개 국의
+                    40여 도시에 진출한 글로벌 브랜드로 성장했습니다. 
+                    한국에서는 지난 2001년 식품전문기업인 SPC그룹의 계열사 
+                    (주)파리크라상이 파스쿠찌 이탈리아 본사와 브랜드 도입 계약을
+                    맺은 이후 지금까지 성공적으로 발전해 왔습니다. <br>이제 
+                    전국 어디에서나 파스쿠찌 커피의 맛과 문화를 만나실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img class="bg" src="img/story_bg.jpg" alt="">
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<h3><img src="img/footer_logo.png" alt=""></h3>
+        <div class="footer_box">
+        	<ul>
+            	<li><a href="#">해피포인트</a></li>
+                <li><a href="#"><span>개인정보취급방침</span></a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">윤리신고센터</a></li>
+                <li><a href="#">거래희망사전등록</a></li>
+            </ul>
+            <p>서울시 서초구 양재동 11-149번지 / Tel : 82 - 2 - 2276 - 6550 FAX : 0505 - 073 - 0210 / 고객 상담 센터 080 - 731 - 2027  <br>개인정보관리 책임자 : 조용찬</p>
+            <p>COPYRIGHT 2012 <span>THE PASCUCCI</span> ALL RIGHTS RESERVED</p>
+        </div>
+        <div class="family_site">
+            <a class="fm">Family Site<img src="img/family_up.png" alt=""></a>
+            <ul class="fm_menu">
+            	<li><a href="#">SPC그룹</a></li>
+                <li><a href="#">던킨도너츠</a></li>
+                <li><a href="#">베스킨라빈스31</a></li>
+                <li><a href="#">해피포인트카드</a></li>
+                <li><a href="#">파리바게트</a></li>
+                <li><a href="#">파리크라상</a></li>
+                <li><a href="#">해피콘</a></li>
+                <li><a href="#">우리밀愛</a></li>
+                <li><a href="#">(주)한불제과제빵학원</a></li>
+                <li><a href="#">파스쿠찌이탈리아</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

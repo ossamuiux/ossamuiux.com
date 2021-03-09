@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000">
+    <title>토크빈 리뉴얼 프로젝트</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script>
+        var originStyle = {
+            "background-color": "#fff",
+            "color": "#666",
+            "border": "1px solid #e1e1e1"
+        };
+
+        var clickStyle = {
+            "background-color": "#00a388",
+            "color": "#fff",
+            "border": "1px solid #00a388"
+        };
+
+        var classType = ["1:1 맞춤교육", "소수정예 토론수업", "Essay Writing"];
+
+        $(document).ready(function() {
+            $('.value_list li').click(function() {
+                $(this).css(clickStyle).siblings().css(originStyle);
+            }); //버튼 배경정하기
+
+            $('.value_list li').click(function() {
+                console.log(classType[num]);
+                $(".receipt_type span").attr(classType[num]);
+            }); //버튼 배경정하기
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('.receipt').stop().animate({
+                        top: 50
+                    }, 0);
+                } else {
+                    $('.receipt').stop().animate({
+                        top: 150
+                    }, 50);
+                }
+            }); //영수증 창에따라 내려가기
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top_header">
+            <div class="top_header_inner">
+                <ul class="util">
+                    <li class="login">
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                    </li>
+                </ul>
+                <!--로그인 팝업 login_popup  -->
+                <div class="login_popup">
+                    <div class="login_content">
+                        <button class="btn_close" type="button">로그인팝업닫기</button>
+                        <div class="login_content_inner">
+                            <h2>회원로그인</h2>
+                            <fieldset>
+                                <legend>로그인</legend>
+                                <div class="left_login">
+                                    <p>
+                                        <label style="display:none" for="id">아이디</label>
+                                        <input type="text" id="id" alt="아이디" placeholder="아이디(ID)">
+                                    </p>
+                                    <p>
+                                        <label style="display:none" for="pw">패스워드</label>
+                                        <input type="password" id="pw" placeholder="패스워드(PW)">
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="save" name="" value=""><label for="save">아이디저장</label>
+                                    </p>
+                                </div>
+                                <button class="btn_login" type="button">로그인</button>
+                                <div class="bottom_login">
+                                    <button class="btn_join" type="button">회원가입</button>
+                                    <button class="btn_find" type="button">아이디 / 비밀번호 찾기</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_header">
+            <div class="bottom_header_inner">
+                <h1 class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </h1>
+                <ul class="menu">
+                    <li>
+                        <a href="#">토크빈이란</a>
+                        <ul class="depth2">
+                            <li><a href="#">토크빈특징</a></li>
+                            <li>
+                                <a href="#">토크빈학습</a>
+                            </li>
+                            <li>
+                                <a href="#">기업체교육</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">토크빈T.LA</a>
+                        <ul class="depth2">
+                            <li><a href="#">토크빈T.L.A.T</a></li>
+                            <li>
+                                <a href="#">토크빈T.L.A Plus+</a>
+                            </li>
+                            <li>
+                                <a href="#">T.L.A 예약</a>
+                            </li>
+                            <li>
+                                <a href="#">토크빈레벨</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="program_list">
+                        <a href="program.html">교육프로그램</a>
+                        <ul class="depth2">
+                            <li><a href="#">자기주도(SDL)</a></li>
+                            <li>
+                                <a href="#">4D 스피킹집중</a>
+                            </li>
+                            <li>
+                                <a href="#">에세이 라이팅</a>
+                            </li>
+                            <li><a href="#">4D Speaking<br>Grammar</a></li>
+                            <li>
+                                <a href="#">Book Discussion</a>
+                            </li>
+                            <li>
+                                <a href="#">디베이트(토론)</a>
+                            </li>
+                            <li>
+                                <a href="#">몰입수학</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="startclass.html">수강신청</a>
+                        <ul class="depth2">
+                            <li><a href="startclass.html">수강신청</a></li>
+                            <li>
+                                <a href="#">수강료</a>
+                            </li>
+                            <li>
+                                <a href="#">교재구매</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">마이빈</a>
+                        <ul class="depth2">
+                            <li><a href="#">수업캘린더</a></li>
+                            <li>
+                                <a href="#">평가결과</a>
+                            </li>
+                            <li>
+                                <a href="#">My Teacher Board</a>
+                            </li>
+                            <li><a href="#">문의게시판</a></li>
+                            <li>
+                                <a href="#">결제/영수증출력</a>
+                            </li>
+                            <li>
+                                <a href="#">회원정보관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">토크빈라운지</a>
+                        <ul class="depth2">
+                            <li><a href="#">우수후기</a></li>
+                            <li>
+                                <a href="#">강의후기</a>
+                            </li>
+                            <li>
+                                <a href="#">자녀교육노하우</a>
+                            </li>
+                            <li>
+                                <a href="#">교육뉴스</a>
+                            </li>
+                            <li>
+                                <a href="#">스타강사소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="startclass">
+            <div class="startclass_inner">
+                <div class="receipt">
+                    <h2>영수증</h2>
+                    <h3>수업타입<span class="receipt_type"></span></h3>
+                    <h3>수업과정<span></span></h3>
+                    <h3>수업횟수<span></span></h3>
+                    <h3>수업기간<span></span></h3>
+                    <h3>담당강사<span></span></h3>
+                    <h3>수업시간<span></span></h3>
+                    <h4>결제금액<span></span>원</h4>
+                </div>
+                <div class="value_receipt">
+                    <div class="class_type">
+                        <h2>수업타입</h2>
+                        <ul class="value_list">
+                            <li>1:1 맞춤교육</li>
+                            <li>소수정예 토론수업</li>
+                            <li>Essay Writing</li>
+                        </ul>
+                    </div>
+                    <div class="class_course">
+                        <h2>수업과정선택</h2>
+                        <ul class="value_list">
+                            <li>자기주도(SDL)</li>
+                            <li>4D 스피킹집중</li>
+                            <li>에세이라이팅</li>
+                            <li class="line2">4D Speaking<br>Grammar</li>
+                            <li>Book Discussion</li>
+                            <li>디베이트(토론)</li>
+                            <li>몰입수학</li>
+                        </ul>
+                    </div>
+                    <div class="class_number">
+                        <h2>수업횟수선택</h2>
+                        <ul class="value_list">
+                            <li class="line2">주 2회<br>88,000원</li>
+                            <li class="line2">주 3회<br>126,000원</li>
+                            <li class="line2">주 5회<br>200,000원</li>
+                        </ul>
+                    </div>
+                    <div class="class_period">
+                        <h2>수업기간선택</h2>
+                        <ul class="value_list">
+                            <li>주 2회</li>
+                            <li>주 3회</li>
+                            <li>주 5회</li>
+                        </ul>
+                    </div>
+                    <div class="class_tutor">
+                        <h2>담당강사선택</h2>
+                        <form>
+                            <fieldset>
+                                <legend>강사선택</legend>
+                                <select>
+                                  <option style="display: none;" selected>담당강사</option>
+                                  <option>blake</option>
+                                  <option>elly</option>
+                                  <option>jhon</option>
+                                </select>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="class_time">
+                        <h2>시간선택</h2>
+                        <form>
+                            <fieldset>
+                                <legend>시간선택</legend>
+                                <select>
+                                      <option style="display: none;" selected>시간선택</option>
+                                      <option>8시</option>
+                                      <option>9시</option>
+                                      <option>10시</option>
+                                      <option>11시</option>
+                                      <option>12시</option>
+                                      <option>13시</option>
+                                      <option>14시</option>
+                                      <option>15시</option>
+                                    </select>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <button class="btn_startclass" type="button">수강신청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer_inner">
+            <h1>
+                <img src="images/log_gray.png" alt="logo">
+            </h1>
+            <div class="footer_menu_wrap">
+                <ul class="footer_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">개인정보취급방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="#">운영규칙</a>
+                    </li>
+                    <li>
+                        <a href="#">사이트맵</a>
+                    </li>
+                </ul>
+                <div class="company_information">
+                    <p class="address">
+                        주소 135-080 서울특별시 강남구 역삼로5길 22 원곡빌딩 3층 (역삼동) ㈜토크빈커뮤니케이션즈<span></span>전화 1644-0540<span></span>대표이사 이소영
+                    </p>
+                    <p class="registration_number">
+                        사업자등록번호 214-88-19708<span></span>통신판매업신고 서초 00170호<span></span>개인정보관리책임자(CPO) 이용훈 cpo@comms.interpark.com
+                    </p>
+                    <div class="copywriter">
+                        <p>Copyright (c) TALKBEAN Communications. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

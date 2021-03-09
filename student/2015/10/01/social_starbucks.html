@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1000">
+<title>starbucks_coffeehouse</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  	$('.slider').slick({
+	  dots:true,
+	  autoplay:true,
+	  autoplaySpeed:1000,
+	  fade:true,
+	  arrows:false
+	});
+});	
+
+$(document).ready(function(){
+	$('.gnb').mouseenter(function(){		
+		$('.gnb_wrap .sub').stop().slideDown(200);
+	});
+	$('.gnb_wrap').mouseleave(function(){		
+		$('.gnb_wrap .sub').stop().slideUp(200);
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+		<div class="login_top">
+        	<a class="top" href="#">Login</a>
+            <a class="top" href="#">Join</a>
+           <a class="top" href="#">English</a>
+            <a class="top" href="#">Q&amp;A</a>
+            <a href="#"><img src="img/facebook_icon.png" alt="페이스북"></a>
+			<a href="#"><img src="img/youtube_icon.png" alt="페이스북"></a>
+            <a href="#"><img src="img/instagram_icon.png" alt="페이스북"></a>
+		</div>
+        <h1><a href="index.html"><img src="img/starbucks_logo.png" alt="스타벅스"></a></h1> 
+    </div>
+    <div class="gnb_wrap">
+        <ul class="gnb">
+            <li><a href="blond_lost.html">COFFEE</a></li>
+            <li><a href="drink.html">MENU</a></li>
+            <li><a class="on" href="social_starbucks.html">COFFEE HOUSE</a></li>
+            <li><a href="card.html">CARD</a></li>
+            <li><a href="whatsnews.html">WHAT'S NEWS</a></li>
+         </ul>
+         <div class="sub">
+              <div class="sub_box">
+                  <ul class="box1">
+                      <li><a href="#">블론드 로스트</a></li>
+                      <li><a href="#">미디엄 로스트</a></li>
+                      <li><a href="#">다크 로스트</a></li>
+                      <li><a href="#">시즌 한정커피</a></li>
+                      <li><a href="#">커피 전체보기</a></li>
+                      <li><a href="#">커피 이야기</a></li>
+                  </ul>
+                  <ul class="box2">
+                      <li><a href="#">음료</a></li>
+                      <li><a href="#">푸드</a></li>
+                      <li><a href="#">상품</a></li>
+                      <li><a href="#">스타벅스 케익예약</a></li>
+                  </ul>
+                  <ul class="box3">
+                      <li><a href="#">소셜 스타벅스</a></li>
+                      <li><a href="#">스타벅스 애플리케이션</a></li>
+                      <li><a href="#">스타벅스 즐기기</a></li>
+                      <li><a href="#">제휴카드</a></li>
+                  </ul>
+                  <ul class="box4">
+                      <li><a href="#">스타벅스 카드</a></li>
+                      <li><a href="#">스타벅스 카드 e-Gift</a></li>
+                      <li><a href="#">스타벅스 카드 관리</a></li>
+                      <li><a href="#">마이 스타벅스 리워드</a></li>
+                  </ul>
+                  <ul class="box5">
+                      <li><a href="#">프로모션</a></li>
+                      <li><a href="#">이벤트</a></li>
+                      <li><a href="#">e-프로퀀시</a></li>
+                      <li><a href="#">공지사항</a></li>
+                  </ul>
+              </div>
+         </div>                 
+     </div> 
+</div>
+<div class="main house">
+	<div class="visual">
+        <h2>COFFEE HOUSE<strong>SNS & 스타벅스 즐기기</strong></h2>
+        <p class="line"></p>
+        <a href="#"><img src="img/sub3_coffehouse_img_03.jpg" alt=""></a>    	
+	</div>
+    <div class="content">
+    	<h3>스타벅스 SNS 공유 기능 소개</h3>
+        <div class="what_wrap">
+        	<div class="what">
+                <h4>What? 어떤 공유 기능이 있을까요?</h4>
+                	<div class="box">
+                        <a href="#"><img src="img/sub3_coffehouse_reword_img_03.jpg" alt=""></a>
+                        <a href="#"><img src="img/sub3_coffehouse_card_img_03.jpg" alt=""></a>
+                        <a href="#"><img src="img/sub3_coffehouse_ecard_img_03.jpg" alt=""></a>
+                    </div>
+            </div>    
+        </div>
+        <div class="what_wrap">
+        	<div class="what how">
+                <h4>How? 어떻게 공유 하나요?</h4>
+                	<div class="box">
+                        <a href="#"><img src="img/sub3_coffehouse_step_img.png" alt=""></a>
+                        <div class="txt">
+                            <img src="img/sub3coffehouse_step01_03.png" alt="">
+                            <a href="#"><p>홈페이지 및 앱에서<br>페이스북, 트위터 버튼을 클릭 해주세요!</p></a>
+                        </div>
+                        <div class="txt txt2">
+                            <img src="img/sub3_coffehouse_step02_03.png" alt="">
+                            <a href="#"><p>회원님의 SNS에 소개글과 함께<br>링크 공유 또는 트윗해 주세요!</p></a>
+                        </div>
+                        <div class="txt txt3">
+                            <img src="img/sub3_coffehouse_step03_03.png" alt="">
+                            <a href="#"><p>친구들 또는 팔로워들과<br>타임라인, 그리고 트윗을 통해<br>많은 사람들과 공유하세요!</p></a>
+                        </div>
+                    </div>
+            </div>    
+        </div>
+    </div>        
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<ul>
+        	<li><a href="#">회사소개</a></li>
+            <li><a href="#">매장</a></li>
+            <li><a href="#">입점 및 협력사 포털</a></li>
+            <li><a href="#">고객</a></li>
+            <li><a class="privacy"href="#">개인정보취급방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+    	<p>사업자등록번호 201-81-21515 (주)스타벅스커피 코리아 대표이사 이석구     TEL : 02) 3015-1100    FAX : 02) 3015-1106    개인정보 책임자 : 강기원<br><strong>ⓒ 2011 Starbucks Coffee Company. All Rights Reserved.</strong></p>
+    </div>
+</div>
+</body>
+</html>

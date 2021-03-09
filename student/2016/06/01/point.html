@@ -1,0 +1,890 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" >
+<title>bbia</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	var sw=true;
+
+	$('.util .login').click(function(){
+		
+		if(sw==true){
+		//alert('click');
+			$('.login_popup').show();
+		} 
+	});
+		
+	$('.login_box .close').click(function(){
+	
+		if(sw==true){
+		//alert('click');
+			$('.login_popup').hide();
+		} 
+
+	});
+		
+	$('.side_open button').click(function(){
+		
+		if(sw==true){
+			$('.side_s').hide();
+			$('.side_b').show();
+		}
+	});
+		
+	$('.side_close button').click(function(){
+		
+		if(sw==true){
+			$('.side_s').show();
+			$('.side_b').hide();
+		}
+	});
+	
+	$(window).scroll(function(){
+		//윈도우의 스크롤바 y좌표를 변수에 저장.
+		var num=$(this).scrollTop()
+		
+		if(num>=300){
+			$('.side_s_s')
+			.css('position', 'fixed')
+			.css('top', '20px')
+			;
+		} else{
+			$('.side_s_s')
+			.css('position', 'absolute')
+			.css('top', '300px')
+			;
+		}
+		
+	});
+	
+	$(window).scroll(function(){
+		//윈도우의 스크롤바 y좌표를 변수에 저장.
+		var num=$(this).scrollTop()
+		
+		if(num>=300){
+			$('.side_b')
+			.css('position', 'fixed')
+			.css('top', '20px')
+			;
+		} else{
+			$('.side_b')
+			.css('position', 'absolute')
+			.css('top', '300px')
+			;
+		}
+		
+	});
+	
+	$('.side_con .side_top_s,.side_bcon .side_bcon_txt').click(function(e){
+		e.preventDefault();
+	});
+	
+	$('.point_middle .point_tipbox').slick({
+		 dots:true,
+		 autoplay:true,
+		 pauseOnHover:true,
+		 autoplaySpeed:3000,
+		 speed:500,
+		 swipe:true,
+		 slide:'div',
+		 prevArrow:false,
+		 nextArrow:false
+	});
+
+	var sw=true;
+	
+	$('.point_type button').click(function(){
+		sw = !sw;//부정연산자(not)을 변수값 앞에 붙여서 클릭할 때마다 true,false가 되게함.
+		
+		console.log(sw);
+		if(sw==true){
+		//alert('click');
+			$('.point_type .point_list').hide();
+		} else{
+			$('.point_type .point_list').show();
+		}
+	});
+	//첫번째 탭내용만 보이기
+	//:gt(0) 필터선택자 (greater than(0)-첫번째 탭내용보다 큰 내용 숨기기)
+	$('.tab_con>div:gt(0)').hide();
+	
+	$('.tab_btn li').click(function(){
+		var num=$(this).index();//클릭한 li 순서값찾기
+		//console.log(num);
+		//a그룹에서 추출한 인덱스값을 b그룹의 eq메서드에 넣어줌
+		$('.tab_con>div').hide();//탭내용 모두 안보이기(초기화)-순서중요!! 초기화가 먼저 와야됨!
+		$('.tab_con>div').eq(num).show();
+
+		//모든 li의 on클래스 삭제		
+		$('.tab_btn li').removeClass('on');
+		//클릭한 li에 on클래스 걸기
+		$(this).addClass('on');
+	});
+});
+</script>
+</head>
+<body>
+<div class="login_popup">
+	<div class="login_box">
+        <div class="close">
+            <a href="#"><img src="images/login_close.png" alt="닫기버튼"></a>
+ 	   </div>
+    	<div class="login_box_inner">
+        	<div class="login_section1">
+            	<h2><img src="images/login_txt.png" alt="회원로그인"></h2>
+                <a href="#">비회원(주문조회)</a>
+            </div>
+            <div class="login_section2">
+            	<div class="login_wrap">
+                	<div class="id">
+                    	<p>아이디</p>
+                        <input type="text" class="login">
+                    </div>
+                    <div class="pw">
+                     	<p>비밀번호</p>
+                       <input type="password" class="pw2">
+                   </div>
+                </div>
+                <button type="submit" class="btn_login">로그인</button>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="save_id">
+                <label for="save_id">아이디 저장</label>
+                <a href="#">아이디/비밀번호 찾기</a>        
+            </div>
+            <div class="login_section3">
+                <div class="login_txt">
+                    <p class="login_txt1">아직 삐아 회원이 아니신가요?</p>
+                    <p class="login_txt2">신규회원가입을 하시면 다양한 혜택을 만나실 수 있습니다.</p>
+                </div>
+                <a href="#">회원가입하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="side">
+    <div class="side_s side_s_s">
+        <div class="side_con">
+            <ul>
+                <li><a href="#"><img src="images/side_icon1.png" alt="장바구니"></a></li>
+                <li><a href="#"><img src="images/side_icon2.png" alt="상품문의"></a></li>
+                <li><a href="#"><img src="images/side_icon3.png" alt="입금계좌"></a></li>
+                <li><a href="#"><img src="images/side_icon4.png" alt="주문조회"></a></li>
+                <li><a href="#"><img src="images/side_icon5.png" alt="공지사항"></a></li>
+                <li><a href="#"><img src="images/side_icon6.png" alt="소셜딜알람신청하기"></a></li>
+                <li><a href="#"><img src="images/side_icon7.png" alt="최근 본 상품"></a></li>
+                <li><a href="#"><img src="images/side_icon8.png" alt="맨 위로"></a></li>
+            </ul>
+        </div>
+        <div class="side_open">
+			<button type="button">열기버튼</button>
+        </div>
+    </div>
+    <div class="side_b">
+        <div class="side_bcon">
+            <div class="side_con side_bcon_inner">
+            	<ul>
+                    <li><a href="#"><img src="images/side_icon1.png" alt="장바구니"></a></li>
+                    <li><a href="#"><img src="images/side_icon2.png" alt="상품문의"></a></li>
+                    <li><a href="#"><img src="images/side_icon3.png" alt="입금계좌"></a></li>
+                    <li><a href="#"><img src="images/side_icon4.png" alt="주문조회"></a></li>
+                    <li><a href="#"><img src="images/side_icon5.png" alt="공지사항"></a></li>
+                    <li><a href="#"><img src="images/side_icon6.png" alt="소셜딜알람신청하기"></a></li>
+                    <li><a href="#"><img src="images/side_icon7.png" alt="최근 본 상품"></a></li>
+                </ul>
+            </div>
+            <div class="side_bcon_txt">
+                <ul>
+                	<li><a href="#"><p>장바구니</p></a></li>
+                	<li><a href="#"><p>상품문의</p></a></li>
+                	<li><a href="#"><p>입금계좌</p></a></li>
+                	<li><a href="#"><p>주문조회</p></a></li>
+                	<li><a href="#"><p>공지사항</p></a></li>
+                	<li><a href="#"><p class="bcon_txt6">소셜딜알람<br>신청하기</p></a></li>
+                	<li><a href="#"><p>최근 본 상품</p></a></li>
+                </ul>
+            </div>
+            <div class="side_top">
+                <a href="#"><img src="images/side_icon8.png" alt="맨 위로"><p>TOP</p></a>
+            </div>
+        </div>
+        <div class="side_close">
+			<button type="button">닫기버튼</button>
+        </div>
+    </div>
+</div>
+<div class="header">
+	<div class="header_inner">
+    	<div class="top_header">
+        	<h1><a href="index.html"><img src="images/logo.png" alt="bbia"></a></h1>
+            <div class="top_header_wrap">
+                <ul class="util">
+                    <li class="login"><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text">
+                    <button class="btn_search" type="submit">검색버튼</button>
+                </div>
+            </div>
+        </div>
+        <ul class="gnb">
+        	<li>
+                <a href="info.html">BRAND</a>
+                <ul class="sub sub1">
+                    <div class="point">
+                    	<div class="point_inner"></div>
+                    </div>
+                    <li><a href="info.html">ABOUT BBIA</a></li>
+                    <li><a href="#">MEDIA</a></li>
+                    <li><a href="#">온라인 매장안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">MAKE UP</a>
+                <ul class="sub sub2">
+                    <div class="point">
+                    	<div class="point_inner"></div>
+                    </div>
+                    <li><a href="point.html">POINT</a></li>
+                    <li><a href="#">BASE</a></li>
+                    <li><a href="#">TOOL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SKINCARE</a>
+                <ul class="sub sub3">
+                    <div class="point">
+                        <div class="point_inner"></div>
+                    </div>
+                   <li><a href="#">CLEANSING</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SET</a>
+            </li>
+            <li>
+                <a href="#">SALE</a>
+            </li>
+            <li>
+                <a href="#">COMMUNITY</a>
+                <ul class="sub sub4">
+                    <div class="point">
+                     	<div class="point_inner"></div>
+                    </div>
+                    <li><a href="#">포토리뷰</a></li>
+                    <li><a href="#">Q&amp;A</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="point_main">
+	<div class="point_main_inner">
+        <div class="point_top">
+            <h2><img src="images/point_txt.png" alt="포인트 메이크업"></h2>
+            <div class="point_top_inner">
+                <ul>
+                    <li><a href="point.html">MAKE UP</a></li>
+                    <li><p> > </p></li>
+                    <li><a href="point.html">POINT</a></li>
+               </ul>
+            </div>
+        </div>
+        <div class="point_middle">
+            <div class="point_top_con">
+                <ul>
+                    <li class="point_con1"><a href="point.html"></a></li>
+                    <li class="point_con2"><a href="#"></a></li>
+                    <li class="point_con3"><a href="#"></a></li>
+                    <li class="point_con4"><a href="#"></a></li>
+                    <li class="point_con5"><a href="#"></a></li>
+                    <li class="point_con6"><a href="#"></a></li>
+               </ul>
+            </div>
+            <div class="point_top_txt">
+            	<ul>
+                	<li><a href="point.html"><img src="images/point_point_t.png" alt="포인트"></a></li>
+                	<li><a href="#"><img src="images/point_base_t.png" alt="베이스"></a></li>
+                	<li class="point_txt3"><a href="#"><img src="images/point_sc_t.png" alt="스킨케어"></a></li>
+                	<li class="point_txt4"><a href="#"><img src="images/point_tool_t.png" alt="화장소품"></a></li>
+                	<li class="point_txt5"><a href="#"><img src="images/point_set_t.png" alt="세일"></a></li>
+                </ul>
+            </div>
+            <div class="point_tip">
+            
+            </div>
+            <div class="point_tipbox">
+                <div class="tipbox1"><a href="#"></a></div>
+                <div class="tipbox2"><a href="#"></a></div>
+                <div class="tipbox3"><a href="#"></a></div>
+            </div>
+        </div>
+        <div class="point_bottom">
+        	<div class="point_find">
+            	<h3><img src="images/point_search_txt.png" alt="검색창"></h3>
+                <input type="text">
+                <button class="btn_find" type="submit"></button>
+            </div>
+            <div class="point_bottom_wrap">
+            	<ul class="tab_btn">
+                	<li class="tab_btn1 on"><a href="#">신상품순</a></li>
+                	<li class="tab_btn2"><a href="#">높은가격순</a></li>
+                	<li class="tab_btn3"><a href="#">낮은가격순</a></li>
+                </ul>
+                <div class="point_type">
+                    <button type="button">POINT TYPE</button>
+                    <ul class="point_list">
+                        <li><a href="#">오토젤라이너</a></li>
+                        <li><a href="#">리퀴드라이너</a></li>
+                        <li><a href="#">섀도우</a></li>
+                        <li><a href="#">피그먼트</a></li>
+                        <li><a href="#">아이브로우</a></li>
+                        <li><a href="#">립스틱</a></li>
+                        <li><a href="#">틴트&amp;글로우</a></li>
+                        <li><a href="#">립펜슬</a></li>
+                    </ul>
+                </div>
+           </div>
+           <div class="point_line"></div>
+           <div class="tab_con">
+                <div class="tab_con1">
+                    <ul>
+                        <li class="first-class g_el">
+                            <a href="#">
+                                <img src="images/point_g1.jpg" alt="글리터아이라이너1">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>01 로즈쿼츠</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                         <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g2.jpg" alt="글리터아이라이너2">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>02 풀문</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g3.jpg" alt="글리터아이라이너3">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>03 골드토파즈</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g4.jpg" alt="글리터아이라이너4">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>04 앤틱골드</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g5.jpg" alt="글리터아이라이너5">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>04 엠버러브</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="first-class last_r">
+                            <a href="#">
+                                <img src="images/point_lr1.jpg" alt="라스트 루즈1">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>라스트 루즈</h2>
+                                <p>01 화사해</p>
+                                <p class="price1">\ 15,000</p>
+                                <p class="price2">\ 7,700</p>
+                           </a>
+                        </li>
+                        <li class="last_r">
+                            <a href="#">
+                                <img src="images/point_lr2.jpg" alt="라스트 루즈2">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>라스트 루즈</h2>
+                                <p>02 내꺼해</p>
+                                <p class="price1">\ 15,000</p>
+                                <p class="price2">\ 7,700</p>
+                           </a>
+                        </li>
+                        <li class="last_r">
+                            <a href="#">
+                                <img src="images/point_lr3.jpg" alt="라스트 루즈3">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>라스트 루즈</h2>
+                                <p>03 생생해</p>
+                                <p class="price1">\ 15,000</p>
+                                <p class="price2">\ 7,700</p>
+                           </a>
+                        </li>
+                        <li class="last_r">
+                            <a href="#">
+                                <img src="images/point_lr4.jpg" alt="라스트 루즈4">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>라스트 루즈</h2>
+                                <p>04 성숙해</p>
+                                <p class="price1">\ 15,000</p>
+                                <p class="price2">\ 7,700</p>
+                           </a>
+                        </li>
+                        <li class="last_r">
+                            <a href="#">
+                                <img src="images/point_lr5.jpg" alt="라스트 루즈5">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>라스트 루즈</h2>
+                                <p>05 완벽해</p>
+                                <p class="price1">\ 15,000</p>
+                                <p class="price2">\ 7,700</p>
+                           </a>
+                        </li>
+                        <li class="first-class last_og">
+                            <a href="#">
+                                <img src="images/point_lo1.jpg" alt="라스트 오토 젤 아이라이너1">
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>레이디 에디션</h3>
+                                <p>L1 미스 클래식</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og">
+                            <a href="#">
+                                <img src="images/point_lo2.jpg" alt="라스트 오토 젤 아이라이너2">
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>레이디 에디션</h3>
+                                <p>L2 레이디 브라운</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og">
+                            <a href="#">
+                                <img src="images/point_lo3.jpg" alt="라스트 오토 젤 아이라이너3">
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>레이디 에디션</h3>
+                                <p>L3 로즈 코코</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og">
+                            <a href="#">
+                                <img src="images/point_lo4.jpg" alt="라스트 오토 젤 아이라이너4">
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>레이디 에디션</h3>
+                                <p>L4 센슈얼 브론즈</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og">
+                            <a href="#">
+                                <img src="images/point_lo5.jpg" alt="라스트 오토 젤 아이라이너5">
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>레이디 에디션</h3>
+                                <p>L5 트위드 핑크</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="first-class last_lm">
+                            <a href="#">
+                                <img src="images/point_lm1.jpg" alt="라스트립무스1">
+                                <h2>라스트 립무스</h2>
+                                <p>01 소개팅해썸</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,700</p>
+                           </a>
+                        </li>
+                        <li class="last_lm">
+                            <a href="#">
+                                <img src="images/point_lm2.jpg" alt="라스트립무스2">
+                                <h2>라스트 립무스</h2>
+                                <p>02 두근두근해썸</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,700</p>
+                           </a>
+                        </li>
+                        <li class="last_lm">
+                            <a href="#">
+                                <img src="images/point_lm3.jpg" alt="라스트립무스3">
+                                <h2>라스트 립무스</h2>
+                                <p>03 키스해썸</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,700</p>
+                           </a>
+                        </li>
+                        <li class="last_lm">
+                            <a href="#">
+                                <img src="images/point_lm4.jpg" alt="라스트립무스4">
+                                <h2>라스트 립무스</h2>
+                                <p>04 불타올라썸</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,700</p>
+                           </a>
+                        </li>
+                        <li class="last_lm">
+                            <a href="#">
+                                <img src="images/point_lm5.jpg" alt="라스트립무스5">
+                                <h2>라스트 립무스</h2>
+                                <p>05 꿈이여썸</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,700</p>
+                           </a>
+                        </li>
+                   </ul>
+                </div>
+                <div class="tab_con2">
+                    <ul>
+                        <li class="first-class g_el">
+                            <a href="#">
+                                <img src="images/point_g1.jpg" alt="글리터아이라이너1">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>01 로즈쿼츠</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                         <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g2.jpg" alt="글리터아이라이너2">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>02 풀문</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g3.jpg" alt="글리터아이라이너3">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>03 골드토파즈</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g4.jpg" alt="글리터아이라이너4">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>04 앤틱골드</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="g_el">
+                            <a href="#">
+                                <img src="images/point_g5.jpg" alt="글리터아이라이너5">
+                                <div class="notice"><img src="images/point_notice.png" alt=""></div>
+                                <h2>글리터 아이라이너</h2>
+                                <p>04 엠버러브</p>
+                                <p class="price1">\ 11,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="first-class eb">
+                            <a href="#">
+                                <img src="images/point_eb.jpg" alt="아이브로우틴트">
+                                <h2>라스트 아이브로우 틴트</h2>
+                                <p class="price1">\ 12,000</p>
+                                <p class="price2">\ 5,500</p>
+                           </a>
+                        </li>
+                        <li class="last_we">
+                            <a href="#">
+                                <img src="images/point_wl1.jpg" alt="라스트 워터 아이라이너1">
+                                <h2>라스트 워터 아이라이너</h2>
+                                <p>1호 제트블랙</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_we">
+                            <a href="#">
+                                <img src="images/point_wl2.jpg" alt="라스트 워터 아이라이너2">
+                                <h2>라스트 워터 아이라이너</h2>
+                                <p>2호 블랙다이아</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_we">
+                            <a href="#">
+                                <img src="images/point_wl3.jpg" alt="라스트 워터 아이라이너3">
+                                <h2>라스트 워터 아이라이너</h2>
+                                <p>3호 마호가니</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_we">
+                            <a href="#">
+                                <img src="images/point_wl4.jpg" alt="라스트 워터 아이라이너4">
+                                <h2>라스트 워터 아이라이너</h2>
+                                <p>4호 초콜렛</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="first-class last_we">
+                            <a href="#">
+                                <img src="images/point_wl4.jpg" alt="라스트 워터 아이라이너5">
+                                <h2>라스트 워터 아이라이너</h2>
+                                <p>5호 티어스</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_pe">
+                            <a href="#">
+                                <img src="images/point_pe1.jpg" alt="라스트 펜 아이라이너1">
+                                <h2>라스트 펜 아이라이너</h2>
+                                <p>01 샤픈블랙</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_pe">
+                            <a href="#">
+                                <img src="images/point_pe2.jpg" alt="라스트 펜 아이라이너2">
+                                <h2>라스트 펜 아이라이너</h2>
+                                <p>02 샤픈브라운</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_pe">
+                            <a href="#">
+                                <img src="images/point_pe3.jpg" alt="라스트 펜 아이라이너3">
+                                <h2>라스트 펜 아이라이너</h2>
+                                <p>03 초코브라운</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="last_pe">
+                            <a href="#">
+                                <img src="images/point_pe1.jpg" alt="라스트 펜 아이라이너1">
+                                <h2>라스트 펜 아이라이너</h2>
+                                <p>04 레드브라운</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                        <li class="first-class last_pe">
+                            <a href="#">
+                                <img src="images/point_pe4.jpg" alt="라스트 펜 아이라이너4">
+                                <h2>라스트 펜 아이라이너</h2>
+                                <p>05 버건디</p>
+                                <p class="price1">\ 10,000</p>
+                                <p class="price2">\ 4,800</p>
+                           </a>
+                        </li>
+                       <li class="last_og2">
+                            <a href="#">
+                                <img src="images/point_og1.jpg" alt="라스트 오토 젤 아이라이너1">
+                                <h3>라스트 오토 젤 아이라이너</h3>
+                                <p>40호 엔젤</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og2">
+                            <a href="#">
+                                <img src="images/point_og2.jpg" alt="라스트 오토 젤 아이라이너2">
+                                <h3>라스트 오토 젤 아이라이너</h3>
+                                <p>22호 로열 브론즈</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og3">
+                            <a href="#">
+                                <img src="images/point_og3.jpg" alt="라스트 오토 젤 아이라이너3">
+                                <div class="notice"><img src="images/point_notice2.jpg" alt=""></div>
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>로즈 에디션</h3>
+                                <p>R4 로즈번</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                        <li class="last_og3">
+                            <a href="#">
+                                <div class="notice"><img src="images/point_notice3.jpg" alt=""></div>
+                                <img src="images/point_og4.jpg" alt="라스트 오토 젤 아이라이너4">
+                                <h2>라스트 오토 젤 아이라이너</h2>
+                                <h3>로즈 에디션</h3>
+                                <p>R2 로즈 브라운</p>
+                                <p class="price1">\ 9,000</p>
+                                <p class="price2">\ 4,300</p>
+                           </a>
+                        </li>
+                   </ul>
+                </div>
+                <div class="tab_con3">
+                    <ul>
+                        <li class="first-class">
+                            <a href="#">
+                                <img src="images/point_ss1.jpg" alt="섀이드섀도우1">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss2.jpg" alt="섀이드섀도우2">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_dc1.jpg" alt="다우니치크1">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_dc2.jpg" alt="다우니치크2">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_dc3.jpg" alt="다우니치크3">
+                           </a>
+                        </li>
+                        <li class="first-class">
+                            <a href="#">
+                                <img src="images/point_dc4.jpg" alt="다우니치크4">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss3.jpg" alt="섀이드섀도우3">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss4.jpg" alt="섀이드섀도우4">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss5.jpg" alt="섀이드섀도우5">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss6.jpg" alt="섀이드섀도우6">
+                           </a>
+                        </li>
+                        <li class="first-class">
+                            <a href="#">
+                                <img src="images/point_ss7.jpg" alt="섀이드섀도우7">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss8.jpg" alt="섀이드섀도우8">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss9.jpg" alt="섀이드섀도우9">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_ss10.jpg" alt="섀이드섀도우10">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_pg1.jpg" alt="피그먼트1">
+                           </a>
+                        </li>
+                        <li class="first-class">
+                            <a href="#">
+                                <img src="images/point_pg2.jpg" alt="피그먼트2">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_pg3.jpg" alt="피그먼트3">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_pg4.jpg" alt="피그먼트4">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_pg5.jpg" alt="피그먼트5">
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/point_dc5.jpg" alt="다우니치크5">
+                           </a>
+                        </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="footer_inner">
+    	<h1><img src="images/footer_logo.png" alt="bbia"></h1>
+        <div class="info">
+        	<div class="con1">
+            	<ul>
+                	<li><a href="#">삐아소개</a></li>
+                	<li><a href="#">이용안내</a></li>
+                	<li><a href="#">이용약관</a></li>
+                	<li class="pd"><a href="#">개인정보 취급방침</a></li>
+                	<li><a href="#">블랙쉴드 작동중</a></li>
+                </ul>
+            </div>
+            <div class="con2">
+            	<p> (주)스카이007 대표이사 : 곽형금   개인정보 담당자 : 최은혜<br>
+사업장소재지 : 인천광역시 연수구 인천타워대로 323, C동 4302호(송도동, 센트로드오피스텔)<br>
+사업자등록번호 : 226-81-32030   통신판매업신고번호 : 제2015-인천연수구-0236  <a href="#">[사업자정보확인]</a><br>
+<span class="first">EMAIL</span> help@bbia.co.kr <span>FAX</span> 032-858-7785 <span>TEL</span> 080-022-0077</p>
+			</div>
+            <div class="con3">
+				<p>CopyrightⓒBBIA, All Rights Reserved</p>
+        	</div>
+        </div>
+        <div class="hana">
+        	<a href="#"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

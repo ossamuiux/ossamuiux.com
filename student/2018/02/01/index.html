@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1362">
+<meta property="og:type" content="website">
+<meta property="og:title" content="아이스크림홈런">
+<meta property="og:url" content="http://mihyang33.dothome.co.kr/homeLearn">
+<meta property="og:image" content="http://mihyang33.dothome.co.kr/homeLearn/opengraph.png">
+<meta property="og:description" content="홈런은 대한민국 초등 학급 99%에서 매일 수업과 평가에 활용되는 '아이스크림(i-Scream)'의 노하우로 만든초등 가정학습 프로그램입니다.">
+<meta name="description" content="학습지,초등학생,아이스크림홈런">
+<title>아이스크림 홈런</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/slick.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/slick.min.js"></script>
+</head>    
+<body>
+<!-- 접근성 -->
+<ul id="accessibilityLink">
+    <li><a href="#main">본문내용 바로가기</a></li>
+    <li><a href="#footer">하단 바로가기</a></li>
+</ul>
+<!-- //접근성 -->
+<div id="wrap">
+    <!--  header  -->
+	<header id="header">
+            <!--  top_header  -->
+	    	<div class="top_header">
+	    	    <!--  logo  -->
+			    <h1 class="logo"><a href="index.html"><img src="./images/logo.png" alt="아이스크림홈런"></a></h1>
+			    <!--  //logo  -->
+			    <!--  util  -->
+			    <div class="util">
+                   <!--  search_popup [개발]  -->
+                    <div class="search_wrap">
+                        <div class="search_popup">
+			                <form action="#" method="post">
+                                <fieldset>
+                                    <legend class="blind">search</legend>
+                                    <select>
+                                        <option>이미지</option>
+                                        <option>동영상</option>
+                                        <option>숙제자료</option>
+                                    </select>
+			                        <input type="text" placeholder="검색어를 입력해 주세요."><button class="btn_search" type="button">검색</button>
+			                    </fieldset>
+			                </form>
+			                        <button class="btn_close" type="button">close</button>
+			            </div>
+                    </div>
+                    <!--  //search_popup [개발]  -->
+                    <button class="search" type="button">홈런학습 자료 검색</button>
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                    </ul>
+			    </div>
+			    <!--  //util  -->
+		    </div>
+		    <!--  //top_header  -->
+		    <!--  bottom_header  -->
+	    	<div class="bottom_header">
+                <!--  menu  -->
+                <div class="bottom_header_inner">
+		            <nav class="gnb">
+		            <ul>
+				        <li>
+					        <a href="introduce_homeLearn.html">홈런소개</a>
+					        <div class="depth2_wrap">
+					            <ul class="depth2">
+						            <li><a href="introduce_homeLearn.html">홈런이란?</a></li>
+						            <li><a href="#">홈런학습 구성</a></li>
+						            <li><a href="#">과목별 홈런학습</a></li>
+						            <li><a href="#">홈런학습 관리체계</a></li>
+						            <li><a href="#">학습기 및 교재안내</a></li>
+						            <li><a href="#">홈런학습 후기</a></li>
+						            <li><a href="#">홈런학습 신청</a></li>
+						            <li><a href="#">홈런선생님 소개</a></li>
+					            </ul>
+					        </div>
+				        </li>
+				        <li>
+                            <a href="introduce_realLearn.html">자녀학습관리</a>
+                            <div class="depth2_wrap">
+					            <ul class="depth2">
+						            <li><a href="#">학습현황</a></li>
+						            <li><a href="#">학습내용</a></li>
+						            <li><a href="#">평가결과</a></li>
+						            <li><a href="#">선생님 알림</a></li>
+						            <li><a href="#">홈런톡</a></li>
+						            <li><a href="#">지난 학습현황</a></li>
+					            </ul>
+                            </div>
+				        </li>				
+				        <li>
+					        <a href="introduce_homeLearn.html">학습자료실</a>
+					        <div class="depth2_wrap">
+					            <ul class="depth2">
+						            <li><a href="#">핵심전과</a></li>
+						            <li><a href="#">요점노트</a></li>
+						            <li><a href="#">시험대비문제</a></li>
+						            <li><a href="#">특별학습자료</a></li>
+						            <li><a href="#">참고자료검색</a></li>
+						            <li><a href="#">홈런맘 공유자료실</a></li>
+						            <li><a href="#">글로벌리더십영상</a></li>
+						            <li><a href="#">영어신문</a></li>
+						            <li><a href="#">우리아이 학교알림장</a></li>
+					            </ul>
+                            </div>
+				        </li>				
+                        <li>
+                            <a href="introduce_realLearn.html">고객감동센터</a>
+                            <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">1:1 Q&amp;A</a></li>
+                                <li><a href="#">원격점검서비스</a></li>
+                                <li><a href="#">학습프로그램 다운로드</a></li>
+                                <li><a href="#">사용자메뉴얼 다운로드</a></li>
+                                <li><a href="#">홈런 아이디어플랫폼</a></li>
+                            </ul>	
+                            </div>
+                        </li>				
+                        <li>
+                            <a href="introduce_homeLearn.html">홈런소식</a>
+                            <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">홈런 이벤트</a></li>
+                                <li><a href="#">홈런학습 업데이트</a></li>
+                                <li><a href="#">아이스크림 &amp; 홈런소식</a></li>
+                                <li><a href="#">홈런키즈 이야기</a></li>
+                            </ul>
+                            </div>
+                        </li>
+			        </ul>
+                    </nav>
+                    <nav class="gnb2">
+                        <ul>				
+				            <li>
+					            <a href="#">아이스크림에듀 뉴스룸</a>
+				            </li>		
+                            <li>
+					            <a href="#">친절한 Schooling</a>
+				            </li>
+                            <li>
+                            <button class="btn_full_on" type="button">전체메뉴</button>
+                            </li>
+                        </ul>
+                    </nav>
+		        </div>
+		        <!--  //menu  -->
+		        <!--  full_menu  -->
+		        <div class="popup_full">
+		            <div class="full_inner">
+		                <button class="btn_full_off" type="button">전체화면 닫기</button>
+		                <nav class="full_menu">
+		                    <ul>
+                                <li>
+                                    <h4>홈런소개</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="introduce_homeLearn.html">홈런이란?</a></li>
+                                        <li><a href="#">홈런학습 구성</a></li>
+                                        <li><a href="#">과목별 홈런학습</a></li>
+                                        <li><a href="#">홈런학습 관리체계</a></li>
+                                        <li><a href="#">학습기 및 교재안내</a></li>
+                                        <li><a href="#">홈런학습 후기</a></li>
+                                        <li><a href="#">홈런학습 신청</a></li>
+                                        <li><a href="#">홈런선생님 소개</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>자녀학습관리</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">학습현황</a></li>
+                                        <li><a href="#">학습내용</a></li>
+                                        <li><a href="#">평가결과</a></li>
+                                        <li><a href="#">선생님 알림</a></li>
+                                        <li><a href="#">홈런톡</a></li>
+                                        <li><a href="#">지난 학습현황</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>학습자료실</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">핵심전과</a></li>
+                                        <li><a href="#">요점노트</a></li>
+                                        <li><a href="#">시험대비문제</a></li>
+                                        <li><a href="#">특별학습자료</a></li>
+                                        <li><a href="#">참고자료 검색</a></li>
+                                        <li><a href="#">홈런맘 공유자료실</a></li>
+                                        <li><a href="#">글로벌리더십 영상</a></li>
+                                        <li><a href="#">영어신문</a></li>
+                                        <li><a href="#">우리아이 학교알림장</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>고객감동센터</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">1:1 Q&amp;A</a></li>
+                                        <li><a href="#">원격점검서비스</a></li>
+                                        <li><a href="#">학습프로그램 다운로드</a></li>
+                                        <li><a href="#">사용자 매뉴얼 다운로드</a></li>
+                                        <li><a href="#">홈런아이디어 플랫폼</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>홈런 소식</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">홈런 이벤트</a></li>
+                                        <li><a href="#">홈런학습 업데이트</a></li>
+                                        <li><a href="#">아이스크림 &amp; 홈런소식</a></li>
+                                        <li><a href="#">홈런 키즈 이야기</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>마이페이지</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">회원정보 수정</a></li>
+                                        <li><a href="#">프로필 관리</a></li>
+                                        <li><a href="#">홈런 결제정보</a></li>
+                                        <li><a href="#">홈런학습ㆍ심리검사</a></li>
+                                        <li><a href="#">회원탈퇴</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>회사소개</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">회사소개</a></li>
+                                        <li><a href="#">연혁</a></li>
+                                        <li><a href="#">서비스 소개</a></li>
+                                        <li><a href="#">IR 정보</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>홈런 선생님</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">홈런선생님 소개</a></li>
+                                        <li><a href="#">홈런선생님 모집안내</a></li>
+                                        <li><a href="#">온라인 지원하기</a></li>
+                                        <li><a href="#">홈런선생님 지원 FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>기타 서비스</h4>
+                                    <ul class="full_depth2">
+                                        <li><a href="#">학부모자녀 유형검사</a></li>
+                                        <li><a href="#">홈런상품권 등록</a></li>
+                                        <li><a href="#">사이트맵</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+		                </nav>
+		                <div class="full_menu2">
+		                    <ul>
+		                        <li><a href="#">아이스크림에듀 뉴스룸</a></li>
+		                        <li><a href="#">친절한 schooling</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		        <!--  //full_menu  -->
+		    </div>
+		    <!--  //bottom_header  -->
+	</header>
+	<!--  //header  -->
+    <!--  main  -->	
+	<main id="main">
+        <!--  main_visual  -->
+		<div class="main_visual">
+		    <a href="introduce_homeLearn.html"><img src="images/main_visual01.jpg" alt=""></a>
+		    <a href="introduce_realLearn.html"><img src="images/main_visual02.jpg" alt=""></a>
+		</div>
+		<!--  //main_visual  -->
+		<!--  aside  -->
+		<aside class="aside_wrap">
+		    <button class="btn_quick" type="button"></button>
+            <div class="quick_wrap">
+		        <div class="quick_menu1">
+                    <h3>학부모용</h3>
+		            <ul>
+		                <li><a href="#"><img src="images/btn_quick_band.png" alt=""></a></li>
+		                <li><a href="#"><img src="images/btn_quick_blog.png" alt=""></a></li>
+		                <li><a href="#"><img src="images/btn_quick_kakaostory.png" alt=""></a></li>
+		                <li><a href="#"><img src="images/btn_quick_facebook.png" alt=""></a></li>
+		            </ul>
+		        </div>
+		        <div class="quick_menu2">
+                    <h3>학생용</h3>
+		            <ul>
+		                <li><a href="#"><img src="images/btn_quick_band.png" alt=""></a></li>
+		                <li><a href="#"><img src="images/btn_quick_blog.png" alt=""></a></li>
+		                <li><a href="#"><img src="images/btn_quick_kakaostory.png" alt=""></a></li>
+		            </ul>
+		        </div>
+		    </div>
+		</aside>
+		<!--  //aside  -->
+		<!--  banner  -->
+		<div class="banner_wrap">
+		    <div class="banner">
+		        <ul>
+		            <li class="banner01"><a href="#">무료 체험 신청</a></li>
+		            <li class="banner02"><a href="#">유료 체험 신청</a></li>
+		            <li class="banner03"><a href="#">기간 연장 신청</a></li>
+		            <li class="banner04"><a href="#">홈런 선생님 모집</a></li>
+		        </ul>
+		    </div>
+		</div>
+		<!--  //banner  -->
+		<!--  section1  -->
+		<section class="section1">
+            <div class="section1_inner">
+	            <h2>홈런 추천 <strong>무료 컨텐츠</strong></h2>
+	            <p class="txt">내 아이를 위한 아이스크림홈런의 무료 컨텐츠를 만나보세요!</p>
+	            <div class="free_contents">
+	                <ul>
+	                    <li class="btn_free1">
+                            <a href="#">
+	                            <h3>학습유형</h3>
+	                            <p class="txt2">무료 자녀유형검사</p>
+	                        </a>
+	                    </li>
+	                    <li class="btn_free2">
+                            <a href="#">
+	                            <h3>재능적성</h3>
+	                            <p class="txt2">무료 다중지능검사</p>
+	                        </a>
+	                    </li>
+	                    <li class="btn_free3">
+                            <a href="#">
+	                            <h3>영상학습</h3>
+	                            <p class="txt2">무료 인성/창의교육</p>
+	                        </a>
+	                    </li>
+	                    <li class="btn_free4">
+                            <a href="#">
+	                            <h3>핵심전과</h3>
+	                            <p class="txt2">무료 전학년 교과핵심</p>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </section>
+	    <!--  //section1  -->
+	    <!--  section2  -->
+	    <section class="section2">
+            <div class="section2_inner">
+	            <h2><strong>동영상</strong>으로 보는 홈런</h2>
+	            <p class="txt">내 아이를 위한 아이스크림홈런의 무료 컨텐츠를 만나보세요!</p>
+	            <div class="video_contents">
+	                <ul>
+	                    <li>
+                            <a href="#">
+                                <img src="images/video_play.png" alt="">
+	                            <h3>홈런 TV광고</h3>
+	                            <p class="txt2">우리 아이 공부 홈런 하나면 충분하다!</p>
+	                        </a>
+	                    </li>
+	                    <li class="video2">
+                            <a href="#">
+                                <img src="images/video_play.png" alt="">
+	                            <h3>홈런키즈 인터뷰</h3>
+	                            <p class="txt2">우리가 바로 홈런 패밀리!</p>
+	                        </a>
+	                    </li>
+	                    <li class="video3">
+                            <a href="#">
+                                <img src="images/video_play.png" alt="">
+	                            <h3>학부모 인터뷰</h3>
+	                            <p class="txt2">우리 아이 혼자 스스로 공부해요!</p>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	        <div class="modal_popup">
+	            <div class="modal">
+	                <h4>[아이스크림 홈런] 무료체험 14일간의 도전!</h4>
+	                <p class="txt4">우리 아이 공부습관 만들기! 아이스크림 홈런으로 시작해보세요!</p>
+                    <iframe width="560" height="315" src="about:blank" allowfullscreen></iframe>
+                    <button class="btn_modal_close" type="button"></button>
+	            </div>
+	            <div class="modal">
+	                <h4>[홈런키즈 인터뷰] 홈런 어린이 기자, 꿈을 말하다!</h4>
+	                <p class="txt4">2017년 1월부터 6월까지 활동한 100인의 홈런 어린이 기자단!</p>
+                    <iframe width="560" height="315" src="about:blank" allowfullscreen></iframe>
+                    <button class="btn_modal_close" type="button"></button>
+	            </div>
+	            <div class="modal">
+	                <h4>홈런 실제학부모 후기인터뷰</h4>
+	                <p class="txt4">실제 아이스크림 홈런을 사용하는 엄마들을 만나보았습니다.</p>
+                    <iframe width="560" height="315" src="about:blank" allowfullscreen></iframe>
+                    <button class="btn_modal_close" type="button"></button>
+	            </div>
+	        </div>
+	    </section>
+	    <!--  //section2  -->
+	    <!--  section3  -->
+	    <section class="section3">
+	        <div class="section3_inner">
+               <h3 class="blind">section3</h3>
+	           <div class="tab_menu_wrap">
+                   <nav class="tab_menu">
+	                   <ul>
+	                       <li class="on"><a href="#">학년별 요점노트</a></li>
+	                       <li><a href="#">홈런맘 공유자료실</a></li>
+	                       <li><a href="#">홈런소식</a></li>
+	                   </ul>
+                   </nav>
+                   <div class="tab_con">
+                       <div class="point_note">
+                           <ul>
+                               <li><a href="#">1학년</a></li>
+                               <li><a href="#">2학년</a></li>
+                               <li><a href="#">1학년</a></li>
+                               <li><a href="#">3학년</a></li>
+                               <li><a href="#">4학년</a></li>
+                               <li><a href="#">5학년</a></li>
+                           </ul>
+                       </div>
+                       <div class="h_reference">
+                           <table>
+                                <caption class="blind">홈런맘 공유자료실</caption>
+                                <colgroup>
+                                  <col style="20%">
+                                  <col style="80%">
+                                </colgroup>
+                               <tr>  
+                                    <td>[공지사항]</td>
+                                    <td><a href="#">[필독] 홈런 학부모홈페이지 쪽지, 질문답변 서비스 종료</a></td>
+                               </tr>
+                                <tr>
+                                    <td>[홈런소식]</td>
+                                    <td><a href="#">홈런 7세반 신설 및 특별학습 콘텐츠 업데이트 안내</a></td>
+                               </tr>
+                                <tr>  
+                                    <td>[홈런이벤트]</td>
+                                    <td><a href="#"> 서울랜드x아이스크림홈런 봄맞이 이벤트!</a></td>   
+                               </tr>
+                                <tr>
+                                    <td>[업데이트]</td>
+                                    <td><a href="#"> 홈런 도서관 콘텐츠 업데이트 안내</a></td>    
+                               </tr>
+                           </table>
+                       </div>
+                       <div class="h_news">
+                            <table>
+                                <caption class="blind">홈런소식</caption>
+                                <colgroup>
+                                  <col style="20%">
+                                  <col style="80%">
+                                </colgroup>
+                               <tr>  
+                                    <td>[공지사항]</td>
+                                    <td><a href="#">개인정보 유효기간제에 따른 휴면회원 안내</a></td>
+                               </tr>
+                                <tr>
+                                    <td>[공지사항]</td>
+                                    <td><a href="#">홈런 학습 및 학습기 관련 문의 이용 안내 (고객감동센터/기술지원센터)</a></td>
+                               </tr>
+                                <tr>  
+                                    <td>[공지사항]</td>
+                                    <td><a href="#"> 홈런 홈페이지 안내 - 학습자료실 소개</a></td>   
+                               </tr>
+                                <tr>
+                                    <td>[업데이트]</td>
+                                    <td><a href="#"> 홈런, '실험의 달인' 콘텐츠 추가 업데이트 (2016.01.30)</a></td>    
+                               </tr>
+                           </table>
+                       </div>
+                   </div>
+	           </div> 
+	           <div class="help_wrap">
+	               <ul class="help">
+	                    <li>
+	                       <h2 class="phone">1544-0910</h2>
+	                       <p class="txt"><strong>홈런 고객감동센터</strong> (홈런 체험   및 학습문의)<br>
+                            평일 : 오전 10시 ~ 오후 10시  &nbsp; &nbsp;  토요일 : 오전 10시 ~ 오후 5시</p>
+	                    </li>
+	                    <li>
+	                       <h2>1522-0910</h2>
+	                       <p class="txt"><strong>AS문의 기술지원센터</strong> (학습기 및 A/S문의)<br>
+                            평일 : 오후 1시 ~ 오후 8시  &nbsp; &nbsp;  토요일 : 고객감동센터로 문의</p>
+	                    </li>
+	               </ul>
+	           </div>
+	        </div>
+	    </section>
+	    <!--  //section3  -->
+	</main>
+	<!--  //main  -->
+	<!--  footer  -->		
+	<footer id="footer">
+	    <div class="top_footer">
+            <nav class="footer_menu">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">IR정보</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li class="menu2"><a href="#">무료 체험 신청</a></li>
+                    <li class="menu2"><a href="#">유료 체험 신청 </a></li>
+                    <li class="menu2"><a href="#">홈런 선생님 모집</a></li>
+                    <li class="menu3"><a href="#">고객센터 바로가기</a></li>
+                </ul>
+            </nav>
+	    </div>
+	    <div class="bottom_footer">
+	        <h3>주식회사 아이스크림에듀</h3>
+	        <address>
+	        주소: 서울시 강남구 삼성동 영동대로 106길23(삼성동, 중앙빌딩) &nbsp; &nbsp; 대표 : 최형순  &nbsp; &nbsp;  대표전화 : 1544-0910  &nbsp; &nbsp;  팩스 : 02-3448-5262 &nbsp; &nbsp; E-mail :<span class="mail"><a href="mailto:homemaster@home-learn.com" title="괸리자에게 메일보내기"> homemaster@home-learn.com</a></span>
+	        </address>
+	        <div class="txt3">
+            사업자등록번호 : 120-87-97004  &nbsp; &nbsp;  통신판매신고번호 : 제2013-서울강남-01379호  &nbsp; &nbsp;  전자출판물인증번호 : 410-ECN-0199-2013-001-002535352<br>
+                아이스크림홈런은 한국콘텐츠진흥원에서 주관하는 <em>‘뉴미디어 연계 콘텐츠 지원사업’</em> 대상으로 선정되어 사업비의 일부를 지원받았습니다.
+           </div>
+            <div class="copy">Copyright © 2016 <strong>i-Scream edu Corporation</strong>. All right reserved.
+            </div>
+            <div class="family">
+	            <button class="btn_family" type="button">FAMILY SITE</button>
+	            <ul class="family_list">
+	                <li><a href="#" target="_blank">아이스크림</a></li>
+	                <li><a href="#" target="_blank">아이스몰</a></li>
+	                <li><a href="#" target="_blank">아이스북스</a></li>
+	                <li><a href="#" target="_blank">아이스크림원격연수원</a></li>
+	                <li><a href="#" target="_blank">시공미디어</a></li>
+	                <li><a href="#" target="_blank">시공테크</a></li>
+	                <li><a href="#" target="_blank">시공문화</a></li>
+	                <li><a href="#" target="_blank">문박시공과기</a></li>
+	            </ul> 
+	        </div>
+	    </div>
+	    <div class="btn_top">
+	        <a href="#">Top</a>
+	    </div>
+	</footer>
+	<!--  //footer  -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

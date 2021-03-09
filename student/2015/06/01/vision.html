@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>풀무원 :: 비전과 전략</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	//이단메뉴
+	$('.gnb').mouseenter(function(){
+		$('.sub_wrap').stop().slideDown();
+	});
+	
+	$('.header_wrap').mouseleave(function(){
+		$('.sub_wrap').stop().slideUp();
+	});
+	
+	$('.gnb').mouseleave(function(){
+		$('.sub_wrap').stop().slideUp();
+	});
+	
+	$('.sub_wrap').mouseenter(function(){
+		$('.sub_wrap').stop().slideDown();
+	});
+	
+	//패밀리사이트
+	var num1=0;
+	$('.family>a').click(function(e){
+		e.preventDefault();
+		if(num1==0){
+			$(this).addClass('up');
+			$('.family>ul').show();
+			num1=1;
+		}else{
+			$(this).removeClass('up');
+			$('.family>ul').hide();
+			num1=0;
+		}
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+<div class="header_wrap">
+    <div class="header">
+        <h1><a href="index.html"><img src="img/logo.png" alt="pulmuone"></a></h1>
+        <div class="top">
+            <ul class="top_menu">
+                <li><a href="#">로하스아카데미</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">ENGLISH</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+            <div class="search">
+                <form action="" method="">
+                    <fieldset>
+                        <legend>검색</legend>
+                        <input type="text" title="제품명을 입력하세요." value="검색어 입력">
+                        <button type="submit"><img src="img/search.png" alt="search"></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <ul class="gnb">
+            <li><a href="vision.html">브랜드스토리</a></li>
+            <li><a href="goodfood.html">바른먹거리</a></li>
+            <li><a href="product.html">제품&amp;브랜드</a></li>
+            <li><a href="#">홍보센터</a></li>
+            <li><a href="#">고객기쁨센터</a></li>
+        </ul>
+    </div>
+    <div class="sub_wrap">
+        <div class="sub">
+            <ul class="sub1">
+                <li><a href="vision.html">비전과 전략</a></li>
+                <li><a href="#">정신</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">사업소개</a></li>
+                <li><a href="#">IR</a></li>
+                <li><a href="#">CI소개</a></li>
+            </ul>
+            <ul class="sub2">
+                <li><a href="goodfood.html">바른먹거리 캠페인</a></li>
+                <li><a href="#">바른식생활</a></li>
+                <li><a href="#">바른생활 실천가이드</a></li>
+                <li><a href="#">바른먹거리 원칙</a></li>
+            </ul>
+            <ul class="sub3">
+                <li><a href="product.html">제품정보</a></li>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">완전표시제</a></li>
+                <li><a href="#">식품정보공개제도</a></li>
+            </ul>
+            <ul class="sub4">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">광고</a></li>
+                <li><a href="#">홍보자료</a></li>
+                <li><a href="#">풀무원 공장견학</a></li>
+                <li><a href="#">풀무원 모니터</a></li>
+                <li><a href="#">풀무원 웹진</a></li>
+            </ul>
+            <ul class="sub5">
+                <li><a href="#">고객의 소리</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Q&amp;A</a></li>
+                <li><a href="#">파트너 안내</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">고객 기쁨 활동</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main">
+    	<div class="top">
+        	<img src="img/top_img.png" alt="">
+        </div>
+        <div class="location">
+            <p> 
+                <a href="index.html"><img src="img/home.png" alt=""></a>
+                <img class="location_arrow" src="img/location_arrow.png" alt=""><a href="vision.html">브랜드스토리</a><img class="location_arrow" src="img/location_arrow.png" alt=""><a href="vision.html"><strong>비전과전략</strong></a>
+            </p>
+    	</div>
+        <div class="content">
+            <div class="left_menu">
+                <h2>브랜드스토리</h2>
+                <h3>BRAND STORY</h3>
+                <ul>
+                    <li class="on"><a href="#">비전과 전략</a></li>
+                    <li><a href="#">정신</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">IR</a></li>
+                    <li><a href="#">CI소개</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="tit">
+                	<h2>비전과 전략</h2>
+                    <p>인간과 자연 사랑을 바탕으로 최고의 제품과 서비스를 제공하는<br><em>LOHAS</em> 기업입니다.</p>
+                </div>
+                <div class="box">
+                	<div class="box_tit">
+                        <h3>경영이념</h3>
+                        <div class="line"></div>
+                    </div>
+                    <div class="box_img"><img src="img/tit1.png" alt=""></div>
+                    <p class="tit_txt">풀무원의 첨가물 원칙을 포함한 까다로운 제조 원칙들은 로하스적 가치를 지향하고 있으며, 이는 곧 인간과 자연을 함께 사랑<br>
+하는 태도입니다. 풀무원은 경영 전반에서 로하스적 가치를 더욱더 실체적으로, 혁신적으로 추구해나갈 것입니다.</p>
+					<p class="lohas">LOHAS란?</p>
+                    <p class="lohas_txt">Lifestyle Of Health And Sustainabillity 로 건강과 지구 환경의 지속가능성을 함께 생각하는 의식있는 라이프 스타일을 뜻합니다.</p>
+                </div>
+                <div class="box">
+                	<div class="box_tit">
+                        <h3>비전</h3>
+                        <div class="line line2"></div>
+                    </div>
+                    <div class="box_img"><img src="img/tit2.png" alt=""></div>
+                    <p class="tit1">풀무원의 비전은 Global DP 5(Defining Pulmuone)입니다.</p>
+                    <p class="tit_txt">LOHAS 사업을 재정의하여 국내사업과 함께 미국, 중국을 중심으로 한 해외사업을 통해 매출액 5조를 달설하고자 합니다.<br>풀무원은 이를 통해 세계적인 LOHAS 기업으로 발 돋움하고 국내 1등 식품기업으로 자리매김 할 계획이며, 특히 풀무원의<br>모든 제품이 고객으로부터 무한신뢰를 받고 선도 LOHAS 브랜드로서 세계적인 인지도를 확보하는 기업으로 발전할 계획<br>입니다.</p>
+                </div>
+                <div class="box">
+                	<div class="box_tit">
+                        <h3>경영방침</h3>
+                        <div class="line"></div>
+                    </div>
+                    <div class="box_img"><img src="img/tit3.png" alt=""></div>
+                    <p class="tit1">풀무원의 경영방침은 고객이 진정으로 만족하는 고객기쁨경영 입니다.</p>
+                    <p class="tit_txt">풀무원은 모든 사람이 자연과 조화된 건강한 생활문화를 누릴 수 있도록 최고의 제품과 서비스를 제공하는 로하스 선도기업<br>으로서 인간 존중과 환경 보전에 바탕을 두고 고객이 진정으로 만족하고 마음속에서 기쁨이 우러나오는 경영을 펼쳐 나가겠<br>습니다. </p>
+                </div>
+                <div class="box">
+                	<div class="box_tit">
+                        <h3>핵심가치</h3>
+                        <div class="line"></div>
+                    </div>
+                    <div class="box_img"><img src="img/tit4.png" alt=""></div>
+                    <p class="tit1">풀무원이 지향하는 핵심가치는 TISO 입니다.</p>
+                    <p class="tit_txt">TISO는 약속과 규정을 지키는 신뢰성(Trust), 바른 직무 수행을 위한 직업적 정직성(Integrity), 회사의 목표에 자기 업무를<br>일치시키는 연대의식(Solidarity), 늘 열린 마음으로 협력하는 개방성(Openness)을 의미하며, 이는 풀무원이 지식기업으<br>로 가기 위해서 조직구성원들이 반드시 실천해야 할 가치이자 행동 양식입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="footer_wrap">
+    <div class="footer">
+        <h1><a href="#"><img src="img/footer_logo.png" alt=""></a></h1>
+        <div class="footer_menu">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><em>개인정보 취급 방침</em></a></li>
+                <li><a href="#">이메인주소 무단수집 거부</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">서울특별시 강남구 수서동 724 3층</a></li>
+                <li><a href="#">대표이사 이효율</a></li>
+                <li><a href="#"><span>고객기쁨센터 : <em>080-022-0085</em></span></a></li>
+            </ul>
+            <p>copyright ⓒ pulmuone co. Ltd All rights reserved</p>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="img/sns1.png" alt=""></a></li>
+            <li><a href="#"><img src="img/sns2.png" alt=""></a></li>
+            <li><a href="#"><img src="img/sns3.png" alt=""></a></li>
+            <li><a href="#"><img src="img/sns4.png" alt=""></a></li>
+        </ul>
+        <div class="family">
+            <a href="#">family site</a>
+            <ul>
+                <li><a href="#">family site</a></li>
+                <li><a href="#">풀무원샵</a></li>
+                <li><a href="#">풀무원건강생활</a></li>
+                <li><a href="#">그린체</a></li>
+                <li><a href="#">풀무원 녹즙</a></li>
+                <li><a href="#">풀무원 김치박물관</a></li>
+                <li><a href="#">올가홀푸드</a></li>
+                <li><a href="#">푸드머스</a></li>
+                <li><a href="#">ECMD</a></li>
+                <li><a href="#">엑소후레쉬</a></li>
+                <li><a href="#">풀무원샘물</a></li>
+                <li><a href="#">잇슬림</a></li>
+                <li><a href="#">베이비밀</a></li>
+                <li><a href="#">아미오</a></li>
+                <li><a href="#">풀무원프로바이오</a></li>
+                <li><a href="#">풀무원더스킨</a></li>
+                <li><a href="#">풍경마루</a></li>
+                <li><a href="#">브루스케타</a></li>
+                <li><a href="#">아란치오</a></li>
+                <li><a href="#">밸류인</a></li>
+                <li><a href="#">풀무원 소셜 웹진</a></li>
+                <li><a href="#">Montereygourmetfoods</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

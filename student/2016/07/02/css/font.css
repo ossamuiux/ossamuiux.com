@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'TitilliumBdRegular';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-black-webfont.eot);
+    src: url(../font/titillium-black-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-black-webfont.woff) format('woff'),
+         url(../font/titillium-black-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumBdBold';
+	font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-bold-webfont.eot);
+    src: url(../font/titillium-bold-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-bold-webfont.woff) format('woff'),
+         url(../font/titillium-bold-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumBdBoldItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-bolditalic-webfont.eot);
+    src: url(../font/titillium-bolditalic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-bolditalic-webfont.woff) format('woff'),
+         url(../font/titillium-bolditalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumBdItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-boldupright-webfont.eot);
+    src: url(../font/titillium-boldupright-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-boldupright-webfont.woff) format('woff'),
+         url(../font/titillium-boldupright-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumLtBold';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-light-webfont.eot);
+    src: url(../font/titillium-light-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-light-webfont.woff) format('woff'),
+         url(../font/titillium-light-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumLtBoldItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-lightitalic-webfont.eot);
+    src: url(../font/titillium-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-lightitalic-webfont.woff) format('woff'),
+         url(../font/titillium-lightitalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumUpItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-lightupright-webfont.eot);
+    src: url(../font/titillium-lightupright-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-lightupright-webfont.woff) format('woff'),
+         url(../font/titillium-lightupright-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumRegular';
+	font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-regular-webfont.eot);
+    src: url(../font/titillium-regular-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-regular-webfont.woff) format('woff'),
+         url(../font/titillium-regular-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-regularitalic-webfont.eot);
+    src: url(../font/titillium-regularitalic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-regularitalic-webfont.woff) format('woff'),
+         url(../font/titillium-regularitalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumUpBold';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-regularupright-webfont.eot);
+    src: url(../font/titillium-regularupright-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-regularupright-webfont.woff) format('woff'),
+         url(../font/titillium-regularupright-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumBold';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-semibold-webfont.eot);
+    src: url(../font/titillium-semibold-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-semibold-webfont.woff) format('woff'),
+         url(../font/titillium-semibold-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumBoldItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-semibolditalic-webfont.eot);
+    src: url(../font/titillium-semibolditalic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-semibolditalic-webfont.woff) format('woff'),
+         url(../font/titillium-semibolditalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumBoldItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-semibolditalic-webfont.eot);
+    src: url(../font/titillium-semibolditalic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-semibolditalic-webfont.woff) format('woff'),
+         url(../font/titillium-semibolditalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumUpBoldItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-semiboldupright-webfont.eot);
+    src: url(../font/titillium-semiboldupright-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-semiboldupright-webfont.woff) format('woff'),
+         url(../font/titillium-semiboldupright-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumLtRegular';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-thin-webfont.eot);
+    src: url(../font/titillium-thin-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-thin-webfont.woff) format('woff'),
+         url(../font/titillium-thin-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumLtItalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-thinitalic-webfont.eot);
+    src: url(../font/titillium-thinitalic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-thinitalic-webfont.woff) format('woff'),
+         url(../font/titillium-thinitalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'TitilliumUpRegular';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/titillium-thinupright-webfont.eot);
+    src: url(../font/titillium-thinupright-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../font/titillium-thinupright-webfont.woff) format('woff'),
+         url(../font/titillium-thinupright-webfont.ttf) format('truetype');
+}

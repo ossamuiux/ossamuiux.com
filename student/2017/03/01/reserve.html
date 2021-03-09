@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1000">
+<title>jinair air reserve</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+//왕복/편도/다구간 버튼 on처리//
+$(document).ready(function() {
+	$('.main_reserve_btn_tab li').click(function() {
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+     <div class="header_inner">
+     <h1><a href="index.html"><img src="images/logo.png" alt="진에어"></a></h1>
+         <ul class="util">
+             <li><a href="#">로그인</a></li>
+             <li><a href="#">회원가입</a></li>
+             <li><a href="#">고객센터</a></li>
+             <li class="util4 on">
+             	<button type="button">Language<img src="images/lang.png" alt=""></button>
+             	<ul class="lang">
+                	<li><a href="#">한국어</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">中國語</a></li>
+                    <li><a href="#">日本語</a></li>
+                </ul>
+             </li>
+         </ul>
+         <ul class="gnb">
+         	<li>
+            	<a href="reserve.html">항공권예매</a>
+                <div class="dapth2_wrap">
+                <ul class="dapth2">
+                	<li><a href="reserve.html">항공권예매</a></li>
+                    <li><a href="#">출&bull;도착조회</a></li>
+                    <li><a href="#">운항일정조회</a></li>
+                    <li><a href="#">할인제도</a></li>
+                    <li><a href="#">취항노선</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="gnb2">
+            	<a href="#">마이페이지</a>
+            	<div class="dapth2_wrap">
+                <ul class="dapth2">
+                	<li><a href="#">예약조회/변경/취소</a></li>
+                    <li><a href="#">탑승내역조회</a></li>
+                    <li><a href="#">온라인 체크인</a></li>
+                    <li><a href="#">나비포인트 조회</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="gnb3">
+            	<a href="#">서비스안내</a>
+                <div class="dapth2_wrap">
+                <ul class="dapth2">
+                	<li><a href="#">예약서비스</a></li>
+                    <li><a href="#">공항서비스</a></li>
+                    <li><a href="#">기내서비스</a></li>
+                    <li><a href="#">부가서비스</a></li>
+                    <li><a href="#">화물운송</a></li>
+                    <li><a href="#">지니쿠폰</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="gnb4">
+            	<a href="jinimall.html">지니몰</a>
+                <div class="dapth2_wrap">
+                <ul class="dapth2">
+                	<li><a href="jinimall.html">지니텔</a></li>
+                    <li><a href="#">지니패스</a></li>
+                    <li><a href="#">여행자보험</a></li>
+                    <li><a href="#">렌터카</a></li>
+                    <li><a href="#">택배</a></li>
+                    <li><a href="#">진에어샵</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="gnb5">
+            	<a href="#">이벤트</a>
+                <div class="dapth2_wrap">
+                <ul class="dapth2">
+                	<li><a href="#">진행중인 이벤트</a></li>
+                    <li><a href="#">지난 이벤트</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+                </div>
+            </li>
+         </ul>
+     </div>
+</div>
+<div id="main">
+	<div class="main_inner">
+    	<ul class="main_util">
+        	<li><a href="#"><img src="images/main_util.png" alt="">HOME &nbsp;></a></li>
+            <li><a href="#">&nbsp;&nbsp;항공권 예매 &nbsp;></a></li>
+            <li><a href="#"><span>&nbsp;&nbsp;항공권 예매</span></a></li>
+        </ul>
+        <h2>항공권예매</h2>
+        <h3><span>Fly,</span> better fly JinAir</h3>
+        <div class="main_reserve_section1">
+            <div class="main_reserve_section1_img"><a href="#"><img src="images/main_reserve1.png" alt=""></a></div>
+            <img src="images/main_reserve2.png" alt="">
+        </div>
+        <div class="main_reserve_section2">
+        	<ul class="main_reserve_btn_tab">
+            	<li class="on"><button type="button"></button><a href="#">왕복</a></li>
+                <li class="main_reserve_btn_tab2"><button type="button"></button><a href="#">편도</a></li>
+                <li class="main_reserve_btn_tab2"><button type="button"></button><a href="#">다구간</a></li>
+            </ul>
+        </div>
+        <div class="main_reserve_section3">
+        	<ul class="main_reserve_section3_inner1">
+            	<li>출발지<button type="button"><img src="images/main_reserve_form1.png" alt=""></button></li>
+                <li>도착지<button type="button"><img src="images/main_reserve_form2.png" alt=""></button></li>
+            </ul>
+            <ul class="main_reserve_section3_inner2">
+            	<li>가는날<button type="button"><img src="images/main_reserve_form3.png" alt=""></button></li>
+                <li>오는날<button type="button"><img src="images/main_reserve_form4.png" alt=""></button></li>
+            </ul>
+            <div class="main_reserve_section3_inner3">
+            	<div class="inner3_wrap">
+                	<div class="inner3_wrap2">탑승인원</div>
+                    <form>
+                    <fieldset>
+                        <legend>탑승인원</legend>
+                        <select>
+                            <option>성인 1</option>
+                            <option>성인 0</option>	
+                            <option>성인 2</option>
+                            <option>성인 3</option>
+                            <option>성인 4</option>
+                            <option>성인 5</option>
+                            <option>성인 6</option>
+                            <option>성인 7</option>
+                            <option>성인 8</option>
+                            <option>성인 9</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>탑승인원</legend>
+                        <select>
+                        	<option>소아 0</option>
+                            <option>소아 1</option>
+                            <option>소아 2</option>
+                            <option>소아 3</option>
+                            <option>소아 4</option>
+                            <option>소아 5</option>
+                            <option>소아 6</option>
+                            <option>소아 7</option>
+                            <option>소아 8</option>
+                            <option>소아 9</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>탑승인원</legend>
+                        <select>
+                        	<option>유아 0</option>
+                            <option>유아 1</option>
+                            <option>유아 2</option>
+                            <option>유아 3</option>
+                            <option>유아 4</option>
+                            <option>유아 5</option>
+                            <option>유아 6</option>
+                            <option>유아 7</option>
+                            <option>유아 8</option>
+                            <option>성인 9</option>
+                        </select>
+                    </fieldset>
+                    </form>
+                </div> 
+            </div>
+            <div class="main_reserve_section3_inner_button">
+                <button type="button">항공권조회</button>
+            </div> 
+        </div>
+        <div class="main_reserve_section4">
+        	<h4><img src="images/notice_icon.png" alt="">NOTICE</h4>
+            <p>&bull; 인터넷 예약은 1회 9명까지 가능합니다. 항공권 구입 시에는 예약과 동시 구매하셔야 하며, 미 구매된 예약은 자동 취소됩니다.<br>&bull; 유아는 좌석이 제공되지 않으므로 좌석이 필요한 유아는 소아로 예매 바랍니다. (소아운임 적용)<br>&bull; 국제선 소아 단독 예약은 모바일 APP과 고객서비스센터를 이용하여 주시기 바랍니다.<br>&bull; 국제선 구간 여행을 위해 유효기간이 최소 6개월 이상 남은 여권과 필요한 경우 출입국을 위한 해당 국가의 비자를 준비하셔야 합니다.<br>&bull; 훼손된 여권의 경우 해당 국가의 입국이 거절 될 수 있으니 유의하여주시기 바랍니다.<br>&bull; 복수 목적지 여정의 예약을 원하실 경우 [다구간 여정] 을 선택하여 주시기 바랍니다.<br>&bull; 해외발행 카드 사용의 경우 진에어 해외사이트에서 결제하실 수 있습니다.<br>&bull; 항공 스케줄은 정부인가 조건이며, 예고없이 변경될 수 있습니다.</p>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<div class="footer_inner">
+    	<div class="footer_inner_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">채용안내</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">운송약관</a></li>
+                <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                <li><a href="#">피해구제계획</a></li>
+                <li><a href="#"><span>개인정보처리방침</span></a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+            <div class="footer_sns">
+                    <a href="#"><img src="images/footer_sns1.png" alt="트위터"></a>
+                    <a href="#"><img src="images/footer_sns2.png" alt="페이스북"></a>
+                    <a href="#"><img src="images/footer_sns3.png" alt="인스타그램"></a>
+                    <a href="#"><img src="images/footer_sns4.png" alt="유튜브"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer_inner2">
+    	<h2><a href="#"><img src="images/footer_logo.png" alt="진에어"></a></h2>
+        <address>(주)진에어 대표이사 최정호 외 1명<span><img src="images/footer_bar.png" alt=""></span>사업자등록번호 121-81-89086<span><img src="images/footer_bar.png" alt=""></span>통신판매업 신고번호 :  서울-강서-0408<br>주소 : 서울시 강서구 공항대로 533<span><img src="images/footer_bar.png" alt=""></span>고객서비스센터 <span>1600-6200/02-3660-6000</span> (오전 6:00 ~ 오후 8:00)<span><img src="images/footer_bar.png" alt=""></span>개인정보보호책임자 : 이광<br>Copyright ⓒ JIN AIR. All rights reserved.</address>
+        <div class="footer_mark">
+        	<a href="#"><img src="images/ismsmark-03.png" alt=""></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

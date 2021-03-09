@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<title>lee jeong in</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script> 
+<script src="js/main.js"></script> 
+</head>
+<!-- slick 사용시 div 묶기.
+클릭요소--button, a (이미지는 배경처리)
+스위치 로직 -->
+<body>
+<div class="intro">
+	<!--오른쪽페이지버튼-->
+    <ul class="btn_page">
+        <li class="on"><button type="button">1</button></li>
+        <li><button type="button">2</button></li>
+        <li><button type="button">3</button></li>
+        <li><button type="button">4</button></li>
+        <li><button type="button">5</button></li>
+        <li><button type="button">6</button></li>
+  </ul>
+    <!--움직이는 사진-->
+	<img class="pic" src="images/back.jpg" alt="">
+    <!--전체배경-->
+    <div class="bg"></div>
+    <button class="btn_down" type="button">아래로이동</button>
+    <div class="tit">
+   	  <ul>
+        	<li class="txt1"><img src="images/intro_a.png" alt=""></li>
+            <li class="txt2"><img src="images/intro_b.png" alt=""></li>
+            <li class="txt3"><img src="images/intro_c.png" alt=""></li>
+        </ul>
+        <h2><img src="images/name.png" alt=""></h2>
+    </div>
+</div>
+
+<div class="main">
+	<!--프로필-->
+    <div class="section1">
+    	<div class="section1_inner">
+        	<h2><img src="images/tit_aboutme.png" alt=""></h2>
+            <h3><img src="images/tit_aboutme2.png" alt=""></h3>
+            <!--모달이지미-->
+            <div class="modal">
+            	<ul>
+                	<li><img src="images/profile_txt.jpg" alt=""></li>
+                    <li><img src="images/certificate_txt.jpg" alt=""></li>
+                    <li><img src="images/experience_txt.jpg" alt=""></li>
+                    <li><img src="images/interests_txt.jpg" alt=""></li>
+                </ul>
+            </div>            
+			<ul class="aboutme">
+            	<li>
+                    <h3><img class="tit_profile"src="images/tit_profile.png" alt=""></h3>
+                    <a href="images/profile_txt.jpg">
+                        <div class="cover_box">
+                            <div class="cover"><img src="images/piano_c.jpg" alt=""></div>
+                            <img src="images/piano.jpg" alt="">
+                        </div>
+                    </a>
+                    <img class="txt_profile" src="images/txt_profile.png" alt="">
+                </li>
+            	
+                <li>
+                	<h3><img class="tit_certificate"src="images/tit_certificate.png" alt=""></h3>
+                	<a href="images/certificate_txt.jpg">
+                        <div class="cover_box">
+                            <div class="cover"><img src="images/certificate_c.jpg" alt=""></div>
+                            <img src="images/certificate.jpg" alt="">
+                        </div>
+                    </a>
+                     <img class="txt_certificate" src="images/txt_certificate.png" alt="">
+                </li>
+                <li>
+					<h3><img class="tit_experience"src="images/tit_experience.png" alt=""></h3>
+                	<a href="images/experience_txt.jpg">
+                        <div class="cover_box">
+                            <div class="cover"><img src="images/experience_c.jpg" alt=""></div>
+                            <img src="images/experience.jpg" alt="">
+                        </div>				
+                    </a>
+                    <img class="txt_experience" src="images/txt_experience.png" alt="">
+                </li>
+                <li>
+                	<h3><img class="tit_interests"src="images/tit_interests.png" alt=""></h3>
+                	<a href="images/interests_txt.jpg">
+                        <div class="cover_box">
+                            <div class="cover"><img src="images/travel_c.jpg" alt=""></div>
+                            <img src="images/travel.jpg" alt="">
+                        </div>
+                    </a>
+                    <img class="txt_interests" src="images/txt_interests.png" alt="">
+                </li>
+            </ul> 
+
+            
+        </div>
+    </div>
+    <!--스킬-->
+    <div class="section2">
+    	<div class="section2_inner">
+        	<h2><img src="images/tit_myskills.png" alt=""></h2>
+            <div class="graph_box">
+            	<img class="graph" src="images/graph.png" alt="">
+				<img class="value" src="images/value.png" alt="">
+			</div>
+            <!--스킬내용-->
+            <div class="txt_skills">
+                <img class="skill_html" src="images/skill_html.png" alt="">
+            	<img class="skill_photo" src="images/skill_photoshop.png" alt="">
+                <img class="skill_illust" src="images/skill_illustrator.png" alt="">                
+                <img class="skill_jquery" src="images/skill_jquery.png" alt="">            
+                <img class="skill_css" src="images/skill_css.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--프로젝트-->
+    <div class="section3">
+    	<div class="section3_inner">
+        	<!--제목-->
+        	<h2><img src="images/tit_project.png" alt=""></h2>
+            <h3><img src="images/tit_project2.png" alt=""></h3>
+            <!--기획서이미지-->
+            <div class="modal2">
+                <img class="original_in" src="images/jinair_original.jpg" alt="">
+                <img class="new_in" src="images/jinair_new.jpg" alt="">
+				<div class="btn_close"></div>
+            </div>            
+            <div class="left">
+            	<a class="btn_ori1" href="#">진에어 기존 사이트 이미지</a>
+                <a class="btn_ori2"href="http://www.jinair.com/" target="_blank">Original site visit +</a>
+            </div>
+            <div class="right">
+            	<a class="btn_new1" href="#">진에어 리뉴얼 사이트 기획서</a>
+                <a class="btn_new2" href="http://jungin928.dothome.co.kr/jinair" target="_blank">Renewal site visit +</a>
+            </div>
+            <!--모니터박스-->
+            <div class="monitor">                 
+                <!--모니터on 보일것-->
+                <button class="btn_monitor">click</button>
+                <div class="monitor_inner">
+                	<div class="original">
+                    	<a class="cover1" href="http://www.jinair.com/" target="_blank"><span>Original</span></a>
+                    </div>
+                    <div class="renewal">
+                    	<a class="cover2" href="http://jungin928.dothome.co.kr/jinair" target="_blank"><span>Renewal</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!--반응형프로젝트-->
+    <div class="section4">
+    	<div class="section4_inner">
+        	<h2><img src="images/tit_rwd.png" alt=""></h2>
+        
+        </div>
+    </div>
+	<!--작업물--> 
+    <div class="section5">
+    	<div class="section5_inner">
+        	<h2><img src="images/tit_work.png" alt=""></h2>
+            <div class="work">
+                <div class="work_box">
+                    <div><a><img src="images/work_a.png" alt=""></a></div>
+                    <div><a><img src="images/work_b.png" alt=""></a></div>
+                    <div><a><img src="images/work_c.png" alt=""></a></div>
+                    <div><a><img src="images/work_d.png" alt=""></a></div>
+                    <div><a><img src="images/work_e.png" alt=""></a></div>
+                    <div><a><img src="images/work_f.png" alt=""></a></div>
+                    <div><a><img src="images/work_g.png" alt=""></a></div>
+                    <div><a><img src="images/work_h.png" alt=""></a></div>
+                    <div><a><img src="images/work_i.png" alt=""></a></div> 
+                    <div><a><img src="images/work_j.png" alt=""></a></div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

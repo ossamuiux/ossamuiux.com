@@ -1,0 +1,450 @@
+@charset "utf-8";
+.main {position:relative;}
+
+.main.sub_game .section1{width:100%; height:342px; position:relative;}
+.main.sub_game .section1 .main_util{width:1200px;height:32px; margin:0 auto;line-height:32px; z-index:0;}
+.main.sub_game .section1 .main_util a:first-child{margin-left:40px;}
+.main.sub_game .section1 .main_util a:hover{color:#1a5dc6;}
+.main.sub_game .section1 .search_game{width:1198px; height:278px; border:1px solid #edeeea; margin:0 auto;}
+.main.sub_game .section1 .section1_bg{background:url(../images/sub_game1.jpg) no-repeat center center;width:100%;height:342px; position:absolute; left:0; top:0; z-index:-10;
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)"; /* IE 8 */
+       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5); /* IE 7 and olders */
+       opacity: .05; }
+.main.sub_game .section1 .slider_side_left{position:absolute; left:0; top:0;width:360px; height:342px;background:url(../images/slider_side_bg1.png) repeat-y right top;z-index:40;}
+.main.sub_game .section1 .slider_side_right{position:absolute;right:0; top:0;width:360px; height:342px;background:url(../images/slider_side_bg2.png) repeat-y left top;z-index:40;}
+
+/*게임 장르ㆍ분류 체크와 검색어 텍스트*/
+.search_game .search_game1{margin:0 0 10px 35px; overflow:hidden;}
+.search_game .search_game1:first-child{margin-top:25px; margin-bottom:20px;}
+.search_game .search_game1 h3{width:70px; float:left;font-weight:bold;}
+.search_game .search_game1 .con_wrap{float:left;margin-left:16px;}
+.search_game .search_game1 .con_wrap>div{height:24px;}
+.search_game .search_game1 .con_wrap>div h4{display:inline-block; float:left; width:27px; height:22px; margin-right:25px;*width:30px}
+.search_game .search_game1 .con_wrap>div input[type=checkbox]{vertical-align:middle;}
+.search_game .search_game1 .con_wrap>div input[type=checkbox]:first-child{margin-left:60px;}
+.search_game .search_game1 .con_wrap>div label{margin-right:10px; line-height:1.4;}
+
+/*검색어 입력란*/
+.search_game .search_game1 .con_wrap>div input[type=text]{float:left;width:168px; height:20px;padding:0 5px;margin-top:2px;}
+.search_game .search_game1 .con_wrap>div button{display:block;float:left; width:22px; height:20px; margin-top:2px; background:#bebebe url(../images/btn_search.png) no-repeat center center;text-indent:-9999px;}
+.search_game .search_game1 .con_wrap .con7{}
+.search_game .search_game1 .con_wrap .con7 label{margin-left:15px;}
+.search_game .search_game1 .con_wrap .con7 label .txt2{color:#1a5dc6; font-weight:bold;}
+.search_game .search_game1 .con_wrap .con7 label .txt1,.search_game fieldset .con_wrap .con7 label .txt3{color:#bebebe;}
+
+/*게임슬라이더 background*/
+.main .slider_game{position:relative;overflow:hidden; width:100%; border-top:1px solid #1b293a; background:#171a21;}
+
+
+/*게임슬라이더*/
+.main .slider_game .slider_game_inner{position:relative;width:1200px; overflow:hidden; margin:0 auto;z-index:20;}
+
+.slider_game_inner .steam_games_util{height:45px;}
+.slider_game_inner .steam_games_util .steam_games_util_inner{float:right; margin:10px 30px 0 0;}
+.slider_game_inner .steam_games_util .steam_games_util_inner li{float:left;margin-left:5px; background:url(../images/footer_bar.png) no-repeat left center; padding-left:5px;}
+.slider_game_inner .steam_games_util .steam_games_util_inner li:first-child{background:none;}
+.slider_game_inner .steam_games_util .steam_games_util_inner li a.on{color:#1a5dc6;}
+
+/*게임 목록*/
+.slider_game_inner .steam_games{position:relative;width:1170px;padding:0 0 0 0;margin-left:0px;overflow:hidden;*margin-bottom:20px;}
+
+.steam_games .game_wrap{position:relative;float:left; margin:0 0px 20px 30px;}
+.steam_games .game_wrap .game{display:block;position:relative;overflow:hidden; width:360px; height:220px; }
+.steam_games .game_wrap .game .game_hover{position:absolute; left:0px; bottom:-70px; width:336px; height:100px; background:url(../images/game_bottom_hover.png);padding:5px 12px;}
+.steam_games .game_wrap .game .game_hover h2{float:left; width:70%;font-size:20px; font-weight:bold;overflow:hidden;text-overflow: ellipsis;white-space: nowrap; color:#376fc5;}
+.steam_games .game_wrap .game .game_hover h3{float:right;}
+.steam_games .game_wrap .game .game_hover >div{float:right;}
+.steam_games .game_wrap .game .game_hover .game_price1{font-size:20px; font-weight:bold;}
+.steam_games .game_wrap .game .game_hover .game_price2{width:100%; margin-top:5px;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap{float:right;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap div{float:left; line-height:1;*line-height:1.4;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap div:first-child{background:#195abf; width:36px; height:16px;*height:18px;text-align:center; margin-right:10px;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap .price2_ori{text-decoration:line-through;}
+
+/*마우스오버시에 게임목록들의 효과*/
+.steam_games .game_wrap .game .game_hover .game_assist{float:right; clear:right; width:50%;}
+.steam_games .game_wrap .game .game_hover .game_assist li{float:right; background:url(../images/game_assist.png) no-repeat -128px; width:20px; height:20px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist1{background-position-x:-128px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist2{background-position-x:-103px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist3{background-position-x:-75px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist4{background-position-x:0px; width:68px;}
+
+/*하단 이전 다음 버튼*/
+.slider_game_inner .sel_num{position:relative; width:356px; margin:0 auto; padding-top:12px; padding-bottom:30px;}
+.slider_game_inner .sel_num .sn_inner{overflow:hidden;}
+.slider_game_inner .sel_num .sn_inner button{ float:left; background:url(../images/btn_prevnext.png) no-repeat; width:22px; height:22px;margin-right:5px;}
+.slider_game_inner .sel_num .sn_inner .btn_prev{background-position-y:-32px; width:36px;}
+.slider_game_inner .sel_num .sn_inner .btn_next{background-position-y:-97px; width:36px;}
+.slider_game_inner .sel_num .sn_inner .btn_last{background-position-y:-65px; margin-right:0px;}
+.slider_game_inner .sel_num .sn_inner>div{float:left; margin-right:5px;}
+.slider_game_inner .sel_num .sn_inner>div>a{margin:0 3px; padding:3px 2px;}
+.slider_game_inner .sel_num .sn_inner>div>a.on{color:#1a5dc6;}
+.slider_game_inner .sel_num .sn_bottom{width:230px; margin:10px auto 0;}
+
+
+/************************************ sub_game_product *****************************************/
+
+.main.sub_game_product .section1{width:100%; height:460px; position:relative;}
+.main.sub_game_product .section1 .main_util{width:1200px;height:32px; margin:0 auto;line-height:32px; z-index:0;}
+.main.sub_game_product .section1 .main_util a:first-child{margin-left:40px;}
+.main.sub_game_product .section1 .main_util a.blue{color:#1a5dc6;}
+.main.sub_game_product .section1 .main_util a:hover{color:#1a5dc6;}
+.main.sub_game_product .section1 .search_game{width:1198px; height:278px; border:1px solid #edeeea; margin:0 auto;}
+.main.sub_game_product .section1 .section1_bg{background:url(../images/product/product_bg.jpg) no-repeat center top;width:100%;height:460px; position:absolute; left:0; top:0; z-index:-10;
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=24)"; /* IE 8 */
+       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=24); /* IE 7 and olders */
+       opacity: .24; }
+.main.sub_game_product .section1 .slider_side_left{position:absolute; left:0; top:0;width:360px; height:460px;background:url(../images/slider_side_bg1.png) repeat-y right top;z-index:40;}
+.main.sub_game_product .section1 .slider_side_right{position:absolute;right:0; top:0;width:360px; height:460px;background:url(../images/slider_side_bg2.png) repeat-y left top;z-index:40;}
+
+/*게임 상품 페이지*/
+.main.sub_game_product .section1 .product{width:1200px; margin:0 auto;}
+.main.sub_game_product .section1 .product>div{float:left; margin-left:30px;}
+.main.sub_game_product .section1 .product .product1{width:540px;}
+.main.sub_game_product .section1 .product .product2{width:570px;}
+
+/*게임상품 좌측 레이아웃,이미지, 구매버튼*/
+.main.sub_game_product .section1 .product .product1 .select{position:relative;margin-top:26px;}
+.main.sub_game_product .section1 .product .product1 .select .package_btn{width:100%; height:32px;background:#28465d url(../images/product/product_package_btn.png) no-repeat right center; text-align:left;  color:#c5ccce; line-height:32px;}
+.main.sub_game_product .section1 .product .product1 .select .package_btn span{padding-left:16px;}
+.main.sub_game_product .section1 .product .product1 .select .select_package{display:none; position:absolute; z-index:50;left:0; top:32px;}
+.main.sub_game_product .section1 .product .product1 .select .select_package>li{background:url(../images/sub_gnb_bg.png);margin-top:1px;}
+.main.sub_game_product .section1 .product .product1 .select .select_package>li:hover{background:url(../images/product/product_package_gra.png);}
+.main.sub_game_product .section1 .product .product1 .select .select_package>li a{display:inline-block;width:540px; height:32px;}
+
+/*패키지 구매목록*/
+.main.sub_game_product .section1 .product .product1 .select .select_package>li a .game_assist{float:right; padding:6px 40px 0 0;}
+.game_assist li{float:left; background:url(../images/game_assist.png) no-repeat -128px; width:20px; height:20px;}
+.game_assist .assist1{background-position-x:-128px;}
+.game_assist .assist2{background-position-x:-103px;}
+.game_assist .assist3{background-position-x:-75px;}
+.game_assist .assist4{background-position-x:0px; width:68px;}
+.main.sub_game_product .section1 .product .product1 .select .select_package>li a span{display:inline-block;line-height:32px;}
+.main.sub_game_product .section1 .product .product1 .select .select_package>li a span:first-child{width:284px;padding-left:16px}
+
+
+.main.sub_game_product .section1 .product .product1 fieldset>button{width:100%; height:40px; text-align:center; font-size:20px; font-weight:bold;line-height:42px; background:#171a21; color:#edeeea;line-height:40px;}
+.main.sub_game_product .section1 .product .product1 fieldset>button:hover{background:#171a21 url(../images/product/product_buy_gra.png) no-repeat center center;}
+
+/*게임상품 우측 레이아웃*/
+.product2 .pro2_top{height:40px; margin-bottom:16px;}
+.product2 .pro2_top h3{float:left; font-size:40px; font-weight:bold; line-height:1.3;}
+.product2 .pro2_top h4{float:right; padding-top:26px;}
+.product2 .pro2_top h4 .blue{color:#1a5dc6;}
+
+.product2 .pro2_center{overflow:hidden;}
+.product2 .pro2_center .pro2_depth1{height:20px; margin-bottom:4px;}
+.product2 .pro2_center .pro2_depth1.pro2_depth2{height:124px; overflow:hidden;}
+.product2 .pro2_center .pro2_depth1 h5{float:left; width:100px;}
+.product2 .pro2_center .pro2_depth1 h6{float:left; width:470px;}
+.product2 .pro2_center .pro2_depth1 h6 .tag:hover{text-decoration:underline;}
+.product2 .pro2_center .pro2_depth1 h6 .tag_plus{display:inline-block;margin:2px 0 0 8px;}
+.product2 .pro2_center .pro2_depth1 p{float:left; width:470px; height:124px;}
+
+.product2 .pro2_bottom{margin-top:26px;}
+.product2 .pro2_bottom a{display:inline-block; color:#bebebe; margin:0 20px 10px 0; }
+.product2 .pro2_bottom a:hover{text-decoration:underline;}
+
+/*section2 background*/
+.main.sub_game_product .section2{height:624px; width:100%; background:#171a21;}
+.main.sub_game_product .section2 .section2_inner{position:relative;width:1200px; height:100%; margin:0 auto;}
+.main.sub_game_product .section2 .section2_inner .section2_slider{position:relative; left:50%;top:26px;}
+.main.sub_game_product .section2 .section2_inner .section2_slider>div img{max-width:800px; max-height:430px;}
+.main.sub_game_product .section2 .section2_inner .section2_slider2{position:absolute; left:70px; bottom:40px; width:1060px;}
+.main.sub_game_product .section2 .section2_inner .section2_slider2 button{display:block;position:absolute; right:-25px; top:0;width:25px; height:108px; background:#1b293a;background:url(../images/product/product_slider_btn.gif) no-repeat left -216px; text-indent:-9999px;}
+.main.sub_game_product .section2 .section2_inner .section2_slider2 button:hover{background-position-y:-324px;}
+.main.sub_game_product .section2 .section2_inner .section2_slider2 button:first-child{left:-50px;background-position-y:0;}
+.main.sub_game_product .section2 .section2_inner .section2_slider2 button:first-child:hover{background-position-y:-108px;}
+.main.sub_game_product .section2 .section2_inner .section2_slider2>div img{max-width:190px; max-height:108px;}
+
+/*section3*/
+.main.sub_game_product .section3{width:100%;background:#29485f;}
+.main.sub_game_product .section3_inner{height:320px; width:1200px;margin:0 auto;}
+.main.sub_game_product .section3_inner .sys{float:left;margin:25px 0 0 30px;}
+.main.sub_game_product .section3_inner .sys .sys_gnb{overflow:hidden; margin-bottom:7px;}
+.main.sub_game_product .section3_inner .sys .sys_gnb li{float:left; margin-right:10px;}
+.main.sub_game_product .section3_inner .sys .sys_gnb li a{display:block; padding:0 4px;}
+.main.sub_game_product .section3_inner .sys .sys_gnb li.on a{background:#1a5dc6;}
+.main.sub_game_product .section3_inner .sys h2,.section3_inner .language h2{font-size:20px; font-weight:bold; margin-bottom:15px;}
+.main.sub_game_product .section3_inner .sys .sys_con>div{float:left;}
+.main.sub_game_product .section3_inner .sys .sys_con>div:first-child{margin-right:20px;}
+.main.sub_game_product .section3_inner .sys .sys_con h5{float:left;}
+.main.sub_game_product .section3_inner .sys .sys_con table{float:left;margin-left:10px;}
+.main.sub_game_product .section3_inner .sys .sys_con table td{width:260px;}
+.main.sub_game_product .section3_inner .sys .sys_con table td:first-child{color:#bebebe;width:76px;}
+
+.main.sub_game_product .section3_inner .language{float:right; margin:25px 30px 0 0;}
+.main.sub_game_product .section3_inner .language table tr{border-bottom:1px solid #edeeea;height:23px;}
+.main.sub_game_product .section3_inner .language table tr th{color:#bebebe;text-align:center;}
+.main.sub_game_product .section3_inner .language table tr:first-child{border-bottom:none;}
+.main.sub_game_product .section3_inner .language table td.cir{background:url(../images/product/sys_lang.png) no-repeat left top;}
+
+/****************************** sub_news **********************************/
+
+.main.sub_news .section1{width:100%; height:206px; position:relative;}
+.main.sub_news .section1 .main_util{width:1200px;height:32px; margin:0 auto;line-height:32px; z-index:0;}
+.main.sub_news .section1 .main_util a:first-child{margin-left:40px;}
+.main.sub_news .section1 .main_util a:hover{color:#1a5dc6;}
+.main.sub_news .section1 .search_news{width:1198px; height:144px; border:1px solid #edeeea; margin:0 auto;}
+.main.sub_news .section1 .section1_bg{width:100%;height:342px; position:absolute; left:0; top:0; z-index:-10;
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)"; /* IE 8 */
+       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5); /* IE 7 and olders */
+       opacity: .05; }
+.main.sub_news .section1 .slider_side_left{position:absolute; left:0; top:0;width:360px; height:206px;background:url(../images/slider_side_bg1.png) repeat-y right top;z-index:40;}
+.main.sub_news .section1 .slider_side_right{position:absolute;right:0; top:0;width:360px; height:206px;background:url(../images/slider_side_bg2.png) repeat-y left top;z-index:40;}
+
+/*소식 범주ㆍ연도 체크와 검색어 텍스트*/
+.search_news .search_news1{float:left; width:550px; margin:5px 0 0 35px;}
+.search_news .search_news1.search_news2{margin-top:25px;}
+.search_news .search_news1 h3{width:90px; float:left;font-weight:bold;}
+.search_news .search_news1 .con1{height:24px;}
+.search_news .search_news1 .con1 input[type=checkbox]{vertical-align:middle;}
+.search_news .search_news1 .con1 label{margin-right:10px; line-height:1.4;}
+.search_news .search_news1 .con1 input[type=text]{float:left;width:168px; height:20px;padding:0 5px;margin-top:2px; color:#bebebe;}
+.search_news .search_news1 .con1 button{display:block;float:left; width:22px; height:20px; margin-top:2px; background:#bebebe url(../images/btn_search.png) no-repeat center center;text-indent:-9999px;}
+
+/*연도별*/
+.search_news .search_news1 .con1.con2 label{margin-left:20px;}
+.search_news .search_news1 .con2>div{position:relative; float:left;height:20px;}
+.search_news .search_news1 .con2>div button{ width:76px; height:20px; background:none; background:url(../images/news/year_btn.png) no-repeat left center; border:1px solid #edeeea; text-indent:25px; color:#edeeea;*line-height:1.2;}
+.search_news .search_news1 .con2>div ul{display:none;position:absolute; left:0; top:22px;}
+.search_news .search_news1 .con2>div ul li a{display:block; width:74px; height:20px; background:#1b293a;border:1px solid #edeeea; border-top:none; border-bottom:1px dashed #edeeea; text-align:center;text-indent:25px; *line-height:1.2;}
+.search_news .search_news1 .con2>div ul li a.lst_2003{border-bottom:1px solid #edeeea;}
+.search_news .search_news1 .con2>div ul li:hover a{background:#1a5dc6;}
+.search_news .search_news1.search_news3{margin-top:15px;}
+.search_news .search_news1.search_news3 .search_btn2{width:126px; height:26px; font-weight:bold; background:#171a21; color:#edeeea; line-height:1; *line-height:1.5;}
+.search_news .search_news1.search_news3 label {display:none;margin-left:10px; line-height:1.8;}
+.search_news .search_news1.search_news3 label span{font-weight:bold;}
+.search_news .search_news1.search_news3 label .txt3{color:#bebebe;}
+
+/*소식 섹션2*/
+.main.sub_news .section2{background:#171a21;}
+.main.sub_news .section2 .section2_inner{width:1200px;overflow:hidden; margin:0 auto;padding-top:40px;}
+.main.sub_news .section2_inner .news{float:left; width:530px;padding:20px 30px 30px; background:#1b293a;margin-bottom:20px;}
+.main.sub_news .section2_inner .news.news2{float:right}
+.main.sub_news .section2_inner .news h3{overflow:hidden; padding-bottom:10px;font-size:20px; font-weight:bold; border-bottom:1px solid #bebebe;}
+.main.sub_news .section2_inner .news .news1{height:25px;margin-bottom:16px;}
+.main.sub_news .section2_inner .news .news1 h4{float:left;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap{float:right;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap span{float:left;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns{position:relative; float:left; margin-left:8px;padding-top:2px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns button{background:url(../images/sns_icon.png) no-repeat; width:20px; height:20px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns button:hover{background-position-y:-20px}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns button.on{background-position-y:-20px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns ul{display:none;position:absolute; right:2px; top:25px;width:88px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns ul li{float:left; margin-left:2px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns ul li a{display:block;width:20px; height:20px; background:url(../images/sns_icon.png) no-repeat 0 -40px;}
+
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns ul li a.sns2{background-position-y:-60px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns ul li a.sns3{background-position-y:-80px;}
+.main.sub_news .section2_inner .news .news1 .sns_wrap .sns ul li a.sns4{background-position-y:-100px;}
+.main.sub_news .section2_inner .news p{width:100%; margin-bottom:20px;}
+
+/************************************** sub_commu  ********************************************/
+
+.main.sub_commu .section1{width:100%; height:32px; position:relative;}
+.main.sub_commu .section1 .main_util{width:1200px;height:32px; margin:0 auto;line-height:32px; z-index:0;}
+.main.sub_commu .section1 .main_util a:first-child{margin-left:40px;}
+.main.sub_commu .section1 .main_util a:hover{color:#1a5dc6;}
+
+.main.sub_commu .section2{width:100%; background:#171a21;}
+.main.sub_commu .section2 .section2_inner{width:1200px; margin:0 auto; padding:30px 0 30px 10px;overflow:hidden;}
+.main.sub_commu .section2 .section2_inner .commu{float:left; width:560px; height:280px; margin:0 0 30px 20px;}
+.main.sub_commu .section2 .section2_inner .commu.greenlight{width:1140px;}
+
+/*허브*/
+.main.sub_commu .section2 .section2_inner .commu>h4{width:100%; font-size:20px; font-weight:bold; padding-bottom:10px;}
+.main.sub_commu .section2 .section2_inner .commu .con1{float:left; width:180px; margin-left:10px;}
+.main.sub_commu .section2 .section2_inner .commu .con1.lft_mar{margin-left:0;}
+.main.sub_commu .section2 .section2_inner .commu .con1 a{display:block; overflow:hidden; width:180px; height:100px; margin-bottom:10px;}
+.main.sub_commu .section2 .section2_inner .commu .con1 a img{width:180px;}
+.main.sub_commu .section2 .section2_inner .commu .con1 h5.week{color:#29485f;}
+.main.sub_commu .section2 .section2_inner .commu .con1 h5.player{color:#1a5dc6;}
+
+/*큐레이터*/
+.commu .con2 {display:block; float:left; margin-bottom:20px;}
+.commu .con2:hover{outline:2px solid #1b293a;}
+.commu .con2.rgt_mar{margin-right:10px;}
+.commu .con2 .cura_img{float:left; overflow:hidden; width:100px; height:100px;}
+.commu .con2 .curator{float:left; width:160px;padding-left:10px;}
+.commu .con2 .curator .tit{height:70px;font-size:16px;color:#486a85;}
+.commu .con2 .curator .follower span{float:right;}
+.commu .con2 .curator .follower span:first-child{float:left;}
+
+/*리뷰*/
+.commu .con3{width:560px; height:233px; padding-top:5px; border-top:1px solid #5a5c60; border-bottom:1px solid #5a5c60; overflow: hidden;}
+.commu .con3 .review{width:540px; overflow:hidden; margin:0 0 15px 10px; border-top:1px solid #bebebe; padding-top:10px;}
+.commu .con3 .review:first-child{border-top:none;}
+.commu .con3 .review .profile{float:left; width:50px; margin-right:15px;}
+.commu .con3 .review .review1{float:left; width:475px;}
+.commu .con3 .review .review1 .review1_inner{height:23px;}
+.commu .con3 .review .review1 .review1_inner span{display:inline-block; float:left;}
+.commu .con3 .review .review1 .review1_inner .tit{width:130px;font-weight:bold;}
+.commu .con3 .review .review1 .review1_inner .game{font-weight:bold; color:#29485f;}
+.commu .con3 .review .review1 .review1_inner .image{float:right;width:18px; height:18px;background:url(../images/commu/icon_thumbsUp.png) no-repeat center center;}
+.commu .con3 .review .review1 .review1_inner .image.image2{background:url(../images/commu/icon_thumbsDown.png) no-repeat center center;}
+.commu .con3 .review h5{float:right;}
+.commu .con3 .review .review1 p{clear:both;}
+
+/*토론*/
+.commu .con4{width:560px; height:240px;}
+.commu .con4 ul{float:left;}
+.commu .con4 ul li{margin-bottom:2px;width:108px;}
+.commu .con4 ul li:hover{background:url(../images/commu/discussion.png) no-repeat center right;}
+.commu .con4 ul li:hover a{background:#29485f;}
+.commu .con4 ul li a{display:block; width:100px; height:25px; text-align:center; background:#1b293a;padding-top:5px;}
+.commu .con4 ul li.on{background:url(../images/commu/discussion.png) no-repeat center right;}
+.commu .con4 ul li.on a{background:#29485f;}
+.commu .con4 .discuss{float:right; width:440px; height:240px;}
+.commu .con4 .discuss a{display:block; overflow:hidden; cursor:pointer;margin-bottom:10px;}
+.commu .con4 .discuss a:hover{outline:1px solid #29485f;}
+.commu .con4 .discuss a>div{float:left;}
+.commu .con4 .discuss a .tit{width:320px; padding-left:10px;line-height:1.4;}
+.commu .con4 .discuss a .tit h4{overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.commu .con4 .discuss a .tit>div{color:#29485f;}
+.commu .con4 .discuss a .tit>div span{float:right;}
+.commu .con4 .discuss a .tit>div span:first-child{float:left;}
+.commu .con4 .discuss a .answer{width:50px; height:38px; margin-left:20px;background:url(../images/commu/answer.png) no-repeat center right;}
+.commu .con4 .discuss a .answer h4{color:#bebebe;padding:10px 0 0 5px; width:25px; height:17px; text-align:center;}
+
+/*높이 조정*/
+.main.sub_commu .section2 .section2_inner .commu.commu2{height:240px;}
+.main.sub_commu .section2 .section2_inner .commu.commu3{height:250px;}
+/*아트*/
+.commu .con5{width:560px; height:200px;}
+
+/*방송*/
+.commu .con6{float:left;width:180px; height:200px;margin-left:10px;}
+.commu .con6.con6_fir{margin-left:0;}
+.commu .con6 a{width:180px; height:104px; overflow:hidden;}
+.commu .con6>h5{padding-left:5px;}
+.commu .con6 .tit{width:95%;height:40px;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.commu .con6 .bj{width:95%;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.commu .con6 .viewer{color:#1a5dc6;}
+
+/*그린라이트*/
+.commu .con7{position:relative; float:left; width:220px; height:200px;margin-left:10px;}
+.commu .con7.con7_fir{margin-left:0;}
+.commu .con7 a{display:block; width:220px; height:200px; overflow:hidden;}
+.commu .con7 a img{width:100%;}
+.commu .con7 .con7_bottom{position:absolute; left:0; bottom:0; width:100%; height:45px; background:url(../images/game_bottom_hover.png);}
+.commu .con7 .con7_bottom h4{padding-left:10px;}
+.commu .con7 .con7_bottom .maker{color:#bebebe;}
+
+/*워크샵	*/
+.commu .con8{width:560px; height:92px;margin-bottom:10px;}
+.commu .con8 a{display:block; width:92px; height:92px; overflow:hidden; float:left;}
+.commu .con8 .workshop{float:right; width:460px;}
+.commu .con8 .workshop h4{font-weight:bold;padding-top:5px; height:25px;}
+.commu .con8 .workshop p{height:62px; color:#bebebe; overflow:hidden;}
+
+/*마켓*/
+.commu .con9{width:560px;height:210px;}
+.commu .con9 .marcket{position:relative; width:560px;height:50px; margin-bottom:1px;}
+.commu .con9 .marcket:hover .buy{display:block;}
+.commu .con9 .marcket>div{float:left;}
+.commu .con9 .marcket .image{border:1px solid #29485f;}
+.commu .con9 .marcket .info{padding-left:10px;}
+.commu .con9 .marcket .info .info2{color:#bebebe;}
+.commu .con9 .marcket .price{float:right;width:100px; text-align:center;}
+.commu .con9 .marcket .price .price2{color:#1a5dc6;}
+.commu .con9 .marcket .buy{position:absolute; left:0; top:0; display:none;width:100%; height:100%; text-align:center; line-height:50px; font-size:20px; font-weight:bold;background:url(../images/sub_gnb_bg.png);}
+
+
+/*************************** sub_swhw *****************************/
+
+.main.sub_swhw .section1{width:100%; height:235px; position:relative;}
+.main.sub_swhw .section1 .main_util{width:1200px;height:32px; margin:0 auto;line-height:32px; z-index:0;}
+.main.sub_swhw .section1 .main_util a:first-child{margin-left:40px;}
+.main.sub_swhw .section1 .main_util a:hover{color:#1a5dc6;}
+.main.sub_swhw .section1 .search_sw{width:1198px; height:170px; border:1px solid #edeeea; margin:0 auto;}
+.main.sub_swhw .section1 .section1_bg{background:url(../images/swhw/swhw_bg.jpg) no-repeat center center;width:100%;height:235px; position:absolute; left:0; top:0; z-index:-10;
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)"; /* IE 8 */
+       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5); /* IE 7 and olders */
+       opacity: .05; }
+.main.sub_swhw .section1 .slider_side_left{position:absolute; left:0; top:0;width:360px; height:235px;background:url(../images/slider_side_bg1.png) repeat-y right top;z-index:40;}
+.main.sub_swhw .section1 .slider_side_right{position:absolute;right:0; top:0;width:360px; height:235px;background:url(../images/slider_side_bg2.png) repeat-y left top;z-index:40;}
+
+/*게임 장르ㆍ분류 체크와 검색어 텍스트*/
+.main.sub_swhw .search_sw .search_sw1{margin:0 0 10px 35px; overflow:hidden;}
+.main.sub_swhw .search_sw .search_sw1:first-child{margin-top:25px;}
+.main.sub_swhw .search_sw .search_sw1 h3{width:70px; float:left;font-weight:bold;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap{float:left;margin-left:16px;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div{height:24px;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div h4{display:inline-block; float:left; width:27px; height:22px; margin-right:25px;*width:30px}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div input[type=checkbox]{vertical-align:middle;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div input[type=checkbox]:first-child{margin-left:60px;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div label{margin-right:10px; line-height:1.4;}
+
+/*검색어 입력란*/
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div input[type=text]{float:left;width:168px; height:20px;padding:0 5px;margin-top:2px;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap>div button{display:block;float:left; width:22px; height:20px; margin-top:2px; background:#bebebe url(../images/btn_search.png) no-repeat center center;text-indent:-9999px;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap .con7{}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap .con7 label{margin-left:15px;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap .con7 label .txt2{color:#1a5dc6; font-weight:bold;}
+.main.sub_swhw .search_sw .search_sw1 .con_wrap .con7 label .txt1,.search_sw fieldset .con_wrap .con7 label .txt3{color:#bebebe;}
+
+/****************************** sub_video *************************************/
+
+.main.sub_video .section1{width:100%; height:170px; position:relative;}
+.main.sub_video .section1 .main_util{width:1200px;height:32px; margin:0 auto;line-height:32px; z-index:0;}
+.main.sub_video .section1 .main_util a:first-child{margin-left:40px;}
+.main.sub_video .section1 .main_util a:hover{color:#1a5dc6;}
+.main.sub_video .section1 .search_video{width:1198px; height:110px; border:1px solid #edeeea; margin:0 auto;}
+.main.sub_video .section1 .section1_bg{background:url(../images/video/video_bg.jpg) no-repeat center center;width:100%;height:170px; position:absolute; left:0; top:0; z-index:-10;
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)"; /* IE 8 */
+       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15); /* IE 7 and olders */
+       opacity: .15; }
+.main.sub_video .section1 .slider_side_left{position:absolute; left:0; top:0;width:360px; height:170px;background:url(../images/slider_side_bg1.png) repeat-y right top;z-index:40;}
+.main.sub_video .section1 .slider_side_right{position:absolute;right:0; top:0;width:360px; height:170px;background:url(../images/slider_side_bg2.png) repeat-y left top;z-index:40;}
+
+/*게임 장르ㆍ분류 체크와 검색어 텍스트*/
+.main.sub_video .search_video .search_video1{margin:0 0 10px 35px; overflow:hidden;}
+.main.sub_video .search_video .search_video1:first-child{margin-top:25px;}
+.main.sub_video .search_video .search_video1 h3{width:70px; float:left;font-weight:bold;}
+.main.sub_video .search_video .search_video1 .con_wrap{float:left;margin-left:16px;}
+.main.sub_video .search_video .search_video1 .con_wrap>div{height:24px;}
+.main.sub_video .search_video .search_video1 .con_wrap>div h4{display:inline-block; float:left; width:27px; height:22px; margin-right:25px;*width:30px}
+.main.sub_video .search_video .search_video1 .con_wrap>div input[type=checkbox]{vertical-align:middle;}
+.main.sub_video .search_video .search_video1 .con_wrap>div input[type=checkbox]:first-child{margin-left:60px;}
+.main.sub_video .search_video .search_video1 .con_wrap>div label{margin-right:10px; line-height:1.4;}
+
+/*검색어 입력란*/
+.main.sub_video .search_video .search_video1 .con_wrap>div input[type=text]{float:left;width:168px; height:20px;padding:0 5px;margin-top:2px;}
+.main.sub_video .search_video .search_video1 .con_wrap>div button{display:block;float:left; width:22px; height:20px; margin-top:2px; background:#bebebe url(../images/btn_search.png) no-repeat center center;text-indent:-9999px;}
+.main.sub_video .search_video .search_video1 .con_wrap .con7{}
+.main.sub_video .search_video .search_video1 .con_wrap .con7 label{margin-left:15px;}
+.main.sub_video .search_video .search_video1 .con_wrap .con7 label .txt2{color:#1a5dc6; font-weight:bold;}
+.main.sub_video .search_video .search_video1 .con_wrap .con7 label .txt1,.search_video fieldset .con_wrap .con7 label .txt3{color:#bebebe;}
+
+.main.sub_video .video{width:1198px;}
+.video .video1{height:140px;padding-left:20px;margin-bottom:20px;}
+.video .video1 .video_img{display:block; width:300px; height:140px; overflow:hidden; float:left;}
+.video .video1 .video_info{float:left; width:820px;padding-left:20px;}
+.video .video1 .video_info h4{font-size:20px; font-weight:bold;height:40px;}
+.video .video1 .video_info p{height:74px;overflow:hidden;}
+.video .video1 .video_info .video_info1{height:26px; color:#bebebe;}
+.video .video1 .video_info .video_info1 span{display:inline-block;width:180px;}
+.video .video1 .video_info .video_info1 .playtime{width:125px;}
+
+/******************************** sub_video_product ****************************************/
+
+.main.sub_game_product.sub_video_product .product2 .pro2_top{height:40px; margin-bottom:16px;}
+.main.sub_game_product.sub_video_product .product2 .pro2_top h3{float:left; font-size:40px; font-weight:bold; line-height:1.3;}
+.main.sub_game_product.sub_video_product .product2 .pro2_top h3>div{float:right; padding-top:26px; font-size:14px; font-weight:normal;}
+.main.sub_game_product.sub_video_product .product2 .pro2_top h3>div .blue{color:#1a5dc6;}
+
+.main.sub_game_product.sub_video_product .product2 .pro2_center{overflow:hidden;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1{height:20px; margin-bottom:4px;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1.pro2_depth2{height:124px; overflow:hidden;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1 h5{float:left; width:100px;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1 h6{float:left; width:470px;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1 h6 .tag:hover{text-decoration:underline;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1 h6 .tag_plus{display:inline-block;margin:2px 0 0 8px;}
+.main.sub_game_product.sub_video_product .product2 .pro2_center .pro2_depth1 p{float:left; width:470px; height:124px;}
+
+.main.sub_game_product.sub_video_product .product2 .pro2_bottom{margin-top:26px;}
+.main.sub_game_product.sub_video_product .product2 .pro2_bottom a{display:inline-block; color:#bebebe; margin:0 20px 10px 0; }
+.main.sub_game_product.sub_video_product .product2 .pro2_bottom a:hover{text-decoration:underline;}
+
+

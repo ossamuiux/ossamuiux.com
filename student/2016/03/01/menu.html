@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>커피빈: 브랜드스토리</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var num=$(this).scrollTop();
+		
+		if(num>=600){
+			$('.go_top').stop().fadeIn();
+		} else {
+			$('.go_top').stop().fadeOut();
+		}
+	});
+	
+	$('.go_top').click(function(e){
+		e.preventDefault();
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<div class="header_inner">
+    	<h2><a href="index.html"><img src="images/logo.png" alt="logo"></a></h2>
+		<ul class="util">
+        	<li><a href="#">Login</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Language</a></li>
+            <li><a href="#">Store</a></li>
+        </ul>
+        <ul class="gnb">
+        	<li><a href="brandstory.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="#">COFFEE BEAN CLUB</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">CBTL</a></li>
+            <li class="gnb7"><a href="#">Online Mall</a></li>
+        </ul>
+        <div class="menu_wrap">
+        	<ul class="menu">
+            	<li class="menu_sub">
+                    <a href="#">회사소개</a>
+                    <a href="brandstory.html">브랜드 스토리</a>
+                    <a href="#">공지사항</a>
+                    <a href="#">채용안내</a>
+                    <a href="#">가맹문의</a>
+                    <a href="#">찾아오시는 길</a>
+                </li>
+                <li class="menu_sub menu_sub2">
+                    <a href="menu.html">New Menu</a>
+                    <a href="#">Coffee</a>
+                    <a href="#">Tea</a>
+                    <a href="#">Beverage</a>
+                    <a href="#">Bakery</a>
+                    <a href="#">MD 상품</a>
+                    <a href="#">Gift Card</a>
+                </li>
+                <li class="menu_sub menu_sub3">
+                    <a href="event.html">이벤트 소식</a>
+                    <a href="#">당첨안내</a>
+                </li>
+                <li class="menu_sub menu_sub4">
+                    <a href="#">커피빈 클럽 소개</a>
+                    <a href="#">등급 및 혜택</a>
+                    <a href="#">자주하는 질문</a>
+                </li>
+                <li class="menu_sub menu_sub5">
+                    <a href="#">신규 매장 소식</a>
+                    <a href="#">국내 매장</a>
+                    <a href="#">글로벌 매장</a>
+                </li>
+                <li class="menu_sub menu_sub6">
+                    <a href="#">CBTL 소개</a>
+                    <a href="#">제품 설명서</a>
+                    <a href="#">AS 신청</a>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main menu">
+    <div class="sub_visual"></div>
+    <div class="sub_tit">
+    	<div class="title">
+	        <h1>New Menu</h1>
+    	    <p>새롭게 선보이는 신제품을 소개합니다.</p>
+        </div>
+        <div class="location">
+        	<p>
+            	<a href="index.html"><span>HOME</span> &nbsp;> &nbsp;</a>
+                <a href="menu.html"><span>MENU</span> &nbsp;> &nbsp;</a>
+                <strong>New Menu</strong>
+            </p>
+        </div>
+    </div>
+    <div class="con">
+    	<div class="con_tit">
+	        <h2>이달의 신메뉴</h2>
+            <div class="date_select">
+            <form>
+                <select>
+                	<option>전체</option>
+                	<option>2016년 7월</option>
+                    <option>2016년 6월</option>
+                    <option>2016년 5월</option>
+                    <option>2016년 4월</option>
+                </select>
+                <button type="submit">이동</button>
+            </form>
+            </div>
+        </div>
+        <div class="product">
+        	<div class="left_product">
+            	<a href="#"><img src="images/newmenu_con1.jpg" alt=""></a>
+            </div>
+            <div class="right_product">
+            	<ul>
+                	<li>
+                    	<a href="#">
+                        	<img src="images/product_drinks1.png" alt="">
+                            <h2>초콜렛 아몬드 아이스 블렌디드</h2>
+                            <P>Chocolate Almond Ice Blended drink</P>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="images/product_drinks2.png" alt="">
+                            <h2>바닐라 아몬드 아이스 블렌디드</h2>
+                            <P>Vanilla Almond Ice Blended drink</P>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="images/product_drinks3.png" alt="">
+                            <h2>초콜렛 아몬드 라떼</h2>
+                            <P>Chocolate Almond Latte (HOT or ICE)</P>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="images/product_drinks4.png" alt="">
+                            <h2>바닐라 아몬드 라떼</h2>
+                            <P>Vanilla Almond Latte (HOT or ICE)</P>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product product2">
+        	<div class="left_product">
+            	<a href="#"><img src="images/newmenu_con2.jpg" alt=""></a>
+            </div>
+            <div class="right_product">
+            	<ul>
+                	<li>
+                    	<a href="#">
+                        	<img src="images/product_drinks5.png" alt="">
+                            <h2>스트로베리 그린티 아이스 블렌디드</h2>
+                            <P>Strawberry Green Tea Ice Blended drink</P>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="images/product_drinks6.png" alt="">
+                            <h2>스트로베리 그린티 라떼</h2>
+                            <P>Strawberry Green Tea Latte</P>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product product3">
+        	<div class="left_product">
+            	<a href="#"><img src="images/newmenu_con3.jpg" alt=""></a>
+            </div>
+            <div class="right_product">
+            	<ul>
+                	<li>
+                    	<a href="#">
+                        	<img src="images/product_drinks7.png" alt="">
+                            <h2>콜드 브루</h2>
+                            <P>Cold Brew</P>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="images/product_drinks8.png" alt="">
+                            <h2>콜드 브루 라떼</h2>
+                            <P>Cold Brew Latte</P>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="images/product_drinks9.png" alt="">
+                            <h2>콜드 브루 카푸치노</h2>
+                            <P>Cold Brew Cappuccino</P>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="more">
+    	<a href="#"><img src="images/menu_more_03.png" alt=""></a>
+    </div>
+    <div class="go_top">
+    	<a href="menu.html">Top</a>
+    </div>
+</div>
+<div class="footer">
+	<div class="footer_inner">
+    	<ul class="footer_menu">
+        	<li><a href="brandstory.html">회사소개</a></li>
+            <li><a href="#">채용안내</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">커피빈온라인쇼핑몰</a></li>
+            <li><a href="#">찾아오시는길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+        <img src="images/footer_line.png" alt="">
+        <div class="bottom_footer">
+        	<h2><a href="index.html"><img src="images/logo_full.png" alt="fullLogo"></a></h2>
+            <p>(주)커피빈코리아│대표이사: 박상배│사업자등록번호: 120-86-07029│통신판매업신고: 제 2010-서울강남-00560<br>서울시 강남구 봉은사로 99길 7│고객센터: 1577-4708│AS문의: 02-3468-1627 (평일 09:00 ~ 18:00)<br><br>COPYRIGHT (C) 2016 COFFEE BEAN KOREA. ALL RIGHTS RESERVED.</p>
+            <div class="sns">
+            	<ul>
+                	<li><a href="https://twitter.com/coffeebean_kr"><img src="images/sns_tw.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/thecoffeebeankorea/"><img src="images/sns_fb.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/coffeebeankorea/"><img src="images/sns_insta.png" alt=""></a></li>
+                    <li><a href="http://blog.naver.com/coffeebeankorea"><img src="images/sns_blog.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

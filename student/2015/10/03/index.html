@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1400">
+<title>kangyuseon_portfolio</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script>
+$(document).ready(function(){
+  	$('.slider').slick({
+	  dots:true,
+	  autoplay:true,
+	  autoplaySpeed:1200,
+	  arrows:true,
+	});
+	
+	$('.gnb li').click(function(e){
+		e.preventDefault();//a태그의 기본이벤트(페이지위로올라감) 막기
+		//클릭한 메뉴의 순서값을 변수에 저장
+		var num=$(this).index();
+		//console.log(num); 콘솔로 숫자 확인 하면 주석처리 하기
+		
+		//if : 조건문or제어문이라고 함 ==(=등호) 같다, 비교연산자
+		if(num==0){
+			//console.log("첫번째 메뉴를 클릭했어요~");	
+			$('body,html').animate({'scrollTop':'1050px'},300);
+		}else if(num==1){
+			//else를 써서 두개 동시가 아니라 첫번째거를 하고 그게 아니면 두번째거를 하는 이어지게 하는 태그임
+			$('body,html').animate({'scrollTop':'2050px'},300);
+		}else if(num==2){
+			//else를 써서 두개 동시가 아니라 첫번째거를 하고 그게 아니면 두번째거를 하는 이어지게 하는 태그임
+			$('body,html').animate({'scrollTop':'4200px'},500);
+		}
+	});
+	
+	$('.m_gnb li').click(function(e){
+		e.preventDefault();//a태그의 기본이벤트(페이지위로올라감) 막기
+		//클릭한 메뉴의 순서값을 변수에 저장
+		var num=$(this).index();
+		//console.log(num); 콘솔로 숫자 확인 하면 주석처리 하기
+		
+		//if : 조건문or제어문이라고 함 ==(=등호) 같다, 비교연산자
+		if(num==0){
+			//console.log("첫번째 메뉴를 클릭했어요~");	
+			$('body,html').animate({'scrollTop':'1000px'},300);
+		}else if(num==1){
+			//else를 써서 두개 동시가 아니라 첫번째거를 하고 그게 아니면 두번째거를 하는 이어지게 하는 태그임
+			$('body,html').animate({'scrollTop':'2050px'},300);
+		}else if(num==2){
+			//else를 써서 두개 동시가 아니라 첫번째거를 하고 그게 아니면 두번째거를 하는 이어지게 하는 태그임
+			$('body,html').animate({'scrollTop':'3700px'},500);
+		}
+	});
+	
+	$(window).scroll(function(){
+		  var num2=$(this).scrollTop();
+		  console.log(num2);
+		  
+		  if(num2>=0 && num2<1800){
+			  $('.m_gnb li a').removeClass('on');
+			  $('.m_gnb li').eq(0).find('a').addClass('on');
+		  } else if(num2>=1800 && num2<=3000) {
+			  $('.m_gnb li a').removeClass('on');
+			  $('.m_gnb li').eq(1).find('a').addClass('on');
+		  } else {
+			  $('.m_gnb li a').removeClass('on');
+			  $('.m_gnb li').eq(2).find('a').addClass('on');
+		  } 
+	 });
+	
+		$('a.gallery').colorbox({rel:'gal'});
+		
+		$('a.project').colorbox({rel:'pro'});
+		
+		$('a.self').colorbox({rel:'sel'});
+		
+		$(".inline").colorbox({inline:true});
+		$(".ost").colorbox({inline:true});
+		$(".dark").colorbox({inline:true});
+});	
+</script>
+</head>
+
+<body>
+<div id="header_wrap">
+		<div class="m_gnb">
+            <ul>
+                <li><a href="#"><img src="img/quick_profile_03.png" alt=""></a></li>
+                <li><a href="#"><img src="img/quick_portfolio_03.png" alt=""></a></li>
+                <li><a href="#"><img src="img/quick_photo_03.png" alt=""></a></li>
+            </ul>
+            <div class="sns">
+                <a class="face" href="http://www.facebook.com/xxyuseonxx" target="_blank"><img src="img/menu_facebook_03.png" alt=""></a>
+                <a class="instar" href="http://instagram.com/xxyuseonxx" target="_blank"><img src="img/menu_instargram_03.png" alt=""></a>
+                <a class="resu self" href="img/resu.jpg"></a>	
+             </div>
+         </div>
+	<div class="header">
+        <h1><a href="index.html"><img src="img/mylogo_03.png" alt=""></a></h1>
+        <ul class="gnb">
+            <li><a href="#section1"><img src="img/menu_profile_03.png" alt=""></a></li>
+            <li><a href="#section2"><img src="img/menu_portfolio_03.png" alt=""></a></li>
+            <li><a href="#section3"><img src="img/menu_photo_03.png" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+	<div class="slider">
+    	<div><img src="img/slider_img2_03.jpg" alt=""></div>
+        <div><img src="img/slider_img1_03.jpg" alt=""></div>
+    </div>
+</div>
+<div class="section1">
+	<div class="box">
+        <div class="company">
+			<a class="company project inline cboxElement" href="#inline_content">donkin</a>
+			<div id="inline_content">
+            	<img src="img/starbucks_intro.jpg" alt="">
+            	<a class="btn_ori" href="img/starbucks_org.jpg" target="_blank"><img src="img/btn_orig_07.png" alt=""></a>
+                <a class="btn_renew" href="starbusks_0807/index.html" target="_blank"><img src="img/btn_renewal_03.png" alt=""></a>
+                <a class="btn_mobile" href="m_starbucks_0907/index.html" target="_blank"><img src="img/btn_mobile_03.png" alt=""></a>
+            </div>
+        </div>
+        <div class="brand">
+      		<a class="brand project inline cboxElement" href="#ost_content">donkin</a>
+            <div id="ost_content">
+            	<img src="img/ost_intro.jpg" alt="">
+            	<a class="btn_ori" href="img/ost_org.jpg" target="_blank"><img src="img/btn_orig_07.png" alt=""></a>
+                <a class="btn_renew" href="ost_0807/index.html" target="_blank"><img src="img/btn_renewal_03.png" alt=""></a>
+                <a class="btn_mobile" href="m_ost_0907/index.html" target="_blank"><img src="img/btn_mobile_03.png" alt=""></a>
+            </div>
+        </div>
+        <div class="shopping">
+       		<a class="shopping project inline cboxElement" href="#dark_content">donkin</a>
+            <div id="dark_content">
+            	<img src="img/dark_intro.jpg" alt="">
+            	<a class="btn_ori" href="img/darkvictory_org.jpg" target="_blank"><img src="img/btn_orig_07.png" alt=""></a>
+                <a class="btn_renew" href="darkvictory_0827/index.html" target="_blank"><img src="img/btn_renewal_03.png" alt=""></a>
+                <a class="btn_mobile" href="darkvictory_0827/index.html" target="_blank"><img src="img/btn_mobile_03.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section2">
+	<div class="box2">
+		<a class="don gallery" href="img/popup_donkin.jpg">donkin</a>
+        <a class="dior gallery" href="img/popup_dior.jpg">dior</a>
+        <a class="home gallery" href="img/popup_home.jpg">home</a>
+        <a class="star gallery" href="img/popup_star.jpg">star</a>
+        <a class="vin gallery" href="img/popup_vintage.jpg">vintage</a>
+        <a class="bar gallery" href="img/popup_bar.jpg">bar</a>
+    </div>
+</div>
+<div class="section3">
+	<div class="photo_wrap">
+        <div class="box3">
+            <div class="photo1">
+            
+            </div>
+            <div class="photo2">
+            
+            </div>
+            <div class="photo3">
+            
+            </div>
+            <div class="photo4">
+            
+            </div>
+            <div class="photo5">
+            
+            </div>
+            <div class="photo6">
+            
+            </div>
+            <div class="photo7">
+            
+            </div>
+            <div class="photo8">
+            
+            </div>
+            <div class="photo9">
+            
+            </div>
+        </div>
+	</div>
+</div>
+</body>
+</html>

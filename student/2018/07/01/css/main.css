@@ -1,0 +1,308 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body,select,button,input,textarea,table {font-family:'Nanum Gothic','맑은 고딕','malgun gothic',sans-serif; font-size:14px;}
+body {min-width:1200px;}
+
+
+#header {position:fixed; left:0; top:0; width:100%; background:#fff; z-index:9999; min-width:1200px;}
+
+/*헤더 이너*/
+#header .header_inner {width:1200px; height:90px; margin:0 auto; z-index:3000;}
+#header .header_inner h1 {float:left; margin-top:20px;}
+
+/*gnb*/
+#header .header_inner .gnb {float:right; margin-top:36px;  z-index:3000;}
+#header .header_inner .gnb>li {float:left; padding-left:75px;}
+#header .header_inner .gnb>li>a { display:block; color:#765838; font-size:18px; font-weight:700; padding-bottom:27px;}
+#header .header_inner .gnb>li:hover>a {border-bottom:3px solid #54110f; padding-bottom:24px;}
+
+#header .header_inner .depth2_wrap {position:absolute; left:0; top:90px; width:100%; height:40px; background:#2c120c; display:none;}
+#header .header_inner .depth2 {width:1200px; margin:0 auto;}
+#header .header_inner .depth2 li {float:left; margin-right:40px; line-height:40px;}
+
+#header .header_inner .depth2_wrap .depth2 li.depth2_txt2 {margin-left:570px;}
+#header .header_inner .depth2_wrap .depth2 li.depth2_txt3 {margin-left:600px;}
+#header .header_inner .depth2_wrap .depth2 li.depth2_txt4 {margin-left:820px;}
+#header .header_inner .depth2_wrap .depth2 li.depth2_txt5 {margin-left:840px;}
+
+#header .header_inner .depth2 li:first-child {margin-left:450px;}
+#header .header_inner .depth2 li a {color:#fff;}
+
+/*서브헤더 보이기*/
+#header .header_inner .gnb>li:hover .depth2_wrap {display:block; z-index:100;}
+
+
+/*메인 비주얼*/
+#main {padding-top:90px;}
+#main .main_visual {min-height:613px;}
+
+#main .main_visual .visual1 {background:url(../images/visual1.jpg) no-repeat center top; height:613px;}
+#main .main_visual .visual2 {background:url(../images/visual2.jpg) no-repeat center top; height:613px;}
+#main .main_visual .visual3 {background:url(../images/visual3.jpg) no-repeat center top; height:613px;}
+
+
+/*슬라이더 버튼 커스텀*/
+#main .main_visual .slick-arrow.slick-prev {position:absolute; left:50px; top:300px; z-index:2000; background:url(../images/slide_btn_pre.png); width:44px; height:44px; text-indent:-9999px; outline:none;}
+#main .main_visual .slick-arrow.slick-next {position:absolute; right:50px; top:300px; z-index:2000; background:url(../images/slide_btn_next.png); width:44px; height:44px; text-indent:-9999px; outline:none;}
+
+/*section1-bestselling*/
+#main .section1 {background:url(../images/bestselling_box.jpg) no-repeat center; height:673px; }
+#main .section1 .section1_inner { margin:0 auto; width:1200px; padding-top:173px; }
+
+#main .section1 .section1_inner .slick-slide {display:inline-block; text-align:center; outline:none;}
+#main .section1 .section1_inner .slick-slide a {outline:none;}
+
+#main .section1 .section1_inner h3 {color:#141414; font-size:20px; font-weight:700;}
+#main .section1 .section1_inner img {display:inline-block; text-align:center; margin-top:20px;}
+#main .section1 .section1_inner p {color:#222; font-size:17px; margin-top:45px;}
+
+/*section1-슬라이더 버튼 커스텀*/
+#main .section1 .section1_inner .slick-arrow.slick-prev {background:none; text-indent:-9999px;}
+#main .section1 .section1_inner .slick-arrow.slick-next {background:none; text-indent:-9999px;}
+
+/*슬라이더 페이지 버튼*/
+#main .section1 .section1_inner .slick-dots{position:absolute; left:0; bottom:0; width:100%; text-align:center;}
+#main .section1 .section1_inner .slick-dots li{display:inline-block; margin:0 5px;}
+#main .section1 .section1_inner .slick-dots button {width:11px; height:11px; background:url(../images/best_slide_icon.png) no-repeat -9px -9px; text-indent:-9999px; outline:none;}
+
+/*클릭한 페이지버튼*/
+#main .section1 .section1_inner .slick-dots li.slick-active button {background:url(../images/best_slide_icon.png) no-repeat -9px -40px; width:11xp; height:11px;}
+
+
+/*section2-웅진식품*/
+#main .section2 {height:749px; background:url(../images/woongin.jpg) no-repeat center top;}
+
+/*the most comfortable space*/
+#main .section3 {background:#fff;  position:relative; width:1200px; margin:0 auto;}
+
+#main .section3 .section3_inner {background:url(../images/mostcomfortable.png) no-repeat center top; height:111px; margin-top:80px;}
+#main .section3 .section3_inner h4 {color:141414; font-size:20px; position:absolute; left:33%; top:17%;}
+
+#main .section3 .place {overflow:hidden;  margin-top:125px; padding-bottom:100px;}
+#main .section3 .place li{float:left; position:relative; padding-left:38px; vertical-align:middle; width:335px;}
+#main .section3 .place .img2 {position:absolute; left:0; top:0; display:none;  padding-left:38px;}
+#main .section3 .place p {color:#222; font-size:14px; margin-top:30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************Espresso / Coffee(espressocoffee.html)*************************************************************************************************/
+#main.espressocoffee .main_sub1_visual {background:url(../images/sub1_visual.jpg) no-repeat center top;  height:300px;}
+#main.espressocoffee .main_sub1_visual h2 {font-size:35px; color:#fff; padding-top:130px; text-align:center;}
+
+/*타이틀 박스*/
+#main.espressocoffee .tit_box {background:url(../images/sub_espresso_box.png) no-repeat center top; width:1200px; height:71px; margin:-29px auto;}
+#main.espressocoffee .tit_box .tit_box_txt li {color:#fff; font-size:18px; text-align:center; padding-top:13px;}
+
+/*location*/
+#main.espressocoffee .location .location_btn {width:1200px; height:70px; margin:0 auto;}
+#main.espressocoffee .location .location_btn li {float:left; margin-top:36px; padding-left:7px; color:#898989; font-size:16px;}
+#main.espressocoffee .location .location_btn .arrow {margin-top:7px;}
+#main.espressocoffee .location .location_btn li a {font-size:16px; color:#898989;}
+#main.espressocoffee .location .location_btn .this {font-size:16px; color:#444444;}
+#main.espressocoffee .location .location_btn img {margin-top:3px;}
+
+/*container*/
+#main.espressocoffee .container {width:1200px; overflow:hidden; margin:0 auto; padding:20px 0 200px;}
+
+#main.espressocoffee .container  .product {padding-bottom:50px; overflow:hidden;}
+#main.espressocoffee .container  .product .menu_espresso li {float:left; margin:10px 0 0 6px; position:relative;}
+#main.espressocoffee .container  .product .menu_espresso .plus {position:absolute; left:0; top:0; width:293px; height:320px; display:none;}
+#main.espressocoffee .container  .product .menu_espresso li strong {position:absolute; left:0; bottom:20px; text-align:center; font-size:16px; color:#141414; width:100%;}
+#main.espressocoffee .container  .product .menu_espresso li .best_icon {position:absolute; left:0; top:0; width:52px; height:52px; margin-left:20px;}
+
+#main.espressocoffee .container  .product2 {padding-bottom:50px; overflow:hidden;}
+#main.espressocoffee .container  .product2 .menu_coffee li {float:left; margin:10px 0 0 6px; position:relative;}
+#main.espressocoffee .container  .product2 .menu_coffee .plus {position:absolute; left:0; top:0; width:293px; height:320px; display:none;}
+#main.espressocoffee .container  .product2 .menu_coffee li strong {position:absolute; left:0; bottom:20px; text-align:center; font-size:16px; color:#141414; width:100%;}
+#main.espressocoffee .container  .product2 .menu_coffee li .best_icon {position:absolute; left:0; top:0; width:52px; height:52px; margin-left:20px;}
+
+#main.espressocoffee .container  .product3 .menu_latte li {float:left; margin:10px 0 0 6px; position:relative;}
+#main.espressocoffee .container  .product3 .menu_latte .plus {position:absolute; left:0; top:0; width:293px; height:320px; display:none;}
+#main.espressocoffee .container  .product3 .menu_latte li strong {position:absolute; left:0; bottom:20px; text-align:center; font-size:16px; color:#141414; width:100%;}
+#main.espressocoffee .container  .product3 .menu_latte li .best_icon {position:absolute; left:0; top:0; width:52px; height:52px; margin-left:20px;}
+
+/*호버시*/
+#main.espressocoffee .container .product li:hover .plus {display:block;}
+#main.espressocoffee .container .product2 li:hover .plus {display:block;}
+#main.espressocoffee .container .product3 li:hover .plus {display:block;}
+
+
+
+/***************************************************************************브랜드 소개(brand.html)*************************************************************************************************/
+#main.brand .main_sub2_visual {background:url(../images/sub2_visual.jpg) no-repeat center top;  height:448px;}
+#main.brand .main_sub2_visual h2 {color:#fff; font-size:36px; text-align:center; padding-top:184px; }
+
+/*symbol mark*/
+#main.brand .symbol {height:620px; background:#fff; }
+#main.brand .symbol h3 {text-align:center; padding-top:55px;}
+#main.brand .symbol h4 {text-align:center; padding-top:25px;}
+#main.brand .symbol p {font-size:20px; text-align:center; padding-top:28px;}
+#main.brand .symbol .symbol_img {text-align: center; padding-top:72px;}
+
+/*coffeesmith world*/
+#main.brand .world {background:url(../images/sub2_world.jpg) no-repeat center top; height:499px; }
+
+#main.brand .world .world_inner {width:1200px; margin:0 auto; padding-top:80px;}
+#main.brand .world .world_inner .world_txt {float:right; text-align:center; margin-right:88px;}
+#main.brand .world .world_inner h4 {margin-bottom:27px;}
+#main.brand .world .world_inner h3 {margin-bottom:30px;}
+#main.brand .world .world_inner p {color:#141414; font-size:16px; margin-bottom:30px;}
+
+#main.brand .world .world_inner .btn_view {display:block; width:200px; height:40px; background:#2c120c; color:#fff; font-size:18px; line-height:40px; margin-left:54px;}
+
+
+/*아름다운 건축물*/
+#main.brand .building {background:url(../images/sub2_buling.jpg) no-repeat center top; height:630px; }
+
+#main.brand .building .building_inner {width:1200px; margin:0 auto;}
+#main.brand .building .building_inner .building_box { position:relative; width:473px; height:473px; background:#fff; opacity:0.8; float:right; text-align:center; margin-top:80px;}
+#main.brand .building .building_inner .building_box p {font-size:22px; color:#5c5959; font-weight:700; margin-top:130px;}
+#main.brand .building .building_inner .building_box strong {color:#141414;}
+#main.brand .building .building_inner .building_box .box_txt {font-size:22px; color:#5c5959; font-weight:700; margin:45px 0 70px 0;}
+
+#main.brand .building .building_inner .building_box .btn_view2 {display:block; width:200px; height:40px; background:#2c120c; color:#fff; font-size:18px; line-height:40px; margin-left:130px;}
+
+
+/***************************************************************************매장 찾기(search.html)*************************************************************************************************/
+#main.store .sub3_visual {background:url(../images/sub3_visual_02.jpg) no-repeat center top; height:300px;}
+#main.store .sub3_visual  h3 {text-align:center; color:#fff; font-size:20px; padding-top:100px;}
+#main.store .sub3_visual  h2 {text-align:center; color:#fff; font-size:50px; font-weight:bold;}
+
+/*빠른 매장 찾기*/
+#main.store  .area_box_txt {background:#e3e2e2;   padding:50px 0;}
+
+#main.store  .area_box_txt .contents {width:1200px; margin:0 auto;}
+#main.store  .area_box_txt .contents p {float:left; color:#141414; font-size:16px; margin-top:12px; margin-left:30px; width:160px;}
+
+#main.store .contents .area_box {float:left; position:relative; margin-left:0px;}
+#main.store .contents .area_box .btn_area{ background:#fff url(../images/sub3_arrow.png) no-repeat 194px 17px; width:225px; height:46px; text-indent:-150px; border:1px solid #b7b7b7; outline:none; opacity:0.8; font-size:14px; color:#2d2d2d;}
+
+#main.store .contents .area_box .txt_area {position:absolute; left:0; top:46px; width:223px; height:304px; overflow:auto; background-color:#fff; border:1px solid #e3e6e8; border-bottom:none; display:none;}
+#main.store .contents .area_box .txt_area li {display:block;}
+#main.store .contents .area_box .txt_area li a {display:block; color:#696b71; padding:10px 20px; font-weight:400;}
+#main.store .contents .area_box .txt_area li a:hover {background:#CCC;}
+
+/*시/군/구*/
+#main.store .contents .area_box2 {float:left; position:relative; margin-left:24px;}
+#main.store .contents .area_box2 .btn_area2{ background:#fff url(../images/sub3_arrow.png) no-repeat 194px 17px; width:225px; height:46px; text-indent:-150px; border:1px solid #b7b7b7; outline:none; opacity:0.8; font-size:14px; color:#2d2d2d;}
+
+#main.store .contents .area_box2 .txt_area2 {position:absolute; left:0; top:46px; width:223px; height:304px; overflow:auto; background-color:#fff; border:1px solid #e3e6e8; border-bottom:none; display:none;}
+#main.store .contents .area_box2 .txt_area2 li {display:block;}
+#main.store .contents .area_box2 .txt_area2 li a {display:block; color:#696b71; padding:10px 20px; font-weight:400;}
+#main.store .contents .area_box2 .txt_area2 li a:hover {background:#CCC;}
+
+/*매장명 또는 주소를 입력하세요*/
+#main.store .contents .search_notice_wrap input {width:225px; height:40px; text-indent:14px; background:#fff; opacity:0.8; margin-left:24px;}
+
+/*검색*/
+#main.store .contents .search_notice_wrap button {width:132px; height:46px; background:#565656; opacity:0.8; color:#fff; border:1px solid #b7b7b7; margin:-4px 0 0 8px;}
+
+/*부가 서비스로 검색*/
+#main.store .area_box_txt .contents2  {width:1200px; margin:0 auto; padding-top:40px;}
+#main.store .area_box_txt .contents2 p {float:left; color:#141414; font-size:16px; margin-left:30px; width:160px;}
+#main.store .area_box_txt .contents2 a {display:inline-block; margin-right:20px;}
+#main.store .area_box_txt .contents2 a:first-child {margin-left:40px;}
+
+#main.store .sub_table { width:1200px; overflow:hidden; margin:0 auto; padding:50px 0;}
+#main.store .sub_table .num_table {float:right; margin-bottom:10px;}
+
+#main.store .sub_table tr {text-align:center; padding:10px 0; color:#141414; border-bottom:1px solid #afafaf; border-top:1px solid #afafaf;}
+#main.store .sub_table td {padding:20px 0; text-align:center;}
+#main.store .sub_table td.td_adress {text-align:left; padding-left:234px; display:block;} 
+#main.store .sub_table td.name {font-size:16px; font-weight:700;}
+
+#main.store .sub_table tr.on {background:#e5e5e5; cursor:pointer}
+
+/*게시판 페이지 번호*/
+#main.store .sub_table .page_board {text-align:center; margin-top:20px;}
+#main.store .sub_table .page_board a {display:inline-block;  width:23px; height:23px; color:#222; font-size:13px;  line-height:23px; margin-left:4px; border:1px solid #b67c62; border-radius:11px;}
+#main.store .sub_table .page_board a:hover {border-color:#2c120c; border-radius:13px;}
+#main.store .sub_table .page_board span {display:inline-block; width:25px; height:25px;  line-height:25px; background:#6b493a; border-radius:13px; color:#fff; font-weight:700; }
+#main.store .sub_table .page_board .btn_prev{background:url(../images/sub3_table_arrow_l.png) no-repeat; border:none; width:25px; height:25px;}
+#main.store .sub_table .page_board .btn_next{background:url(../images/sub3_table_arrow_r.png) no-repeat; border:none; width:25px; height:25px;}
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************Event(event.html)*************************************************************************************************/
+#main.event .sub4_visual {background:url(../images/sub4_visual.jpg) no-repeat center top; width:100%; height:302px;}
+#main.event .sub4_visual h2 {font-size:35px; color:#fff; padding-top:130px; text-align:center;}
+
+#main.event .contents {width:1200px; margin:0 auto;}
+
+/*타이틀 박스*/
+#main.event .contents .tit_box {background:url(../images/sub_espresso_box.png) no-repeat center top; width:1200px; height:71px; margin:-29px auto;}
+#main.event .contents .tit_box .tit_box_txt li {color:#fff; font-size:18px; text-align:center; padding-top:13px;}
+
+/*location*/
+#main.event .contents .location .location_btn {width:1200px; height:70px; margin:0 auto;}
+#main.event .contents .location .location_btn li {float:left; margin-top:36px; padding-left:7px; color:#898989; font-size:16px;}
+#main.event .contents .location .location_btn .arrow {margin-top:7px;}
+#main.event .contents .location .location_btn li a {font-size:16px; color:#898989;}
+#main.event .contents .location .location_btn .this {font-size:16px; color:#444444;}
+#main.event .contents .location .location_btn img {margin-top:3px;}
+
+/*lnb*/
+#main.event .contents .lnbselect  {width: 1120px; height:50px;background: #eeeae7; margin: 0 auto;}
+#main.event .contents .lnbselect .lnbselect_inner {width: 960px; margin: 95px auto 0;}
+
+#main.event .contents .lnbselect .lnbselect_inner li {float: left; margin:14px 0 0 174px; }
+#main.event .contents .lnbselect .lnbselect_inner li a {font-size: 14px; color: #4e4e4e; font-weight:700;}
+
+#main.event .contents .lnbselect .lnbselect_inner li:hover a {border-bottom:2px solid #54110f;}
+
+/*이벤트 박스*/
+#main.event .contents .event_box {margin-left:40px;}
+
+#main.event .contents .event_box .txt1 {margin-top:65px;}
+#main.event .contents .event_box .txt2 {margin-top:25px;}
+#main.event .contents .event_box .txt3 {margin-top:25px;}
+#main.event .contents .event_box .txt4 {margin-top:25px;}
+#main.event .contents .event_box .txt5 {margin-top:25px; padding-bottom:200px;}
+
+
+
+
+
+
+
+
+
+/*footer*/
+#footer {width:100%; height:220px; background:#444444;}
+#footer .footer_menu{width:100%; height:70px; border-bottom:1px solid #fff;}
+#footer .footer_menu .footer_gnb {width:1200px; height:70px; margin:0 auto; }
+#footer .footer_menu .footer_gnb a {float:left; color:#fff; font-size:15px; text-align:center; font-weight:700; padding-left:30px; line-height:70px;}
+
+#footer .footer_address {width:1200px;  height:150px; margin:0 auto;}
+#footer .footer_address p {color:#fff; padding:45px 0 0 30px; font-size:13px; line-height:20px; }
+#footer .footer_address address {color:#fff; font-size:13px; padding:10px 0 0 30px;}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Publisher maker</title>
+<meta name="description" content="Publisher maker에 오신것을 환영합니다!">
+<meta name="viewport" content="width=1180">
+<meta property="og:type" content="website">
+<meta property="og:title" content="퍼블리셔메이커">
+<meta property="og:url" content="https://wls0406.dothome.co.kr/publisher_maker/">
+<meta property="og:image" content="/static/images/ico/ico_daelim.png">
+<meta property="og:description" content="즐거운 퍼블리셔메이커를 즐길시간!">
+<link rel="stylesheet" href="css/common.css?v=20190225">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <div class="popup">
+                <div class="box_start">
+                    <button class="btn_start" type="button">시작하기</button>
+                </div>
+            </div>
+            <div class="my_character me"></div>
+            <div class="my_character wink"></div>
+            <div class="my_character sad"></div>
+            <div class="background">
+                <img class="cal" src="images/calendar.jpg" alt="">
+                <img class="info" src="images/main_info.jpg" alt="">
+            </div>
+            <div class="select_wrap">
+                <ul class="select_list">
+                    <li><button class="btn_sel no1" type="button">능력치</button></li>
+                    <li><button class="btn_sel no2" type="button">대화하기</button></li>
+                    <li><button class="btn_sel no3" type="button">포트폴리오</button></li>
+                    <li><button class="btn_sel no4" type="button">추천</button></li>
+                </ul>
+                <div class="popup_wrap value">
+                    <div class="value_popup no1">
+                        <img src="images/value01.png" width="460" alt="">
+                    </div>
+                    <div class="value_popup no2">
+                        <img src="images/value02.png" width="460" alt="">
+                    </div>
+                    <div class="value_popup no3">
+                        <img src="images/value03.png" width="340" alt="">
+                    </div>
+                </div>
+                <div class="popup_wrap tolk">
+                    <div class="tolk_popup no1">
+                        <p class="typing1"></p>
+                    </div>
+                    <div class="tolk_popup no2">
+                        <ul class="tolk_list">
+                            <li class="list"><a href="#">최근의 상태</a></li>
+                            <li class="list"><a href="#">공부에 대해</a></li>
+                            <li class="list"><a href="#">그 외의 문제</a></li>
+                            <li><a class="tolk_close" href="#">그만둔다</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup_wrap pt">
+                    <div class="tolk_popup no1">
+                        <p class="typing2"></p>
+                    </div>
+                    <div class="pt_popup">
+                        <ul class="tolk_list">
+                            <li><a href="orion_renewal.html">오리온 리뉴얼사이트<br><em>데스크탑&amp;모바일</em></a></li>
+                            <li><a href="eworld_renewal.html">이월드 리뉴얼사이트<br><em>반응형</em></a></li>
+                            <li><a class="tolk_close pt" href="#">그만둔다</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup_wrap reco">
+                    <div class="tolk_popup no1">
+                        <p class="typing3"></p>
+                    </div>
+                    <div class="reco_popup">
+                        <ul class="tolk_list">
+                            <li class="list"><a href="#">우갱</a></li>
+                            <li class="list"><a href="#">정연짱</a></li>
+                            <li class="list"><a href="#">수저</a></li>
+                            <li class="list"><a href="#">귀욤네</a></li>
+                            <li class="list"><a href="#">푱균</a></li>
+                            <li class="list"><a href="#">경표</a></li>
+                            <li class="list"><a href="#">햄니</a></li>
+                            <li><a class="tolk_close" href="#">그만둔다</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="final_wrap"></div>
+                <div class="popup_wrap final">
+                    <div class="tolk_popup no1">
+                        <p class="typing4"></p>
+                    </div>
+                    <div class="final_popup">
+                        <ul class="tolk_list">
+                            <li><a class="employ" href="#">채용한다</a></li>
+                            <li><a class="not_employ" href="#">채용하지 않는다</a></li>
+                            <li><a class="tolk_close final" href="#">그만둔다</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //파라미터 함수를 이용하여 popup 재실행 막기
+        //index.html?pagevisit
+        if(document.URL.match(/pagevisit/)){
+            $('#main .popup').hide();
+            $('.popup .btn_start').off();
+            $('#main .my_character.me').show();
+        }
+    </script>
+</body>
+</html>

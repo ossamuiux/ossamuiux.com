@@ -1,0 +1,247 @@
+ <!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1400">
+<title>HOT ISSUE</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(e) {
+	//매월 구독 신청
+	 $('.click .btn_go').click(function(e) {
+        e.preventDefault();
+		
+		$('.modal_popup2').show();
+		 
+    });
+	//매월 구독 신청 닫기 버튼
+	$('.modal_popup2 .btn_close').click(function(e) {
+        $('.modal_popup2').hide();
+		
+		$('.modal_popup2 .guide').attr('src',''); 
+    });
+	
+	//아임패션디자이너 모달팝업
+	 $('.section2_inner .artwork_list li').click(function(e) {
+        e.preventDefault();
+		var num = $(this).index();
+		//console.log(num);
+		$('.modal_popup').show();
+		$('.modal_popup .show').eq(num).show().siblings('.show').hide();
+    });
+	
+	$('.modal_popup .btn_close,.modal_popup').click(function(e) {
+        $('.modal_popup').hide();
+		 
+    });
+
+	
+	//패션 이즈 뭔들//
+	 var mySwiper = new Swiper ('.slider1', {
+        slidesPerView:'auto',//생략시 한장만 나옴
+	    speed:1200,//이동속도
+		centeredSlides:true,
+	    spaceBetween:30,//간격
+	    autoplay:400,//자동실행시간
+		autoplayDisableOnInteraction:false,
+        loop:true//반복
+    }); 
+	//자동실행 멈춤
+	$('.slider1').mouseenter(function() {
+      	mySwiper.stopAutoplay();
+    });
+	//자동 실행 시작
+	$('.slider1').mouseleave(function() {
+      	mySwiper.startAutoplay();
+    });
+	      
+	
+});
+</script>
+</head>
+<body>
+<div id="header" class="interview">
+    <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+    <ul class="util">
+        <li class="util1"><a href="interview.html"></a></li>
+        <li class="util2"><a href="collection.html"></a></li>
+        <li class="util3"><a href="hotissue.html"></a></li>   
+    </ul>
+</div>
+<div id="main" class="hotissue">
+	<div class="btn_top ">
+    	<a href="#">top</a>
+    </div>
+	<div class="sub_visual">
+    	<div class="sub_visual_inner">
+    		<h2>WHAT IS THE<br>HOT ISSUE?</h2>
+        </div>
+    </div>
+    <div class="section1">
+    	<div class="left_txt">
+        	<img src="images/editor_art.png" alt="">
+            <img class="cover" src="images/editor_art_hover.png" alt="">
+        </div>
+        <div class="right_txt">
+        	<img class="txt1" src="images/art_text.png" alt="">
+        </div>
+    </div>
+    <div class="section2">
+    	<div class="section2_inner">
+        	<div class="left_txt">
+            	<img src="images/designer_text.png" alt="">
+            </div>
+            <div class="right_txt">
+            	<ul class="artwork_list">
+                	<li>
+                    	<a href="#">
+                        	<div class="cover"></div>
+                            <img src="images/designer_1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="cover cover2"></div>
+                            <img src="images/designer_2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="cover cover3"></div>
+                            <img src="images/designer_3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<div class="cover cover4"></div>
+                            <img src="images/designer_4.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal_popup">
+            	<button type="button" class="btn_close">팝업버튼닫기</button>
+            	<div class="show show1"><img src="images/show.jpg" alt=""></div>
+                <div class="show show2"><img src="images/flat.jpg" alt=""></div>
+                <div class="show show3"><img src="images/process.jpg" alt=""></div>
+                <div class="show show4"><img src="images/illust.jpg" alt=""></div>
+            </div>
+            <img class="copy" src="images/copyright1.png" alt="">
+        </div>
+    </div>
+    <div class="section3">
+    	<h3><img src="images/whatido.png" alt=""></h3>
+        <div class="do">
+        	<ul class="do_list">
+            	<li>
+                	<div class="cover"></div>
+                    <img src="images/what_1.png" alt="">
+                </li>
+                <li>
+                	<div class="cover cover2"></div>
+                    <img src="images/what_2.png" alt="">
+                </li>
+                <li>
+                	<div class="cover cover3"></div>
+                    <img src="images/what_3.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section4">
+    	<div class="section4_inner">
+        	<h3><img src="images/md_title.png" alt=""></h3>
+        </div>
+        <div class="main_slider">
+			<div class="swiper-container slider1">
+    			<div class="swiper-wrapper">
+            		<div class="swiper-slide"  style="width:353px">
+                    	<img src="images/md_1.png" alt="">
+                    	<img class="cover" src="images/md_1_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_2.png" alt="">
+                    	<img class="cover" src="images/md_2_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_3.png" alt="">
+                    	<img class="cover" src="images/md_3_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_4.png" alt="">
+                    	<img class="cover" src="images/md_4_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_5.png" alt="">
+                    	<img class="cover" src="images/md_5_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_6.png" alt="">
+                    	<img class="cover" src="images/md_6_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_7.png" alt="">
+                    	<img class="cover" src="images/md_7_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_8.png" alt="">
+                    	<img class="cover" src="images/md_8_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_9.png" alt="">
+                    	<img class="cover" src="images/md_9_hover.png" alt="">
+                	</div>
+                    <div class="swiper-slide" style="width:360px">
+                    	<img src="images/md_10.png" alt="">
+                    	<img class="cover" src="images/md_10_hover.png" alt="">
+                	</div>
+                </div>
+            </div>
+        </div>            
+    </div>
+    <div class="section5">
+    	<div class="section5_inner">
+            <div class="left_txt">
+                <img class="txt1" src="images/newstart_text.png" alt="">
+            </div>
+            <div class="right_txt">
+                <img src="images/newstart.png" alt="">
+                <img class="cover" src="images/newstart_hover.png" alt="">
+            </div>
+            <div class="click">
+            	<button class="btn_go" type="button" title="연락처보기">매월 구독신청 안내</button>
+                <div class="portfolio"><a href="collection.html">포트폴리오 보러가기</a></div>
+                <div class="modal_popup2">
+                    <div class="guide">
+                    	<img src="images/guide.png" alt="">
+                    	<button type="button" class="btn_close">팝업버튼닫기</button>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+    </div>
+</div>
+<div id="footer">
+	
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

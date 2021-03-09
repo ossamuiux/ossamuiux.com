@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1000">
+<title>조아라 포트폴리오</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script>
+$(document).ready(function(){
+	var sw=0;
+	$('.m_btn').click(function(e){
+		e.preventDefault();
+		
+		if(sw==0){
+			$(this).addClass('on')
+			$('.m_gnb').animate({'left':'0'});
+			sw=1;
+		} else{
+			$(this).removeClass('on')
+			$('.m_gnb').animate({'left':'-200px'});
+			sw=0;			
+		}
+	});
+	
+	$('.bg_wrap .m_gnb li').click(function(e){
+		e.preventDefault();
+		
+		var num=$(this).index();
+		//console.log(num);
+		
+		if(num==0){
+			$('html,body').stop().animate({'scrollTop':'0'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else if(num==1){
+			$('html,body').stop().animate({'scrollTop':'1000px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else if(num==2){
+			$('html,body').stop().animate({'scrollTop':'2310px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else if(num==3){
+			$('html,body').stop().animate({'scrollTop':'3193px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else {
+			$('html,body').stop().animate({'scrollTop':'3863px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}		
+	});
+	
+	//페이지슬라이드
+	$('.bg_wrap .guide li').click(function(e){		
+		e.preventDefault();
+		
+		var num=$(this).index();
+		//console.log(num);
+		
+		if(num==0){
+			$('html,body').stop().animate({'scrollTop':'0'},300);
+			$('.guide li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else if(num==1){
+			$('html,body').stop().animate({'scrollTop':'1000px'},300);
+			$('.guide li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else if(num==2){
+			$('html,body').stop().animate({'scrollTop':'2310px'},300);
+			$('.guide li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else if(num==3){
+			$('html,body').stop().animate({'scrollTop':'3193px'},300);
+			$('.guide li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		} else {
+			$('html,body').stop().animate({'scrollTop':'3863px'},300);
+			$('.guide li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}
+	});
+	
+	//btn 자동 on처리
+		
+		$(window).scroll(function(){
+			var num2=$(this).scrollTop();
+			console.log(num2);
+			if(num2>=0 && num2<900){
+				$('.guide li a').removeClass('on');
+				$('.guide li').eq(0).find('a').addClass('on');
+			} else if(num2>=900 && num2<2100) {
+				$('.guide li a').removeClass('on');
+				$('.guide li').eq(1).find('a').addClass('on');
+			} else if(num2>=2100 && num2<3100) {
+				$('.guide li a').removeClass('on');
+				$('.guide li').eq(2).find('a').addClass('on');
+			} else if(num2>=3100 && num2<3863) {
+				$('.guide li a').removeClass('on');
+				$('.guide li').eq(3).find('a').addClass('on');
+			} else {
+				$('.guide li a').removeClass('on');
+				$('.guide li').eq(4).find('a').addClass('on');
+			}
+		});
+	
+	$('a.gallery').colorbox({rel:'gal'});
+	
+	$('a.colorbox').colorbox({rel:'gal2'});
+	
+	$('a.cbox').colorbox({rel:'gal3'});
+});
+</script>
+</head>
+
+<body>
+<div class="bg_wrap">
+	<h1><a href="index.html"><img src="img/bg_logo.PNG" alt="joara"></a></h1>
+    <a class="m_btn" href="#"><img class="img1" src="img/m_gnb_open.PNG" alt=""><img class="img2" src="img/m_gnb_close.png" alt=""></a>
+    <div class="m_gnb">
+    	<ul>
+        	<li><a href="#">HOME</a></li>
+            <li><a href="#section1">INTRODUCTION</a></li>
+            <li><a href="#section2">PROJECT</a></li>
+            <li><a href="#section3">MOBILE</a></li>
+            <li><a href="#section4">WORK</a></li>
+        </ul>
+    </div>
+    <ul class="guide">
+        <li><a class="on" href="#">a</a></li>
+    	<li><a href="#section1">a</a></li>
+        <li><a href="#section2">a</a></li>
+        <li><a href="#section3">a</a></li>
+        <li><a href="#section4">a</a></li>
+    </ul>
+	<div id="section1">
+		<div class="intro_wrap">
+        	<h2><img src="img/introduction.PNG" alt=""></h2>
+            <div class="profile">
+            	<img src="img/logo.PNG" alt="">
+                <p><span>조아라</span><br>
+                <em>Jo a ra</em><br>
+                1993/08/26<br>
+                ara0826@naver.com</p>
+            </div>
+            <div class="box_wrap">
+            	<div class="box1">
+                	<h3><img src="img/education.PNG" alt=""></h3>
+                    <p>2009/03 ~ 2012/02<br>
+                    경민 IT고등학교 디자인과 졸업<br>
+                    <br>
+                    2012/03 ~ 2014/02<br>
+                    계원예술대학교 영상디자인과 졸업</p>
+                </div>
+                <div class="box2">
+                	<div class="lnc">
+                    	<h3><img src="img/license.PNG" alt=""></h3>
+                        <p>2011년<br>
+                        컴퓨터그래픽스운용기능사</p>
+                    </div>
+                    <div class="ex">
+                    	<h3><img src="img/experience.png" alt=""></h3>
+                        <p>2014/04 ~ 2014/12<br>
+                        주식회사 로그집(logzip) 애니메이터 계약직</p>
+                    </div>
+                </div>
+                <div class="box3">
+                	<h3><img src="img/skills.png" alt=""></h3>
+                    <img class="skill" src="img/program.PNG" alt="">
+                </div>
+            </div>
+            <div class="box4">
+            	<h3><img src="img/personality.PNG" alt=""></h3>
+                <ul class="personal">
+                	<li><p><span>EXTROVERSION</span><br>
+                    외향성</p>
+                    </li>
+                    <li><p><span>METRICULOUS</span><br>
+                    섬세함</p>
+                    </li>
+                    <li><p><span>POSITIVE</span><br>
+                    긍정적</p>
+                    </li>
+                    <li><p><span>TRICKS</span><br>
+                    잔머리</p>
+                    </li>
+                </ul>
+                <ul class="img">
+                	<li><img src="img/bar1.PNG" alt=""></li>
+                    <li><img src="img/bar2.PNG" alt=""></li>
+                    <li><img src="img/bar3.PNG" alt=""></li>
+                    <li><img src="img/bar4.PNG" alt=""></li>
+                </ul>
+            </div>
+            <div class="box5">
+            	<h3><img src="img/logo_h1.PNG" alt=""></h3>
+                <div class="logo"><img src="img/logodesign_img.PNG" alt=""></div>
+                <div class="p_wrap">
+                	<div class="logo_a">
+                    	<img src="img/logodesign_img2.PNG" alt="">
+                    	<p>조아라(Jo a ra)에서 'A'를 아이콘화 시켜 단순한 삼각형으로 만들었다.<br>
+삼각형은 각지지않은 디자인으로 다소 딱딱하지 않은 내 성격을 표현했다.</p>
+                    </div>
+                    <div class="logo_r">
+                    	<img src="img/logodesign_img3.PNG" alt="">
+                        <p>조아라(Jo a ra)에서 'ㄹ'을 도형으로 형상화 시켰다.<br>
+'아라'란 바다의 순 우리말로 그 의미를 담아 바다의 물결을 닮은 도형으로 그려냈다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section2">
+    	<div class="project_wrap">
+        	<div class="title">
+            	<img src="img/mainproject.PNG" alt="">
+            </div>
+            <div class="site">
+            	<img src="img/mainproject_thumb.PNG" alt="" border="0" usemap="#Map">
+                <map name="Map">
+                  <area shape="poly" coords="49,372,238,174,71,52,0,252" href="ottogi/index.html" target="_blank">
+                  <area shape="poly" coords="72,51,215,0,295,57,239,175" href="ottogi/introduce.html" target="_blank">
+                  <area shape="poly" coords="52,370,288,425,238,175" href="ottogi/cooking_class.html" target="_blank">
+                  <area shape="poly" coords="239,176,296,56,452,135" href="ottogi/cf_story.html" target="_blank">
+                  <area shape="poly" coords="239,176,354,360,451,300,453,136" href="ottogi/retort.html" target="_blank">
+                </map>
+          </div>
+            <p>∧ 각 도형을 클릭하시면 해당 리뉴얼사이트로 이동합니다.</p>
+            <ul class="txt">
+            	<li>ㆍ<span>리뉴얼사이트명</span> : 오뚜기 (원본 홈페이지 : http://www.ottogi.co.kr/otgr/Main.jsp)</li>
+                <li>ㆍ<span>기획 의도</span> : 우리나라에서 이름 좀 있는 식품회사들 중 홈페이지가 가장 오래되고 촌스러워 보였다.<br>
+                 　　　　　　메뉴와 제품의 종류가 많아 리뉴얼하기 적당했고,<br>
+                 　　　　　　새로운 리뉴얼을 통해 오뚜기라는 회사 본연의 이미지를 살리고 싶었다.</li>
+                <li>ㆍ<span>컬러컨셉</span> :  <img src="img/color_concenpt.PNG" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div id="section3">
+    	<div class="m_wrap">
+            <h1><img src="img/m_title.PNG" alt=""></h1>
+            <div class="pic">
+                <a href="m/index.html" target="_blank"><img src="img/m_pic1.PNG" alt=""></a>
+                <a href="m/introduce.html" target="_blank"><img src="img/m_pic2.PNG" alt=""></a>
+            </div>
+            <div class="m_txt">
+                <h2><img src="img/m_h2.PNG" alt=""></h2>
+                <p>오뚜기의 메인 색상 레드(#de1d25)로만<br>
+                        포인트를 살렸고 PC에서 볼 수 있는 내용들을<br>
+                        모바일에서도 볼 수 있도록 노력했습니다.<br>
+                        <br>
+                        간단한 아이콘으로 퀵메뉴를 만들어<br>
+                        편리함과 심플함을 더 했고,<br>
+                        각 파트를 흰배경으로 채워 오뚜기만의<br>
+                        신선하고 깔끔한 이미지를 연출했습니다.</p>
+            </div>
+    	</div>
+    </div>
+    <div id="section4">
+    	<div class="work_wrap">
+        	<h2><img src="img/work.PNG" alt=""></h2>
+            <div class="illust">
+            	<h3><img src="img/illust_h2.png" alt=""></h3>
+                <ul class="work">
+                    <li>
+                        <a class="i1 gallery" href="img/img1.png"><img src="img/illust1_color.png" alt=""></a>
+                        <a class="i2 gallery" href="img/img3.png"><img src="img/illust3_color.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a class="i3 gallery" href="img/img2.png"><img src="img/illust2_color.png" alt=""></a>
+                        <a class="i4 gallery" href="img/img4.png"><img src="img/illust4_color.png" alt=""></a>
+                    </li>
+                    <li><a class="i5 gallery" href="img/img5.png"><img src="img/illust5_color.png" alt=""></a>
+                    <a class="i8 gallery" href="img/img8.png"><img src="img/illust8_color.png" alt=""></a>
+                    </li>
+                    <li><a class="i6 gallery" href="img/img6.png"><img src="img/illust6_color.png" alt=""></a></li>
+                    <li><a class="i7 gallery" href="img/img7.png"><img src="img/illust7_color.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="koryo">
+            	<h3><img src="img/koryodang_h2.png" alt=""></h3>
+                <ul class="k_wrap">
+                	<li>
+                    <a class="k1 colorbox" href="img/site_img1.PNG"><img src="img/koryo1_color.png" alt=""></a>
+                    <a class="k2 colorbox" href="img/site_img2.PNG"><img src="img/koryo2_color.png" alt=""></a>
+                    </li>
+                	<li><a class="k3 colorbox" href="img/site_img3.PNG"><img src="img/koryo3_color.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="matte">
+            	<h3><img src="img/mattepainting_h2.PNG" alt=""></h3>
+            	<ul class="painting">
+                	<li><a class="m1 cbox" href="img/matte_img1.png"><img src="img/matte1_color.PNG" alt=""></a></li>
+                    <li><a class="m2 cbox" href="img/matte_img2.png"><img src="img/matte2_color.PNG" alt=""></a></li>
+                    <li>
+                    <a class="m3 cbox" href="img/matte_img3.png"><img src="img/matte4_color.PNG" alt=""></a>
+                    <a class="m4 cbox" href="img/matte_img4.png"><img src="img/matte3_color.PNG" alt=""></a>
+                    </li>
+                    <li>
+                    <a class="m5 cbox" href="img/matte_img5.png"><img src="img/matte5_color.PNG" alt=""></a>
+                    <a class="m6 cbox" href="img/matte_img6.png"><img src="img/matte6_color.PNG" alt=""></a>
+                    </li>
+                    <li>
+                    <a class="m7 cbox" href="img/matte_img7.png"><img src="img/matte7_color.PNG" alt=""></a>
+                    <a class="m8 cbox" href="img/matte_img8.PNG"><img src="img/matte8_color.PNG" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

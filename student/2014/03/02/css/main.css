@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+
+body {font-family:'Seoul Namsan','malgun gothic','돋움',dotum,sans-serif; font-size:14px; min-width:1200px;}
+h2 {font-family: 'Montserrat', sans-serif; font-size:30px; color:#3b3b3b; text-align:center; background:url(../images/title_bar.png) no-repeat center bottom; padding:80px 0 30px 0;}
+h3 {float:left; width:100%; margin-top:20px; font-family: 'Montserrat', sans-serif; font-size:20px; color:#3b3b3b; text-align:center;}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-face {
+  font-family: 'Seoul Namsan';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/SeoulNamsanM.eot);
+  src: url(../font/SeoulNamsanM.eot?#iefix) format('embedded-opentype'),
+       url(../font/SeoulNamsanM.woff) format('woff'),
+       url(../font/SeoulNamsanM.ttf) format('truetype');
+}
+
+
+/*모바일형식 메뉴*/
+.m_gnb {position:fixed; left:-280px; top:0; width:280px; height:100%; background:rgba(0,0,0,0.8); z-index:9999;}
+.m_gnb .gnb li {border-bottom:1px solid #999; line-height:45px;}
+.m_gnb .gnb a {font-size:16px; color:#FFF; display:block; text-indent:20px; transition:all 0.2s ease-out;}
+.m_gnb .gnb a:hover {text-indent:30px; color:#30b0db;}
+	
+	
+/*페이지버튼*/
+.page_btn {position:fixed; right:30px; top:50%; margin-top:-50px; z-index:970;}
+.page_btn a {display:block; width:20px; height:20px; border-radius:20px; background:#30b0db; text-indent:-9999px; margin:10px 0; box-sizing:border-box;}
+.page_btn a.on {background:#FFF; border:1px solid #999;}
+	
+/*메뉴버튼*/
+.m_btn {position:fixed; left:50px; top:50px; border:none; background:url(../images/menu.png) no-repeat center center; outline:none; width:29px; height:24px;}
+.m_btn.on {background-image:url(../images/close.png);}
+.m_btn.on2 {background-image:url(../images/menu2.png);}
+.m_btn.on2.on {background-image:url(../images/close2.png);}
+
+
+/*인트로*/
+.intro {width:100%; height:1020px; background:url(../images/intro.jpg) no-repeat center top;}
+.intro h1 {position:absolute; right:100px; top:40%; width:500px; height:500px; background:url(../images/logo.png) no-repeat right top; text-indent:-9999px; }
+
+
+
+/*소개섹션*/
+.about {width:100%; height:700px; background:#f4f4f4;}
+.about .about_con {width:1200px; height:650px; margin:0 auto;}
+.about .about_con .list {margin-top:60px;}
+.about .about_con .list li {float:left; width:370px; height:400px; background:#FFF; margin-left:44px;}
+.about .about_con .list li:first-child {margin-left:0px;}
+.about .about_con .list .profile .top {width:100%; height:100px; background:url(../images/con_bar.png) no-repeat center bottom;text-align:center;}
+.about .about_con .list .profile .top img {padding-top:40px;}
+.about .about_con .list .profile p {margin-top:75px; text-align:center; font-family: 'Seoul Namsan', sans-serif; font-size:16px; line-height:30px;}
+
+
+/*두번째 소개섹션*/
+.about2 {width:100%; height:700px; background:#fff;}
+.about2 .about2_con {width:1200px; height:700px; margin:0 auto;}
+.about2 .about2_con .list2 {margin-top:60px; overflow:hidden;}
+.about2 .about2_con .list2 li {float:left; width:300px; height:400px; margin:0 48px;}
+.about2 .about2_con .list2 li img {float:left; margin-left:50px;}
+.about2 .about2_con .list2 li .txt p {float:left; width:100%; margin-top:30px; text-align:center; padding-top:20px;}
+
+
+/*작업물*/
+.work {width:100%; height:1500px; background:url(../images/work_bg.jpg) no-repeat center top;}
+.work .work_con {width:1200px; height:1500px; margin:0 auto;}
+
+
+/*작업물-타이틀*/
+.work .work_con .work_title {width:100%; text-align:center; padding-top:60px;}
+.work .work_con .work_title li {display:inline-block; line-height:40px; margin:0 10px; width:140px; height:40px; background:#28458f; border-radius:5px; text-align:center; font-family: 'Montserrat', sans-serif; font-size:15px; color:#fff;}
+
+
+/*작업물-슬라이더*/
+.work .work_con .tab_con {width:1000px; height:1100px; margin:0 auto; padding-top:100px; position:relative;}
+.work .work_con .tab_con .slider {overflow:hidden;}
+.work .work_con .tab_con .slider .slider_con {height:1100px; outline:none;}
+.work .work_con .tab_con .slider .slider_con .showcase {height:700px; float:left; position:relative;}
+.work .work_con .tab_con .slider .slider_con .showcase img {margin-left:100px;}
+.work .work_con .tab_con .slider .slider_con .showcase .cover {position:absolute; left:135px; top:30px; width:740px; height:415px; background:rgba(0,0,0,0.8); z-index:100; display:none;}
+.work .work_con .tab_con .slider .slider_con .showcase .cover ul {text-align:center; margin-top:150px;}
+.work .work_con .tab_con .slider .slider_con .showcase .cover ul li {font-family: 'Montserrat', sans-serif ;font-size:36px; color:#FFF;}
+.work .work_con .tab_con .slider .slider_con .showcase .cover ul .bar {background:url(../images/detail_bar.png) no-repeat center center; text-indent:-9999px;}
+
+
+
+/*작업물-왼쪽 상세내용*/
+.work .work_con .tab_con .slider .slider_con .outline {clear:both; float:left; width:600px; height:300px; margin-right:30px; padding:20px 15px; color:#333;}
+.work .work_con .tab_con .slider .slider_con .outline em {font-weight:bold;}
+.work .work_con .tab_con .slider .slider_con .process {float:left; width:240px; height:300px; padding:20px 30px; position:relative;}
+.work .work_con .tab_con .slider .slider_con .process ul {float:left;}
+.work .work_con .tab_con .slider .slider_con .process li {line-height:40px; border-bottom:1px solid #CCCCCC; width:230px; color:#000;}
+
+/*작업물-오른쪽 상세내용*/
+.work .work_con .tab_con .slider .slider_con .process .detail {position:absolute; right:40px; top:63px; width:120px; text-align:right;}
+.work .work_con .tab_con .slider .slider_con .process .detail li {border:none; line-height:40px; width:120px; color:#666666;}
+.work .work_con .tab_con .slider .slider_con .process .detail a {color:#F00; }
+.work .work_con .tab_con .slider .slider_con .process .detail .color1 {display:inline-block; font-size:22px; color:#8d0d24;}
+.work .work_con .tab_con .slider .slider_con .process .detail .color2 {display:inline-block; font-size:22px; color:#252527;}
+.work .work_con .tab_con .slider .slider_con .process .detail .color3 {display:inline-block; font-size:22px; color:#727274;}
+.work .work_con .tab_con .slider .slider_con .process .detail .color4 {display:inline-block; font-size:22px; color:#a6a6a6;}
+.work .work_con .tab_con .slider .slider_con .process .detail .color5 {display:inline-block; font-size:22px; color:#f2f2f2;}
+.work .work_con .tab_con .slider .slider_con strong {font-family: 'Seoul Namsan', sans-serif; font-size:18px; margin-bottom:15px; display:block; color:#28458f;}
+
+
+
+/*슬라이드 버튼 커스텀*/
+.work .work_con .tab_con .slider .slick-prev {position:absolute; left:20px; top:300px; width:40px; height:40px; background:url(../images/slider_prev.png) no-repeat; z-index:100; text-indent:-9999px; border:none; outline:none;}
+.work .work_con .tab_con .slider .slick-next {position:absolute; right:20px; top:300px; width:40px; height:40px; background:url(../images/slider_next.png) no-repeat; z-index:100; text-indent:-9999px; border:none; outline:none;}
+
+
+
+
+/*이력서다운*/
+.resume {width:100%; height:360px; background:#fff;}
+.resume .resume_con {width:1200px; height:300px; margin:0 auto;}
+.resume .resume_con h5 {font-family: 'Montserrat', sans-serif; font-size:30px; color:#3b3b3b; text-align:center; padding:90px 0 30px 0;}
+.resume .resume_con a {display:block; width:300px; height:50px; border:2px solid #30b0db; border-radius:50px; text-align:center; line-height:50px; font-size:16px; font-weight:bold; margin-left:440px; margin-top:30px; color:#30b0db;}
+.resume .resume_con a:hover {background:#30b0db; color:#FFF;}
+
+
+/*콘택트*/
+.contact {width:100%; height:600px; background:url(../images/info_bg.jpg) no-repeat center top;}
+.contact .contact_con {width:1200px; height:600px; margin:0 auto;}
+.contact .contact_con .title {color:#FFFFFF;}
+.contact .contact_con .info_wrap {width:100%; height:150px; background:#CCC; margin-top:100px;}
+.contact .contact_con .info_wrap .info {width:900px; margin:0 auto; overflow:hidden; padding-top:25px;}
+.contact .contact_con .info_wrap .info ul li {float:left; background:#666; width:250px; height:100px; margin:0 20px; background:url(../images/info_bar.png) no-repeat left center;}
+.contact .contact_con .info_wrap .info ul li .txt {float:left; margin:25px 0 0 30px;}
+.contact .contact_con .info_wrap .info ul li .txt h4 {font-size:16px; font-weight:bold;}
+.contact .contact_con .info_wrap .info ul li .txt p {font-size:14px;}

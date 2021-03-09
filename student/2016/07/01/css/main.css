@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+
+/************************************팝업(메인)*****************************************/
+.popup_wrap {width:100%; height:80px; background:#000; position:relative;}
+.popup_wrap .popup {background:url(../img/main_ad_banner.jpg) no-repeat center top; height:80px;}
+.popup_wrap .popup .popup_close {position:absolute; left:50%; top:0; margin-left:476px;}
+
+
+/***************************************메인**************************************************/
+/*메인비쥬얼슬라이더,텍스트*/
+.main {position:relative; width:100%; height:550px; border-bottom:1px solid #DCDCDC;}
+.main .slider {width:100%; text-align:center;}
+.main .slider .slick-slide {height:550px; position:relative; overflow:hidden;}
+.main .slider img {position:absolute; left:50%; top:0; margin-left:-960px;}
+
+/*첫번째:하늘위를 걷는 남자 텍스트*/
+.main .slider .s1 {position:relative;}
+.main .slider .s1 .tit1 {position:absolute; right:50%; top:180px; margin-right:-500px; height:178px; width:513px; background:url(../img/thewalk_tit.png) no-repeat;}
+
+/*두번째:007스펙터 텍스트*/
+.main .slider .s2 {position:relative;}
+.main .slider .tit2 {position:absolute; left:50%; top:180px; margin-left:-500px; height:180px; width:1000px; text-align:right;}
+.main .slider .tit2 h1 {font-size:50px; color:#333; font-weight:600;}
+.main .slider .tit2 .line {display:inline-block; background:#333; height:2px; width:350px; margin-top:15px; opacity:0.5; filter(alpha:'50');}
+.main .slider .tit2 h3 {font-size:22px; color:#333; font-weight:600; margin-top:15px; line-height:30px;}
+
+/*세번째:굿 다이노 텍스트*/
+.main .slider .s3 {position:relative;}
+.main .slider .tit3 {position:absolute; left:50%; top:35px; margin-left:-500px; height:180px; width:1000px; text-align:left;}
+.main .slider .tit3 h1 {font-size:50px; color:#fff; font-weight:600;}
+.main .slider .tit3 .line {display:inline-block; background:#fff; height:2px; width:350px; margin-top:15px; opacity:0.5; filter(alpha:'50');}
+.main .slider .tit3 h3 {font-size:22px; color:#fff; font-weight:600; margin-top:15px; line-height:30px;}
+
+/*네번째:스타워즈 텍스트*/
+.main .slider .s4 {position:relative;}
+.main .slider .tit4 {position:absolute; right:50%; top:180px; margin-right:-500px; height:177px; width:496px;  background:url(../img/starwars_tit.png) no-repeat;}
+
+/*다섯번째:어린왕자 텍스트*/
+.main .slider .s5 {position:relative;}
+.main .slider .tit5 {position:absolute; left:50%; top:180px; margin-left:-500px; height:179px; width:513px; background:url(../img/lepetitprince_tit.png) no-repeat;}
+
+/*여섯번째:더셰프 텍스트*/
+.main .slider .s6 {position:relative;}
+.main .slider .tit6 {position:absolute; left:50%; top:320px; margin-left:-500px; height:160px; width:1000px;}
+.main .slider .tit6 h1 {font-size:50px; color:#333; font-weight:600;}
+.main .slider .tit6 .line {display:inline-block; background:#333; height:2px; width:350px; margin-top:15px; opacity:0.5; filter(alpha:'50');}
+.main .slider .tit6 h3 {font-size:22px; color:#333; font-weight:600; margin-top:15px; line-height:30px;}
+
+/*슬라이더 이전,넥스트*/
+.main .slider .slick-prev {width:46px; height:73px; background:url(../img/visual_prev.png) no-repeat; border:none; text-indent:-9999px; position:absolute; left:50%; top:244px; margin-left:-640px; cursor:pointer; z-index:100; outline:none;}
+.main .slider .slick-next {width:46px; height:73px; background:url(../img/visual_next.png) no-repeat; border:none; text-indent:-9999px; position:absolute; right:50%; top:244px; margin-right:-640px; cursor:pointer; z-index:100; outline:none;}
+
+/*슬라이더 페이지버튼 커스텀*/
+.main .slider .slick-dots {position:absolute; left:50%; bottom:20px; margin-left:-86px; overflow:hidden; text-align:center;}
+.main .slider .slick-dots li {margin:0 5px; display:inline-block;} 
+.main .slider .slick-dots li button {width:17px; height:17px; background:url(../img/off_btn.png) no-repeat center bottom; border:none; outline:none; text-indent:-9999px; cursor:pointer; padding:0 .25em;}
+.main .slider .slick-dots li button:hover {background-image:url(../img/on_btn.png);}
+.main .slider .slick-dots li.slick-active button {background-image:url(../img/on_btn.png)}
+
+/*슬라이더 페이지버튼 플레이*/
+.main .pause_btn {position:absolute; left:50%; bottom:20px; width:17px; height:17px; background:url(../img/pause_btn.png) no-repeat ; text-indent:-9999px; margin-left:81px;}
+.main .pause_btn.on {background-image:url(../img/play_btn.png);}
+
+
+/*************************************섹션1***********************************/
+.section1 {height:526px; width:1260px; margin:0 auto;}
+.section1 .tab_menu {height:386px; width:1000px; margin:0 auto; padding-top:70px; text-align:center;}
+.section1 .more {float:right; margin-right:135px; margin-top:149px;}
+
+/*텝메뉴*/
+.section1 .tab_menu .tab_btn {display:inline-block; height:50px; width:603px;}
+.section1 .tab_menu .tab_btn li {float:left; background:#dddddd; width:150px; margin-left:1px; text-align:center;}
+.section1 .tab_menu .tab_btn li:first-child {margin-left:0;}
+.section1 .tab_menu .tab_btn li a {display:inline-block; width:150px; height:50px; line-height:50px; color:#555555; font-size:16px;}
+.section1 .tab_menu .tab_btn li a.on {background-color:#555555; color:#dddddd;}
+.section1 .tab_menu .tab_btn li a:hover {background-color:#555555; color:#dddddd;}
+
+/*텝메뉴 슬라이더 이전,넥스트*/
+.section1 .slick-prev {width:39px; height:66px; background:url(../img/slide_prev.png) no-repeat; border:none; text-indent:-9999px; position:absolute; left:-151px; top:50%; margin-top:-36px; cursor:pointer; z-index:100; outline:none;}
+.section1 .slick-next {width:39px; height:66px; background:url(../img/slide_next.png) no-repeat; border:none; text-indent:-9999px; position:absolute; right:-115px; top:50%; margin-top:-36px; cursor:pointer; z-index:100; outline:none;}
+
+/*텝메뉴 슬라이더*/
+.section1 .tab_menu .tab_content {height:286px; width:1000px; padding-top:50px;}
+
+.section1 .tab_menu .tab_content .slider2 {width:930px; margin-left:18px; position:relative; height:286px; width:1000px;}
+.section1 .tab_menu .tab_content .slider2 .slick-slide {text-align:center; width:310px;}
+
+.section1 .tab_menu .tab_content .slider2 .slick-slide img {float:left;}
+
+/*텝메뉴 슬라이더 오른쪽 영화정보*/
+.section1 .tab_menu .tab_content .slider2 .info {float:right; margin-right:25px; margin-top:-286px; background:#f3f3f3; width:90px; height:264px; border:1px solid #dddddd; padding:10px 10px;}
+
+.section1 .tab_menu .tab_content .slider2 .info em {display:inline-block; background:#fff url(../img/star_03.png) no-repeat center 7px; width:50px; height:50px; color:#777777; font-weight:bold; line-height:70px; float:left; font-size:11px;}
+.section1 .tab_menu .tab_content .slider2 .info span {display:inline-block; background:#b9ada4; width:30px; height:30px; color:#FFF; font-weight:bold; line-height:30px; float:right;}
+.section1 .tab_menu .tab_content .slider2 .info .m_info {margin-top:62px;}
+.section1 .tab_menu .tab_content .slider2 .info .btn {float:left; margin-top:10px;}
+.section1 .tab_menu .tab_content .slider2 .info .btn .btn1 {background:#cbc6c3; width:88px; height:34px; border:1px solid #b9ada4; line-height:34px; color:#FFF;}
+.section1 .tab_menu .tab_content .slider2 .info .btn .btn1:hover {background:none; color:#b9ada4;}
+.section1 .tab_menu .tab_content .slider2 .info .btn .btn2 {background:#cbc6c3; width:88px; height:34px; border:1px solid #b9ada4; line-height:34px; color:#FFF; margin-top:10px;}
+.section1 .tab_menu .tab_content .slider2 .info .btn .btn2:hover {background:none; color:#b9ada4;}
+
+/*텝메뉴 슬라이더 오른쪽 영화정보:시사회*/
+.section1 .tab_menu .tab_content .slider2 .info2 {float:right; margin-right:25px; margin-top:-286px; background:#f3f3f3; width:90px; height:264px; border:1px solid #dddddd; padding:10px 10px;}
+
+.section1 .tab_menu .tab_content .slider2 .info2 span {display:inline-block; background:#b9ada4; width:30px; height:30px; color:#FFF; font-weight:bold; line-height:30px; float:right;}
+.section1 .tab_menu .tab_content .slider2 .info2 .m_info {margin-top:48px;}
+.section1 .tab_menu .tab_content .slider2 .info2 .date {float:left; margin-top:12px;background:#cbc6c3; height:68px; width:90px; font-size:15px; font-weight:600; color:#FFF; padding-top:14px;}
+
+/*텝메뉴 슬라이더 영화포스터 호버*/
+.section1 .tab_menu .tab_content .slider2 .m1 .movie .cover h1 {padding-top:92px;}
+
+.section1 .tab_menu .tab_content .slider2 .movie {position:relative; width:200px; height:284px;}
+.section1 .tab_menu .tab_content .slider2 .movie .cover {background:url(../img/movie_hover_bg.png) repeat; width:198px; height:284px; border:1px solid #dddddd; position:absolute; left:0; top:0; display:none;}
+.section1 .tab_menu .tab_content .slider2 .movie .cover h1 {padding-top:104px; color:#FFF; font-size:22px; font-weight:500;}
+.section1 .tab_menu .tab_content .slider2 .movie .cover .line {display:inline-block; background:#fff; height:1px; width:64px; margin-top:15px; opacity:0.7; filter(alpha:'70');}
+.section1 .tab_menu .tab_content .slider2 .movie .cover h3 {color:#FFF; font-size:15px; font-weight:500; margin-top:15px;}
+
+
+/*************************************섹션2***********************************/
+.section2 {height:700px; width:100%; background:#f3f3f3; }
+.section2 .box1 {height:406px; width:1000px; margin:0 auto;}
+.section2 .box1 .tit {color:#555555; font-size:18px; font-weight:600; margin-top:70px; margin-bottom:18px;}
+
+/*스페셜 이벤트 슬라이더*/
+.section2 .box1 .event {float:left; width:656px; height:407px; position:relative;}
+.section2 .box1 .event .slider3 .e1 {position:relative;}
+.section2 .box1 .event .slider3 .txt1 {position:absolute; top:30px; right:40px; text-align:right;}
+.section2 .box1 .event .slider3 .txt1 h2 {font-size:28px; font-weight:500; color:#333;}
+.section2 .box1 .event .slider3 .txt1 .line {display:inline-block; background:#333; width:200px; height:1px; margin-top:11px; opacity:0.7; filter(alpha:'70');}
+
+.section2 .box1 .event .slider3 .e2 {position:relative;}
+.section2 .box1 .event .slider3 .txt2 {left:40px;  text-align:left;}
+.section2 .box1 .event .slider3 .txt2 h2 {color:#FFF;}
+.section2 .box1 .event .slider3 .txt2 .line {background:#FFF;}
+
+.section2 .box1 .event .slider3 .e3 {position:relative;}
+.section2 .box1 .event .slider3 .txt3 {left:40px;  text-align:left;}
+.section2 .box1 .event .slider3 .txt3 h2 {color:#555555;}
+.section2 .box1 .event .slider3 .txt3 .line {background:#555555;}
+
+/*스페셜 이벤트 슬라이더 페이지버튼 커스텀*/
+.section2 .box1 .event .slider3 .slick-dots {position:absolute; left:50%; bottom:20px; margin-left:-45px; overflow:hidden; text-align:center;}
+.section2 .box1 .event .slider3 .slick-dots li {margin:0 3px; display:inline-block;} 
+.section2 .box1 .event .slider3 .slick-dots li button {width:17px; height:17px; background:url(../img/off_btn.png) no-repeat center bottom; border:none; outline:none; text-indent:-9999px; cursor:pointer; padding:0 .25em;}
+.section2 .box1 .event .slider3 .slick-dots li button:hover {background-image:url(../img/on_btn.png);}
+.section2 .box1 .event .slider3 .slick-dots li.slick-active button {background-image:url(../img/on_btn.png)}
+
+/*스페셜 이벤트 슬라이더 페이지버튼 플레이*/
+.section2 .box1 .event .pause_btn {position:absolute; left:50%; bottom:18px; margin-left:27px; width:17px; height:17px; background:url(../img/pause_btn.png) no-repeat ; text-indent:-9999px; }
+
+.section2 .box1 .event .pause_btn.on {background-image:url(../img/play_btn.png);}
+
+/*시네마리뷰*/
+.section2 .box1 .review {float:right; width:311px; height:407px;}
+.section2 .box1 .review>a {display:block; width:311px; height:300px; position:relative;}
+.section2 .box1 .review .txt {color:#FFF; background:url(../img/movie_hover_bg.png) repeat; width:291px; height:80px; position:absolute; left:0; bottom:0; padding-top:12px; padding-left:20px;}
+.section2 .box1 .review .txt h2 {font-size:16px; font-weight:600;}
+.section2 .box1 .review .txt .line2 {display:inline-block; background:#FFF; width:50px; height:1px; margin-top:8px; opacity:0.5; filter(alpha:'50');}
+.section2 .box1 .review .txt h3 {font-size:13px; line-height:18px;}
+
+/*롯데시네마vip혜택이미지*/
+.section2 .box2 {width:1000px; margin:0 auto; padding-top:35px;}
+
+
+
+
+
+/*************************************섹션3 그린카***********************************/
+.section3 {background:url(../img/greencar_ad.jpg) no-repeat center bottom; height:234px; width:100%; position:relative; cursor:pointer; overflow:hidden;}
+.section3 .greencar {position:absolute; left:50%; bottom:20px; margin-left:-900px;}
+.section3 .cloud1 {position:absolute; left:250px; top:-120px;}
+.section3 .cloud2 {position:absolute; left:1200px; top:-120px;}
+
+
+
+/*************************************섹션4***********************************/
+.section4 {width:1000px; height:408px; margin:0 auto; }
+
+/*공지사항*/
+.section4 .notice {float:left; width:452px; height:248px; margin-top:70px; }
+.section4 .notice .tab_menu {position:relative;}
+.section4 .notice .tab_menu .more {display:inline-block; position:absolute; right:0; bottom:225px; width:57px; height:11px;}
+
+
+/*텝메뉴*/
+.section4 .notice .tab_menu em.line {display:inline-block; position:absolute; right:0; top:36px; height:1px; width:153px; background:#dddddd;}
+.section4 .notice .tab_menu .tab_btn {display:inline-block; height:36px; width:452px;}
+.section4 .notice .tab_menu .tab_btn li {float:left; border:1px solid #dddddd; background:#f3f3f3; width:98px; text-align:center;}
+.section4 .notice .tab_menu .tab_btn li.last {margin-left:-1px;}
+.section4 .notice .tab_menu .tab_btn li:first-child {background:#FFF; border-bottom:#fff; }
+.section4 .notice .tab_menu .tab_btn li a {display:inline-block; width:100px; height:35px; line-height:35px; color:#555555; font-size:16px; font-weight:600;}
+.section4 .notice .tab_menu .tab_btn li a.on {background-color:#FFF;}
+.section4 .notice .tab_menu .tab_btn li:hover {background-color:#FFF;}
+
+/*텝메뉴 공지사항 내용*/
+.section4 .notice .tab_menu .tab_content {width:452px; height:212px;}
+.section4 .notice .tab_menu .tab_content .icon1 {float:left; width:50px; height:46px; text-align:center; padding-top:8px;}
+.section4 .notice .tab_menu .tab_content li {height:70px; border-bottom:1px solid #dddddd;}
+.section4 .notice .tab_menu .tab_content li a {display:block; height:38px; padding:16px 0;}
+.section4 .notice .tab_menu .tab_content li p {width:452px; color:#777777; text-overflow:ellipsis;}
+.section4 .notice .tab_menu .tab_content li p.txt:hover {text-decoration:underline;}
+.section4 .notice .tab_menu .tab_content li p.tit {margin-bottom:7px;}
+.section4 .notice .tab_menu .tab_content li p.tit span {display:inline-block; background:url(../img/top_bar.gif) no-repeat; height:12px; width:1px; margin:3px 7px 0;}
+
+
+
+/*롯데카드 엘포인트 광고 이미지*/
+.section4 .point {float:right; width:453px; height:248px; margin-top:70px;}
+.section4 .point h2 {font-size:16px; color:#555555; font-weight:600; line-height:35px; display:inline-block; height:35px;}
+.section4 .point .more {float:right; margin-top:11px;}
+
+
+
+
+
+
+
+

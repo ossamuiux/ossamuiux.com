@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VDL</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	//slick슬라이더
+	$('.main .slider').slick({
+		vertical:false,//세로 슬라이드
+		autoplay:true,//자동실행
+		speed:1000,//슬라이드,페이드 속도
+		pauseOnHover:false//마우스오버시 멈춤0
+  });
+  
+   /*슬라이더 일시정지버튼*/
+  var num=0; //변수선언
+  $('.main .pause_btn').click(function(e){
+	  e.preventDefault();
+	  if(num==0){
+	  	  $(this).addClass('on');
+		  num=1;
+		  $('.slider').slick('slickPause');
+	  } else {
+		  $(this).removeClass('on');
+		  num=0;
+		  $('.slider').slick('slickPlay');
+	  }
+  });
+  
+  //제품쪽 버튼
+  $('.product_wrap .product').slick({
+		speed:1000,//슬라이드,페이드 속도
+		autoplay:true,
+		pauseOnHover:false,//마우스오버시 멈춤0
+		arrows:false,//prev,next버튼 없어짐
+		dots:true//페이지버튼
+  });
+  
+  //탑버튼
+  $('.tab_content ul:gt(0)').hide();
+	
+	var num;
+	$('.tab_btn li').click(function(e){
+		e.preventDefault();
+		num=$(this).index();
+		$('.tab_content ul').hide();
+		$('.tab_content ul').eq(num).show();
+		
+		//탭버튼의 모든 a에 걸린 on클래스 제거
+		$('.tab_btn li a').removeClass('on');
+		//클릭한 버튼안의 a에 on클래스 추가
+		$(this).find('a').addClass('on');
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+		<div class="top">
+        	<h1><a href="index.html"><img src="img/logo.png" alt="vdl"></a></h1>
+            <ul class="left">
+            	<li><a href="#">KOREAN</a></li>
+                <li><a href="#">ENGLISH</a></li>
+            </ul>
+            <ul class="right">
+            	<li><a href="sub_login.html">LOGIN</a></li>
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="gnb_wrap">
+    	<div class="gnb">
+        	<ul class="top_menu">
+            	<li><a href="sub_topseller.html">VDL SHOP<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="sub_topseller.html">TOP SELLER</a></li>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">MAKE UP</a></li>
+                        <li><a href="#">NAIL</a></li>
+                        <li><a href="#">SKIN CARE</a></li>
+                        <li><a href="#">CLEANSING</a></li>
+                        <li><a href="#">BODY&amp;HAIR</a></li>
+                        <li><a href="#">TOOLS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">VDL TREND<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">COLLECTION</a></li>
+                        <li><a href="#">COLOR FINDER</a></li>
+                        <li><a href="#">ALL ABOUT TREND</a></li>
+                        <li><a href="#">THE REAL BOOK</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MEET VDL<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">VDL STORY</a></li>
+                        <li><a href="#">MEET WENDY</a></li>
+                        <li><a href="#">VDL EPISODE</a></li>
+                        <li><a href="#">VDL MEDIA</a></li>
+                        <li><a href="#">STORE INFO</a></li>
+                        <li><a href="#">NEWS</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub_event.html">EVENT<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">당첨자 발표</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub_login.html">MY VDL</a></li>
+            </ul>
+            <div class="search">
+                <form action="" method="">
+                    <fieldset>
+                        <legend>검색창</legend>
+                        <input type="text" placeholder="Search vdlcosmetics.com">
+                        <button type="submit">검색버튼</button>
+                    </fieldset>
+                </form>
+        	</div>
+        </div>
+    </div>
+</div>
+<div class="main_wrap">
+    <div class="location">
+        <a href="index.html"><img src="img/home.png" alt=""></a> <span> ></span> EVENT <span> ></span>
+        <em>EVENT</em>
+    </div>
+    <div class="event_wrap">
+    	<div class="event">
+        	<h2><img src="img/sub_event.jpg" alt=""></h2>
+            <ul class="tab_btn">
+                <li><a href="#" class="on">전체 이벤트</a></li>
+                <li><a href="#">진행중인 이벤트</a></li>
+                <li><a href="#">종료된 이벤트</a></li>
+        	</ul>
+            <div class="tab_content">
+            	<ul class="tab1">
+                	<li>
+                    	<a href="#">
+                        	<img src="img/tab_img1.png">
+                            <h3>엑스퍼트 컬러 립큐브 EX 체험단</h3>
+                        	<p>기간 : 2014.08.18 ~ 2014. 09.18</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img2.png">
+                            <h3>스킨프로 스킨케어 쿠폰이벤트</h3>
+                        	<p>기간 : 2014.06.13 ~ 2014.08.31</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img3.png">
+                            <h3>8월 프로모션 2차</h3>
+                        	<p>기간 : 2014.08.22 ~ 2014.08.31</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li class="tab_box">
+                    	<a href="#">
+                        	<img src="img/tab_img4.png">
+                            <h3>쿠폰북</h3>
+                        	<p>기간 : 2014.08.26 ~ 2014.09.22</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img5.png">
+                            <h3>뷰티테스터</h3>
+                        	<p>기간 : 2014.08.04 ~ 2014.08.19</p>
+                            <div class="btn_gray">완료</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img6.png">
+                            <h3>8월 스페셜 이벤트</h3>
+                        	<p>기간 : 2014.07.31 ~ 2014.08.25</p>
+                            <div class="btn_gray">완료</div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tab1">
+                	<li>
+                    	<a href="#">
+                        	<img src="img/tab_img1.png">
+                            <h3>엑스퍼트 컬러 립큐브 EX 체험단</h3>
+                        	<p>기간 : 2014.08.18 ~ 2014. 09.18</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img2.png">
+                            <h3>스킨프로 스킨케어 쿠폰이벤트</h3>
+                        	<p>기간 : 2014.06.13 ~ 2014.08.31</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img3.png">
+                            <h3>8월 프로모션 2차</h3>
+                        	<p>기간 : 2014.08.22 ~ 2014.08.31</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                    <li class="tab_box">
+                    	<a href="#">
+                        	<img src="img/tab_img4.png">
+                            <h3>쿠폰북</h3>
+                        	<p>기간 : 2014.08.26 ~ 2014.09.22</p>
+                            <div class="btn">진행중</div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tab1">
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img5.png">
+                            <h3>뷰티테스터</h3>
+                        	<p>기간 : 2014.08.04 ~ 2014.08.19</p>
+                            <div class="btn_gray">완료</div>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<img src="img/tab_img6.png">
+                            <h3>8월 스페셜 이벤트</h3>
+                        	<p>기간 : 2014.07.31 ~ 2014.08.25</p>
+                            <div class="btn_gray">완료</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>        
+        </div>    
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<h2><img src="img/footer_logo.png" alt=""></h2>
+    	<div class="footer_txt">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보보호정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <p>
+                <span>서울시 종로구 새문안로 58 LG광화문빌딩</span><span>대표이사 : 배정태</span><span>사업자번호 : 113-81-17562</span><span>대표상담번호 : 1661-4169</span>
+            </p> 
+            <div class="copyright">Copyright VDL All right reserved</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

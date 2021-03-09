@@ -1,0 +1,620 @@
+ <!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<title>추천메뉴 : 써브웨이</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+    /*추천제품슬라이드*/
+	$('.pro_list').slick({
+		slidesToShow:4,
+  	   	slidesToScroll:1,
+		speed:500,
+		swipe:false	
+	});
+	
+	$('.product_content_wrap .product_content:gt(0)').hide();
+	
+	/*썸네일*/
+	$('.pro_list .slick-slide').click(function(e) {
+		e.preventDefault();
+		
+		var currentSlide=0;
+		var idx=$(this).index();
+		//변수선언
+		if(idx >=4 && idx <=11){
+			currentSlide = idx-3;
+			//0으로 시작
+		} else if(idx <=3){
+			currentSlide = idx+4;
+			//왼쪽에 가려진 엘리먼트
+		} else if(idx >=6){
+			currentSlide =idx-6;
+			//11이상 넘어가면 안되므로 -12빼주기
+		};
+		
+		$(this).addClass('on').siblings().removeClass('on');
+		
+		$('.product_content_wrap>div').eq(currentSlide).show().siblings().hide();
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+	<div class="header_inner">
+		<h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+        <ul class="util">
+        	<li><a href="login.html">로그인</a></li>
+            <li><a href="login.html">회원가입</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">U.S. Website</a></li>
+            <li class="util_line"><a href="#"><img src="images/pacebook.png" alt=""></a></li>
+        </ul>
+        <ul class="gnb">
+        	<li><a href="recommend.html">MENU</a>
+            	<ul class="depth2">
+                	<li><a href="recommend.html">셀럽's Pick</a></li>
+                    <li><a href="recommend.html">추천메뉴</a></li>
+                    <li><a href="recommend.html">프리미엄</a></li>
+                    <li><a href="recommend.html">베스트</a></li>
+                    <li><a href="recommend.html">클래식</a></li>
+                    <li><a href="recommend.html">아침식사</a></li>
+                    <li><a href="recommend.html">샐러드</a></li>
+                    <li><a href="recommend.html">음료&amp;추가메뉴</a></li>
+                    <li><a href="recommend.html">단체주문</a></li>
+                    <li><a href="recommend.html">재료안내</a></li>
+                </ul>
+            </li>
+            <li><a href="event.html">EVENT</a>
+            	<ul class="depth2">
+                	<li><a href="event.html">랩 이벤트</a></li>
+                    <li><a href="event.html">진행중 이벤트</a></li>
+                    <li><a href="event.html">점포 이벤트</a></li>
+                    <li><a href="event.html">지난 이벤트</a></li>
+                </ul>
+            </li>
+            <li  class="gnb3"><a href="store.html">SUBWAY</a>
+            	<ul class="depth2">
+                	<li><a href="store.html">WHY 써브웨이</a></li>
+                    <li><a href="store.html">써브웨이 역사</a></li>
+                    <li><a href="store.html">써브웨이 기업이념</a></li>
+                    <li><a href="store.html">써브웨이 코리아</a></li>
+                    <li><a href="store.html">지사안내</a></li>
+                    <li><a href="store.html">매장찾기</a></li>
+                </ul>
+            </li>
+            <li class="gnb4"><a href="#">COMMUNITY</a>
+            	<ul class="depth2">
+                	<li><a href="#">뉴스&amp;공지사항</a></li>
+                    <li><a href="#">CF</a></li>
+                    <li><a href="#">고객문의 및 이용후기</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">아르바이트 신청</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">FRANCHISE</a>
+            	<ul class="depth2">
+                	<li><a href="login.html">써브웨이 우수성</a></li>
+                    <li><a href="login.html">가맹요건</a></li>
+                    <li><a href="login.html">가맹절차</a></li>
+                    <li><a href="login.html">가맹관련 FAQ</a></li>
+                    <li><a href="login.html">문의 및 가맹신청</a></li>
+                    <li><a href="login.html">뉴스레터</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="main" class="recommend">
+	<div class="btn_top">
+    	<a href="#"><img src="images/top.png" alt=""></a>
+        <!--탑버튼-->
+    </div>
+	<div class="sub_visual">
+    	<h2>MENU</h2>
+    </div>
+    <div class="location_wrap">
+    	<div class="location">
+        	<div class="location_inner"><a href="index.html"><img src="images/home.png" alt=""></a> <span><img src="images/arrow.png" alt=""></span> MENU <span><img src="images/arrow.png" alt=""></span> 추천메뉴</div>
+        </div>
+    </div>
+    <div class="container">
+    	<div class="lnb">
+        	<h2>MENU</h2>
+        	<ul class="lnb_list">
+            	<li><a href="#">셀럽’s Pick</a></li>
+                <li class="on"><a href="#">추천메뉴</a></li>
+                <li><a href="#">프리미엄</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">클래식</a></li>
+                <li><a href="#">아침식사</a></li>
+                <li><a href="#">샐러드</a></li>
+                <li><a href="#">음료&amp;추가메뉴</a></li>
+                <li><a href="#">단체주문</a></li>
+                <li><a href="#">재료안내</a></li>
+            </ul>
+        </div>
+        <div class="content">
+        	<div class="content_title">
+            	<h3>추천메뉴</h3>
+                <h4>한국인의 입맛에 딱 맞게 개발된 저칼로리 샌드위치 입니다.</h4>
+            </div>
+            <div class="product_content_wrap">
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/subItalian-B.M.T.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>이탈리안 비엠티</h2>
+                        <h3>Italian B.M.T.</h3><h4>페퍼로니 3장, 살라미 3장, 햄 2장, 치즈 2장</h4>
+                        <p>모든 샌드위치를 평정한 샌드위치, 갓 구운 빵에 얇게 슬라이스<br>된 제노바 살라미, 페퍼로니 햄을 가득 채운 샌드위치로,<br>야채와 소스를 선택하여 즐기실 수 있습니다.<br>입안에서 살살 녹는 샌드위치를 경험해 보세요.</p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">410kcal</td>
+                                    <td>8g</td>
+                                    <td>20g</td>
+                                    <td>6g</td>
+                                    <td>1260g</td>
+                                    <td>46g</td>
+                                    <td>0</td>
+                                    <td>16g</td>
+                                    <td class="td9">45mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/Turkey.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>터키</h2>
+                        <h3>Turkey</h3><h4>터키 4장, 치즈 2장</h4>
+                        <p>더욱 맛있지만 지방은 더 낮은 터키 샌드위치는<br>아삭한 야채소스를 선택하여 즐기실 수 있습니다.<br>한국에서 맛보는 특별한 칠면조의 맛</p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">290kcal</td>
+                                    <td>7g</td>
+                                    <td>18g</td>
+                                    <td>1g</td>
+                                    <td>760g</td>
+                                    <td>46g</td>
+                                    <td>0</td>
+                                    <td>3.5g</td>
+                                    <td class="td9">20mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/B.L.T.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>비엘티</h2>
+                        <h3>B.L.T.</h3><h4>베이컨 4장, 치즈 2장</h4>
+                        <p>바삭한 베이컨, 아삭한 양상추,<br>과즙이 풍부한 토마토의 앙상블, 샌드위치의 맛과 향을<br>충실히 살린 추천메뉴입니다. </p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">320kcal</td>
+                                    <td>7g</td>
+                                    <td>20g</td>
+                                    <td>4.5g</td>
+                                    <td>1130g</td>
+                                    <td>44g</td>
+                                    <td>0</td>
+                                    <td>13g</td>
+                                    <td class="td9">20mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/Meatball.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>미트볼</h2>
+                        <h3>Meatball</h3><h4>미트볼 4개, 치즈 2장</h4>
+                        <p>이탈리안 스타일 미트볼에 써브웨이만의 비법이 담긴<br>마라나라 소스를 듬뿍 얹었습니다.<br>치즈를 한번 더 추가해 즐겨보세요!</p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">490kcal</td>
+                                    <td>12g</td>
+                                    <td>21g</td>
+                                    <td>7g</td>
+                                    <td>920g</td>
+                                    <td>59g</td>
+                                    <td>0.5g</td>
+                                    <td>18g</td>
+                                    <td class="td9">30mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/subItalian-B.M.T.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>이탈리안 비엠티</h2>
+                        <h3>Italian B.M.T.</h3><h4>페퍼로니 3장, 살라미 3장, 햄 2장, 치즈 2장</h4>
+                        <p>모든 샌드위치를 평정한 샌드위치, 갓 구운 빵에 얇게 슬라이스<br>된 제노바 살라미, 페퍼로니 햄을 가득 채운 샌드위치로,<br>야채와 소스를 선택하여 즐기실 수 있습니다.<br>입안에서 살살 녹는 샌드위치를 경험해 보세요.</p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">410kcal</td>
+                                    <td>8g</td>
+                                    <td>20g</td>
+                                    <td>6g</td>
+                                    <td>1260g</td>
+                                    <td>46g</td>
+                                    <td>0</td>
+                                    <td>16g</td>
+                                    <td class="td9">45mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/Turkey.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>터키</h2>
+                        <h3>Turkey</h3><h4>터키 4장, 치즈 2장</h4>
+                        <p>더욱 맛있지만 지방은 더 낮은 터키 샌드위치는<br>아삭한 야채소스를 선택하여 즐기실 수 있습니다.<br>한국에서 맛보는 특별한 칠면조의 맛</p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">290kcal</td>
+                                    <td>7g</td>
+                                    <td>18g</td>
+                                    <td>1g</td>
+                                    <td>760g</td>
+                                    <td>46g</td>
+                                    <td>0</td>
+                                    <td>3.5g</td>
+                                    <td class="td9">20mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/B.L.T.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>비엘티</h2>
+                        <h3>B.L.T.</h3><h4>베이컨 4장, 치즈 2장</h4>
+                        <p>바삭한 베이컨, 아삭한 양상추,<br>과즙이 풍부한 토마토의 앙상블, 샌드위치의 맛과 향을<br>충실히 살린 추천메뉴입니다. </p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">320kcal</td>
+                                    <td>7g</td>
+                                    <td>20g</td>
+                                    <td>4.5g</td>
+                                    <td>1130g</td>
+                                    <td>44g</td>
+                                    <td>0</td>
+                                    <td>13g</td>
+                                    <td class="td9">20mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="pro_img"><img src="images/Meatball.png" alt=""></div>
+                    <div class="pro_txt">
+                        <h2>미트볼</h2>
+                        <h3>Meatball</h3><h4>미트볼 4개, 치즈 2장</h4>
+                        <p>이탈리안 스타일 미트볼에 써브웨이만의 비법이 담긴<br>마라나라 소스를 듬뿍 얹었습니다.<br>치즈를 한번 더 추가해 즐겨보세요!</p>
+                    </div>
+                    <div class="pro_table">
+                        <h5>제품영양정보<span>(6인치 샌드위치 기준)</span></h5>
+                        <div class="table_wrap">
+                            <table>
+                                <caption>공지사항 목록</caption>
+                                <colgroup>
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                    <col style="width:109px">
+                                </colgroup>
+                                <tr>
+                                    <th class="th1">칼로리</th>
+                                    <th>당류</th>
+                                    <th>단백질</th>
+                                    <th>포화지방</th>
+                                    <th>나트륨</th>
+                                    <th>탄수화물</th>
+                                    <th>트랜스지방</th>
+                                    <th>총지방</th>
+                                    <th class="th9">콜레스테롤</th>
+                                </tr>
+                                <tr>
+                                    <td class="td1">490kcal</td>
+                                    <td>12g</td>
+                                    <td>21g</td>
+                                    <td>7g</td>
+                                    <td>920g</td>
+                                    <td>59g</td>
+                                    <td>0.5g</td>
+                                    <td>18g</td>
+                                    <td class="td9">30mg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h6>* 샌드위치의 칼로리는 야채가 포함된 위트빵 기준이며, 치즈와 소스는 제외되었습니다.</h6>
+                    </div>
+                </div>
+                <!--썸네일-->
+            </div>
+            <div class="pro_list">
+                <div class="on">
+                    <a href="#"><img src="images/miniItalian-B.M.T.png" alt=""><h2>이탈리안 비엠티</h2><h3>Italian B.M.T.</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniTurkey.png" alt=""><h2>터키</h2><h3>Turkey</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniB.L.T..png" alt=""><h2>비엘티</h2><h3>B.L.T.</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniMeatball.png" alt=""><h2>미트볼</h2><h3>Meatball</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniItalian-B.M.T.png" alt=""><h2>이탈리안 비엠티</h2><h3>Italian B.M.T.</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniTurkey.png" alt=""><h2>터키</h2><h3>Turkey</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniB.L.T..png" alt=""><h2>비엘티</h2><h3>B.L.T.</h3></a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/miniMeatball.png" alt=""><h2>미트볼</h2><h3>Meatball</h3></a>
+                </div>
+                <!--추천메뉴슬라이드-->
+        	</div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<div class="icon_menu">
+    	<div class="icon_menu_inner">
+    		<div class="icon1"><a href="#"><img src="images/icon1.png" alt=""><p>매장찾기</p></a></div>
+            <div><a href="#"><img src="images/icon2.png" alt=""><p>아르바이트<br>신청</p></a></div>
+            <div><a href="#"><img src="images/icon3.png" alt=""><p>고객문의<br>이용후기</p></a></div>
+            <div><a href="#"><img src="images/icon4.png" alt=""><p>가맹점주<br>페이지</p></a></div>
+            <div><a href="#"><img src="images/icon5.png" alt=""><p>가맹신청<br>가맹문의</p></a></div>
+            <div><a href="#"><img src="images/icon6.png" alt=""><p>Tell<br>subway</p></a></div>
+            <!--아이콘효과-->
+        </div>
+    </div>
+    <div class="footer_wrap">
+    	<div class="footer_inner">
+    		<p><img src="images/footer_logo.png" alt=""></p>
+        	<div class="footer_menu">
+            	<ul class="top_footer_menu">
+                	<li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">Subway Partners ® </a></li>
+                </ul>
+                <address>서울시 서초구 강남대로 535 프린스빌딩 15층<span><img src="images/footer_line2.png" alt=""></span>대표 : 콜린클락<span><img src="images/footer_line2.png" alt=""></span>전화 : (02)797-5036<br>ⓒ2014 Doctor’s Associates Inc. SUBWAY® is a registered trademar
+                </address>
+        	</div>
+            <ul class="footer_sns">
+            	<li><a href="#"><img src="images/footer_facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="images/footer_instar.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

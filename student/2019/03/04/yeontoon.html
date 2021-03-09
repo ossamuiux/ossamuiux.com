@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=980">
+<title>이정연 포트폴리오_연</title>
+<meta name="description" content="디자이너 이정연 포트폴리오">
+<meta property="og:type" content="site">
+<meta property="og:title" content="디자이너 이정연 포트폴리오">
+<meta property="og:url" content="http://adora37.dothome.co.kr/ljyPortfolio/intro.html">
+<meta property="og:image" content="http://adora37.dothome.co.kr/ljyPortfolio/img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container" class="yeontoon">
+            <div class="sub3_header">
+                <div class="sub3_top_header">
+                    <img class="m_left" src="img/img_3/m_icon1.png" alt="">
+                    <p>오전 10:04</p>
+                    <img class="m_right" src="img/img_3/m_icon2.png" alt="">
+                </div>
+                <div class="sub3_middle_header">
+                    <a class="back" href="index.html">
+                        <img src="img/img_3/back.png" alt="">
+                    </a>
+                    <p>연툰</p>
+                    <a class="popup" href="index.html">
+                        <img src="img/img_3/popup.png" alt="">
+                    </a>
+                </div>
+                <div class="sub3_bottom_header">
+                    <div class="heart_wrap">
+                        <div class="heart_btn">
+                            <div id="heart"><img src="img/img_3/sub3_icon1.png" alt=""></div>
+                        </div>
+                    </div>
+                    <p class="heart_txt">333,333</p>
+                    <div class="plus_wrap">
+                        <div class="plus_btn">
+                            <div id="plus"><img src="img/img_3/sub3_icon2.png" alt=""></div>
+                        </div>
+                    </div>
+                    <p class="plus_txt">관심</p>
+                    <a href="#">첫회보기</a>
+                </div>
+            </div>
+            <div class="sub3_main">
+                <div class="toon_wrap">
+                    <div class="toon">
+                        <a href="#"><img src="img/img_3/toon1.jpg" alt=""></a>
+                        <h3>4화. 동료 퍼블리셔&amp;디자이너들의 추천 한마디</h3>
+                        <div class="number_txt">
+                            <p><span>★ 9.50</span></p>
+                            <p>19.02.21</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toon_wrap">
+                    <div class="toon">
+                        <a href="#"><img src="img/img_3/toon1.jpg" alt=""></a>
+                        <h3>3화. 인터뷰뷰뷰뷰뷰티풀</h3>
+                        <div class="number_txt">
+                            <p><span>★ 9.50</span></p>
+                            <p>19.02.21</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toon_wrap">
+                    <div class="toon">
+                        <a href="#"><img src="img/img_3/toon1.jpg" alt=""></a>
+                        <h3>2화. 내용을 무엇으로 하나</h3>
+                        <div class="number_txt">
+                            <p><span>★ 9.50</span></p>
+                            <p>19.02.21</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toon_wrap">
+                    <div class="toon">
+                        <a href="#"><img src="img/img_3/toon1.jpg" alt=""></a>
+                        <h3>1화. 안녕 나는 이정연</h3>
+                        <div class="number_txt">
+                            <p><span>★ 9.50</span></p>
+                            <p>19.02.21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub3_footer">
+                <div class="top_footer">
+                    <h4>연툰 이용안내</h4>
+                    <p>연툰에서 제공되는 콘텐츠의 저작권은 저자 또는 제공처에 있으며, 이를 무단 이용하는 경우 저작권법등에 따라 법적 책임을 질 수 있습니다.<br>연툰(주) 사업자 정보 890505-010-5967-2929</p>
+                </div>
+                <div class="bottom_footer">
+                    <div class="bottom_txt">
+                       <ul>
+                            <li>고객센터</li>
+                            <li>오류신고</li>
+                            <li>이용약관</li>
+                            <li>개인정보처리방침</li>
+                        </ul>
+                        <p>YEON TOON CORP.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_tap">
+               <ul class="bottom_tap_btn">
+                    <li><img src="img/img_2/btn6.png" alt=""></li>
+                    <li><img src="img/img_2/btn7.png" alt=""></li>
+                    <li><img src="img/img_2/btn8.png" alt=""></li>
+                    <li><img src="img/img_2/btn9.png" alt=""></li>
+                    <li><img src="img/img_2/btn10.png" alt=""></li>
+               </ul>
+            </div>
+        </div>
+    </div>
+<script>
+    //통통튀는 애니메이션_스크립
+    element = document.getElementById("heart");
+    elementPlus = document.getElementById("plus");
+    element.addEventListener("click", function(e) {
+      e.preventDefault();
+      // -> removing the class
+      element.classList.remove("bounce");
+      // -> triggering reflow /* The actual magic */
+      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+      element.offsetWidth = element.offsetWidth;
+      // -> and re-adding the class
+      element.classList.add("bounce");
+    }, false);
+    
+    elementPlus.addEventListener("click", function(e) {
+      e.preventDefault();
+      // -> removing the class
+      elementPlus.classList.remove("bounce");
+      // -> triggering reflow /* The actual magic */
+      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+      elementPlus.offsetWidth = element.offsetWidth;
+      // -> and re-adding the class
+      elementPlus.classList.add("bounce");
+    }, false);
+    
+</script>
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

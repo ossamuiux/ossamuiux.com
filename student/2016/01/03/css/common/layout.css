@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+body
+{
+  /*min-width: 1100px;*/
+}
+
+html,body{height:100%;}
+.wrap{ min-height:100%; position: relative; }
+
+
+/* ----------------- 상단 로고 ----------------- */
+.header .header_inner h1.logo img{transition: width 0.5s ease; width: 100%; }
+.wrap.front .header .header_inner h1.logo
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -83.5px 0 0 -164px;
+    pointer-events:none;
+    animation: logo_elastic 0.6s ease-out;
+    width: 324px;
+}
+.wrap.content .header .header_inner h1.logo { position: relative;padding: 19.5px 0 0 25px; width: 230px; }
+
+@keyframes logo_elastic {
+  0% { transform: scale(0.7); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(0.85); }
+  75% { transform: scale(1.05) }
+  100% { transform: scale(1); }
+}
+
+@media screen and (max-width:600px)
+{
+    .wrap.content .header .header_inner h1.logo img{width:100px;}
+}
+
+/* ----------------- 배경 ----------------- */
+.wrap .background{ position: relative;}
+.wrap .background .top_bottom
+{
+  position: fixed;
+  width: 100%;
+  height: 0;
+  left:0;
+}
+.wrap .background .left_right
+{
+  position: fixed;
+  width: 0;
+  height: 100%;
+  top: 0;
+}
+.wrap .background .fixed{ position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-image: url(../../images/common/pattern.png); }
+.wrap .background .top{ top: 0px; }
+.wrap .background .bottom{ bottom: 0px; }
+.wrap .background .left{ left: 0px; }
+.wrap .background .right{ right: 0px; }
+
+.wrap .background .top,body.index{ background-color: #fff; }
+.wrap .background .bottom,body.about_me{ background-color: #3aa1bf; }
+.wrap .background .left,body.project{ background-color: #3bae87; }
+.wrap .background .right,body.contact{ background-color: #ed8e69; }
+
+body.index .wrap .background .top{ background-color: #eaeaea; }
+body.contact .wrap .background .right{ background-color: #cb6138; }
+body.about_me .wrap .background .bottom{ background-color: #1f88a7; }
+body.project .wrap .background .left{ background-color: #1e956c; }
+
+/* ----------------- 메뉴 ----------------- */
+.header .header_inner
+{
+  height: 100px;
+  /*background-color: green;*/
+ }
+.header .header_inner .menu a
+{
+  display: block;
+  height: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #474747;
+  transition: color 0.3s ease;
+}
+.header .header_inner .menu a.top_bottom
+{
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  margin-left: -70px;
+  text-align: center;
+}
+.header .header_inner .menu a.left_right
+{
+	position:fixed;
+	top: 50%;
+	margin-top:-27px;
+}
+.header .header_inner .menu a.top{ top:8px; padding: 12px 20px 20px 20px; }
+.header .header_inner .menu a.bottom{ bottom:8px; height: 54px; padding: 20px 20px 12px 20px;}
+.header .header_inner .menu a.left{left:8px; padding: 20px 20px 20px 12px; }
+.header .header_inner .menu a.right{right:8px; padding: 20px 12px 20px 20px; }
+.header .header_inner .menu a .line{position: relative;}
+.header .header_inner .menu a .line:before{ content: ""; display: block; position: absolute;}
+.header .header_inner .menu a .line,.header .header_inner .menu a .line:before{background-color:#363636; transition: background-color 0.3s ease;}
+.header .header_inner .menu a.top_bottom .line{ width: 1px; height: 30px; margin: 0 auto; }
+.header .header_inner .menu a.top_bottom .line::before{ width: 7px; height: 1px; left: -3px;}
+.header .header_inner .menu a.left_right .line{ width: 30px; height: 1px; display: inline-block; margin-top: 6px; }
+.header .header_inner .menu a.left_right .line:before{ width: 1px; height: 7px; top: -3px; }
+.header .header_inner .menu a.top .line::before{ bottom: 0; }
+.header .header_inner .menu a.bottom .line::before{  top: 0;}
+.header .header_inner .menu a.left .line::before{ right: 0;}
+.header .header_inner .menu a.right .line::before{ left: 0;}
+.header .header_inner .menu a.top .line{margin-bottom:10px;}
+.header .header_inner .menu a.right .line{margin-left:10px;}
+.header .header_inner .menu a.bottom .line{margin-top:10px;}
+.header .header_inner .menu a.left .line{margin-right:10px;}
+.header .header_inner .menu a.top_bottom:after
+{
+  content:"";
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  left: 0;
+}
+.header .header_inner .menu a.left_right:after
+{
+  content:"";
+  position: fixed;
+  height: 100%;
+  width: 180px;
+  top: 0;
+}
+.header .header_inner .menu a.top:after{top: -110px; }
+.header .header_inner .menu a.bottom:after{bottom: -110px; }
+.header .header_inner .menu a.left:after{left: -180px; }
+.header .header_inner .menu a.right:after{right: -180px;}
+.header .header_inner .menu a.top:hover:after{ top:0; }
+.header .header_inner .menu a.bottom:hover:after{ bottom:0; }
+.header .header_inner .menu a.left:hover:after{ left:0; }
+.header .header_inner .menu a.right:hover:after{ right:0; }
+
+@media screen and (max-width:800px)
+{
+  .header .header_inner .menu a.left_right { height: 104px; margin-top: -72px;}
+  .header .header_inner .menu a.left_right span { display: block; }
+  .header .header_inner .menu a.left_right .line{ display: none;}
+}
+@media screen and (max-height:670px)
+{
+  .header .header_inner .menu a.top_bottom .line{ display: none;}
+  .header .header_inner .menu a.bottom{height:15px;}
+}
+
+/* ----------------- 본문 ----------------- */
+.main .main_inner{opacity: 0; position: relative; display: none;}
+
+/* ----------------- z-index ----------------- */
+.wrap .background{ z-index:97;}
+.main .main_inner{ z-index: 98; }
+.header .header_inner .menu a{ z-index: 99; }
+.header .header_inner h1.logo{ z-index: 100; }
+
+.main_inner.project .modal_box_effect{ z-index: 97;}
+.main_inner.project .work_list{z-index: 98;}
+.main_inner.project .modal_box{ z-index: 99;}
+
+/* ----------------- 컨텐츠 ----------------- */
+div.content, div.content a, div.content .header .header_inner .menu a {color: #fff;}
+div.content .header .header_inner .menu a .line,div.content .header .header_inner .menu a .line:before {background-color: #fff;}
+div.content .main .main_inner{ padding-bottom: 160px; opacity: 1; position: relative; display: block; }
+div.content .main .main_inner .title {text-align: center; margin: 71px 0 90px;}
+div.content .main .main_inner h2
+{
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 47px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 0 28px;
+  background: url(../../images/common/title_wave_line.png) repeat-x -6px bottom;
+}

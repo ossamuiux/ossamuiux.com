@@ -1,0 +1,168 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'TmonMonsori';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/AppgulimL.eot);
+  src: local('TmonMonsori'),
+       local('TmonMonsori'),
+       url(../font/TmonMonsori.eot?#iefix) format('embedded-opentype'),
+       url(../font/TmonMonsori.woff) format('woff'),
+       url(../font/TmonMonsori.ttf) format('truetype');
+}
+body,button,input,textarea,select,table {font-family:'TmonMonsori','돋움',dotum,sans-serif; font-size:13px; }
+body {min-width:1200px; position:relative; }
+
+
+
+
+
+/*페이지버튼*/
+#main .btn_page {width:180px; height:246px; position:fixed; right:40px; top:40px; z-index:200; }
+#main .btn_page li {margin:0 0 10px 0; }
+#main .btn_page li a {display:block; text-indent:-9999px; height:34px; }
+#main .btn_page .btn1 a {background:url(../images/btn_intro.png) no-repeat; width:105px;}
+#main .btn_page .btn2 a {background:url(../images/btn_aboutme.png) no-repeat; width:160px; }
+#main .btn_page .btn3 a {background:url(../images/btn_skill.png) no-repeat; width:100px; }
+#main .btn_page .btn4 a {background:url(../images/btn_work.png) no-repeat; width:110px; }
+#main .btn_page .btn5 a {background:url(../images/btn_valuable.png) no-repeat; width:180px; }
+#main .btn_page .btn6 a {background:url(../images/btn_ending.png) no-repeat; width:130px; }
+/*페이지버튼_호버*/
+#main .btn_page .btn2:hover a {background:url(../images/btn_aboutme_on.png) no-repeat; }
+#main .btn_page .btn3:hover a {background:url(../images/btn_skill_on.png) no-repeat; }
+#main .btn_page .btn4:hover a {background:url(../images/btn_work_on.png) no-repeat; }
+#main .btn_page .btn5:hover a {background:url(../images/btn_valuable_on.png) no-repeat; }
+#main .btn_page .btn6:hover a {background:url(../images/btn_ending_on.png) no-repeat; }
+/*페이지버튼_페이지이동시on*/
+#main .btn_page .btn1.on a {background:url(../images/btn_intro_on.png) no-repeat; }
+#main .btn_page .btn2.on a {background:url(../images/btn_aboutme_on.png) no-repeat; }
+#main .btn_page .btn3.on a {background:url(../images/btn_skill_on.png) no-repeat; }
+#main .btn_page .btn4.on a {background:url(../images/btn_work_on.png) no-repeat; }
+#main .btn_page .btn5.on a {background:url(../images/btn_valuable_on.png) no-repeat; }
+#main .btn_page .btn6.on a {background:url(../images/btn_ending_on.png) no-repeat; }
+/*aboutme_글씨색변경*/
+#main .btn_page.on .btn1 a {background:url(../images/btn_intro_b.png) no-repeat; }
+#main .btn_page.on .btn2 a {background:url(../images/btn_aboutme_on.png) no-repeat; }
+#main .btn_page.on .btn3 a {background:url(../images/btn_skill_b.png) no-repeat; }
+#main .btn_page.on .btn4 a {background:url(../images/btn_work_b.png) no-repeat; }
+#main .btn_page.on .btn5 a {background:url(../images/btn_valuable_b.png) no-repeat; }
+#main .btn_page.on .btn6 a {background:url(../images/btn_ending_b.png) no-repeat; }
+
+/************************************************************페이지버튼 끝************************************************************************/
+
+
+
+/*메인배경*/
+.section1 {background:url(../images/main_bg_01.jpg) no-repeat center top; position:relative; }
+.section1 .section1_inner {width:1200px; height:980px; margin:0 auto; position:relative; }
+/*메인이미지*/
+.section1 .section1_inner h1 {width:620px; height:467px; position:absolute; left:0; top:100px; display:block; animation:slideInDown 1s; z-index:999;}
+/*얼굴*/
+.section1 .section1_inner h2 {position:absolute; right:0; top:92px; animation:fadeIn 1s;}
+
+/*************************************************************section1 끝***********************************************************************/
+
+
+
+/*배경*/
+.section2 {background:url(../images/main_bg_02.jpg) no-repeat center top; }
+.section2 .section2_inner {width:1200px; height:980px; margin:0 auto; position:relative; }
+/*about me 이미지*/
+.section2 .section2_inner h3 {width:477px; height:106px; padding:40px 0 0 150px; }
+.section2 .section2_inner .menu {width:1200px; height:980px; }
+/*얼굴이미지1*/
+.section2 .section2_inner .menu .face1 {width:320px; height:320px; float:left; position:relative; margin-top:175px; }
+.section2 .section2_inner .menu .face1 .cover {transition:all 0.7s; backface-visibility:hidden; }
+.section2 .section2_inner .menu .face1 .cover2 {position:absolute; left:0; top:0; transform:rotateY(180deg); backface-visibility:hidden; transition:all 0.7s; }
+.section2 .section2_inner .menu .face1:hover .cover {transform:rotateY(180deg); }
+.section2 .section2_inner .menu .face1:hover .cover2 {transform:rotateY(0deg); }
+/*얼굴이미지2*/
+.section2 .section2_inner .menu .face2 {width:320px; height:320px; float:left; position:relative; padding-left:117px; margin-top:245px;}
+.section2 .section2_inner .menu .face2 .cover {transition:all 0.7s; backface-visibility:hidden; }
+.section2 .section2_inner .menu .face2 .cover2 {position:absolute; left:0; top:0; transform:rotateY(180deg); backface-visibility:hidden; transition:all 0.7s;  padding-left:117px; }
+.section2 .section2_inner .menu .face2:hover .cover {transform:rotateY(180deg); }
+.section2 .section2_inner .menu .face2:hover .cover2 {transform:rotateY(0deg); }
+/*얼굴이미지3*/
+.section2 .section2_inner .menu .face3 {width:320px; height:320px; float:left; position:relative; padding-left:117px; margin-top:315px; }
+.section2 .section2_inner .menu .face3 .cover {transition:all 0.7s; backface-visibility:hidden; }
+.section2 .section2_inner .menu .face3 .cover2 {position:absolute; left:0; top:0; transform:rotateY(180deg); backface-visibility:hidden; transition:all 0.7s;  padding-left:117px; }
+.section2 .section2_inner .menu .face3:hover .cover {transform:rotateY(180deg); }
+.section2 .section2_inner .menu .face3:hover .cover2 {transform:rotateY(0deg); }
+
+/****************************************************************section2 끝********************************************************************/
+
+
+
+/*배경*/
+.section3 {background:url(../images/main_bg_03.jpg) no-repeat center top; }
+.section3 .section3_inner {width:1200px; height:980px; margin:0 auto; position:relative; }
+/*skill 이미지*/
+.section3 .section3_inner h4 {width:259px; height:106px; padding:40px 0 0 200px; }
+/*skill메뉴*/
+.section3_inner .skill_menu {text-indent:-9999px; position:relative; transition:all 0.5s; width:100%; height:800px; }
+
+
+
+/*skill 1*/
+.section3_inner .skill_menu .skill1 {width:169px; height:169px; position:absolute; left:9px; top:250px; background:url(../images/skill1.png) no-repeat; transition:all 0.5s; }
+.section3_inner .skill_menu .skill1:hover {width:201px; height:201px; background:url(../images/skill1_on.png) no-repeat; left:10px; transform: scale(1.5,1.5); }
+
+/*skill 2*/
+.section3_inner .skill_menu .skill2 {width:179px; height:179px; position:absolute; left:350px; top:580px; background:url(../images/skill2.png) no-repeat; transition:all 0.5s; }
+.section3_inner .skill_menu .skill2:hover {width:201px; height:201px; background:url(../images/skill2_on.png) no-repeat; transform: scale(1.5,1.5); }
+
+/*skill 3*/
+.section3_inner .skill_menu .skill3 {width:219px; height:219px; position:absolute; right:405px; top:-55px; background:url(../images/skill3.png) no-repeat; transition:all 0.5s; }
+.section3_inner .skill_menu .skill3:hover {width:219px; height:219px; background:url(../images/skill3_on.png) no-repeat; transform: scale(1.5,1.5); }
+
+/*skill 4*/
+.section3_inner .skill_menu .skill4 {width:199px; height:199px; position:absolute; right:0; top:165px; background:url(../images/skill4.png) no-repeat; transition:all 0.5s; }
+.section3_inner .skill_menu .skill4:hover {width:201px; height:201px; background:url(../images/skill4_on.png) no-repeat; transform: scale(1.5,1.5);  }
+
+
+/******************************************************************section3 끝******************************************************************/
+
+
+
+/*배경*/
+.section4 {background:url(../images/main_bg_04.jpg) no-repeat center top; }
+.section4 .section4_inner {width:1200px; height:980px; margin:0 auto; position:relative; }
+/*work 이미지*/
+.section4 .section4_inner h2 {width:303px; height:106px; position:absolute; left:450px; top:40px; }
+/*work슬라이더*/
+.section4_inner .section4_wrap {width:1200px; height:650px; position:absolute; top:195px; }
+.section4_inner .section4_wrap .slider1 {width:1060px; }
+.section4_inner .section4_wrap .slider1 .swiper-slide {text-align:center; }
+
+.section4_inner .section4_wrap .swiper-button-prev {background-image:none; }
+.section4_inner .section4_wrap .swiper-button-next {background-image:none; }
+
+/*****************************************************************section4 끝*******************************************************************/
+
+
+
+/*배경*/
+.section5 {background:url(../images/main_bg_05.jpg) no-repeat center top; }
+.section5 .section5_inner {width:1200px; height:980px; margin:0 auto; position:relative; }
+/*valuable 이미지*/
+.section5 .section5_inner h2 {width:500px; height:106px; position:absolute; right:100px; top:40px; }
+/*섹션*/
+.section5_inner .section5_tab {width:1200px; height:500px; position:absolute; top:305px; }
+.section5_inner .section5_tab li {float:left; margin-left:70px; }
+.section5_inner .section5_tab li:first-child {margin:0; }
+
+/****************************************************************section5 끝********************************************************************/
+
+
+
+/*배경*/
+.section6 {background:url(../images/main_bg_06.jpg) no-repeat center top; }
+.section6 .section6_inner {width:1200px; height:980px; margin:0 auto; position:relative; }
+/*thank*/
+.section6 .section6_inner h2 {width:820px; height:467px; margin:0 auto; padding-top:180px; }
+/*tel*/
+.section6 .section6_inner h3 {width:551px; height:168px; margin:0 auto; padding-top:50px; }
+/*얼굴*/
+.section6 .section6_inner h4 {width:612px; height:808px; position:absolute; left:-360px; bottom:23px; }
+
+/***************************************************************section6 끝*********************************************************************/

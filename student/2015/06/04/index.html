@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>고윤영 포트폴리오</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	//모바일버튼
+	$('.m_btn').mouseenter(function(){
+		$('.m_btn').stop().animate({'opacity':'1'},300);
+		});
+		
+	$('.m_btn').mouseleave(function(){
+		$('.m_btn').stop().animate({'opacity':'0.7'},300);
+		});	
+
+	
+	//모바일메뉴
+	$('.m_btn').click(function(e){
+		e.preventDefault();
+		$('.m_box').stop().animate({'left':'0'},300);
+	});
+	
+	$('.m_close').click(function(e){
+		e.preventDefault();
+		$('.m_box').stop().animate({'left':'-300px'},300);
+	});	
+	
+	
+	//모바일메뉴:hover
+	$('.m_gnb li a').mouseenter(function(){
+		$(this).stop().animate({'color':'#FFFFFF'},200);
+	});
+	
+	$('.m_gnb li a').mouseleave(function(){
+		$(this).stop().animate({'color':'#999999'},200);
+	});
+
+
+	//모바일메뉴이동
+	$('.m_gnb li').click(function(e){
+		e.preventDefault();
+		var num2=$(this).index();
+		if(num2==0){
+			$('html,body').stop().animate({'scrollTop':'0px'},'slow');
+		}else if(num2==1){
+			$('html,body').stop().animate({'scrollTop':'980px'},'slow');
+		}else if(num2==2){
+			$('html,body').stop().animate({'scrollTop':'1930px'},'slow');
+		}else{
+			$('html,body').stop().animate({'scrollTop':'3930px'},'slow');
+		}
+	});
+	
+	//섹션1_컵이동
+	$('.section1 .cup').delay(1000).animate({'margin-left':'600px'},800,'easeOutExpo');
+	
+	
+	//섹션1 배경,타이틀 올라가는 속도
+	var num;
+	$(window).scroll(function(e){
+		e.preventDefault();
+		num=$(window).scrollTop();
+		$('.section1').stop().css({'background-position-y':num*0.3});
+		$('.section1 h1').stop().css({'top':num*0.3+200});
+		console.log($('.section1').css('background-position-y'));
+		
+	   //스크롤 이동시 버튼
+	   if(num<980){
+		   $('.page_btn a').removeClass('off');
+			$('.page_btn a').removeClass('on');
+			$('.page_btn li').eq(0).find('a').addClass('on');
+	   } else if(num>=980 && num<1930) {
+		   $('.page_btn a').removeClass('on');
+		   $('.page_btn a').addClass('off');
+		   $('.page_btn li').eq(1).find('a').addClass('on');
+	   } else if(num>=1930 && num<3930) {
+		   $('.page_btn a').removeClass('on');
+		   $('.page_btn a').addClass('off');
+		  $('.page_btn li').eq(2).find('a').addClass('on');
+	   } else {
+		   $('.page_btn a').removeClass('on');
+		   $('.page_btn a').addClass('off');
+		   $('.page_btn li').eq(3).find('a').addClass('on');
+	   }
+		
+	});
+	
+	//페이지버튼
+	$('.page_btn li').click(function(e){
+		e.preventDefault();
+		var num2=$(this).index();
+		if(num2==0){
+			$('html,body').stop().animate({'scrollTop':'0px'},'slow');
+		}else if(num2==1){
+			$('html,body').stop().animate({'scrollTop':'980px'},'slow');
+		}else if(num2==2){
+			$('html,body').stop().animate({'scrollTop':'1930px'},'slow');
+		}else{
+			$('html,body').stop().animate({'scrollTop':'3930px'},'slow');
+		}
+	});
+	
+	//work
+	$('.work li').click(function(e){
+	e.preventDefault();
+	});
+	
+	$('.inline').colorbox({inline:true});
+	
+});
+</script>
+<body>
+<div  class="work_view" style="display:none;">
+    <div id="inline_content">
+        <img src="img/view_1.png" alt="">
+    </div>
+    <div id="inline_content2">
+            <ul>
+                <li><a href="event_renewal.html" onClick="window.open(this.href, '', 'width=900, height=970, left=0, top=0,statusbar=0,scrollbars=1'); return false;" title="새창">RENEWAL VIEW</a></li>
+                <li><a href="event_original.html" onClick="window.open(this.href, '', 'width=910, height=970, left=0, top=0,statusbar=0,scrollbars=1'); return false;" title="새창">ORIGINAL VIEW</a></li>
+            </ul>
+        <img src="img/view_2.png" alt="">
+    </div>
+    <div id="inline_content3">
+        <img src="img/view_3.png" alt="">
+    </div>
+    <div id="inline_content4">
+        <img src="img/view_4.png" alt="">
+    </div>
+    <div id="inline_content5">
+        <img src="img/view_5.png" alt="">
+    </div>
+</div>
+<div class="mobile">
+	<a href="#" class="m_btn"><img src="img/bt_slideMenu.png" alt=""></a>
+       <div class="m_box">
+       		<a href="#" class="m_close"><img src="img/m_close.png" alt=""></a>
+            <ul class="m_gnb">
+                <li><a href="#">HOME</a><span></span></li>
+                <li><a href="#">ABOUT ME</a><span></span></li>
+                <li><a href="#">PROJECT</a><span></span></li>
+                <li><a href="#">MY WORK</a><span></span></li>
+            </ul>
+            <ul class="my">
+            	<li class="li1">Ko Yoon Young</li>
+                <li class="li2">010 - 5378 - 9317</li>
+                <li class="li3">koun87@naver.com</li>
+            </ul>
+        </div>
+</div>
+<div class="page_btn">
+	<ul>
+    	<li><a class="page1" href="#"></a></li>
+        <li><a class="page2" href="#"></a></li>
+        <li><a class="page3" href="#"></a></li>
+        <li><a class="page4" href="#"></a></li>
+    </ul>
+</div>
+<div class="section1">
+	<p class="shadow"><img src="img/shadow.png" alt=""></p>
+	<h1><img src="img/main_tit.png" alt=""></h1>
+    <p class="mouse"><img src="img/mouse.png" alt=""></p>
+    <p class="cup"><img src="img/cup.png" alt=""></p>
+    <img class="scroll" src="img/scroll_btn.png" alt="">
+</div>
+<div class="section2">
+	<div class="box">
+    	<h2><img src="img/tit_1.png" alt=""></h2>
+        <p><img src="img/about_txt.png" alt=""></p>
+    </div>
+</div>
+<div class="section3">
+	<div class="box">
+    	<h2><img src="img/tit_2.png" alt=""></h2>
+        <div class="content1">
+        	<img src="img/project.png" alt="">
+        </div>
+        <div class="content2">
+        	<ul class="pro_view">
+            	<li><a href="pulmuone/index.html" target="_blank"><img src="img/project_view_1.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+                <li><a href="pulmuone/vision.html" target="_blank"><img src="img/project_view_2.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+                <li class="list3"><a href="pulmuone/goodfood.html" target="_blank"><img src="img/project_view_3.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+                <li><a href="pulmuone/product.html" target="_blank"><img src="img/project_view_4.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+            </ul>
+            <p>이미지를 클릭하셔도 각 페이지로 이동합니다.</p>
+            <ul class="btn">
+            	<li><a href="pulmuone/index.html" target="_blank">RENEWAL SITE</a></li>
+                <li><a href="http://pulmuone.com/" target="_blank">ORIGINAL SITE</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box box2">
+        <div class="content1">
+        	<img src="img/project2.png" alt="">
+        </div>
+        <div class="content2">
+        	<ul class="pro_view">
+            	<li><a href="naver_webtoon/index.html" target="_blank"><img src="img/project2_view_1.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+                <li><a href="naver_webtoon/index.html" target="_blank"><img src="img/project2_view_2.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+                <li class="list3"><a href="naver_webtoon/index.html" target="_blank"><img src="img/project2_view_3.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+                <li><a href="naver_webtoon/index.html" target="_blank"><img src="img/project2_view_4.png" alt=""><span><img src="img/project_view_off.png" alt=""></span></a></li>
+            </ul>
+            <ul class="btn">
+            	<li><a href="naver_webtoon/index.html" target="_blank">RENEWAL SITE</a></li>
+                <li><a href="http://comic.naver.com/index.nhn" target="_blank">ORIGINAL SITE</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="section4">
+	<div class="box">
+    	<h2><img src="img/tit_3.png" alt=""></h2>
+        <div class="work_wrap">
+        	<ul class="work">
+            	<li>
+                	<a class="inline" href="#inline_content"><img src="img/work_1.png" alt=""><span><img src="img/work_on.png" alt=""></span></a>
+                    <h3><span></span>대한피부과의사회 CI 공모전</h3>
+                    <p>CI</p>
+                </li>
+                <li>
+                	<a class="inline" href="#inline_content2"><img src="img/work_2.png" alt=""><span><img src="img/work_on.png" alt=""></span></a>
+                    <h3><span></span>롯데카드 다둥이 가족 이벤트</h3>
+                    <p>Event</p>
+                </li>
+                <li>
+                	<a class="inline" href="#inline_content3"><img src="img/work_3.png" alt=""><span><img src="img/work_on.png" alt=""></span></a>
+                    <h3><span></span>풀무원 메인 비주얼1</h3>
+                    <p>Main Visual</p>
+                </li>
+                <li class="list4">
+                	<a class="inline" href="#inline_content4"><img src="img/work_4.png" alt=""><span><img src="img/work_on.png" alt=""></span></a>
+                    <h3><span></span>풀무원 메인 비주얼2</h3>
+                    <p>Main Visual</p>
+                </li>
+                <li>
+                	<a class="inline" href="#inline_content5"><img src="img/work_5.png" alt=""><span><img src="img/work_on.png" alt=""></span></a>
+                    <h3><span></span>캐논 팝업 디자인</h3>
+                    <p>Popup</p>
+                </li>
+                <li>
+                	<a href="#"><img src="img/work_6.png" alt=""><span><img src="img/work_on.png" alt=""></span></a>
+                    <h3><span></span>work</h3>
+                    <p>work</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+<div class="box">
+	<h2><img src="img/footer.png" alt=""></h2>
+</div>
+</div>
+</body>
+</html>

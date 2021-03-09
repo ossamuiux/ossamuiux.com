@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000">
+    <title>토크빈 리뉴얼 프로젝트</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $('.main_visual_wrap').slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                pauseOnHover: false,
+                swipe: false
+            }); //slider 슬라이더
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('.btn_top').stop().fadeIn(200);
+                } else {
+                    $('.btn_top').stop().fadeOut(200);
+                }
+            }); //탑버튼 나타나기
+            $('.btn_top').click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 300);
+                return false;
+                $('.btn_top').fadeOut();
+            }); //탑버튼 탑으로가기 에니메이션
+
+
+            $('.quick_menu li').mouseenter(function() {
+                $(this).find('img').stop().animate({
+                    top: -10
+                }, 100).animate({
+                    top: 0
+                }, 100);
+            }).mouseleave(function() {
+                $(this).find('img').stop().animate({
+                    top: 0
+                }, 100);
+            }); //퀵메뉴 에니메이션 
+
+            $('.section3 .section3_inner .review li').mouseenter(function() {
+                $(this).find('img').stop().animate({
+                    width: '120%',
+                    'margin-left': -31,
+                    'margin-top': -22
+                }, 200);
+            }).mouseleave(function() {
+                $(this).find('img').stop().animate({
+                    width: '100%',
+                    'margin-left': 0,
+                    'margin-top': 0
+                }, 200);
+            }); //수강후기 이미지확대
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top_header">
+            <div class="top_header_inner">
+                <ul class="util">
+                    <li class="login">
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                    </li>
+                </ul>
+                <!--로그인 팝업 login_popup  -->
+                <div class="login_popup">
+                    <div class="login_content">
+                        <button class="btn_close" type="button">로그인팝업닫기</button>
+                        <div class="login_content_inner">
+                            <h2>회원로그인</h2>
+                            <fieldset>
+                                <legend>로그인</legend>
+                                <div class="left_login">
+                                    <p>
+                                        <label class="login_box" for="id">아이디(ID)</label>
+                                        <input type="text" id="id">
+                                    </p>
+                                    <p>
+                                        <label class="login_box" for="pw">패스워드(PW)</label>
+                                        <input type="password" id="pw">
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="save"><label for="save">아이디저장</label>
+                                    </p>
+                                </div>
+                                <button class="btn_login" type="button">로그인</button>
+                                <div class="bottom_login">
+                                    <button class="btn_join" type="button">회원가입</button>
+                                    <button class="btn_find" type="button">아이디 / 비밀번호 찾기</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_header">
+            <div class="bottom_header_inner">
+                <h1 class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </h1>
+                <ul class="menu">
+                    <li>
+                        <a href="#">토크빈이란</a>
+                        <ul class="depth2">
+                            <li><a href="#">토크빈특징</a></li>
+                            <li>
+                                <a href="#">토크빈학습</a>
+                            </li>
+                            <li>
+                                <a href="#">기업체교육</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">토크빈T.LA</a>
+                        <ul class="depth2">
+                            <li><a href="#">토크빈T.L.A.T</a></li>
+                            <li>
+                                <a href="#">토크빈T.L.A Plus+</a>
+                            </li>
+                            <li>
+                                <a href="#">T.L.A 예약</a>
+                            </li>
+                            <li>
+                                <a href="#">토크빈레벨</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="program.html">교육프로그램</a>
+                        <ul class="depth2">
+                            <li><a href="#">자기주도(SDL)</a></li>
+                            <li>
+                                <a href="#">4D 스피킹집중</a>
+                            </li>
+                            <li>
+                                <a href="#">에세이 라이팅</a>
+                            </li>
+                            <li><a href="#">4D Speaking<br>Grammar</a></li>
+                            <li>
+                                <a href="#">Book Discussion</a>
+                            </li>
+                            <li>
+                                <a href="#">디베이트(토론)</a>
+                            </li>
+                            <li>
+                                <a href="#">몰입수학</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="startclass.html">수강신청</a>
+                        <ul class="depth2">
+                            <li><a href="startclass.html">수강신청</a></li>
+                            <li>
+                                <a href="#">수강료</a>
+                            </li>
+                            <li>
+                                <a href="#">교재구매</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">마이빈</a>
+                        <ul class="depth2">
+                            <li><a href="#">수업캘린더</a></li>
+                            <li>
+                                <a href="#">평가결과</a>
+                            </li>
+                            <li>
+                                <a href="#">My Teacher Board</a>
+                            </li>
+                            <li><a href="#">문의게시판</a></li>
+                            <li>
+                                <a href="#">결제/영수증출력</a>
+                            </li>
+                            <li>
+                                <a href="#">회원정보관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">토크빈라운지</a>
+                        <ul class="depth2">
+                            <li><a href="#">우수후기</a></li>
+                            <li>
+                                <a href="#">강의후기</a>
+                            </li>
+                            <li>
+                                <a href="#">자녀교육노하우</a>
+                            </li>
+                            <li>
+                                <a href="#">교육뉴스</a>
+                            </li>
+                            <li>
+                                <a href="#">스타강사소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <a class="btn_top" href="#"><img src="images/btn_top.png" alt="탑버튼"></a>
+        <div class="main_visual_wrap">
+            <div class="main_visual">
+                <div class="main_visual_inner">
+                    <h2><span>표현중심</span><br>Speaking & Writing</h2>
+                    <h3>’시험으로 괴로운 영어’ 가 아닌 모국어 습득 방식인<br>자연스러운 노출과 즐거운 몰입 영어</h3>
+                    <button class="btn_application" type="button" onclick="window.open('http://mkp0131.dothome.co.kr/event2/')">무료체험 신청하기</button>
+                </div>
+            </div>
+            <div class="main_visual2">
+                <div class="main_visual2_inner">
+                    <h2>SUMMER<br><span>ENGLISH CAMP</span></h2>
+                    <h3>무덥고 지치기 쉬운 여름방학<br>영어의 즐거움에 빠지고 무더위를 날려버릴<br>영어캠프에 보내주세요!</h3>
+                    <button class="btn_camp" type="button" onclick="window.open('http://mkp0131.dothome.co.kr/event2/')">캠프신청하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="section1">
+            <div class="section1_inner">
+                <ul class="quick_menu">
+                    <li>
+                        <a href="#">
+                            <div class="quick_img_wrap"><img src="images/quick_level.png" alt="레벨테스트"></div>
+                            <h2>레벨테스트</h2>
+                            <h3>외국어 평가원이 직접 참여한<br>레벨테스트</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="quick_img_wrap"><img src="images/quick_start.png" alt="수강신청"></div>
+                            <h2>수강신청</h2>
+                            <h3>토크빈과 함께 즐겁고 유쾌한<br>영어공부를 시작해보세요!</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="quick_img_wrap"><img src="images/quick_counsel.png" alt="레벨테스트"></div>
+                            <h2>수강상담</h2>
+                            <h3>망설이지 말고 무엇이든<br>물어보세요!</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="quick_img_wrap"><img src="images/quick_remote.png" alt="레벨테스트"></div>
+                            <h2>원격지원</h2>
+                            <h3>고객님의 PC에 접속하여<br>문제를 해결 해드려요!</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="section2_inner">
+                <div class="video">
+                    <!-- <embed width="480" height="340" src="https://www.youtube.com/v/X7hmrMoBbLw" frameborder="0" allowfullscreen> -->
+                    <iframe width="450" height="340" src="https://www.youtube.com/embed/X7hmrMoBbLw?&rel=0" allowfullscreen></iframe>
+                </div>
+                <div class="section2_inner_txt">
+                    <h2><span>토크빈</span>에서 변화된 아이들<br>영어실력을 확인해 보세요.</h2>
+                    <h3>토크빈 스피킹은 미국과 같은 방식으로<br>문법을 자연스럽게 익히도록 구성되어있습니다.</h3>
+                    <button class="btn_learn" type="button">Learn more</button>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="section3_inner">
+                <h2>우수 수강후기</h2>
+                <ul class="review">
+                    <li>
+                        <a href="#">
+                            <div class="review_img"><img src="images/review01.jpg" alt="review01"></div>
+                            <h3>통역사의 꿈에<br>한발짝씩 다가서요! ^^ </h3>
+                            <h4>이해진</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="review_img"><img src="images/review02.jpg" alt="review01"></div>
+                            <h3>1등따라잡기로 시작했는데,<br>좋네요~</h3>
+                            <h4>이정유</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="review_img"><img src="images/review03.jpg" alt="review01"></div>
+                            <h3>토크빈을 만나지<br>1년이 다 되었습니다.</h3>
+                            <h4>임현진</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="section4_inner">
+                <h2>토크빈 프로그램</h2>
+                <div class="box_wrap">
+                    <div class="box1">
+                        <div class="box1_1">
+                            <a href="#">
+                                <h3>철저한 1:1 맞춤교육</h3>
+                                <h4>토크빈은 영어말하기에 집중합니다. 토크빈은 원어민과<br>철저한 현지식 1:1 교육입니다.<br>무조건 암기가 아니라 아이의 수준과 흥미에 맞추어,<br>효율적으로 말하기 실력을 키우도록 설계되었습니다.</h4>
+                            </a>
+                        </div>
+                        <div class="box1_2">
+                            <a href="#">
+                                <h3>Essay Writitng</h3>
+                                <h4>미국 고등학교, 대학교 수준에서 요구되는 에세이 작문 수업.<br>에세이 기본 Structure와 개념을 배우고 실제 에세이를<br>작성하며 이해 1개 주제에 따라 6회간 체계적인 수업을<br>진행하여 논문수준의 에세이 도출!</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <a href="#">
+                            <h3>소수정예 토론수업</h3>
+                            <h4>소수의 인원이 경쟁적으로 수업합니다.<br>말하기 집중 수업인 4D, 원서로 책을 읽고 토론하는<br>북디스커션, 연산의 개념을 미국학교와 같은<br>방식으로 깨우치는 몰입 토론수업</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section5">
+            <div class="section5_inner">
+                <div class="notice_wrap">
+                    <ul class="notice">
+                        <li class="title">
+                            공지사항 & 이벤트
+                        </li>
+                        <li>
+                            <a href="#">[이벤트] 여름방학 집중과정 이벤트</a>
+                        </li>
+                        <li>
+                            <a href="#">[이벤트] 선생님께 감사 인사 쓰기 이벤트~</a>
+                        </li>
+                        <li>
+                            <a href="#">[이벤트] 새해맞이 고객 감사 이벤트!</a>
+                        </li>
+                        <li>
+                            <a href="#">[이벤트]겨울방학 스피치 클래스 오픈!</a>
+                        </li>
+                    </ul>
+                    <span class="read_more"><a href="#">Read more</a></span>
+                </div>
+                <div class="knowhow_wrap">
+                    <ul class="knowhow">
+                        <li class="title">
+                            자녀교육 노하우
+                        </li>
+                        <li>
+                            <a href="#">학생들이 많이 틀리는 영어</a>
+                        </li>
+                        <li>
+                            <a href="#">영어로부터의 자유</a>
+                        </li>
+                        <li>
+                            <a href="#">영어공부 시작을 어떻게 해야 하나?</a>
+                        </li>
+                        <li>
+                            <a href="#">학생 주도 수업과 책읽기</a>
+                        </li>
+                    </ul>
+                    <span class="read_more"><a href="#">Read more</a></span>
+                </div>
+                <div class="callcenter">
+                    <h2>고객센터</h2>
+                    <img src="images/callcenter.jpg" alt="callcenter">
+                    <h3>운영시간 : 평일 09시 ~18시</h3>
+                </div>
+                <div class="sns">
+                    <a class="sns_facebook" href="#"><img src="images/sns_facebook.jpg" alt="facebook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer_inner">
+            <h1>
+                <img src="images/log_gray.png" alt="logo">
+            </h1>
+            <div class="footer_menu_wrap">
+                <ul class="footer_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">개인정보취급방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="#">운영규칙</a>
+                    </li>
+                    <li>
+                        <a href="#">사이트맵</a>
+                    </li>
+                </ul>
+                <div class="company_information">
+                    <p class="address">
+                        주소 135-080 서울특별시 강남구 역삼로5길 22 원곡빌딩 3층 (역삼동) ㈜토크빈커뮤니케이션즈<span></span>전화 1644-0540<span></span>대표이사 이소영
+                    </p>
+                    <p class="registration_number">
+                        사업자등록번호 214-88-19708<span></span>통신판매업신고 서초 00170호<span></span>개인정보관리책임자(CPO) 이용훈 cpo@comms.interpark.com
+                    </p>
+                    <div class="copywriter">
+                        <p>Copyright (c) TALKBEAN Communications. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

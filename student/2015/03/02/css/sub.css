@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*메뉴바*/
+.main_wrap {height:105px; text-align:center; width:100%; overflow: hidden;}
+.main .line { border:1px solid #db1d3f;}
+.main_wrap .menu1 a { display:inline-block;width:32%; float:left; height:30px; border:1px solid #9a9a9a; border-radius:7px; text-align:center; color: #9a9a9a; margin-top:5px; padding-top:6px; margin-left:0.5%;}
+.main_wrap .menu1 li:first-child a{border:1px solid #db1d3f;}
+.main_wrap .menu1 li span {color: #db1d3f;}
+.main_wrap .menu2 a { display:inline-block;width:46%; float:left; height:30px; border:1px solid #9a9a9a; border-radius:7px; text-align:center; color: #9a9a9a; margin-top:5px; padding:6px 0 0 10px; margin-left:0.5%;}
+
+
+/*메뉴리스트*/
+.main{padding:6px;}
+.main .menu_list { overflow: hidden; position:relative;}
+/*.main .menu_list .box1{ width:48%; float:left;box-sizing:border-box; padding-left:4px; overflow:hidden;border:1px solid #CCC;}
+.main .menu_list .box1 a{display:block; background-size:95%;}
+
+.main .menu_list .box1 img {width:98%; padding-top:5px;}
+.main .menu_list .box1 h2 {font-size:17px; color: #3a3a3a; font-weight:bold; margin:5px 0 5px 0; display:block; }
+.main .menu_list .box1 .money1 { color:#FFF; font-size:15px;float:left; width:45%; height:25px; background:#e57700; text-align:center; border-radius:5px; margin:10px 0 20px 5px;}
+.main .menu_list .box1 .money2 { color:#FFF; font-size:15px;float:left; width:45%; height:25px; background:#ae0000; text-align:center; border-radius:5px; margin: 10px 0 20px 5px;}
+
+
+.main .menu_list .box2{ width:48%; box-sizing:border-box; padding-left:4px; overflow:hidden;border:1px solid #CCC ; position:absolute; right:0; top:0;}
+.main .menu_list .box2 a{display:block; background-size:95%;}
+
+.main .menu_list .box2 img {width:98%; padding-top:5px;}
+.main .menu_list .box2 h2 {font-size:17px; color: #3a3a3a; font-weight:bold; margin:5px 0 5px 0; display:block;}
+.main .menu_list .box2 .money1 { color:#FFF; font-size:15px; float:left;width:45%; height:25px; background:#e57700; text-align:center; border-radius:5px; margin:10px 0 20px 5px;}
+.main .menu_list .box2 .money2 { color:#FFF; font-size:15px; float:left; width:45%; height:25px; background:#ae0000; text-align:center; border-radius:5px; margin: 10px 0 20px 5px;}
+
+*/
+.main .menu_list ul { width:100%;}
+.main .menu_list ul li {float:left;width:48%; height:100%;box-sizing:border-box; padding-left:4px;border:1px solid #CCC ; margin:0 auto; margin-bottom:20px; margin-left:5px;}
+.main .menu_list ul li img {width:98%; padding-top:5px;}
+.main .menu_list ul li h2 {font-size:17px; color: #3a3a3a; font-weight:bold; margin:5px 0 5px 0; display:block;}
+.main .menu_list ul li .money1 { color:#FFF; font-size:15px; float:left;width:45%; height:25px; background:#e57700; text-align:center; border-radius:5px; margin:10px 0 20px 5px;}
+.main .menu_list ul li .money2 { color:#FFF; font-size:15px; float:left; width:45%; height:25px; background:#ae0000; text-align:center; border-radius:5px; margin: 10px 0 20px 5px;}
+
+
+
+
+
+
+
+
+

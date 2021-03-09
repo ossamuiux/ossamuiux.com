@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="/m_asan/images/app_icon2.png">
+<link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=WooriDotum90C2:700"/>
+<title>로그인페이지</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico">
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	
+	var sw=0;
+	$('.show_btn a').click(function(e){
+	e.preventDefault();
+	
+	if (sw==1) {
+		$(this).addClass('on')
+		$('.pc_btn .key_board').show();	
+
+		sw=0;
+	} else {
+		$(this).removeClass('on')
+		$('.pc_btn .key_board').hide();	
+		
+		sw=1;
+	}
+	});
+	
+	$('form button, .main .join, .bottom a,.line a').click(function(){
+		alert('리뉴얼 준비중입니다.');
+	});	
+});
+</script>
+</head>
+
+<body>
+<div class="close">
+    <a class="close_btn" href="#"></a>
+</div>
+<div class="menu_wrap">
+    <div class="login_wrap">
+    	<a class="login" href="login.html">로그인</a>
+    	<a class="join" href="#">회원가입</a>
+    </div>
+	<div class="search_wrap">
+    	<p>매장검색</p>
+        <div class="search">
+            <form>
+                <fieldset>
+                    <legend>검색창</legend>
+                    <div class="search_store">
+                        <input type="text" name="seeText" title="매장명을 입력하세요" placeholder="매장명을 입력하세요" value>      
+                    </div>
+                    <button type="submit"><img src="images/search_btn.png"></button>
+                </fieldset>
+            </form>
+        </div>        
+	</div>
+    <div class="m_gnb">
+    	<li><a href="#">피자</a></li>
+        <li><a class="menu" href="#">사이드&amp;음료</a></li>
+        <li><a class="menu" href="#">히트박스</a></li>
+        <li><a class="menu" href="#">이벤트</a></li>
+        <li><a class="menu" href="#">공자사항</a></li>
+    </div>
+    <a class="call_number" href="tel:1688-3651">주문번호 <strong>1688-3651</strong></a>
+</div>
+<div class="wrap_hide"><!--전체내용, 창크기 만큼 크기를 잡아두기-->
+    <div class="cover"></div><!--옆에 메뉴 켰을 때 화면 가려지는 거-->
+    <div class="wrap"><!--헤더, 메인, 푸터를 한번에 움직이기 위해 wrap div로 감쌈-->
+		</div>      
+        <div class="header_wrap">
+            <div class="header">
+                <a href="#" class="m_btn"></a>
+                <h1><a href="index.html"><img src="images/m_logo.gif" alt="피자에땅 모바일"></a></h1>
+                <a href="#" class="cart_btn"><img src="images/cart_icon.png" alt=""></a>
+                <a href="#" class="cart_num">7</a>
+            </div>
+        </div>
+        <div class="top_btn">
+        	<a class="m_btn" href="#"><img src="images/btn_top.png" alt="탑버튼"></a>
+        </div>
+        <div class="main_wrap">
+            <div class="main">
+                <h3>합리적인 가격으로 편안하고<br> 친근한 서비스를 제공하는 피자에땅 입니다.</h3>
+                <div class="pc_btn">
+                	<div class="show_btn">
+                        <p>PC 자판 이미지보기</p>
+                        <a href="#"></a>
+                    </div>
+                    <div class="key_board">
+                        <span></span>
+                    </div>
+                </div>
+                <form>
+                    <fieldset>
+                        <legend>로그인</legend>
+                        <div class="id">
+                            <input type="text" title="아이디 입력하세요" placeholder="아이디 입력하세요" value>      
+                        </div>
+                        <legend>비밀번호</legend>
+                        <div class="pw">
+                            <input type="password" title="비밀번호 입력하세요" placeholder="비밀번호 입력하세요" value>      
+                        </div>
+                        <button type="submit">로그인</button>                        
+                    </fieldset>
+                </form>
+                <a class="join" href="#">회원가입</a>
+                <div class="bottom">
+                	<a href="#">아이디찾기</a>
+                    <span>l</span>
+                    <a href="#">비밀번호찾기</a>
+                    <span>l</span>
+                    <a href="#">비회원주문</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        	<div class="line">
+                <a class="no" href="#">APP 다운</a>
+                <a href="tel:1688-3651">주문번호 1688-3651</a>
+                <a class="no" href="#">주문안내</a>
+            </div>
+            <div class="line second">
+                <a class="no" href="#">이용약관</a>
+                <a class="no strong" href="#">개인정보 취급방침</a>
+                <a class="no" href="#">가맹점 모집</a>
+            </div>
+        	<a class="pc_view" href="http://catherine.dothome.co.kr/pizzaetang" target="_blank">PC 버전보기</a>
+            <p class="copy_right">Copyright ⓒ 2014 PIZZAETANG. ALL RIGHT RESERVED</p>
+        </div>
+     </div>
+</div>
+</body>
+</html>

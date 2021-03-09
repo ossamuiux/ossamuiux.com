@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>네이버 :: 베스트웹툰&amp;작가소개</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function() {
+	
+	//main_캐릭터클릭시 페이지이동
+	$('.gnb li').click(function(e){
+		e.preventDefault();
+		var num=$(this).index();
+		if(num==0){
+			$('html,body').stop().animate({'scrollTop':'950px'},'slow');
+		}else if(num==1){
+			$('html,body').stop().animate({'scrollTop':'1950px'},'slow');
+		}else if(num==2){
+			$('html,body').stop().animate({'scrollTop':'2950px'},'slow');
+		}else if(num==3){
+			$('html,body').stop().animate({'scrollTop':'3950px'},'slow');
+		}else if(num==4){
+			$('html,body').stop().animate({'scrollTop':'4950px'},'slow');
+		}else{
+			$('html,body').stop().animate({'scrollTop':'5950px'},'slow');
+		}
+	});
+
+	//모바일버튼_페이지이동	
+	$('.m_gnb li').click(function(e){
+		e.preventDefault();
+		var num=$(this).index();
+		if(num==0){
+			$('html,body').stop().animate({'scrollTop':'950px'},'slow');
+		}else if(num==1){
+			$('html,body').stop().animate({'scrollTop':'1950px'},'slow');
+		}else if(num==2){
+			$('html,body').stop().animate({'scrollTop':'2950px'},'slow');
+		}else if(num==3){
+			$('html,body').stop().animate({'scrollTop':'3950px'},'slow');
+		}else if(num==4){
+			$('html,body').stop().animate({'scrollTop':'4950px'},'slow');
+		}else{
+			$('html,body').stop().animate({'scrollTop':'5950px'},'slow');
+		}
+	});
+	
+	
+	//모바일메뉴_li
+	$('.m_gnb li').mouseenter(function(){
+		$(this).find('a').stop().animate({'opacity':'1'},100);
+		});
+	$('.m_gnb li').mouseleave(function(){
+		$(this).find('a').stop().animate({'opacity':'0.7'},100);
+		});
+	
+	var sw=0;	
+	$('.m_btn').click(function(e){
+		e.preventDefault();
+		if(sw==0){
+			$(this).stop().animate({'background-color':'#52db18','left':'240px'},500);
+			$('.bar1').stop().animate({'opacity':'0'},400);
+			$('.bar3').stop().animate({'opacity':'0'},400);
+			$(this).addClass('on');
+			$('.m_box').stop().animate({'left':'0px'},500);
+			sw=1;
+		}else{
+			$(this).stop().animate({'background-color':'#767676','left':'10px'},500);
+			$('.bar1').stop().animate({'opacity':'1'},400);
+			$('.bar3').stop().animate({'opacity':'1'},400);
+			$(this).removeClass('on');
+			$('.m_box').stop().animate({'left':'-300px'},500);
+			sw=0;
+		}
+	});
+	
+//	//section1 제목
+//	auto_move ();//처음부터 실행하려고 써줌
+//	
+//	setInterval(auto_move,1000);//함수이름 정하고, 1초에 한번씩 실행
+//	
+//	function auto_move (){
+//		$( ".section1 .tit" ).animate({'top':'100px'},1000,'easeInOutElastic').animate({'top':'0px'},1000,'easeInOutElastic');
+//	}
+//	
+	//첫회보기,목록보기
+	$('.content .btn').mouseenter(function(){
+		$(this).stop().animate({'background-color':'#ffdd00','border-color':'#ffdd00'},200);
+		$(this).find('a').addClass('on');
+	});
+	$('.content .btn').mouseleave(function(){
+		$(this).stop().animate({'background-color':'transparent','border-color':'#2f2f2f'},200);
+		$(this).find('a').removeClass('on');
+	});		
+	
+	$('.content .btn1').mouseenter(function(){
+		$(this).stop().animate({'background-color':'#57250e','border-color':'#57250e'},200);
+		$(this).find('a').addClass('on');
+	});
+	$('.content .btn1').mouseleave(function(){
+		$(this).stop().animate({'background-color':'transparent','border-color':'#2f2f2f'},200);
+		$(this).find('a').removeClass('on');
+	});		
+	
+	//탑버튼
+	$('.top').click(function(e){
+		e.preventDefault();
+		$('html,body').stop().animate({'scrollTop':'0px'},'slow');
+	});				
+});
+</script>
+<body>
+<div class="m_btn">
+	<div class="bar">
+    	<p class="bar1"></p>
+        <p class="bar2_1"></p>
+        <p class="bar2_2"></p>
+        <p class="bar3"></p>
+    </div>
+</div>
+<div class="m_box">
+	<ul class="m_gnb">
+    	<li><a class="li1" href="#">생활의 참견</a></li>
+        <li><a class="li2" href="#">치즈인더트랩</a></li>
+        <li><a class="li3" href="#">연애혁명</a></li>
+        <li><a class="li4" href="#">마음의소리</a></li>
+        <li><a class="li5" href="#">조선왕조실톡</a></li>
+        <li><a class="li6" href="#">유미의 세포들</a></li>
+    </ul>
+</div>
+<div class="main">
+	<div class="content">
+        <h1><img src="img/main_tit.png" alt=""></h1>
+        <h2>네이버 베스트 웹툰 &amp;작가를 소개합니다!</h2>
+        <ul class="gnb">
+        	<li><a href="#"><img src="img/main_view_1.png" alt=""><span><img src="img/main_view_on_1.png"></span></a></li>
+            <li><a href="#"><img src="img/main_view_2.png" alt=""><span><img src="img/main_view_on_2.png"></span></a></li>
+            <li><a href="#"><img src="img/main_view_3.png" alt=""><span><img src="img/main_view_on_3.png"></span></a></li>
+            <li><a href="#"><img src="img/main_view_4.png" alt=""><span><img src="img/main_view_on_4.png"></span></a></li>
+            <li><a href="#"><img src="img/main_view_5.png" alt=""><span><img src="img/main_view_on_5.png"></span></a></li>
+            <li><a href="#"><img src="img/main_view_6.png" alt=""><span><img src="img/main_view_on_6.png"></span></a></li>
+        </ul>
+        <p>이미지를 클릭하면 해당 웹툰 소개 페이지로 이동합니다.</p>
+    </div>
+</div>
+<div class="section1">
+	<h1 class="tit"><img src="img/section1_tit.png" alt=""></h1>
+	<p class="char"><img src="img/section1_char.png" alt=""></p>
+    <div class="bg2"><img src="img/section1_bg2.png" alt=""></div>
+	<div class="content">
+    	<p><img src="img/section1_txt.png" alt=""></p>
+        <div class="btn"><a href="http://comic.naver.com/webtoon/detail.nhn?titleId=25613&no=1&weekday=mon" target="_blank">첫회보기</a></div>
+        <div class="btn btn2"><a href="http://comic.naver.com/webtoon/list.nhn?titleId=25613&weekday=mon" target="_blank">목록보기</a></div>
+    </div>
+</div>
+<div class="section2">
+	<div class="content">
+    	<h1 class="tit"><img src="img/section2_tit.png" alt=""><span><img src="img/section2_tit_star.png" alt=""></span></h1>
+    	<p><img src="img/section2_txt.png" alt=""></p>
+        <div class="btn1"><a href="http://comic.naver.com/webtoon/detail.nhn?titleId=662162&no=1&weekday=thu" target="_blank">첫회보기</a></div>
+        <div class="btn1 btn2"><a href="http://comic.naver.com/webtoon/list.nhn?titleId=662162&weekday=thu" target="_blank">목록보기</a></div>
+    </div>
+</div>
+<div class="section3">
+	<div class="content">
+    	<div class="heart1"><img src="img/section3_heart_1.png" alt=""></div>
+        <div class="heart2"><img src="img/section3_heart_2.png" alt=""></div>
+		<div class="stroke"><img src="img/section3_ani.png" alt=""></div>
+    	<p><img src="img/section3_txt.png" alt=""></p>
+        <div class="btn"><a href="http://comic.naver.com/webtoon/detail.nhn?titleId=570503&no=1&weekday=thu" target="_blank">첫회보기</a></div>
+        <div class="btn btn2"><a href="http://comic.naver.com/webtoon/list.nhn?titleId=570503&weekday=thu" target="_blank">목록보기</a></div>
+    </div>
+</div>
+<div class="section4">
+	<div class="content">
+    	<div class="char"><img src="img/section4_char.png" alt=""></div>
+    	<p><img src="img/section4_txt.png" alt=""></p>
+        <div class="btn1"><a href="http://comic.naver.com/webtoon/detail.nhn?titleId=20853&no=1&weekday=fri" target="_blank">첫회보기</a></div>
+        <div class="btn1 btn2"><a href="http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=fri" target="_blank">목록보기</a></div>
+    </div>
+</div>
+<div class="section5">
+	<div class="content">
+    	<div class="char1"><img src="img/section5_char1.png" alt=""></div>
+        <div class="char2"><img src="img/section5_char2.png" alt=""></div>
+    	<p><img src="img/section5_txt.png" alt=""></p>
+        <div class="btn"><a href="http://comic.naver.com/webtoon/detail.nhn?titleId=642598&no=1&weekday=wed" target="_blank">첫회보기</a></div>
+        <div class="btn btn2"><a href="http://comic.naver.com/webtoon/list.nhn?titleId=642598&weekday=wed" target="_blank">목록보기</a></div>
+    </div>
+</div>
+<div class="section6">
+	<div class="content">
+    	<div class="char3"><img src="img/section6_char.png" alt=""></div>
+    	<p><img src="img/section6_txt.png" alt=""></p>
+        <div class="btn"><a href="http://comic.naver.com/webtoon/detail.nhn?titleId=651673&no=1&weekday=wed" target="_blank">첫회보기</a></div>
+        <div class="btn btn2"><a href="http://comic.naver.com/webtoon/list.nhn?titleId=651673&weekday=wed" target="_blank">목록보기</a></div>
+     </div>
+</div>
+<div class="top"><a href="#"><img src="img/top.png" alt=""><a></div>
+</body>
+</html>

@@ -1,0 +1,516 @@
+@charset "UTF-8";
+::-webkit-scrollbar { 
+    display: none; 
+}
+/*모바일일때*/
+/**{box-sizing: border-box;}*/
+/*reset*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: top;
+}
+button,input {border-radius: 0}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none;}
+/*a {text-decoration: none; cursor:url("../img/Saturn.svg"), auto;}*/
+/*a:link {text-decoration:none; cursor:url("../img/Saturn.svg"), auto;}*/
+a:visited {text-decoration:none; cursor:url("http://dothome.co.kr/expirationinfo/404.html"), auto;}
+/*a:hover {text-decoration:none; cursor:url("../img/Saturn.svg"), auto;}*/
+a:active {text-decoration:none; cursor:url("http://dothome.co.kr/expirationinfo/404.html"), auto;}
+iframe {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {display: block;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal}
+.blind {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px}
+button {cursor:pointer;}
+button, input, select {vertical-align: middle;}
+
+/*테이블 칸 여백빼기, 선합치기*/
+table {border-spacing: 0; border-collapse: collapse;}
+
+
+/*스킵네비게이션*/
+#accessibilityLink {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+#accessibilityLink a {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    text-align: center;
+    top: -9999px;
+    width: 100%;
+    font-size: 12px;
+}
+#accessibilityLink a:focus, #accessibilityLink a:active{
+    top: 0;
+}
+
+
+/*'Spoqa Han Sans' 글씨체 넣는법*/
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Regular'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf') format('truetype');
+}
+
+
+html {
+    cursor: url(../images/Saturn.svg), auto;
+}
+
+body,input,button,textarea,select,table {
+    font-size: 14px;
+    font-family: 'Spoqa Han Sans','맑은 고딕','Malgun Gothic',sans-serif;
+}
+
+html,body{position: absolute;width: 100%; height: 100%;}
+body {min-width: 1400px; overflow-x: hidden;}
+
+/*
+#cursor_e {
+    width: 100px;
+    height: 100px;
+    background: none;
+    position: absolute;
+    opacity: 0;
+    margin: -37px 0 0 -33px;
+    border-radius: 70px;
+    z-index: 9999;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    animation: cursor_scale 1s 1s infinite linear;
+}
+@keyframes cursor_scale {
+  0% {
+    opacity: 0;
+	transform: scale(0, 0);
+  }
+  50% {
+	opacity: 1;
+	transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 0;
+	transform: scale(1, 1);
+  }
+}
+*/
+#header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#header .header_inner {
+    width: 1400px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header .logo {
+    margin-top: 50px;
+    float: left;
+}
+#header .po_menu {
+    float: left;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    margin: 0 15px;
+}
+#header .po_menu li {
+    float: left;
+    padding-left: 60px;
+}
+#header .po_menu li:first-child {
+    padding-left: 0;
+}
+#header .po_menu li a {
+    font-size: 24px;
+    color: #fff;
+}
+#main .main_visual {
+    background: url(../images/main_visual.jpg) no-repeat 50% 50%;
+    /* margin-top: -102px; */
+    position: relative;
+    z-index: -1;
+    /* width: 1400px; */
+}
+#main .main_inner {
+    width: 1400px;
+    margin:  0 auto;
+    height: 980px;
+}
+#main .intro {
+    font-size: 25px;
+    color: rgba(255,255,255,.5);
+    position: absolute;
+    left: 59.43%;
+    top: 62%;
+}
+#main .main_visual .mouse {
+    background: url(../images/mousewheel.png)no-repeat 50% 50%;
+    height: 66px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 166px;
+}
+#main .main_visual .bang {
+    background: url(../images/bang.png) no-repeat 20.50% 90%;
+    height: 605px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 150px;
+    background-size: 850px;
+}
+#main .main_visual .main_txt {
+    background: url(../images/main_txt.png) no-repeat 80%;
+    height: 253px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 350px;
+    /* margin-top: 315px; */
+}
+
+#main .self_intro {
+    min-height: 980px;
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+#main .self_intro p {
+    position: absolute;
+    right: 335px;
+    top: 400px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 70px;
+    z-index: 3;
+}
+#main .self_intro .girl {
+    background: url(../images/me-02.jpg)no-repeat 50% 50%;
+    height: 1003px;
+    /* margin: 0 auto; */
+    position: absolute;
+    left: -484px;
+    top: 0;
+    width: 100%;
+}
+#main .self_intro .who {
+    background: url(../images/who.png)no-repeat right;
+    height: 207px;
+    width: 100%;
+    position: absolute;
+    right: 300px;
+    top: 120px;
+}
+#main .self_intro .cat {
+    background: url(../images/cat.png)no-repeat right;
+    min-height: 370px;
+    width: 100%;
+    margin-top: 80px;
+    position: absolute;
+    right: -260px;
+    bottom: 0;
+}
+
+#main .experience {
+    position: relative;
+    height: 980px;
+    width: 1400px;
+    margin: 0 auto;
+}
+#main .experience p {
+    position: absolute;
+    left: 0;
+    top: 450px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+}
+#main .experience .why {
+    background: url(../images/why.png)no-repeat left;
+    height: 195px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 140px;
+}
+#main .experience .tv {
+    background: url(../images/tv2_03.png)no-repeat right;
+    height: 545px;
+    width: 100%;
+    position: absolute;
+    right: 138px;
+    bottom: 136px;
+    /* margin: 367px 440px 0 0; */
+}
+#main .experience .tv2 {
+    background: url(../images/video.gif)no-repeat right;
+    background-size: 428px;
+    height: 338px;
+    width: 420px;
+    position: absolute;
+    right: 247px;
+    bottom: 181px;
+    z-index: -1;
+}
+#main .experience .rabbit {
+    background: url(../images/rabbit.png)no-repeat right;
+    height: 806px;
+    width: 100%;
+    position: absolute;
+    right: -260px;
+    top: 369px;
+    z-index: -2;
+}
+
+#main .experience2 {
+    position: relative;
+    min-height:980px;
+    width: 1400px;
+    margin: 0 auto;
+}
+#main .experience2 strong{
+    font-size: 40px;
+    font-weight: 500;
+    position: absolute;
+    left: 230px;
+    top: 145px;
+}
+#main .experience2 p {
+    position: absolute;
+    left: 230px;
+    top: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+}
+#main .experience2 .computer {
+    background: url(../images/com.png)no-repeat;
+    height: 449px;
+    width: 100%;
+    position: absolute;
+    left: -260px;
+    bottom: 0;
+}
+#main .experience2 .photo {
+    width: 1400px;
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    margin-left: -470px;
+}
+#main .experience2 .photo li {
+    float: left;
+    margin-right: 40px;
+}
+
+#main .hexagon_wrap {
+    width: 1400px;
+    height: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+#main .hexagon_wrap .hexagon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -130px -775px 0;
+}
+#main .portfolio {
+    min-height: 980px;
+    position: relative;
+}
+#main .portfolio .wave {
+    background: url(../images/wave.png)no-repeat 50%;
+    height: 849px;
+    margin-top: 300px;
+}
+#main .portfolio .mockup {
+    background: url(../images/d_mockup.png)no-repeat;
+    height: 719px;
+    width: 100%;
+    position: absolute;
+    left: 132px;
+    top: 150px;
+}
+#main .portfolio .m_mockup {
+    background: url(../images/m_mockup.png)no-repeat;
+    height: 366px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom:100px;
+    margin-left: -30px;
+}
+#main .portfolio .real {
+    background: url(../images/real.png)no-repeat right;
+    height: 195px;
+    width: 100%;
+    position: absolute;
+    right: 205px;
+    top: 208px;
+}
+#main .portfolio .pf_txt {
+    position: absolute;
+    right: 280px;
+    top: 408px;
+    font-size: 20px;
+    color: rgba(255,255,255,.5);
+}
+#main .portfolio .modal_wrap {
+    position: absolute;
+    right: 325px;
+    bottom: 247px;
+}
+#main .portfolio .modal_wrap li {
+    border:3px solid #fff;
+    border-radius: 40px;
+    width: 254px;
+    height: 64px;
+    margin-top: 30px
+}
+#main .portfolio .modal_wrap li a {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 67px;
+    display: block;
+}
+#main .etc {
+    position: relative;
+    height: 980px;
+    width: 1400px;
+    margin: 0 auto;
+}
+#main .etc p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+#main .etc .etc_inner {
+    width: 1400px;
+    height: 980px;
+    /* margin: 100px 0 0 20px; */
+    padding: 150px 0 0 20px;
+}
+#main .etc .mini_event {
+    float: left;
+}
+#main .etc .mini_event img {
+    margin-bottom: 10px;
+}
+#main .etc .event {
+    float: left;
+    padding: 0 10px;
+}
+#main .etc .video iframe {
+    margin-bottom: 10px;
+}
+#main .etc .text {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -333px;
+}
+
+#main .epilogue {
+    width: 1400px;
+    height: 980px;
+    position: relative;
+    margin: 0 auto;
+}
+#main .epilogue .epil_txt {
+    background: url(../images/epil.png)no-repeat left;
+    height: 199px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 146px;
+}
+#main .epilogue p {
+    position: absolute;
+    left: 0;
+    top: 400px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+}
+#main .epilogue .epil_photo {
+    position: absolute;
+    left: 0;
+    top: 600px;
+    width: 100%;
+}
+
+
+
+#footer .footer_bg {
+    background: url(../images/footer_bg.png)no-repeat;
+    height: 661px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

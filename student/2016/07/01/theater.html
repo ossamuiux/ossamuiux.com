@@ -1,0 +1,931 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>롯데시네마:영화관</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$('.section1.theater .tab_menu .tab_content .tab:gt(0)').hide();
+	var num3;
+	
+	$('.section1.theater .tab_menu .tab_btn li').click(function(e){
+		e.preventDefault();
+		
+		num3=$(this).index();
+		$('.section1.theater .tab_menu .tab_btn li a').removeClass('on');
+		$(this).find('a').addClass('on');
+		$('.section1.theater .tab_menu .tab_content .tab').hide();
+		$('.section1.theater .tab_menu .tab_content .tab').eq(num3).show();
+		$('.section1.theater .tab_menu .tab_content .tab').eq(num3).find('li').eq(0).addClass('first');
+	});
+	
+	$('.section1.theater .tab_menu .tab_content .tab li').mouseenter(function(e){
+		e.preventDefault();
+		
+		$('.section1.theater .tab_menu .tab_content .tab li').removeClass('first');
+		$(this).addClass('first');
+	});
+
+	$('.section1.theater .tab_menu .tab_img .img').hide();	
+	$('.section1.theater .tab_menu .tab_img .img1').show();
+	var num4;
+	
+	$('.section1.theater .tab_menu .tab_btn li').click(function(e){
+		e.preventDefault();
+		
+		num4=$(this).index();
+		$('.section1.theater .tab_menu .tab_img .img').hide();	
+		$('.section1.theater .tab_menu .tab_img .img').eq(num4).show();
+	});
+
+	$('.time_box1').hide();
+	var pos1;
+	var pos2;
+	
+	$('.time_txt .end').mouseenter(function(){
+		$('.time_box1').show();
+		
+		pos1=$(this).offset().left-29;
+		pos2=$(this).offset().top-51;
+		//console.log(pos);
+		$('.time_box1').css({'left':pos1+'px','top':pos2+'px'});
+		$('.time_txt .end').mouseleave(function(){
+			$('.time_box1').hide();
+		});
+	});
+
+	$('.time_box2').hide();
+	var pos3;
+	var pos4;
+	
+	$('.time_txt .re').mouseenter(function(){
+		$('.time_box2').show();
+		pos3=$(this).offset().left-29;
+		pos4=$(this).offset().top-51;
+		//console.log(pos);
+		$('.time_box2').css({'left':pos3+'px','top':pos4+'px'});
+		$('.time_txt .re').mouseleave(function(){
+			$('.time_box2').hide();
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="reserve_wrap">
+    <div class="reserve">
+        <form action="" method="">
+            <fieldset>
+            <legend>예매팝업</legend>
+                    <div class="reserve_close"><a href="#"><img src="img/popup_close.png" alt=""></a></div>
+                    <div class="reserve_movie">
+                        <h2>영화<a href="#"><img class="refresh" src="img/popup_refresh.png" alt=""></a><img class="movie_icon" src="img/popup_movie.png" alt=""></h2>
+                        <div class="movie_content">
+                            <div class="tab_menu">
+                                <ul class="tab_btn">
+                                    <li><a href="#" class="on">예매율순</a></li>
+                                    <li class="last"><a href="#" class="on2">가나다순</a></li>
+                                </ul>
+                            </div>
+                            <ul class="m_content">
+                                    <li><a href="#" class="m_on"><img class="grade" src="img/15.png" alt=""><h3>007 스펙터</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>하늘을 걷는 남자</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>헝거게임 : 더 파이널</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>셜록 : 유령신부</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>스타워즈 : 깨어난 포스</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/10.png" alt=""><h3>어린 왕자</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>더 셰프</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>더 인턴</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/10.png" alt=""><h3>스누피 : 더 피너츠 무비</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>마션</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>더 원 아이 러브</h3></a></li>
+                                    <li><a href="#"><img class="grade" src="img/18.png" alt=""><h3>나이트 오브 컵스</h3></a></li>
+                            </ul>
+                            <div class="m_txt1">
+                                    <img class="m_poster" src="img/popup_info.png" alt="">
+                                    <h3>영화제목</h3>
+                                    <span class="line4"></span>
+                                    <p>관람가<br>상영시간</p>
+                            </div>
+                            <div class="m_info">
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_007.jpg" alt="">
+                                    <h3>007스펙터</h3>
+                                    <span class="line4"></span>
+                                    <p>15세 관람가<br>상영시간 148분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_thewalk.jpg" alt="">
+                                    <h3>하늘을 걷는 남자</h3>
+                                    <span class="line4"></span>
+                                    <p>12세 관람가<br>상영시간 123분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_hungergame.jpg" alt="">
+                                    <h3>헝거게임 :<br>더 파이널</h3>
+                                    <span class="line4"></span>
+                                    <p>15세 관람가<br>상영시간 137분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_sherlock.jpg" alt="">
+                                    <h3>셜록 : 유령신부</h3>
+                                    <span class="line4"></span>
+                                    <p>12세 관람가<br>상영시간 115분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_starwars.jpg" alt="">
+                                    <h3>스타워즈 :<br>깨어난 포스</h3>
+                                    <span class="line4"></span>
+                                    <p>12세 관람가<br>상영시간 135분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_lepetitprince.jpg" alt="">
+                                    <h3>어린 왕자</h3>
+                                    <span class="line4"></span>
+                                    <p>전체 관람가<br>상영시간 106분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_theshef.jpg" alt="">
+                                    <h3>더 셰프</h3>
+                                    <span class="line4"></span>
+                                    <p>15세 관람가<br>상영시간 101분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_theintern.jpg" alt="">
+                                    <h3>더 인턴</h3>
+                                    <span class="line4"></span>
+                                    <p>12세 관람가<br>상영시간 121분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_snoopy.jpg" alt="">
+                                    <h3>스누피 :<br>더 피너츠 무비</h3>
+                                    <span class="line4"></span>
+                                    <p>전체 관람가<br>상영시간 93분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_martian.jpg" alt="">
+                                    <h3>마션</h3>
+                                    <span class="line4"></span>
+                                    <p>12세 관람가<br>상영시간 142분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_theoneilove.jpg" alt="">
+                                    <h3>더 원 아이 러브</h3>
+                                    <span class="line4"></span>
+                                    <p>15세 관람가<br>상영시간 91분</p>
+                                </div>    	
+                                <div class="m_txt">
+                                    <img class="m_poster" src="img/popup_knightofcups.jpg" alt="">
+                                    <h3>나이트 오브 컵스</h3>
+                                    <span class="line4"></span>
+                                    <p>청소년 관람불가<br>상영시간 118분</p>
+                                </div>    	
+                            </div>    
+                        </div>   
+                    </div>
+                    <div class="reserve_cinema">
+                        <h2>영화관<a href="#"><img class="refresh" src="img/popup_refresh.png" alt=""></a><img class="cinema_icon" src="img/popup_cinema.png" alt=""></h2>
+                        <div class="cinema_content">
+                            <div class="tab_menu">
+                                <ul class="tab_btn">
+                                    <li class="first"><a href="#" class="on">전국영화관</a></li>
+                                    <li class="last"><a href="#" class="on2">스페셜관</a></li>
+                                </ul>
+                                <ul class="gnb">
+                                    <li><a href="#" class="first">서울<span></span></a></li>
+                                    <li><a href="#">경기<span></span></a></li>
+                                    <li><a href="#">인천<span></span></a></li>
+                                    <li><a href="#">충청<span></span></a></li>
+                                    <li><a href="#">대전<span></span></a></li>
+                                    <li><a href="#">전라<span></span></a></li>
+                                    <li><a href="#">광주<span></span></a></li>
+                                    <li><a href="#">경북<span></span></a></li>
+                                    <li><a href="#">대구<span></span></a></li>
+                                    <li><a href="#">경남<span></span></a></li>
+                                    <li><a href="#">부산<span></span></a></li>
+                                    <li><a href="#">강원<span></span></a></li>
+                                    <li><a href="#">제주<span></span></a></li>
+                                </ul>
+                                <div class="sub_content">      
+                                    <ul class="sub">
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">강동</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">김포공항</a></li>
+                                        <li><a href="#">가산</a></li>
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">강남씨티</a></li>
+                                        <li><a href="#">홍대입구</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">상암누리</a></li>
+                                        <li><a href="#">서울대</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">강남씨티</a></li>
+                                        <li><a href="#">홍대입구</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">상암누리</a></li>
+                                        <li><a href="#">서울대</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">강남씨티</a></li>
+                                        <li><a href="#">서울대</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">강동</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">강남씨티</a></li>
+                                        <li><a href="#">홍대입구</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">강동</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">김포공항</a></li>
+                                        <li><a href="#">가산</a></li>
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">상암누리</a></li>
+                                        <li><a href="#">서울대</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">김포공항</a></li>
+                                        <li><a href="#">가산</a></li>
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">강동</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">김포공항</a></li>
+                                        <li><a href="#">가산</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">김포공항</a></li>
+                                        <li><a href="#">가산</a></li>
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">강남씨티</a></li>
+                                        <li><a href="#">홍대입구</a></li>
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">강동</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">청량리</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">상암누리</a></li>
+                                        <li><a href="#">서울대</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">서울대</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">홍대입구</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">상암누리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">장안</a></li>
+                                        <li><a href="#">강남씨티</a></li>
+                                        <li><a href="#">홍대입구</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">가양</a></li>
+                                        <li><a href="#">강동</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">가산</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">건대입구</a></li>
+                                        <li><a href="#">김포공항</a></li>
+                                        <li><a href="#">신사</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+                                    <ul class="sub">
+                                        <li><a href="#">노원</a></li>
+                                        <li><a href="#">월드타워</a></li>
+                                        <li><a href="#">에비뉴엘</a></li>
+                                        <li><a href="#">피카디리</a></li>
+                                    </ul>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve_date">
+                        <div class="reserve_calendar">
+                            <h2>날짜<img class="calendar_icon" src="img/popup_calendar.png" alt=""></h2>
+                            <div class="table_wrap">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <div class="year_tit">
+                                                <a class="prev" href="#"><img src="img/popup_prev.png" alt=""></a>
+                                                <h3>2016년 01월</h3>
+                                                <a class="next" href="#"><img src="img/popup_next.png" alt=""></a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="year_txt">
+                                                <span class="day"></span>
+                                                <ul>
+                                                    <a href="#"><li><h3>Sun</h3><br><em>27</em><br>3<br>10<br><span class="choose_other">17</span><br><span class="choose_other">24</span><br>31</li></a>
+                                                    <a href="#"><li><h3>Mon</h3><br><em>28</em><br>4<br>11<br><span class="choose_other">18</span><br>25<br><em>1</em></li></a>
+                                                    <a href="#"><li><h3>Tue</h3><br><em>29</em><br>5<br>12<br><span class="choose">19</span><br>26<br><em>2</em></li></a>
+                                                    <a href="#"><li><h3>Wed</h3><br><em>30</em><br>6<br>13<br><span class="choose_other">20</span><br>27<br><em>3</em></li></a>
+                                                    <a href="#"><li><h3>Thu</h3><br><em>31</em><br>7<br>14<br><span class="choose_other">21</span><br>28<br><em>4</em></li></a>
+                                                    <a href="#"><li><h3>Fri</h3><br>1<br>8<br>15<br><span class="choose_other">22</span><br>29<br><em>5</em></li></a>
+                                                    <a href="#"><li><h3>Sat</h3><br>2<br>9<br>16<br><span class="choose_other">23</span><br>3<br><em>6</em></li></a>
+                                                </ul>
+                                             </div>
+                                             <img src="img/popup_calendar_txt.png" alt="">
+                                        </td>
+                                    </tr>
+                              </table>                        
+                            </div>
+                        </div>
+                        <div class="reserve_time">
+                            <h2>시간<img class="time_icon" src="img/popup_time.png" alt=""></h2>
+                            <div class="time_wrap">
+                                <ul class="time_info">
+                                    <li>
+                                        <div class="theater">
+                                            <h3 class="theater_nm">1관</h3>
+                                            <h3 class="theater_info">2D</h3>
+                                        </div>
+                                        <ul class="theater_time">
+                                            <li><a href="#">08:30</a><span></span></li>
+                                            <li><a href="#">11:25</a><span></span></li>
+                                            <li><a href="#">14:20</a><span></span></li>
+                                            <li><a href="#">17:15</a><span></span></li>
+                                            <li><a href="#">20:10</a><span></span></li>
+                                            <li><a href="#">23:05</a><span class="last"></span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="t2">
+                                        <div class="theater">
+                                            <h3 class="theater_nm">3관</h3>
+                                            <h3 class="theater_info">씨네커플</h3>
+                                        </div>
+                                        <ul class="theater_time">
+                                            <li><a href="#">09:30</a><span></span></li>
+                                            <li><a href="#">12:25</a><span></span></li>
+                                            <li><a href="#">15:20</a><span></span></li>
+                                            <li><a href="#">18:15</a><span></span></li>
+                                            <li><a href="#">21:10</a><span></span></li>
+                                            <li><a href="#">24:05</a><span class="last"></span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="t2">
+                                        <div class="theater">
+                                            <h3 class="theater_nm">9관</h3>
+                                            <h3 class="theater_info">3D</h3>
+                                        </div>
+                                        <ul class="theater_time last">
+                                            <li><a href="#">07:00</a><span></span></li>
+                                            <li><a href="#">09:55</a><span></span></li>
+                                            <li><a href="#">12:55</a><span></span></li>
+                                            <li><a href="#">15:50</a><span></span></li>
+                                            <li><a href="#">18:45</a><span></span></li>
+                                            <li><a href="#">21:40</a><span class="last"></span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="popup_wrap theater">
+	<div class="popup theater">
+    	<a href="#"><img class="popup_close" src="img/close_btn.png" alt=""></a>
+    </div>
+</div>
+<div class="header_wrap">
+    <div class="quick_btn">
+        <a href="#" class="timetable"><img src="img/timetable.png" alt="상영시간표"></a>
+        <a href="#" class="reservation"><img src="img/reservation.png" alt="빠른예매"></a>
+    </div>
+	<div class="top_wrap">
+    	<div class="top">
+        	<div class="social">
+                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="img/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="img/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="img/cinemaapp_down.png" alt="cinemaapp"></a>
+            </div>
+            <ul>
+            	<li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이시네마</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+    </div>       
+    <div class="gnb_wrap">
+        	<div class="gnb">
+            	<h1><a href="index.html"><img src="img/logo.png" alt="롯데시네마"></a></h1>
+                <ul>
+                	<li><a href="#">영화</a></li>
+                    <li><a href="theater.html" class="on">영화관</a></li>
+                    <li><a href="cinemamall.html">시네마몰</a></li>
+                    <li><a href="#">시네마라운지</a></li>
+                    <li><a href="event.html">이벤트</a></li>
+                </ul>
+            </div>
+    </div>
+</div>
+<div class="main theater">
+	<div class="theater_tit">
+        <h2><img src="img/theater_main_logo.png" alt="logo"></h2>
+        <span class="line"></span>
+    </div>
+</div>
+<div class="section1 theater">
+    <div class="tab_menu">
+		<ul class="tab_btn">
+			<li><a href="#" class="on">서울</a></li>
+            <li><a href="#">인천/경기</a></li>
+            <li><a href="#">대전/충청</a></li>
+            <li><a href="#">광주/전라</a></li>
+            <li><a href="#">경북/대구</a></li>
+            <li><a href="#">경남/부산</a></li>
+            <li><a href="#">강원/제주</a></li>
+		</ul>
+    	<div class="tab_content">
+            <ul class="tab">
+                <li class="first"><a href="#">월드타워</a></li>
+                <li><a href="#">가산</a></li>
+                <li><a href="#">가양</a></li>
+                <li><a href="#">강동</a></li>
+                <li><a href="#">건대입구</a></li>
+                <li><a href="#">노원</a></li>
+                <li><a href="#">장안</a></li>
+                <li><a href="#">청량리</a></li>
+                <li><a href="#">강남씨티</a></li>
+                <li><a href="#">홍대입구</a></li>
+                <li><a href="#">신사</a></li>
+                <li><a href="#">상암누리꿈</a></li>
+                <li><a href="#">서울대입구</a></li>
+                <li><a href="#">에비뉴엘</a></li>
+                <li><a href="#">피카디리</a></li>
+            </ul>
+            <ul class="tab">
+                <li class="first"><a href="#">센트럴락</a></li>
+                <li><a href="#">구리</a></li>
+                <li><a href="#">라페스타</a></li>
+                <li><a href="#">안산롯데마트</a></li>
+                <li><a href="#">성남</a></li>
+                <li><a href="#">부평역사</a></li>
+                <li><a href="#">용인</a></li>
+                <li><a href="#">안양</a></li>
+                <li><a href="#">수원</a></li>
+                <li><a href="#">광명아울렛</a></li>
+                <li><a href="#">파주아울렛</a></li>
+                <li><a href="#">평촌</a></li>
+            </ul>
+            <ul class="tab">
+                <li class="first"><a href="#">대전롯데백화점</a></li>
+                <li><a href="#">서산</a></li>
+                <li><a href="#">시청주</a></li>
+                <li><a href="#">아산터미널</a></li>
+                <li><a href="#">청주</a></li>
+                <li><a href="#">대전둔산</a></li>
+                <li><a href="#">청주충대</a></li>
+            </ul>
+            <ul class="tab">
+                <li class="first"><a href="#">광주롯데백화점</a></li>
+                <li><a href="#">군산</a></li>
+                <li><a href="#">목포</a></li>
+                <li><a href="#">수완</a></li>
+                <li><a href="#">여수</a></li>
+                <li><a href="#">전주롯데백화점</a></li>
+                <li><a href="#">전주평화</a></li>
+                <li><a href="#">충장로</a></li>
+            </ul>
+            <ul class="tab">
+                <li class="first"><a href="#">프리미엄칠곡</a></li>
+                <li><a href="#">경산</a></li>
+                <li><a href="#">경주</a></li>
+                <li><a href="#">구미</a></li>
+                <li><a href="#">구미공단</a></li>
+                <li><a href="#">대구광장</a></li>
+                <li><a href="#">대구율하</a></li>
+                <li><a href="#">동성로</a></li>
+                <li><a href="#">상인</a></li>
+                <li><a href="#">성서</a></li>
+                <li><a href="#">포항</a></li>
+            </ul>
+            <ul class="tab">
+                <li class="first"><a href="#">센텀시티백화점</a></li>
+                <li><a href="#">경남대</a></li>
+                <li><a href="#">서면NC백화점</a></li>
+                <li><a href="#">부산대</a></li>
+                <li><a href="#">김해아울렛</a></li>
+                <li><a href="#">양산</a></li>
+                <li><a href="#">진해</a></li>
+                <li><a href="#">창원</a></li>
+                <li><a href="#">동래</a></li>
+                <li><a href="#">동부산아울렛</a></li>
+                <li><a href="#">애플아울렛</a></li>
+                <li><a href="#">진주</a></li>
+                <li><a href="#">울산</a></li>
+                <li><a href="#">해운대</a></li>
+            </ul>
+            <ul class="tab">
+                <li class="first"><a href="#">서귀포BIZ</a></li>
+                <li><a href="#">남원주</a></li>
+                <li><a href="#">동해</a></li>
+                <li><a href="#">제주</a></li>
+                <li><a href="#">제주공항</a></li>
+            </ul>
+    	</div>
+        <div class="tab_img">
+        	<div class="img img1">
+                <img src="img/theater_soeul.jpg" alt="">
+                <span class="img_txt">
+                    <h3>월드타워</h3>
+                    <p>21개 상영관, 총 좌석 4,617석의 아시아 최대규모 영화관! 세계 최대 스크린 SUPER PLEX G를 비롯하여,<br>SUPER SOUND관(5,9,10,15,20,21관)에  Dolby Atmos로 생동감 넘치는 사운드를 구현합니다.</p>
+                </span>
+            </div>
+            <div class="img">
+                <img src="img/theater_inchoen.jpg" alt="">
+                <span class="img_txt">
+                    <h3>센트럴락</h3>
+                    <p>유쾌한 문화 분출구, 롯데시네마 센트럴락 안산관은 안산 최대의 상권인 안산 중앙동에 위치하여 스페셜한<br>인테리어와 함께 주변 100m 내에서 모든 즐거움을 만끽할 수 있는 환경속에 자리잡고 있습니다.</p>
+                </span>
+            </div>
+            <div class="img">
+                <img src="img/theater_daejeon.jpg" alt="">
+                <span class="img_txt">
+                    <h3>대전롯데백화점</h3>
+                    <p>롯데시네마 대전관은 대전지역 최초의 멀티플렉스 영화관으로, 2010년 12월 새단장 공사를 통해<br>대전에서 가장 넓은 최고의 프리미엄 문화공간으로 재탄생 했습니다. </p>
+                </span>
+            </div>
+            <div class="img">
+                <img src="img/theater_kwangju.jpg" alt="">
+                <span class="img_txt">
+                    <h3>광주롯데백화점</h3>
+                    <p>롯데백화점 9층에 위치한 롯데시네마 광주는 2012년 5월 리뉴얼을 통해 샤롯데관, 프레스티 좌석 ,<br>전관 4Way, DID, 티켓판매기 등 최신시스템 도입으로 고객 감동을 실천하고 있습니다.</p>
+                </span>
+            </div>
+            <div class="img">
+                <img src="img/theater_kyungbuk.jpg" alt="">
+                <span class="img_txt">
+                    <h3>프리미엄칠곡</h3>
+                    <p>전국 최고의 시설인 프리미엄 칠곡!! 고급스러운 인테리어와 프리미엄 쇼파를 전 좌석 도입하였으며,<br>최신 미디어 장비인 TBA, Now Showing을 설치함으로 다양한 영화 정보를 전달합니다.</p>
+                </span>
+            </div>
+            <div class="img">
+                <img src="img/theater_kyungnam.jpg" alt="">
+                <span class="img_txt">
+                    <h3>센텀시티백화점</h3>
+                    <p>롯데시네마 센텀시티는 부산최초 프리미엄 영화관인 샤롯데와 색깔있는 영화를 접하실 수 있는<br>아르떼, 어린이 연극 및 공연중심의 아트플렉스가 들어선 최첨단 명품영화관입니다.</p>
+                </span>
+            </div>
+            <div class="img">
+                <img src="img/theater_kangwon.jpg" alt="">
+                <span class="img_txt">
+                    <h3>서귀포BIZ</h3>
+                    <p>cineBIZ 영화관람은 기본! 세미나에서 프리젠테이션까지 SmartSeat와 테이블이 설치되어 있어<br>영화 관람뿐만 아니라, 기업 강연, 기자 회견, 발표회 등등 다양한 행사가 가능한 다용도 상영관입니다.</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section2 theater">
+	<div class="timetable_wrap">
+        <h2>상영시간표</h2>
+        <form action="" method="">
+            <fieldset>
+            <legend>상영시간표</legend>
+        		<div class="timetable">
+                	<div class="movie">
+                        <h3 class="movie_tit">영화</h3>
+                        <ul class="movie_txt">
+                            <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>007 스펙터</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>하늘을 걷는 남자</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>헝거게임 : 더 파이널</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>셜록 : 유령신부</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>스타워즈 : 깨어난 포스</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/10.png" alt=""><h3>어린 왕자</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>더 셰프</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>더 인턴</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/10.png" alt=""><h3>스누피 : 더 피너츠 무비</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/12.png" alt=""><h3>마션</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/15.png" alt=""><h3>더 원 아이 러브</h3></a></li>
+                            <li><a href="#"><img class="grade" src="img/18.png" alt=""><h3>나이트 오브 컵스</h3></a></li>
+                        </ul>
+                    </div>
+                    <div class="cinema">
+                        <h3 class="cinema_tit">상영관</h3>
+                        <div class="cinema_txt">
+                            <p>9관</p>
+                            <p class="green">9관 씨네패밀리</p>
+                            <p class="beige">1관 샤롯데</p>
+                            <p>13관</p>
+                            <p class="beige">11관 샤롯데</p>
+                            <p class="blue">19관 수퍼4D</p>
+                            <p class="beige">1관 샤롯데</p>
+                            <p>18관</p>
+                            <p>10관</p>
+                            <p class="blue">21관 수퍼G</p>
+                            <p>17관</p>
+                            <p class="green">5관 씨네커플</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                    	<div class="time_tit">
+                    		<h3>시간</h3>
+                            <a href="#"><span class="time_bg"><em class="prev"></em><p>2015.11.24</p><em class="next"></em></span></a>
+                            <img src="img/popup_calendar.png" alt="">
+                        </div>
+                        <ul class="time_txt">
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:25</a>
+                                <a href="#" class="re">14:20</a>
+                                <a href="#" class="re">17:15</a>
+                                <a href="#" class="re">20:10</a>
+                                <a href="#" class="re">23:05</a>
+                                <a href="#" class="re">25:20</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:15</a>
+                                <a href="#" class="end">14:00</a>
+                                <a href="#" class="re">16:45</a>
+                                <a href="#" class="re">18:55</a>
+                                <a href="#" class="re">19:30</a>
+                                <a href="#" class="re">21:40</a>
+                                <a href="#" class="re">22:15</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:40</a>
+                                <a href="#" class="end">11:05</a>
+                                <a href="#" class="end">13:30</a>
+                                <a href="#" class="re">15:55</a>
+                                <a href="#" class="re">18:20</a>
+                                <a href="#" class="re">20:45</a>
+                                <a href="#" class="re">23:10</a>
+                            </li>   
+                            <li>
+                            	<a href="#" class="end">09:40</a>
+                                <a href="#" class="end">12:10</a>
+                                <a href="#" class="re">14:40</a>
+                                <a href="#" class="re">17:10</a>
+                                <a href="#" class="re">19:40</a>
+                                <a href="#" class="re">21:40</a>
+                                <a href="#" class="re">24:40</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:15</a>
+                                <a href="#" class="end">14:00</a>
+                                <a href="#" class="re">16:45</a>
+                                <a href="#" class="re">18:55</a>
+                                <a href="#" class="re">19:30</a>
+                                <a href="#" class="re">21:40</a>
+                                <a href="#" class="re">22:15</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:40</a>
+                                <a href="#" class="end">11:05</a>
+                                <a href="#" class="end">13:30</a>
+                                <a href="#" class="re">15:55</a>
+                                <a href="#" class="re">18:20</a>
+                                <a href="#" class="re">20:45</a>
+                                <a href="#" class="re">23:10</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:25</a>
+                                <a href="#" class="re">14:20</a>
+                                <a href="#" class="re">17:15</a>
+                                <a href="#" class="re">20:10</a>
+                                <a href="#" class="re">23:05</a>
+                                <a href="#" class="re">25:20</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:15</a>
+                                <a href="#" class="end">14:00</a>
+                                <a href="#" class="re">16:45</a>
+                                <a href="#" class="re">18:55</a>
+                                <a href="#" class="re">19:30</a>
+                                <a href="#" class="re">21:40</a>
+                                <a href="#" class="re">22:15</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:40</a>
+                                <a href="#" class="end">11:05</a>
+                                <a href="#" class="end">13:30</a>
+                                <a href="#" class="re">15:55</a>
+                                <a href="#" class="re">18:20</a>
+                                <a href="#" class="re">20:45</a>
+                                <a href="#" class="re">23:10</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:25</a>
+                                <a href="#" class="re">14:20</a>
+                                <a href="#" class="re">17:15</a>
+                                <a href="#" class="re">20:10</a>
+                                <a href="#" class="re">23:05</a>
+                                <a href="#" class="re">25:20</a>
+                            </li>
+                            <li>
+                            	<a href="#" class="end">08:30</a>
+                                <a href="#" class="end">11:15</a>
+                                <a href="#" class="end">14:00</a>
+                                <a href="#" class="re">16:45</a>
+                                <a href="#" class="re">18:55</a>
+                                <a href="#" class="re">19:30</a>
+                                <a href="#" class="re">21:40</a>
+                                <a href="#" class="re">22:15</a>
+                            </li>
+                            <li class="last">
+                            	<a href="#" class="end">08:40</a>
+                                <a href="#" class="end">11:05</a>
+                                <a href="#" class="end">13:30</a>
+                                <a href="#" class="end">15:55</a>
+                                <a href="#" class="re">18:20</a>
+                                <a href="#" class="re">20:45</a>
+                                <a href="#" class="re">23:10</a>
+                            </li>
+                        </ul>
+                        <div class="time_box1"><h3>예매마감</h3></div>
+                        <div class="time_box2"><h3>좌석 <em>149석</em>/160석<br>종료 <em>21:40</em></h3></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="section3 theater">
+	<div class="notice">
+        <div class="tab_menu">
+            <ul class="tab_btn">
+                <li><a href="#" class="on">전체공지</a></li>
+                <li><a href="#">극장공지</a></li>
+                <li class="last"><a href="#">채용공고</a></li>
+            </ul>
+            <a class="more" href="#"><img src="img/more_btn.png" alt=""></a>
+            <em class="line"></em>
+            <div class="tab_content">
+            	<ul>
+                	<li>
+                    	<a href="#">
+                        	<div class="icon1"><img src="img/notice_icon1.png" alt=""></div>
+                        	<p class="tit">영화관<span></span>월드타워<span></span>2015.11.27</p>
+                            <p class="txt">2015년 11월 28일부로 롯데시네마 이용 시 주차 요금이 할인 되어...</p>
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="#">
+                        	<div class="icon1"><img src="img/notice_icon2.png" alt=""></div>
+                        	<p class="tit">전체<span></span>시스템점검<span></span>2015.11.22</p>
+                            <p class="txt">롯데시네마를 사랑해 주시는 고객 여러분께 원활한 서비스 제공을 위해...</p>
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="#">
+                        	<div class="icon1"><img src="img/notice_icon1.png" alt=""></div>
+                        	<p class="tit">영화관<span></span>해운대<span></span>2015.11.20</p>
+                            <p class="txt">롯데시네마 해운대 및 장산 해운대로 일부 지역에 순간 정전이 발생하여...</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+    <div class="customer_notice">
+        <h2>등급 및 상영시간 안내</h2>
+        <div class="guide">
+            <img class="grade" src="img/10.png" alt=""><p>전체 관람가</p>
+            <img class="grade" src="img/12.png" alt=""><p>12세 이상 관람가</p>
+            <img class="grade" src="img/15.png" alt=""><p>15세 이상 관람가</p>
+            <img class="grade" src="img/18.png" alt=""><p>청소년 관람불가</p>
+            <p class="last">- 상영시간은 영화관 사정에 따라 변동될 수 있습니다.<br>- 예고편 상영 등 사정에 의해 본 영화 시작이 10여분 정도 차이 날 수 있습니다.</p>
+        </div>
+        <div class="customer">
+        	<div class="customer_box1">
+            	<img src="img/theater_customer.png" alt="">
+            </div>
+            <div class="customer_box2">
+            	<img src="img/theater_group.png" alt="">
+                <a class="customer_btn" href="#">단체관람문의</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+		<h1><a href="index.html"><img src="img/footer_logo.png" alt="롯데시네마"></a></h1>
+        <ul>
+            <li><a href="#">기업정보</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a class="color" href="#">개인정보취급방침</a></li>
+            <li><a href="#">ir투자정보</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">회원약관</a></li>
+            <li><a href="#">제휴광고 문의</a></li>
+            <li><a href="#">윤리경영신고</a></li>
+            <li><a href="#">L.point 회원안내</a></li>
+            <li><a href="#">배정기준</a></li>
+            <li><a href="#">영상정보처리기기 관리방침</a></li>
+            <li class="last"><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="txt">
+            <p>서울특별시 송파구 올림픽로 269 (신천동, 롯데캐슬) 4층 롯데시네마<br>대표이사 이원준<span></span>사업자등록번호 215-85-13462<span></span>통신판매업신고번호 제1557호<br>개인정보관리책임자 상무 이관로<span></span>고객센터문의 1544-8855</p>
+        </div>
+        <div class="copyright">
+        	<p>COPYRIGHT© LOTTECINEMA.CO.KR ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="familysite">
+            <a href="#" class="tit_btn">FAMILY SITE<span></span></a>
+            <ul>
+                <li><a href="#">롯데리아</a></li>
+                <li><a href="#">롯데백화점</a></li>
+                <li><a href="#">엘롯데</a></li>
+                <li><a href="#">롯데시네마</a></li>
+                <li><a href="#">유니클로</a></li>
+                <li><a href="#">롯데닷컴</a></li>
+                <li><a href="#">롯데호텔</a></li>
+                <li><a href="#">롯데면세점</a></li>
+                <li><a href="#">롯데월드</a></li>
+                <li><a href="#">롯데카드</a></li>
+                <li><a href="#">롯데멤버스</a></li>
+            </ul>
+        </div>
+        <div class="etc">
+        	<img src="img/kssqi.jpg" alt="">
+            <p>KS-SQI<br>영화관부분 4년<br>연속 1위 (총7회)</p>
+		</div>
+    </div>
+</div>
+</body>
+</html>

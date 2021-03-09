@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+@charset "utf-8";
+body,button {font:12px '나눔고딕','nanum gothic','돋움',dotum,sans-serif;}
+body {min-width:320px; background:#fbf6ed;}
+
+
+/*****************************히스토리************************************/
+.story { overflow:hidden; height:600px; }
+.story .tit {width:100%; height:50px; background:#FFF; border:1px solid #e7e7e7; }
+.story .tit h1 {font-size:25px; color:#656565; text-align:center; margin-top:11px;}
+
+.story .box { padding:10px; }
+.story .story_btn {border:1px solid #e7e7e7; background:#FFF; padding-top:10px; position:relative; margin-top:10px; padding:0 30px;}
+.story .story_btn>div { line-height:40px;}
+.story .story_btn a {font-size:11px; color:#656565; text-align:center; display:block;}
+.story .story_btn .slick-active {}
+/*슬라이더 좌우 화살표버튼 커스텀*/
+
+.story .story_btn .slick-prev { width:15px; background:url(../img/event_arrow_l.png) no-repeat 0px center; border:none; text-indent:-9999px; position:absolute; left:3%; top:10px;  cursor:pointer; outline:none; }
+.story .story_btn .slick-next { width:15px; background:url(../img/event_arrow_r.png) no-repeat -10px center; border:none; text-indent:-9999px; position:absolute; right:3%; top:10px; cursor:pointer; outline:none;}
+
+
+.story .history {position:relative; margin-top:10px; padding-bottom:20px;}
+.story .history>div {border:1px solid #e7e7e7; background:#FFF; width:100%; position:absolute; left:0; top:0;}
+.story .history>div img {width:100%; margin-top:20px;}
+
+.story .history>div a {font-size:12px; color:#656565; display:inline-block; padding:10px;}
+.story .history>div a span {font-size:20px; color:#656565;}
+
+
+/*****************************이벤트**************************/
+.event_wrap { overflow:hidden;}
+.event_wrap .tit {width:100%; height:50px; background:#FFF; border:1px solid #e7e7e7; }
+.event_wrap .tit h1 {font-size:25px; color:#656565; text-align:center; margin-top:11px;}
+
+.event_wrap .box {padding:10px; overflow:hidden;}
+
+/*이벤트 버튼*/
+.event_wrap .box .event_gnb {width:100%; height:35px; border:1px solid #e7e7e7;}
+.event_wrap .box .event_gnb li { float:left; width:33%; text-align:center; line-height:35px; border-left:1px solid #e7e7e7;}
+.event_wrap .box .event_gnb li:first-child {border-left:none; background:#e7e7e7;}
+.event_wrap .box .event_gnb li a {font-size:14px; color:#656565;}
+
+/*이벤트 이미지*/
+.event_wrap .box .e_box { margin-top:10px; width:100%;}
+.event_wrap .box .e_box li {margin-top:15px;}
+.event_wrap .box .e_box li img {width:100%;}
+
+
+/*페이지 버튼*/
+.event_wrap .box .btn_box {width:100%; overflow:hidden; margin-top:20px; padding-bottom:20px;}
+.event_wrap .box .page_btn { position:relative;}
+
+.event_wrap .box .page_btn .prev {float:left; background:url(../img/event_arrow_l.png) no-repeat center center; width:30px; height:30px; text-indent:-9999px; background-size:11px; border:1px solid #e7e7e7;}
+.event_wrap .box .page_btn ul { position:absolute; left:37%; top:0;}
+.event_wrap .box .page_btn ul li {float:left;}
+.event_wrap .box .page_btn ul li a { display:block; width:30px; height:30px; text-align:center; line-height:30px; font-size:14px; color:#656565;}
+.event_wrap .box .page_btn ul li a.on {color:#1abc9c; font-weight:700;}
+.event_wrap .box .page_btn .next {float:right; background:url(../img/event_arrow_r.png) no-repeat center center; width:30px; height:30px; text-indent:-9999px; background-size:11px; border:1px solid #e7e7e7;}
+
+
+
+/**************************착한씨앗*********************************/
+.seed_wrap { overflow:hidden; margin-top:20px;}
+.seed_wrap .tit {width:100%; height:50px; background:#FFF; border:1px solid #e7e7e7; }
+.seed_wrap .tit h1 {font-size:25px; color:#656565; text-align:center; margin-top:11px;}
+
+/*착한원료*/
+.seed_wrap .ribbon {width:100%; overflow:hidden;}
+.seed_wrap .tit2 {position:relative; width:100%; margin-top:20px;}
+.seed_wrap .tit2 .line {width:100%; height:5px; border-bottom:4px solid #81a349; padding-top:9px;}
+.seed_wrap .tit2 img { width:180px; position:absolute; left:50%; top:0; margin-left:-90px;}
+.seed_wrap .tit2 p { color:#656565; font-size:13px; text-align:center; margin-top:30px;}
+.seed_wrap .tit2 p span {color:#81a349; font-weight:700;}
+
+
+.seed_wrap .box {overflow:hidden; margin-top:15px; padding:10px; }
+
+.seed_wrap .box .seed_btn { overflow:hidden; border:1px solid #e7e7e7; border-top:none; border-right:none;}
+.seed_wrap .box .seed_btn>div { float:left; width:24.6%; border-right:1px solid #e7e7e7; border-top:1px solid #e7e7e7;}
+.seed_wrap .box .seed_btn>div a {font-size:11px; color:#656565; display:block; text-align:center; padding-bottom:10px;  overflow:hidden; }
+.seed_wrap .box .seed_btn>div a.on { background:#FFF;}
+.seed_wrap .box .seed_btn>div img { height:25px; margin-bottom:10px; margin-top:10px;}
+.seed_wrap .box .seed_btn>div span {display:block;}
+
+.seed_wrap .box .seed_img {width:100%; border:1px solid #e7e7e7; margin-top:10px;}
+.seed_wrap .box .seed_img>div img { width:100%; }
+
+
+.seed_wrap .box .seed_txt { padding:10px; border:1px solid #e7e7e7; margin-top:10px; margin-bottom:20px;}
+.seed_wrap .box .seed_txt>div {font-size:12px; color:#656565;}
+.seed_wrap .box .seed_txt>div span { font-size:16px; font-weight:700;}
+
+
+
+
+
+
+
+
+
+
+
+
+

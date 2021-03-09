@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Bespectacled">
+  <meta name="description" content="This is my project.">
+  <meta name="keywords" content="웹퍼블리셔,웹표준,웹접근성">
+  <meta name="robots" content="all">
+  <meta name="format-detection" content="telephone=no">
+  <!-- <meta property="og:title" content="오리온">
+  <meta property="og:url" content="https://www.orionworld.com/">
+  <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+  <meta property="og:description" content="꼬북칩, 포카칩, 스윙칩, 오징어 땅콩, 오! 감자"> -->
+  <title>리뉴얼작업 뮤직포스</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png"> -->
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> -->
+  <!-- <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'> -->
+  <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+  <link href="css/hamburgers.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]>
+    <p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+    <a style="color:#f57c00;" href="http://www.microsoft.com/korea/ie" target="_blank" >익스플로러,</a>
+    <a style="color:#f57c00;" href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+    <a style="color:#f57c00;" href="http://kr.opera.com/download/" target="_blank">오페라,</a>
+    <a style="color:#f57c00;" href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+    <a style="color:#f57c00;" href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+  <![endif]-->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(document).ready(function() {
+      var swiper = new Swiper('.main_visual .swiper-container', {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+        navigation: {
+          nextEl: '.main_visual .swiper-button-next',
+          prevEl: '.main_visual .swiper-button-prev',
+        },
+        pagination: {
+          el: '.main_visual .swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          1025: {
+            allowTouchMove: true,
+          }
+        }
+      });
+      $('.main_btn_pause').click(function() {
+        swiper.autoplay.stop();
+      });
+      $('.main_btn_play').click(function() {
+        swiper.autoplay.start();
+      }); // main slider
+
+      var swiper2 = new Swiper('.swiper-container.product_best', {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+        navigation: {
+          nextEl: '.section1 .swiper-button-next',
+          prevEl: '.section1 .swiper-button-prev',
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+          },
+          1025: {
+            slidesPerView: 3,
+            allowTouchMove: true,
+          }
+        }
+      });
+      $('.section1_btn_pause').click(function() {
+        swiper2.autoplay.stop();
+      });
+      $('.section1_btn_play').click(function() {
+        swiper2.autoplay.start();
+      }); // section1 slider
+
+      $('#target').keyup(function() {
+        $('.search .suggest').show();
+      });
+      $('#target').focusout(function() {
+        $('.search .suggest').hide();
+      }); //search
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="뮤직포스"></a>
+      </h1>
+      <div class="gnb_wrap">
+        <div class="gnb">
+          <h2 class="blind">주요서비스</h2>
+          <ul>
+            <li>
+              <a href="new_product.html">신상품</a>
+            </li>
+            <li>
+              <a href="#">쇼핑몰</a>
+            </li>
+            <li>
+              <a href="#">중고장터</a>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+            </li>
+            <li>
+              <a href="#">뮤직포스리뷰</a>
+            </li>
+            <li>
+              <a href="repairshop.html">리페어샵</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <h2 class="blind">유틸리티</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="hamburger hamburger--spin m_btn_gnb">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+    </button>
+    </header>
+    <main id="main">
+      <div class="main_cover"></div>
+      <div class="menu_wrap">
+        <div class="menu">
+          <h2 class="blind">주요메뉴</h2>
+          <ul>
+            <li>
+              <a href="#">일렉 기타</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">Fender</a>
+                  <ul class="depth3">
+                    <li>
+                      <a href="#">MBS(Masterbuilt)</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Strat</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Tele</a>
+                    </li>
+                    <li>
+                      <a href="#">Select/Limited Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Vintage Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Gibson</a>
+                  <ul class="depth3">
+                    <li>
+                      <a href="#">gibson</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Strat</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Tele</a>
+                    </li>
+                    <li>
+                      <a href="#">Select/Limited Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Vintage Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">PRS</a>
+                  <ul class="depth3">
+                    <li>
+                      <a href="#">prs</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Strat</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Tele</a>
+                    </li>
+                    <li>
+                      <a href="#">Select/Limited Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Vintage Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Suhr</a>
+                  <ul class="depth3">
+                    <li>
+                      <a href="#">suhr</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Strat</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Tele</a>
+                    </li>
+                    <li>
+                      <a href="#">Select/Limited Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Vintage Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">James Tyler</a>
+                  <ul class="depth3">
+                    <li>
+                      <a href="#">james tyler</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Strat</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Tele</a>
+                    </li>
+                    <li>
+                      <a href="#">Select/Limited Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Vintage Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Tom Anderson</a>
+                  <ul class="depth3">
+                    <li>
+                      <a href="#">tom anderson</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Strat</a>
+                    </li>
+                    <li>
+                      <a href="#">Custom Shop Tele</a>
+                    </li>
+                    <li>
+                      <a href="#">Select/Limited Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Vintage Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                    <li>
+                      <a href="#">Fender Artist Model</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">어쿠스틱 기타</a>
+            </li>
+            <li>
+              <a href="#">베이스 기타</a>
+            </li>
+            <li>
+              <a href="#">이펙터</a>
+            </li>
+            <li>
+              <a href="#">레코딩</a>
+            </li>
+            <li>
+              <a href="#">픽업&파츠</a>
+            </li>
+            <li>
+              <a href="#">악세사리</a>
+            </li>
+            <li>
+              <a href="#">펀샵</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main_visual">
+        <h2 class="blind">메인비쥬얼</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide visual pulse">
+              <div class="title_wrap">
+                <div class="title">
+                  <img src="images/pulse_logo.png" alt="사운드브래너 펄스">
+                  <h3>신개념 진동형 메트로놈<br>Soundbrenner Pulse 입고</h3>
+                  <p>강렬한 진동 / 아이폰, 안드로이드 호환</p>
+                  <button type="button" class="btn btn_more">더보기</button></div>
+              </div>
+            </div>
+            <div class="swiper-slide visual headrush">
+              <div class="title_wrap">
+                <div class="title">
+                  <img src="images/headrush_logo.png" alt="헤드러쉬">
+                  <h3>터치만으로 완성되는 완벽한 기타톤!<br>페달보드 멀티 이펙터의 새로운 시작</h3>
+                  <p>신규입고 완료</p>
+                  <button type="button" class="btn btn_more">더보기</button></div>
+              </div>
+            </div>
+            <div class="swiper-slide visual fender">
+              <div class="title_wrap">
+                <div class="title">
+                  <img src="images/fender_logo.png" alt="펜더아메리칸스텐다드">
+                  <h3>펜더 아메리칸 프로페셔널<br>2017 모델 출시!</h3>
+                  <p>파격 할인</p>
+                  <button type="button" class="btn btn_more">더보기</button></div>
+              </div>
+            </div>
+            <div class="swiper-slide visual prs">
+              <div class="title_wrap">
+                <div class="title">
+                  <img src="images/prs_logo.png" alt="PRS Jhon mayer">
+                  <h3>PRS Private Stock John Mayer<br>SUPER EAGLE ll</h3>
+                  <p>전세계 120대 한정판</p>
+                  <button type="button" class="btn btn_more">더보기</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <button type="button" class="main_btn_play"></button>
+          <button type="button" class="main_btn_pause"></button>
+        </div>
+      </div>
+      <div class="search_wrap">
+        <div class="search">
+          <h2 class="blind">검색</h2>
+          <form action="search.php" method="post">
+            <fieldset>
+              <legend class="blind">제품검색</legend>
+              <input id="target" type="text" placeholder="제품검색">
+              <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </fieldset>
+          </form>
+          <div class="suggest">
+            <div class="list">
+              <h3 class="blind">검색어 추천목록</h3>
+              <ul>
+                <li>
+                  <a href="#">fender american standerd</a>
+                </li>
+                <li>
+                  <a href="#">prs john mayer</a>
+                </li>
+                <li>
+                  <a href="#">gibson acoustic</a>
+                </li>
+                <li>
+                  <a href="#">musicman</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="example">
+          <ul>
+            <li>#펜더 스텐다드</li>
+            <li>#깁슨 어쿠스틱</li>
+            <li>#테일러</li>
+            <li>#탐엔더슨</li>
+            <li>#메사부기</li>
+            <li>#특가세일</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section1">
+        <div class="container">
+          <h2>MUSIC FORCE <span>BEST</span></h2>
+          <div class="swiper-container product_best">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="#">
+                  <p class="best">BEST</p>
+                  <p class="discount">- 50%</p>
+                  <img src="images/best01.png" alt="best01">
+                  <h3>FENDER<br>AMERICAN STANDARD 2016</h3>
+                  <h4>3,000,000 원</h4>
+                  <h5>1,000,000 원</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="#">
+                  <p class="best">BEST</p>
+                  <p class="discount">- 50%</p>
+                  <img src="images/best02.png" alt="best01">
+                  <h3>FENDER<br>AMERICAN STANDARD 2016</h3>
+                  <h4>3,000,000 원</h4>
+                  <h5>1,000,000 원</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="#">
+                  <p class="best">BEST</p>
+                  <p class="discount">- 50%</p>
+                  <img src="images/best03.png" alt="best01">
+                  <h3>FENDER<br>AMERICAN STANDARD 2016</h3>
+                  <h4>3,000,000 원</h4>
+                  <h5>1,000,000 원</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="#">
+                  <p class="best">BEST</p>
+                  <p class="discount">- 50%</p>
+                  <img src="images/best04.png" alt="best01">
+                  <h3>FENDER<br>AMERICAN STANDARD 2016</h3>
+                  <h4>3,000,000 원</h4>
+                  <h5>1,000,000 원</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="#">
+                  <p class="best">BEST</p>
+                  <p class="discount">- 50%</p>
+                  <img src="images/best05.png" alt="best01">
+                  <h3>FENDER<br>AMERICAN STANDARD 2016</h3>
+                  <h4>3,000,000 원</h4>
+                  <h5>1,000,000 원</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="#">
+                  <p class="best">BEST</p>
+                  <p class="discount">- 50%</p>
+                  <img src="images/best06.png" alt="best01">
+                  <h3>FENDER<br>AMERICAN STANDARD 2016</h3>
+                  <h4>3,000,000 원</h4>
+                  <h5>1,000,000 원</h5>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- <button type="button" class="section1_btn_play"></button>
+        <button type="button" class="section1_btn_pause"></button> -->
+        </div>
+      </div>
+      <div class="section2">
+        <h2 class="blind">뮤직포스 서비스</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <h3>뮤직포스리뷰</h3>
+              <div class="review section2_bg"></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>리퍼제품할인</h3>
+              <div class="sale section2_bg"></div>
+            </a>
+          </li>
+          <li>
+            <a href="repairshop.html">
+              <h3>리페어샵</h3>
+              <div class="repair section2_bg"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section3">
+        <div class="container">
+          <div class="section3_box">
+            <div class="today section3_box_inner">
+              <h2><a href="#">MUSIC FORCE <span>TODAY</span></a></h2>
+              <ul>
+                <li>
+                  <a href="#"><span class="title">[입시시즌] 서경대학교 평생교육원 실용음악전공 전기2차10/25</span><span class="date">2017-10-20</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="title">[대회] 제15회 조인핸드 청소년 가요제 10/27까지 접수!</span><span class="date">2017-10-20</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="title">[매장]추석연휴 영업시간안내</span><span class="date">2017-10-20</span></a>
+                </li>
+              </ul>
+              <button type="button" class="btn_plus"></button>
+            </div>
+          </div>
+          <ul class="section3_box2">
+            <li>
+              <a href="#">
+                <div class="section3_box2_inner electric">
+                  <h2 class="blind">일렉기타 커뮤니티</h2>
+                  <div class="wrap">
+                    <div class="cover_default cover1">
+                      <p><span>ELECTRIC</span> GUITAR</p>
+                    </div>
+                    <div class="cover_default cover2">
+                      <p>
+                        <p>커뮤니티 바로가기</p>
+                        <p class="btn_plus btn_plus2"></p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="section3_box2_inner bass">
+                  <h2 class="blind">베이스기타 커뮤니티</h2>
+                  <div class="wrap">
+                    <div class="cover_default cover1">
+                      <p><span>BASS</span> GUITAR</p>
+                    </div>
+                    <div class="cover_default cover2">
+                      <p>
+                        <p>커뮤니티 바로가기</p>
+                        <p class="btn_plus btn_plus2"></p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="section3_box2_inner acoustic">
+                  <h2 class="blind">어쿠스틱기타 커뮤니티</h2>
+                  <div class="wrap">
+                    <div class="cover_default cover1">
+                      <p><span>ACOUSTIC</span> GUITAR</p>
+                    </div>
+                    <div class="cover_default cover2">
+                      <p>
+                        <p>커뮤니티 바로가기</p>
+                        <p class="btn_plus btn_plus2"></p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="section3_box2_inner recording">
+                  <h2 class="blind">레코딩 커뮤니티</h2>
+                  <div class="wrap">
+                    <div class="cover_default cover1">
+                      <p><span>RECORDING</span></p>
+                    </div>
+                    <div class="cover_default cover2">
+                      <p>
+                        <p>커뮤니티 바로가기</p>
+                        <p class="btn_plus btn_plus2"></p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>
+        <h2 class="blind">소셜미디어</h2>
+        <ul class="sns">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        </ul>
+      </p>
+      <p>
+        <h2 class="blind">회사정보</h2>
+        <ul class="info">
+          <li>
+            <a href="#">회사소개</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">개인정보취급방침</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+      </p>
+      <p class="address">서울 강남구 역삼동 797 지하1층 뮤직포스</p>
+      <p class="copyright">Copyright (c) music force global All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

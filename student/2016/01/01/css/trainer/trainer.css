@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.main .main_inner
+{
+  width: 960px;
+  padding: 0 20px 300px;
+  background: url(../../images/trainer/background.png) no-repeat -130px 70px;
+}
+
+.trainer{ overflow: hidden; }
+.trainer .career
+{
+
+}
+
+.trainer .career p
+{
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #4a4a4a;
+  border-bottom: 1px solid #666;
+  padding: 18px 0;
+  margin-bottom: 18px;
+  width: 118px;
+}
+.trainer .career ul
+{
+  font-size: 13px;
+  line-height: 14px;
+}
+.trainer .career ul li{
+  margin-bottom: 11px;
+  background-image: url(../../images/trainer/list_dot.png);
+  background-repeat: no-repeat;
+}
+
+
+.trainer.left img{float: left;}
+.trainer.left .career{float: left; margin-left: 80px; }
+.trainer.left .career ul li{ background-position: left center; padding-left: 10px; }
+
+.trainer.right img{float: right;}
+.trainer.right .career{ float: right; margin-right: 80px; text-align: right;  }
+.trainer.right .career p{float: right; padding-top: 30px;}
+.trainer.right .career ul{ clear: right; }
+.trainer.right .career ul li{ background-position: right center; padding-right: 10px; }

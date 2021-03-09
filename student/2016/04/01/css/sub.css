@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/*상단제목*/
+.top_sub {height:120px; background:#F2F2F2;}
+.top_sub .top_sub_inner {width:1100px; height:120px; margin:0 auto;}
+.top_sub .top_sub_inner>h2 {float:left; margin-top:70px;} 
+.top_sub .top_sub_inner>p {font-size:12px; color:#161616px; float:right; margin-top:95px;}
+.top_sub .top_sub_inner>p>a {font-weight:bold; color:#252525; line-height:20px;}
+
+/************************************************항공권예약******************************************************/
+/*항공권예약 메인*/
+.main.reservation .main_inner {margin-top:40px; width:1100px; margin:0 auto;} 
+
+/*티켓 선택*/
+.main.reservation .section1 {height:680px;}
+.main.reservation .section1 .tab_btn {border-bottom:2px solid #252525; overflow:hidden; margin-top:30px;}
+.main.reservation .section1 .tab_btn>li {float:left;}
+.main.reservation .section1 .tab_btn .btn3 {margin-left:20px;}
+
+.main.reservation .section1 .tab_con .ticket {float:left; width:806px; height:680px; }
+/*가는날*/
+.main.reservation .section1 .tab_con .ticket .ticket1 {float:left; height:280px; width:806px; background:#f2f2f2;}
+.main.reservation .section1 .tab_con .ticket .ticket1 .tit {float:left; height:280px; width:160px;}
+.main.reservation .section1 .tab_con .ticket .ticket1 .tit>h3 {float:left; font-size:18px; font-weight:bold; color:#252525; margin:130px 0 0 50px;}
+/*가는날 출발지*/
+.main.reservation .tab_con .ticket .ticket1 .depart {float:left; height:247px; width:140px; margin-top:15px; background:#fff; border:1px solid #CCC;}
+.main.reservation .tab_con .ticket .ticket1 .depart>p {display:block; width:80px; font-size:15px; color:#252525; font-weight:bold; margin:15px 0 0 30px; padding-bottom:3px; border-bottom:2px solid #555; text-align:center;}
+.main.reservation .tab_con .ticket .ticket1 .depart .check {float:left; width:140px; overflow:hidden; margin-top:10px;}
+.main.reservation .tab_con .ticket .ticket1 .depart .check>li>a {display:block; font-size:13px; color:#252525; width:140px; line-height:30px; text-indent:10px;}
+.main.reservation .tab_con .ticket .ticket1 .depart .check>li>a.on {background:#3a8e15; color:#fff; font-weight:bold;}
+/*가는날 도착지*/
+.main.reservation .tab_con .ticket .ticket1 .arrive {float:left; height:247px; width:140px; margin:15px 0 0 15px; background:#fff; border:1px solid #CCC;}
+.main.reservation .tab_con .ticket .ticket1 .arrive>p {display:block; width:80px; font-size:15px; color:#252525; font-weight:bold; margin:15px 0 0 30px; padding-bottom:3px; border-bottom:2px solid #555; text-align:center;}
+.main.reservation .tab_con .ticket .ticket1 .arrive .check {float:left; width:140px; overflow:hidden; margin-top:10px;}
+.main.reservation .tab_con .ticket .ticket1 .arrive .check>li>a {display:block; font-size:13px; color:#252525; width:140px; line-height:30px; text-indent:10px;}
+.main.reservation .tab_con .ticket .ticket1 .arrive .check>li>a.on {background:#3a8e15; color:#fff; font-weight:bold;}
+/*가는날 날짜선택*/
+.main.reservation .tab_con .ticket .ticket1 .date {float:left; height:247px; width:315px; margin:15px 0 0 15px; background:#fff; border:1px solid #ccc;}
+.main.reservation .tab_con .ticket .ticket1 .date>p {display:block; width:120px; font-size:15px; color:#252525;  font-weight:bold; margin:15px 0 0 97px; padding-bottom:3px; border-bottom:2px solid #555; text-align:center;}
+.main.reservation .tab_con .ticket .ticket1 .date .month {float:left; margin:10px 0 0 92px;}
+.main.reservation .tab_con .ticket .ticket1 .date .month>a {float:left; font-weight:bold; color:#252525; padding:0 5px;}
+/*달력*/
+.main.reservation .tab_con .ticket .ticket1 .date .calendar {clear:both; margin-top:35px;}
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table {width:274px; margin:0 auto; text-align:center; border:1px solid #ccc;}
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table th {line-height:24px; border-bottom:1px solid #ccc; border-left:1px solid #ccc; font-weight:bold; background:#F2F2F2;} 
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table td {border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table td a {display:block; width:38px; line-height:24px; color:#252525;}
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table td a.on {background:#3a8e15; font-weight:bold; color:#fff;}
+/*달력 토,일 색상*/
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table .red {color:#ff4242;}
+.main.reservation .tab_con .ticket .ticket1 .date .calendar table .blue {color:#3699ff;}
+/*오는 날*/
+.main.reservation .tab_con .ticket2 {float:left; margin-top:5px;}
+/*티켓 옵션*/
+.main.reservation .tab_con .ticket_opt {float:right; height:563px; width:288px; background:#f2f2f2;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner {width:256px; height:531px; background:#fff; margin:15px; border:1px solid #CCC;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .txt1 {display:block; width:90px; font-size:15px; color:#252525; font-weight:bold; margin:15px auto; padding-bottom:3px; border-bottom:2px solid #555; text-align:center;}
+/*옵션선택 인풋,버튼*/
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 {float:left; width:256px; height:200px;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1>p {padding-left:15px; font-size:14px; font-weight:bold;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1>p {float:left; color:#666; font-weight:bold; margin:24px 0 0 30px;}
+
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 .box {float: left; margin: 20px 0 0 50px;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 input {float:left; width:56px; height:26px; border:1px solid #999; outline:none; text-indent:25px;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 button {float:left; width:30px; height:30px; background:#fff; border:1px solid #999; outline:none; }
+/*-,+ 위치*/
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 .minus>img {margin-top:8px;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 .minus {border-right:none;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 .plus>img{margin-top:2px;}
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner1 .opt1 .plus {border-left:none;}
+
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner2 {margin-top:40px; }
+.main.reservation .tab_con .ticket_opt .ticket_opt_inner .opt_inner2 .dis {font-size:12px; color:#666; padding:0 0 15px 20px;}
+
+/*조회버튼*/
+.main.reservation .section1 .btn_air {float:right; width:288px; height:40px; margin-top:20px; outline:none; background:#fff; border:1px solid #CCC; font-size:16px; font-weight:bold; text-indent:1px; line-height:20px;}
+.main.reservation .section1 .btn_air:hover {background:#f2f2f2;;}
+
+.main.reservation .main_inner .section2 {height:250px; margin-bottom:40px; }
+.main.reservation .main_inner .section2>p { float:left; color:#252525; line-height:30px; font-weight:bold;}
+/************************************************탑승수속 안내******************************************************/
+.main.information {height:1250px;}
+.main.information .main_inner {width:1100px; height:1250px; margin:0 auto;} 
+.main.information .main_inner .tit {font-size:14px; color:252525px; line-height:20px; margin:10px 0 90px 0;}
+/*국내선 안내*/
+.main.information .main_inner .domestic {width:550px; float:left;}
+.main.information .main_inner .domestic h2 {float:left; background:url(../images/arrow_blue.png) no-repeat left 5px; font-size:20px; font-weight:bold; color:#252525; text-indent:25px; line-height:28px;}
+
+.main.information .main_inner .domestic .check_list1 h3 {float:left; clear:both; background:url(../images/list_a.png) no-repeat left center; font-size:15px; font-weight:bold; color:#252525; text-indent:25px; margin-top:20px; letter-spacing:-0.5px;}
+.main.information .main_inner .domestic .check_list1 h4 {float:left; clear:both; font-weight:bold; margin-top:15px; margin-left:25px; font-size:14px;}
+.main.information .main_inner .domestic .check_list1 p {float:left; clear:both; margin-left:35px;}
+
+.main.information .main_inner .domestic .check_list2 h3 {float:left; clear:both;background:url(../images/list_b.png) no-repeat left center; font-size:15px; font-weight:bold; color:#252525; text-indent:25px; margin-top:40px; letter-spacing:-0.5px;}
+.main.information .main_inner .domestic .check_list2 .step1 {float:left; clear:both; height:24px; background:url(../images/step1.png) no-repeat left 1px; padding-left:65px; margin:15px 0 5px 25px; font-size:14px; font-weight:bold; }
+.main.information .main_inner .domestic .check_list2 .step2 {background:url(../images/step2.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .domestic .check_list2 .step3 {background:url(../images/step3.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .domestic .check_list2 p {float:left; clear:both; margin-left:25px;}
+/*국제선 안내*/
+.main.information .main_inner .international {width:550px; float:right;}
+.main.information .main_inner .international h2 {float:left; background:url(../images/arrow_red.png) no-repeat left 5px; font-size:20px; font-weight:bold; color:#252525; text-indent:25px; line-height:28px;}
+
+.main.information .main_inner .international .check_list1 h3 {float:left; clear:both; background:url(../images/list_a.png) no-repeat left center; font-size:15px; font-weight:bold; color:#252525; text-indent:25px; margin-top:20px; letter-spacing:-0.5px;}
+.main.information .main_inner .international .check_list1 h4 {float:left; clear:both; font-weight:bold; margin-top:15px; margin-left:25px; font-size:14px;}
+.main.information .main_inner .international .check_list1 p {float:left; clear:both; margin-left:35px;}
+
+.main.information .main_inner .international .check_list2 h3 {float:left; clear:both;background:url(../images/list_b.png) no-repeat left center; font-size:15px; font-weight:bold; color:#252525; text-indent:25px; margin-top:40px; letter-spacing:-0.5px;}
+.main.information .main_inner .international .check_list2 .step1 {float:left; clear:both; height:24px; background:url(../images/step1.png) no-repeat left 1px; padding-left:65px; margin:15px 0 5px 25px; font-size:14px; font-weight:bold;}
+.main.information .main_inner .international .check_list2 .step2 {background:url(../images/step2.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .international .check_list2 .step3 {background:url(../images/step3.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .international .check_list2 .step4 {background:url(../images/step4.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .international .check_list2 .step5 {background:url(../images/step5.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .international .check_list2 .step6 {background:url(../images/step6.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .international .check_list2 .step7 {background:url(../images/step7.png) no-repeat left 1px; margin-top:30px;}
+.main.information .main_inner .international .check_list2 p {float:left; clear:both; margin-left:25px;}
+/************************************************로그인******************************************************/
+.login_top_sub {height:120px; background:#fff;}
+.login_top_sub .top_sub_inner {width:1100px; height:120px; margin:0 auto; border-bottom:2px solid #252525;}
+.login_top_sub .top_sub_inner>h2 {float:left; margin-top:70px;} 
+.login_top_sub .top_sub_inner>p {font-size:12px; color:#161616px; float:right; margin-top:95px;}
+.login_top_sub .top_sub_inner>p>a {font-weight:bold; color:#252525; line-height:20px;}
+
+.main.login {height:450px;}
+.main.login .main_inner {width:1100px; height:500px; margin:0 auto; margin-top:30px; padding-top:20px;}
+.main.login .main_inner .tit {font-size:14px; color:252525px; line-height:20px; margin:10px 0 70px 0;}
+
+.main.login .main_inner .left {float:left; width:430px;}
+/*로그인 인풋*/
+.main.login .main_inner .left .login_box {float:left; width:430px; height:95px;}
+.main.login .main_inner .left .login_box .text {float:left; width:272px;}
+.main.login .main_inner .left .login_box .text .log {float:left; width:270px; height:40px; border:1px solid #363636; outline:none; font-size:15px; text-indent:10px;}
+.main.login .main_inner .left .login_box .text .log:hover {background:#F6F6F6;}
+.main.login .main_inner .left .login_box .text .pw{float:left; width:270px; height:40px; border:1px solid #363636; outline:none; margin-top:5px; text-indent:10px;}
+.main.login .main_inner .left .login_box .text .pw:hover {background:#F6F6F6;}
+
+.main.login .main_inner .left .login_box button {float:right; width:153px; height:93px; font-size:16px; color:#252525; outline:none; border:1px solid #363636; background:#fff;}
+.main.login .main_inner .left .login_box button:hover {background:#F6F6F6;}
+
+.main.login .main_inner .left .check {float:left; height:25px; width:250px; margin-top:10px;} 
+.main.login .main_inner .left .check>input {width:16px; height:16px;}
+.main.login .main_inner .left .check>a {float:right; color:#252525; font-weight:bold;}
+
+.main.login .main_inner .left .txt {float:left; width:430px; text-align:center; margin-top:62px;}
+.main.login .main_inner .left .txt h3 {font-weight:bold; color:#3a8e15; font-size:18px; margin-bottom:10px;}
+
+.main.login .main_inner .left .box {float:left; width:430px; text-align:center; margin-top:20px;}
+.main.login .main_inner .left .box .join {width:180px; height:30px; background:#252525; color:#fff; border:1px solid #828282; line-height:18px;}
+.main.login .main_inner .left .box .join a {color:#fff;}
+.main.login .main_inner .left .box .join:hover {background:#000;}
+
+.main.login .main_inner .left .box .point {width:190px; height:30px; background:#252525; color:#fff; border:1px solid #828282; line-height:18px;}
+.main.login .main_inner .left .box .point>img {padding-top:2px;}
+.main.login .main_inner .left .box .point:hover {background:#000;}
+
+.main.login .main_inner .right { float:right; width:602px; height:317px; overflow:hidden;}
+/***********************************************회원가입******************************************************/
+.join_top_sub {height:400px; background:#8ebedd;}
+.join_top_sub .top_sub_inner {width:1100px; margin:0 auto; overflow:hidden;}
+.join_top_sub .top_sub_inner h2 {float:left; margin-left:165px;}
+
+.main.join {height:500px; background:#fff;}
+.main.join .main_inner {width:1100px; height:300px; margin:0 auto;}

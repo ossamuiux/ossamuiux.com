@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>스팀에 오신 것을 환영합니다.</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*슬라이더의 margin-left값 저장변수*/
+	var secSld;
+	/*화면 크기 리사이징에 따른 변화하는 gradiant와 버튼의 left,right 함수*/
+	var per=0;
+	var sld_side=0;
+	var sld_btn=0
+	function main_slider_gra(){
+		if($(document).outerWidth()==1200){
+			$('.section1 .slider_side_left').css('width','0px');
+			$('.section1 .slider_side_right').css('width','0px');
+		}
+		else{
+			per=Math.round(($(document).outerWidth()-1200)/7);
+			sld_side=Math.round(per*3.6);
+			sld_btn=Math.round(per/10)+5;
+			if(sld_side>360){sld_side=360;}
+			if(sld_btn>15){sld_btn=15;}
+			$('.section1 .slider_side_left').css('width',sld_side+'px');
+			$('.section1 .slider_side_right').css('width',sld_side+'px');
+		}
+	}
+	$(window).resize(function(){
+     	main_slider_gra();
+	}).resize();
+	/*하단 게임목록 번호*/
+	$('.sn_inner >div a').click(function(){
+		$('.sn_inner >div a').removeClass('on');
+		$(this).addClass('on');
+	});
+	/*package_btn 클릭이벤트*/
+	$('.package_btn').click(function(){
+		if($('.select_package').css('display')=='none'){
+			$('.select_package').slideDown(200);
+		}else{
+			$('.select_package').slideUp(200);
+		}
+	});
+	/*스크롤바 변형 슬림스크롤*/
+	$('.pro2_depth2 p').slimScroll({
+        height: '124px',
+		color:'#161a21'
+    });
+	
+	$('.section2_slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor:'.section2_slider2'
+	});
+	$('.section2_slider2').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.section2_slider',
+		arrows:true,
+		dots: false,
+		focusOnSelect: true
+	});	
+	
+		
+		/*시스템 권장사항 win mac steam버튼*/
+	$('.sys_gnb li').click(function(){
+		$('.sys_gnb li').removeClass();
+		$(this).addClass('on');
+	});
+	
+});
+$(window).load(function(){
+		/*값 출력 사용자정의 함수*/
+		function sec2_slider(){
+			secSld=-($('.section2_slider .slick-current img').width()/2)
+			console.log(secSld);
+			$('.section2_slider').css('width',$('.section2_slider .slick-current img').width());
+			$('.section2_slider').css('margin-left',secSld);
+		}
+		/*최초 실행*/
+		sec2_slider();
+		/*슬라이더 이벤트*/
+		$('.section2_slider2 div').click(function(){
+			sec2_slider();
+		});
+		$('.section2_slider2 button').click(function(){
+			sec2_slider();
+		});
+		$('.section2_slider div').mousemove(function(){
+			sec2_slider();
+		});
+		});
+</script>
+</head>
+<body>
+<div class="header">
+	<div class="header_inner">
+        <div class="header_top">
+        	<div class="util">
+            	<ul>
+                	<li><a href="#none" class="util1">로그인</a></li>
+                    <li><a href="#none" class="util2">스팀다운로드</a></li>
+                    <li><a href="#none" class="util3">언어</a></li>
+                </ul>
+                <div class="search">
+                	<input type="text" title="검색어 입력창" class="search1">
+                	<button type="submit" class="search1">버튼</button>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+        	<ul class="gnb">
+            	<li><a href="index.html"><img src="images/steam_logo.png" alt="스팀로고"></a></li>
+                <li><a href="sub_game.html">게임</a>
+                	<div class="sub_gnb">
+                    	<ul class="sub_gnb1">
+                        	<li><a href="sub_game.html">무료</a></li>
+                            <li><a href="sub_game.html">신작</a></li>
+                            <li><a href="sub_game.html">인기</a></li>
+                            <li><a href="sub_game.html">출시예정</a></li>
+                            <li><a href="sub_game.html">할인</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                        	<li><a href="sub_game.html">레이싱</a></li>
+                            <li><a href="sub_game.html">RPG</a></li>
+                            <li><a href="sub_game.html">스포츠</a></li>
+                            <li><a href="sub_game.html">시뮬레이션</a></li>
+                            <li><a href="sub_game.html">액션</a></li>
+                            <li><a href="sub_game.html">어드벤쳐</a></li>
+                            <li><a href="sub_game.html">인디</a></li>
+                            <li><a href="sub_game.html">전략</a></li>
+                            <li><a href="sub_game.html">캐주얼</a></li>
+                        </ul>
+                        <ul class="sub_gnb11">
+                        	<li><a href="sub_game.html">Win OS</a></li>
+                            <li><a href="sub_game.html">스팀 OS</a></li>
+                            <li><a href="sub_game.html">맥 OS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#none">SW&amp;HW</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="#none">개발엔진</a></li>
+                            <li><a href="#none">그래픽엔진</a></li>
+                            <li><a href="#none">오디오엔진</a></li>
+                            <li><a href="#none">웹퍼블리싱</a></li>
+                            <li><a href="#none">유틸리티</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="#none">컨트롤러</a></li>
+                            <li><a href="#none">스팀링크</a></li>
+                            <li><a href="#none">스팀머신</a></li>
+                            <li><a href="#none">HTCVIVE</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#none">동영상</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="#none">튜토리얼</a></li>
+                            <li><a href="#none">다큐</a></li>
+                            <li><a href="#none">삽화</a></li>
+                            <li><a href="#none">영화</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="#none">드라마</a></li>
+                            <li><a href="#none">게임</a></li>
+                            <li><a href="#none">스릴러/공포</a></li>
+                            <li><a href="#none">공상과학</a></li>
+                            <li><a href="#none">액션</a></li>
+                            <li><a href="#none">코미디</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="sub_news.html">소식</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="sub_news.html">업데이트</a></li>
+                            <li><a href="sub_news.html">보도자료</a></li>
+                            <li><a href="sub_news.html">비평</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="sub_commu.html">커뮤니티</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="sub_commu.html">허브</a></li>
+                            <li><a href="sub_commu.html">큐레이터</a></li>
+                            <li><a href="sub_commu.html">리뷰</a></li>
+                            <li><a href="sub_commu.html">토론</a></li>
+                            <li><a href="sub_commu.html">아트</a></li>
+                            <li><a href="sub_commu.html">방송</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="sub_commu.html">그린라이트</a></li>
+                            <li><a href="sub_commu.html">워크샵</a></li>
+                            <li><a href="sub_commu.html">스팀마켓</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main sub_game_product">
+	<div class="section1">	
+    	 <div class="section1_bg">
+        </div>
+    	<div class="main_util">
+        	<a href="#">홈</a> > <a href="#">게임</a> > <a href="#" class="blue">STELLARIS</a>
+        </div>
+    	<div class="product">
+        	<div class="product1">
+            <form>
+            	<fieldset>
+                    <div><img src="images/product/product01.jpg" alt=""></div>
+                    <div class="select">
+                        <button type="button" class="package_btn"><span>패키지를 선택해주세요.</span></button>
+                        <ul class="select_package">
+                            <li><a href="#none"><span>Stellaris 구매</span><span>\ 43,000</span>
+                            	<ul  class="game_assist">
+                                	<li class="assist1"></li>
+                                	<li class="assist2"></li>
+                               		<li class="assist3"></li>
+                                	<li class="assist4"></li>
+                                </ul>
+                                </a>
+                            </li>
+                            <li><a href="#none"><span>Stellaris - Nova Edition 구매</span><span>\ 54,000</span>
+                            	<ul  class="game_assist">
+                                	<li class="assist1"></li>
+                                	<li class="assist2"></li>
+                                	<li class="assist3"></li>
+                                	<li class="assist4"></li>
+                                </ul>
+                                </a>
+                           	</li>
+                            <li><a href="#none"><span>Stellaris - Galaxy Edition 구매</span><span>\ 76,000</span>
+                            	<ul  class="game_assist">
+                                	<li class="assist1"></li>
+                                	<li class="assist2"></li>
+                                	<li class="assist3"></li>
+                                	<li class="assist4"></li>
+                                	</ul>
+                                </a>
+                           </li>
+                        </ul>
+                    </div>
+                    <button type="button">게임 구매</button>
+                </fieldset>
+            </form>
+            </div>
+            <div class="product2">
+            	<div class="pro2_top">
+                	<h3>STELLARIS</h3>
+                    <h4>사용자 평가: <span class="blue">대체적으로 긍정적</span></h4>
+                </div>
+                <div class="pro2_center">
+                	<div class="pro2_depth1">
+                    	<h5>장르</h5>
+                        <h6>시뮬레이션, 전략</h6>
+                    </div>
+                    <div class="pro2_depth1">
+                    	<h5>출시일</h5>
+                        <h6>2016년 5월 10일</h6>
+                    </div>
+                    <div class="pro2_depth1">
+                    	<h5>개발자</h5>
+                        <h6>Paradox Development Studio</h6>
+                    </div>
+                    <div class="pro2_depth1">
+                    	<h5>배급사</h5>
+                        <h6>Paradox Interactive</h6>
+                    </div>
+                    <div class="pro2_depth1">
+                    	<h5>관련태그</h5>
+                        <h6><a href="#none" class="tag">우주</a>, <a href="#none" class="tag">대전략</a>, <a href="#none" class="tag">전략</a>, <a href="#none" class="tag">공상과학</a>, <a href="#none" class="tag">4X</a>, <a href="#none" class="tag">탐험</a><a href="#none" class="tag_plus"><img src="images/product/tag_plus.gif" alt="태그추가"></a></h6>
+                    </div>
+                    <div class="pro2_depth1 pro2_depth2">
+                    	<h5>게임에 대하여</h5>
+                        <p>경이로 가득찬 광대한 은하계를 탐험하세요! '십자군 왕'과 '유럽유니버셜' 시리즈
+의 개발사 Paradox Development Studio의 선물 스텔라, 웅대한 우주탐사를 핵심
+으로 전략 장르의 새로운 진화를 선보입니다. 스텔라리스는 깊이 있는 전략적 플
+레이로 외계종족과의 스토리 텔링이 풍부하고 자유도가 매우 높은 것을 특징으
+로 여행을 하는 내내 느낄 수 있습니다. 행성 간 탐사를 통하여 보상을 획득하고 
+도전적인 플레이를 통해 은하의 제국을 당신의 이름으로 불리울 수 있습니다. 식
+민지화를 통하여 행성 간의 외계문명을 통합하세요. 
+</p>
+                    </div>
+                </div>
+                <div class="pro2_bottom">
+                	<a href="#none">시스템 요구사항(지원언어)</a>
+                    <a href="#none">비평</a>
+                    <a href="#none">업데이트 소식</a>
+                    <a href="#none">유저리뷰</a>
+                    <a href="#none">스팀도전과제</a>
+                    <a href="#none">유사한 제품보기</a>
+                    <a href="#none">커뮤니티허브</a>
+                </div>
+            </div>
+        </div>
+        <p class="slider_side_left"></p>
+        <p class="slider_side_right"></p>
+    </div>
+    <div class="section2">
+       <div class="section2_inner">
+       		<div class="section2_slider">
+            	<div><img src="images/product/stel_01.jpg" alt=""></div>
+                <div><img src="images/product/stel_02.jpg" alt=""></div>
+                <div><img src="images/product/stel_03.jpg" alt=""></div>
+                <div><img src="images/product/stel_04.jpg" alt=""></div>
+                <div><img src="images/product/stel_05.jpg" alt=""></div>
+                <div><img src="images/product/stel_06.jpg" alt=""></div>
+                <div><img src="images/product/stel_07.jpg" alt=""></div>
+            </div>
+            <div class="section2_slider2">
+            	<div><img src="images/product/stel_01.jpg" alt=""></div>
+                <div><img src="images/product/stel_02.jpg" alt=""></div>
+                <div><img src="images/product/stel_03.jpg" alt=""></div>
+                <div><img src="images/product/stel_04.jpg" alt=""></div>
+                <div><img src="images/product/stel_05.jpg" alt=""></div>
+                <div><img src="images/product/stel_06.jpg" alt=""></div>
+                <div><img src="images/product/stel_07.jpg" alt=""></div>
+            </div>
+       </div>
+    </div>
+    <div class="section3">
+    	<div class="section3_inner">
+        	<div class="sys">
+            	<h2>시스템 요구사항</h2>
+                <ul class="sys_gnb">
+                	<li class="on"><a href="#none">Windows</a></li>
+                    <li><a href="#none">Mac OS X</a></li>
+                    <li><a href="#none">SteamOS + Linux</a></li>
+                </ul>
+                <div class="sys_con sys_win">
+                	<div class="sys_win1">
+                        <h5>권장</h5>
+                        <table>
+                            <tr><td>운영체제</td><td>Windows 7 x64 or newer</td></tr>
+                            <tr><td>프로세서</td><td>AMD Phenom II X4 850 @ 3.3 Ghz or Intel i3 2100 @ 3.1 Ghz </td></tr>
+                            <tr><td>메모리</td><td>4 GB RAM </td></tr>
+                            <tr><td>그래픽</td><td>AMD HD 6850 / or Nvidia GTX 560TI, with 1024MB VRAM</td></tr>
+                            <tr><td>DirectX</td><td>버전 9.0c </td></tr>
+                            <tr><td>저장공간</td><td>4 GB 사용 가능 공간</td></tr>
+                        </table>	
+                    </div>
+                    <div class="sys_win2">
+                        <h5>최소</h5>
+                        <table>
+                            <tr><td>운영체제</td><td>Windows 7 x64 or newer</td></tr>
+                            <tr><td>프로세서</td><td>AMD Phenom II X4 850 @ 3.3 Ghz or Intel i3 2100 @ 3.1 Ghz </td></tr>
+                            <tr><td>메모리</td><td>4 GB RAM </td></tr>
+                            <tr><td>그래픽</td><td>AMD HD 6850 / or Nvidia GTX 560TI, with 1024MB VRAM</td></tr>
+                            <tr><td>DirectX</td><td>버전 9.0c </td></tr>
+                            <tr><td>저장공간</td><td>4 GB 사용 가능 공간</td></tr>
+                        </table>	
+                    </div>
+                </div>
+           	</div>
+            <div class="language">
+            	<h2>지원 언어</h2>
+                <table>
+                	<colgroup>
+                    	<col style="width:120px">
+                        <col style="width:70px">
+                        <col style="width:70px">
+                        <col style="width:70px">
+                    </colgroup>
+                	<tr><th>&nbsp;</th><th>인터페이스</th><th>음성지원</th><th>자막</th></tr>
+                     <tr><td>한국어</td><td class="cir"></td><td></td><td class="cir"></td></tr>
+                     <tr><td>영어</td><td class="cir"></td><td class="cir"></td><td class="cir"></td></tr>
+                     <tr><td>프랑스어</td><td class="cir"></td><td></td><td></td></tr>
+                     <tr><td>독일어</td><td class="cir"></td><td class="cir"></td><td class="cir"></td></tr>
+                     <tr><td>스페인어</td><td class="cir"></td><td></td><td></td></tr>
+                     <tr><td>폴란드어</td><td class="cir"></td><td></td><td class="cir"></td></tr>
+                     <tr><td>포르투갈어-브라질</td ><td class="cir"></td><td></td><td class="cir"></td></tr>
+                     <tr><td>러시아어</td><td class="cir"></td><td></td><td class="cir"></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="footer_inner">
+    	<h2><img src="images/footer_logo.png" alt="스팀 본사 Valve의 로고"></h2>
+        <div class="copyright">
+        	<div>© 016 Valve Corporation. All rights reserved. 모든 상표는 미국 및 기타 국가에서 해당하는 소유자의 재산입니다.</div>
+            <ul>
+            	<li>부가가치세 포함</li>
+            	<li class="footer_valve"><a href="#none">Valve 개인 정보 정책</a></li>
+            	<li><a href="#none">사용권</a></li>
+            	<li><a href="#none">Steam 이용약관</a></li>
+            	<li><a href="#none">환불</a></li>
+            </ul>
+            <ul>
+            	<li><a href="#none">Valve 정보</a></li>
+                <li><a href="#none">비즈니스 솔루션</a></li>
+                <li><a href="#none">Steamworks</a></li>
+                <li><a href="#none">채용정보</a></li>
+                <li><a href="#none">Steam 배포</a></li>
+                <li><a href="#none" class="footer_steam">Steam</a></li>
+                <li><a href="#none" class="footer_steamgame">@steam_games</a>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

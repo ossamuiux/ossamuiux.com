@@ -1,0 +1,182 @@
+@charset "utf-8";
+/***brandstory***/
+/*****************************sub top - visual, title, location**************************************/
+.main.brandstory {overflow:hidden; margin:0 auto;}
+.main.brandstory .sub_visual {height:194px; margin:0 auto; background:url(../images/sub_visual1.jpg) no-repeat center center;}
+
+.main.brandstory .sub_tit {width:1200px; height:90px; margin:0 auto; padding:35px 0; background:url(../images/sub_tit_line.png) no-repeat right 85%;}
+.main.brandstory .sub_tit .title {float:left;}
+.main.brandstory .sub_tit .title h1 {font-size:35px; color:#492f92; font-weight:bold;}
+.main.brandstory .sub_tit .title p {font-size:14px; color:#484747; padding-top:10px;}
+
+.main.brandstory .sub_tit .location {float:right;}
+.main.brandstory .sub_tit .location p {background:url(../images/location_home.png) no-repeat left center; padding-left:20px; vertical-align:middle;}
+.main.brandstory .sub_tit .location p a {font-size:11px; color:#a8a6a4; vertical-align:middle;}
+.main.brandstory .sub_tit .location p a span {vertical-align:middle;}
+.main.brandstory .sub_tit .location p strong {color:#492f92; vertical-align:middle;}
+.main.brandstory .sub_tit .location p a span:hover {text-decoration:underline; color:#492f92;}
+
+
+/*****************************sub con - brandstory**************************************/
+.main.brandstory .story {width:1200px; margin:0 auto;}
+
+.main.brandstory .story .story_inner1 {float:left; margin-top:20px;}
+.main.brandstory .story .story_inner1 img {float:left; margin-right:30px;}
+.main.brandstory .story .story_inner1 .story_txt {float:right; font-size:14px; color:#484747;}
+.main.brandstory .story .story_inner1 .story_txt h3 {color:#d16e19; font-weight:bold; margin-bottom:13px;}
+
+.main.brandstory .story .story_inner2 {float:left; margin-top:30px;}
+.main.brandstory .story .story_inner2 .story_txt {float:left; font-size:14px; color:#484747; padding-top:110px;}
+.main.brandstory .story .story_inner2 .story_txt h3 {font-weight:bold; font-size:18px; color:#484747; margin-bottom:40px;}
+.main.brandstory .story .story_inner2 .story_txt h3 strong {font-size:24px; color:#d16e19;}
+.main.brandstory .story .story_inner2 .story_txt p strong {color:#d16e19; font-weight:bold; }
+.main.brandstory .story .story_inner2 img {float:right; margin-left:30px;}
+
+.main.brandstory .story .story_inner3 {float:left; margin-top:40px;}
+.main.brandstory .story .story_inner3 img {float:left; margin-right:25px;}
+.main.brandstory .story .story_inner3 .story_txt {float:right; font-size:14px; color:#484747; padding-top:100px;}
+.main.brandstory .story .story_inner3 .story_txt h3 {font-weight:bold; font-size:18px; color:#484747; margin-bottom:40px;}
+.main.brandstory .story .story_inner3 .story_txt h3 strong {font-size:24px; color:#d16e19;}
+.main.brandstory .story .story_inner3 .story_txt p strong {color:#d16e19; font-weight:bold;}
+
+.main.brandstory .story .story_inner4 {float:left; margin-top:50px; margin-bottom:80px;}
+.main.brandstory .story .story_inner4 .story_txt {float:left; font-size:14px; color:#484747; padding-top:215px;}
+.main.brandstory .story .story_inner4 .story_txt h3 {color:#d16e19; font-weight:bold; margin-bottom:13px;}
+.main.brandstory .story .story_inner4 img {float:right; margin-left:35px;}
+
+
+
+/***Menu -new menu***/
+/*****************************sub top - visual, title, location**************************************/
+.main.menu {overflow:hidden; margin:0 auto;}
+.main.menu .sub_visual {height:194px; margin:0 auto; background:url(../images/sub_visual2.jpg) no-repeat center center;}
+
+.main.menu .sub_tit {width:1200px; height:90px; margin:0 auto; padding:35px 0; background:url(../images/sub_tit_line.png) no-repeat right 85%;}
+.main.menu .sub_tit .title {float:left;}
+.main.menu .sub_tit .title h1 {font-size:35px; color:#492f92; font-weight:bold;}
+.main.menu .sub_tit .title p {font-size:14px; color:#484747; padding-top:10px;}
+
+.main.menu .sub_tit .location {float:right;}
+.main.menu .sub_tit .location p {background:url(../images/location_home.png) no-repeat left center; padding-left:20px; vertical-align:middle;}
+.main.menu .sub_tit .location p a {font-size:11px; color:#a8a6a4; vertical-align:middle;}
+.main.menu .sub_tit .location p a span {vertical-align:middle;}
+.main.menu .sub_tit .location p strong {color:#492f92; vertical-align:middle;}
+.main.menu .sub_tit .location p a span:hover {text-decoration:underline; color:#492f92;}
+
+/*****************************sub con - tit**************************************/
+.main.menu .con {width:1200px; margin:0 auto; padding-bottom:90px;}
+.main.menu .con .con_tit {width:1200px; height:50px; position:relative;}
+.main.menu .con .con_tit h2 {text-align:center; font-size:32px; font-weight:bold; color:#484747;}
+
+.main.menu .con .con_tit .date_select {position:absolute; right:0; top:10px;}
+.main.menu .con .con_tit .date_select select {width:130px; height:30px; border:1px solid #b8b8b8; text-align:left; font-size:12px; color:#686869; padding-left:5px; outline:none;}
+.main.menu .con .con_tit .date_select button {width:40px; height:30px; background:#999; border:none; outline:none; color:#fff;}
+
+/*****************************sub con - product**************************************/
+.main.menu .con .product {width:1200px; margin-top:50px; overflow:hidden;}
+.main.menu .con .product .left_product {float:left; height:728px; margin-bottom:16px; border:1px solid #d3d3d3;}
+
+.main.menu .con .product .right_product {width:600px; float:right;}
+.main.menu .con .product .right_product ul li {float:left; width:287px; height:357px; margin:0 0 16px 13px; background:url(../images/product_bg.png) no-repeat; position:relative;}
+.main.menu .con .product .right_product ul li a {text-align:center; font-size:16px; color:#2f1c11;}
+.main.menu .con .product .right_product ul li img {position:absolute; left:28%; bottom:32%;}
+.main.menu .con .product .right_product ul li h2 {margin-top:280px; font-weight:bold;}
+.main.menu .con .product .right_product ul li p {font-size:14px; color:#bdbec0;}
+.main.menu .con .product .right_product ul li:hover {background-image:url(../images/product_bg_on.png);}
+
+.main.menu .con .product2 .right_product ul li {background-image:url(../images/product_bg2.png);}
+.main.menu .con .product2 .right_product ul li:hover {background-image:url(../images/product_bg2_on.png);}
+
+/*****************************sub - more, top**************************************/
+.main .more {width:1200px; margin:0 auto; padding-bottom:50px;}
+.main .more a {width:43px; height:43px; margin:0 auto; display:block;}
+
+.main .go_top {position:fixed; left:50%; bottom:100px; margin-left:700px; width:50px; height:50px; background:#666;}
+.main .go_top a {display:block; line-height:50px; color:#fff; text-align:center;}
+
+/***event***/
+/*****************************sub top - visual, title, location**************************************/
+.main.event {overflow:hidden; margin:0 auto;}
+.main.event .sub_visual {height:194px; margin:0 auto; background:url(../images/sub_visual3.jpg) no-repeat center center;}
+
+.main.event .sub_tit {width:1200px; height:90px; margin:0 auto; padding:35px 0; background:url(../images/sub_tit_line.png) no-repeat right 85%;}
+.main.event .sub_tit .title {float:left;}
+.main.event .sub_tit .title h1 {font-size:35px; color:#492f92; font-weight:bold;}
+.main.event .sub_tit .title p {font-size:14px; color:#484747; padding-top:10px;}
+
+.main.event .sub_tit .location {float:right;}
+.main.event .sub_tit .location p {background:url(../images/location_home.png) no-repeat left center; padding-left:20px; vertical-align:middle;}
+.main.event .sub_tit .location p a {font-size:11px; color:#a8a6a4; vertical-align:middle;}
+.main.event .sub_tit .location p a span {vertical-align:middle;}
+.main.event .sub_tit .location p strong {color:#492f92; vertical-align:middle;}
+.main.event .sub_tit .location p a span:hover {text-decoration:underline; color:#492f92;}
+
+/*****************************sub con - tit**************************************/
+.main.event .con {width:1200px; margin:0 auto; padding-bottom:90px;}
+.main.event .con .con_tit {width:1200px; height:50px; position:relative;}
+.main.event .con .con_tit h2 {text-align:center; font-size:32px; font-weight:bold; color:#484747;}
+
+.main.event .con .con_tit .date_select {position:absolute; right:0; top:10px;}
+.main.event .con .con_tit .date_select select {width:130px; height:30px; border:1px solid #b8b8b8; text-align:left; font-size:12px; color:#686869; padding-left:5px; outline:none;}
+.main.event .con .con_tit .date_select button {width:40px; height:30px; background:#999; border:none; outline:none; color:#fff;}
+
+/*****************************sub con - event**************************************/
+.main.event .con .event_list {width:1210px; overflow:hidden;}
+.main.event .con .event_list .box {margin-top:50px; }
+.main.event .con .event_list .box li {position:relative; float:left; width:385px; height:482px; background:url(../images/event_box_bg.png) no-repeat; padding:10px 0 0 10px; margin:0 7px 40px 0;}
+.main.event .con .event_list .box li a h2 {font-size:17px; color:#040100; font-weight:bold; margin:10px;}
+.main.event .con .event_list .box li a h2:hover {text-decoration:underline;}
+
+.main.event .con .event_list .box li a .event_date {position:absolute; left:20px; bottom:20px;}
+.main.event .con .event_list .box li a .event_date .date {margin-right:8px; vertical-align:middle;}
+.main.event .con .event_list .box li a .event_date p {display:inline; font-size:12px; color:#706f6f; vertical-align:middle;}
+
+
+/***notice***/
+/*****************************sub top - visual, title, location**************************************/
+.main.notice {overflow:hidden; margin:0 auto;}
+.main.notice .sub_visual {height:194px; margin:0 auto; background:url(../images/sub_visual1.jpg) no-repeat center center;}
+
+.main.notice .sub_tit {width:1200px; height:90px; margin:0 auto; padding:35px 0; background:url(../images/sub_tit_line.png) no-repeat right 85%;}
+.main.notice .sub_tit .title {float:left;}
+.main.notice .sub_tit .title h1 {font-size:35px; color:#492f92; font-weight:bold;}
+.main.notice .sub_tit .title p {font-size:14px; color:#484747; padding-top:10px;}
+
+.main.notice .sub_tit .location {float:right;}
+.main.notice .sub_tit .location p {background:url(../images/location_home.png) no-repeat left center; padding-left:20px; vertical-align:middle;}
+.main.notice .sub_tit .location p a {font-size:11px; color:#a8a6a4; vertical-align:middle;}
+.main.notice .sub_tit .location p a span {vertical-align:middle;}
+.main.notice .sub_tit .location p strong {color:#492f92; vertical-align:middle;}
+.main.notice .sub_tit .location p a span:hover {text-decoration:underline; color:#492f92;}
+
+/*****************************sub con - notice board table*************************************/
+.main.notice .board {width:1200px; overflow:hidden; margin:0 auto;} 
+.main.notice .board table {width:100%; margin-top:-18px; margin-bottom:40px;}
+.main.notice .board table th {line-height:50px; border-bottom:1px solid #c6c6c6; font-weight:bold; font-size:15px;}
+.main.notice .board table td {text-align:center; line-height:45px;}
+.main.notice .board table td.board_tit {text-align:left; padding-left:25px;}
+.main.notice .board table td.board_tit a {color:#393939; font-weight:bold;}
+.main.notice .board table td.board_tit a:hover {color:#d16e19;}
+.main.notice .board table tr {border-bottom:1px solid #eeeeee;}
+.main.notice .board table tr.last_board {border-bottom:2px solid #c6c6c6;}
+
+.main.notice .board .btn_page {text-align:center; margin-bottom:20px;}
+.main.notice .board .btn_page a {text-align:center; line-height:30px; width:30px; height:30px; display:inline-block; margin-right:5px; color:#393939;}
+.main.notice .board .btn_page a.btn_next {border:1px solid #9f9f9f;}
+.main.notice .board .btn_page a.on {background:#492f92; color:#FFF;}
+.main.notice .board .btn_page a:hover {background:#492f92; color:#FFF;}
+.main.notice .board .btn_page a.btn_next:hover {background:none; border:1px solid #3f3f3f; color:#3f3f3f;}
+
+.main.notice .board .search {text-align:center; width:1200px; height:150px; position:relative;}
+.main.notice .board .search .select {float:left; position:absolute; left:34%; top:0px;}
+.main.notice .board .search .select button {width:115px; height:30px; font-size:13px; color:#393939; text-align:left; background:url(../images/arrow_down.png) no-repeat right bottom; background-position:90px 10px; vertical-align:middle; padding:0 10px; outline:none; border:1px solid #9f9f9f;}
+.main.notice .board .search .select button.on {background-image:url(../images/arrow_up.png);}
+
+.main.notice .board .search .select ul {border:1px solid #9f9f9f; margin-top:-1px; display:none;}
+.main.notice .board .search .select ul li {text-align:left; padding-left:10px; line-height:30px; border-top:1px solid #eeeeee;}
+.main.notice .board .search .select ul li a {font-size:13px; color:#393939;}
+.main.notice .board .search .select ul li a:hover {color:#d16e19;}
+
+.main.notice .board .search input {width:200px; height:26px; margin-left:110px; padding-left:5px; color:#393939; font-size:13px; outline:none; border:1px solid #9f9f9f;}
+.main.notice .board .search input::-ms-clear {display:none;}
+.main.notice .board .search button {width:40px; height:30px; padding:0 3px; background:#393939; color:#FFF; outline:none; border:none; font-size:12px;}

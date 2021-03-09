@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>오뚜기리뉴얼 : mobile</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.m_btn').click(function(){
+		$('.m_gnb').animate({'left':'0'},300);
+		$('.cover').fadeIn(200);
+		$('.wrapper').css({'overflow-y':'hidden','height':'100%'});
+	});
+	$('.cover').click(function(){
+		$('.m_gnb').animate({'left':'-300px'},300);
+		$('.cover').fadeOut(200);
+		$('.wrapper').css({'overflow-y':'visible','height':'auto'});
+	});
+	
+	$('.main .slider').slick({
+		dots:false,
+		autoplay:true,
+		autoplaySpeed:3000,
+		fade:true,
+		speed:800,
+	});
+	
+	$('.m_gnb .lnb>li').click(function(){
+		$('.lnb .sub').stop().slideUp(200);
+		$(this).find('.sub').stop().slideDown(200);
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="m_gnb">
+	<div class="box1">
+    	<a href="#">로그인</a>
+        <a href="#">회원가입</a>
+    </div>
+    <div class="box2">
+    	<a href="#">English</a>
+        <a href="#">PC버전</a>
+    </div>
+    <ul class="lnb">
+    	<li><a href="#">오뚜기소개</a>
+        	<ul class="sub">
+            	<li><a href="introduce.html">회사소개</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">오뚜기 이념</a></li>
+                <li><a href="#">중앙 연구소</a></li>
+                <li><a href="#">해외 법인 소개</a></li>
+                <li><a href="#">사회 공헌</a></li>
+                <li><a href="#">환경 경영</a></li>
+                <li><a href="#">윤리 경영</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+            </ul>
+        </li>
+        <li><a href="#">제품정보</a>
+        	<ul class="sub">
+            	<li><a href="#">분말/건조 식품</a></li>
+                <li><a href="#">레토르트 식품</a></li>
+                <li><a href="#">조미 식품</a></li>
+                <li><a href="#">냉동 식품</a></li>
+                <li><a href="#">수입 식품</a></li>
+                <li><a href="#">농수산물 가공식품</a></li>
+            </ul>
+        </li>
+        <li><a href="#">사이버홍보실</a>
+        	<ul class="sub">
+            	<li><a href="#">뉴스/PR</a></li>
+                <li><a href="#">광고 이야기</a></li>
+                <li><a href="#">한눈에 보는 오뚜기</a></li>
+                <li><a href="#">즐거운 오뚜기</a></li>
+                <li><a href="#">공장 견학</a></li>
+            </ul>
+        </li>
+        <li><a href="#">고객서비스</a>
+        	<ul class="sub">
+            	<li><a href="#">고객 상담실</a></li>
+                <li><a href="#">고객 참여</a></li>
+                <li><a href="#">이벤트</a></li>
+            </ul>
+        </li>
+        <li><a href="#">요리와 생활</a>
+        	<ul class="sub">
+            	<li><a href="#">즐거운 요리교실</a></li>
+                <li><a href="#">영양 이야기</a></li>
+                <li><a href="#">푸드 마스터</a></li>
+                <li><a href="#">오뚜기 요리박사</a></li>
+                <li><a href="#">건강한 카레이야기</a></li>
+                <li><a href="#">사골곰탕 이야기</a></li>
+                <li><a href="#">마요네즈 활용하기</a></li>
+            </ul>
+        </li>
+        <li><a href="#">채용</a>
+        	<ul class="sub">
+            	<li><a href="#">채용공고</a></li>
+                <li><a href="#">인사제도</a></li>
+                <li><a href="#">직무소개</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">입사지원</a></li>
+            </ul>
+        </li>
+        <li><a class="not" href="http://www.ottogimall.co.kr" target="_blank">오뚜기몰</a></li>
+    </ul>
+</div>
+<div class="cover"></div>
+<div class="wrapper">
+    <div class="header">
+        <a href="#" class="m_btn"><img src="img/menu.PNG" alt=""></a>
+        <h1><a href="index.html"><img src="img/logo.PNG" alt=""></a></h1>
+        <a href="#" class="search"><img src="img/search.png" alt=""></a>
+    </div>
+    <div class="main">
+        <div class="slider">
+            <div><img src="img/visual.png" alt=""></div>
+            <div><img src="img/visual2.png" alt=""></div>
+        </div>
+        <div class="sum">
+        	<a href="#">
+        		<p>ㆍ [오뚜기와 함께하는 오뚜기 인생19] 뮤지컬배우 박은태</p>
+            </a>
+        </div>
+        <div class="quick">
+        	<ul>
+            	<li><a href="#"><img src="img/icon1.PNG" alt="">
+                <p>이벤트</p></a></li>
+                <li><a href="#"><img src="img/icon2.PNG" alt="">
+                <p>신제품</p></a></li>
+                <li><a href="#"><img src="img/icon3.PNG" alt="">
+                <p>고객센터</p></a></li>
+            </ul>
+            <ul>
+            	<li><a href="#"><img src="img/icon4.PNG" alt="">
+                <p>레시피</p></a></li>
+                <li><a href="#"><img src="img/icon5.PNG" alt="">
+                <p>오뚜기몰</p></a></li>
+                <li><a href="#"><img src="img/icon6.PNG" alt="">
+                <p>SNS</p></a></li>
+            </ul>
+        </div>
+        <div class="banner_wrap1">
+        	<div class="facebook">
+            	<a href="#">
+            	<h1>OTTOGI FACEBOOK</h1>
+                <div class="h2">
+                	<img src="img/facebook_icon.PNG" alt="">
+                	<p><span>오뚜기</span>님이<br>
+                	<em>새로운사진 3장</em>을<br>
+                    추가했습니다.</p>
+                    <p class="txt">진한 불맛 짜장소스!<br>
+                    쫄깃하고 탱탱한<br>
+                    두꺼운 면발!</p>
+                </div>
+                </a>
+            </div>
+            <div class="event">
+            	<h1>OTTOGI EVENT</h1>
+                <a href="#">
+                <img src="img/event.PNG" alt="">
+                </a>
+                <p>ㆍ2015 <span>드림 사커스쿨</span><br>
+                　WIN TOGETER</p>
+            </div>
+        </div>
+        <div class="banner_wrap2">
+        	<div class="news">
+            	<h1>OTTOGI NEWS</h1>
+                <ul>
+                	<li><a href="#">[오뚜기와 함께하는 오뚜기인생19] 뮤지컬</a></li>
+                    <li><a href="#">오뚜기, 바비큐소스-냉장찌개 등 캠핑족</a></li>
+                    <li><a href="#">"오뚜기 가족들이 밑거름 될 수 있다면</a></li>
+                    <li><a href="#">[오뚜기와 함께하는 오뚜기인생18] 사이버</a></li>
+                </ul>
+            </div>
+            <div class="cook">
+            	<a href="#">
+            	<h1>OTTOGI COOKING CLASS</h1>
+                <p class="h3">맛있는 요리정보</p>
+                <p class="big"><span>오뚜기</span><br>요리교실</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    	<ul class="copy">
+        	<li><a href="#">이용약관</a></li>
+            <li><a class="bold" href="#">개인정보 취급방침</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">웹마스터</a></li>
+        </ul>
+        <p>(431-070) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)<br>
+<span>COPYRIGHT (C) 2005 by OTTOGI Corp.<br>
+ALL rights reserved.</span></p>
+    </div>
+</div>
+</body>
+</html>

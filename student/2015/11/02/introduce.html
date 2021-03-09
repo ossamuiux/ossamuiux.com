@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>오뚜기리뉴얼 : m(introduce)</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.m_btn').click(function(){
+		$('.m_gnb').animate({'left':'0'},300);
+		$('.cover').fadeIn(200);
+		$('.wrapper').css({'overflow-y':'hidden','height':'100%'});
+	});
+	$('.cover').click(function(){
+		$('.m_gnb').animate({'left':'-300px'},300);
+		$('.cover').fadeOut(200);
+		$('.wrapper').css({'overflow-y':'visible','height':'auto'});
+	});
+	
+	$('.main .slider').slick({
+		dots:false,
+		autoplay:true,
+		autoplaySpeed:3000,
+		fade:true,
+		speed:800,
+	});
+	
+	$('.m_gnb .lnb>li').click(function(){
+		$('.lnb .sub').stop().slideUp(200);
+		$(this).find('.sub').stop().slideDown(200);
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="m_gnb">
+	<div class="box1">
+    	<a href="#">로그인</a>
+        <a href="#">회원가입</a>
+    </div>
+    <div class="box2">
+    	<a href="#">English</a>
+        <a href="#">PC버전</a>
+    </div>
+    <ul class="lnb">
+    	<li><a href="#">오뚜기소개</a>
+        	<ul class="sub">
+            	<li><a href="introduce.html">회사소개</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">오뚜기 이념</a></li>
+                <li><a href="#">중앙 연구소</a></li>
+                <li><a href="#">해외 법인 소개</a></li>
+                <li><a href="#">사회 공헌</a></li>
+                <li><a href="#">환경 경영</a></li>
+                <li><a href="#">윤리 경영</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+            </ul>
+        </li>
+        <li><a href="#">제품정보</a>
+        	<ul class="sub">
+            	<li><a href="#">분말/건조 식품</a></li>
+                <li><a href="#">레토르트 식품</a></li>
+                <li><a href="#">조미 식품</a></li>
+                <li><a href="#">냉동 식품</a></li>
+                <li><a href="#">수입 식품</a></li>
+                <li><a href="#">농수산물 가공식품</a></li>
+            </ul>
+        </li>
+        <li><a href="#">사이버홍보실</a>
+        	<ul class="sub">
+            	<li><a href="#">뉴스/PR</a></li>
+                <li><a href="#">광고 이야기</a></li>
+                <li><a href="#">한눈에 보는 오뚜기</a></li>
+                <li><a href="#">즐거운 오뚜기</a></li>
+                <li><a href="#">공장 견학</a></li>
+            </ul>
+        </li>
+        <li><a href="#">고객서비스</a>
+        	<ul class="sub">
+            	<li><a href="#">고객 상담실</a></li>
+                <li><a href="#">고객 참여</a></li>
+                <li><a href="#">이벤트</a></li>
+            </ul>
+        </li>
+        <li><a href="#">요리와 생활</a>
+        	<ul class="sub">
+            	<li><a href="#">즐거운 요리교실</a></li>
+                <li><a href="#">영양 이야기</a></li>
+                <li><a href="#">푸드 마스터</a></li>
+                <li><a href="#">오뚜기 요리박사</a></li>
+                <li><a href="#">건강한 카레이야기</a></li>
+                <li><a href="#">사골곰탕 이야기</a></li>
+                <li><a href="#">마요네즈 활용하기</a></li>
+            </ul>
+        </li>
+        <li><a href="#">채용</a>
+        	<ul class="sub">
+            	<li><a href="#">채용공고</a></li>
+                <li><a href="#">인사제도</a></li>
+                <li><a href="#">직무소개</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">입사지원</a></li>
+            </ul>
+        </li>
+        <li><a class="not" href="http://www.ottogimall.co.kr" target="_blank">오뚜기몰</a></li>
+    </ul>
+</div>
+<div class="cover"></div>
+<div class="wrapper">
+    <div class="header">
+        <a href="#" class="m_btn"><img src="img/menu.PNG" alt=""></a>
+        <h1><a href="index.html"><img src="img/logo.PNG" alt=""></a></h1>
+        <a href="#" class="search"><img src="img/search.png" alt=""></a>
+    </div>
+    <div class="main">
+        <div class="title">
+        	<h1>회사소개</h1>
+            <p>삶을 아름답고 풍요롭게 만드는 기업, 오뚜기가 함께합니다.</p>
+        </div>
+        <div class="box1">
+        	<img src="img/introduce_1.png" alt="">
+            <h2><img src="img/introduce_1_title.png" alt=""></h2>
+            <p>고객이 웃을 때 오뚜기는 행복합니다.<br>
+오뚜기와 고객 상담실은 언제나 고객을 향해 열려있습니다.<br>
+오뚜기의 투명한 생산과정은 언제나 고객의 방문을 환영합니다.<br>
+<br>
+고객의 욕구를 항상 최우선으로 생각하며<br>
+고객이 원하는 모든 것을 위해 오늘도 최선을 다합니다.</p>
+        </div>
+         <div class="box2">
+        	<img src="img/introduce_2.png" alt="">
+            <h2><img src="img/introduce_2_title.png" alt=""></h2>
+            <p>오뚜기 전 임직원들은 '보다 좋은 품질, 보다 높은 영양,<br>
+            보다 앞선 식품'으로 인류 식생활 향상에 이바지하기 위해<br>
+            맡은 바 업무에 최선을 다하고 있습니다.<br>
+            영업, 생산, 연구, 관리 등 모든 부서에서 스스로에게<br>
+주어진 임무를 빈틈없이 처리하고 있는 것은 물론 밝고<br>
+명랑한 직장 분위기를 만들기 위해 노력하고 있습니다.<br>
+<br>
+이러한 오뚜기 사람들의 노력들이 바로 최고 품질,<br>
+최고의 맛으로 승화되는 것입니다.</p>
+        </div>
+         <div class="box3">
+        	<img src="img/introduce_3.png" alt="">
+            <h2><img src="img/introduce_3_title.png" alt=""></h2>
+            <p>신선한 육류와 야채를 사용한 '오뚜기 3분 요리'는<br>
+바쁜 현대인들에게 충분한 영양을 공급합니다.<br>
+정선된 원료로 만든 '오뚜기 마요네즈'와 '드레싱'은<br>
+신선한 야채를 다양하게 즐길 수 있도록 해줍니다.<br>
+<br>
+갖가지 향신료로 만든 '오뚜기 카레'는 더욱 부드럽고 향긋한<br>
+카레 특유의 풍미를 느낄 수 있습니다.<br>
+'맛있는 오뚜기밥'은 갓 지은 맛있는 밥을 무균 포장한 제품으로<br>
+간편한 식생활을 추구하는 현대인들에게 필수적인 제품입니다.</p>
+        </div>
+         <div class="box4">
+        	<img src="img/introduce_4.png" alt="">
+            <h2><img src="img/introduce_4_title.png" alt=""></h2>
+            <p>우리 회사는 카레, 스프, 케챂, 마요네즈 등 1등 제품이 많습니다.<br>
+이처럼 많은 제품들이 오랫동안 정상을 지켜온 비결은<br>
+고객들의 욕구를 충실히 반영한 좋은 품질의 제품을<br>
+ 공급해왔기 때문입니다.<br>
+ 우리 회사의 모든 생산라인은 자동화된 첨단설비,<br>
+위생적인 환경을 구축하고 있습니다.<br>
+<br>
+이것이 바로 오뚜기의 저력이고 1등 제품의 힘입니다.<br>
+이런 오뚜기 사람들의 노력이 최고 품질,<br>
+최고의 맛으로 승화되는 것입니다.</p>
+        </div>
+    </div>
+    <div class="footer">
+    	<ul class="copy">
+        	<li><a href="#">이용약관</a></li>
+            <li><a class="bold" href="#">개인정보 취급방침</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">웹마스터</a></li>
+        </ul>
+        <p>(431-070) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)<br>
+<span>COPYRIGHT (C) 2005 by OTTOGI Corp.<br>
+ALL rights reserved.</span></p>
+    </div>
+</div>
+</body>
+</html>

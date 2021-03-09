@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+body,input,button{font:15px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+div:focus{outline:none;}
+a{text-decoration:none;}
+html,body{height:100%;}
+
+
+/*모바일메뉴*/
+.m_box{position:fixed; left:-300px; top:0; background:#f9f9f9; height:100%; width:250px; z-index:20;}
+.m_box .close_btn{position:absolute; right:-40px; top:10px; }
+.m_box .close_btn img{width:35px;}
+
+
+.m_box .m_header{height:36px; background:#FFF; border-bottom:1px solid #dddddd; padding:14px 0 0 8px;}
+.m_box .m_header .login{background:#99cf17; border-radius:3px; color:#FFF; text-align:center; font-size:14px; display:inline-block; padding:4px 10px;}
+.m_box .m_header .join{background:#b0b0b0; border-radius:3px; color:#FFF; text-align:center; font-size:14px; display:inline-block; padding:4px 10px;}
+
+.m_box .m_header .icon{float:right; margin-right:15px;}
+.m_box .m_header img{width:24px; padding:0 2px;}
+
+
+.m_box .m_gnb>li{border-bottom:1px solid #dddddd; line-height:40px; cursor:pointer;}
+.m_box .m_gnb>li>a{color:#333; font-size:15px; font-weight:bold; padding-left:14px; background:url(../img/m_arrow.png) no-repeat 215px center; height:40px; display:block;}
+.m_box .m_gnb>li>a:hover{background:#99cf17 url(../img/m_arrow_hover.png) no-repeat 215px center; color:#FFF;}
+.m_box .m_gnb>li.on>a{color:#FFF; background:#99cf17 url(../img/m_arrow_hover_on.png) no-repeat 215px center;}
+
+
+/*서브메뉴*/
+.m_box .m_gnb li .sub{display:none;}
+.m_box .m_gnb li .sub li{border-bottom:1px solid #ddd; height:35px; line-height:35px;}
+.m_box .m_gnb li .sub li a{color:#333; font-size:13px; padding-left:24px;}
+
+
+
+
+
+/*커버*/
+.cover{position:fixed; width:100%; height:100%; background:#000; opacity:0.5; z-index:10; display:none;}
+.wrap{height:100%;}
+
+
+/*헤더*/
+.header{width:100%; height:50px; background:#FFF; position:relative;}
+
+.header .menu{float:left; margin-top:10px; margin-left:10px;}
+.header .menu img{width:35px;}
+.header h1{position:absolute; left:50%; top:15px; margin-left:-65px;}
+.header h1 img{width:130px;}
+.header .search{float:right; margin-top:10px; margin-right:10px;}
+.header .search img{width:35px;}
+
+
+/*슬라이더*/
+.slider_wrap{width:100%; position:relative;}
+.slider_wrap .slick-slide img{left:0; top:0; width:100%;}
+
+.slider_wrap .slick-prev{background:none; border:none; text-indent:-9999px; outline:none; position:absolute;}
+.slider_wrap .slick-next{background:none; border:none; text-indent:-9999px; outline:none; position:absolute;}
+
+.slider_wrap .slick-dots{overflow:hidden; position:absolute; bottom:-25px; left:50%; margin-left:-27px;}
+.slider_wrap .slick-dots li{float:left; margin:0 3px;}
+.slider_wrap .slick-dots li button{background:url(../img/dot.png) no-repeat center center; width:11px; height:11px; border:none; text-indent:-9999px; cursor:pointer; outline:none;}
+.slider_wrap .slick-dots li.slick-active button{background:url(../img/dot_on.png) no-repeat center center; outline:none;}
+
+
+
+
+/*신상품*/
+.main .new_product{ border-top:1px solid #e6e3e1; border-bottom:1px solid #e6e3e1;width:100%; overflow:hidden; margin-top:20px; padding-bottom:7px;}
+
+.main .new_product h2{color:#959595; font-size:16px;  text-align:center; padding-top:5px; font-weight:bold;}
+
+/*신상품 슬라이더*/
+.main .new_product .new_slider{position:relative; width:100%; margin:0 auto;}
+.main .new_product .new_slider .slick-list{width:90%; margin:0 auto; height:80px; margin-top:10px;}
+.main .new_product .new_slider .slick-slide {text-align:center; position:relative; height:80px; cursor:pointer; display:block;}
+.main .new_product .new_slider .slick-track{height:80px;}
+.main .new_product .new_slider img{display:inline-block; width:80px;}
+
+
+/*신상품 슬라이더 prev,next*/
+.main .new_product .new_slider .slick-prev{background:url(../../m/img/new_prev.png) no-repeat center center; border:none; text-indent:-9999px; outline:none; position:absolute; left:10px; top:20px; width:16px; height:36px; cursor:pointer;}
+.main .new_product .new_slider .slick-next{background:url(../../m/img/new_next.png) no-repeat center center; border:none; text-indent:-9999px; outline:none; position:absolute; right:10px; top:20px; width:16px; height:36px; cursor:pointer;}
+
+
+/*풀무원샵, 웹진*/
+.main .box{padding:0 5px; margin-top:10px; overflow:hidden; margin-bottom:5px;}
+.main .box ul li{float:left; width:49%; }
+.main .box ul li:first-child{margin-right:2%;}
+.main .box ul li a img{width:100%;}
+
+
+/*공지사항,레시피*/
+.main .notice_wrap{padding:5px;}
+.main .notice{border:1px solid #ddd; position:relative; padding:2px;}
+.main .notice h2{font-size:18px; color:#99cf17; margin-left:2%; margin-top:2px; font-weight:bold;}
+.main .notice .line{background:url(../img/line.png); margin:0 auto; margin-top:3px; width:95%; height:1px;}
+.main .notice .more{position:absolute; right:3%; top:7px; text-align:right;}
+.main .notice .more img{width:30%; cursor:pointer;}
+/*공지사항내용*/
+.main .notice>.tit{margin-left:2%; margin-top:10px;}
+.main .notice>.tit>li{margin-bottom:5px;}
+.main .notice>.tit>li>a{color:#4d4d4d; font-size:12px; letter-spacing:-0.5px;}
+/*레시피 내용*/
+.main .notice .recipe{overflow:hidden; margin-left:2%; margin-top:10px;}
+.main .notice .recipe>li{overflow:hidden; margin-bottom:10px;}
+.main .notice .recipe>li>a>img{float:left; width:64px;}
+.main .notice .recipe>li>a .tit{float:left; margin-top:13px; margin-left:10px; letter-spacing:-0.5px;}
+.main .notice .recipe>li>a .tit h3{font-size:13px; color:#424242; font-weight:600; margin-bottom:5px;}
+.main .notice .recipe>li>a .tit p{font-size:12px; color:#909090;}
+
+
+/*영상*/
+.main .movie{width:100%; margin-top:5px;}
+.main .movie img{width:100%;}
+
+
+/*푸터-메뉴*/
+.footer{border-top:1px solid #e6e3e1; border-bottom:1px solid #e6e3e1;width:100%; margin-top:10px; position:relative; height:30px; line-height:30px;}
+.footer ul{position:absolute; left:50%;  margin-left:-130px; height:100%;}
+.footer ul li{float:left; text-align:center; padding:0 6px; background:url(../img/bar.png) no-repeat left 11px;}
+.footer ul li:first-child{background:none;}
+.footer ul li a{color:#4d4d4d; font-size:12px;}
+
+
+
+/*푸터-주소*/
+.footer2{background:#f7f7f7; height:50px; text-align:center; padding-top:10px;}
+.footer2 p{color:#4d4d4d; font-size:11px; line-height:20px;}
+.footer2 p span{color:#909090;}
+
+
+
+

@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ALPENSIA</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*주메뉴*/
+	//아코디언메뉴 - 클릭했을때 펼쳐지고 다시 클릭했을때는 닫아지게
+	//그리고 다른 메뉴를 클릭했을때도 닫아지게
+	$('.gnb li').click(function(){
+		$('.gnb li').not(this).find('.sub').slideUp(200).removeClass('on');
+		$('.gnb li').not(this).find('a').removeClass('on');
+		//console.log($(this).find('.sub').hasClass('on'));
+		//hasClass - 변수를 판단하기 어려울때 가상으로 on을 걸었다 뺐다 하면서
+		//on이 있을때와 없을때를 판단하는 근거로 활용
+		if($(this).find('.sub').hasClass('on')){
+			$(this).find('.sub').removeClass('on').slideUp(200);
+			$(this).find('a').removeClass('on');
+		} else {
+			$(this).find('.sub').addClass('on').slideDown(200);
+			$(this).find('a').addClass('on');
+		}
+	});
+	$('.gnb>li>a').click(function(e){
+		e.preventDefault();
+	});
+	
+	
+	
+	
+	/*search버튼*/
+	$('.search .input_wrap').click(function(e){
+		e.preventDefault();
+		$(this).find('label').hide();
+	});
+	
+	$('.search .input_wrap').focusout(function(e){
+		e.preventDefault();
+		if($(this).find('input').val()==''){
+			$(this).find('label').show();
+		}
+	});
+	
+	$('.header').slimScroll({
+		width:'200px',
+        height: '100%'
+    });
+	//헤더 제이쿼리
+		
+	
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<h1><a href="index.html"><img src="img/logo.png" alt="알펜시아"></a></h1>
+    <ul class="gnb">
+    	<li>
+        	<a href="#">온라인예약</a>
+            <ul class="sub">
+            	<li><a href="reservation.html">객실예약</a></li>
+                <li><a href="#">단체예약</a></li>
+                <li><a href="#">골프예약</a></li>
+                <li><a href="#">객실추첨예약</a></li>
+                <li><a href="#">알펜시아시즌권구매</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">이벤트&amp;할인</a>
+            <ul class="sub">
+            	<li><a href="event.html">패키지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">할인</a></li>
+                <li><a href="#">사이버쿠폰할인</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">숙박&amp;컨벤션</a>
+            <ul class="sub">
+            	<li><a href="convention.html">알펜시아 호텔</a></li>
+                <li><a href="#">홀리데이 인&amp;스위트</a></li>
+                <li><a href="#">컨벤션센터</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">레져&amp;편의</a>
+            <ul class="sub">
+            	<li><a href="ski.html">스키 보드</a></li>
+                <li><a href="#">트룬C.C회원제</a></li>
+                <li><a href="#">700골프클럽대중제</a></li>
+                <li><a href="#">오션700</a></li>
+                <li><a href="#">알파인코스터</a></li>
+                <li><a href="#">스포츠파크</a></li>
+                <li><a href="#">스키점프대(전망대)</a></li>
+                <li><a href="#">콘서트홀</a></li>
+                <li><a href="#">생태학습원</a></li>
+                <li><a href="#">뮤직텐트</a></li>
+                <li><a href="#">리테일빌리지</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">리조트소개</a>
+            <ul class="sub">
+            	<li><a href="#">현장소식</a></li>
+                <li><a href="#">홍보관</a></li>
+                <li><a href="#">사이버투어</a></li>
+                <li><a href="#">날씨정보</a></li>
+                <li><a href="#">주변관광안내</a></li>
+                <li><a href="#">종합이용요금</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">대중교통</a></li>
+                <li><a href="#">전화번호</a></li>
+                <li><a href="#">채용정보</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">고객센터</a>
+            <ul class="sub">
+            	<li><a href="notice_list.html">공지사항</a></li>
+                <li><a href="#">분양회원서비스</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">고객의소리</a></li>
+                <li><a href="#">분실물센터</a></li>
+                <li><a href="#">사이트운영정책</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sns_btn">
+    	<li><a href="#"><img src="img/twitter_icon.png" alt="트위터"></a></li>
+        <li><a href="#"><img src="img/facebook_icon.png" alt="페이스북"></a></li>
+        <li><a href="#"><img src="img/blog_icon.png" alt="블로그"></a></li>
+        <li><a href="#"><img src="img/magazine_icon.png" alt="매거진"></a></li>        
+    </ul>
+    <div class="search">
+    	<form action="" method="">
+            <!--form 요소를 묶어주는 그룹태그-->
+            <fieldset>
+            <legend>게시판검색</legend>
+            <div class="input_wrap">
+                <label for="box">Search</label>
+                <input type="text" id="box">
+            </div>
+            <button type="submit">검색버튼</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="top_menu">
+    	<ul class="lnb">
+        	<li><a href="login.html">로그인</a></li>
+            <li><a href="join.html">회원가입</a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/korea.png" alt="한국어"></a></li>
+            <li><a href="#"><img src="img/usa.png" alt="영어"></a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/japan.png" alt="일본어"></a></li>
+            <li><a href="#"><img src="img/china.png" alt="중국어"></a></li>
+        </ul>
+    </div>
+    <div class="footer_wrap">
+    	<ul>
+        	<li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="footer">
+        	<p>강원도 평창군 대관령면<br>솔봉로 325</p>
+            <p>Tel. 033-339-0000</p>
+            <address class="address">
+            Copyright(C)<br>Gangwondo Development<br>Corporation.<br>All Rights Reserved.
+            </address>
+        </div>
+    </div>
+</div>
+<div class="main login">
+	<form id="frm">
+    	<fieldset>
+        	<legend>로그인</legend>
+			<div class="section">
+                <div class="head">
+                    <h1>로그인</h1>
+                    <ul>
+                        <li><a href="index.html"><img src="img/home_btn.png" alt="홈버튼"></a></li>
+                        <li class="lst"><a href="login.html">로그인</a></li>
+                    </ul>
+                </div>
+                <div class="tit">
+                    <h3>알펜시아 회원이라면 로그인 서비스를 이용해보세요.</h3>
+                    <p>로그인을 하시면 모든 서비스를 편리하게 이용할 수 있습니다.</p>
+                </div>
+            </div>        	
+            <div class="login_box">
+            	<div class="box1">
+                	<table>
+                    	<tr>
+                        	<th>아이디</th>
+                            <td><input type="text" id="id"></td>
+                        </tr>
+                        <tr>
+                        	<th>비밀번호</th>
+                            <td><input type="password" id="psw"></td>
+                        </tr>
+                    </table>
+                    <button type="button">로그인</button>
+                    <div class="box2">
+                        <p>영문입력의 경우 대/소문자를 구분하여 입력해 주십시오.</p>
+                        <div class="chk">
+                        	<input type="checkbox" class="chk1"><label>아이디 저장</label>
+                        </div>
+                        <a href="join.html">회원가입</a>
+                        <a href="#">아이디/비밀번호 찾기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tit2">
+            	<h3>알펜시아 리조트 로그인 방법</h3>
+                <h4>1. 콘도 회원인 경우</h4>
+                <p>ㆍ 웹 서비스를 처음 이용하시는 회원님은 별도의 온라인 회원 가입 없이 콘도 회원번호 확인 후<br>　 비밀번호를 신규로 설정하시면 즉시 사용 가능합니다.</p>
+                <p>ㆍ 이후 로그인 하실 경우 아이디 : 회원번호, 비밀번호 : 신규 비밀번호로 입력하여 사용하시면 됩니다.</p>
+                <h4>2. 온라인 회원인 경우</h4>
+                <p>ㆍ 온라인 회원으로 회원가입 시 입력하셨던 아이디/비밀번호를 입력하세요.</p>
+                <div class="btn">
+                	<a href="index.html">메인화면</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+
+

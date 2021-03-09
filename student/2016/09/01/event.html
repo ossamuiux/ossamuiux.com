@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ALPENSIA</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*주메뉴*/
+	//아코디언메뉴 - 클릭했을때 펼쳐지고 다시 클릭했을때는 닫아지게
+	//그리고 다른 메뉴를 클릭했을때도 닫아지게
+	$('.gnb li').click(function(){
+		$('.gnb li').not(this).find('.sub').slideUp(200).removeClass('on');
+		$('.gnb li').not(this).find('a').removeClass('on');
+		//console.log($(this).find('.sub').hasClass('on'));
+		//hasClass - 변수를 판단하기 어려울때 가상으로 on을 걸었다 뺐다 하면서
+		//on이 있을때와 없을때를 판단하는 근거로 활용
+		if($(this).find('.sub').hasClass('on')){
+			$(this).find('.sub').removeClass('on').slideUp(200);
+			$(this).find('a').removeClass('on');
+		} else {
+			$(this).find('.sub').addClass('on').slideDown(200);
+			$(this).find('a').addClass('on');
+		}
+	});
+	$('.gnb>li>a').click(function(e){
+		e.preventDefault();
+	});
+	
+	
+	
+	
+	/*search버튼*/
+	$('.search .input_wrap').click(function(e){
+		e.preventDefault();
+		$(this).find('label').hide();
+	});
+	
+	$('.search .input_wrap').focusout(function(e){
+		e.preventDefault();
+		if($(this).find('input').val()==''){
+			$(this).find('label').show();
+		}
+	});
+	
+	$('.header').slimScroll({
+		width:'200px',
+        height: '100%'
+    });
+	//헤더 제이쿼리
+	
+	//페이지 버튼
+	$('.page_btn ul li').click(function(e){
+		e.preventDefault();
+		$('.page_btn li a').removeClass('on');
+		$(this).find('a').addClass('on');
+	});
+		
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<h1><a href="index.html"><img src="img/logo.png" alt="알펜시아"></a></h1>
+    <ul class="gnb">
+    	<li>
+        	<a href="#">온라인예약</a>
+            <ul class="sub">
+            	<li><a href="reservation.html">객실예약</a></li>
+                <li><a href="#">단체예약</a></li>
+                <li><a href="#">골프예약</a></li>
+                <li><a href="#">객실추첨예약</a></li>
+                <li><a href="#">알펜시아시즌권구매</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">이벤트&amp;할인</a>
+            <ul class="sub">
+            	<li><a href="event.html">패키지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">할인</a></li>
+                <li><a href="#">사이버쿠폰할인</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">숙박&amp;컨벤션</a>
+            <ul class="sub">
+            	<li><a href="convention.html">알펜시아 호텔</a></li>
+                <li><a href="#">홀리데이 인&amp;스위트</a></li>
+                <li><a href="#">컨벤션센터</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">레져&amp;편의</a>
+            <ul class="sub">
+            	<li><a href="ski.html">스키 보드</a></li>
+                <li><a href="#">트룬C.C회원제</a></li>
+                <li><a href="#">700골프클럽대중제</a></li>
+                <li><a href="#">오션700</a></li>
+                <li><a href="#">알파인코스터</a></li>
+                <li><a href="#">스포츠파크</a></li>
+                <li><a href="#">스키점프대(전망대)</a></li>
+                <li><a href="#">콘서트홀</a></li>
+                <li><a href="#">생태학습원</a></li>
+                <li><a href="#">뮤직텐트</a></li>
+                <li><a href="#">리테일빌리지</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">리조트소개</a>
+            <ul class="sub">
+            	<li><a href="#">현장소식</a></li>
+                <li><a href="#">홍보관</a></li>
+                <li><a href="#">사이버투어</a></li>
+                <li><a href="#">날씨정보</a></li>
+                <li><a href="#">주변관광안내</a></li>
+                <li><a href="#">종합이용요금</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">대중교통</a></li>
+                <li><a href="#">전화번호</a></li>
+                <li><a href="#">채용정보</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">고객센터</a>
+            <ul class="sub">
+            	<li><a href="notice_list.html">공지사항</a></li>
+                <li><a href="#">분양회원서비스</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">고객의소리</a></li>
+                <li><a href="#">분실물센터</a></li>
+                <li><a href="#">사이트운영정책</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sns_btn">
+    	<li><a href="#"><img src="img/twitter_icon.png" alt="트위터"></a></li>
+        <li><a href="#"><img src="img/facebook_icon.png" alt="페이스북"></a></li>
+        <li><a href="#"><img src="img/blog_icon.png" alt="블로그"></a></li>
+        <li><a href="#"><img src="img/magazine_icon.png" alt="매거진"></a></li>        
+    </ul>
+    <div class="search">
+    	<form action="" method="">
+            <!--form 요소를 묶어주는 그룹태그-->
+            <fieldset>
+            <legend>게시판검색</legend>
+            <div class="input_wrap">
+                <label for="box">Search</label>
+                <input type="text" id="box">
+            </div>
+            <button type="submit">검색버튼</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="top_menu">
+    	<ul class="lnb">
+        	<li><a href="login.html">로그인</a></li>
+            <li><a href="join.html">회원가입</a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/korea.png" alt="한국어"></a></li>
+            <li><a href="#"><img src="img/usa.png" alt="영어"></a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/japan.png" alt="일본어"></a></li>
+            <li><a href="#"><img src="img/china.png" alt="중국어"></a></li>
+        </ul>
+    </div>
+    <div class="footer_wrap">
+    	<ul>
+        	<li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="footer">
+        	<p>강원도 평창군 대관령면<br>솔봉로 325</p>
+            <p>Tel. 033-339-0000</p>
+            <address class="address">
+            Copyright(C)<br>Gangwondo Development<br>Corporation.<br>All Rights Reserved.
+            </address>
+        </div>
+    </div>
+</div>
+<div class="main event">
+	<div class="section">
+    	<div class="head">
+            <h1>패키지</h1>
+            <ul>
+                <li><a href="index.html"><img src="img/home_btn.png" alt="홈버튼"></a></li>
+                <li><a href="event.html">이벤트&amp;할인</a></li>
+                <li class="lst"><a href="event.html">패키지</a></li>
+            </ul>
+        </div>
+        <div class="tit">
+    		<h3>다양한 이벤트&패키지 소식을 제공하는 평창알펜시아리조트에서 행복한 여가를 즐기세요. </h3>
+    	</div>
+    </div>    
+    <div class="package">    	
+        <div class="content">
+        	<div class="box">
+            	<a href="#">
+                    <img src="img/package_img01.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>겨울 패키지</h3>
+                        <p class="txt">1박, 2인조식, 리프트권2매, 웰컴드링크2잔</p>
+                        <p class="date">2015.11.28 ~ 2016.03.20</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box box1">
+            	<a href="#">
+                    <img src="img/package_img02.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>키즈체험 패키지</h3>
+                        <p class="txt">숙박, 치즈만들기, 조식, 장난감제공</p>
+                        <p class="date">2015.01.01 ~ 2015.12.31</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content content1">
+        	<div class="box">
+            	<a href="#">
+                    <img src="img/package_img03.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>스파 패키지</h3>
+                        <p class="txt">스탠다드룸1박, 조식, 스파/사우나 무료</p>
+                        <p class="date">2015.01.01 ~ 2015.12.31</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box box1">
+            	<a href="#">
+                    <img src="img/package_img04.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>스위트 앤 스위트 패키지</h3>
+                        <p class="txt">스위트1박, 1박무료, 조식2인 1회제공</p>
+                        <p class="date">2015.11.01 ~ 2015.12.17</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content content1">
+        	<div class="box">
+            	<a href="#">
+                    <img src="img/package_img05.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>가을 관광주간 패키지</h3>
+                        <p class="txt">객실1박, 조식2인, 스키점프대이용 2인</p>
+                        <p class="date">2015.10.19 ~ 2015.11.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box box1">
+            	<a href="#">
+                    <img src="img/package_img06.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>골프 패키지</h3>
+                        <p class="txt">숙박, 조식, 골프라운딩</p>
+                        <p class="date">2015.04.04 ~ 2015.10.30</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content content1">
+        	<div class="box">
+            	<a href="#">
+                    <img src="img/package_img07.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>쿨 브리즈 패키지</h3>
+                        <p class="txt">숙박, 조식2인, 스키점프대이용권2매 등</p>
+                        <p class="date">2015.07.17 ~ 2015.09.30</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box box1">
+            	<a href="#">
+                    <img src="img/package_img08.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>여름 패키지</h3>
+                        <p class="txt">숙박, 조식, 오션700 입장권 2매 등</p>
+                        <p class="date">2015.07.17 ~ 2015.09.06</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content content1">
+        	<div class="box">
+            	<a href="#">
+                    <img src="img/package_img09.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>스키점프대 패키지</h3>
+                        <p class="txt">숙박, 조식2인. 스키점프대 체험 2매</p>
+                        <p class="date">2015.05.11 ~ 2015.07.16</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box box1">
+            	<a href="#">
+                    <img src="img/package_img10.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>레저 패키지</h3>
+                        <p class="txt">숙박, 조식2인, 오션700 2매 등</p>
+                        <p class="date">2015.05.01 ~ 2015.07.16</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content content1">
+        	<div class="box">
+            	<a href="#">
+                    <img src="img/package_img11.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>스프링 피크닉 패키지</h3>
+                        <p class="txt">숙박, 조식2인, 피크닉 도시락 2인 등</p>
+                        <p class="date">2015.03.16 ~ 2015.06.30</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box box1">
+            	<a href="#">
+                    <img src="img/package_img12.jpg" alt="">
+                    <div class="tit_box">
+                        <h3>관광주간 패키지</h3>
+                        <p class="txt">숙박, 조식2인, F&B 바우처 1매</p>
+                        <p class="date">2015.05.01 ~ 2015.05.14</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="page_btn">
+        	<ul>
+            	<li><a href="#" class="on">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+

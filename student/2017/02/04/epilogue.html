@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1460">
+<title>다정다정한정식당:epilogue</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function() {
+  	$('.fashion .fashion_img').mouseenter(function() {
+        var num = $(this).index();
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.fashion_hover_wrap .fashion_hover').eq(num).show().siblings().hide();
+    });
+	
+	$('.fashion_hover_wrap .fashion_hover').mouseleave(function() {
+        $(this).hide();
+    });
+	//디자인
+	
+	$('.school .school_img').mouseenter(function() {
+        var num = $(this).index();
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.school_hover_wrap .school_hover').eq(num).show().siblings().hide();
+    });
+	
+	$('.school_hover_wrap .school_hover').mouseleave(function() {
+        $(this).hide();
+    });
+	//졸업작품
+
+	$('.photoshop_slider').slick({
+		autoplay:true,
+		pauseOnFocus:false,
+		pauseOnHover:false,
+	  	slidesToShow: 4,
+  		slidesToScroll:1
+	});
+	$('.photoshop_slider .slick-slide').mouseenter(function() {
+        $(this).siblings().stop().fadeTo(200,0.5);
+    }).mouseleave(function() {
+        $('.photoshop_slider .slick-slide').stop().fadeTo(200,1);
+    });
+	//포토샵슬라이드
+
+	$('.photoshop_slider .slick-slide').click(function(e) {
+		e.preventDefault();
+		
+		var currentSlide=0;
+		var idx=$(this).index();
+		
+		if(idx >=4 && idx <=9){
+			currentSlide = idx-4;
+		} else if(idx <=3){
+			currentSlide = idx+4;
+		} else if(idx >=10){
+			currentSlide =idx-10;
+		};
+		
+		$(this).addClass('on').siblings().removeClass('on');
+		
+		$('.popup div').eq(currentSlide).show().siblings().hide();
+
+	});
+	$('.popup .popup_close,.popup').click(function() {
+		$('.popup div').hide();
+    });
+	
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+	<div class="header_inner">
+    	<h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+        <h2><a href="#"></a></h2>
+        <div class="modal_popup">
+            <button type="button" class="btn_close">모달팝업닫기</button>
+            <div class="menu">
+            	<ul class="menu_inner">
+                	<li><a href="index.html"><img src="images/menu1.png" alt=""><span></span></a></li>
+                    <li><a href="about.html"><img src="images/menu2.png" alt=""><span></span></a></li>
+                    <li><a href="portfolio.html"><img src="images/menu3.png" alt=""><span></span></a></li>
+                    <li><a href="epilogue.html"><img src="images/menu4.png" alt=""><span></span></a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+</div>
+<div id="main" class="epilogue">
+	<div class="btn_top">
+    	<a href="#"><img src="images/btn_top.png" alt=""></a>
+        <!--탑버튼-->
+    </div>
+	<div class="main_visual sub_visual">
+    	<div class="sub_beach">
+        	<div class="epilogue_main_bg">
+                <div class="cloud_wrap">
+                    <div class="cloud1"><img src="images/cloud1.png" alt=""></div>
+                    <div class="cloud2"><img src="images/cloud2.png" alt=""></div>
+                    <div class="cloud3"><img src="images/cloud3.png" alt=""></div>
+                    <div class="cloud4"><img src="images/cloud4.png" alt=""></div>
+                    <div class="cloud5"><img src="images/cloud5.png" alt=""></div>
+                    <div class="cloud6"><img src="images/cloud6.png" alt=""></div>
+                </div>
+                <h1><img src="images/epilogue_tit.png" alt=""></h1>
+                <div class="section1">
+                    <h2><img src="images/fashion_tit.png" alt=""></h2>
+                    <ul class="fashion">
+                    	<li class="fashion_img fashion_img1"><img src="images/fashion1.png" alt=""></li>
+                        <li class="fashion_img fashion_img2"><img src="images/fashion2.png" alt=""></li>
+                        <li class="fashion_img fashion_img3"><img src="images/fashion3.png" alt=""></li>
+                        <li class="fashion_img fashion_img4"><img src="images/fashion4.png" alt=""></li>
+                        <li class="fashion_img fashion_img5"><img src="images/fashion5.png" alt=""></li>
+                        <li class="fashion_img fashion_img6"><img src="images/fashion6.png" alt=""></li>
+                        <li class="fashion_img fashion_img7"><img src="images/fashion7.png" alt=""></li>
+                        <li class="fashion_img fashion_img8"><img src="images/fashion8.png" alt=""></li>
+                    </ul>
+                    <ul class="fashion_hover_wrap">
+                    	<li class="fashion_hover fashion_hover1 on"><img src="images/fashion1_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover2"><img src="images/fashion2_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover3"><img src="images/fashion3_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover4"><img src="images/fashion4_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover5"><img src="images/fashion5_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover6"><img src="images/fashion6_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover7"><img src="images/fashion7_hover.png" alt=""></li>
+                        <li class="fashion_hover fashion_hover8"><img src="images/fashion8_hover.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="section2">
+                	<div class="show_wrap">
+                        <h2><img src="images/school_tit1.png" alt=""></h2>
+                        <div class="show">
+                            <img src="images/school_box1.png" alt="">
+                            <div class="show_txt">
+                                <h3>틈틈히 친구들과 전시회가기</h3>
+                                <p>학교 다닐 때부터 친구들과 시간 날 때마다 항상 전시회를 보러 다녔고, 일을 하면서도 꾸준히 전시회를 다녔습니다. <br>다양한 작품들을 보며 과제할 때 도움도 받고 안목도 키울 수 있었습니다. 트렌드에 관심을 가지는 것은 디자이너에게 중요한 부분인 것 같습니다.<br>이것은 웹 디자인할 때에도 많은 도움이 될 것 같습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="school_wrap">
+                    	<h4><img src="images/school_tit2.png" alt=""></h4>
+                        <p>가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</p>
+                        <ul class="school">
+                        	<li class="school_img school_img1 on"><img src="images/school_img1.png" alt=""></li>
+                            <li class="school_img school_img2"><img src="images/school_img2.png" alt=""></li>
+                            <li class="school_img school_img3"><img src="images/school_img3.png" alt=""></li>
+                            <li class="school_img school_img4"><img src="images/school_img4.png" alt=""></li>
+                            <li class="school_img school_img5"><img src="images/school_img5.png" alt=""></li>
+                            <li class="school_img school_img6"><img src="images/school_img6.png" alt=""></li>
+                            <li class="school_img school_img7"><img src="images/school_img7.png" alt=""></li>
+                        </ul>
+                        <ul class="school_hover_wrap">
+                        	<li class="school_hover school_hover1 on"><img src="images/school_img_hover1.png" alt=""></li>
+                            <li class="school_hover school_hover2"><img src="images/school_img_hover2.png" alt=""></li>
+                            <li class="school_hover school_hover3"><img src="images/school_img_hover3.png" alt=""></li>
+                            <li class="school_hover school_hover4"><img src="images/school_img_hover4.png" alt=""></li>
+                            <li class="school_hover school_hover5"><img src="images/school_img_hover5.png" alt=""></li>
+                            <li class="school_hover school_hover6"><img src="images/school_img_hover6.png" alt=""></li>
+                            <li class="school_hover school_hover7"><img src="images/school_img_hover7.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section3">
+                	<div class="work_wrap">
+                    	<h2><img src="images/work_tit1.png" alt=""></h2>
+                    	<div class="work">
+                            <img src="images/work_box11.png" alt="">
+                            <div class="work_txt">
+                                <h3>알바에서 점장으로</h3>
+                                <p>학교 다닐 때부터 친구들과 시간 날 때마다 항상 전시회를 보러 다녔고, 일을 하면서도 꾸준히 전시회를 다녔습니다. <br>다양한 작품들을 보며 과제할 때 도움도 받고 안목도 키울 수 있었습니다. 트렌드에 관심을 가지는 것은 디자이너에게 중요한 부분인 것 같습니다.<br>이것은 웹 디자인할 때에도 많은 도움이 될 것 같습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photoshop_wrap">
+                    	<h4><img src="images/work_tit2.png" alt=""></h4>
+                    	<p>가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</p>
+                        <div class="photoshop">
+                            <ul class="photoshop_slider">
+                                <li class="photoshop_img photoshop_img1 on"></li>
+                                <li class="photoshop_img photoshop_img2"></li>
+                                <li class="photoshop_img photoshop_img3"></li>
+                                <li class="photoshop_img photoshop_img4"></li>
+                                <li class="photoshop_img photoshop_img5"></li>
+                                <li class="photoshop_img photoshop_img6"></li>   
+                            </ul>
+                        </div>
+                        <div class="popup_wrap">
+                            <div class="popup">
+                            	<div class="popup_img popup_img1"><img src="images/work_img1_1.png" alt=""><button type="button" class="popup_close">모달팝업닫기</button></div>
+                                <div class="popup_img popup_img2"><img src="images/work_img2_2.png" alt=""><button type="button" class="popup_close">모달팝업닫기</button></div>
+                                <div class="popup_img popup_img3"><img src="images/work_img3_3.png" alt=""><button type="button" class="popup_close">모달팝업닫기</button></div>
+                                <div class="popup_img popup_img4"><img src="images/work_img4_4.png" alt=""><button type="button" class="popup_close">모달팝업닫기</button></div>
+                                <div class="popup_img popup_img5"><img src="images/work_img5_5.png" alt=""><button type="button" class="popup_close">모달팝업닫기</button></div>
+                                <div class="popup_img popup_img6"><img src="images/work_img6_6.png" alt=""><button type="button" class="popup_close">모달팝업닫기</button></div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="section4">
+                    <h2><img src="images/ican_tit.png" alt=""></h2>
+                    <p>가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하!</p>
+                    <div class="ican_img"><img src="images/ican_img1.png" alt=""></div>
+                </div>
+                <div class="section5">
+                    <div class="dog"></div>
+                </div>
+            </div>
+        </div>
+        <ul class="waves about_waves">
+        	<li class="layer">
+                <div class="wave wave-1"></div>
+			</li>
+            <li class="layer">
+                <div class="wave wave-2"></div>
+			</li>
+            <li class="layer">
+                <div class="wave wave-3"></div>
+			</li>
+    	</ul>
+	</div>
+</div>
+<div id="footer" class="sub">
+	<img src="images/footer.png" alt="">
+</div>
+</body>
+</html>
+
+

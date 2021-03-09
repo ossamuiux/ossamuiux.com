@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body,input,select,button {font:14px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+a {color:#000;}
+img {vertical-align:top;}
+* {margin:0; padding:0;}
+ul,ol{list-style:none;}
+
+html,body {height:100%;}
+
+
+.header_wrap { position:relative; left:0; top:0;}
+.m_gnb {position: fixed; left:-0; top:-450px; width:100%; height:230px; z-index:9999; background:url(../img/bgbg_02.gif) repeat; background-size:100%; margin-top:40px;}
+.m_gnb li { padding:14px 0; width:100%; text-indent:15px;}
+.m_gnb li a { color:#fff; font-size:13px;}
+.cover {width:100%; height:100%; position:fixed; left:0; top:0; background:none; z-index:1000; display:none;} 
+
+.header { position:fixed; left:0; top:0; width:100%; height:40px;  background:url(../img/bg_01.jpg) repeat center top; z-index:9999;}
+.header h1 {text-align:center; padding-top:12px;} 
+.header h1 img{width:158px;}
+.header .m_btn { position:fixed; left:15px; top:10px;}
+
+.main .slider {margin-top:40px;}
+.main .slider img {width:100%;}
+
+
+.main .tab {overflow:hidden; padding:30px 0;}
+.main .tab li {float:left; width:25%}
+.main .tab li img {width:68px;}
+.main .tab li a {display:block; font-size:13px; text-align:center; line-height:40px; color:#000;}
+.main .tab li span {display:block;}
+
+
+ 
+.main .banner_wrap {width:100%;}
+.main .banner_wrap .banner img{width:100%;}
+
+.main .notice_top {height:25px;}
+.main .notice {overflow:hidden;padding:30px 15px 30px;} 
+.main .notice h2 {float:left;}
+.main .notice .more {width:55px; float:right; vertical-align:middle;}
+.main .notice  a.more {color:#396;}
+.main .notice .more img {padding:0 0 0 7px; vertical-align:middle;}
+.main .notice span {display:block; background:url(../img/dot_03.png) no-repeat left center; text-indent:10px;}
+
+
+
+.main .box {background:#fff; overflow:hidden; border-top:1px solid #CCC; border-bottom:1px solid #CCC;}
+.main .box li {float:left; width:50%; position:relative;} 
+.main .box li a { display:block; text-align:center; padding:10px 0; color:#666;}
+.main .box li a:hover {color:#093;}
+.main .box li:before {content:""; width:1px; height:14px; background:#999; position:absolute; left:0; top:50%; margin-top:-6px;}
+/*content는 남겨두고 글자는 지워야됨*/
+.main .box li:first-child:before {display:none;} 
+
+
+
+.footer {height:180px; background:#f7f7f7; width:100%;}
+.footer .login {height:30px;}
+.footer .login li{float:left; width:25%; position:relative;  }
+.footer .login li a { display:block; text-align:center; margin:5px 0; color:#666;}
+.footer .login li:before {content:""; width:1px; height:12px; background:#999; position:absolute; left:0; top:50%; margin-top:-6px;}
+.footer .login li:first-child:before {display:none;} 
+.footer .intro { height:30px;}
+.footer .intro li{float:left; width:25%;}
+.footer .intro li a { display:block; text-align:center; margin:5px 0; font-size:13px; color:#999;}
+.footer .txt {height:70px;  text-align:center; margin-top:10px;}
+.footer .txt p {font-size:11px; line-height:13px; display:block; color:#ccc;}

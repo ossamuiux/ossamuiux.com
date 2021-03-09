@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=980">
+<title>오뚜기 : 요리교실</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.gnb').mouseenter(function(){
+		$('.gnb_wrap .sub_wrap').stop().slideDown(200);
+	});
+	
+	$('.gnb_wrap').mouseleave(function(){
+		$('.gnb_wrap .sub_wrap').stop().slideUp(200);
+	});
+	
+	$('.cooking_wrap .main .slide').slick({
+		dots:false,
+		autoplay:true,
+		autoplaySpeed:3000,
+		fade:false,
+		speed:800
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+    	<h1><a href="index.html"><img src="img/main_logo.png" alt="오뚜기"></a></h1>
+        <ul class="login">
+        	<li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="search">
+        	<form action="abc.php" method="post">
+            	<fieldset>
+                	<legend>검색</legend>
+                    <input type="text" value="">
+                    <button type="submit"><img src="img/main_search.png" alt=""></button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="gnb_wrap">
+        <ul class="gnb">
+        	<li><a href="introduce.html">오뚜기소개</a></li>
+            <li><a href="#">제품정보</a></li>
+            <li><a href="#">사이버홍보실</a></li>
+            <li><a href="#">고객서비스</a></li>
+            <li><a class="on" href="cooking_class.html">요리와 생활</a></li>
+            <li><a href="#">채용</a></li>
+            <li><a href="http://www.ottogimall.co.kr/">오뚜기몰</a></li>
+        </ul>
+        <div class="sub_wrap">
+        	<div class="sub">
+                <ul>
+                    <li><a href="introduce.html">회사 소개</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">오뚜기 이념</a></li>
+                    <li><a href="#">중앙 연구소</a></li>
+                    <li><a href="#">해외 법인 소개</a></li>
+                    <li><a href="#">사회 공헌</a></li>
+                    <li><a href="#">환경 경영</a></li>
+                    <li><a href="#">윤리 경영</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">분말/건조 식품</a></li>
+                    <li><a href="retort.html">레토르트 식품</a></li>
+                    <li><a href="#">조미 식품</a></li>
+                    <li><a href="#">냉동 식품</a></li>
+                    <li><a href="#">수입 식품</a></li>
+                    <li><a href="#">농수산물 가공식품</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">뉴스/PR</a></li>
+                    <li><a href="cf_story.html">광고 이야기</a></li>
+                    <li><a href="#">한눈에 보는 오뚜기</a></li>
+                    <li><a href="#">즐거운 오뚜기</a></li>
+                    <li><a href="#">공장 견학</a></li>
+                </ul>
+                 <ul class="sub3">
+                    <li><a href="#">고객 상담실</a></li>
+                    <li><a href="#">고객 참여</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="cooking_class.html">즐거운 요리교실</a></li>
+                    <li><a href="#">영양 이야기</a></li>
+                    <li><a href="#">푸드 마스터</a></li>
+                    <li><a href="#">오뚜기 요리박사</a></li>
+                    <li><a href="#">건강한 카레이야기</a></li>
+                    <li><a href="#">사골곰탕 이야기</a></li>
+                    <li><a href="#">마요네즈 활용하기</a></li>
+                </ul>
+                <ul class="sub5">
+                    <li><a href="#">채용공고</a></li>
+                    <li><a href="#">인사제도</a></li>
+                    <li><a href="#">직무소개</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">입사지원</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main_wrap cooking_wrap">
+    <div class="main">
+        <div class="visual">
+            <h1>즐거운 요리교실</h1>
+            <p>오뚜기는 다양한 요리 강습으로 새로운 식품문화를 전파합니다.</p>
+        </div>
+        <div class="location_wrap">
+            <ul class="location c_location">
+                <li><a href="index.html">Home</a> ></li>
+                <li>요리와 생활 ></li>
+                <li><span>즐거운 요리교실</span></li>
+            </ul>
+        </div>
+        <div class="slide">
+        	<div>
+            	<div class="bg_wrap1">
+                	<div class="txt_wrap">
+                        <h1>오븐에서 구워 더 맛있는</h1>
+                        <h2><img src="img/cooking_visual1_h1.png" alt=""></h2>
+                        <p class="txt">오뚜기 발효 강황카레로 만든 마리네이드소스와<br>
+                        담백한 닭고기가 만나 풍미깊은 치킨으로 재탄생했다!<br>
+                        이번 주말엔 남녀노소 불문하고 깊은 맛과 감칠맛에 반한다는<br>
+                        카레 로스트치킨을 즐겨보자.</p>
+                        <p class="btn"><a href="#"><img src="img/cooking_visual1_txt.png" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+            	<div class="bg_wrap2">
+                	<div class="txt_wrap">
+                        <h1>여름철 입맛을 살리는</h1>
+                        <h2><img src="img/cooking_visual2_h1.png" alt=""></h2>
+                        <p class="txt">각종 비타민이 함유되어있는 고단백질 생선 연어와<br>
+                        오뚜기의 건강하고 맛있는 타바스코소스가 만나<br>
+                        풍성한 샐러드가 되었다.<br>
+                        여러가지 야채들로 영양을 잡고, 레몬과 토마토 등으로는<br>
+                        상큼함까지 더해 맛있는 훈제연어 샐러드를 만들어보자.<br></p>
+                        <p class="btn"><a href="#"><img src="img/cooking_visual2_txt.png" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all_wrap">
+        	<h1>전체 레시피</h1>
+            <a href="#"><img src="img/cooking_plus.png" alt=""></a>
+            <ul class="all">
+            	<li><a href="#"><img src="img/cooking_recipe_1.PNG" alt=""><h2>낙지덮밥</h2></a></li>
+                <li><a href="#"><img src="img/cooking_recipe_2.PNG" alt=""><h2>캘리포니아 롤</h2></a></li>
+                <li><a href="#"><img src="img/cooking_recipe_3.PNG" alt=""><h2>햄버그 스테이크</h2></a></li>
+                <li><a href="#"><img src="img/cooking_recipe_4.PNG" alt=""><h2>참치계란 샌드위치</h2></a></li>
+            </ul>
+        </div>
+        <div class="thema_wrap">
+        	<h1>테마별 레시피</h1>
+            <ul class="thema">
+            	<li class="cook1"><a href="#"><img src="img/cooking_thema_1(h).PNG" alt=""><h2>한식</h2></a></li>
+                <li class="cook2"><a href="#"><img src="img/cooking_thema_2(h).PNG" alt=""><h2>양식</h2></a></li>
+                <li class="cook3"><a href="#"><img src="img/cooking_thema_3(h).PNG" alt=""><h2>중식</h2></a></li>
+                <li class="cook4"><a href="#"><img src="img/cooking_thema_4(h).PNG" alt=""><h2>일식</h2></a></li>
+                <li class="cook5"><a href="#"><img src="img/cooking_thema_5(h).PNG" alt=""><h2>퓨전</h2></a></li>
+                <li class="cook6"><a href="#"><img src="img/cooking_thema_6(h).PNG" alt=""><h2>카레</h2></a></li>
+            </ul>
+            <div class="btn_wrap">
+            	<div class="btn_left">	
+                    <div class="Rsearch">
+                        <h2>레시피 검색</h2>
+                        <p>원하는 재료와 맞춤 테마로<br>
+                        쉽게 찾는 오뚜기 레시피</p>
+                        <div class="Rsearch_btn">
+                            <form action="abc.php" method="post">
+                                <fieldset>
+                                    <legend>검색</legend>
+                                    <input type="text" value="">
+                                    <button type="submit"><img src="img/cooking_search_btn.PNG" alt=""></button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <a class="megazine" href="#"><span>에쎈</span> 잡지 바로가기<img src="img/cooking_eccen_arrow.PNG" alt=""></a>
+                </div>
+                <a class="recipe_qna" href="#"><img src="img/cooking_qna.PNG" alt=""></a>
+            </div>
+        </div>
+        <div class="list_wrap">
+        	<div class="together">
+            	<h2>함께하는 레시피</h2>
+                <a href="#"><img src="img/cooking_plus.png" alt=""></a>
+                <p class="line"></p>
+                <ul class="t_list">
+                	<li class="float1"><a href="#"><img src="img/cooking_together1.png" alt="">
+                    <p><span>[카레 야채 튀김]</span><br>
+                    <br>
+                    바삭바삭한 우리 아이<br>
+                    영양 간식!<br>
+                    <br>
+                    최**님</p></a></li>
+                    <li><a href="#"><img src="img/cooking_together2.png" alt="">
+                    <p><span>[달래 불고기 국수]</span><br>
+                    <br>
+                    달콤하고 짭짤한 불고기<br>
+                    와 달래가 만났어요!<br>
+                    <br>
+                    오**님</p></a></li>
+                    <li class="float2"><a href="#"><img src="img/cooking_together3.png" alt="">
+                    <p><span>[카레 야채 떡볶이]</span><br>
+                    <br>
+                    매콤 향긋, 고운 빛깔의<br>
+                    카레 떡볶이<br>
+                    <br>
+                    허**님</p></a></li>
+                    <li><a href="#"><img src="img/cooking_together4.png" alt="">
+                    <p><span>[피자 주먹밥]</span><br>
+                    <br>
+                    남녀노소 누구나 좋아<br>
+                    하는 피자와 주먹밥<br>
+                    <br>
+                    조**님</p></a></li>
+                </ul>
+            </div>
+            <div class="story">
+            	<h2>음식과 영양 이야기</h2>
+                <a href="#"><img src="img/cooking_plus.png" alt=""></a>
+                <p class="line"></p>
+                <ul class="s_list">
+                	<li><a href="#">더 이상 굶지말자! 컵누들 다이어트</a></li>
+                    <li><a href="#">등푸른 생선의 대표주자 고등어&amp;꽁치</a></li>
+                    <li><a href="#">요리 맛 살리는 3대 중식 소스 굴소스, 두반장, XO소스</a></li>
+                    <li><a href="#">음식을 더욱 신선하고 상큼하게 유자폰즈소스</a></li>
+                    <li><a href="#">깔끔하고 담백한 흰색 국물 라면, 기스면</a></li>
+                    <li><a href="#">요리 고수의 숨겨진 요리 비법 미향</a></li>
+                    <li><a href="#">타바스코소스로 한식에 매콤한 감칠맛을 더하다</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+        <h1><img src="img/footer_logo.png" alt=""></h1>
+        <div class="address">
+            <ul class="text">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><span>개인정보 취급방침</span></a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">WEB MASTER</a></li>
+            </ul>
+            <p>(431-070) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)<br>
+    COPYRIGHT (C) 2005 by OTTOGI Corp. ALL rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

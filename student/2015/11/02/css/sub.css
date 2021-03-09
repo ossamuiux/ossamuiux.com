@@ -1,0 +1,86 @@
+@charset "utf-8";
+body {font:12px '맑은고딕','malgun gothic','돋움',dotum,sans-serif; background:#E9E9E9; color:#404040;}
+a {color:#404040;}
+html,body {height:100%;}
+body {min-width:360px;}
+
+
+/*모바일 gnb*/
+.cover {position:fixed; left:0; top:0; width:100%; height:100%; background:#000; z-index:1000; opacity:0.5; display:none;}
+
+.m_gnb {position:fixed; left:-200px; top:0; width:200px; height:100%; background:#f5f5f5;z-index:9999; border-right:1px solid #CCC;
+overflow:auto;}
+
+.m_gnb .box1 {width:200px; height:55px; border-bottom:1px solid #CCC; padding-top:35px;}
+.m_gnb .box1 a {font-size:18px; letter-spacing:-1px; margin-left:20px; font-weight:bold; padding:7px 5px;}
+
+.m_gnb .box2 {width:200px; height:55px; border-bottom:1px solid #CCC; padding-top:35px;}
+.m_gnb .box2 a {font-size:18px; letter-spacing:-0.5px; margin-left:15px; font-weight:bold; padding:7px 7px;}
+
+.m_gnb .lnb {background:#FFF;}
+.m_gnb .lnb>li {font-size:14px;letter-spacing:-1px; text-indent:10px;}
+.m_gnb .lnb>li>a {display:block; padding:18px 0; background:url(../img/m_gnb_btn.PNG) no-repeat 90% center;}
+.m_gnb .lnb>li .not {background:none;}
+
+.m_gnb .lnb .sub {background:#f5f5f5; display:none;}
+.m_gnb .lnb .sub li>a {color:#404040; display:block; padding:10px 0;}
+
+
+/*헤더*/
+
+.header {width:100%; height:60px; background:#FFF; border-bottom:5px solid #de1d25;}
+
+.header .m_btn {position:absolute; left:10px; top:12px; padding:10px 10px;}
+.header .m_btn img {width:25px;}
+.header h1 {text-align:center; padding-top:10px;}
+.header h1 img {width:40px;}
+.header .search {position:absolute; right:5px; top:8px; padding:10px 10px;}
+.header .search img {width:23px;}
+
+
+
+/*메인*/
+.main .title {width:100%; height:100px; background:#FFF; border-bottom:1px solid #CCC;}
+.main .title h1 {font-size:24px; text-align:center; letter-spacing:-1px; padding-top:20px;}
+.main .title p {font-size:14px; text-align:center; letter-spacing:-1px; margin-top:5px;}
+
+.main .box1 {text-align:center; margin:0 auto; width:90%; padding-top:40px;}
+.main .box1 img {width:80%;}
+.main .box1 h2 {margin:15px auto 0; width:90%;}
+.main .box1 p {margin-top:10px; letter-spacing:-0.5px;}
+
+.main .box2 {text-align:center; margin:0 auto; width:90%; padding-top:40px;}
+.main .box2 img {width:80%;}
+.main .box2 h2 {margin:15px auto 0; width:90%;}
+.main .box2 p {margin-top:10px; letter-spacing:-0.5px;}
+
+.main .box3 {text-align:center; margin:0 auto; width:90%; padding-top:40px;}
+.main .box3 img {width:80%;}
+.main .box3 h2 {width:70%; margin:15px auto 0;}
+.main .box3 p {margin-top:10px; letter-spacing:-0.5px;}
+
+.main .box4 {text-align:center; margin:0 auto; width:90%; padding-top:40px;}
+.main .box4 img {width:70%;}
+.main .box4 h2 {width:78%; margin:15px auto 0;}
+.main .box4 p {margin-top:10px; letter-spacing:-0.5px;}
+
+
+
+
+
+
+/*푸터*/
+
+.footer {margin-top:60px; width:100%; height:100px; background:#CCC; padding-top:10px;}
+
+.footer .copy {width:85%; margin:0 auto; overflow:hidden; text-align:center;}
+.footer .copy li {display:inline-block;}
+.footer .copy li a { display:block; letter-spacing:-1px; font-size:13px; padding:0 3px 0 5px;
+background:url(../img/bg_bar.PNG) no-repeat left center; text-align:center;}
+.footer .copy li:first-child a {background:none;}
+.footer .copy li .bold {font-weight:bold;}
+
+
+
+.footer p {margin-top:10px; text-align:center; letter-spacing:-0.5px; font-size:14px;}
+.footer p span {font-weight:bold; font-size:16px;}

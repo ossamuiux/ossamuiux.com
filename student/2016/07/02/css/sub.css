@@ -1,0 +1,274 @@
+@charset "utf-8";
+body,input,button,select,textarea {font-family: 'TitilliumRegular',Apple-Gothic,'애플고딕','Droid Sans','맑은고딕','malgun gothic','돋움',dotum,sans-serif; font-size:12px;}
+/*안드로이드는 최신기종은 추가된폰트 roboto로 나오고 애플은 추가된 최신폰트가 있을 경우 최신폰트로 표시하고 아니면 기기 기본서체로 표시*/
+html,body {height:100%; background:#34363a;}
+img {border:none; vertical-align:top;}
+
+
+/*********************************빠른예매*********************************/
+/*****헤더(빠른예매)*****/
+.header.reserve {height:60px; width:100%; position:relative; text-align:center; background:url(../img/black09.png) repeat center top;}
+.header.reserve .prev_btn {display:inline-block; position:absolute; left:0; top:0;}
+.header.reserve .prev_btn img {height:60px;}
+
+.header.reserve h1 {display:inline-block; font-size:16px; color:#FFF; line-height:60px; }
+
+.header.reserve .refresh_btn {display:inline-block; position:absolute; right:0; top:0; color:#777; font-size:12px; font-weight:bold; line-height:60px;}
+.header.reserve .refresh_btn img {height:60px;}
+
+/*****메뉴(빠른예매)*****/
+.main.reserve {position:relative; width:100%;  background:url(../img/black09.png) repeat center top;}
+.main.reserve legend {position:absolute; left:0; top:-9999px;}
+
+.main.reserve .tab_menu {position:absolute; left:50%; top:0; margin-left:-180px; width:100%;}
+.main.reserve .tab_menu .tab_btn {height:100px; width:360px; position:absolute; background:#e6e7e8;}
+
+/*영화관명 매치*/
+.main.reserve .tab_menu .tab_btn>li .c_theater {position:absolute; left:0; top:0;  width:120px; height:100px; text-align:center; display:none; }
+.main.reserve .tab_menu .tab_btn>li .c_theater h2 {background:#3d3f43; display:inline-block; width:120px; height:100px; font-size:12px; color:#e6e7e8; padding-top:61px; box-sizing:border-box; display:none;} 
+.main.reserve .tab_menu .tab_btn>li .c_theater h2 img {width:120px; margin-top:-77px;}
+
+/*포스터 매치*/
+.main.reserve .tab_menu .tab_btn>li .m_poster {position:absolute; left:0; top:0; text-align:center;}
+.main.reserve .tab_menu .tab_btn>li .m_poster li {display:block; background:#3D3F43; width:120px; height:100px; box-sizing:border-box;}
+.main.reserve .tab_menu .tab_btn>li .m_poster img {width:69px;}
+
+.main.reserve .tab_menu .tab_btn>li {float:left; width:120px; height:100px; position:relative;}
+.main.reserve .tab_menu .tab_btn>li>a {position:absolute; left:0; top:0; width:120px; height:100px; display:inline-block; background:url(../img/choose_movie_n.png) no-repeat left top; background-size:120px;}
+
+.main.reserve .tab_menu .tab_btn>li>a.cinema {background-image:url(../img/choose_cinema_n.png);}
+.main.reserve .tab_menu .tab_btn>li>a.date {background-image:url(../img/choose_date_n.png);}
+
+.main.reserve .tab_menu .tab_btn>li>a.on {background:url(../img/choose_movie.png) no-repeat left top; background-size:120px;}
+.main.reserve .tab_menu .tab_btn>li>a.cinema.on {background-image:url(../img/choose_cinema.png); }
+.main.reserve .tab_menu .tab_btn>li>a.date.on {background-image:url(../img/choose_date.png);}
+
+/*****텝컨텐츠(빠른예매)*****/
+.main.reserve .tab_content {width:100%; height:100%; background:url(../img/black09.png) repeat center top; padding-bottom:20px; text-align:center; overflow:hidden;}
+
+/*텝컨텐츠:영화(빠른예매)*/
+.main.reserve .tab_content .content {margin-top:100px; background:#FFF; width:360px; display:inline-block; overflow:hidden;}
+
+.main.reserve .tab_content .movie_content .m_content>li {display:block; width:100%; border-bottom:1px solid #e6e7e8; height:40px; padding:0 20px; box-sizing:border-box;}
+.main.reserve .tab_content .movie_content .m_content>li:last-child {border-bottom:0;}
+.main.reserve .tab_content .movie_content .m_content>li>a {display:inline-block; height:39px; width:360px; line-height:40px; font-size:13px; color:#333; text-align:left; margin-left:-20px; padding-left:20px; box-sizing:border-box;}
+.main.reserve .tab_content .movie_content .m_content>li>a.on {color:#fff; background:#616367;}
+.main.reserve .tab_content .movie_content .m_content>li>a>img {width:15px; margin-top:13px; margin-right:10px;}
+
+
+/*텝컨텐츠:영화관(빠른예매)*/
+.main.reserve .tab_content .cinema_content .c_left {background:#cbcdd0; width:180px; height:840px; float:left;}
+.main.reserve .tab_content .cinema_content .c_left .c_content {float:left;}
+.main.reserve .tab_content .cinema_content .c_left .c_content>li {display:inline-block; line-height:40px;}
+.main.reserve .tab_content .cinema_content .c_left .c_content>li.icon a {display:inline-block; width:180px; height:40px; background:url(../img/cinema_search2.png) no-repeat right top; background-size:60px;}
+.main.reserve .tab_content .cinema_content .c_left .c_content>li a {display:block; width:180px; height:40px; color:#3d3f43; font-size:13px; text-transform:uppercase; text-align:left; padding:0 20px; box-sizing:border-box;}
+.main.reserve .tab_content .cinema_content .c_left .c_content>li.icon a.on {background:#616367 url(../img/cinema_search.png) no-repeat right top; background-size:60px;}
+.main.reserve .tab_content .cinema_content .c_left .c_content>li a.on {background:#616367; color:#50d7bf;}
+
+.main.reserve .tab_content .cinema_content .c_right {background:#fff; width:180px; height:840px; float:right; overflow-y:auto; overflow-x:hidden;}
+.main.reserve .tab_content .cinema_content .c_right .c_content2 {float:left;}
+.main.reserve .tab_content .cinema_content .c_right .c_content2 li {display:inline-block; line-height:40px;}
+.main.reserve .tab_content .cinema_content .c_right .c_content2 li a {display:block; width:180px; height:40px; background:#f2f3f3; font-size:13px; color:#3d3f43; text-align:left; padding:0 20px; box-sizing:border-box;}
+.main.reserve .tab_content .cinema_content .c_right .c_content2 li a em {float:right;}
+.main.reserve .tab_content .cinema_content .c_right .c_content2 li a.color {background:#e6e7e8;}
+
+/*텝컨텐츠:상영일(빠른예매)*/
+.main.reserve .tab_content .date_content .d_content li {display:block; height:40px; width:100%; }
+.main.reserve .tab_content .date_content .d_content li a {display:inline-block; line-height:40px; width:360px; background:#e6e7e8; color:#3d3f43; font-size:13px; padding:0 20px; box-sizing:border-box; text-align:left; text-transform:uppercase;}
+.main.reserve .tab_content .date_content .d_content li a.color {background:#f2f3f3;}
+.main.reserve .tab_content .date_content .d_content li a.blue {color:#0886a6;}
+.main.reserve .tab_content .date_content .d_content li a.red {color:#d44c4c;}
+.main.reserve .tab_content .date_content .d_content li a img {width:75px; float:right;}
+
+
+
+
+
+/*********************************영화관*********************************/
+/*****헤더(영화관)*****/
+.wrap .header.theater {height:60px; width:100%; position:relative; text-align:center; background:url(../img/black09.png) repeat center top;}
+
+/*좌측 모바일 메뉴버튼*/
+.wrap .header.theater .m_btn {float:left; height:60px; width:60px; background:url(../img/menu.png) no-repeat left top; background-size:60px; text-indent:-9999px; z-index:999; position:relative;}
+.wrap .header.theater .m_btn.on {background-image:url(../img/menu_on.png);}
+
+/*영화관*/
+.wrap .header.theater h1 {display:inline-block; font-size:16px; color:#FFF; line-height:60px; }
+
+/*우측 빠른예매*/
+.wrap .header .quick_btn {float:right; height:60px; width:60px; background:url(../img/quick.png) no-repeat right top; background-size:60px; text-indent:-9999px;} 
+.wrap .header .quick_btn img {width:60px;}
+
+
+/*****검색(영화관)*****/
+.search {height:40px; background:#e6e7e8; width:100%; position:relative;}
+.search input {width:85%; height:40px; border:none; font-size:12px; line-height:40px; padding:0 20px; background:#e6e7e8; box-sizing:border-box;}
+.search button {position:absolute; right:0; top:0; outline:none; border:none; cursor:pointer; height:40px; width:40px; background:url(../img/cinema_search_icon.png) no-repeat center center; background-size:40px;}
+
+
+/*****지역(영화관)*****/
+.place {background:url(../img/black09.png) repeat center top; margin:20px; position:relative; z-index:999;}
+.place .p_choose {display:inline-block; height:40px; width:100%; text-align:center;}
+.place .p_choose>p {color:#50d7bf; font-size:13px; line-height:40px; position:absolute; left:15px; top:0;}
+.place .p_choose>h2 {color:#FFF;  font-size:14px; line-height:40px; text-align:center;}
+.place .p_choose>span {position:absolute; right:0; top:0; background:url(../img/cinema_arrow_down.png) no-repeat right center; background-size:40px; width:40px; height:40px;}
+.place .p_choose>span.on {background-image:url(../img/cinema_arrow_up.png);}
+
+.place>ul {position:absolute; left:0; top:40px; background:url(../img/black09.png) repeat; width:100%; display:none;}
+.place>ul>li {height:40px; width:100%; border-bottom:1px solid #313232;}
+.place>ul>li:first-child {border-top:1px solid #313232;}
+.place>ul>li a {display:block; font-size:12px; color:#FFF; line-height:40px; text-align:center;}
+.place>ul>li a.on {color:#50d7bf;}
+
+
+/*****선택지역(영화관)*****/
+.place_theater {background:#414347; position:relative; margin:20px;}
+.place_theater .p_theater {height:100%; width:100%; padding:10px; text-align:center; box-sizing:border-box;}
+.place_theater li a {font-size:12px; color:#e6e7e8; line-height:26px; padding:2px;}
+.place_theater li a.on {color:#50d7bf;}
+.place_theater li em {display:inline-block; background:#848588; width:2px; height:9px; margin:9px 4px 0;}
+
+
+/*****영화관사진(영화관)*****/
+.photo_wrap {height:250px; width:100%; margin-bottom:20px;}
+.photo_wrap .photo {height:250px; position:relative;}
+.photo_wrap .photo .txt {position:absolute; left:0; bottom:0; background:url(../img/black08.png) repeat; width:100%; height:80px; color:#FFF; text-align:center; text-transform:uppercase; line-height:20px; padding-top:10px; box-sizing:border-box;}
+.photo_wrap .photo img {height:250px; width:100%;}
+
+
+/*****마이시네마,상영시간표버튼(영화관)*****/
+.btn_wrap {height:65px; width:340px; text-align:center; margin:30px auto 0; box-sizing:border-box;}
+.btn_wrap a {display:inline-block; padding:0 12px; height:35px; color:#fff; font-size:15px; border:2px solid #50d7bf; border-radius:35px; line-height:30px; margin-left:15px; box-sizing:border-box;}
+.btn_wrap a:first-child {margin-left:0;}
+.btn_wrap a .my {height:19px; margin-top:6px; margin-right:7px;}
+.btn_wrap a .time {height:17px; margin-top:7px; margin-right:7px;}
+
+/*****공지사항 슬라이더(영화관)*****/
+.notice.theater {background:#f2f3f3 url(../img/notice_icon.png) no-repeat left center; background-size:53px; width:100%; height:40px;}
+.notice.theater a {display:inline-block; margin-left:55px; line-height:40px; width:280px; font-size:12px; color:#333; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding-right:10px;}
+
+/*****단체대관문의배너(영화관)*****/
+.banner.theater {height:100px; padding:20px; text-align:center;}
+.banner.theater img {height:100px;}
+
+
+
+
+
+/*********************************시네마몰*********************************/
+/*****헤더(시네마몰)*****/
+.wrap .header.cinemamall {height:60px; width:100%; position:relative; text-align:center; background:url(../img/black09.png) repeat center top;}
+
+/*좌측 모바일 메뉴버튼*/
+.wrap .header.cinemamall .m_btn {float:left; height:60px; width:60px; background:url(../img/menu.png) no-repeat left top; background-size:60px; text-indent:-9999px; z-index:999; position:relative;}
+.wrap .header.cinemamall .m_btn.on {background-image:url(../img/menu_on.png);}
+
+/*시네마몰*/
+.wrap .header.cinemamall h1 {display:inline-block; font-size:16px; color:#FFF; line-height:60px; }
+
+/*우측 빠른예매*/
+.wrap .header .quick_btn {float:right; height:60px; width:60px; background:url(../img/quick.png) no-repeat right top; background-size:60px; text-indent:-9999px;} 
+.wrap .header .quick_btn img {width:60px;}
+
+
+/*****선택(시네마몰)*****/
+.choose {background:url(../img/black09.png) repeat center top; margin:20px; position:relative; z-index:999;}
+.choose .choose_btn {height:40px; width:100%; }
+.choose .choose_btn>h2 {color:#FFF;  font-size:14px; line-height:40px; text-align:left; padding-left:15px;}
+.choose .choose_btn>span {position:absolute; right:0; top:0; background:url(../img/mall_arrow_down.png) no-repeat right center; background-size:40px; width:40px; height:40px;}
+.choose .choose_btn>span.on {background-image:url(../img/mall_arrow_up.png);}
+
+.choose>ul {position:absolute; left:0; top:40px; background:url(../img/black09.png) repeat; width:100%; display:none;}
+.choose>ul>li {height:40px; width:100%; border-bottom:1px solid #313232;}
+.choose>ul>li:first-child {border-top:1px solid #313232;}
+.choose>ul>li a {display:block; font-size:12px; color:#FFF; line-height:40px; text-align:center;}
+.choose>ul>li a.on {color:#b85045;}
+
+
+/*****상품(시네마몰)*****/
+/*슈퍼콤보패밀리팩,3D수퍼콤보패밀리팩*/
+.p1 {height:120px; width:100%; padding:20px; box-sizing:border-box; background:#e6e7e8; position:relative;}
+.p1>img {height:80px;}
+
+.p1 .info {position:absolute; left:160px; top:20px; text-align:left;}
+.p1 .info .tit {text-transform:uppercase; font-size:14px; color:#2b2b2b; font-family:TitilliumBold;}
+.p1 .info .txt {font-size:12px; color:#5d5c5c; letter-spacing:-0.05em;}
+.p1 .info .price1 {display:inline-block; float:left; color:#5d5c5c; font-weight:bold; margin-top:7px; font-size:10px; }
+.p1 .info .price2 {display:inline-block;  float:left; color:#aa3024; font-size:15px; margin-top:3px; margin-left:3px; font-family:TitilliumBold;}
+
+.p1 .info .mall_info {display:inline-block; margin-top:5px; clear:both; float:left; color:#9c9c9c; line-height:20px; font-size:11px;}
+.p1 .info .mall_btn {position:absolute; left:110px; bottom:0; background:#d75d50; border-radius:25px; width:70px; height:25px; line-height:25px; font-size:11px; color:#FFF; padding-left:7px; box-sizing:border-box; margin-left:5px;}
+.p1 .info .mall_info img {width:20px; margin-right:5px;}
+.p1 .info .mall_btn img {width:12px; margin-top:7px; margin-right:3px;}
+
+/*더블콤보패밀리팩*/
+.p1.p2 {background:#f2f3f4;}
+
+/*씨네티콘콤보팩(soldout)*/
+.p1.p3 {background:#f2f3f4;}
+.p1.p3 .tit>strong {color:#236559;}
+.p1.p3 .mall_btn {background:#2d2f32;}
+.p1.p3 .mall_btn img {margin-top:6px;}
+
+.p1.p3 .p3_wrap {position:absolute; left:0; top:0; background:url(../img/black07.png); width:100%; height:120px; z-index:99; text-align:center;}
+.p1.p3 .p3_wrap>p {color:#50d7bf; font-size:30px; font-family:TitilliumBdBoldItalic; letter-spacing:0.1em; line-height:120px;}
+
+/*씨네티콘콤보팩2*/
+.p1.p2 .tit>strong {color:#236559;}
+
+/*씨네티콘콤보팩(soldout) 마지막 하단 마진*/
+.p3.last {margin-bottom:20px;}
+
+
+
+
+/*********************************헤더(이벤트)*********************************/
+.wrap .header {height:60px; width:100%; position:relative; text-align:center;}
+
+/*좌측 모바일 메뉴버튼*/
+.wrap .header .m_btn {float:left; height:60px; width:60px; background:url(../img/menu.png) no-repeat left top; background-size:60px; text-indent:-9999px; z-index:999; position:relative;}
+.wrap .header .m_btn.on {background-image:url(../img/menu_on.png);}
+
+/*이벤트*/
+.wrap .header.event h1 {display:inline-block; font-size:16px; color:#FFF; line-height:60px; }
+
+/*우측 빠른예매*/
+.wrap .header .quick_btn {float:right; height:60px; width:60px; background:url(../img/quick.png) no-repeat right top; background-size:60px; text-indent:-9999px;} 
+.wrap .header .quick_btn img {width:60px;}
+
+/*이벤트 투명 배경*/
+.wrap_event {background:url(../img/event_bg.png) no-repeat center top; position:absolute; left:0; top:0; width:100%; height:100%; opacity:0.5;}
+
+
+
+/*****슬라이더(이벤트)*****/
+.wrap .main.event {position:relative; height:490px;}
+.wrap .main.event .slider {text-align:center; position:relative;}
+.wrap .main.event .slider .slick-slide {height:380px; position:relative; overflow:hidden;}
+
+.wrap .main.event .slider img {position:absolute; left:50%; top:0; margin-left:-124px; width:248px;}
+
+.wrap .main.event .slider .txt {position:absolute; left:50%; top:290px; margin-left:-124px; text-transform:uppercase; color:#FFF; text-align:center; width:248px; padding:20px 0;}
+.wrap .main.event .slider .txt .tit1 {font-size:18px; text-shadow: 1px 1px 0px rgba(0, 0, 0, .5); letter-spacing:0.01em;}
+.wrap .main.event .slider .txt span {display:inline-block; width:125px; height:2px; background:#FFF; opacity:0.5; margin:12px 0 13px 0;}
+.wrap .main.event .slider .txt .tit2 {font-size:14px; text-shadow: 1px 1px 0px rgba(0, 0, 0, .5); letter-spacing:0.05em;}
+
+/*자세히보기(이벤트)*/
+.wrap .main.event .e_btn {text-align:center; margin:30px 0; height:75px;}
+.wrap .main.event .e_btn a {display:inline-block; width:120px; height:30px; color:#50d7bf; font-size:15px; border:2px solid #50d7bf; border-radius:30px; line-height:30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

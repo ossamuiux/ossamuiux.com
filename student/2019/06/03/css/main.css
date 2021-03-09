@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+#main {padding-top: 130px; }
+#main .main_slider {height: 418px; position: relative;}
+
+#main .main_slider .swiper-slide {background: url(../images/main_slider_01.jpg) no-repeat 50% 0; background-size: cover;}
+#main .main_slider .swiper-slide:nth-child(2) {background-image: url(../images/main_slider_02.jpg);}
+#main .main_slider .swiper-slide:nth-child(3) {background-image: url(../images/main_slider_03.jpg);}
+#main .main_slider .swiper-slide:nth-child(4) {background-image: url(../images/main_slider_04.jpg);}
+
+/*메인슬라이더 재생/일시정지버튼*/
+#main .main_slider .btn_play {position: absolute;right: 50%;bottom: 12px;margin-right: -59px;width: 24px;height: 24px;background: url(../images/btn_stop.png) no-repeat 50% 50%;background-size: 10px;border: none;outline: none;z-index: 99;text-indent: -9999px;}
+
+#main .main_slider .btn_play.on {background-image: url(../images/btn_play.png);bottom: 13px;}
+
+
+/*제목 공통 스타일링*/
+#main .tit_wrap {position: relative;}
+#main .section1 .tit_wrap {max-width: 1200px; margin: 0 auto;}
+#main .tit_wrap:after {content: '';position: absolute;left: 0;top: 28px;width: 100%;height: 1px;background: #a6a6a6;}
+
+#main .tit_wrap h2 {color: #000;font-size: 44px;font-family: 'Black Han Sans',sans-serif;width: 392px;text-align: center;margin: 0 auto;background: #fff;position: relative;z-index: 9;}
+
+/*할인 프로모션*/
+#main .section1 {padding: 80px 0; background: #fff;}
+#main .section1 .section1_inner {max-width: 1220px; margin: 0 auto;}
+
+#main .section1 .section1_inner .promotion_slider_wrap {position: relative;}
+#main .section1 .section1_inner .promotion_slider {margin-top: 80px; position: static;}
+#main .section1 .section1_inner .promotion_slider .swiper-slide {float: left; width: 50% !important;}
+
+#main .section1 .section1_inner .promotion_slider .swiper-slide a {float: left; width: calc(50% - 20px); border: 1px solid #ebebeb; margin: 0 10px 20px; overflow: hidden; padding-bottom: 26.5%; position: relative; height: 0;}
+#main .section1 .section1_inner .promotion_slider .swiper-slide a img {position: absolute; left: 0; top: 0;width: 100%;}
+
+#main .section1 .section1_inner .promotion_slider .swiper-pagination {display: none;}
+
+/*더보기 버튼 공통 스타일링*/
+#main .btn_more {display: block; color: #000; text-align: center; text-indent: -15px; line-height: 50px;  width: 226px; height: 50px; border: 1px solid #000; border-radius: 50px; margin: 50px auto 0; position: relative;}
+#main .btn_more span {font-weight: 700;}
+#main .btn_more:after {content: ''; position: absolute; right: 24px; top: 18px; width: 12px; height: 12px; background: url(../images/btn_more.png) no-repeat; background-size: 12px; }
+
+/*연간 축제 안내*/
+#main .section2 { background: url(../images/section2_bg.jpg) no-repeat; background-size: cover; padding: 80px 0; overflow-x: hidden;}
+#main .section2 .section2_inner {max-width: 1200px; margin: 0 auto; width: 100%;}
+#main .section2 .tit_wrap:before {content: ''; position: absolute; left: 0; top: 30px; width: calc(50% - 200px); height: 1px; background: #fff;}
+#main .section2 .tit_wrap:after {left: auto; right: 0; top: 30px; width: calc(50% - 200px); background: #fff;}
+#main .section2 .tit_wrap h2 {color: #fff; background: none;}
+
+#main .section2 .festival_slider_wrap {margin-top: 80px; padding: 0 60px; }
+
+#main .section2 .festival_slider { overflow: visible; width: 100%;}
+
+#main .section2 .festival_slider .swiper-slide {width: 265px !important; height: 350px; }
+#main .section2 .festival_slider .swiper-slide a { display: block; width: 100%; height: 100%; background: #fff; font-family: 'Nanum Barun Gothic', sans-serif; text-align: center; }
+
+#main .section2 .festival_slider .swiper-slide img {width: 100%;}
+
+#main .section2 .festival_slider .swiper-slide .txt_wrap {text-align: center; padding: 23px 0;}
+#main .section2 .festival_slider .swiper-slide .txt_wrap h3 { color: #000; font-size: 16px; font-weight: 700; line-height: 1.7;}
+#main .section2 .festival_slider .swiper-slide .txt_wrap p {color: #555; font-size: 15px; font-weight: 400; line-height: 1.7;} 
+
+#main .section2 .festival_slider .swiper-scrollbar {left: 50%; bottom: -80px; width: 240px; height: 30px; transform: translate(-50%); background: none; display: block !important; }
+
+#main .section2 .festival_slider .swiper-scrollbar:before {content: ''; position: absolute; left: 0; bottom: 0; width: 100% ; height: 5px; background: #fff;}
+
+#main .section2 .festival_slider .swiper-scrollbar .swiper-scrollbar-drag {width: 50px !important; height: 30px; background: #4467b7 url(../images/rolling_arrow.png) no-repeat 50% 50%; border-radius: 30px; margin-top: 12px;}
+
+#main .section2 .btn_more {margin: 140px auto 0; background: #fff; border: 1px solid #fff;}
+#main .section2 .btn_more:after {right: 35px;}
+
+/*놀이기구 안내*/
+#main .section3 {padding: 80px 0;}
+#main .section3 .section3_inner {max-width: 1200px; margin: 0 auto; width: 100%;}
+
+#main .section3 .section3_inner .play_list {margin-top: 80px; overflow: hidden;}
+#main .section3 .section3_inner .play_list li {float: left; width: 25%; padding: 0 10px;}
+#main .section3 .section3_inner .play_list li a {display: block; text-align: center;}
+#main .section3 .section3_inner .play_list li a img {width: 100%;}
+#main .section3 .section3_inner .play_list li p {padding: 26px 0; color: #000; font-size: 20px; font-weight: 900;} 
+#main .section3 .section3_inner .play_list li:first-child p {padding: 11.5px 0;}
+
+#main .section3 .btn_more {width: 275px;}
+#main .section3 .btn_more:after {right: 40px;}
+
+/*section4*/
+#main .section4 { padding: 80px 0; background: #eee;}
+#main .section4 .section4_inner { max-width: 1200px; width: 100%; margin: 0 auto; overflow: hidden;}
+#main .section4 .section4_inner>div {float: left; background: #fff; border: 1px solid #dadada; padding-bottom: 37.15%; padding: 60px 40px; position: relative;}
+
+/*공지사항*/
+#main .section4 .notice_box {width: calc(50% - 10px); margin-right: 10px;}
+#main .section4 .notice_box .tit_wrap:after {top: 19px;}
+#main .section4 .notice_box .tit_wrap h2 {font-size: 33px; width: 300px;line-height: 1.2;}
+
+
+#main .section4 .notice_box .notice_list {margin-top: 40px;}
+#main .section4 .notice_box .notice_list li a {display: block; font-size: 18px; color: #292929; font-family: 'Nanum Barun Gothic', sans-serif; padding: 5px 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+
+
+/*운영시간*/
+#main .section4 .runtime_box {width: calc(50% - 10px); margin-left: 10px;}
+#main .section4 .runtime_box .tit_wrap:after {top: 17px;}
+#main .section4 .runtime_box .tit_wrap h2 {font-size: 36px; width: 180px;line-height: 1; margin-top: 4px;}
+
+/*운영시간 구현 스타일링*/
+#main .section4 .runtime {text-align: center; margin-top: 33px; line-height: 1;font-size: 2.45rem; font-weight: 900; letter-spacing: -0.055em; white-space: nowrap; padding: 0 10px;}
+
+#main .section4 .runtime br {display: none;}
+
+#main .section4 .list_wrap {position: static; height: 152px;}
+
+#main .section4 .intro_list {position: absolute; left: 0; bottom: 50px; width: 100%; padding: 0 20px; overflow: hidden;}
+#main .section4 .intro_list li {float: left; width: 25%; text-align: center;}
+#main .section4 .intro_list li a {display: block; padding: 0 20px;}
+#main .section4 .intro_list li a img {width: 100%;}
+#main .section4 .intro_list li a p {margin-top: 12px; color: #292929; font-weight: 900; font-size: 1.1rem; white-space: nowrap; font-family: 'NanumSquareRound',sans-serif;}
+
+
+
+
+@media screen and (max-width: 1237px) {
+    #main .main_slider .swiper-slide {background-position: 35% 0;}
+    
+    #main .section1 .tit_wrap:after {left: 20px; width: calc(100% - 40px);}
+    
+    #main .section1 .section1_inner .promotion_slider_wrap {padding: 0 10px;}
+    
+    #main .section2 .section2_inner {padding: 0 20px;}
+    
+    #main .section2 .festival_slider_wrap {padding: 0 20px;}
+    
+    
+    #main .section3 .section3_inner {padding: 0 20px;}
+    #main .section4 .section4_inner {padding: 0 20px;}
+    #main .section4 .runtime {font-size: 2.25rem; margin-top: 36px;}
+    
+    #main .section4 .intro_list li a p {font-size: 1rem;}
+    
+}
+
+@media screen and (max-width: 1180px) {
+    #main .section4 .runtime {font-size: 2rem;margin-top: 40px;}
+}
+    
+@media screen and (max-width: 1080px) {
+    #main .section4 .runtime {font-size: 1.9rem;margin-top: 42px;}
+    
+    #main .section4 .intro_list li a p {font-size: 0.9rem;}
+}
+    
+
+
+
+@media screen and (max-width: 1024px) {
+    #main {padding-top: 0;}
+    #main .main_slider {height: 450px;}
+    #main .main_slider .swiper-slide {background-image: url(../images/m_main_slider_01.jpg); background-size: cover;}
+    #main .main_slider .swiper-slide:nth-child(2) {background-image: url(../images/m_main_slider_02.jpg);}
+    #main .main_slider .swiper-slide:nth-child(3) {background-image: url(../images/m_main_slider_03.jpg);}
+    #main .main_slider .swiper-slide:nth-child(4) {background-image: url(../images/m_main_slider_04.jpg);}
+    
+    #main .main_slider .swiper-pagination {bottom: 15px;}
+    
+    #main .main_slider .btn_play {bottom: 22px;}
+    
+    #main .main_slider .btn_play.on {bottom: 23px;}
+        
+    #main .tit_wrap h2 {font-size: 40px; width: 320px;}
+    #main .section1 .tit_wrap:after {top: 26px;}
+    
+    #main .section1 {padding: 80px 0;}
+    
+    #main .section1 .section1_inner .promotion_slider .swiper-slide {float: left; width: 100% !important; overflow: hidden;}
+    
+    #main .section1 .section1_inner .promotion_slider .swiper-pagination {display: block; padding: 6px 30px; bottom: -86px}
+    
+    #main .section1 .section1_inner .promotion_slider .swiper-pagination span { margin: 6px 10px 0; width: 12px; height: 12px; outline: none;}
+    
+    #main .btn_more {margin: 140px auto 0;}
+    
+    #main .section2 {padding: 80px 20px;}
+    #main .section2 .section2_inner {padding: 0;}
+    #main .section2 .tit_wrap:before { width: calc(50% - 166px); top: 27px;}
+    #main .section2 .tit_wrap:after { width: calc(50% - 166px); top: 27px;}
+    #main .section2 .festival_slider_wrap {padding: 0; margin-top: 60px;}
+    
+    #main .section3 .section3_inner .play_list li p {font-size: 18px; padding: 25px 0;}
+    
+    #main .section3 .btn_more {margin: 80px auto 0;}
+    
+    #main .section4 .section4_inner>div {padding: 50px 30px;}
+    
+    #main .section4 .notice_box .tit_wrap h2 {font-size: 29px; width: 280px;}
+    #main .section4 .notice_box .tit_wrap:after {top: 14px;}
+    
+    #main .section4 .notice_box .notice_list {margin-top: 30px;}
+    
+    #main .section4 .runtime_box .tit_wrap h2 {font-size: 33px; margin-top: 2px;}
+    #main .section4 .runtime_box .tit_wrap:after {top: 12px;}
+    
+    #main .section4 .runtime {margin-top: 40px;}
+    
+    #main .section4 .list_wrap {height: 144px;}
+    
+    
+}
+
+
+
+@media screen and (max-width: 990px) {
+    #main .section4 .section4_inner>div {line-height: 1.4;}
+    
+    #main .section4 .notice_box .tit_wrap h2 {font-size: 25px; width: 240px;}
+    #main .section4 .notice_box .tit_wrap:after {top: 12px;}
+    
+    #main .section4 .notice_box .notice_list {margin-top: 20px;}
+    #main .section4 .notice_box .notice_list li a {font-size: 16px; padding: 7px 0;}
+    
+    #main .section4 .runtime_box .tit_wrap h2 {font-size: 30px; width: 170px;}
+    
+    #main .section4 .runtime {font-size: 1.6rem; line-height: 1.2; margin-top: 30px;}
+
+        
+    #main .section4 .list_wrap {height: 138px;}
+    
+    #main .section4 .intro_list {padding: 0 20px;}
+    #main .section4 .intro_list li a {padding: 20px 10px 0;}
+    
+    #main .section4 .intro_list li a p {font-size: 0.9rem;}
+}
+
+
+@media screen and (max-width: 800px) {
+    #main .section4 .runtime {letter-spacing: -0.02em; line-height: 1.2; margin-top: 17px;}
+    
+    #main .section4 .runtime br {display: block;}
+    
+    #main .section4 .list_wrap {height: 120px;}
+}
+
+
+
+@media screen and (max-width: 767px) {
+    #main .main_slider {height: 330px;}
+    #main .main_slider .swiper-slide {background-position: 50% 0;}
+    #main .main_slider .swiper-slide:nth-child(2) {background-position: 30% 0;}
+    #main .main_slider .swiper-pagination {display: none;}
+    #main .main_slider .btn_play {display: none;}
+
+    #main .tit_wrap:after {top:23px;}
+    #main .tit_wrap h2 {font-size: 34px; width: 250px;}
+    
+    #main .section1 {padding: 40px 0;}
+    #main .section1 .section1_inner .promotion_slider {margin-top: 40px;}
+    
+    #main .section1 .section1_inner .promotion_slider .swiper-pagination {bottom: -76px}
+    
+    #main .btn_more {margin: 110px auto 0; font-size: 15px; line-height: 40px; height: 40px; border-radius: 40px; }
+    
+    #main .btn_more:after {right: 26px; top: 12px;}
+    
+    #main .section2 {padding: 40px 20px;}
+    #main .section2 .festival_slider_wrap {margin-top: 40px;}
+    #main .section2 .tit_wrap:before { width: calc(50% - 125px); top: 23px;}
+    #main .section2 .tit_wrap:after { width: calc(50% - 125px); top: 23px;}
+        
+    #main .section3 {padding: 40px 0;}
+    #main .section3 .section3_inner .play_list {margin-top: 40px;}
+    #main .section3 .section3_inner .play_list li {width: 50%;}
+    #main .section3 .section3_inner .play_list li:nth-child(2n-1) {padding-right: 20px;}
+    #main .section3 .section3_inner .play_list li:nth-child(2n) {padding-left: 20px;}
+
+    #main .section3 .btn_more {margin: 40px auto 0;}
+    
+    html{font-size: 14px;}
+    #main .section4 {padding: 40px 0;}
+    #main .section4 .section4_inner>div {float: none; padding: 40px 30px;}
+    #main .section4 .notice_box {width: 100%; margin-bottom: 20px;}
+    
+    
+    #main .section4 .runtime_box {width: 100%; margin-left: 0; margin-right: 20px;}
+
+    
+    #main .section4 .runtime {font-size: 2.5rem;letter-spacing: -0.03em; margin-top: 24px;}
+    #main .section4 .runtime br {display: none;}
+    
+    #main .section4 .runtime_box .tit_wrap:after {top: 14px;}
+    
+    #main .section4 .list_wrap {height: 160px;}
+    #main .section4 .intro_list {padding: 0 20px;}
+    #main .section4 .intro_list li a {padding: 0 20px;}
+    #main .section4 .intro_list li a img {width: 80%;}
+    #main .section4 .intro_list li a p {font-size: 1.15rem;}
+    
+}
+
+@media screen and (max-width: 600px) {
+    #main .main_slider {height: 260px;}
+    
+    #main .section1 .tit_wrap:after {top:20px;}
+    #main .section1 .tit_wrap h2 {font-size: 30px; width: 200px;} 
+    
+    #main .section4 .notice_box .notice_list {margin-top: 20px;}
+    #main .section4 .notice_box .notice_list li a {font-size: 18px;}
+    
+    #main .section4 .runtime {font-size: 2rem;letter-spacing: -0.055em;}
+    
+    #main .section4 .intro_list li a {padding: 0 10px;}
+    #main .section4 .intro_list li a img {width: 100%;}
+    #main .section4 .intro_list li a p {font-size: 0.9rem;}
+    
+}
+
+@media screen and (max-width: 480px) {
+    #main .main_slider {height: 240px;}
+    
+    #main .section4 .notice_box .tit_wrap h2 {font-size: 22px;width: 210px;}
+    #main .section4 .notice_box .tit_wrap:after {top:10px;}
+    
+    #main .section4 .notice_box .notice_list li a {font-size: 15px;}
+    
+    #main .section4 .runtime_box .tit_wrap h2 {font-size: 26px;width: 140px;}
+    #main .section4 .runtime_box .tit_wrap:after {top: 9px;}
+
+    #main .section4 .runtime {font-size: 1.7rem;}
+    #main .section4 .runtime br {display: none;}
+    
+    #main .section4 .list_wrap {height: 135px;}
+    
+    
+} 
+
+@media screen and (max-width: 420px) {
+    #main .section4 .runtime {font-size: 1.4rem;}
+}
+
+@media screen and (max-width: 360px) {
+    #main .tit_wrap:after {top:14px;}
+    #main .tit_wrap h2 {font-size: 26px; width: 160px;} 
+    
+    #main .section4 .section4_inner>div {float: none; padding: 30px 20px;}
+    
+    #main .section4 .runtime {font-size: 1.5rem;}
+    
+    #main .section4 .notice_box .notice_list {margin-top: 20px;}
+    
+    #main .section4 .notice_box .notice_list li a {font-size: 13px;}
+    
+
+}
+
+
+
+
+
+
+

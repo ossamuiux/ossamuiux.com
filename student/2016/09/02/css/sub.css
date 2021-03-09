@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+
+/***************************객실예약***************************/
+.reserve {padding-bottom:40px;}
+
+/*제목 (공통)*/
+.main h2 {font-size:16px; line-height:45px; background:#f0f0f0; text-align:center;}
+
+/*객실선택 예약확인 탭*/
+.reserve .state {overflow:hidden; border-bottom:1px solid #CCC;}
+.reserve .state li {float:left; width:50%; height:30px; background:url(../img/reserve_ico01.png) #4f4f4f no-repeat center 20px; background-size:auto 32px; color:#FFF; text-align:center; padding-top:60px; font-size:15px;}
+.reserve .state li:last-child {background-image:url(../img/reserve_ico02.png); background-color:#FFF; color:#313131;}
+
+/*객실 선택*/
+.reserve h3 {font-size:15px; margin-top:15px; padding-left:10px;}
+
+.reserve legend {position:absolute; left:0; top:-99999999px;}
+
+.reserve .choice {padding:10px 10px 25px; background:#f0f0f0; margin-top:10px; overflow:hidden;}
+
+.reserve .choice .room {overflow:hidden; border:1px solid #CCC;}
+.reserve .choice .room li {float:left; height:50px; width:33.3%; text-align:center; border-left:1px solid #CCC; box-sizing:border-box;}
+.reserve .choice .room li:first-child {border:none;}
+.reserve .choice .room li a {line-height:50px; display:block;}
+.reserve .choice .room li a.on {background:#4f4f4f; color:#FFF;}
+
+/*달력*/
+.reserve .choice .calendar {margin-top:15px;}
+
+.reserve .choice .calendar .tit {height:40px; border-top:2px solid #8093aa; background:#e8f1ff; text-align:center;}
+.reserve .choice .calendar .tit p {display:inline-block; line-height:40px; font-size:14px;}
+.reserve .choice .calendar .tit button {float:left; width:40px; height:40px; border:none; background:url(../img/calendar_arrow02.png) no-repeat center center; background-size:10px;}
+.reserve .choice .calendar .tit button.next_btn {float:right; background-image:url(../img/calendar_arrow01.png);}
+
+.reserve .choice .calendar table {width:100%; overflow:hidden; text-align:center; background:#FFF;}
+.reserve .choice .calendar table tr {height:36px;}
+.reserve .choice .calendar table tr th {vertical-align:middle; color:#313131; font-weight:bold;}
+.reserve .choice .calendar table tr td {vertical-align:middle; color:#6d6d6d;}
+.reserve .choice .calendar table tr td a {display:block; line-height:36px;}
+.reserve .choice .calendar table tr td a.on {background:url(../img/calendar_bg.png) no-repeat center center; background-size:28px; color:#FFF;}
+
+/*정보 입력창*/
+.reserve .choice .content_wrap {overflow:hidden;}
+.reserve .choice .content_wrap .content {width:50%; padding-right:5px; box-sizing:border-box; margin-top:15px; float:left;}
+.reserve .choice .content_wrap .content .box h4 {font-size:14px;}
+.reserve .choice .content_wrap .content .box input {width:100%; box-sizing:border-box; margin-top:10px; height:40px; border:1px solid #CCC; border-top:2px solid #0aa3a9; padding-left:5px; font-size:14px;}
+
+.reserve .choice .content_wrap .content1 {padding-right:0;}
+.reserve .choice .content_wrap .content .box1 {margin-top:20px;}
+/*객실요금*/
+.reserve .choice .box2 {height:40px; box-sizing:border-box; margin-top:20px; overflow:hidden;}
+.reserve .choice .box2 h4 {display:inline-block; font-size:14px; line-height:40px;}
+.reserve .choice .box2 input {float:right; width:75%; box-sizing:border-box; border:1px solid #CCC; border-top:2px solid #0aa3a9; height:40px;}
+
+/*객실예약 안내*/
+.reserve .info .tit {border-top:2px solid #333; border-bottom:1px solid #CCC; height:50px; box-sizing:border-box;}
+.reserve .info .tit a {display:block; line-height:50px; padding:0 10px; font-size:14px; background:url(../img/arrow01.png) no-repeat 98% center; background-size:17px;}
+.reserve .info .tit.on {background:#e8f1ff;}
+.reserve .info .tit a.on {background-image:url(../img/arrow02.png);}
+
+.reserve .info .txt {padding:0 10px 25px; display:none; border-bottom:1px solid #CCC;}
+.reserve .info .txt h4 {margin-top:30px; font-weight:bold; font-size:14px;}
+.reserve .info .txt p {margin-top:5px;}
+
+/*예약변경 및 취소안내*/
+.reserve .cancle .tit {border-bottom:1px solid #CCC; height:50px; box-sizing:border-box;}
+.reserve .cancle .tit a {display:block; line-height:50px; padding:0 10px; font-size:14px; background:url(../img/arrow01.png) no-repeat 98% center; background-size:17px;}
+.reserve .cancle .tit.on {background:#e8f1ff;}
+.reserve .cancle .tit a.on {background-image:url(../img/arrow02.png);}
+
+.reserve .cancle .txt {padding:20px 10px 25px; display:none; border-bottom:1px solid #CCC;}
+.reserve .cancle .txt p {margin-top:5px;}
+
+/*다음 버튼*/
+.reserve .btn {position:relative; margin-top:20px; height:45px;}
+.reserve .btn button {position:absolute; right:2%; bottom:0; height:45px; border:none; background:#333; color:#FFF; width:30%; border-radius:3px; font-size:14px;}
+
+
+
+
+/***************************패키지***************************/
+.event {}
+
+/*전체 양옆 패딩*/
+.event .package {padding:0 10px;}
+
+/*탭메뉴*/
+.event .package .tab_menu {margin:20px 0 20px;}
+.event .package .tab_menu ul {overflow:hidden; border:1px solid #CCC; box-sizing:border-box;}
+.event .package .tab_menu ul.tab2 {border-top:none;}
+.event .package .tab_menu ul li {float:left; width:25%; border-left:1px solid #CCC; box-sizing:border-box; font-size:12px;}
+.event .package .tab_menu ul li:first-child {border:none;}
+.event .package .tab_menu ul li a {display:block; height:40px; line-height:40px; text-align:center;}
+
+/*패키지 내용*/
+.event .package .box {overflow:hidden;}
+.event .package .box a {display:block;}
+.event .package .box img {width:100%;}
+.event .package .box .txt {margin-top:10px; overflow:hidden; position:relative;}
+.event .package .box .txt h3 {font-size:15px;}
+.event .package .box .txt p {position:absolute; right:0; bottom:0; color:#0aa3a9; line-height:20px;}
+
+/*두번째 박스부터 마진탑 조정*/
+.event .package .box2 {margin-top:30px;}
+
+/*더보기 버튼*/
+.event .package .more_btn {margin:20px 0 20px; text-align:center; height:45px;}
+.event .package .more_btn a {display:block; line-height:45px; background:url(../img/more_btn_arrow.png) #f0f0f0 no-repeat 60% 20px; color:#888; background-size:15px;}
+
+/*스피너*/
+.event .package .spinner {position:fixed; left:50%; top:50%; margin-left:-15px; margin-top:-15px; display:none;}
+.event .package .spinner img {width:30px;}
+
+
+/***************************알펜시아호텔***************************/
+.hotel {padding-bottom:20px;}
+
+/*이미지 크기 100%*/
+.hotel .section img {width:100%;}
+
+/*텍스트*/
+.hotel .section .txt {padding:0 10px 20px;}
+.hotel .section .txt h3 {font-size:15px; color:#0aa3a9; margin-top:15px;}
+.hotel .section .txt h3.txt1 {margin-top:25px;}
+.hotel .section .txt p {line-height:1.5em; margin-top:5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

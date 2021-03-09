@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VDL</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	//slick슬라이더
+	$('.main .slider').slick({
+		vertical:false,//세로 슬라이드
+		autoplay:true,//자동실행
+		speed:1000,//슬라이드,페이드 속도
+		pauseOnHover:false//마우스오버시 멈춤0
+  });
+  
+   /*슬라이더 일시정지버튼*/
+  var num=0; //변수선언
+  $('.main .pause_btn').click(function(e){
+	  e.preventDefault();
+	  if(num==0){
+	  	  $(this).addClass('on');
+		  num=1;
+		  $('.slider').slick('slickPause');
+	  } else {
+		  $(this).removeClass('on');
+		  num=0;
+		  $('.slider').slick('slickPlay');
+	  }
+  });
+  
+  //제품쪽 버튼
+  $('.product_wrap .product').slick({
+		speed:1000,//슬라이드,페이드 속도
+		autoplay:true,
+		pauseOnHover:false,//마우스오버시 멈춤0
+		arrows:false,//prev,next버튼 없어짐
+		dots:true//페이지버튼
+  });
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+		<div class="top">
+        	<h1><a href="index.html"><img src="img/logo.png" alt="vdl"></a></h1>
+            <ul class="left">
+            	<li><a href="#">KOREAN</a></li>
+                <li><a href="#">ENGLISH</a></li>
+            </ul>
+            <ul class="right">
+            	<li><a href="sub_login.html">LOGIN</a></li>
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="gnb_wrap">
+    	<div class="gnb">
+        	<ul class="top_menu">
+            	<li><a href="sub_topseller.html">VDL SHOP<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="sub_topseller.html">TOP SELLER</a></li>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">MAKE UP</a></li>
+                        <li><a href="#">NAIL</a></li>
+                        <li><a href="#">SKIN CARE</a></li>
+                        <li><a href="#">CLEANSING</a></li>
+                        <li><a href="#">BODY&amp;HAIR</a></li>
+                        <li><a href="#">TOOLS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">VDL TREND<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">COLLECTION</a></li>
+                        <li><a href="#">COLOR FINDER</a></li>
+                        <li><a href="#">ALL ABOUT TREND</a></li>
+                        <li><a href="#">THE REAL BOOK</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MEET VDL<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">VDL STORY</a></li>
+                        <li><a href="#">MEET WENDY</a></li>
+                        <li><a href="#">VDL EPISODE</a></li>
+                        <li><a href="#">VDL MEDIA</a></li>
+                        <li><a href="#">STORE INFO</a></li>
+                        <li><a href="#">NEWS</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub_event.html">EVENT<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">당첨자 발표</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub_login.html">MY VDL</a></li>
+            </ul>
+            <div class="search">
+                <form action="" method="">
+                    <fieldset>
+                        <legend>검색창</legend>
+                        <input type="text" placeholder="Search vdlcosmetics.com">
+                        <button type="submit">검색버튼</button>
+                    </fieldset>
+                </form>
+        	</div>
+        </div>
+    </div>
+</div>
+<div class="main_wrap">
+    <div class="location">
+        <a href="index.html"><img src="img/home.png" alt=""></a> <span> ></span> VDL SHOP <span> ></span>
+        <em>TOP SELLER</em>
+    </div>
+    <div class="topseller_wrap">
+    	<div class="topseller">
+            <h2>TOP SELLER</h2>
+            <a href="#" class="btn_prev">TOOLS</a>
+            <a href="#" class="btn_next">NEW</a>
+        </div>
+        <div class="topseller_img"><img src="img/topseller.jpg" alt=""></div>
+        <div class="topseller_content">
+        	<ul class="content">
+            	<li>
+                	<a href="#">
+                    	<h1>TOP1</h1>
+                        <img src="img/table01.png" alt="">
+                        <div class="txt">
+                        	<h3>브이디엘 틴트바 트리플샷<br>12,000원</h3>
+                            <p>틴트, 립밤, 베이스가 하나에!<br>원터치로 그라데이션 립을 연출하는<br>3색 배열 스틱 틴트</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<h1>TOP2</h1>
+                        <img src="img/table02.png" alt="">
+                        <div class="txt">
+                        	<h3>브이디엘 뷰티 에어 퍼프<br>4,000원</h3>
+                            <p>파운데이션을 균일하게 펴 발라주고,<br>밀착력을 높여주는 습식 퍼프</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<h1>TOP3</h1>
+                        <img src="img/table03.png" alt="">
+                        <div class="txt">
+                        	<h3>퍼펙팅 래스트 파운데이션<br>21,000원</h3>
+                            <p>번들거림 없이 오래도록 지속되는<br>깨끗한 커버 스킨 연출</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<h1>TOP4</h1>
+                        <img src="img/table04.png" alt="">
+                        <div class="txt">
+                        	<h3>브이디엘 엑스퍼트 컬러 립 큐브<br>20,000원</h3>
+                            <p>촉촉한 실키-모이스춰 포뮬러로<br>구현된 또하나의 진화된 립큐브</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="content5">
+                	<a href="#">
+                    	<h1>TOP5</h1>
+                        <img src="img/table05.png" alt="">
+                        <div class="txt">
+                        	<h3>브이디엘 뷰티 피니셔<br>24,000원</h3>
+                            <p>스킨케어 마무리 단계에 사용하고<br>베이스 메이크업의 지속력을<br>높여주는 피니셔</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<h1>TOP6</h1>
+                        <img src="img/table06.png" alt="">
+                        <div class="txt">
+                        	<h3>페스티벌 젤 펜슬 컨투어<br>12,000원</h3>
+                            <p>눈가 명암을 또렷하고 입체적으로<br>연출하는 부드러운 젤 텍스쳐<br>아이라이너 펜슬</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<h1>TOP7</h1>
+                        <img src="img/table07.png" alt="">
+                        <div class="txt">
+                        	<h3>브이디엘 네이키드 클렌징 오일<br>25,000원</h3>
+                            <p>강력한 클렌징오일을 미세입자<br>형태의 젤리로 진화시킨 원스텝<br>워셔블 클렌징 오일 크림</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<h1>TOP8</h1>
+                        <img src="img/table08.png" alt="">
+                        <div class="txt">
+                        	<h3>브이디엘 아이 밤 마스카라<br>18,000원</h3>
+                            <p>폭발적인 속눈썹을 연출하는<br>아이밤 마스카라</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+		</div>	
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<h2><img src="img/footer_logo.png" alt=""></h2>
+    	<div class="footer_txt">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보보호정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <p>
+                <span>서울시 종로구 새문안로 58 LG광화문빌딩</span><span>대표이사 : 배정태</span><span>사업자번호 : 113-81-17562</span><span>대표상담번호 : 1661-4169</span>
+            </p> 
+            <div class="copyright">Copyright VDL All right reserved</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

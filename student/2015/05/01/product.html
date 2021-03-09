@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Roseme</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.header_wrap .gnb_slider').slick({
+		speed:900,
+		autoplay:true,
+		dots:true,
+		PauseOnHover:false,
+	});
+	
+	$('.main_wrap .main .visual').slick({
+		speed:1200,
+		autoplay:true,
+		dots:true,
+		PauseOnHover:false,
+	});
+	
+	$('.visual_sub').slick({
+		speed:600,
+		dots:true,
+		PauseOnHover:false,
+	});
+	
+	
+	$('.menu_wrap .menu>li').mouseenter(function(){
+		$('.sub_wrap').stop().slideDown(300);
+	});
+	
+	$('.sub_wrap').mouseleave(function(){
+		$('.sub_wrap').stop().slideUp(300);
+	});
+	
+	$('.menu_wrap .menu>li').mouseleave(function(){
+		$('.sub_wrap').stop().slideUp(300);
+	});
+	
+	$('.sub_wrap').mouseenter(function(){
+		$('.sub_wrap').stop().slideDown(300);
+	});
+	
+	$('.newitem_box').slick({
+	speed:900,
+	autoplay:true,
+	dots:true,
+	PauseOnHover:false,
+	});
+	
+	//두번째꺼와, 첫번째꺼가 안보이게 하는것! show 보이게 , hide안보이게 / 내용이 많지않다면 쓰는 내용
+	 //$('.tab_content ul').eq(1).hide();
+	// $('.tab_content ul').eq(2).hide();
+	$('.product_bot .tab:gt(0)').hide() /*:gt(0) 필터선택자이며 인덱스보다 큰 엘리먼트 선택*/
+	
+	
+	var num;
+	$('.product li').click(function(){ /*li를 클릭했을때*/
+		num=$(this).index();   /* =  대입 == 같다는 뜻 / 클릭한 li의 순서값을 변수에 담아 console 를 통해 값을 알아봤다*/
+		//console.log(num);
+		$('.product_bot .tab').hide() // 초화, 전부다 끄라 라는 명령
+		$('.product_bot .tab').eq(num).show(); //그러고 num(에 0,1,2 가 들어가있기때문에, num으로 값을 넣어주면 된다.) 을 누른것만 보여줘라
+		//탭버튼의 모든 a에 걸린 on클래스 제거
+		$('.product ul li a').removeClass('on')
+		//클릭한 버튼 a에 on클래스를 추가
+		$(this).find('a').addClass('on') /*on을 a에다가 걸었기때문에*/
+		
+		});
+		
+		
+		$('.min1_tab').hide()
+	
+		var num2=0;
+		$('.mn1_box .tit').click(function(e){ 
+		
+			e.preventDefault();
+			if(num2==0){
+				$('.min1_tab').stop().slideDown();
+				num2=1;
+			}else{
+				$('.min1_tab').stop().slideUp();
+				num2=0;
+			}
+		});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+    <div class="login_wrap">
+        <div class="login">
+            <ul>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="membership.html">회원가입</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#" class="last">마이페이지</a></li>
+            </ul>
+          </div>
+    </div>
+    <div class="header">
+        <div class="gnb_wrap">
+            <div class="gnb_slider">
+                <div><a href="#"><img src="img/slider_01.png" alt=""></a></div>
+                <div><a href="#"><img src="img/slider_02.png" alt=""></a></div>
+            </div>
+            <div class="logo">
+                <h1>
+                    <a href="index.html"><img src="img/logo.png" alt="로고"></a>
+                </h1>
+            </div>
+            <div class="search_wrap">
+                <div class="search_gnb">
+                    <ul class="box">
+                        <li class="best"><a href="#"><img src="img/best_icon.png"> 뽀송뽀송 크림 파우더 세트 1+1</a></li>
+                        <li class="search">
+                            <form action="abc.php" method="post">
+                                <fieldset>
+                                    <legend>검색창</legend> 
+                                    <input type="text" placeholder="제품/매장 검색" >
+                                    <button type="submit">검색버튼</button>
+                                </fieldset>
+                            </form>
+                         </li>
+                   	</ul>
+                </div>
+            </div>
+            <div class="menu_wrap">
+                <ul class="menu">
+                    <li><a href="#">회원혜택</a></li>
+                    <li><a href="skin.html">기초스킨</a></li>
+                    <li><a href="#">메이크업</a></li>
+                    <li><a href="#">클렌징</a></li>
+                    <li><a href="#">바디</a></li>
+                    <li><a href="#">남성제품</a></li>
+                    <li><a href="#">피부타입</a></li>
+                 </ul>
+             </div>
+            <div class="sub_wrap">
+            	<div class="sub">
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">당첨자 결과</a></li>
+                        <li><a href="#">출석이벤트</a></li>
+                        <li><a href="#">오늘의 세일</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">에멀젼/스킨</a></li>
+                        <li><a href="#">로션</a></li>
+                        <li><a href="#">에센스/세럼</a></li>
+                        <li><a href="#">크림/아이크림</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">선크림</a></li>
+                        <li><a href="#">베이스/프라이머</a></li>
+                        <li><a href="#">BB크림/파운데이션</a></li>
+                        <li><a href="#">파우더/팩트/컨실러</a></li>
+                        <li><a href="#">아이쉐도우</a></li>
+                        <li><a href="#">립스틱/립밤</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">리무버</a></li>
+                        <li><a href="#">클렌징오일/폼</a></li>
+                        <li><a href="#">클렌징 티슈</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">바디클렌저</a></li>
+                        <li><a href="#">바디로션/오일</a></li>
+                        <li><a href="#">샤워코롱</a></li>
+                        <li><a href="#">샴푸/린스</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">남성 로션/스킨</a></li>
+                        <li><a href="#">남성헤어</a></li>
+                        <li><a href="#">남성 메이크업</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">건성</a></li>
+                        <li><a href="#">중건성</a></li>
+                        <li><a href="#">복합성</a></li>
+                        <li><a href="#">지성</a></li>
+                    </ul>
+                 </div>
+        	</div>
+     	</div>
+	</div>
+</div>
+<div class="main_wrap">
+	<div class="location">
+        <a href="index.html">Home</a><span>></span>
+        <a href="#">기초스킨</a><span>></span>
+        <a href="#">프라임 프라이머 하이프라임</a>
+    </div>
+	<div class="main">
+    	<div class="main_content">
+            <div class="prodL">
+            	<div class="bigimg">
+                	<img src="img/1509185573557585.png" width="312px" height="312px">
+                </div>
+                <div class="smallimg">
+                	<img src="img/1509185573557585.png" width="100px" height="100px">
+                </div>
+            </div>
+            <div class="prodR">
+            	<h2>프라임 프라이머 하이프라임</h2>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <colgroup>
+                        <col width="60">
+                        <col width="200">
+                    </colgroup>
+                   	<tr>
+                        <th>
+                            <img src="img/th_sellprice.gif">
+                        </th>
+                        <td><p class="price">2,0000</p>원</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="img/th_deliver_price.gif">
+                        </th>
+                        <td>9,900원 이상 무료배송 ( 일부지역 제외 )</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="img/th_deliveryinfo2.gif">
+                        </th>
+                        <td>3일 이내 발송 ( 토, 일 공휴일 제외 )</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="img/th_usetime.gif">
+                        </th>
+                        <td>발송일기준 최대 24개월 이내 제조된 제품으로 발송</td>
+                    </tr>
+                     <tr>
+                        <th>
+                            <img src="img/th_buynum.gif">
+                        </th>
+                        <td class="select1">
+                        	<select>
+                            	<option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            개
+                        </td>
+                    </tr>
+                </table>
+                <div class="social">
+                </div>
+                <div class="buy_btn">
+                	<ul>
+                    	<li><a href="#"><img src="img/btn_buynow.gif"></a></li>
+                        <li><a href="#"><img src="img/btn_shoppingcart.gif"></a></li>
+                        <li><a href="#"><img src="img/btn_wishlist2.gif"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+        	<ul>
+                <li class="pro on"><img src="img/mn_productinfo.gif" alt="제품상세정보" ></li>
+            	<li class="review"><img src="img/mn_review.gif" alt="사용후기" ></li>
+                <li class="Q&A"><img src="img/mn_qna.gif" alt="Q&A"></li>
+                <li class="information"><img src="img/mn_info.gif" alt="제품교환/반품정보"></li>
+            </ul>
+        </div>
+        <div class="product_bot">
+            	<div class="tab tab1">
+                	<img src="img/1509185609185039.jpg">
+                </div>
+                <div class="tab tab2">
+                	<table cellpadding="0" cellspacing="0">
+                    <colgroup>
+                    	<col width="15%">
+                        <col width="75%">
+                    </colgroup>
+                    	<tr>
+                        	<th><img src="img/th_satisfaction.gif"></th>
+                            <td>
+                            	<img src="img/th_price.gif" alt="가격">
+                                <select name="price">
+                                	<option>매우만족</option>
+                                    <option>만족</option>
+                                    <option>보통</option>
+                                    <option>불만</option>
+                                    <option>매우불만</option>
+                                </select>
+                            	<img src="img/th_design.gif" alt="디자인">
+                                <select name="review">
+                                	<option>매우만족</option>
+                                    <option>만족</option>
+                                    <option>보통</option>
+                                    <option>불만</option>
+                                    <option>매우불만</option>
+                                </select>
+                            	<img src="img/th_effect.gif" alt="효과">
+                                <select name="review">
+                                	<option>매우만족</option>
+                                    <option>만족</option>
+                                    <option>보통</option>
+                                    <option>불만</option>
+                                    <option>매우불만</option>
+                                </select>
+                            	<img src="img/th_users_think.gif" alt="사용감">
+                                <select name="review">
+                                	<option>매우만족</option>
+                                    <option>만족</option>
+                                    <option>보통</option>
+                                    <option>불만</option>
+                                    <option>매우불만</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                        	<th><img src="img/th_subject.gif" alt="제목"></th>
+                            <td>
+                                    <input type="text" name="subject" >
+                            </td>
+                        </tr>
+                        <tr>
+                        	<th><img src="img/th_contents.gif"></th>
+                            <td>
+                            	<textarea></textarea>
+                            </td>
+                        </tr>
+                        <tr >
+                        	<th><img src="img/th_image.gif"></th>
+                            <td>
+                            	<input type="file">  
+                            </td>
+                        </tr>
+                        <tr class="tab2_last">
+                        	<th></th>
+                            <td >
+                            	<input type="button" alt="등록">  
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab tab3">
+                	<table>
+                    	<colgroup>
+                        	<col width="60">
+                            <col width="90">
+                            <col width="130">
+                            <col width>
+                            <col width="90">
+                            <col width="90">
+                        </colgroup>
+                	<tr>
+                    	<th>
+                        	<img src="img/thw_number.gif" alt="번호">
+                        </th>
+                        <th>
+                        	<img src="img/thw_answerstate.gif" alt="답변현황">
+                        </th>
+                        <th>
+                        	<img src="img/thw_advicegroup.gif" alt="상담현황">
+                        </th>
+                        <th>
+                        	<img src="img/thw_subtitle.gif" alt="제목">
+                        </th>
+                        <th>
+                        	<img src="img/thw_writer.gif" alt="작성자">
+                        </th>
+                        <th>
+                        	<img src="img/thw_date2.gif" alt="작성일">
+                        </th>
+                    </tr>
+                    </table>
+                    <div class="mn1">
+                    	<ul class="mn1_box">
+                        	<li class="num first">1</li>
+                            <li class="answer">처리완료</li>
+                            <li class="que">상품문의</li>
+                            <li class="tit"><a href="#">배송관련 문의드립니다ㅠ_ㅠ</a></li>
+                            <li class="id">nmty</li>
+                            <li class="date">2015-11-12</li>
+                        </ul>
+                    </div>
+                    <div class="min1_tab">
+                    	<p>안녕하세요</p>
+                    </div>
+                </div>
+                <div class="tab tab4">
+                	<img src="img/as_information.jpg" alt="A/S정보">
+                </div>
+        </div>
+    </div>
+</div>
+	</div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+        <ul class="footer_top">
+            <li><a href="#"><img src="img/notice.png"><span> [공지사항] 추석연휴 공지사항 안내</span></a></li>
+        </ul>
+        <ul class="footer_middel">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">영상정보 처리 취급방침</a></li>
+            <li><a href="#">이메일 무단수집 거부</a></li>
+            <li><a href="#">전자공고</a></li>
+        </ul>
+        <ul class="footer_bottom">
+            <li class="footer_img"><a href="#"><img src="img/footer_bottom01.png"></a></li>
+        	<li><img src="img/footer_bottom02.png"></li>
+            <li><img src="img/footer_bottom.png"></li>
+        </ul>
+	</div>
+</div>
+
+
+</body>
+</html>

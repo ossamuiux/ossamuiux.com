@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1140">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>카페드롭탑 Cafe Droptop</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+   //팝업 버튼 닫기//
+    $('#popup .btn_close').click(function() {
+       $('#popup').slideUp();
+    });
+	//메인비쥬얼 슬라이더//
+	$('.main_visual').slick({
+      dots:true,
+      autoplay:true,
+      pauseOnHover:false,
+      autoplaySpeed:5000,
+      speed:2000,   
+      cssEase:'ease',
+      swipe:false
+	});
+	//뉴 프로덕트 슬라이더
+	$('.new_product').slick({
+		autoplay:true,
+		autoplaySpeed:5000,
+		speed:400,
+		slide:'div',
+		cssEase:'linear',
+		swipe:false
+	});
+	//베스트 프로덕트 슬라이더
+	$('.best_product').slick({
+		speed:400,
+		slide:'div',
+		cssEase:'linear',
+		swipe:false
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="popup">
+	<a href="#"></a>
+    <button class="btn_close" type="button">팝업닫기버튼</button>
+</div>
+<div id="header_wrap">
+	<div id="header">
+    	<div class="header_inner">
+        	<h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+            <ul class="util">
+            	<li><a href="login.html">로그인</a></li>
+                <li><a href="login.html">회원가입</a></li>
+                <li><a href="#">멤버십</a></li>
+                <li><a href="#">ENG</a></li>
+            </ul>
+            <ul class="gnb">
+            	<li>
+                	<a href="brandstory.html">DROPTOP</a>
+                    <ul class="depth2">
+                    	<li><a href="brandstory.html">브랜드 이야기</a></li>
+                        <li><a href="brandstory.html">회사소개</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="menu.html">MENU</a>
+                	<ul class="depth2">
+                    	<li><a href="menu.html">신제품</a></li>
+                        <li><a href="menu.html">커피</a></li>
+                        <li><a href="menu.html">음료</a></li>
+                        <li><a href="menu.html">푸드</a></li>
+                        <li><a href="menu.html">코슈타르트</a></li>
+                 	</ul>  
+                </li>
+                <li>
+                	<a href="#">STORE</a>
+                	<ul class="depth2">
+                    	<li><a href="#">매장안내</a></li>
+                        <li><a href="#">테마스토어</a></li>
+                 	</ul>     
+                </li>
+                <li>
+                	<a href="#">FRANCHISE</a>
+                    <ul class="depth2">
+                    	<li><a href="#">창업칼럼</a></li>
+                        <li><a href="#">창업노하우</a></li>
+                        <li><a href="#">창업안내</a></li>
+                        <li><a href="#">창업설명회</a></li>
+                        <li><a href="#">가맹상담</a></li>
+                        <li><a href="#">Master Fr.App</a></li>
+                 	</ul>     
+                </li>
+                <li>
+                	<a href="#">EVENT</a>
+                    <ul class="depth2">
+                    	<li><a href="#">컬처탑</a></li>
+                        <li><a href="#">이벤트소식</a></li>
+                        <li><a href="#">당첨자발표</a></li>
+                        <li><a href="#">설문조사</a></li>
+                        <li><a href="#">제휴카드</a></li>
+                 	</ul>     
+                </li>
+                <li class="gnb6">
+                	<a href="#">COMMUNITY</a>
+                    <ul class="depth2">
+                    	<li><a href="#">공지사항</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">제작지원</a></li>
+                        <li><a href="#">멀티미디어</a></li>
+                        <li><a href="#">소셜드롭탑</a></li>
+                        <li><a href="#">고객의소리</a></li>
+                 	</ul>     
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="main">
+	<div class="main_visual">
+    	<div class="visual1"><a href="#"></a></div>
+        <div class="visual2"><a href="#"></a></div>
+    </div>
+    <div class="section1">
+        <div class="section1_inner">
+        	<div class="new">
+        		<h2>NEW</h2>
+                <img src="images/new_line.png" alt="">
+                <p>드롭탑에서<br>새롭게 선보이는 신제품</p>
+                <div class="new_product">
+                	<div><a href="#"><img src="images/new_product1.png" alt=""></a></div>
+                 	<div><a href="#"><img src="images/new3.png" alt=""></a></div>
+                   	<div><a href="#"><img src="images/new2.png"alt=""></a></div>
+                    <p class="new_bg"><img src="images/new_top-03.png" alt=""></p>
+                </div>
+        	</div>
+            <div class="best">
+        		<h2>BEST</h2>
+                <img src="images/new_line.png" alt="">
+                <p>드롭탑에서<br>가장 인기있는 베스트제품</p>	
+                <div class="best_product">
+                   	<div><a href="#"><img src="images/best3.png" alt=""></a></div>	
+                  	<div><a href="#"><img src="images/best4.png" alt=""></a></div>
+                    <div><a href="#"><img src="images/best1.png" alt=""></a></div>
+                    <p class="best_bg"><img src="images/best_bg.png"alt=""></p>
+                </div>
+            </div>    
+    	</div>
+   	</div>
+    <div class="section2">
+    	<div class="section2_inner">
+        	<h2>DROPTOP STORY</h2>
+            <ul class="story_list">
+            	<li>
+                	<a href="#">
+                    	<h3>브랜드 스토리</h3>
+                    	<img class="brand_line" src="images/brand_line.png" alt="">
+                   		<img src="images/story.png" alt="">
+                    </a>
+                </li>
+                <li class="story_list2">
+                	<a href="#">
+                    	<h3>커피이야기</h3>
+                    	<img class="coffee_line" src="images/coffee_line.png" alt="">
+                    	<p>드롭탑이 추구하는<br>로스팅 철학은?</p>
+                    	<img src="images/story02.png" alt="">
+                    </a>
+                </li>
+                <li class="story_list3">
+                	<a href="#">
+                    	<h3>코슈타르트</h3>
+                    	<img class="cossu_line" src="images/cossu_line.png" alt="">
+                    	<p>나를 위한 달콤한 선물</p>
+                    	<img src="images/cossu.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section3">
+    	<div class="event">
+        	<a href="#">
+        		<h2>CULTURETOP<br>EVENT</h2>
+            	<p>드롭탑의 다양한 이벤트<br>소식을 전합니다.</p>
+            	<img src="images/event.jpg" alt="">
+            </a>
+        </div>
+        <div class="box_wrap">
+        	<div class="box">
+                <h3>공지사항</h3>
+                <ul class="notice_list">
+                	<li><a href="#">드롭탑 2017 비젼&amp;미션</a></li>
+                 	<li><a href="#">드롭탑 애플리케이션 사용설명서</a></li>
+                 	<li><a href="#">드롭탑,2015 고객감동브랜드지수</a></li>
+                </ul>
+                <p class="notice_date">2017.01.10<br>2016.10.05<br>2015.05.01</p>
+                <p class="arrow"><a href="#"></a></p>
+                <img class="icon" src="images/notice01.png" alt="">
+            </div>
+            <div class="box media">
+            	<a href="#">
+                	<h3>멀티미디어</h3>
+                    <p>드롭탑이 함께한 다양한 활동들을<br>멀티미디어로 만나보세요.</p>
+                    <p class="arrow"><a href="#"></a></p>
+                    <img class="icon2" src="images/media01.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="global">
+        	<a href="#"><img src="images/global_03_03.png" alt=""></a>
+            <a class="icon3" href="#"></a>
+        </div>
+    </div>
+    <div class="section4">
+    	<div class="section4_inner">
+        	<div class="line"></div>
+        	<div class="find">
+            	<img src="images/startups01.png" alt="">
+                <h2>매장찾기</h2>
+                <p>가까운 드롭탑 매장을 찾아보세요!</p>
+                <div class="search_wrap">
+                	<form>
+                		<fieldset>
+                    		<legend>매장검색</legend>
+                        		<input type="text" placeholder="매장명 또는 주소를 입력하세요." >
+                        		<button type="submit">이동</button>
+                    	</fieldset>
+                	</form>
+                </div> 
+                <a href="#">자세히보기</a>
+            </div>
+            <div class="startsup">
+            	<img src="images/startups01.png" alt="">
+                <h2>창업문의</h2>
+                <p>드롭탑에서 제공하는 창업에 관련된<br>다양한 정보와 아이템을 확인하세요.</p>
+                <h3>1577-9073</h3> 
+                <a href="#">자세히보기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<div class="footer_inner">
+    	<h2><a href="index.html"><img src="images/footer_logo.png" alt="logo"></a></h2>
+    	<div class="menu_wrap">
+        	<ul class="footer_menu">
+            	<li><a href="#">회사소개</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">본/지사안내</a></li>
+                <li><a href="#">채용공고</a></li>
+                <li><a href="#">시공업체등록</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+           	<address>서울시 강남구 논현동 1번지 삼주빌딩 12층 (신한은행 건물) (주)다도글로벌/카페드롭탑 사업자등록증:211-88-47165 대표이사:홍탁성
+            <br>COPYRIGHT ⓒ 2014 CAFE DROPTOP ALL RIGHTS RESERVED.</address>
+        </div>
+        <ul class="footer_sns">
+            <li class="sns1"><a href="#"></a></li>
+            <li class="sns2"><a href="#"></a></li>
+            <li class="sns3"><a href="#"></a></li>
+            <li class="sns4"><a href="#"></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

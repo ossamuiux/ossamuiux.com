@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>소개페이지</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.gnb_menu li').click(function(e){
+		e.preventDefault();
+		
+		var num=$(this).index();
+		
+		if(num==0){
+			$('html,body').stop().animate({'scrollTop':'0'},300);
+		} else if(num==1){
+			$('html,body').stop().animate({'scrollTop':'1050px'},300);
+		} else if (num==2){
+			$('html,body').stop().animate({'scrollTop':'2050px'},300);
+		} else{
+			$('html,body').stop().animate({'scrollTop':'3300px'},300);
+		}
+	});
+	
+	$('.work li').click(function(e){
+		e.preventDefault();
+	});
+	
+	$('.intro .arrow').click(function(e){
+		$('html,body').stop().animate({'scrollTop':'1050px'},300);
+	});
+	
+	$('.group1').colorbox({rel:'group1'});
+
+});
+</script>
+</head>
+
+<body>
+<div class="gnb">
+	<ul class="gnb_menu">
+    	<li><a class="btn1" href="#" title="HOME">home</a></li>
+        <li><a class="btn2" href="#" title="INFO">info</a></li>
+        <li><a class="btn3" href="#" title="PROJECT">project</a></li>
+        <li><a class="btn4" href="#" title="WORK">work</a></li>
+    </ul>
+</div>
+<div class="section1">
+	<div class="intro">
+    	<img class="txt" src="img/intro_txt.png" alt="">
+        <a href="#"><img class="arrow" src="img/intro_arrow.png" alt=""></a>
+        <img class="star" src="img/bg_star.png" alt="">
+        <img class="star star2" src="img/bg_star.png" alt="">
+    </div>
+</div>
+<div class="section2">
+	<div class="info">
+    	<h1><img class="tit_star" src="img/tit_star.png" alt=""><img src="img/menu_info.png" alt=""></h1>
+    	<img class="profile" src="img/info.jpg" alt="">
+        <img class="star_bg" src="img/info_bg_star.png">
+        <img class="star_bg2" src="img/info_bg_star02.png">
+    </div>
+</div>
+<div class="section3">
+	<div class="project">
+    	<h1><img class="tit_star" src="img/tit_star.png" alt=""><img src="img/menu_project.png" alt=""></h1>
+        <div class="old">
+        	<a class="link" href="http://www.babeans.com" target="_blank" title="새창열기">
+            	<img src="img/oldsite_img.jpg" alt="">
+                <div class="more">
+                	<h3>Original Site</h3>
+                </div>
+            </a>
+            <img class="txt1" src="img/project_txt01.png" alt="">
+        </div>
+        <div class="old new">
+        	<a class="link" href="babeans/index.html" target="_blank" title="새창열기">
+            	<img src="img/renewalsite_img.jpg" alt="">
+                <div class="more">
+                	<h3>Renewal Site</h3>
+                </div>
+            </a>
+            <img class="txt1" src="img/project_txt02.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="section4">
+	<div class="work">
+    	<h1><img class="tit_star" src="img/tit_star.png" alt=""><img src="img/menu_work.png" alt=""></h1>
+        <ul>
+            <li><a class="group1" href="img/work_popup01.jpg"><img src="img/work01.jpg" alt=""><h3>로고 디자인</h3><span></span></a></li>
+            <li><a class="group1" href="img/work_popup02.jpg"><img src="img/work02.jpg" alt=""><h3>명함 Mock-up</h3><span></span></a></li>
+            <li><a class="group1" href="img/work_popup03.jpg"><img src="img/work03.jpg" alt=""><h3>이벤트 페이지</h3><span></span></a></li>
+        </ul>
+        <img class="star_bg" src="img/work_bg_star.png" alt="">
+        <img class="star_bg2" src="img/work_bg_star02.png" alt="">
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

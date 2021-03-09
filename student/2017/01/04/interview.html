@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1400">
+<title>INTERVIEW</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(e) {
+	//모달팝업
+    $('.interview_board .right_td a').click(function(e) {
+        e.preventDefault();
+		
+		var num = $(this).attr('class').substr(3);
+		console.log(num);
+		$('.modal_popup').show();
+		$('.answer>div').eq(num-1).show();
+		 
+    });
+
+	//팝업 버튼 
+	$('.modal_popup .btn_close').click(function(e) {
+        $('.modal_popup,.answer>div').hide();
+    });
+	
+       
+	
+	//매월 구독 신청
+	 $('.click .btn_go').click(function(e) {
+        e.preventDefault();
+		
+		$('.modal_popup2').show();
+		 
+    });
+	//매월 구독 신청 닫기 버튼
+	$('.modal_popup2 .btn_close').click(function(e) {
+        $('.modal_popup2').hide();
+		
+		$('.modal_popup2 .guide').attr('src',''); 
+	
+    });
+	
+	
+});
+</script>
+</head>
+<body>
+<div id="header" class="interview">
+    <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+    <ul class="util">
+        <li class="util1"><a href="interview.html"></a></li>
+        <li class="util2"><a href="collection.html"></a></li>
+        <li class="util3"><a href="hotissue.html"></a></li>   
+    </ul>
+</div>
+<div id="main" class="interview">
+	<div class="btn_top ">
+    	<a href="#">top</a>
+    </div>
+	<div class="sub_visual">
+    	<div class="sub_visual_inner">
+    		<h2>ARE YOU READY<br>FOR KNOW ME?</h2>
+        </div>
+    </div>
+    <div class="section1">
+    	<div class="left_txt">
+        	<img src="images/introduce_me.png" alt="">
+            <img class="cover" src="images/introduce_me_cover.png" alt="">
+        </div>
+        <div class="right_txt">
+        	<img class="itgirl" src="images/itgirl.png" alt="">
+            <div class="btn_go"><a href="#">이력서 보러가기</a></div>
+        </div>
+        
+    </div>
+    <div class="section2">
+    	<div class="section2_inner">
+    		<h3><img src="images/analysisme.png" alt=""></h3>
+            <img class="contents" src="images/analysis.png" alt="">
+            <img class="square_line" src="images/analysis_bg.png" alt="">
+            <img class="copy" src="images/copyright1.png" alt="">
+        </div>
+    </div>
+    <div class="section3">
+    	<div class="section3_inner">
+        	<h3><img src="images/desginskill.png" alt=""></h3>
+           	<img class="design_skill" src="images/skill_contents.png" alt="">
+        </div>
+    </div>
+    <div class="section4">
+    	<div class="section4_inner">
+        	<h3><img src="images/interview_title.png" alt=""></h3>
+            <div class="interview_board">
+                <table>
+                	<tr>
+                    	<td class="nc"><img src="images/li_bg.png" alt=""></td>
+                        <td class="left_td"><p class="p1"><span>자신의 성장과정에 대해 말해달라.</span></p></td>
+                        <td class="right_td"><a class="btn1" href="#"><img src="images/answear.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                    	<td class="nc"><img src="images/li_bg.png" alt=""></td>
+                        <td class="left_td"><p class="p2"><span>평소 성격의 장단점이 뭔지 솔직하게 말해달라.</span></p></td>
+                        <td class="right_td"><a class="btn2" href="#"><img src="images/answear.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                    	<td class="nc"><img src="images/li_bg.png" alt=""></td>
+                        <td class="left_td"><p class="p3"><span>패션쪽에서 일하다가 웹디자이너가 될려고 하는 이유가 있나?</span></p></td>
+                        <td class="right_td"><a class="btn3" href="#"><img src="images/answear.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                    	<td class="nc"><img src="images/li_bg.png" alt=""></td>
+                        <td class="left_td"><p class="p4"><span>그럼 웹디자이너가 된다면 1년뒤,그리고 3년뒤에는?</span></p></td>
+                        <td class="right_td"><a class="btn4" href="#"><img src="images/answear.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                    	<td class="nc"><img src="images/li_bg.png" alt=""></td>
+                        <td class="left_td"><p class="p5"><span>끝으로 하고 싶은 말이 있거나 앞으로의 다짐이 있는지.</span></p></td>
+                        <td class="right_td"><a class="btn5" href="#"><img src="images/answear.png" alt=""></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal_popup">
+                <div class="answer">
+                    <div class="answer1"><img src="images/answer.png" alt=""></div>
+                    <div class="answer2"><img src="images/answer2.png" alt=""></div>
+                    <div class="answer3"><img src="images/answer3.png" alt=""></div>
+                    <div class="answer4"><img src="images/answer4.png" alt=""></div>
+                    <div class="answer5"><img src="images/answer5.png" alt=""></div>
+                    <button type="button" class="btn_close">팝업버튼닫기</button>
+                </div>    
+            </div>
+            <img class="copy" src="images/copyright2.png" alt="">
+            <div class="click">
+            	<button class="btn_go" type="button" title="연락처보기">매월 구독신청 안내</button>
+                <div class="portfolio"><a href="collection.html">포트폴리오 보러가기</a></div>
+                <div class="modal_popup2">
+                    <div class="guide">
+                    	<img src="images/guide.png" alt="">
+                    	<button type="button" class="btn_close">팝업버튼닫기</button>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+    </div>
+</div>
+<div id="footer">
+	
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

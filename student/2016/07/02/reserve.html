@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone = no">
+<link rel="apple-touch-icon" href="/m/img/mobileweb.png">
+<title>롯데시네마 모바일 : 빠른예매</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/font.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	//상단 텝메뉴
+	$('.tab_content>div:gt(0)').hide();
+	var num;
+	
+	$('.tab_btn li a').click(function(e){
+		e.preventDefault();
+		
+		num=$(this).parent().index();
+		//console.log(num);
+		
+		$('.tab_content>div').hide();
+		$('.tab_content>div').eq(num).show();
+		$('.tab_btn li a').not(this).removeClass('on');
+		$(this).addClass('on');
+		
+	});
+	//영화포스터매치
+	$('.m_poster li').hide();
+	var num1;
+	
+	$('.m_content li').click(function(e){
+			e.preventDefault();
+			
+			num1=$(this).index();
+			
+			$('.m_poster li').hide();
+			$('.m_content li').find('a').not(this).removeClass('on');
+			$(this).find('a').addClass('on');
+			$('.m_poster li').eq(num1).show();
+	});
+	//영화관 매치
+	$('.c_right .c_content2:gt(0)').hide();
+	var num2;
+	
+	$('.c_left .c_content li').click(function(e){
+		e.preventDefault();
+		
+		num2=$(this).index();
+		//console.log(num2);
+		$('.c_left .c_content li').find('a').not(this).removeClass('on');
+		$(this).find('a').addClass('on');
+		$('.c_right .c_content2').hide();
+		$('.c_right .c_content2').eq(num2).show();
+	});
+	//영화관명 매치
+	var num3;
+	
+	$('.c_right .c_content2 li').click(function(e){
+		e.preventDefault();
+		
+		num3=$(this).index();
+		console.log(num3);
+		
+		$('.tab_btn .c_theater').hide();
+		$('.tab_btn .c_theater').show();
+		$('.tab_btn .c_theater h2').hide();
+		$('.tab_btn .c_theater').find('h2').eq(num3).show();
+	});
+	
+	if (location.href.indexOf('cinema') !=-1) {
+		$('.tab_btn li').find('a').removeClass('on');
+		$('.tab_btn li').find('a.cinema').addClass('on');
+		$('.tab_content .cinema_content').siblings().not(this).hide();
+		$('.tab_content .cinema_content').show();
+	}
+});
+</script>
+</head>
+<body>
+<div class="wrap_hide">
+    <div class="wrap">
+        <div class="header reserve">
+            <a class="prev_btn" href="javascript:history.back()"><img src="img/arrow_prev.png" alt=""></a>
+            <h1>빠른예매</h1>
+            <a class="refresh_btn" href="javascript:location.reload()">예매초기화<img src="img/refresh.png" alt=""></a>
+        </div>
+        <div class="main reserve">
+            <form>
+                <fieldset>
+                <legend>빠른예매</legend>
+                    <div class="tab_menu">
+                        <ul class="tab_btn">
+                            <li>
+                            	<a class="movie on" href="#"></a>
+                                <ul class="m_poster">
+                                    <li><img src="img/s_captain.jpg" alt=""></li>
+                                    <li><img src="img/s_captain.jpg" alt=""></li>
+                                    <li><img src="img/s_007.jpg" alt=""></li>
+                                    <li><img src="img/s_007.jpg" alt=""></li>
+                                    <li><img src="img/s_gooddino.jpg" alt=""></li>
+                                    <li><img src="img/s_gooddino.jpg" alt=""></li>
+                                    <li><img src="img/s_deadpool.jpg" alt=""></li>
+                                    <li><img src="img/s_deadpool.jpg" alt=""></li>
+                                    <li><img src="img/s_sterwars.jpg" alt=""></li>
+                                    <li><img src="img/s_sterwars.jpg" alt=""></li>
+                                    <li><img src="img/s_stevejobs.jpg" alt=""></li>
+                                    <li><img src="img/s_kungfupanda3.jpg" alt=""></li>
+                                    <li><img src="img/s_kungfupanda3.jpg" alt=""></li>
+                                    <li><img src="img/s_the5thwave.jpg" alt=""></li>
+                                    <li><img src="img/s_room.jpg" alt=""></li>
+                                    <li><img src="img/s_pawnsacrifice.jpg" alt=""></li>
+                                    <li><img src="img/s_cherlock.jpg" alt=""></li>
+                                    <li><img src="img/s_macbeth.jpg" alt=""></li>
+                                    <li><img src="img/s_xman.jpg" alt=""></li>
+                                    <li><img src="img/s_eternal.jpg" alt=""></li>
+                                    <li><img src="img/s_batman.jpg" alt=""></li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<a class="cinema" href="#"></a>
+                                <div class="c_theater">
+                                    <h2>노원<img src="img/choose1_cinema.png" alt=""></h2>
+                                    <h2>수락산<img src="img/choose1_cinema.png" alt=""></h2>
+                                    <h2>청량리<img src="img/choose1_cinema.png" alt=""></h2>
+                                </div>    
+                            </li>
+                            <li><a class="date" href="#"></a></li>	
+                        </ul>
+                    </div>
+                    <div class="tab_content">
+                        <div class="movie_content content">   
+                            <ul class="m_content">
+                                <li><a href="#"><img src="img/12.png" alt="">캡틴아메리카 : 시빌 워</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">캡틴아메리카 : 시빌 워 (super 4D3D)</a></li>
+                                <li><a href="#"><img src="img/15.png" alt="">007 : 스펙터</a></li>
+                                <li><a href="#"><img src="img/15.png" alt="">007 : 스펙터 (샤롯데)</a></li>
+                                <li><a href="#"><img src="img/10.png" alt="">굿 다이노 (자막)</a></li>
+                                <li><a href="#"><img src="img/10.png" alt="">굿 다이노 (더빙)</a></li>
+                                <li><a href="#"><img src="img/18.png" alt="">데드풀</a></li>
+                                <li><a href="#"><img src="img/18.png" alt="">데드풀 (씨네커플)</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">스타워즈 : 깨어난 포스</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">스타워즈 : 깨어난 포스 (super 4d)</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">스티브 잡스</a></li>
+                                <li><a href="#"><img src="img/10.png" alt="">쿵푸팬더3 (자막)</a></li>
+                                <li><a href="#"><img src="img/10.png" alt="">쿵푸팬더3 (더빙)</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">제5침공</a></li>
+                                <li><a href="#"><img src="img/15.png" alt="">룸</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">세기의 매치</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">셜록 : 유령신부</a></li>
+                                <li><a href="#"><img src="img/15.png" alt="">맥베스</a></li>
+                                <li><a href="#"><img src="img/12.png" alt="">엑스맨 : 아포칼립스</a></li>
+                                <li><a href="#"><img src="img/15.png" alt="">이터널 선샤인 (씨네커플)</a></li>
+                                <li><a href="#"><img src="img/15.png" alt="">배트맨 대 슈퍼맨 : 저스티스의 시작</a></li>
+                            </ul>
+                        </div>
+                        <div class="cinema_content content">
+                            <div class="c_left">   
+                                <ul class="c_content">
+                                    <li class="icon"><a class="on" href="#">가까운 영화관 (03)</a></li>
+                                    <li><a href="#">서울 (23)</a></li>
+                                    <li><a href="#">경기/인천 (34)</a></li>
+                                    <li><a href="#">충청/대전 (07)</a></li>
+                                    <li><a href="#">전라/광주 (08)</a></li>
+                                    <li><a href="#">경북/대구 (11)</a></li>
+                                    <li><a href="#">경남/부산 (20)</a></li>
+                                    <li><a href="#">강원 (02)</a></li>
+                                    <li><a href="#">제주 (02)</a></li>
+                                    <li><a href="#">Super plex (04)</a></li>
+                                    <li><a href="#">super 4d (11)</a></li>
+                                    <li><a href="#">super plex g (01)</a></li>
+                                    <li><a href="#">super vibe (07)</a></li>
+                                    <li><a href="#">super sound (12)</a></li>
+                                    <li><a href="#">charlotte (11)</a></li>
+                                    <li><a href="#">charlotte p (01)</a></li>
+                                    <li><a href="#">cinefamily (01)</a></li>
+                                    <li><a href="#">cinecouple (08)</a></li>
+                                    <li><a href="#">cinebiz (15)</a></li>
+                                    <li><a href="#">arte classic (09)</a></li>
+                                    <li><a href="#">arte ani (01)</a></li>
+                                </ul>
+                            </div>
+                            <div class="c_right">   
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">노원<em>0.7km</em></a></li>
+                                    <li><a  href="#">수락산<em>3.1km</em></a></li>
+                                    <li><a class="color" href="#">청량리<em>7.8km</em></a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">가산디지털</a></li>
+                                    <li><a class="color" href="#">가양</a></li>
+                                    <li><a href="#">강동</a></li>
+                                    <li><a class="color" href="#">건대입구</a></li>
+                                    <li><a href="#">김포공항</a></li>
+                                    <li><a class="color" href="#">노원</a></li>
+                                    <li><a href="#">누리꿈(상암)</a></li>
+                                    <li><a class="color" href="#">독산</a></li>
+                                    <li><a href="#">브로드웨이(신사)</a></li>
+                                    <li><a class="color" href="#">서울대입구</a></li>
+                                    <li><a href="#">수락산</a></li>
+                                    <li><a class="color" href="#">신도림</a></li>
+                                    <li><a href="#">신림</a></li>
+                                    <li><a class="color" href="#">씨티(강남)</a></li>
+                                    <li><a href="#">에비뉴엘(명동)</a></li>
+                                    <li><a class="color" href="#">영등포</a></li>
+                                    <li><a href="#">용산(전자랜드)</a></li>
+                                    <li><a class="color" href="#">장안</a></li>
+                                    <li><a href="#">청량리</a></li>
+                                    <li><a class="color" href="#">합정</a></li>
+                                    <li><a href="#">홍대입구</a></li>
+                                    <li><a class="color" href="#">황학</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">검단</a></li>
+                                    <li><a href="#">광교아울렛</a></li>
+                                    <li><a class="color" href="#">광명(광명사거리)</a></li>
+                                    <li><a href="#">광명아울렛</a></li>
+                                    <li><a class="color" href="#">광주터미널</a></li>
+                                    <li><a href="#">구리</a></li>
+                                    <li><a class="color" href="#">구리아울렛</a></li>
+                                    <li><a href="#">라페스타(일산)</a></li>
+                                    <li><a class="color" href="#">마석</a></li>
+                                    <li><a href="#">병점</a></li>
+                                    <li><a class="color" href="#">부천(신중동역)</a></li>
+                                    <li><a href="#">부천역</a></li>
+                                    <li><a class="color" href="#">부평</a></li>
+                                    <li><a href="#">부평역사</a></li>
+                                    <li><a class="color" href="#">산본</a></li>
+                                    <li><a href="#">성남</a></li>
+                                    <li><a class="color" href="#">성남신흥</a></li>
+                                    <li><a href="#">센트럴락(안산)</a></li>
+                                    <li><a class="color" href="#">수원</a></li>
+                                    <li><a href="#">시화</a></li>
+                                    <li><a class="color" href="#">안산(롯데마트)</a></li>
+                                    <li><a href="#">안산고잔</a></li>
+                                    <li><a class="color" href="#">안성</a></li>
+                                    <li><a href="#">안양(안양역)</a></li>
+                                    <li><a class="color" href="#">양주고읍</a></li>
+                                    <li><a href="#">오산</a></li>
+                                    <li><a class="color" href="#">용인</a></li>
+                                    <li><a href="#">인덕원</a></li>
+                                    <li><a class="color" href="#">인천</a></li>
+                                    <li><a href="#">주엽(일산)</a></li>
+                                    <li><a class="color" href="#">진접</a></li>
+                                    <li><a href="#">파주아울렛</a></li>
+                                    <li><a class="color" href="#">평촌</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">대전(롯데백화점)</a></li>
+                                    <li><a href="#">대전둔산(월평동)</a></li>
+                                    <li><a class="color" href="#">서산</a></li>
+                                    <li><a href="#">서청주</a></li>
+                                    <li><a class="color" href="#">아산터미널</a></li>
+                                    <li><a href="#">청주</a></li>
+                                    <li><a class="color" href="#">청주 충대</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">광주(롯데백화점)</a></li>
+                                    <li><a href="#">군산</a></li>
+                                    <li><a class="color" href="#">목포</a></li>
+                                    <li><a href="#">수완</a></li>
+                                    <li><a class="color" href="#">전주(롯데백화점)</a></li>
+                                    <li><a href="#">전주평화</a></li>
+                                    <li><a class="color" href="#">충장로</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">경산</a></li>
+                                    <li><a href="#">경주</a></li>
+                                    <li><a class="color" href="#">구미</a></li>
+                                    <li><a href="#">구미공단</a></li>
+                                    <li><a class="color" href="#">대구광장</a></li>
+                                    <li><a href="#">대구율하</a></li>
+                                    <li><a class="color" href="#">동성로</a></li>
+                                    <li><a href="#">상인</a></li>
+                                    <li><a class="color" href="#">성서</a></li>
+                                    <li><a href="#">포항</a></li>
+                                    <li><a class="color" href="#">프리미엄칠곡</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">광복(남포동)</a></li>
+                                    <li><a href="#">김해부원</a></li>
+                                    <li><a class="color" href="#">김해아울렛</a></li>
+                                    <li><a href="#">동래</a></li>
+                                    <li><a class="color" href="#">동부산(아울렛)</a></li>
+                                    <li><a href="#">마산(경남대)</a></li>
+                                    <li><a class="color" href="#">마산터미널</a></li>
+                                    <li><a href="#">부산본점(백화점)</a></li>
+                                    <li><a class="color" href="#">사상(애플아울렛)</a></li>
+                                    <li><a href="#">서면(NC백화점)</a></li>
+                                    <li><a class="color" href="#">센텀시티(백화점)</a></li>
+                                    <li><a href="#">양산</a></li>
+                                    <li><a class="color" href="#">오투(부산대)</a></li>
+                                    <li><a href="#">울산(백화점)</a></li>
+                                    <li><a class="color" href="#">울산성남</a></li>
+                                    <li><a href="#">진주</a></li>
+                                    <li><a class="color" href="#">진해</a></li>
+                                    <li><a href="#">창원</a></li>
+                                    <li><a class="color" href="#">통영</a></li>
+                                    <li><a href="#">해운대</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">남원주</a></li>
+                                    <li><a href="#">동해</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">서귀포</a></li>
+                                    <li><a href="#">제주</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">광명아울렛</a></li>
+                                    <li><a href="#">광복</a></li>
+                                    <li><a class="color" href="#">상인</a></li>
+                                    <li><a href="#">수원</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">가산디지털</a></li>
+                                    <li><a class="color" href="#">광복</a></li>
+                                    <li><a href="#">김포공항</a></li>
+                                    <li><a class="color" href="#">노원</a></li>
+                                    <li><a href="#">서청주</a></li>
+                                    <li><a class="color" href="#">수완</a></li>
+                                    <li><a href="#">수원</a></li>
+                                    <li><a class="color" href="#">울산</a></li>
+                                    <li><a href="#">청량리</a></li>
+                                    <li><a class="color" href="#">평촌</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">가산디지털</a></li>
+                                    <li><a href="#">건대입구</a></li>
+                                    <li><a class="color" href="#">김해아울렛</a></li>
+                                    <li><a href="#">양주고읍</a></li>
+                                    <li><a class="color" href="#">울산</a></li>
+                                    <li><a href="#">진해</a></li>
+                                    <li><a class="color" href="#">평촌</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">부산본점</a></li>
+                                    <li><a class="color" href="#">서청주</a></li>
+                                    <li><a href="#">수완</a></li>
+                                    <li><a class="color" href="#">수원</a></li>
+                                    <li><a href="#">양주고읍</a></li>
+                                    <li><a class="color" href="#">울산</a></li>
+                                    <li><a href="#">창원</a></li>
+                                    <li><a class="color" href="#">청량리</a></li>
+                                    <li><a href="#">파주아울렛</a></li>
+                                    <li><a class="color" href="#">평촌</a></li>
+                                    <li><a href="#">황학</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">건대입구</a></li>
+                                    <li><a class="color" href="#">에비뉴엘(명동)</a></li>
+                                    <li><a href="#">김포공항</a></li>
+                                    <li><a class="color" href="#">안산(롯데마트)</a></li>
+                                    <li><a href="#">인천</a></li>
+                                    <li><a class="color" href="#">평촌</a></li>
+                                    <li><a href="#">광주(롯데백화점)</a></li>
+                                    <li><a class="color" href="#">동성로</a></li>
+                                    <li><a href="#">광복</a></li>
+                                    <li><a class="color" href="#">센텀시티</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">광복</a></li>
+                                    <li><a class="color" href="#">노원</a></li>
+                                    <li><a href="#">동래</a></li>
+                                    <li><a class="color" href="#">부산본점</a></li>
+                                    <li><a href="#">신도림</a></li>
+                                    <li><a class="color" href="#">울산</a></li>
+                                    <li><a href="#">충장로</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">가산디지털</a></li>
+                                    <li><a class="color" href="#">광복</a></li>
+                                    <li><a href="#">김포공항</a></li>
+                                    <li><a class="color" href="#">누리꿈</a></li>
+                                    <li><a href="#">대전</a></li>
+                                    <li><a class="color" href="#">라페스타</a></li>
+                                    <li><a href="#">서청주</a></li>
+                                    <li><a class="color" href="#">수완</a></li>
+                                    <li><a href="#">안양</a></li>
+                                    <li><a class="color" href="#">에비뉴엘</a></li>
+                                    <li><a href="#">울산</a></li>
+                                    <li><a class="color" href="#">대구율하</a></li>
+                                    <li><a href="#">청량리</a></li>
+                                    <li><a class="color" href="#">파주아울렛</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                    <li><a href="#">건대입구</a></li>
+                                    <li><a class="color" href="#">광복</a></li>
+                                    <li><a href="#">부평</a></li>
+                                    <li><a class="color" href="#">센텀시티</a></li>
+                                    <li><a href="#">신도림</a></li>
+                                    <li><a class="color" href="#">오투(부산대)</a></li>
+                                    <li><a href="#">주엽(일산)</a></li>
+                                    <li><a class="color" href="#">청주</a></li>
+                                </ul>
+                                <ul class="c_content2">
+                                    <li><a class="color" href="#">월드타워</a></li>
+                                </ul>
+                            </div>   
+                        </div>
+                        <div class="date_content content">   
+                            <ul class="d_content">
+                                <li><a class="color blue" href="#">3월 19일 (토) sat<img src="img/today.png" alt=""></a></li>
+                                <li><a class="red" href="#">3월 20일 (일) sun</a></li>
+                                <li><a class="color" href="#">3월 21일 (월) mon</a></li>
+                                <li><a href="#">3월 22일 (화) tue</a></li>
+                                <li><a class="color" href="#">3월 23일 (수) wed</a></li>
+                                <li><a href="#">3월 24일 (목) thu</a></li>
+                                <li><a class="color" href="#">3월 25일 (금) fri</a></li>
+                                <li><a class="blue" href="#">3월 26일 (토) sat</a></li>
+                                <li><a class="color red" href="#">3월 27일 (일) sun</a></li>
+                                <li><a href="#">3월 28일 (월) mon</a></li>
+                                <li><a class="color" href="#">3월 29일 (화) tue</a></li>
+                                <li><a href="#">3월 29일 (수) wed</a></li>
+                                <li><a class="color" href="#">3월 30일 (목) thu</a></li>
+                                <li><a href="#">3월 31일 (금) fri</a></li>
+                                <li><a class="color blue" href="#">4월 01일 (토) sat</a></li>
+                                <li><a class="red" href="#">4월 08일 (일) sun</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer_wrap">
+            <div class="m_banner"><a href="#"><img src="img/himalaya_banner.jpg" alt=""></a></div>
+            <div class="footer">
+                <a class="pc_btn" href="http://kkminseo.dothome.co.kr/cinema"><strong>PC</strong>버전보기</a>
+                <a class="app_down" href="#">lotte cinema app down</a>
+                <div class="info">
+                    <a class="info1" href="#">기업정보</a>
+                    <em></em>
+                    <a class="info1 info2" href="#">개인정보취급방침</a>
+                    <em></em>
+                    <a class="info1" href="#">이메일무단수집거부</a>
+                    <em></em>
+                    <a class="info1" href="#">회원안내</a> 
+                </div>
+                <div class="contact">
+                    <img class="map" src="img/footer_map.png" alt="">
+                    <p>서울특별시 송파구 올림픽로 269<br>(신천동, 롯데캐슬) 4층 롯데시네마</p>
+                    <img class="phone" src="img/footer_phone.png" alt="">
+                    <p>고객센터<br>1544-8855</p>
+                </div>
+                <div class="info3">
+                    <p>대표이사 이원준<br>사업자등록번호 215-85-13462<br>통신판매업신고번호 제1557호<br>개인정보관리책임자 상무 이관로</p>
+                    <a class="sns" href="#"><img src="img/footer_insta.png" alt=""></a>
+                    <a class="sns" href="#"><img src="img/footer_fb.png" alt=""></a>
+                    <a class="sns" href="#"><img src="img/footer_tw.png" alt=""></a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>        
+</body>
+</html>

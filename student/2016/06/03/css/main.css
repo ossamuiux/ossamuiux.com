@@ -1,0 +1,129 @@
+@charset "utf-8";
+body {min-width:1200px;}
+
+/*gnb*/
+.btn_snb a {background:url(../images/menu_s.png) no-repeat; width:68px; height:64px; position:fixed; left:33px; top:33px;}
+.snb_open {background-color:rgba(0,0,0,0.75); position:fixed; width:214px; height:770px; left:-216px; top:0; box-shadow:2px 3px 5px #333;}
+.snb_open .btn_logo {position:absolute; top:60px; left:50%; margin-left:-70px;}
+.snb_open ul li {position:absolute; left:20px; top:350px;}
+.snb_open ul .txt2 {margin-top:70px;}
+.snb_open ul .txt3 {margin-top:140px;}
+.snb_open ul .txt4 {margin-top:240px;}
+
+/*intro*/
+.intro {background:url(../images/intro_bg.jpg) no-repeat center top; height:1100px;}
+.intro .intro_inner {width:1200px; height:1100px; margin:0 auto; position:relative;}
+@keyframes autoMove2{
+	20%{transform:rotateZ(25deg)}
+	40%{transform:rotateZ(-15deg)}
+	60%{transform:rotateZ(10deg)}
+	80%{transform:rotateZ(-5deg)}
+	100%{transform:rotateZ(0deg)}
+}
+
+.intro .intro_inner h1 {position:absolute; left:-45px; top:-150px; animation:autoMove2 1.5s ease-in-out; animation-fill-mode:forwards; transform-origin:center top; transform:rotateZ(-30deg); z-index:2;}
+.intro .intro_inner .btn {position:absolute; left:279px; top:440px; }
+.intro .intro_inner .btn a {display:block; background:url(../images/intro_btn.png) no-repeat center center; width:205px; height:52px;}
+.intro .intro_inner .btn a:hover {background-image:url(../images/intro_btn_hover.png);}
+
+/*profile*/
+.profile {background:url(../images/pro_bg.jpg) no-repeat center center;}
+.profile .profile_inner {width:1200px; height:1100px; margin:0 auto; position:relative;}
+/*con*/
+.profile .profile_inner .con {position:absolute; left:40px; top:164px;}
+/*탭버튼*/
+.profile .profile_inner .con .tab_btn {overflow:hidden; margin-left:70px; margin-top:40px; z-index:10;}
+.profile .profile_inner .con .tab_btn li {float:left; margin-left:120px; position:relative;}
+.profile .profile_inner .con .tab_btn li button {display:block; width:105px; height:102px;}
+.tab_btn li.tab_btn1 button {background:url(../images/btn_bra.png) no-repeat center center; border:none; outline:none;}
+.tab_btn li.tab_btn2 button {background:url(../images/btn_pro.png) no-repeat center center; border:none; outline:none;}
+.tab_btn li.tab_btn3 button {background:url(../images/btn_ca.png) no-repeat center center; border:none; outline:none;}
+.tab_btn li.tab_btn4 button {background:url(../images/btn_ca2.png) no-repeat center center; border:none; outline:none;}
+.tab_btn li.tab_btn5 button {background:url(../images/btn_sk.png) no-repeat center center; border:none; outline:none;}
+.profile .profile_inner .con .tab_btn li:first-child {margin-left:0px;}
+/*탭버튼 on처리 각각*/
+.tab_btn li.tab_btn1.on button {background-image:url(../images/btn_bra_on.png);}
+.tab_btn li.tab_btn2.on button {background-image:url(../images/btn_pro_on.png);}
+.tab_btn li.tab_btn3.on button {background-image:url(../images/btn_ca_on.png);}
+.tab_btn li.tab_btn4.on button {background-image:url(../images/btn_ca2_on.png);}
+.tab_btn li.tab_btn5.on button {background-image:url(../images/btn_sk_on.png);}
+/*탭버튼 내용*/
+.con .tab_con .tab_con1 .bra {position:absolute; left:280px; top:220px;}
+.con .tab_con .tab_con1 .bra_wa {margin:-45px 0 0 120px; display:none;}
+
+.con .tab_con .tab_con2 .pro {position:absolute; left:260px; top:260px; z-index:2;}
+.con .tab_con .tab_con2 .pro_wa {margin-left:370px; margin-top:-30px; display:none;}
+.con .tab_con .tab_con2 .pro_wa2 {position:absolute; left:210px; top:230px; z-index:1;}
+
+.tab_con3 .car1 {position:absolute; left:165px; top:200px;}
+.tab_con3 .ca_wa {margin-left:560px; margin-top:-30px; display:none;}
+
+.tab_con4 .car2 {position:absolute; left:165px; top:200px;}
+.tab_con4 .ca2_wa {margin-left:100px; margin-top:-30px; display:none;}
+
+.tab_con5 .skill {position:absolute; left:280px; top:215px;}
+.tab_con5 .sk_wa {margin-left:180px; margin-top:-50px; display:none;}
+
+
+/*퍼블리셔프로젝트*/
+.section3 {background:url(../images/bg.jpg) no-repeat; height:1100px;}
+.section3 .pp {width:1200px; margin:0 auto; position:relative;height:1100px;}
+.section3 h2 {position:absolute; left:50%; margin-left:-443px; margin-top:75px;}
+.section3 .pp .pp_inner {position: absolute; top: 280px; left:50%; margin-left:-350px; width: 701px; height: 461px; z-index:10;}
+.pp .pp_inner .slide_prev {display:block; width:70px; height:121px; position:absolute; left:0; top:50%; margin-top:-60px; margin-left:-140px;}
+.pp .pp_inner .slide_next {display:block; width:70px; height:121px; position:absolute; right:0; top:50%;  margin-top:-60px; margin-right:-140px;}
+.pp .pp_inner .slide-node {margin:-230.5px 0px 0px -350.5px;}
+/*그림자*/
+.pp .shadow {margin-top:690px; position:absolute; left:50%; margin-left:-545px;}
+
+/*에디터프로젝트*/
+.section4 {background:url(../images/bg.jpg) no-repeat; height:1100px; margin-top:-1px; overflow:hidden;}
+.section4 .editor {width:1200px; margin:0 auto; }
+.section4 h2 {position:absolute; left:50%; margin-left:-559px; margin-top:-200px;}
+
+/*첫째줄*/
+.section4 .editor .f_sum {margin-top:265px; height:325px;}
+.f_sum .pwmb a {background:url(../images/pwmb.png) no-repeat center center;float:left; width:325px; height:325px;margin-left:40px; outline:none;}
+.f_sum .ssen a {background:url(../images/ssen.png) no-repeat center center;float:left; width:325px; height:325px;margin-left:40px; outline:none;}
+.f_sum .shopping a {background:url(../images/shopping.png) no-repeat center center;float:left; width:325px; height:325px;margin-left:40px; outline:none;}
+.f_sum .panel a {background:url(../images/panel.png) no-repeat center center;float:left; width:325px; height:325px;margin-left:40px; outline:none;}
+.f_sum .leaflet a {background:url(../images/leaflet.png) no-repeat center center;float:left; width:325px; height:325px; margin-left:40px; outline:none;}
+/*hover*/
+.f_sum .pwmb:hover a {background:url(../images/pwmb_hover.png) no-repeat center center;}
+.f_sum .ssen:hover a {background:url(../images/ssen_hover.png) no-repeat center center;}
+.f_sum .shopping:hover a {background:url(../images/shopping_hover.png) no-repeat center center;}
+.f_sum .panel:hover a {background:url(../images/panel_hover.png) no-repeat center center;}
+.f_sum .leaflet:hover a {background:url(../images/leaflet_hover.png) no-repeat center center;}
+/*화살표*/
+.section4 .editor .f_sum .slick-prev {position:absolute; left:0; top:50%; margin-top:-60px; margin-left:-70px; background:url(../images/arrow_l.png) no-repeat center center; width:70px; height:121px; border:none; outline:none; text-indent:-9999px; z-index:10;}
+.section4 .editor .f_sum .slick-next {position:absolute; right:0; top:50%; margin-top:-60px; margin-right:-70px; background:url(../images/arrow_r.png) no-repeat center center; width:70px; height:121px; border:none; outline:none; text-indent:-9999px; z-index:10;}
+
+
+/*두번째줄*/
+.section4 .editor .s_sum {margin-top:75px; height:325px;}
+.s_sum .sb a {background:url(../images/storybook.png) no-repeat center center;float:left; width:325px; height:325px;margin-left:40px; outline:none;}
+.s_sum .special a {background:url(../images/special.png) no-repeat center center;float:left; width:325px; height:325px; margin-left:40px; outline:none;}
+.s_sum .magazine a {background:url(../images/magazine.png) no-repeat center center;float:left; width:325px; height:325px; margin-left:40px; outline:none;}
+.s_sum .bc a {background:url(../images/business.png) no-repeat center center;float:left; width:325px; height:325px; margin-left:40px; outline:none;}
+.s_sum .news a {background:url(../images/news.png) no-repeat center center;float:left; width:325px; height:325px; margin-left:40px; outline:none;}
+/*hover*/
+.s_sum .sb:hover a {background:url(../images/storybook_hover.png) no-repeat center center;}
+.s_sum .special:hover a {background:url(../images/special_hover.png) no-repeat center center;}
+.s_sum .magazine:hover a {background:url(../images/magazine_hover.png) no-repeat center center;}
+.s_sum .bc:hover a {background:url(../images/business_hover.png) no-repeat center center;}
+.s_sum .news:hover a {background:url(../images/news_hover.png) no-repeat center center; }
+/*화살표*/
+.section4 .editor .s_sum .slick-prev {position:absolute; left:0; top:50%; margin-top:-60px; margin-left:-70px; background:url(../images/arrow_l.png) no-repeat center center; width:70px; height:121px; border:none; outline:none; text-indent:-9999px; z-index:10;}
+.section4 .editor .s_sum .slick-next {position:absolute; right:0; top:50%; margin-top:-60px; margin-right:-70px; background:url(../images/arrow_r.png) no-repeat center center; width:70px; height:121px; border:none; outline:none; text-indent:-9999px; z-index:10;}
+
+
+
+
+
+
+
+
+
+
+
+

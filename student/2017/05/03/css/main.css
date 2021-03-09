@@ -1,0 +1,295 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@font-face {
+  font-family: 'NanumBarunpenR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunpenR.eot);
+  src: local('NanumBarunpenR'),
+       local('NanumBarunpenR'),
+       url(../font/NanumBarunpenR.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumBarunpenR.woff) format('woff'),
+       url(../font/NanumBarunpenR.ttf) format('truetype');
+}
+
+/*'Nanum Myeongjo' 따로 지정해서 써야함*/
+body,button,input,select,table,textarea {font-family: 'NanumBarunpenR','맑은 고딕','malgun gothic','Roboto','돋움',dotum,HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif; font-size:14px;}
+body {min-width:320px; width:100%;}
+body, html {height:100%;}
+
+#header {padding:0 30px;}
+#header .header_wrap {max-width:1200px; height:220px; padding-top: 60px; margin:0 auto;}
+#header .header_wrap h1 {float:left; width:317px; height: 130px; background: url(../images/logo.png) no-repeat; background-size:100%;}
+#header .header_wrap h1 a {display: block; height: 100%;}
+
+#header .gnb {float:right; padding-top:60px;}
+#header .gnb ul li {float:left; margin-left:30px;}
+#header .gnb ul li a {font-size:22px;}
+
+/*모바일메뉴 안보이게*/
+#header .header_wrap .m_btn_gnb {display: none;}
+#header .header_wrap .m_gnb {display: none;}
+
+#main .section1 {width:100%; margin:0 auto;}
+#main .section1 .section1_top {background-image:url(../images/main_01.png); background-size:cover;}
+#main .section1 .section1_top .section1_img1 {display: block; padding-bottom:40%;}
+#main .section1 .section1_bottom .section1_img2 {width:100%; margin-top:10px;}
+#main .section1 .section1_bottom .section1_img3 {display: none; position:relative;}
+#main .section1 .section1_bottom .section1_img4 {display: none;}
+
+#main .section2 {max-width:1025px; overflow:hidden; margin:0 auto;}
+#main .section2 .btn_logo {display:none;}
+#main .section2_bottom {display:none;}
+
+#main .section2 ul {padding-top:100px;}
+#main .section2 ul li {float:left; width:33.3%; display: block; text-align:center;}
+#main .section2 ul li p {font-size:30px; color:#e5616a; padding-top:20px;}
+
+#main .section3 {padding-top:120px; width:100%; overflow:hidden;}
+#main .section3 .section3_mb {display: none;}
+#main .section3 .section3_txt {width:43.9%; float:left; position:relative;}
+#main .section3 .section3_txt .pc3_txt {width:100%;}
+#main .section3 .section3_txt .tb3_txt {display: none;}
+#main .section3 .section3_img {width:56.1%; float:right;}
+#main .section3 .section3_img img {width:100%;}
+
+#main .section3 .section3_txt .btn_view3 {width:192px; height:42px; outline:none; background:#e5616a; color:#FFF; font-family:'Nanum Myeongjo'; text-align: center; line-height: 40px; position:absolute; left:0; bottom:20px; margin-left:48.5%;}
+
+#main .section4 {padding-top:120px; width:100%; overflow:hidden;}
+#main .section4 .section4_mb {display: none;}
+#main .section4 .section4_img {width:50%; float:left;}
+#main .section4 .section4_img img {width:100%; padding-top:7%;}
+
+#main .section4 .section4_txt {width:50%; float:right; position: relative;}
+#main .section4 .section4_txt img {width:100%; }
+#main .section4 .section4_txt .pc4_txt {}
+#main .section4 .section4_txt .tb4_txt {display: none;}
+
+#main .section4 .section4_txt .btn_view4 {border:none; width:192px; height:42px; outline:none; background:#e5616a; color:#FFF; font-family:'Nanum Myeongjo'; text-align: center; line-height: 40px; position:absolute; left:0;; top:70%; margin-left:6%;}
+
+#main .section5 {padding-top:120px; overflow:hidden;}
+#main .section5 .section5_mb {display: none;}
+#main .section5 .section5_img {max-width:1151px; margin:0 auto;}
+#main .section5 .section5_img img {width:100%;}
+#main .section5 .section5_txt {max-width:1151px; margin:0 auto; position:relative;} 
+
+#main .section5 .section5_txt .btn_view5 {width:192px; height:42px; outline:none; background:#e5616a; color:#FFF; font-family:'Nanum Myeongjo'; text-align: center; line-height: 40px; position:absolute; right:0; bottom:0; margin-right:51%;}
+
+#footer {width:100%; overflow: hidden; padding:0 30px;}
+#footer .footer_inner {max-width:1200px; margin:0 auto; overflow: hidden; margin-top:120px;}
+#footer .footer_inner .footer_txt {float:left; margin-top:100px;}
+#footer .footer_inner .footer_txt .footer_gnb {overflow: hidden;}
+#footer .footer_inner .footer_txt .footer_gnb li {float:left; margin-right:18px;}
+#footer .footer_inner .footer_txt .footer_gnb li a {font-size:22px;  color:#603913;}
+#footer .footer_inner .footer_txt .mb_ad {display: none;}
+#footer .footer_inner .footer_txt .pc_ad {font-family:'Nanum Myeongjo'; color:#252525; line-height:17px; margin:48px 0 25px 0; float:left;}
+#footer .footer_inner .footer_txt p {clear:left; font-size:16px; color:#252525;}
+#footer .footer_inner .footer_txt h2 {display:none;}
+
+#footer .footer_inner .pc_top {float:right;}
+#footer .footer_inner .mb_top {display:none;}
+
+/*pc와 타블렛 사이*/
+@media screen and (max-width:1234px){
+    #header {width:100%;}
+    #header .gnb ul li:last-child {padding-right:20px;}
+    
+    #main .section3 .section3_txt {width:40%; float:left;}
+    #main .section3 .section3_txt .pc3_txt {display: none;}
+    #main .section3 .section3_txt .tb3_txt {display: block; width:100%;}
+    
+    #main .section3 .section3_img {width:60%; float:right;}
+    
+    #main .section3 .section3_txt .btn_view3 {left:0; bottom:20px; margin-right:0; margin-left:25%;}
+    
+    #main .section4 .section4_img {width:65%; float:left;}
+    #main .section4 .section4_img img {width:100%; padding-top:0;}
+
+    #main .section4 .section4_txt {width:35%; float:right;}
+    #main .section4 .section4_txt img {width:100%;}
+    #main .section4 .section4_txt .pc4_txt {display: none;}
+    #main .section4 .section4_txt .tb4_txt {display: block;} 
+    
+    #main .section4 .section4_txt .btn_view4 {margin-left:10%;}   
+ 
+}
+
+/*1024 이하 타블렛*/
+@media screen and (max-width:1024px){
+    #header {width:100%;}
+    #header .header_wrap h1 {width: 253px; height: 103px;}
+    
+    #header .gnb ul li:last-child {padding-right:20px;}
+    #header .header_wrap h1 {padding-left:20px;}
+    #header .header_wrap h1 img {width:253px;}
+    
+    #header .gnb ul li {margin-left:26px;}
+    
+    #main .section1 .section1_bottom .section1_img2 {display: none;}
+    #main .section1 .section1_bottom .section1_img4 {display: block; width:100%; margin-top:10px;}
+    
+    #main .section2 {max-width:600px; padding:0 30px;}
+    #main .section2 ul {padding-top:60px;}
+    #main .section2 ul li {padding:0 10px;}
+    #main .section2 ul li a img {max-width:100%;}
+    #main .section2 ul li p {font-size:22px; padding-top:10px;}
+    
+    #main .section3 .section3_txt .btn_view3 {bottom:0;}
+    
+    #main .section5 .section5_txt .btn_view5 {left:0; margin-left:40%;}
+    
+}
+
+/*767 이하 모바일*/
+@media screen and (max-width:767px){
+    #header {position: fixed; left: 0; top: 0; padding:0; z-index: 1000;}
+    
+    #header .header_wrap {height: 0px; padding-top: 0;}
+    #header .header_wrap h1 {width:74px; height:30px; background-image: url(../images/logo_mobile.png); padding-left: 0; position: relative; margin: 15px 0 0 20px;}
+    
+    #header .header_wrap .gnb {display: none;}
+    
+    #main .section1 .section1_top {background-image:url(../images/mobile_main_01.png); background-size:cover; }
+    #main .section1 .section1_top .section1_img1 {display: block; padding-bottom:100%;}
+    #main .section1 .section1_bottom a .section1_img4 {display: none;}
+    #main .section1 .section1_bottom a .section1_img2 {display:none;}
+    #main .section1 .section1_bottom a .section1_img3 {display:block; width:100%;}
+    
+    /* gnb */
+    #header .m_gnb_wrap {display:block;}
+    
+    #header .m_gnb_wrap h1 img {width:50%;}
+    
+    #header .m_gnb_wrap .bar_wrap {position:fixed; left:0; top:0; z-index: 999; width:100%; height:0px; background:#FFF; overflow: hidden; transition: all 0.5s;}
+    #header .m_gnb_wrap .bar_wrap h1 {float:left;}
+    
+    #header .m_gnb {
+        z-index:1000;
+        padding-top:140px;
+        position:fixed;
+        right:0;
+        top:0;
+        width:100%;
+        height:100%;
+        overflow: auto;
+        background:rgba(232,146,131,0.97);
+        display: none;
+    }
+    
+    #header .header_wrap .m_btn_gnb {
+        display: block;
+        float: right;
+        margin: 20px 20px 0 0;
+        width:30px;
+        height:18px; 
+        background:url(../images/mobile_btn_gnb_white.png) center center;
+        background-size:30px;
+        border:none;
+    }
+    
+    #header .m_btn_gnb2 {
+        z-index: 200;
+        position:fixed; 
+        right:20px;
+        top:20px;
+        width:30px;
+        height:18px; 
+        background:url(../images/mobile_btn_gnb_black.png) center center;
+        background-size:30px;
+        border:none;}    
+    
+    #header .m_gnb .m_gnb_menu li {text-align: center;}
+    #header .m_gnb .m_gnb_menu li a {color:#FFF; font-size:38px; line-height:100px;}
+    
+    #header .m_btn_gnbclose {width:30px; height:30px; background:url(../images/mobile_btn_03.png) no-repeat center center; background-size:30px 30px; position:fixed; right:20px; top:20px; border:none; }
+    
+    #header.on .header_wrap {height:60px; background: #fff;}
+    #header.on .header_wrap h1 {background-image: url(../images/logo_mobile2.png);}
+    #header.on .header_wrap .m_btn_gnb {background-image: url(../images/mobile_btn_gnb_black.png);}
+    
+    #main .section2 {max-width:500px; padding-bottom:20px;}
+    #main .section2 ul {padding-top:10px;}
+    #main .section2 ul li {padding:0 3px;}
+    #main .section2 ul li a img {max-width:100%;}
+    #main .section2 ul li p {margin-top:5%; font-size:16px; color:#555; padding-top:0; }
+    
+    #main .section2 .btn_logo {display:block; text-align:center; padding-top:8%;}
+    #main .section2 .btn_logo img {width:50%;}
+    
+    #main .section2_bottom {display:block; position:relative;}
+    #main .section2_bottom img {width:100%; }
+    #main .section2_bottom .btn_go {width:120px;
+        height:30px;
+        position:absolute;
+        right:40px; bottom:26px;
+        border:1px solid #e5616a;
+        background:none;
+        font-size:16px;
+        font-family:'Nanum Myeongjo';
+        font-weight:600;
+        color:#e5616a;
+    }
+    
+    #main .section3 .section3_txt {display:none;}
+    #main .section3 .section3_img {display:none;}
+
+    #main .section3 .section3_mb {display:block; padding:0 20px;}
+    #main .section3 .section3_mb .section3_mb_txt h3 {font-family:'Nanum Myeongjo'; font-size:32px; float:right; text-align: right; color:#e5616a; font-weight:700; line-height:40px; margin-bottom:20px;}
+    #main .section3 .section3_mb .section3_mb_txt {position: relative; overflow: hidden;}
+    #main .section3 .section3_mb .section3_mb_txt p {display:block; clear:right; font-family: 'Nanum Myeongjo'; font-size:12px; float:right; text-align: right; color:#252525; line-height:16px;}
+    #main .section3 .section3_mb .section3_mb_img {}
+    #main .section3 .section3_mb .section3_mb_img img {width:100%;}
+    
+    #main .section3 .section3_mb .section3_mb_img {position: relative;}
+    #main .section3 .section3_mb .section3_mb_img .fade1 {position:absolute; left:0; top:0;}
+    #main .section3 .section3_mb .section3_mb_img .fade2 {position:absolute; left:0; top:0; display: none;}
+    
+    #main .section3 .section3_mb .section3_mb_txt .btn_view3_mb {clear:right; float:right; margin:15px 0; width:192px; height:42px; background:#e5616a; color:#FFF; font-family:'Nanum Myeongjo'; text-align: center; line-height: 40px;}
+
+    #main .section4 .section4_txt {display:none;}
+    #main .section4 .section4_img {display:none;}
+
+    #main .section4 .section4_mb {display:block; padding:0 20px;}
+    #main .section4 .section4_mb .section4_mb_txt h3 {font-family:'Nanum Myeongjo'; font-size:32px; float:left; text-align: left; color:#e5616a; font-weight: 700; line-height:40px; margin-bottom:20px;}
+    #main .section4 .section4_mb .section4_mb_txt {position: relative; overflow: hidden;}
+    #main .section4 .section4_mb .section4_mb_txt p {display:block; clear:left; font-family: 'Nanum Myeongjo'; font-size:12px; float:left; text-align: left; color:#252525; line-height:16px;}
+    #main .section4 .section4_mb .section4_mb_img img {width:100%;}
+
+    #main .section4 .section4_mb .section4_mb_img {position: relative;}
+    #main .section4 .section4_mb .section4_mb_img .fade1 {position:absolute; left:0; top:0;}
+    #main .section4 .section4_mb .section4_mb_img .fade2 {position:absolute; left:0; top:0; display: none;}
+    
+    #main .section4 .section4_mb .section4_mb_txt .btn_view4_mb {clear:left; float:left; margin:15px 0; width:192px; height:42px; background:#e5616a; color:#FFF; font-family:'Nanum Myeongjo'; text-align: center; line-height: 40px;}
+    
+    #main .section5 .section5_txt {display:none;}
+    #main .section5 .section5_img {display:none;}
+
+    #main .section5 .section5_mb {display:block; padding:0 20px;}
+    #main .section5 .section5_mb .section5_mb_txt h3 {font-family:'Nanum Myeongjo'; font-size:32px; float:right; text-align: right; color:#e5616a; font-weight: 700; line-height:36px; margin-bottom:20px;}
+    #main .section5 .section5_mb .section5_mb_txt {position: relative; overflow: hidden;}
+    #main .section5 .section5_mb .section5_mb_txt p {display:block; clear:right; font-family:'Nanum Myeongjo'; font-size:12px; float:right; text-align: right; color:#252525; line-height:16px;}
+    #main .section5 .section5_mb .section5_mb_img {position:relative;}
+    #main .section5 .section5_mb .section5_mb_img img {width:100%;}
+    #main .section5 .section5_mb .section5_mb_img .fade1 {position:absolute; left:0; top:0;}
+    #main .section5 .section5_mb .section5_mb_img .fade2 {position:absolute; left:0; top:0; display: none;}
+    #main .section5 .section5_mb .section5_mb_img .fade3 {position:absolute; left:0; top:0; display: none;}
+    
+    #main .section5 .section5_mb .section5_mb_txt .btn_view5_mb {clear:right; float:right; margin:15px 0; width:192px; height:42px; background:#e5616a; color:#FFF; font-family:'Nanum Myeongjo'; text-align: center; line-height: 40px;}
+    
+    #footer {padding:0;}
+    #footet .footer_inner {border:1px solid blue;}
+    #footer .footer_inner .pc_top {display:none;}
+    #footer .footer_inner .mb_top {display:block; text-align:center;}
+    #footer .footer_inner .mb_top img {width:60px; height:60px;}
+    #footer .footer_inner .footer_txt .footer_gnb {display:none;}
+    
+    #footer .footer_inner {overflow: hidden; margin-top:120px;}
+    #footer .footer_inner .footer_txt {margin:0 auto; padding-top:20px; overflow: hidden; float:none;}
+    #footer .footer_inner .footer_txt .pc_ad {display:none;}
+    #footer .footer_inner .footer_txt .mb_ad {display:block; text-align: center; font-family:'Nanum Myeongjo'; color:#636363; line-height:17px; margin:48px 0 25px 0; }
+    #footer .footer_inner .footer_txt p {color:#FFF; background:#e5616a; text-align:center; padding:8px 0;}
+    
+    #footer .footer_inner .footer_txt h2 {display:block; text-align:center;}
+    #footer .footer_inner .footer_txt h2 img {max-width:170px;}
+    
+}

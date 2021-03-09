@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone = no">
+<link rel="apple-touch-icon" href="/m/img/mobileweb.png">
+<title>롯데시네마 모바일 : 메인</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/font.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	//메인영화포스터 슬라이더
+	$('.slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		centerMode: true,
+		focusOnSelect: true
+	});
+	//메인이벤트 슬라이더
+	$('.slider2').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:3000,
+	});
+	//롤링 공지사항 슬라이더
+	$('.notice').slick({
+	  	pauseOnHover:false,
+	  	autoplay:true,
+		autoplaySpeed:3000,
+		speed:500,
+		vertical:true,
+    	arrows:false,
+		dots: false
+  	});
+});
+</script>
+</head>
+<body>
+<div class="lnb">
+	<div class="lnb_top"><a href="index.html"></a></div>
+    <div class="lnb1">
+    	<a href="reserve.html"><img src="img/menu_cmovie.png" alt="">영화 먼저선택</a>
+        <a href="reserve.html?cinema=1"><img src="img/menu_ctheater.png" alt="">영화관 먼저선택</a>
+    </div>
+	<ul class="lnb2">
+    	<li>
+        	<a class="arrow" href="#"><img src="img/menu_movie.png" alt="">영화</a>
+        	<ul class="sub">
+            	<li><a class="on" href="#"><span class="on"></span>박스오피스</a></li>
+                <li><a href="#"><span></span>현재상영작</a></li>
+                <li><a href="#"><span></span>상영예정작</a></li>
+            </ul>
+        </li>
+    	<li>
+        	<a href="theater.html"><img src="img/menu_theater.png" alt="">영화관</a>
+        </li>
+        <li>
+        	<a href="cinemamall.html"><img src="img/menu_mall.png" alt="">시네마몰</a>
+        </li>
+        <li>
+        	<a href="event.html"><img src="img/menu_event.png" alt="">이벤트</a>
+        </li>
+        <li>
+        	<a href="#"><img src="img/menu_mycinema.png" alt="">마이시네마</a>
+        </li>
+        <li>
+        	<a href="#"><img src="img/menu_card.png" alt="">할인카드안내</a>
+        </li>
+    </ul>
+    <div class="lnb_bottom">
+		<a href="#"><img src="img/menu_login.png" alt="">로그인</a>
+        <a href="#"><em></em><img class="last" src="img/menu_costomer.png" alt="">고객센터</a>
+    </div>
+</div>    
+<div class="quick">
+	<h2>빠른예매</h2>
+    <a class="close_btn" href="#"></a>
+    <div class="quick_menu">
+        <a class="quick_m" href="reserve.html"><p>영화 먼저 선택</p></a>
+        <a class="quick_c" href="reserve.html?cinema=1"><p>영화관 먼저 선택</p></a>
+    </div>    
+</div>    
+<div class="wrap_hide">
+	<div class="cover"></div>
+    <div class="wrap_main"></div>
+    <div class="wrap">
+        <div class="header">
+            <a class="m_btn" href="#">모바일메뉴</a>
+            <h1><a href="index.html"><img src="img/logo.png" alt="롯데시네마모바일"></a></h1>
+            <a class="quick_btn" href="#">빠른예매</a>
+        </div>
+        <div class="main">
+            <div class="slider">
+                <div>
+                    <a href="#"><img src="img/captain.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">캡틴아메리카 : 시빌 워</div>
+                        <span></span>
+                        <div class="tit2">Captain America : Civil War, 2016</div>
+                        <div class="tit3">boxoffice 01<em></em><strong class="star"></strong>9.6<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/007.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">007 : 스펙터</div>
+                        <span></span>
+                        <div class="tit2">007 Spectre, 2015</div>
+                        <div class="tit3">boxoffice 02<em></em><strong class="star"></strong>9.4<em></em><strong class="grade g15"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/gooddino.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">굿 다이노</div>
+                        <span></span>
+                        <div class="tit2">The Good Dinosaur, 2015</div>
+                        <div class="tit3">boxoffice 03<em></em><strong class="star"></strong>9.3<em></em><strong class="grade g10"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/deadpool.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">데드풀</div>
+                        <span></span>
+                        <div class="tit2">Deadpool, 2016</div>
+                        <div class="tit3">boxoffice 04<em></em><strong class="star"></strong>9.2<em></em><strong class="grade g18"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/sterwars.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">스타워즈 : 깨어난 포스</div>
+                        <span></span>
+                        <div class="tit2">Star Wars : Force Awakens, 2015</div>
+                        <div class="tit3">boxoffice 05<em></em><strong class="star"></strong>9.1<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/stevejobs.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">스티브 잡스</div>
+                        <span></span>
+                        <div class="tit2">Steve Jobs, 2015</div>
+                        <div class="tit3">boxoffice 06<em></em><strong class="star"></strong>8.9<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/kungfupanda3.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">쿵푸팬더3</div>
+                        <span></span>
+                        <div class="tit2">Kung Fu Panda 3, 2016</div>
+                        <div class="tit3">boxoffice 07<em></em><strong class="star"></strong>8.7<em></em><strong class="grade g10"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/the5thwave.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">제5침공</div>
+                        <span></span>
+                        <div class="tit2">The 5th Wave, 2016</div>
+                        <div class="tit3">boxoffice 08<em></em><strong class="star"></strong>8.5<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/room.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">룸</div>
+                        <span></span>
+                        <div class="tit2">Room, 2016</div>
+                        <div class="tit3">boxoffice 09<em></em><strong class="star"></strong>8.3<em></em><strong class="grade g15"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/pawnsacrifice.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">세기의 매치</div>
+                        <span></span>
+                        <div class="tit2">Pawn Sacrifice, 2016</div>
+                        <div class="tit3">boxoffice 10<em></em><strong class="star"></strong>8.2<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/cherlock.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">셜록 : 유령신부</div>
+                        <span></span>
+                        <div class="tit2">SHERLOCK, 2015</div>
+                        <div class="tit3">boxoffice 11<em></em><strong class="star"></strong>8.1<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/macbeth.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">맥베스</div>
+                        <span></span>
+                        <div class="tit2">Macbeth, 2015</div>
+                        <div class="tit3">boxoffice 12<em></em><strong class="star"></strong>7.9<em></em><strong class="grade g15"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/xman.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">엑스맨 : 아포칼립스</div>
+                        <span></span>
+                        <div class="tit2">X-Men : Apocalypse, 2016</div>
+                        <div class="tit3">boxoffice 13<em></em><strong class="star"></strong>7.7<em></em><strong class="grade g12"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/eternal.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">이터널 선샤인 (재개봉)</div>
+                        <span></span>
+                        <div class="tit2">Eternal Sunshine, 2004</div>
+                        <div class="tit3">boxoffice 14<em></em><strong class="star"></strong>7.5<em></em><strong class="grade g15"></strong></div>
+                    </div>   
+                </div>
+                <div>
+                    <a href="#"><img src="img/batman.jpg" alt=""></a>
+                    <div class="txt">
+                        <div class="tit1">배트맨 대 슈퍼맨</div>
+                        <span></span>
+                        <div class="tit2">Batman v Superman, 2016</div>
+                        <div class="tit3">boxoffice 15<em></em><strong class="star"></strong>7.3<em></em><strong class="grade g15"></strong></div>
+                    </div>   
+                </div>
+            </div>
+            <div class="reserve">
+                <a href="reserve.html">예매하기</a>
+                <a href="#">찜하기</a>
+            </div>
+        </div>
+        <div class="event">
+            <h2>롯데시네마 이벤트</h2>
+            <div class="slider2">
+                <div><a href="#"><img src="img/event_deadpool.jpg" alt=""></a></div>
+                <div><a href="#"><img src="img/event_starwars.jpg" alt=""></a></div>
+                <div><a href="#"><img src="img/event_007.jpg" alt=""></a></div>
+                <div><a href="#"><img src="img/event_cinema.jpg" alt=""></a></div> 
+                <div><a href="#"><img src="img/event_sherlock.jpg" alt=""></a></div>     	
+            </div>
+        </div>
+        <div class="notice">
+            <div><a href="#">롯데시네마 센텀시티를 이용해 주시는 고객님께 감사드리며 안내말씀 드립니다.</a></div>
+            <div><a href="#">&lt;바다탐험대 옥토넛 시즌4 : 빙하탐험선S&gt; 관람고객 대상 선착순 증정되는</a></div>
+            <div><a href="#">당사는 보다 개선된 서비스 제공을 위해 2/1(월) 부터 순차적으로</a></div>
+            <div><a href="#">롯데시네마 회원 약관이 2016년 3월 14일자로 개정되오니</a></div>
+            <div><a href="#">원활한 서비스 제공을 위해 시스템 정기 점검이 있을 예정입니다.</a></div>
+        </div>
+        <div class="greencar"><a href="#"><img src="img/greencar.jpg" alt=""></a></div>
+        <div class="footer_wrap">
+    	<div class="m_banner"><a href="#"><img src="img/007_banner.jpg" alt=""></a></div>
+        <div class="footer">
+            <a class="pc_btn" href="http://kkminseo.dothome.co.kr/cinema"><strong>PC</strong>버전보기</a>
+            <a class="app_down" href="#">lotte cinema app down</a>
+            <div class="info">
+                <a class="info1" href="#">기업정보</a>
+                <em></em>
+                <a class="info1 info2" href="#">개인정보취급방침</a>
+                <em></em>
+                <a class="info1" href="#">이메일무단수집거부</a>
+                <em></em>
+                <a class="info1" href="#">회원안내</a> 
+            </div>
+            <div class="contact">
+                <img class="map" src="img/footer_map.png" alt="">
+                <p>서울특별시 송파구 올림픽로 269<br>(신천동, 롯데캐슬) 4층 롯데시네마</p>
+                <img class="phone" src="img/footer_phone.png" alt="">
+                <p>고객센터<br>1544-8855</p>
+            </div>
+            <div class="info3">
+                <p>대표이사 이원준<br>사업자등록번호 215-85-13462<br>통신판매업신고번호 제1557호<br>개인정보관리책임자 상무 이관로</p>
+                <a class="sns" href="#"><img src="img/footer_insta.png" alt=""></a>
+                <a class="sns" href="#"><img src="img/footer_fb.png" alt=""></a>
+                <a class="sns" href="#"><img src="img/footer_tw.png" alt=""></a>
+            </div>  
+        </div>
+    </div>
+    </div>
+</div>    
+</body>
+</html>

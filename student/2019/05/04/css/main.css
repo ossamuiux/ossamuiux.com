@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/************************오리온리뉴얼 사이트*****************************/
+#header {height: 100px; width: 100%; position: fixed; background: #fbbcc2; z-index: 9999;}
+#header .logo {position: absolute; left: 50%; top: 12px; transform: translateX(-50%);}
+
+#header .btn_next {position: fixed; right: 125px; top: 20px;}
+#header .btn_next a {font-size: 40px; color: #fff; position: relative;}
+
+@keyframes arrow {
+    0% {right: -55px;}
+    50% {right: -65px;}
+    100% {right: -55px;}
+}
+#header .btn_next a:after {
+    content: '';
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    margin-top: -8px;
+    background: url(../images/next_btn.png) no-repeat;
+    background-size: 38px;
+    width: 38px;
+    height: 16px;
+    animation: arrow 1s 0.5s infinite;
+}
+
+
+#container {position: relative; background: #fbbcc2;}
+#container .swiper-container {height: 100vh;}
+#container .swiper-container .swiper-slide {position: relative; height: 100vh;}
+#container .orion_slider .section1 {
+    background: url(../images/ppt_01.jpg) no-repeat 50% 50%;
+    position: relative;
+    width: 1800px;
+    margin: 0 auto;
+}
+#container .swiper-container .section1_inner {
+    position: absolute;
+    left: 296px;
+    top: 50%;
+    height: 100%;
+    font-family: '맑은 고딕';
+}
+#container .swiper-container .section1_inner .tit_list {margin-top: 30px; width: 430px;}
+#container .swiper-container .section1_inner .tit_list li {display: inline-block;}
+#container .swiper-container .section1_inner .tit_list li:nth-child(2) {margin-left: 20px;}
+#container .orion_slider .section1_inner .tit_list li:nth-child(4) {margin: 20px 0 0 20px;}
+#container .swiper-container .section1_inner .tit_list li:nth-child(3) {margin-top: 20px;}
+#container .swiper-container .section1_inner .tit_list a {font-size: 20px; display: inline-block; width: 200px; line-height: 72px; border: 1px solid #fbbcc2; text-align: center; color: #fbbcc2; transition: all 0.5s;}
+#container .orion_slider .section1_inner .tit_list a:hover {color: #fff; background: #fbbcc2;}
+#container .orion_slider .section1_inner li.active a {color: #fff; background: #fbbcc2;} 
+
+#container .orion_slider .section2 {background: url(../images/ppt_02.jpg) no-repeat 50% 50%;}
+#container .orion_slider .section3 {background: url(../images/ppt_03.jpg) no-repeat 50% 50%;}
+#container .orion_slider .section4 {background: url(../images/ppt_04.jpg) no-repeat 50% 50%;}
+#container .orion_slider .section5 {background: url(../images/ppt_05.jpg) no-repeat 50% 50%;}
+
+#container .swiper-container .swiper-pagination {right: 0;}
+#container .swiper-container .swiper-pagination-bullet {
+    width: 100px; height: 5px; border-radius: 0; margin: 80px 0; opacity: 1; background: #555; margin-left: auto; transition: all 0.5s;
+}
+#container .swiper-container .swiper-pagination-bullet-active {background: #000; width: 125px;}
+
+#container .tab_wrap {position: absolute; right: 225px; top: 50%; transform: translateY(-50%); z-index: 999;}
+#container .tab_wrap .tab_list li {margin-bottom: 24px; height: 60px; position: relative;}
+#container .tab_wrap .tab_list li:last-child {margin-bottom: 0;}
+#container .tab_wrap .tab_list li.active a {color: #000; font-size: 40px; left: -60px;}
+#container .tab_wrap .tab_list a {
+    font-size: 30px;
+    color: #555;
+    line-height: 28px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 111px;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+}
+#container .tab_wrap .tab_list em {font-size: 18px;}
+
+
+
+
+/******************************이월드 리뉴얼 사이트*******************************/
+#header.eworld {background: #ffc883;}
+
+#header .btn_prev {position: fixed; left: 125px; top: 20px;}
+#header .btn_prev a {font-size: 40px; color: #fff; position: relative;}
+
+@keyframes arrow2 {
+    0% {left: -55px;}
+    50% {left: -65px;}
+    100% {left: -55px;}
+}
+#header .btn_prev a:before {
+    content: '';
+    position: absolute;
+    left: -55px;
+    top: 50%;
+    margin-top: -8px;
+    background: url(../images/prev_btn.png) no-repeat;
+    background-size: 38px;
+    width: 38px;
+    height: 16px;
+    animation: arrow2 1s 0.5s infinite;
+}
+
+
+
+#container.container_eworld {background: #ffc883;}
+#container .eworld_slider .section1 {
+    background: url(../images/eworld_01.jpg) no-repeat 50% 50%;
+    position: relative;
+    width: 1800px;
+    margin: 0 auto;
+}
+#container .eworld_slider .section1_inner .tit_list a {font-size: 20px; display: inline-block; width: 200px; line-height: 72px; border: 1px solid #ffc883; text-align: center; color: #ffc883; transition: all 0.5s;}
+#container .eworld_slider .section1_inner .tit_list a:hover {color: #fff; background: #ffc883;}
+#container .eworld_slider .section1_inner li.active a {color: #fff; background: #ffc883;} 
+
+
+#container .eworld_slider .section2 {background: url(../images/eworld_02.jpg) no-repeat 50% 50%;}
+#container .eworld_slider .section3 {background: url(../images/eworld_03.jpg) no-repeat 50% 50%;}
+#container .eworld_slider .section4 {background: url(../images/eworld_04.jpg) no-repeat 50% 50%;}
+#container .eworld_slider .section5 {background: url(../images/eworld_05.jpg) no-repeat 50% 50%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+
+/**********서브2:매장찾기&소개***********/
+/*map 표시*/
+#main {width: 100%; padding-top: 9px;}
+.maps_wrap #map {height: 375px; width: 100%;}
+
+/*하단 매장소개*/
+#main .store_wrap {width:1100px; margin:40px auto; }
+#main .store_wrap h1 {letter-spacing: -0.05em; border-bottom: 4px solid #50b693; width: 75px; color: #50b693; text-align: center; font-size: 20px; height: 35px; margin: 0 auto;}
+
+#main .store_wrap .store {background:url(../images/store.jpg) no-repeat center center; width: 1098px; height: 410px; margin-top: 20px; position: relative;}
+
+.store .store_btn {padding:30px;}
+.store .store_btn1 {background: url(../images/store_ico1.png) no-repeat left top; width: 43px; height: 41px; display: inline-block;}
+.store .store_btn2 {background: url(../images/store_ico2.png) no-repeat left top; width: 43px; height: 41px; display: inline-block;}
+.store .store_btn3 {background: url(../images/store_ico3.png) no-repeat right top; width: 43px; height: 41px; float: right;     margin-left: 5px;}
+.store .store_btn4 {background: url(../images/store_ico4.png) no-repeat right top; width: 43px; height: 41px; float: right;}
+
+
+.store .store_btn1:hover {background-image: url(../images/store_ico1_on.png);} 
+.store .store_btn2:hover {background-image: url(../images/store_ico2_on.png);} 
+
+.store h2 {font-size: 24px; color: #fff; position: absolute; left: 35px; bottom: 19px; line-height: 33px; letter-spacing: -0.02em;}
+
+.store h2 span {font-size: 18px;}
+
+.store h3 {font-family:arial; font-size: 20px; color: #fff; position: absolute; right: 35px; bottom: 23px; letter-spacing: -0.02em; display: inline-block;}
+.store h3 img {width: 20px; padding-right: 6px; padding-top: 5px;}
+
+
+/*매장소식*/
+/*타이틀*/
+#main .news_wrap {width: 1100px; margin: 0 auto; overflow: hidden;}
+#main .news_wrap h3 {font-size: 18px; text-align: center;}
+#main .news_wrap h3 a {display: inline-block; background: url(../images/sub2_newstitbar.png) no-repeat left 3px; text-align: center; padding: 0 10px; margin-top: 30px;}
+#main .news_wrap h3 a:first-child {background: none;}
+#main .news_wrap .news_tit1 {color: #50b693;}
+
+.news_wrap .news_tit1:hover {color: #50b693;}
+.news_wrap .news_tit2:hover {color: #50b693;}
+.news_wrap .news_tit3:hover {color: #50b693;}
+.news_wrap .news_tit4:hover {color: #50b693;}
+
+.news_wrap h4 {margin-top: 10px; text-align: right;}
+.news_wrap h4 a {padding: 0 10px;}
+.news_wrap h4 .list1 {background: url(../images/list_2.png) no-repeat center center; width: 22px; height: 22px; display: inline-block;}
+.news_wrap h4 .list2 {background: url(../images/list_3.png) no-repeat center center; width: 22px; height: 22px; display: inline-block;}
+
+.news_wrap h4 .list1:hover {background-image: url(../images/list_2_on.png);}
+.news_wrap h4 .list2:hover {background-image: url(../images/list_3_on.png);}
+
+
+/*뉴스박스 나열*/
+.news_wrap .news {overflow: hidden; margin-top:20px;}
+
+.news_wrap .news .news_box1 {width: 275px; height: 362px; float: left; cursor: pointer;}
+
+/*뉴스 active*/
+.news_box1 h2 {background: url(../images/news_active.png) no-repeat center center; width: 275px; height: 290px; position: absolute; top: 0; left: 0; display: none;}
+
+
+.news_box1 .box_img {height: 290px; position: relative;}
+.news_box1 .box_tit {height: 72px; box-sizing:border box; border-right: 1px solid #f2f2f2; border-bottom: 1px solid #f2f2f2;}
+
+.news_box1 .box_tit a {text-align: center; padding-top: 9px; display: block; letter-spacing: -0.02em;}
+.news_box1 .box_tit h5 {font-size: 13px; color: #7e7f83;}
+.news_box1 .box_tit h5 span{font-size: 14px ; color: #443e49;}
+.news_box1 .box_tit p {font-size: 12px; color: #7e7f83; letter-spacing: -0.05em;}
+
+.news_box1:first-child .box_tit {border-left:1px solid #f2f2f2;}
+.news_box1.box5 .box_tit {border-left:1px solid #f2f2f2;}
+
+
+.news_wrap .more img {margin: 0 auto; width: 80px; padding-top: 50px; display: block;}
+.news_wrap .more .line {border-bottom: 1px solid #f2f2f2; margin-top: -38px; display: block; margin-bottom: 80px;}
+
+/*슬라이드 박스*/
+.news .slide_box1 {display: none;}
+.news .slide_box2 {display: none;}

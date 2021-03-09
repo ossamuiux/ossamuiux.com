@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1460">
+<title>써브웨이</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+   /*메인비쥬얼*/
+   $('.main_visual').slick({
+	   dots:true,
+	   autoplay:true,
+	   pauseOnHover:false,
+	   autoplaySpeed:2000,
+	   speed:2000,	
+	   cssEase:'ease',
+	   swipe:false
+   });
+   
+   /*뉴스&이벤트*/
+   $('.list_event').slick({
+	   slidesToShow:4,
+  	   slidesToScroll:1,
+	   autoplay:true,
+	   speed:1000,
+	   pauseOnFocus:false,
+	   pauseOnHover:false,
+	   arrows:false,
+	   dots:true
+   });
+   
+   /*페이스북*/
+   $('.facebook_slide').slick({
+	   autoplay:true,
+	  pauseOnHover:false,
+	  autoplaySpeed:4000,
+	  speed:1200,
+	  cssEase:'ease',
+	  swipe:false
+   });
+   
+   /*메뉴소개*/
+   $('.product_list li').mouseenter(function() {
+    	$(this).find('.pro_hover').stop().fadeIn(300);
+		$(this).find('.pro_hover span').stop().animate({'margin-top':85},300);
+		$(this).find('.pro_hover p').stop().animate({'margin-top':14},300);
+	}).mouseleave(function() {
+    	$(this).find('.pro_hover').stop().fadeOut(300);
+		$(this).find('.pro_hover span').stop().animate({'margin-top':108},300);
+		$(this).find('.pro_hover p').stop().animate({'margin-top':30},300);
+	});
+		
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+	<div class="header_inner">
+		<h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+        <ul class="util">
+        	<li><a href="login.html">로그인</a></li>
+            <li><a href="login.html">회원가입</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">U.S. Website</a></li>
+            <li class="util_line"><a href="#"><img src="images/pacebook.png" alt=""></a></li>
+        </ul>
+        <ul class="gnb">
+        	<li><a href="recommend.html">MENU</a>
+            	<ul class="depth2">
+                	<li><a href="recommend.html">셀럽's Pick</a></li>
+                    <li><a href="recommend.html">추천메뉴</a></li>
+                    <li><a href="recommend.html">프리미엄</a></li>
+                    <li><a href="recommend.html">베스트</a></li>
+                    <li><a href="recommend.html">클래식</a></li>
+                    <li><a href="recommend.html">아침식사</a></li>
+                    <li><a href="recommend.html">샐러드</a></li>
+                    <li><a href="recommend.html">음료&amp;추가메뉴</a></li>
+                    <li><a href="recommend.html">단체주문</a></li>
+                    <li><a href="recommend.html">재료안내</a></li>
+                </ul>
+            </li>
+            <li><a href="event.html">EVENT</a>
+            	<ul class="depth2">
+                	<li><a href="event.html">랩 이벤트</a></li>
+                    <li><a href="event.html">진행중 이벤트</a></li>
+                    <li><a href="event.html">점포 이벤트</a></li>
+                    <li><a href="event.html">지난 이벤트</a></li>
+                </ul>
+            </li>
+            <li  class="gnb3"><a href="store.html">SUBWAY</a>
+            	<ul class="depth2">
+                	<li><a href="store.html">WHY 써브웨이</a></li>
+                    <li><a href="store.html">써브웨이 역사</a></li>
+                    <li><a href="store.html">써브웨이 기업이념</a></li>
+                    <li><a href="store.html">써브웨이 코리아</a></li>
+                    <li><a href="store.html">지사안내</a></li>
+                    <li><a href="store.html">매장찾기</a></li>
+                </ul>
+            </li>
+            <li class="gnb4"><a href="#">COMMUNITY</a>
+            	<ul class="depth2">
+                	<li><a href="#">뉴스&amp;공지사항</a></li>
+                    <li><a href="#">CF</a></li>
+                    <li><a href="#">고객문의 및 이용후기</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">아르바이트 신청</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="login.html">FRANCHISE</a>
+            	<ul class="depth2">
+                	<li><a href="login.html">써브웨이 우수성</a></li>
+                    <li><a href="login.html">가맹요건</a></li>
+                    <li><a href="login.html">가맹절차</a></li>
+                    <li><a href="login.html">가맹관련 FAQ</a></li>
+                    <li><a href="login.html">문의 및 가맹신청</a></li>
+                    <li><a href="login.html">뉴스레터</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="main">
+	<div class="btn_top">
+    	<a href="#"><img src="images/top.png" alt=""></a>
+        <!--탑버튼-->
+    </div>
+	<div class="main_visual">
+    	<div class="visual1"><a href="#"></a></div>
+        <div class="visual2"><a href="#"></a></div>
+    </div>
+    <div class="section1">
+    	<h2>NEWS &amp; EVENT</h2>
+        <div class="list_event">
+            <div><a href="#"><img src="images/event1.png" alt=""></a></div>
+            <div><a href="#"><img src="images/event2.png" alt=""></a></div>
+            <div><a href="#"><img src="images/event3.png" alt=""></a></div>
+            <div><a href="#"><img src="images/event4.png" alt=""></a></div>
+            <div><a href="#"><img src="images/event1.png" alt=""></a></div>
+            <div><a href="#"><img src="images/event2.png" alt=""></a></div>
+            <!--이벤트 슬라이드-->
+        </div>
+    </div>
+    <div class="section2">
+    	<div class="section2_inner">
+        	<h3>SUBWAY MENU</h3>
+            <img src="images/line.png" alt="">
+            <p>써브웨이의 베스트 메뉴와 그 외 다양한 메뉴를 만나보세요!</p>
+            <ul class="product_list">
+            	<li>
+                	<a href="#"><img src="images/Italian-B.M.T.png" alt="">
+                    <h4>이탈리안 비엠티</h4>
+                    <h5>Italian B.M.T.</h5>
+                    <img class="icon" src="images/best.png" alt="">
+                    <div class="pro_hover">
+                        <span></span><p>자세히보기</p>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/ChickenTeriyaki.png" alt="">
+                    <h4>치킨 데리야끼</h4>
+                    <h5>Chicken Teriyaki</h5>
+                    <img class="icon" src="images/new.png" alt="">
+                    <div class="pro_hover">
+                        <span></span><p>자세히보기</p>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/ChoppedSalad.png" alt="">
+                    <h4>찹샐러드</h4>
+                    <h5>Chopped Salad</h5>
+                    <div class="pro_hover">
+                        <span></span><p>자세히보기</p>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/Chips.png" alt="">
+                    <h4>칩</h4>
+                    <h5>Chips </h5>
+                    <div class="pro_hover">
+                        <span></span><p>자세히보기</p>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/Cookies.png" alt="">
+                    <h4>쿠키</h4>
+                    <h5>Cookie</h5>
+                    <div class="pro_hover">
+                        <span></span><p>자세히보기</p>
+                    </div>
+                    </a>
+                </li>
+                <!--메뉴 자세히보기-->
+            </ul>
+        </div>
+    </div>
+    <div class="section3">
+    	<div class="store_find">
+            <h2>매장찾기</h2>
+            <h3>가까운 서브웨이 매장을 찾아보세요</h3>
+            <div class="search_store">
+                <form>
+                    <fieldset><legend>전체검색</legend>
+                    <input type="text" placeholder="매장명 또는 주소를 입력하세요">
+                    <button type="submit"></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <ul class="franchise">
+        	<li class="franchise_inner1">
+            	<h2>창업문의<span>02-797-5036</span></h2>
+                <h3>써브웨이의 문은 항상 열려있습니다.</h3>
+                <a href="#">자세히 보기  →</a>
+                <!--자세히보기 호버-->
+                <img src="images/subway_store.png" alt="">
+            </li>
+            <li class="franchise_inner2">
+            	<h2>전세계 써브웨이 현황</h2>
+                <img src="images/subway_icon.png" alt="">
+                <div class="franchise_input">
+                    <input type="text" value="111"><span>개국</span>
+                    <input type="text" value="44,644"><span>개 매장</span>
+                </div>
+            </li>
+        </ul>
+        <ul class="box">
+        	<li class="facebook">
+            	<h2>FACEBOOK</h2>
+                <div class="facebook_slide">
+                    <div class="facebook_inner">
+                        <img src="images/ico_facebook.png" alt="">
+                        <h4>2017 상반기결산 써브웨이 코리아 페이스북 선정<br>인기 샌드위치 BEST 7! 영광의 주인공들을 뱃속으로 초대해봐</h4>
+                        <h5>2017.07.12</h5>
+                    </div>
+                    <div class="facebook_inner">
+                        <img src="images/ico_facebook.png" alt="">
+                        <h4>바로 오늘! 유쾌찬란 생기발랄성장드라마를 만나는 날~<br>학교 2017과 써브웨이가 함께합니다.</h4>
+                        <h5>2017.07.17</h5>
+                    </div>
+                    <div class="facebook_inner">
+                        <img src="images/ico_facebook.png" alt="">
+                        <h4>샌드위치를 더 맛있게! 후추&amp;마요~<br>너만의 활용법도 우리에게 알려줄래?</h4>
+                        <h5>2017.07.25</h5>
+                    </div>
+                    <!--페이스북 슬라이드-->
+                </div>
+            </li>
+            <li class="mobile">
+            	<h3>모바일로도 편리하게<br>써브웨이를 만나실수 있습니다.</h3>
+            	<img src="images/QRcode.png" alt="">
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="footer">
+	<div class="icon_menu">
+    	<div class="icon_menu_inner">
+    		<div class="icon1"><a href="#"><img src="images/icon1.png" alt=""><p>매장찾기</p></a></div>
+            <div><a href="#"><img src="images/icon2.png" alt=""><p>아르바이트<br>신청</p></a></div>
+            <div><a href="#"><img src="images/icon3.png" alt=""><p>고객문의<br>이용후기</p></a></div>
+            <div><a href="#"><img src="images/icon4.png" alt=""><p>가맹점주<br>페이지</p></a></div>
+            <div><a href="#"><img src="images/icon5.png" alt=""><p>가맹신청<br>가맹문의</p></a></div>
+            <div><a href="#"><img src="images/icon6.png" alt=""><p>Tell<br>subway</p></a></div>
+            <!--아이콘효과-->
+        </div>
+    </div>
+    <div class="footer_wrap">
+    	<div class="footer_inner">
+    		<p><img src="images/footer_logo.png" alt=""></p>
+        	<div class="footer_menu">
+            	<ul class="top_footer_menu">
+                	<li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">Subway Partners ® </a></li>
+                </ul>
+                <address>서울시 서초구 강남대로 535 프린스빌딩 15층<span><img src="images/footer_line2.png" alt=""></span>대표 : 콜린클락<span><img src="images/footer_line2.png" alt=""></span>전화 : (02)797-5036<br>ⓒ2014 Doctor’s Associates Inc. SUBWAY® is a registered trademar
+                </address>
+        	</div>
+            <ul class="footer_sns">
+            	<li><a href="#"><img src="images/footer_facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="images/footer_instar.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

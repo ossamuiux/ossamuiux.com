@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=996">
+<title>더페이스샵_리뉴얼</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.slider').slick({
+		pauseOnHover:true,//슬라이더에 마우스를 올리면 멈추는 기능
+	  	autoplay:true,//자동실행
+		autoplaySpeed:6000, //인터벌(실행간격)
+		speed:500,//애니메이션 속도
+		fade:true,//페이드효과
+		arrows:false,//좌우 화살표버튼 끄기
+		dots:true
+	});
+	
+	$('.event_box').slick({
+		pauseOnHover:true,
+	  	autoplay:true,
+		autoplaySpeed:4000,
+		speed:300,
+		fade:true,
+		arrows:false,
+		dots:true
+	})
+	
+	$('.new_box').slick({
+		pauseOnHover:false,//슬라이더에 마우스를 올리면 멈추는 기능
+	  	autoplay:false,//자동실행
+		autoplaySpeed:4000, //인터벌(실행간격)
+		speed:300,//애니메이션 속도
+		fade:true,//페이드효과
+		arrows:false,//좌우 화살표버튼 끄기
+		dots:true
+	})
+	
+	$('#slick-slide00').find('button').text('블란 클라우딩');
+	$('#slick-slide01').find('button').text('홀리데이 에디션');
+	$('#slick-slide02').find('button').text('잉크 립퀴드');
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="top_menu">
+    	<!--<ul class="menu1">
+        	<li><img src="img/south_korea-32.png" alt="한국어"></li>
+            <li><img src="img/Liberia-32.png" alt="영어"></li>
+            <li><img src="img/China-32.png" alt="중국어"></li>
+            <li><img src="img/Japan-32.png" alt="일본어"></li>
+        </ul>-->
+        <ul class="menu2">
+        	<li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">장바구니 <span>(0)</span></a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">매장찾기 </a></li>
+        </ul>
+    </div>
+    <div class="header">
+    	<h1><a href="index.html"><img src="img/the-face-shop-logo.jpg" alt="더페이스샵로고"></a></h1>
+        <div class="search_wrap">
+        	<div class="search_input">
+            	<a href="#" class="tit">아이섀도우 전품목 1+1</a>
+                <a href="#" class="input"><img src="img/input_btn_03.png" alt="검색버튼"></a>
+            </div>
+            <div class="search_link">
+            	<a href="#"><img src="img/search_btn2_03.png" alt="베스트상품검색버튼"></a>
+                <a href="#"><img src="img/search_btn3_03.png" alt="신상품검색버튼"></a>
+            </div>
+		</div>
+        <div class="promotion">
+            <img src="img/top_event.png" alt="상단배너">
+        </div>
+    </div>
+    <div class="gnb_wrap">
+    	<ul class="gnb">
+        	<li>
+            	<a href="story.html">브랜드</a>
+                <div class="brand_gnb">
+                    <div class="tit">
+                    	<h2>BRAND<br><span>더페이스샵<br>브랜드소개</span></h2>
+                    </div>
+                    <ul class="sub">
+                        <li><a href="story.html">더페이스 샵 소개</a></li>
+                        <li><a href="#">더페이스 샵 희망고</a></li>
+                        <li><a href="#">더페이스 샵 광고</a></li>
+                        <li><a href="#">더페이스 샵 소식</a></li>
+                        <li><a href="#">매장 안내</a></li>
+                    </ul>
+                    <div class="gnb_bnr">
+                    	<img src="img/gnb_brand.jpg" alt="세계 각지 더페이스샵">
+                        <div class="txt">
+                        	<a href="#">자연의 혜택을<br>나누는 브랜드<br><span>더 페이스 샵</span></a>
+                        </div>
+                    </div>
+            	</div>
+            </li>
+        </ul>
+        <ul class="gnb gnb2">
+        	<li>
+            	<a href="event.html">이벤트</a>
+                <div class="brand_gnb event_gnb">
+                    <div class="tit">
+                    	<h2>EVENT<br><span>프로모션<br>및 이벤트</span></h2>
+                    </div>
+                    <ul class="sub">
+                        <li><a href="event.html">진행중인 이벤트</a></li>
+                        <li><a href="#">종료된 이벤트</a></li>
+                        <li><a href="#">당첨자 발표</a></li>
+                    </ul>
+                    <div class="gnb_bnr">
+                    	<a href="#" class="bnr1"><img src="img/gnb_event1.jpg" alt=""></a>
+                        <a href="#" class="bnr2"><img src="img/gnb_event2.png" alt=""></a>
+                    </div>
+            	</div>
+            </li>
+        </ul>
+        <ul class="gnb gnb3">
+        	<li>
+            	<a href="#">커뮤니티</a>
+                <div class="brand_gnb community_gnb">
+                    <div class="tit">
+                    	<h2>COMMUNITY<br><span>커뮤니티<br>뷰티칼럼</span></h2>
+                    </div>
+                    <ul class="sub">
+                        <li><a href="#">체험단 후기</a></li>
+                        <li><a href="#">상품리뷰</a></li>
+                        <li><a href="#">뷰티매거진</a></li>
+                        <li><a href="#">뷰티캐스트</a></li>
+                        <li><a href="#">뷰티칼럼</a></li>
+                        <li><a href="#">THE FACE SHOP</a></li>
+                    </ul>
+                    <div class="gnb_bnr">
+                    	<a href="#"><img src="img/gnb_community.jpg" alt="100명 체험단 후기"></a>
+                    </div>
+            	</div>
+            </li>
+        </ul>
+        <ul class="gnb gnb4">
+        	<li>
+            	<a href="seed.html">착한씨앗</a>
+                <div class="brand_gnb seed_gnb">
+                    <div class="tit">
+                    	<h2>NICE SEED<br><span>착한 씨앗<br>캠페인&amp;나눔</span></h2>
+                    </div>
+                    <ul class="sub">
+                        <li><a href="seed.html">착한씨앗 캠페인</a></li>
+                        <li><a href="#">착한씨앗 지킴이</a></li>
+                        <li><a href="#">착한씨앗 나눔</a></li>
+                    </ul>
+                    <div class="gnb_bnr">
+                    	<h3><span>착한 약속의 실천</span><br>착한 캠페인<br>더 페이스 샵</h3>
+                        <a href="#"><img src="img/gnb_seed1.png" alt="착한씨드 이미지"></a>
+                        <a href="#"><img src="img/gnb_seed2.jpg" alt="착한약속 이미지"></a>
+                    </div>
+            	</div>
+            </li>
+        </ul>
+        <ul class="gnb gnb5">
+        	<li>
+            	<a href="#">쇼핑</a>
+                <div class="brand_gnb shopping_gnb">
+                    <div class="tit">
+                    	<h2>SHOPPING<br><span>더 페이스샵<br>쇼핑 하기</span></h2>
+                    </div>
+                    <ul class="sub">
+                        <li><a href="#" class="icon1">스킨케어</a></li>
+                        <li><a href="#" class="icon2">클렌징</a></li>
+                        <li><a href="#" class="icon3">바디/헤어</a></li>
+                        <li><a href="#" class="icon4">마사지/팩</a></li>
+                        <li><a href="#" class="icon5">베이스</a></li>
+                        <li><a href="#" class="icon6">포인트</a></li>
+                        <li><a href="#" class="icon7">남성화장품</a></li>
+                        <li><a href="#" class="icon8">향수/베이비</a></li>
+                        <li><a href="#" class="icon9">화장소품</a></li>
+                    </ul>
+            	</div>
+            </li>
+        </ul>
+        <ul class="gnb gnb6">
+        	<li>
+            	<a href="#">쇼핑 기획전</a>
+                <div class="brand_gnb exhibition_gnb">
+                    <div class="tit">
+                    	<h2>NEXHIBITION<br><span>쇼핑 기획전<br>베스트 상품들</span></h2>
+                    </div>
+                    <ul class="sub">
+                        <li><a href="#">쇼핑기획전</a></li>
+                        <li><a href="#">신제품</a></li>
+                        <li><a href="#">베스트 셀러</a></li>
+                        <li><a href="#">입소문 제품</a></li>
+                    </ul>
+                    <div class="gnb_bnr">
+                    	<a href="#"><img src="img/shopping_img1_03.jpg" alt="베스트 상품"></a>
+                    </div>
+            	</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main_wrap">
+	<div class="slider">
+    	<div class="slider1"><a href="#"><img src="img/main_visual1.jpg" alt="메인비쥬얼1"></a></div>
+        <div class="slider2"><a href="#"><img src="img/main_slider5.jpg" alt="메인비쥬얼2"></a></div>
+        <div class="slider3"><a href="#"><img src="img/main_slider4.jpg" alt="메인비쥬얼3"></a></div>
+    </div>
+    <div class="btn_bg">
+    	<a href="#"></a>	
+    </div>
+    <div class="content_wrap">
+    	<h3>THEFACESHOP <span>EVENT&amp;CUMMUNITY</span></h3>
+        <div class="content_box">
+        	<div class="box1">	
+                <div class="event_box">
+            		<div><a href="#"><img src="img/main_event_slider1.jpg" alt="더테라피1+1"></a></div>
+                	<div><a href="#"><img src="img/main_event_slider2.jpg" alt="스밈1+1"></a></div>
+                	<div><a href="#"><img src="img/main_event_slider3.jpg" alt="캐릭마스크팩5+5"></a></div>
+            	</div>
+            	<div class="new_box">
+					<div><a href="#"><img src="img/1450443252427.jpg" alt="핸드크림"></a></div>
+                    <div><a href="#"><img src="img/main_new_bnr1.jpg" alt="퀵헤어퍼프"></a></div>
+                    <div><a href="#"><img src="img/file_20151215000493515.jpg" alt=""></a></div>
+            	</div>
+            </div>
+            <div class="box2">
+            	<div class="community_box">
+            		<a href="#" class="link1"><img src="img/news_bnr.png" alt="뉴스배너"><span></span></a>
+                    <a href="#" class="link2"><img src="img/review_bnr.png" alt="리뷰배너"><span></span></a>
+                </div>
+            	<div class="story_box">
+            		<div class="youtube">
+                    	<iframe width="406" height="257" src="https://www.youtube.com/embed/Mb405rbf9qQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+            	</div>
+            </div>
+        </div>
+    </div>
+    <div class="banner_wrap">
+    	<ul>
+        	<li class="banner"><a href="#">착한 씨앗</a></li>
+            <li class="banner banner2"><a href="#">희망고 캠페인</a></li>
+            <li class="banner banner3"><a href="#">SNS</a></li>
+            <li class="banner banner4"><a href="#">체험단후기</a></li>
+        </ul>
+    </div>
+    <div class="promise">
+    	<div class="line">
+        	<div class="tit_line"></div>
+            <h2><a href="#"><img src="img/main_ribbon_03_03.png" alt=""></a></h2>
+        </div>
+        <div class="seed_bg">
+        	<div class="bg1">
+            	<a href="#"><img src="img/main_img7_03.jpg" alt=""></a>
+                <div class="tit">
+                	<p class="tit1"><span>착한 씨앗</span>으로 만든 화장품</p>
+                	<p class="tit2">자연주의 브랜드 더페이스샵을 대표하는 것은 바로 착한 씨앗,<br>자연에서 영감을 얻은 씨앗을 활용한 화장품.<span>4가지 착한 약속</span>을<br>실천하는 착한 마음까지 담은 대표적인 착한 씨앗 화장품을 소개합니다.</p>
+                 </div>   
+                <a href="#"><img src="img/main_img2_03.png" alt=""></a>
+            </div>
+            <div class="bg2">
+            	<ul>
+                	<li><a href="#"><img src="img/eco_img1.png" alt="">자연 그대로를<br>솔찍하게 담겠습니다.</a></li>
+                    <li><a href="#"><img src="img/eco_img2.png" alt="">동물실험을<br>하지 않겠습니다.</a></li>
+                    <li><a href="#"><img src="img/eco_img3.png" alt="">피부에 유해한<br>성분을 쓰지 않겠습니다.</a></li>
+                    <li><a href="#"><img src="img/eco_img4.png" alt="">피부 테스트를<br>강화하겠습니다.</a></li>
+                    <li><a href="#"><img src="img/eco_img5.png" alt="">친환경 공법을<br>사용 하겠습니다.</a></li>
+                    <li><a href="#"><img src="img/eco_img6.png" alt="">나눔을 실천하는<br>착한 기업이 되겠습니다.</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+ 	<div class="footer_top">
+    	<ul>
+        	<li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li class="list4"><a href="#">가맹점&amp;특판문의</a></li>
+            <li><a href="#">사이버 신문고</a></li>
+            <li><a href="#">협력회사 상생고</a></li>
+            <li><a href="#">CPS열린구매</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </div>
+    <div class="footer_bottom">
+    	<a href="#"><img src="img/footer_logo.png" alt="로고"></a>
+        <div class="address">
+        	<p class="addr">사업자등록번호 : 113-81-17562   통신판매업신고번호 : 제2011-서울종로-1012호<br>주소: 서울시 종로구 새문안로 58 LG광화문 빌딩   대표이사 : 배정태   개인정보관리책임자 : 유정천</p>
+            <p class="tel">· 온라인 쇼핑몰 관련 문의 080-855-1600   · 매장 관련 전화 문의 : 080-050-3300</p>
+            <p class="copy">COPYRIGHTⓒ2015 ㈜더페이스샵 ALL RIGHTS RESERVED</p>
+            <a href="#" class="cominfo"><img src="img/cominfo_07.png" alt="사업자정보"></a>
+        </div>
+        <div class="sns">
+    		<ul>
+        		<li><a href="#"><img src="img/footer_sns1.png" alt="페이스북"></a></li>
+            	<li><a href="#"><img src="img/footer_sns2.png" alt="페이스북"></a></li>
+            	<li><a href="#"><img src="img/footer_sns3.png" alt="페이스북"></a></li>
+        	</ul>
+     	</div>       
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

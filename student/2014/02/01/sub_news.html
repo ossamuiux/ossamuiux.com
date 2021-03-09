@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>스팀에 오신 것을 환영합니다.</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	/*화면 크기 리사이징에 따른 변화하는 gradiant와 버튼의 left,right 함수*/
+	var per=0;
+	var sld_side=0;
+	var sld_btn=0
+	function main_slider_gra(){
+		if($(document).outerWidth()==1200){
+			$('.section1 .slider_side_left').css('width','0px');
+			$('.section1 .slider_side_right').css('width','0px');
+		}
+		else{
+			per=Math.round(($(document).outerWidth()-1200)/7);
+			sld_side=Math.round(per*3.6);
+			sld_btn=Math.round(per/10)+5;
+			if(sld_side>360){sld_side=360;}
+			if(sld_btn>15){sld_btn=15;}
+			$('.section1 .slider_side_left').css('width',sld_side+'px');
+			$('.section1 .slider_side_right').css('width',sld_side+'px');
+		}
+	}
+	$(window).resize(function(){
+     	main_slider_gra();
+	}).resize();
+	
+	/*검색시 나오는 문구*/
+	$('.search_btn').click(function(){
+		$('.con7 label .txt1').text('위 조건과');
+		$('.con7 label .txt2').text(" '"+$('.search_text').val()+"' ");
+		$('.con7 label .txt3').text('관련검색');
+	});
+	$('.steam_games_util_inner li a').click(function(){
+		$('.steam_games_util_inner li a').removeClass('on');
+		$('.steam_games_util_inner li').eq($(this).parent().index()).children('a').addClass('on');
+	});
+	$('.sns button').click(function(){
+		if($(this).parent().children('ul').css('display')=='none'){
+			$(this).parent().children('ul').show();
+			$(this).addClass('on');
+		}else{
+			$(this).parent().children('ul').hide();
+			$(this).removeClass('on');
+		}
+	});
+	$('.con2>div button').click(function(){
+		if($(this).parent().children('ul').css('display')=='none'){
+			$(this).parent().children('ul').show();
+		}else{
+			$(this).parent().children('ul').hide();
+		}
+	});
+	$('.search_news3 .search_btn2').click(function(){
+		$(this).parent().children('label').show();
+	});
+});
+
+</script>
+</head>
+<body>
+<div class="header">
+	<div class="header_inner">
+        <div class="header_top">
+        	<div class="util">
+            	<ul>
+                	<li><a href="#none" class="util1">로그인</a></li>
+                    <li><a href="#none" class="util2">스팀다운로드</a></li>
+                    <li><a href="#none" class="util3">언어</a></li>
+                </ul>
+                <div class="search">
+                	<input type="text" title="검색어 입력창" class="search1">
+                	<button type="submit" class="search1">버튼</button>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+        	<ul class="gnb">
+            	<li><a href="index.html"><img src="images/steam_logo.png" alt="스팀로고"></a></li>
+                <li><a href="sub_game.html">게임</a>
+                	<div class="sub_gnb">
+                    	<ul class="sub_gnb1">
+                        	<li><a href="sub_game.html">무료</a></li>
+                            <li><a href="sub_game.html">신작</a></li>
+                            <li><a href="sub_game.html">인기</a></li>
+                            <li><a href="sub_game.html">출시예정</a></li>
+                            <li><a href="sub_game.html">할인</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                        	<li><a href="sub_game.html">레이싱</a></li>
+                            <li><a href="sub_game.html">RPG</a></li>
+                            <li><a href="sub_game.html">스포츠</a></li>
+                            <li><a href="sub_game.html">시뮬레이션</a></li>
+                            <li><a href="sub_game.html">액션</a></li>
+                            <li><a href="sub_game.html">어드벤쳐</a></li>
+                            <li><a href="sub_game.html">인디</a></li>
+                            <li><a href="sub_game.html">전략</a></li>
+                            <li><a href="sub_game.html">캐주얼</a></li>
+                        </ul>
+                        <ul class="sub_gnb11">
+                        	<li><a href="sub_game.html">Win OS</a></li>
+                            <li><a href="sub_game.html">스팀 OS</a></li>
+                            <li><a href="sub_game.html">맥 OS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#none">SW&amp;HW</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="#none">개발엔진</a></li>
+                            <li><a href="#none">그래픽엔진</a></li>
+                            <li><a href="#none">오디오엔진</a></li>
+                            <li><a href="#none">웹퍼블리싱</a></li>
+                            <li><a href="#none">유틸리티</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="#none">컨트롤러</a></li>
+                            <li><a href="#none">스팀링크</a></li>
+                            <li><a href="#none">스팀머신</a></li>
+                            <li><a href="#none">HTCVIVE</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#none">동영상</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="#none">튜토리얼</a></li>
+                            <li><a href="#none">다큐</a></li>
+                            <li><a href="#none">삽화</a></li>
+                            <li><a href="#none">영화</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="#none">드라마</a></li>
+                            <li><a href="#none">게임</a></li>
+                            <li><a href="#none">스릴러/공포</a></li>
+                            <li><a href="#none">공상과학</a></li>
+                            <li><a href="#none">액션</a></li>
+                            <li><a href="#none">코미디</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="sub_news.html">소식</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="sub_news.html">업데이트</a></li>
+                            <li><a href="sub_news.html">보도자료</a></li>
+                            <li><a href="sub_news.html">비평</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="sub_commu.html">커뮤니티</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="sub_commu.html">허브</a></li>
+                            <li><a href="sub_commu.html">큐레이터</a></li>
+                            <li><a href="sub_commu.html">리뷰</a></li>
+                            <li><a href="sub_commu.html">토론</a></li>
+                            <li><a href="sub_commu.html">아트</a></li>
+                            <li><a href="sub_commu.html">방송</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="sub_commu.html">그린라이트</a></li>
+                            <li><a href="sub_commu.html">워크샵</a></li>
+                            <li><a href="sub_commu.html">스팀마켓</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main sub_news">
+	<div class="section1">	
+    	 <div class="section1_bg">
+        </div>
+    	<div class="main_util">
+        	<a href="index.htm l">홈</a> > <a href="#">소식</a>
+        </div>
+    	<div class="search_news">
+            	<fieldset>
+                <div class="search_news1 search_news2">
+                	<h3>소식</h3>
+                    <div class="con1">
+                        <input type="checkbox" id="chk1_1"><label for="chk1_1">업데이트</label>
+                        <input type="checkbox" id="chk1_2"><label for="chk1_2">보도자료</label>
+                        <input type="checkbox" id="chk1_3"><label for="chk1_3">비평</label>
+                        <input type="checkbox" id="chk1_4"><label for="chk1_4">내가 구매한 게임(로그인필요)</label> 
+                    </div>
+                </div>
+                <div class="search_news1 search_news2">
+                    <h3>연도별</h3>
+                    <div class="con1 con2">
+                    	<div><button type="button">- - - -</button>
+                        	<ul>
+                            	<li><a href="#none">2016</a></li>
+                                <li><a href="#none">2015</a></li>
+                                <li><a href="#none">2014</a></li>
+                                <li><a href="#none">2013</a></li>
+                                <li><a href="#none">2012</a></li>
+                                <li><a href="#none">2011</a></li>
+                                <li><a href="#none">2010</a></li>
+                                <li><a href="#none">2009</a></li>
+                                <li><a href="#none">2008</a></li>
+                                <li><a href="#none">2007</a></li>
+                                <li><a href="#none">2006</a></li>
+                                <li><a href="#none">2005</a></li>
+                                <li><a href="#none">2004</a></li>
+                                <li><a href="#none" class="lst_2003">2003</a></li>
+                            </ul>
+                        </div><label>(범주와 연도는 중복되어 검색되지 않습니다.)</label>
+                    </div>
+                </div>
+                <div class="search_news1">
+                    <h3>범주(미만)</h3>
+                    <div class="con1 con3">
+                        <input type="radio" id="chk3_1" name="chk3[]"><label for="chk3_1">3일</label>
+                        <input type="radio" id="chk3_2" name="chk3[]"><label for="chk3_2">1주일</label>
+                        <input type="radio" id="chk3_3" name="chk3[]"><label for="chk3_3">1개월</label>
+                        <input type="radio" id="chk3_4" name="chk3[]"><label for="chk3_4">3개월</label>
+                        <input type="radio" id="chk3_5" name="chk3[]"><label for="chk3_5">1년</label>
+                    </div>
+                </div>
+                <div class="search_news1">
+                    <h3>뉴스검색</h3>
+                    <div class="con1 con4">
+                    	<input type="text" class="search_text" title="게임 검색창" value="검색어를 입력해주세요.">
+                		<button type="button" class="search_btn">버튼</button>
+                    </div>
+                </div>
+                <div class="search_news1 search_news3">
+                    <button type="button" class="search_btn2">위 조건으로 검색</button>
+                    <label><span class="txt1">'2014년', </span><span class="txt2">'Left4 Dead2'</span><span class="txt3">에 관한 소식 검색결과 </span><span class="txt4">65건</span></label>
+                </div>
+                </fieldset>
+        </div>
+        <p class="slider_side_left"></p>
+        <p class="slider_side_right"></p>
+    </div>
+    <div class="section2">
+    	<div class="section2_inner">
+        	<div class="news">
+            	<h3>Midweek Madness - Jotun, 50% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>오전 2시 03분</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Save 50% on Jotun during this week's Midweek Madness*!<br>
+				*Offer ends Friday at 10 AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news01.jpg" alt="">
+                </div>
+            </div>
+            <div class="news news2">
+            	<h3>Daily Deal - Scribblenauts Unlimited, 75% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>오전 2시 00분</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Today's Deal: Save 75% on Scribblenauts Unlimited!*<br>
+Look for the deals each day on the front page of Steam. Or follow us on twitter or
+Facebook for instant notifications wherever you are!<br>
+*Offer ends Thursday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news02.jpg" alt="">
+                </div>
+            </div>
+            <div class="news">
+            	<h3>Daily Deal - Command: Modern Air / Naval Operations 
+WOTY, 60% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 10일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Today's Deal: Save 60% on Command: Modern Air / Naval Operations WOTY!*<br>
+Look for the deals each day on the front page of Steam. Or follow us on twitter or 
+Facebook for instant notifications wherever you are!<br>
+*Offer ends Wednesday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news03.jpg" alt="">
+                </div>
+            </div>
+            <div class="news  news2">
+            	<h3>Daily Deal - Blitzkrieg 3, 50% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 8일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Today's Deal: Save 50% on Blitzkrieg 3!*<br>
+Look for the deals each day on the front page of Steam. Or follow us on twitter or 
+Facebook for instant notifications wherever you are!<br>
+*Offer ends Monday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news04.jpg" alt="">
+                </div>
+            </div>
+            <div class="news">
+            	<h3>Steam Client Update Released</h3>
+                <div class="news1">
+                	<h4>Client Update - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 8일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>An update has been released for the Steam Client and will be automatically downloaded.<br><br>
+
+General
+Updated the web browser component to Chromium version 49.0.2623.110<br>
+Fixed an issue with scaling of preview images in the screenshot manager <br>
+Fixed game installs failing with the message “Content still encrypted”<br>
+Fixed missing period symbol in the French layout of the controller keyboard<br>
+Fixed several crashes related to the controller on-screen keyboard<br>
+Revised iconography for Family View<br><br>
+
+Steam Overlay<br>
+Improved rendering performance with Vulkan applications <br>
+Improved stability of Big Picture overlay with Direct3D 10 applications and above<br><br>
+
+Big Picture<br>
+Fixed a bug where the "Login" button would not properly activate <br>
+Fixed some Family View regressions in game library. <br>
+Improved support for broadcasting while using Big Picture mode. Includes new Broadcast 
+Dashboard that allows access to broadcast chat and some broadcast management controls
+plus support for viewing your own broadcast. 
+Fixed some UI styling issues in the Big Picture overlay<br><br>
+
+VR<br>
+Removed block on SteamVR applications if Family View is enabled. This fixes installation of
+HTC Vive software when Family View is turned on. <br>
+Removed prompt for controller configuration when launching games that natively support
+motion controllers<br>
+Added warnings when trying to launch Oculus SDK-only games on an incompatible 
+OpenVR device. <br>
+Improved the launch process for Oculus SDK-based games from within SteamVR. <br>
+Fixed missing/invisible mouse pointer in some Desktop Game Theater games<br>
+Fixed an issue where clicking the search button in the Library footer UI could break filtering
+Fixed an issue causing the VR keyboard to pop up repeatedly in the Library
+Fixed SteamVR launching immediately when installing a VR app that was previously 
+uninstalled in that session<br>
+Improved controller handling under various combinationss of the VR dashboard, Desktop 
+Game Theater, and an active game. Input is now sent to the game or the dashboard, but 
+not both at once.<br>
+Improved handling for games that only support VR in a beta branch of the game. These will
+ only show in the SteamVR group if the user has selected the beta branch.<br>
+Improved support for broadcasting while in VR. Broadcast request notifications will now 
+display in the headset and can be responded to via the new Broadcast Dashboard in Steam.<br><br>
+
+Mac OS X<br>
+Fixed a bug that could cause stuck modifier keys (Shift, Ctrl, Alt, etc) in the in-game overlay
+Fixed a bug that caused links in the in-game overlay web browser to always open in new 
+tabs<br><br>
+
+Linux<br>
+Fixed a client UI hang when clicking the middle mouse button on some pages<br>
+Fixed an issue where Big Picture or video playback would not enter fullscreen properly<br><br>
+
+Steam Controller<br>
+Fixed a client crash when switching configurations, such as when starting a game or 
+bringing up the Steam Overlay<br>
+Added the ability to bind left/right sticks as digital bindings
+Added the ability for the automatic action set on cursor visible/hidden to return to the 
+previously<br>
+used action set from the last transition<br>
+Fixed Mode Shifts not displaying properly in action set binding panels<br>
+Fixed gamepad button highlights displaying offset when binding a gamepad button<br>
+Fixed binding screen showing Set Action Set option when the configuration was a Native 
+application or had no action sets.<br>
+Added "Last Used Action Set" option to manual action set selection<br>
+                </p>
+            </div>
+            <div class="news news2">
+            	<h3>Daily Deal - Scribblenauts Unlimited, 75% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 8일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Today's Deal: Save 75% on Scribblenauts Unlimited!*<br>
+Look for the deals each day on the front page of Steam. Or follow us on twitter or
+Facebook for instant notifications wherever you are!<br>
+*Offer ends Thursday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news02.jpg" alt="">
+                </div>
+            </div>
+            <div class="news news2">
+            	<h3>Now Available on Steam - Stellaris,</h3>
+                <div class="news1">
+                	<h4>Product Release - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 10일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Stellaris is Now Available on Steam!<br>
+Explore a vast galaxy full of wonder! Paradox Development Studio, makers of the Crusader
+Kings and Europa Universalis series presents Stellaris, an evolution of the grand strategy 
+genre with space exploration at its core. <br>
+Featuring deep strategic gameplay, an enormous selection of alien races and emergent 
+storytelling, Stellaris has a deeply challenging system that rewards interstellar exploration as 
+you traverse, discover, interact and learn more about the multitude of species you will 
+encounter during your travels.
+                </p>
+                <div>
+                	<img src="images/news/news05.jpg" alt="">
+                </div>
+            </div>
+            <div class="news news2">
+            	<h3>Dota 2 Update - May 7th 2016</h3>
+                <div class="news1">
+                	<h4>Product Update - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 8일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                6.87c:<br><br>
+
+* Infernal Blade base damage reduced from 40 to 25/30/35/40<br>
+* Armlet armor bonus when activated reduced from 5 to 4<br>
+* Essence Aura now uses Pseudo-Random Distribution<br>
+* Wind Lace cost increased from 225 to 235<br>
+* Wind Lace is no longer available in the Side Shop<br>
+* Silver Edge now has a 300 gold recipe<br>
+* Arc Warden base damage improved by 4<br>
+* Vengeful Spirit Intelligence reduced from 15 + 1.75 to 13 + 1.5<br>
+* Super Creep gold increase over time reduced from 2 to 1.5 per upgrade cycle<br>
+* Beastmaster's Boar Poison no longer pierces Spell Immunity<br>
+* Greevil's Greed no longer benefits illusions<br>
+* Storm Spirit Intelligence increased from 23 + 2.6 to 24 + 3.0<br>
+* Slardar base movement speed reduced from 300 to 295<br>
+* Metamorphosis no longer increases Base Attack Time<br>
+* Conjure Image damage taken reduced from 425% to 400%<br>
+* Stifling Dagger base damage increased from 60 to 75<br>
+* AoE Bounty Gold based on level reduced from 8/7/6/4/4 to 6/5/4/3/3 per level<br>
+* Grave Chill cast range increased from 600 to 650<br>
+* Jinada slow reduced from 18/22/26/30% to 15/20/25/30%
+                </p>
+            </div>
+            <div class="news">
+            	<h3>Daily Deal - Left 4 Dead 2, 75% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 7일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Today's Deal: Save 75% on Left 4 Dead 2!*<br>
+Look for the deals each day on the front page of Steam. Or follow us on twitter or 
+Facebook for instant notifications wherever you are!<br>
+*Offer ends Monday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news06.jpg" alt="">
+                </div>
+            </div>
+            <div class="news news2">
+            	<h3>Free Weekend - EVE Online, 75%</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 6일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Play EVE Online for FREE starting now through Sunday at 1PM Pacific Time. You can also 
+pickup EVE Online at 75% off the regular price!*<br>
+Also, save 50% off the Premium Edition and 10% off Content Packs, PLEX and subscriptions.<br>
+If you already have Steam installed, click here to install or play EVE Online. If you don't have
+Steam, you can download it here.<br>
+*Offer ends Monday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news07.jpg" alt="">
+                </div>
+            </div>
+            <div class="news">
+            	<h3>Weekend Deal - Dead Island Games up to 80% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 6일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Save up to 80% on Dead Island games as part of this week's Weekend Deal*!<br>
+*Offer ends Monday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news08.jpg" alt="">
+                </div>
+            </div>
+            <div class="news news2">
+            	<h3>Daily Deal - Deathtrap, 66% Off</h3>
+                <div class="news1">
+                	<h4>Announcement - Valve</h4>
+                    <div class="sns_wrap"><span>2016년 5월 6일</span>
+                    	<div class="sns"><button type="button" title="공유"></button>
+                    		<ul>
+                            	<li><a href="#none"></a></li>
+                                <li><a href="#none" class="sns2"></a></li>
+                                <li><a href="#none" class="sns3"></a></li>
+                                <li><a href="#none" class="sns4"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                Today's Deal: Save 66% on Deathtrap!*<br>
+Look for the deals each day on the front page of Steam. Or follow us on twitter or 
+Facebook for instant notifications wherever you are!<br>
+*Offer ends Sunday at 10AM Pacific Time
+                </p>
+                <div>
+                	<img src="images/news/news09.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="footer_inner">
+    	<h2><img src="images/footer_logo.png" alt="스팀 본사 Valve의 로고"></h2>
+        <div class="copyright">
+        	<div>© 016 Valve Corporation. All rights reserved. 모든 상표는 미국 및 기타 국가에서 해당하는 소유자의 재산입니다.</div>
+            <ul>
+            	<li>부가가치세 포함</li>
+            	<li class="footer_valve"><a href="#none">Valve 개인 정보 정책</a></li>
+            	<li><a href="#none">사용권</a></li>
+            	<li><a href="#none">Steam 이용약관</a></li>
+            	<li><a href="#none">환불</a></li>
+            </ul>
+            <ul>
+            	<li><a href="#none">Valve 정보</a></li>
+                <li><a href="#none">비즈니스 솔루션</a></li>
+                <li><a href="#none">Steamworks</a></li>
+                <li><a href="#none">채용정보</a></li>
+                <li><a href="#none">Steam 배포</a></li>
+                <li><a href="#none" class="footer_steam">Steam</a></li>
+                <li><a href="#none" class="footer_steamgame">@steam_games</a>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

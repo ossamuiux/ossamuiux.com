@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200">
+<link rel="shortcut icon" type="image/x-icon" href="http://milkbebe.dothome.co.kr/favicon_ky.ico" />
+<title>DesignWatch</title>
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('.btn_go').click(function(e) {
+		if ($('.input_id').val()=='이귀영' && $('.input_password').val()=='3333') {
+			$('.intro_loading').show();
+			
+			setTimeout(function(){
+				location.href = 'main.html';
+			},4000);
+		}
+    });
+});
+</script>
+</head>
+
+<body>
+	<div id="intro_main">
+    	<div class="content_wrap">
+            <div class="logo">
+                <img src="images/intro-logo.png" alt="logo">
+            </div>
+            
+            <div class="txt_wrap">
+                <img src="images/intro-tooltip_.png" class="tip" alt="tooltip">
+                <div class="id">
+                    <form>
+                        <label class="txt">계정 이름</label>
+                        <input class="input input_id" style="text-align:center;" type="text">
+                        <div class="pw">
+                            <label class="pass">비밀번호</label>
+                            <input class="input input_password" style="text-align:center;" type="password">
+                        </div>
+                        <button type="button" class="btn_go"><span>접속</span></button>
+                    </form>
+                </div>
+            </div>
+            <p>ⓒ 2017 LKY Entertainment, Inc. All right reserved.</p>
+        </div>
+        <div class="intro_loading">
+            <div class="loader">
+              <ul class="hexagon-container">
+                <li class="hexagon hex_1"></li>
+                <li class="hexagon hex_2"></li>
+                <li class="hexagon hex_3"></li>
+                <li class="hexagon hex_4"></li>
+                <li class="hexagon hex_5"></li>
+                <li class="hexagon hex_6"></li>
+                <li class="hexagon hex_7"></li>
+              </ul>
+              <p>접속 중...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

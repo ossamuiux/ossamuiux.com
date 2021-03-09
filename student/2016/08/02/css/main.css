@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+@charset "utf-8";
+body,button {font:12px '나눔고딕','nanum gothic','돋움',dotum,sans-serif;}
+body {min-width:320px; background:#fbf6ed;}
+
+
+
+
+/*****************************메인 슬라이더*****************************/
+.main_wrap {width:100%; }
+.main_wrap .main_visual {width:100%; position:relative;}
+
+.main_wrap .main_visual img { width:100%; display:inline-block;}
+
+/*메인슬라이더 버튼*/
+.main_wrap .main_visual .slick-dots {overflow:hidden; text-align:center; position:absolute; left:0; bottom:0; z-index:2; width:100%;background:url(../img/slide_btn_background.jpg) repeat-x; border-bottom:4px solid #1abc9c;}
+.main_wrap .main_visual .slick-dots li {display:inline-block; width:33.3%;}
+.main_wrap .main_visual .slick-dots li button {width:100%; height:35px; background:none; border:none; cursor:pointer; outline:none; color:#FFF; font-size:14px; padding:0;}
+.main_wrap .main_visual .slick-dots li.slick-active button { background-image:url(../img/slider_btn_bg.png); color:#1abc9c;}
+
+
+
+/*****************************이벤트*****************************/
+.main_wrap .main {padding:10px;}
+
+.main_wrap .main .event_wrap {width:100%;}
+
+/*타이틀*/
+.main_wrap .main .event_wrap .tit {background:#FFF; border:1px solid #e7e7e7; height:40px; border-bottom:none;}
+.main_wrap .main .event_wrap .tit a {color:#262626; font-size:20px; line-height:40px; margin-left:10px;}
+.main_wrap .main .event_wrap .tit a span {color:#1abc9c; font-weight:700;}
+
+/*이벤트 슬라이드*/
+.main_wrap .main .event { border:1px solid #e7e7e7; background:#FFF; position:relative;}
+.main_wrap .main .event img {width:100%;}
+
+/*슬라이드버튼*/
+.main_wrap .main .event .slick-dots {position:absolute; right:0px; top:-37px; overflow:hidden; text-align:center; }
+.main_wrap .main .event .slick-dots li {margin:0 1px; display:inline-block;}
+.main_wrap .main .event .slick-dots li button {width:30px; height:30px; background:url(../img/slied_btn.png) no-repeat center center; text-indent:-9999px; border:none; cursor:pointer; outline:none; margin-right:6px; background-size:12px;}
+.main_wrap .main .event .slick-dots li.slick-active button { background-image:url(../img/slied_btn_on.png);}
+
+
+/****************************뉴 아이템******************************/
+.main_wrap .main .new_wrap {width:100%; margin-top:10px;}
+/*타이틀*/
+.main_wrap .main .new_wrap .tit {background:#FFF; border:1px solid #e7e7e7; height:40px; border-bottom:none;}
+.main_wrap .main .new_wrap .tit a {color:#262626; font-size:20px; line-height:40px; margin-left:10px;}
+.main_wrap .main .new_wrap .tit a span {color:#1abc9c; font-weight:700;}
+
+/*뉴 슬라이드*/
+.main_wrap .main .new { border:1px solid #e7e7e7; background:#FFF;}
+.main_wrap .main .new img {width:100%;}
+
+/*슬라이드버튼*/
+.main_wrap .main .new .slick-dots {position:absolute; right:0px; top:-37px; overflow:hidden; text-align:center; }
+.main_wrap .main .new .slick-dots li {margin:0 1px; display:inline-block;}
+.main_wrap .main .new .slick-dots li button {width:30px; height:30px; background:url(../img/slied_btn.png) no-repeat center center; text-indent:-9999px; border:none; cursor:pointer; outline:none; margin-right:6px; background-size:12px;}
+.main_wrap .main .new .slick-dots li.slick-active button { background-image:url(../img/slied_btn_on.png);}
+
+
+/*********************************커뮤니티************************************/
+.main_wrap .main .news { margin-top:10px; overflow:hidden;}
+.main_wrap .main .news a {float:left; width:50%; display:block;}
+.main_wrap .main .news a img { width:100%;}
+
+
+/*********************************아이콘 메뉴************************************/
+.main_wrap .main .icon { width:100%; border:1px solid #e7e7e7; background:#FFF; margin-top:10px; overflow:hidden; }
+.main_wrap .main .icon li {float:left;  width:33.0%; text-align:center; padding:10px 0; background:url(../img/icon01.png) no-repeat center 10px; background-size:40px; border-left:1px solid #e7e7e7; border-bottom:1px solid #e7e7e7; cursor:pointer;}
+.main_wrap .main .icon li:nth-child(1) {border-left:none;}
+.main_wrap .main .icon li:nth-child(2) { background-image:url(../img/icon02.png);}
+.main_wrap .main .icon li:nth-child(3) { background-image:url(../img/icon03.png);}
+.main_wrap .main .icon li:nth-child(4) { background-image:url(../img/icon04.png); border-left:none; border-bottom:none;}
+.main_wrap .main .icon li:nth-child(5) { background-image:url(../img/icon05.png); border-bottom:none;}
+.main_wrap .main .icon li:nth-child(6) { background-image:url(../img/icon06.png); border-bottom:none;}
+
+.main_wrap .main .icon li a { display:inline-block; font-size:11px; color:#262626; margin-top:40px; line-height:30px;}
+
+
+/*********************************착한약속의 실천************************************/
+.main_wrap .promise { width:100%; position:relative; margin-top:10px; overflow:hidden; margin-bottom:30px;}
+.main_wrap .promise .tit .line { width:100%; border-bottom:4px solid #2fa38f; padding-top:11px;}
+.main_wrap .promise .tit img { height:30px; position:absolute; left:50%; top:0; margin-left:-82px;}
+
+.main_wrap .promise ul { margin-top:20px;}
+.main_wrap .promise ul li {float:left; width:33.3%; position:relative; height:50px; margin-top:10px; text-align:justify;}
+.main_wrap .promise ul li a {font-size:9px; color:#262626; display:block; margin-top:10px; margin-left:45px;}
+.main_wrap .promise ul li img { width:30px; position:absolute; left:5px; top:10px;}
+
+.main_wrap .promise ul li:nth-child(2) img {width:24px;}
+.main_wrap .promise ul li:nth-child(3) img {width:28px;}
+.main_wrap .promise ul li:nth-child(4) img {width:28px;}
+.main_wrap .promise ul li:nth-child(6) img {width:27px;}
+
+
+
+
+
+
+

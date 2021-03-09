@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+
+
+/**********서브1:제품카테고리-과일***********/
+#main {width: 100%; padding-top: 60px; height: 2250px;}
+
+
+/*베스트썸네일*/
+#main .best_thum_wrap {width: 1100px; margin: 0 auto;}
+#main .best_thum_wrap h1 {letter-spacing: -0.05em; border-bottom: 4px solid #50b693; width: 75px; color: #50b693; text-align: center; margin:0 auto; font-size: 20px; height: 35px;}
+
+
+.best_thum_wrap .best_thum {margin-top: 30px; text-align: center; position: relative;}
+
+.best_thum li {display: inline-block; text-indent: -9999px; margin:0 15px;}
+
+.best_thum li a {display: block;}
+.best_thum li .best1 {background: url(../images/sub_best_1.jpg) no-repeat center center; height: 275px; width: 329px;}
+.best_thum li .best2 {background: url(../images/sub_best_2.jpg) no-repeat center center; height: 275px; width: 329px;}
+.best_thum li .best3 {background: url(../images/sub_best_3.jpg) no-repeat center center; height: 275px; width: 329px;}
+
+
+/*hover 상자*/
+.best_thum .best1_hover {background: url(../images/white-transparent50-bg.png) repeat bottom center; width: 329px; height: 65px; position: absolute; top: 210px; left: 22px; display: none;} 
+
+.best_thum .best1_hover .share_ico {position: absolute; top: -188px; right: 20px;}
+
+
+.best_thum .best1_hover h3 {font-size: 15px; color: #433e49; line-height: 19px; text-align: left; display: inline-block; margin-left: 15px; margin-top: 15px; float: left;}
+.best_thum .best1_hover h3 span {font-size: 13px; font-family: arial; letter-spacing: -0.03em;}
+
+.best_thum .best1_hover p {font-size: 11px; color: #7e7f83; padding-left: 7px; display: inline-block; position: relative;top: 36px; left: -110px;}
+
+/*hover 상자 아이콘*/
+.best_thum .best1_hover .prod_ico {margin-top: -24px; float: right; padding-right: 10px;}
+.best_thum .best1_hover .prod_ico a {display: inline-block; padding: 0 7px; padding-top: 46px; line-height: 66px;}
+
+.best_thum .best1_hover .prod_ico .prod_ico_h {background:url(../images/event_heart.png) no-repeat center center; width: 22px; height: 18px;}
+.best_thum .best1_hover .prod_ico .prod_ico_f {background:url(../images/event_myfarm.png) no-repeat center center; width: 22px; height: 18px;}
+.best_thum .best1_hover .prod_ico .prod_ico_c {background:url(../images/cart_off.png) no-repeat center center; width: 22px; height: 18px;}
+
+/*icon hover 효과*/
+.best_thum .best1_hover .prod_ico .prod_ico_h:hover {background-image: url(../images/event_heart_on.png);}
+.best_thum .best1_hover .prod_ico .prod_ico_f:hover {background-image: url(../images/event_myfarm_on.png);}
+.best_thum .best1_hover .prod_ico .prod_ico_c:hover {background-image: url(../images/cart_on.png);}
+.best_thum .best1_hover h4 a:hover {color: #d7d8da;}
+
+
+.best1_hover.best2_hover {margin-left: 363px;}
+.best1_hover.best3_hover {margin-left: 726px;}
+
+
+
+
+
+/*카테고리 제품박스*/
+#main .cate_fruits {width: 1100px; margin: 0 auto; margin-top: 60px;}
+
+#main .cate_fruits h1 {letter-spacing: -0.05em; border-bottom: 4px solid #50b693; width: 75px; color: #50b693; text-align: center; margin: 0 auto; font-size: 20px; height: 35px;}
+
+/*정렬기준선택*/
+#main .cate_fruits>p {font-size: 12px; color: #443e49; float: left; padding-top: 30px; padding-bottom: 10px;}
+#main .cate_fruits p span {font-weight: bold; margin-left: 95px;}
+
+
+#main .cate_fruits>a {float: right; padding: 0 10px; padding-bottom: 44px;}
+#main .cate_fruits .list_style_1 {display: inline-block; background:url(../images/list_2.png) no-repeat right center; width: 22px; height: 22px; margin-right: 95px;} 
+#main .cate_fruits .list_style_2 {display: inline-block; background:url(../images/list_1.png) no-repeat right center; width: 22px; height: 22px;} 
+
+#main .cate_fruits .list_style_1.on {background-image: url(../images/list_2_on.png);}
+
+
+#main .cate_fruits .cate_wrap_01 {margin-top: 30px; text-align: center; clear: both;}
+
+.cate_wrap_01 .cate1 {display: inline-block;}
+
+.cate_wrap_01 .cate1.prod2 {margin-left: 25px;}
+.cate_wrap_01 .cate1.prod3 {margin-left: 25px;}
+.cate_wrap_01 .cate1.prod4 {margin-left: 25px;}
+
+
+
+/*제품 하단박스*/
+.cate1 .prod_txt {letter-spacing: -0.05em; padding-left: 7px; margin-top: 17px; text-align: left; position: relative;}
+.cate1 .prod_txt h2 {font-size: 14px; color: #433e49; line-height: 19px;} 
+.cate1 .prod_txt .price {font-size: 13px; font-family: arial;}
+.cate1 .prod_txt h5 {font-size: 11px; font-family: arial; color: #d54d3d; text-decoration: line-through; position: absolute; top: 20px; left: 75px;}
+
+.cate1 .prod_txt span {font-size: 12px; color: #7e7f83; float: left; padding-right: 15px; margin-top: 9px;}
+
+.cate1 .prod_txt p {font-family: arial; color: #433e49; font-size: 12px; float: right; line-height: 10px; padding-right: 7px; margin-top: 12px;}
+.cate1 .prod_txt p a img {padding-right: 4px;} 
+.cate1 .line_prod1 {border-bottom:1px solid #433e49; width: 207px; margin-top: 36px; margin-left: -7px;}
+
+
+
+/*제품 하단박스 hover*/
+.cate1 .txt_hover {letter-spacing: -0.05em; padding-left: 7px; margin-top: 17px; height: 66px; display: none;}
+.cate1 .txt_hover h4 {float: left; font-size: 14px; color: #433e49; line-height: 66px;}
+.cate1 .txt_hover h4 a {font-size: 14px; color: #433e49;     line-height: 66px;}
+.cate1 .line_prod2 {border-bottom:1px solid #433e49; width: 207px; height: 74px; margin-left: -7px;}
+
+
+.cate1 .txt_hover .prod_ico {height: 66px; float: right;}
+.cate1 .txt_hover .prod_ico a {display: inline-block; padding: 0 7px; padding-top: 46px; line-height: 66px;}
+
+.cate1 .txt_hover .prod_ico .prod_ico_h {background:url(../images/event_heart.png) no-repeat center center; width: 22px; height: 18px;}
+.cate1 .txt_hover .prod_ico .prod_ico_f {background:url(../images/event_myfarm.png) no-repeat center center; width: 22px; height: 18px;}
+.cate1 .txt_hover .prod_ico .prod_ico_c {background:url(../images/cart_off.png) no-repeat center center; width: 22px; height: 18px;}
+
+/*hover 효과*/
+.cate1 .txt_hover .prod_ico .prod_ico_h:hover {background-image: url(../images/event_heart_on.png);}
+.cate1 .txt_hover .prod_ico .prod_ico_f:hover {background-image: url(../images/event_myfarm_on.png);}
+.cate1 .txt_hover .prod_ico .prod_ico_c:hover {background-image: url(../images/cart_on.png);}
+.cate1 .txt_hover h4 a:hover {color: #d7d8da;}
+
+
+
+/*하단 페이지버튼*/
+.cate_fruits h3 {text-align: center; margin: 0 auto; margin-top: 60px; font-family: arial;}
+.cate_fruits h3 .on {text-decoration: underline; color: #443e49;}
+.cate_fruits h3 a {font-size: 14px; color: #7e7f83; padding: 0 10px; display: inline-block;}
+
+
+

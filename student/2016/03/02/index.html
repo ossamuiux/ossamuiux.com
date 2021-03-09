@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>CJ제일제당 백설</title>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="favicon-152.png" rel="apple-touch-icon-precomposed">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="respond.min.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function(){
+	
+	//pc - main visual - slick
+	$('.main .visual').slick({
+		dots:true,
+		arrows:false,
+		autoplay:true,
+		pauseOnHover:false,
+		slide:'div',
+		autoplaySpeed:3000
+	});
+	
+	//pc - main visual play btn - click
+	var sw=true;
+	$('.main .visual .btn_play').click(function(){
+		if(sw==true){
+			$(this).addClass('on');
+			$('.visual').slick('slickPause');
+		} else {
+			$(this).removeClass('on');
+			$('.visual').slick('slickPlay');
+		}
+		sw=!sw;
+	});
+	
+	//visual size
+	$(window).resize(function(){
+		var num=$(this).width();
+		
+		if(num>1007) {
+			$('.visual	 .visual1 img').prop('src','images/visual01.jpg');
+			$('.visual	 .visual2 img').prop('src','images/visual02.jpg');
+			$('.visual	 .visual3 img').prop('src','images/visual03.jpg');
+			$('.visual	 .visual4 img').prop('src','images/visual04.jpg');
+		} else if(num<=1007 && num>750) {
+			$('.visual	 .visual1 img').prop('src','images/t_visual01.jpg');
+			$('.visual	 .visual2 img').prop('src','images/t_visual02.jpg');
+			$('.visual	 .visual3 img').prop('src','images/t_visual03.jpg');
+			$('.visual	 .visual4 img').prop('src','images/t_visual04.jpg');
+		} else {
+			$('.visual	 .visual1 img').prop('src','images/m_visual01.jpg');
+			$('.visual	 .visual2 img').prop('src','images/m_visual02.jpg');
+			$('.visual	 .visual3 img').prop('src','images/m_visual03.jpg');
+			$('.visual	 .visual4 img').prop('src','images/m_visual04.jpg');
+		}
+	});	
+	
+	var num=$(window).width();
+	if(num>1007) {
+		$('.visual	 .visual1 img').prop('src','images/visual01.jpg');
+		$('.visual	 .visual2 img').prop('src','images/visual02.jpg');
+		$('.visual	 .visual3 img').prop('src','images/visual03.jpg');
+		$('.visual	 .visual4 img').prop('src','images/visual04.jpg');
+	} else if(num<=1007 && num>750) {
+		$('.visual	 .visual1 img').prop('src','images/t_visual01.jpg');
+		$('.visual	 .visual2 img').prop('src','images/t_visual02.jpg');
+		$('.visual	 .visual3 img').prop('src','images/t_visual03.jpg');
+		$('.visual	 .visual4 img').prop('src','images/t_visual04.jpg');
+	} else {
+		$('.visual	 .visual1 img').prop('src','images/m_visual01.jpg');
+		$('.visual	 .visual2 img').prop('src','images/m_visual02.jpg');
+		$('.visual	 .visual3 img').prop('src','images/m_visual03.jpg');
+		$('.visual	 .visual4 img').prop('src','images/m_visual04.jpg');
+	}
+	
+	
+	//mobile - main banner - slick
+	$('.main .main_banner .banner_list .box, .tab_con .tab_con1').slick({
+		dots:true,
+		arrows:false,
+		autoplay:false,
+		pauseOnHover:false
+	});
+	
+	//mobile - main banner tap -  click
+	$('.tab_con>div:gt(0)').css('visibility','hidden');
+	
+	$('.m_tab .tab li').click(function(e){
+		e.preventDefault();
+		var num=$(this).index();
+		
+		$('.tab_con>div').css('visibility','hidden');
+		$('.tab_con>div').eq(num).css('visibility','visible');
+		
+		$('.m_tab .tab li').removeClass('on');
+		$(this).addClass('on');
+		
+		//tap img change
+		if(num==0) {
+			$('.tab1 a img').prop('src','images/m_banner_tit1_on.png');
+			$('.tab2 a img').prop('src','images/m_banner_tit2.png');
+			$('.tab3 a img').prop('src','images/m_banner_tit3_on.png');
+		} else if(num==1) {
+			$('.tab1 a img').prop('src','images/m_banner_tit1.png');
+			$('.tab2 a img').prop('src','images/m_banner_tit2_on.png');
+			$('.tab3 a img').prop('src','images/m_banner_tit3.png');
+		} else {
+			$('.tab1 a img').prop('src','images/m_banner_tit1_on.png');
+			$('.tab2 a img').prop('src','images/m_banner_tit2_off.png');
+			$('.tab3 a img').prop('src','images/m_banner_tit3_on.png');
+		}
+	});
+	
+	$('.m_product .m_product_slider').slick({
+		centerMode: true,
+		centerPadding: '0px',
+		arrows:true,
+		dots:false,
+		slide:'div',
+		pauseOnHover:false,
+		swipe:false,
+		autoplay:true,
+		slidesToShow:3,//보여질 썸네일 개수
+		slidesToScroll:1//스크롤되는 썸네일 개수
+	});
+});
+</script>
+</head>
+<body>
+<div class="header_wrap">
+	<div class="cover"></div>
+    <div class="header">
+        <div class="header_inner">
+            <h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+            <div class="util">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li class="join"><a href="#">회원가입</a></li>
+                </ul>
+                <a class="sns_facebook" href="#">페이스북</a>
+                <a class="sns_insta" href="#">인스타그램</a>
+                <form class="search">
+                    <input type="text">
+                    <button type="submit">검색</button>
+                </form>
+                <button type="button" class="m_btn_search"><img src="images/m_search.png" alt=""></button>
+            </div>
+            <ul class="gnb">
+                <li class="gnb1"><a href="#"><img src="images/gnb01.png" alt=""></a></li>
+                <li class="gnb2"><a href="#"><img src="images/gnb02.png" alt=""></a></li>
+                <li class="gnb3"><a href="#"><img src="images/gnb03.png" alt=""></a></li>
+                <li class="gnb4"><a href="#"><img src="images/gnb04.png" alt=""></a></li>
+                <li class="gnb5"><a href="#"><img src="images/gnb05.png" alt=""></a></li>
+            </ul>
+            <button type="button" class="m_btn_menu"><img src="images/m_menu.png" alt=""></button>
+        </div>
+    </div>
+    <div class="gnb_menu_wrap">
+        <div class="gnb_menu">
+            <div class="gnb_menu_inner">
+                <div class="menu">
+                    <img class="icon" src="images/icon_beksul1.png" alt="">
+                    <ul>
+                        <li><img src="images/depth2_01.png" alt=""></li>
+                        <li><a href="#">백설 이야기</a></li>
+                        <li><a href="#">백설 히스토리</a></li>
+                        <li><a href="#">백설 백과사전</a></li>
+                        <li><a href="#">백설 광고</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon_beksul2.png" alt="">
+                    <ul>
+                        <li><img src="images/depth2_02.png" alt=""></li>
+                        <li><a href="#">제품 전체보기</a></li>
+                        <li class="menu_icon"><a href="#">식용유<br>바로 알기</a></li>
+                        <li class="menu_icon menu_icon2"><a href="#">건강한 단맛<br>백설 스위트리</a></li>
+                        <li class="menu_icon menu_icon3"><a href="#">백설 쿠킷</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon_beksul3.png" alt="">
+                    <ul>
+                        <li><img src="images/depth2_03.png" alt=""></li>
+                        <li><a href="#">레시피 전체보기</a></li>
+                        <li><a href="#">많이 찾는 요리</a></li>
+                        <li><a href="#">조리법 별</a></li>
+                        <li><a href="#">테마 별</a></li>
+                        <li><a href="#">제품 별</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon_beksul4.png" alt="">
+                    <ul>
+                        <li><img src="images/depth2_04.png" alt=""></li>
+                        <li><a href="#">진행중 어워즈</a></li>
+                        <li><a href="#">수상작 레시피</a></li>
+                        <li><a href="#">레시피 어워즈 안내</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon_beksul5.png" alt="">
+                    <ul>
+                        <li><img src="images/depth2_05.png" alt=""></li>
+                        <li><a href="#">이달의 체험단</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">쿠킹클래스</a></li>
+                        <li><a href="#">체험 리뷰</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m_gnb_wrap">
+        <ul class="m_gnb">
+            <li>
+                <a href="#">BRAND STORY<img src="images/m_icon_beksul1.png" alt=""></a>
+                <ul class="m_gnb_menu">
+                    <li><a href="#">- 백설 이야기</a></li>
+                    <li><a href="#">- 백설 히스토리</a></li>
+                    <li><a href="#">- 백설 백과사전</a></li>
+                    <li><a href="#">- 백설 광고</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">PRODUCT<img src="images/m_icon_beksul2.png" alt=""></a>
+                <ul class="m_gnb_menu">
+                    <li><a href="#">- 제품 전체보기</a></li>
+                    <li><a href="#">- 식용유 바로 알기</a></li>
+                    <li><a href="#">- 건강한 단맛 백설 스위트리</a></li>
+                    <li><a href="#">- 백설 쿠킷</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">RECIPE<img src="images/m_icon_beksul3.png" alt=""></a>
+                <ul class="m_gnb_menu">
+                    <li><a href="#">- 레시피 전체보기</a></li>
+                    <li><a href="#">- 많이 찾는 요리</a></li>
+                    <li><a href="#">- 조리법 별</a></li>
+                    <li><a href="#">- 테마 별</a></li>
+                    <li><a href="#">- 제품 별</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">RECIPE AWARDS<img src="images/m_icon_beksul4.png" alt=""></a>
+                <ul class="m_gnb_menu">
+                    <li><a href="#">- 진행중 어워즈</a></li>
+                    <li><a href="#">- 수상작 레시피</a></li>
+                    <li><a href="#">- 레시피 어워즈 안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SPECIAL EVENT<img src="images/m_icon_beksul5.png" alt=""></a>
+                <ul class="m_gnb_menu">
+                    <li><a href="#">- 이달의 체험단</a></li>
+                    <li><a href="#">- 이벤트</a></li>
+                    <li><a href="#">- 쿠킹클래스</a></li>
+                    <li><a href="#">- 체험 리뷰</a></li>
+                    <li><a href="#">- 공지사항</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <div class="visual">
+        <div class="visual1"><a href="#"><img src="images/visual01.jpg" alt=""></a></div>
+        <div class="visual2"><a href="#"><img src="images/visual02.jpg" alt=""></a></div>
+        <div class="visual3"><a href="#"><img src="images/visual03.jpg" alt=""></a></div>
+        <div class="visual4"><a href="#"><img src="images/visual04.jpg" alt=""></a></div>
+        <button type="button" class="btn_play">재생</button>
+    </div>
+    <div class="section1">
+    	<div class="main_banner">
+        	<ul class="banner_list">
+                <li class="box left_box">
+                    <div>
+                        <a href="#">
+                            <p class="tit">백설 쿠킷 매시드 포테이토 KIT</p>
+                            <img src="images/kit1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">백설 쿠킷 옛날닭강정 KIT</p>
+                            <img src="images/kit2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">백설 쿠킷 감자수제비 KIT</p>
+                            <img src="images/kit3.jpg" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="box center_box">
+                    <div>
+                        <a href="#">
+                            <p class="tit">'리그난' 참기름 출시기념 이벤트</p>
+                            <img src="images/event1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">RECIPE AWARDS</p>
+                            <img src="images/event2.jpg" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="box right_box">
+                    <div>
+                        <a href="#">
+                            <p class="tit">민어는 8월 한달만 제철!</p>
+                            <img src="images/recipe1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">깻잎은 성인병 예방에 좋아요!</p>
+                            <img src="images/recipe2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">여름엔 역시 야식</p>
+                            <img src="images/recipe3.jpg" alt="">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="m_tab">
+            <ul class="tab">
+                <li class="tab1 on">
+                	<a href="#"><img src="images/m_banner_tit1_on.png" alt=""></a>
+                    <span><img src="images/m_banner_arrow1.png" alt=""></span>
+                </li>
+                <li class="tab2">
+                    <a href="#"><img src="images/m_banner_tit2.png" alt=""></a>
+                    <span><img src="images/m_banner_arrow2.png" alt=""></span>
+                </li>
+                <li class="tab3">
+                    <a href="#"><img src="images/m_banner_tit3_on.png" alt=""></a>
+                    <span><img src="images/m_banner_arrow3.png" alt=""></span>
+                </li>
+            </ul>
+            <div class="tab_con">
+                <div class="tab_con1">
+                    <div>
+                        <a href="#">
+                            <p class="tit">백설 쿠킷 <span>매시드 포테이토</span> KIT</p>
+                            <img src="images/m_kit1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">백설 쿠킷 <span>옛날닭강정</span> KIT</p>
+                            <img src="images/m_kit2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">백설 쿠킷 <span>감자수제비</span> KIT</p>
+                            <img src="images/m_kit3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="tab_con1 tab_con2">
+                    <div>
+                        <a href="#">
+                            <p class="tit"><span>'리그난' 참기름</span> 출시기념 이벤트</p>
+                            <img src="images/m_event1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">RECIPE <span>AWARDS</span></p>
+                            <img src="images/m_event2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="tab_con1 tab_con3">
+                    <div>
+                        <a href="#">
+                            <p class="tit"><span>민어</span>는 8월 한달만 제철!</p>
+                            <img src="images/m_recipe1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit"><span>깻잎</span>은 성인병 예방에 좋아요!</p>
+                            <img src="images/m_recipe2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="tit">여름엔 역시 <span>야식</span></p>
+                            <img src="images/m_recipe3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub_banner">
+        	<a href="#"><img src="images/m_sub_banner.jpg" alt=""></a>
+        </div>
+        <div class="product">
+        	<ul>
+            	<li class="product_all"><a href="#"></a></li>
+                <li class="product_1"><a href="#"></a></li>
+                <li class="product_2"><a href="#"></a></li>
+                <li class="product_3"><a href="#"></a></li>
+                <li class="product_4"><a href="#"></a></li>
+                <li class="product_5"><a href="#"></a></li>
+                <li class="product_6"><a href="#"></a></li>
+                <li class="product_7"><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="m_product">
+        	<div class="tit">
+                <h1><a href="#">PRODUCT</a></h1><em></em>
+            </div>
+            <div class="m_product_slider">
+                <div>
+                    <a href="#">
+                        <img src="images/product_1_on.png" alt="">
+                        <h2>설탕/액상당<br>Sugar</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/product_2_on.png" alt="">
+                        <h2>밀가루/쿠킹믹스<br>Flour</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/product_3_on.png" alt="">
+                        <h2>식용유/웰빙유<br>Oil</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/product_4_on.png" alt="">
+                        <h2>참기름/들기름<br>Perilla Oil</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/product_5_on.png" alt="">
+                        <h2>국수/당면/떡<br>Noodle</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/product_6_on.png" alt="">
+                        <h2>소스/양념<br>Source</h2>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/product_7_on.png" alt="">
+                        <h2>소세지/햄<br>Ham</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="tit2">
+                <em></em><img src="images/m_more.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+    	<div class="recipe">
+            <a href="#"><img class="recipe1" src="images/section2_recipe1.png" alt=""></a>
+            <a href="#"><img src="images/section2_recipe2.png" alt=""></a>
+            <a href="#"><img src="images/section2_recipe3.png" alt=""></a>
+        </div>
+        <div class="m_recipe">
+            <div>
+                <a href="#">
+                    <img src="images/m_section2_recipe1.jpg" alt="">
+                    <img src="images/m_section2_recipe1_txt.jpg" alt="">
+                </a>
+            </div>
+            <div class="con2">
+                <a href="#">
+                    <img src="images/m_section2_recipe2.jpg" alt="">
+                    <img src="images/m_section2_recipe2_txt.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="images/m_section2_recipe3.jpg" alt="">
+                    <img src="images/m_section2_recipe3_txt.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section3_wrap">
+    	<div class="section3">
+        	<div class="link">
+                <div class="link1">
+                    <a href="#">
+                        <img class="tit" src="images/s3_tit1.png" alt="">
+                        <img src="images/s3_studio.png" alt="">
+                    </a>
+                </div>
+                <div class="link1 link2">
+                    <a href="#">
+                        <img class="tit" src="images/s3_tit2.png" alt="">
+                        <img src="images/s3_tel.png" alt="">
+                    </a>
+                </div>
+                <div class="link1 link3">
+                    <img class="tit" src="images/s3_tit3.png" alt="">
+                    <img src="images/s3_sns.png" alt="">
+                    <div class="sns">
+                        <a href="#"><img src="images/facebook.png" alt=""></a>
+                        <a href="#"><img src="images/instagram.png" alt=""></a>
+                    </div>
+                </div>
+        	</div>
+        </div>
+        <div class="m_section3">
+        	<div class="cooking">
+            	<a href="#">
+                	<img src="images/m_cooking.jpg" alt="">
+                    <div class="txt">
+                        <h2>백설요리원</h2>
+                        <h1><img src="images/m_cooking_txt.png" alt="cooking"></h1>
+                        <P>ㅡ<br>CJ제일제당의 즐거운 쿠킹클래스!</P>
+                    </div>
+                </a>
+            </div>
+            <div class="center">
+                <img src="images/center.jpg" alt="">
+                <div class="icon">
+                    <a href="#"><img src="images/m_icon_pc.png" alt=""></a>
+                    <a href="#"><img src="images/m_icon_login.png" alt=""></a>
+                    <a href="#"><img src="images/m_icon_insta.png" alt=""></a>
+                    <a href="#"><img src="images/m_icon_fb.png" alt=""></a>
+                </div>
+                <div class="center_txt"><img src="images/center_txt.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+    <div class="footer">
+        <div class="footer_inner">
+            <h1><a href="#"><img src="images/logo_cj.png" alt="cj"></a></h1>
+            <div class="footer_con">
+                <ul class="f_menu">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">고객행복센터</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">CJ제일제당</a></li>
+                    <li class="f_menu6"><a href="#">사이트맵</a></li>
+                </ul>
+                <address>씨제이제일제당㈜<em>l</em>주소: 서울특별시 중구 동호로 330 CJ제일제당센터 (우)04560<em>l</em>대표자:김철하<br>대표전화:02-6740-1114<em>l</em>사업자등록번호: 104-86-09535<em>l</em>개인정보보호책임자: 이상몽<em>l</em>고객행복센터: 080-850-1200<br>Copyright 2014 © CJ CheilJedang Corp. All rights reserved.</address>
+                <h2><img src="images/ccm.png" alt="ccm"></h2>   
+            </div>
+        </div>
+    </div>
+    <div class="m_footer">
+    	<img src="images/m_menu_bg.jpg" alt="">
+        <ul>
+        	<li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">법적고지</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+        </ul>
+    </div>
+    <div class="m_footer2">
+    	<h1><a href="#"><img src="images/logo_cj.png" alt="cj"></a></h1>
+    	<p class="f2_txt1">씨제이제일제당㈜ 대표: 김철하<br>서울특별시 중구 동호로 330 CJ제일제당센터<br>Tel. 02-6740-1114</p>
+        <p class="f2_txt2">사업자등록번호: 104-86-09535 / 개인정보보호책임자: 이상몽<br>Copyright 2016 © CJ CheilJedang Corp. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>

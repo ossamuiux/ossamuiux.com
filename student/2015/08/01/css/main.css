@@ -1,0 +1,208 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+body,button,input {font:12px 'Nanum Gothic','돋움',dotum,sans-serif;}
+a {text-decoration:none;}
+a,div:focus{outline:none;}
+
+
+
+
+
+
+body {min-width:1100px;}
+/*헤더*/
+.header_wrap {width:100%; height:120px;}
+
+/*헤더-로고*/
+.header_wrap .top_wrap {height:74px; background:#331f1d;}
+.header_wrap .top_wrap .top {width:1000px; height:54px; margin:0 auto; text-align:center; padding-top:20px;}
+
+/*주메뉴*/
+.header_wrap .gnb_wrap {height:46px; background:#392c1d;}
+.header_wrap .gnb_wrap .gnb {width:1000px; height:46px; margin:0 auto;}
+
+.header_wrap .gnb_wrap .gnb .gnb_menu {margin-left:60px; height:46px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li {float:left; position:relative;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li>a {color:#FFF; font-size:18px; display:inline-block; width:170px; height:45px; line-height:46px; text-indent:37px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li:hover>a {background:#829c2c; border-bottom:1px solid #688017;}
+
+/*메뉴 구분선*/
+.header_wrap .gnb_wrap .gnb .gnb_menu>li>a span {border:1px solid #688017; width:100px; position:absolute; left:50%; top:44px; margin-left:-50px; display:none;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li:hover>a span {display:block;}
+
+/*서브메뉴*/
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub {position:absolute; left:0px; top:45px; background:#829c2c; width:170px; display:none; padding:15px 0; z-index:9999;}
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub li {font-size:15px; font-weight:normal; margin-bottom:10px; margin-left:35px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub li a {color:#FFF; display:inline-block; letter-spacing:-0.5px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub li a:hover {color:#d1e203;}
+
+.header_wrap .gnb_wrap .gnb .gnb_menu>li:hover .sub {display:block;}
+
+
+
+
+/*메인*/
+.main {background:#e2dbd1; width:100%; overflow:hidden;}
+
+/*슬라이더*/
+.main .slider_wrap {width:100%; height:500px; background:#9b8973;}
+
+.main .slider_wrap .slick-slide {height:500px; position:relative; overflow:hidden;}
+.main .slider_wrap .slick-slide img {position:absolute; left:50%; top:0; margin-left:-960px;}
+.main .slider_wrap .slick-slide:focus {outline:none;}
+/*슬라이더 버튼 커스텀*/
+.main .slider_wrap .slick-prev {position:absolute; left:50%; top:50%; background:url(../img/slide_arrow_left.png) no-repeat; text-indent:-9999px; z-index:999; width:31px; height:51px; border:none; margin-left:-520px; cursor:pointer; outline:none;}
+.main .slider_wrap .slick-next {position:absolute; right:50%; top:50%; background:url(../img/slide_arrow_right.png) no-repeat; text-indent:-9999px; z-index:999; width:31px; height:51px; border:none; margin-right:-520px; cursor:pointer; outline:none;}
+
+.main .slider_wrap .slick-prev:hover {background:url(../img/slide_arrow_left02.png) no-repeat; outline:none;}
+.main .slider_wrap .slick-next:hover {background:url(../img/slide_arrow_right02.png) no-repeat; outline:none;}
+
+
+/*창업경쟁력,신메뉴,배너*/
+.main .product1 {width:1000px; height:470px; margin:0 auto; margin-top:25px;}
+
+/*창업*/
+.main .product1 .startup {float:left; position:relative;}
+.main .product1 .startup>a {display:block; width:406px; height:90px; position:absolute; left:0; bottom:35px; background:url(../img/startup_bg.png); color:#FFF; font-size:26px; text-align:center; padding-top:15px; line-height:35px; font-weight:600;}
+
+/*신메뉴*/
+.main .product1 .new {float:right; width:579px; height:470px;}
+
+.main .product1 .new .thumbnail {height:300px; position:relative;}
+.main .product1 .new .thumbnail h2 {background:url(../img/thumbnail_tit_bg.jpg) no-repeat; height:39px; color:#fff; font-size:18px; letter-spacing:-0.5px; padding:17px 0 0 70px; font-weight:600;}
+
+.main .product1 .new .thumbnail .thumb {float:left; background:#FFF; width:290px; height:244px; text-align:center;}
+.main .product1 .new .thumbnail .thumb img {margin:18px 0 10px 28px;}
+.main .product1 .new .thumbnail .thumb h3 {color:#f06e26; font-size:18px; font-weight:600;}
+.main .product1 .new .thumbnail .thumb p {margin-top:10px; color:#331f1d; font-size:14px; letter-spacing:-0.5px;}
+
+/*사진 위치 조정*/
+.main .product1 .new .thumbnail .thumb2 img{margin-left:12px;}
+.main .product1 .new .thumbnail .thumb3 img{margin-left:19px;}
+.main .product1 .new .thumbnail .thumb4 img{margin-left:20px;}
+
+/*신메뉴 썸네일슬라이더 버튼 커스텀*/
+.main .product1 .new .thumbnail .thum_slider{position:relative;}
+.main .product1 .new .thumbnail .thum_slider .slick-prev {width:18px; height:30px; background:url(../img/thumbnail_arrow_left.png) no-repeat; position:absolute; left:14px; top:50%; margin-top:-20px; text-indent:-9999px; z-index:1000; border:none; cursor:pointer; outline:none;}
+.main .product1 .new .thumbnail .thum_slider .slick-next {width:18px; height:30px; background:url(../img/thumnail_arrow_right.png) no-repeat; position:absolute; right:14px; top:50%; margin-top:-20px; text-indent:-9999px; z-index:1000; border:none; cursor:pointer; outline:none;}
+
+/*배너*/
+.main .product1 .new .banner {margin-top:15px; position:relative;}
+.main .product1 .new .banner a:hover .banner_cover {display:block;}
+
+.main .product1 .new .banner .banner_cover {width:579px; height:155px; background:url(../img/main_banner_hover.png); position:absolute; left:0; top:0; display:none;}
+.main .product1 .new .banner .banner_cover p {font-size:24px; font-weight:600; color:#331f1d; margin:65px 0 0 150px; background:url(../img/main_banner_arrow.png) no-repeat 80% center;}
+
+/*커피, 뉴스, 여왕의꽃*/
+.main .product2 {width:1000px; height:450px; margin:25px auto 0;}
+
+/*커피*/
+.main .product2 .box1 {height:218px}
+.main .product2 .box1 .coffee {float:left; width:579px; height:218px; position:relative;}
+.main .product2 .box1 .coffee .more_btn {position:absolute; right:38px; bottom:45px; color:#fff; background:url(../img/coffee_more_btn.png) no-repeat 95% 2px; display:block; width:85px; font-size:14px;}
+
+/*뉴스*/
+.main .product2 .box1 .news {float:right; width:406px; height:218px; position:relative;}
+.main .product2 .box1 .news h2 {background:url(../img/news_tit.jpg) no-repeat; width:406px; height:42px; color:#fff; font-size:18px; letter-spacing:-0.5px; padding:18px 0 0 70px; font-weight:600;}
+.main .product2 .box1 .news h2 em {color:#4c4135; font-size:16px; margin-top:2px; display:inline-block;}
+.main .product2 .box1 .news .news_more {position:absolute; right:50px; top:18px;}
+
+.main .product2 .box1 .news ul {background:#FFF; font-size:14px; padding:27px 23px 0; height:130px;}
+.main .product2 .box1 .news ul li {margin-bottom:10px;}
+.main .product2 .box1 .news ul li a {color:#331f1d; white-space:nowrap; display:block; overflow:hidden; text-overflow:ellipsis;}
+.main .product2 .box1 .news ul li img {margin:6px 7px 0 0; width:4px;}
+
+
+/*여왕의꽃*/
+.main .product2 .box2 {height:217px; margin-top:15px; background:url(../img/banner_queen.jpg) no-repeat;}
+.main .product2 .box2 a {display:block; font-size:24px; color:#FFF; padding:65px 0 0 25px; line-height:30px; font-weight:600; letter-spacing:-0.5px;}
+.main .product2 .box2 a strong {color:#d3df41; font-weight:bold; font-size:28px; letter-spacing:-1.5px;}
+
+
+
+/*이벤트,오늘의메뉴,고객센터*/
+.main .product3 {width:1000px; height:150px; margin:25px auto 60px;}
+
+/*이벤트*/
+.main .product3 .event {float:left; width:385px; height:115px; background:url(../img/bg_event.jpg) no-repeat; padding-top:35px;}
+.main .product3 .event h3 {color:#392c1d; font-size:30px; letter-spacing:-0.5px; font-weight:600; margin-left:80px;}
+.main .product3 .event p {color:#331f1d; font-size:20px; letter-spacing:-0.5px; font-weight:600; margin:8px 0 0 60px;}
+.main .product3 .event p em {color:#fd3000;}
+.main .product3 .event a {color:#392c1d; background:url(../img/event_more_btn.png) no-repeat right center; display:block; margin-top:8px; margin-left:235px; width:70px;}
+
+/*오늘의 메뉴*/
+.main .product3 .todays {float:left; width:275px; height:120px; background:#76634c; margin-left:15px; padding:30px 0 0 25px;}
+.main .product3 .todays img {float:left;}
+.main .product3 .todays .more {float:left; margin:10px 0 0 13px; color:#FFF;}
+.main .product3 .todays .more h3 {font-size:20px; font-weight:600;}
+.main .product3 .todays .more p {background:url(../img/todays_more_btn.png) no-repeat right 4px; display:block; margin:40px 0 0 40px; width:70px;}
+
+/*고객센터*/
+.main .product3 .customer {float:left; width:300px; height:150px; background:#392c1d;}
+.main .product3 .customer img {float:left; margin:45px 0 0 20px;}
+.main .product3 .customer .num {float:left; margin:32px 0 0 5px; color:#FFF; text-align:center;}
+.main .product3 .customer .num h3 {font-size:20px; letter-spacing:-1px; font-weight:400;}
+.main .product3 .customer .num p {font-size:34px; margin-top:15px; font-weight:600;}
+
+
+
+
+/*푸터*/
+.footer_wrap {background:#331f1d; width:100%; height:140px;}
+
+.footer_wrap .footer {margin:0 auto; width:1000px; height:140px; position:relative;}
+
+.footer_wrap .footer ul {padding-top:30px; overflow:hidden;}
+.footer_wrap .footer ul li {float:left; background:url(../img/footer_line.png) no-repeat left 2px; padding:0 8px;}
+.footer_wrap .footer ul li:first-child {background:none; padding-left:0;}
+.footer_wrap .footer ul li a {color:#FFF; font-size:13px; font-weight:600;}
+
+.footer_wrap .footer>p {margin-top:15px; color:#CCC; font-size:13px;}
+.footer_wrap .footer .copy {margin-top:10px; font-size:12px;}
+
+.footer_wrap .footer .blog {position:absolute; right:0; top:50%; margin-top:-22px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

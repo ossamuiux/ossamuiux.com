@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="서울랜드">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<title>서울랜드 자연속 캐릭터 천국</title>
+<link rel="stylesheet" href="css/common.css?v=20190201">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css?v=20190201">
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+<!--
+        <div class="landscape_cover">
+            <p>스마트폰을 세로모드로<br>돌려주세요.</p>
+        </div>
+-->
+        <header id="header">
+            <div class="top_header">
+                <div class="top_header_inner">
+                    <a class="shopping" href="#">
+                        <img src="images/shoppingmall.png" alt="">
+                        캐릭터 쇼핑몰
+                    </a>
+                    <ul class="util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객의 소리함</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="bottom_header">
+                <div class="bottom_header_inner">
+                    <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="서울랜드"></a></h1>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">계획세우기</a>
+                            <ul class="depth2">
+                                <li><a href="#">이용시간</a></li>
+                                <li><a href="#">이용요금</a></li>
+                                <li><a href="#">할인프로모션</a></li>
+                                <li><a href="#">제휴카드</a></li>
+                                <li><a href="#">온라인쿠폰</a></li>
+                                <li><a href="#">교통정보</a></li>
+                                <li><a href="#">주변볼거리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">즐거운상상</a>
+                            <ul class="depth2">
+                                <li><a href="#">놀이기구</a></li>
+                                <li><a href="#">공연/전시</a></li>
+                                <li><a href="#">연간축제안내</a></li>
+                                <li><a href="#">음식점/상점</a></li>
+                                <li><a href="#">편의시설</a></li>
+                                <li><a href="#">함께하는 이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">단체프로그램</a>
+                            <ul class="depth2">
+                                <li><a href="#">학생단체</a></li>
+                                <li><a href="#">기업체행사</a></li>
+                                <li><a href="#">외국인단체</a></li>
+                                <li><a href="#">일반단체</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">연간회원</a>
+                            <ul class="depth2">
+                                <li><a href="#">서울랜드 연간회원</a></li>
+                                <li><a href="#">둘모아 연간회원</a></li>
+                                <li><a href="#">다모아 연간회원</a></li>
+                                <li><a href="#">연간회원 약관</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">예매ㆍ예약</a>
+                            <ul class="depth2">
+                                <li><a href="#">예매</a></li>
+                                <li><a href="#">체험/퍼레이드 예약</a></li>
+                                <li><a href="#">나의 예매/예약내역</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="han_menu">
+                        <button class="btn_search" type="button"></button>
+                        <div class="lang_wrap">
+                            <button class="btn_lang" type="button">KOR</button>
+                            <ul class="lang">
+                                <li><a href="#">LANGUAGE</a></li>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Japanese</a></li>
+                                <li><a href="#">Chinese</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header id="mHeader">
+            <h1 class="mlogo"><a href="index.html"><img src="images/m_logo.png" alt="서울랜드"></a></h1>
+            <button class="b_menu" type="button"></button>
+            <nav class="mgnb">
+                <div class="mtop_menu">
+                    <ul class="mlang">
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">JP</a></li>
+                        <li><a href="#">CH</a></li>
+                    </ul>
+                    <div class="mhan_menu">
+                        <button class="mbtn_search" type="button"></button>
+                        <button class="mbtn_close" type="button"></button>
+                    </div>
+                </div>
+                <div class="mbottom_menu">
+                    <ul class="mgnb_menu">
+                    <li>
+                        <a href="#">계획세우기</a>
+                        <ul class="depth2">
+                            <li><a href="#">- 이용시간</a></li>
+                            <li><a href="#">- 이용요금</a></li>
+                            <li><a href="#">- 할인프로모션</a></li>
+                            <li><a href="#">- 제휴카드</a></li>
+                            <li><a href="#">- 온라인쿠폰</a></li>
+                            <li><a href="#">- 교통정보</a></li>
+                            <li><a href="#">- 주변볼거리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">즐거운상상</a>
+                        <ul class="depth2">
+                            <li><a href="#">- 놀이기구</a></li>
+                            <li><a href="#">- 공연/전시</a></li>
+                            <li><a href="#">- 연간축제안내</a></li>
+                            <li><a href="#">- 음식점/상점</a></li>
+                            <li><a href="#">- 편의시설</a></li>
+                            <li><a href="#">- 함께하는 이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">단체프로그램</a>
+                        <ul class="depth2">
+                            <li><a href="#">- 학생단체</a></li>
+                            <li><a href="#">- 기업체행사</a></li>
+                            <li><a href="#">- 외국인단체</a></li>
+                            <li><a href="#">- 일반단체</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">연간회원</a>
+                        <ul class="depth2">
+                            <li><a href="#">- 서울랜드 연간회원</a></li>
+                            <li><a href="#">- 둘모아 연간회원</a></li>
+                            <li><a href="#">- 다모아 연간회원</a></li>
+                            <li><a href="#">- 연간회원 약관</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예매ㆍ예약</a>
+                        <ul class="depth2">
+                            <li><a href="#">- 예매</a></li>
+                            <li><a href="#">- 체험/퍼레이드 예약</a></li>
+                            <li><a href="#">- 나의 예매/예약내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="shopping" href="#">
+                            <img src="images/m_shoppingmall.png" alt="">
+                        캐릭터 쇼핑몰
+                        </a>
+                    </li>
+                </ul>
+                    <ul class="mutil">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객의 소리함</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="input_wrap">
+            <form method="post">
+                <fieldset>
+                    <legend class="blind">전체검색</legend>
+                    <input class="input_search" type="text" placeholder="검색어를 입력하세요.">
+                    <button class="btn_search" type="submit">검색버튼</button>
+                    <button class="btn_close" type="button">닫기</button>
+                </fieldset>
+            </form>    
+        </div>
+        <div class="dimm"></div>
+        <main id="main">
+            <div class="swiper-container main_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <button class="btn_play" type="button">재생/일시정지버튼</button>
+            </div>
+            <section class="section1">
+                <div class="section1_inner">
+                    <div class="tit_wrap">
+                        <h2>할인 프로모션</h2>
+                    </div>
+                    <div class="promotion_slider_wrap">
+                        <div class="swiper-container promotion_slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="images/promotion01.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/promotion02.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/promotion05.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/promotion06.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="images/promotion03.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/promotion04.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/promotion07.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/promotion08.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <a class="btn_more" href="#"><span>더 많은 이벤트</span> 보러가기</a>
+                </div>
+            </section>
+            <section class="section2">
+                <h3 class="blind">연간축제</h3>
+                <section class="section2_inner">
+                    <div class="tit_wrap">
+                        <h2>연간 축제 안내</h2>
+                    </div>
+                </section>
+                <div class="festival_slider_wrap">
+                    <div class="swiper-container festival_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/festival_01.jpg" alt="">
+                                    <div class="txt_wrap">
+                                        <h3>이른 봄 꽃 파티</h3>
+                                        <p>2월 중 ~ 3월 중</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/festival_02.jpg" alt="">
+                                    <div class="txt_wrap">
+                                        <h3>캐릭터 플라워 페스티발</h3>
+                                        <p>3월 중 ~ 6월 초</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/festival_03.jpg" alt="">
+                                    <div class="txt_wrap">
+                                        <h3>쿨 썸머! 뮤직 페스티발</h3>
+                                        <p>6월 말 ~ 8월 말</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/festival_04.jpg" alt="">
+                                    <div class="txt_wrap">
+                                        <h3>할로윈 페스티발</h3>
+                                        <p>9월 중 ~ 10월 말</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/festival_05.jpg" alt="">
+                                    <div class="txt_wrap">
+                                        <h3>크리스마스 페스티발 산타런</h3>
+                                        <p>11월 초 ~ 12월 말</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/festival_06.jpg" alt="">
+                                    <div class="txt_wrap">
+                                        <h3>빙어축제</h3>
+                                        <p>1월 1일 ~ 3월 초</p>
+                                    </div>
+                                </a>
+                            </div>
+                         </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <a class="btn_more" href="#"><span>자세히 보러가기</span></a>
+            </section>
+            <section class="section3">
+                <div class="section3_inner">
+                    <div class="tit_wrap">
+                        <h2>놀이기구 안내</h2>
+                    </div>
+                    <ul class="play_list">
+                        <li>
+                            <a href="#">
+                                <img src="images/play_01.jpg" alt="">
+                                <p>AR안전체험관<br>유후와 친구들</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/play_02.jpg" alt="">
+                                <p>킹바이킹</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/play_03.jpg" alt="">
+                                <p>카트라이더 범퍼</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/play_04.jpg" alt="">
+                                <p>달나라열차</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="btn_more" href="#"><span>더 많은 놀이기구</span> 보러가기</a>
+                </div>
+            </section>
+            <section class="section4">
+                <div class="section4_inner">
+                    <div class="notice_box">
+                        <div class="tit_wrap">
+                            <h2>NEWS &amp; NOTICE</h2>
+                        </div>
+                        <ul class="notice_list">
+                            <li><a href="#">[축제] 짜릿한 손맛을 낚자! 도시빙어</a></li>
+                            <li><a href="#">[안내] 즐거운 겨울! 라바눈썰매장</a></li>
+                            <li><a href="#">[축제] 인생사진 성지! 핑크스튜디오</a></li>
+                            <li><a href="#">[안내] 프라이빗한 웨딩 '장미의 언덕'</a></li>
+                            <li><a href="#">[안내] 서울랜드 따뜻하게 즐기는 꿀팁</a></li>
+                        </ul>
+                    </div>
+                    <div class="runtime_box">
+                        <div class="tit_wrap">
+                            <h2>운영 시간</h2>
+                        </div>
+                        <div class="runtime">
+                            <span class="month">00</span>월 
+                            <span class="date">00</span>일 
+                            (<span class="day">월</span>)<br>     
+                            <span class="open_hour">00</span>:
+                            <span class="open_min">00</span> ~ 
+                            <span class="close_hour">00</span>:
+                            <span class="close_min">00</span>
+                        </div>
+                        <div class="list_wrap">
+                            <ul class="intro_list">
+                            <li>
+                                <a href="#">
+                                    <img src="images/runtime_icon_01.png" alt="">
+                                    <p>이용요금</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/runtime_icon_02.png" alt="">
+                                    <p>공연시간</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/runtime_icon_03.png" alt="">
+                                    <p>가이드맵</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/runtime_icon_04.png" alt="">
+                                    <p>오시는길</p>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="quickmenu_wrap">
+            <div class="quick_list_wrap">
+                <h2>QUICK MENU</h2>
+                <ul class="quick_list">
+                    <li>
+                        <a href="#">
+                            <img src="images/quick_icon_012.png" alt="">
+                            <p>FAQ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/quick_icon_022.png" alt="">
+                            <p>고객의 소리</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/quick_icon_032.png" alt="">
+                            <p>예매하기</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/quick_icon_042.png" alt="">
+                            <p>My Page</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="quick_dimm"></div>
+            <div class="quickmenu">
+                <button class="btn_quick" type="button">
+                    <span>QUICK<br>MENU</span>
+                </button>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="top_footer">
+                <div class="top_footer_inner">
+                    <ul class="footer_menu">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">제휴문의</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                    <ul class="sns_list">
+                        <li><a href="#"><img src="images/sns_icon_01.png" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_02.png" alt="카카오스토리"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_03.png" alt="인스타그램"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_04.png" alt="블로그"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_05.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle_footer">
+                <div class="middle_footer_inner">
+                    <h2 class="m_logo"><a href="index.html"><img src="images/footer_logo.png" alt="서울랜드"></a></h2>
+                    <ul class="sns_list">
+                        <li><a href="#"><img src="images/sns_icon_01.png" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_02.png" alt="카카오스토리"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_03.png" alt="인스타그램"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_04.png" alt="블로그"></a></li>
+                        <li><a href="#"><img src="images/sns_icon_05.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_footer">
+                <div class="bottom_footer_inner">
+                    <h2 class="logo"><a href="index.html"><img src="images/footer_logo.png" alt="서울랜드"></a></h2>
+                    <div class="addr_wrap">
+                        <address>
+                            주소 : 13829 경기도 과천시 광명로 181 (주)서울랜드<span class="sp1"></span><br class="br1">
+                            대표이사 : 김대중<span class="sp2"></span><br class="br2">
+                            사업자등록번호 : 138-81-04654<span class="sp3"></span><br class="br3">
+                            통신판매업신고번호 : 과천 제 137호<span class="sp4"></span><br class="br4">
+                            안내전화 : 02-509-6000<span class="sp5"></span><br class="br5">
+                            개인정보관리책임자 : 마케팅팀 전형준<span class="sp6"></span><br class="br6">
+                            운영자 이메일 : webmaster@seoulland.co.kr
+                        </address>
+                        <p>Copyright(c) Seoulland all rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

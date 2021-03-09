@@ -1,0 +1,254 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+body,button,input {font:12px 'Nanum Gothic','돋움',dotum,sans-serif;}
+a {text-decoration:none;}
+div:focus{outline:none;}
+
+
+
+
+
+
+body {min-width:1100px;}
+/*헤더*/
+.header_wrap {width:100%; height:120px;}
+
+/*헤더-로고*/
+.header_wrap .top_wrap {height:74px; background:#331f1d;}
+.header_wrap .top_wrap .top {width:1000px; height:54px; margin:0 auto; text-align:center; padding-top:20px;}
+
+/*주메뉴*/
+.header_wrap .gnb_wrap {height:46px; background:#392c1d;}
+.header_wrap .gnb_wrap .gnb {width:1000px; height:46px; margin:0 auto;}
+
+.header_wrap .gnb_wrap .gnb .gnb_menu {margin-left:60px; height:46px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li {float:left; position:relative;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li>a {color:#FFF; font-size:18px; display:inline-block; width:170px; height:45px; line-height:45px; text-indent:37px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li:hover>a {background:#829c2c; border-bottom:1px solid #688017;}
+
+/*메뉴 구분선*/
+.header_wrap .gnb_wrap .gnb .gnb_menu>li>a span {border:1px solid #688017; width:100px; position:absolute; left:50%; top:44px; margin-left:-50px; display:none;}
+.header_wrap .gnb_wrap .gnb .gnb_menu>li:hover>a span {display:block;}
+
+/*서브메뉴*/
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub {position:absolute; left:0px; top:45px; background:#829c2c; width:170px; display:none; padding:20px 0 15px; z-index:9999;}
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub li {font-size:15px; font-weight:normal; margin-bottom:8px; margin-left:35px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub li a {color:#FFF; display:inline-block; letter-spacing:-0.5px;}
+.header_wrap .gnb_wrap .gnb .gnb_menu .sub li a:hover {color:#d1e203;}
+
+
+.header_wrap .gnb_wrap .gnb .gnb_menu>li:hover .sub {display:block;}
+
+
+
+/*메인*/
+
+/***************************************************브랜드***********************************/
+.header_wrap.brand_header .gnb_wrap .gnb .gnb_menu li a.on {color:#d1e203;}
+
+
+.main {background:#e2dbd1; width:100%; overflow:hidden;}
+
+.main .visual_wrap {height:171px; background:#76634c;}
+
+.main .visual_wrap .visual {width:1000px; height:171px; background:url(../img/sub_visual01.jpg) no-repeat; margin:0 auto;}
+.main .visual_wrap .visual h1 {font-size:36px; font-weight:600; text-align:center; padding-top:65px; color:#FFF;}
+.main .visual_wrap .visual ul {float:right; margin-top:40px;}
+.main .visual_wrap .visual ul li {float:left; background:url(../img/location_arrow.png) no-repeat left 5px; padding:0 7px 0 12px;}
+.main .visual_wrap .visual ul li:first-child {background:none;}
+.main .visual_wrap .visual ul li a {color:#fff; font-size:14px;}
+.main .visual_wrap .visual ul li a.is {font-weight:bold;}
+
+/*프로덕트1*/
+.main .product1 {width:1000px; overflow:hidden; margin:50px auto 50px;}
+
+.main .product1 .box1 {float:left;}
+.main .product1 .box2 {float:left; margin-left:40px;}
+.main .product1 .box2 h2 {font-size:18px; font-weight:600; color:#3f2c29; line-height:22px;}
+.main .product1 .box2 h2 em {color:#500800;}
+.main .product1 .box2 p {margin-top:20px; font-size:14px; color:#6b6b6b; letter-spacing:-0.5px; line-height:18px;}
+
+.main .product1 a {display:block; color:#FFF; width:154px; height:31px; background:#ef6417; border-radius:5px; text-align:center; font-size:15px; font-weight:600; margin-top:61px; padding-top:15px;}
+
+
+/*프로덕트2*/
+.main .product2 {width:1000px; height:571px; margin:0 auto; background:url(../img/brand_section2_bg.jpg) no-repeat; padding-top:20px;}
+.main .product2 .box {margin-left:20px;}
+.main .product2 .box h2 {font-size:18px; font-weight:600; color:#3f2c29; line-height:22px;}
+.main .product2 .box h2 em {color:#500800;}
+.main .product2 .box p {margin-top:20px; font-size:14px; color:#6b6b6b; letter-spacing:-0.5px; line-height:18px;}
+
+
+/*프로덕트3*/
+.main .product3 {width:1000px; margin:0 auto 80px;}
+.main .product3 .box1 h2 {font-size:18px; font-weight:600; color:#3f2c29; line-height:22px;}
+.main .product3 .box1 h2 em {color:#500800;}
+.main .product3 .box1 p {margin-top:20px; font-size:14px; color:#6b6b6b; letter-spacing:-0.5px; line-height:18px;}
+
+.main .product3 .box2 h3 {color:#331f1d; font-size:16px; font-weight:600; margin:30px 0 10px;}
+
+.main .product3 .box3 h3 {margin-top:20px;}
+
+
+
+
+
+
+
+/***************************************************메뉴***********************************/
+.header_wrap.menu_header .gnb_wrap .gnb .gnb_menu li a.on {color:#d1e203;}
+
+
+.main_menu {background:#e2dbd1; width:100%; overflow:hidden;}
+
+/*서브 비쥬얼*/
+.main_menu .sub_visual {background:url(../img/sub_visual_bg.jpg) no-repeat center center; width:100%; height:368px;}
+.main_menu .sub_visual .visual {width:1000px; margin:0 auto; position:relative;}
+.main_menu .sub_visual .visual>img {margin-top:1px;}
+/*로케이션 버튼*/
+.main_menu .sub_visual .visual .location {position:absolute; right:0; bottom:5px;}
+.main_menu .sub_visual .visual .location li {float:left; background:url(../img/menu_location_arrow.png) no-repeat left 4px; padding:0 6px 0 11px;}
+.main_menu .sub_visual .visual .location li:first-child {background:none;}
+.main_menu .sub_visual .visual .location li a {color:#392c1d; font-size:14px;}
+.main_menu .sub_visual .visual .location li a.newnhot {font-weight:bold;}
+
+/*메뉴*/
+.main_menu .menu {width:1001px; margin:0 auto; padding-top:60px; margin-bottom:80px;}
+
+.main_menu .menu h1 {font-size:30px; font-weight:600; color:#392c1d;}
+.main_menu .menu P {font-size:18px; letter-spacing:-0.5px; margin-top:15px; color:#76634c;}
+
+/*메뉴 리스트*/
+.main_menu .menu .menu_list {background:#FFF; margin-top:40px; overflow:hidden; border-top:1px solid #CCC; border-left:1px solid #CCC;}
+.main_menu .menu .menu_list li {float:left; width:199px; height:215px; border-right:1px solid #CCC; border-bottom:1px solid #CCC; font-size:14px; text-align:center; padding-top:35px; letter-spacing:-0.5px; position:relative;}
+.main_menu .menu .menu_list h2 {font-weight:600; color:#7f8e01;}
+.main_menu .menu .menu_list h3 {color:#b9bb39; height:38px; margin-top:5px;}
+
+.main_menu .menu .menu_list li .label_new {position:absolute; right:25px; bottom:35px;}
+.main_menu .menu .menu_list li .label_hot {position:absolute; right:20px; bottom:35px;}
+
+
+/*메뉴 이미지 위치조정*/
+.main_menu .menu .menu_list .list4 h3 {height:55px;}
+.main_menu .menu .menu_list .list7 h3 {height:45px;}
+.main_menu .menu .menu_list .list8 h3 {height:45px;}
+.main_menu .menu .menu_list .list14 h3 {height:50px;}
+.main_menu .menu .menu_list .list15 h3 {height:48px;}
+.main_menu .menu .menu_list .list18 h3 {height:48px;}
+
+
+
+
+
+
+
+
+/*******************************************프렌차이즈********************************************/
+.header_wrap.franchise_header .gnb_wrap .gnb .gnb_menu li a.on {color:#d1e203;}
+
+.main.franchise .visual_wrap .visual  {background:url(../img/sub_visual_franchise.jpg) no-repeat center center;}
+
+.main.franchise .visual_wrap .visual h1 {padding-top:40px;}
+.main.franchise .visual_wrap .visual p {font-size:16px; letter-spacing:-0.5px; color:#fff; text-align:center; margin-top:5px;}
+.main.franchise .visual_wrap .visual ul {margin-top:25px;}
+
+/*인테리어 컨셉*/
+.main.franchise .product1 span {width:106px; border-bottom:1px solid #9e886c; display:block;}
+.main.franchise .product1 h2 {color:#331f1d; font-size:18px; font-weight:600; margin-top:10px;}
+.main.franchise .product1 h3 {color:#500800; font-size:16px; margin-top:20px;}
+.main.franchise .product1 p {color:#6b6b6b; font-size:14px; margin:5px 0 15px 0; line-height:18px;}
+
+/*인테리어 스타일*/
+.main.franchise .product2{background:none; height:300px;}
+.main.franchise .product2 span {width:120px; border-bottom:1px solid #9e886c; display:block;}
+.main.franchise .product2 h2 {color:#331f1d; font-size:18px; font-weight:600; margin:10px 0 20px 0;}
+.main.franchise .product2 h3 {color:#500800; font-size:16px; margin-top:15px;}
+.main.franchise .product2 p {color:#6b6b6b; font-size:14px; margin-top:5px;}
+.main.franchise .product2 img {margin-top:50px;}
+
+
+/*가맹점 사진보기*/
+.main.franchise .product3 .tit {text-align:center;}
+.main.franchise .product3 .tit>img {margin:0 3px;}
+.main.franchise .product3 .tit>h2 {font-size:18px; font-weight:600; clear:#331f1d;}
+
+
+.main.franchise .product3 .store {width:803px; height:371px; margin:30px auto 0;}
+.main.franchise .product3 .store .store_list {float:left; width:234px; height:360px; background:#FFF; float:left; padding:10px 10px 0 0;}
+.main.franchise .product3 .store .store_list li{float:left; margin:0 0 10px 10px; cursor:pointer;}
+
+.main.franchise .product3 .store .arrow {float:left; margin:165px 35px 0;}
+
+.main.franchise .product3 .store .store_content {float:left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*푸터*/
+.footer_wrap {background:#331f1d; width:100%; height:140px;}
+
+.footer_wrap .footer {margin:0 auto; width:1000px; height:140px; position:relative;}
+
+.footer_wrap .footer ul {padding-top:30px; overflow:hidden;}
+.footer_wrap .footer ul li {float:left; background:url(../img/footer_line.png) no-repeat left 2px; padding:0 8px;}
+.footer_wrap .footer ul li:first-child {background:none; padding-left:0;}
+.footer_wrap .footer ul li a {color:#FFF; font-size:13px; font-weight:600;}
+
+.footer_wrap .footer>p {margin-top:15px; color:#CCC; font-size:13px;}
+.footer_wrap .footer .copy {margin-top:10px; font-size:12px;}
+
+.footer_wrap .footer .blog {position:absolute; right:0; top:50%; margin-top:-22px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

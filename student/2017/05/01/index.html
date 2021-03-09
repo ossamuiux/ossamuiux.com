@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1300">
+<title>It all starts with a CafeNescafe</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="http://milkbebe.dothome.co.kr/cafenescafe/favicon.ico" />
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+	//메인비쥬얼 슬라이드
+	$('.main_visual').slick({
+	  dots:true,
+	  swipe:false,
+	  autoplay:true,
+	  pauseOnHover:false,
+	  autoplaySpeed:5000,
+	  speed:1000
+	});
+	
+	//제품 탭메뉴
+	$('.product_inner .btn_tab li').click(function (){
+		var num = $(this).index();
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.product_wrap>div').eq(num).css('visibility','visible').siblings().css('visibility','hidden');
+	});
+	
+	//제품 슬라이드
+	$('.product_wrap .pro_new,.product_wrap .pro_hot').slick({
+		slidesToShow:4,
+        slidesToScroll:1,
+		autoplay:true,
+		autoplaySpeed:2000,
+		speed:1000,
+		pauseOnHover:false
+	});
+	
+	//브랜드 스토리 버튼
+	$('.btn_brand').mouseenter(function() {
+        $(this).addClass('on');
+    }).mouseleave(function(e) {
+        $(this).removeClass('on');
+    });
+	
+	
+	//브랜드 스토리 글씨 - 모르겠다ㅠㅠ
+//	$('.coffee3').mouseenter(function() {
+//		$(this).find('.nescafe_inner_txt h1').stop().animate({top:'600px'},1800,'easeOutExpo');
+//	}).mouseleave(function() {
+//		$(this).find('.nescafe_inner_txt h1').stop().animate({left:0},600,'easeOutExpo');
+//	});
+
+	//브랜드 스토리 사진
+	$(window).scroll(function() {
+		var num = $(this).scrollTop();
+		if(num >= 900){
+			$('.nescafe_inner_img .coffee3').stop().fadeIn(400);
+		} else if(num <= 200){
+			$('.nescafe_inner_img .coffee3').stop().fadeOut(50);
+		};
+		
+		if(num >= 900){
+			$('.nescafe_inner_img .coffee2').stop().delay(400).fadeIn(400);
+		} else if(num <= 200){
+			$('.nescafe_inner_img .coffee2').stop().fadeOut(50);
+		}		
+		
+		if(num >= 900){
+			$('.nescafe_inner_img .coffee1').stop().delay(600).fadeIn(400);
+		} else if(num <= 200){
+			$('.nescafe_inner_img .coffee1').stop().fadeOut(50);
+		}
+	});
+});
+
+</script>
+</head>
+
+<body>
+<!-- header -->
+<div id="header">
+	<div class="header_inner">
+        <h1><a href="index.html"><img src="images/logo.png" alt="CafeNescafe"></a></h1>
+        <ul class="sns_wrap">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="https://ko-kr.facebook.com/C.NESCAFE/" target="_blank"><img src="images/sns_fb.png" alt="facebook"></a></li>
+            <li><a href="http://blog.naver.com/cafe_nescafe" target="_blank"><img src="images/sns_bg.png" alt="blog"></a></li>
+        </ul>
+        <ul class="gnb">
+            <li class="gnb_txt"><a href="menu.html">MENU</a>
+                <ul class="depth2">
+                    <li><a href="menu.html">Launching</a></li>
+                    <li><a href="menu.html">Coffee</a></li>
+                    <li><a href="menu.html">Cacao Cho</a></li>
+                    <li><a href="menu.html">Frappe &amp; Smoothie</a></li>
+                    <li><a href="menu.html">Tea</a></li>
+                    <li><a href="menu.html">Sandwich &amp; Food</a></li>
+                    <li><a href="menu.html">Baker</a></li>
+                    <li><a href="menu.html">Other</a></li>
+                </ul>
+            </li>
+            <li class="gnb_txt"><a href="#">STORE</a>
+                <ul class="depth2">
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">신규매장</a></li>
+                </ul>                
+            </li>
+            <li class="gnb_txt"><a href="#">EVENT</a>
+                <ul class="depth2">
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">당첨자 발표</a></li>
+                </ul>                
+            </li>
+            <li class="gnb_txt"><a href="#">MEMBERSHIP</a>
+                <ul class="depth2">
+                    <li><a href="#">멤버십 소개</a></li>
+                    <li><a href="#">My card</a></li>
+                    <li><a href="#">개인정보 수정</a></li>
+                    <li><a href="#">회원탈퇴</a></li>
+                </ul>           
+            </li>
+            <li class="gnb_txt"><a href="#">COMMUNITY</a>
+                <ul class="depth2">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객의 소리</a></li>
+                </ul>           
+            </li>
+            <li class="gnb_txt"><a href="#">FRANCHISE</a>
+                <ul class="depth2">
+                    <li><a href="#">가맹문의</a></li>
+                    <li><a href="#">개설절차</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">둘러보기</a></li>
+                </ul>           
+            </li>
+            <li class="gnb_txt"><a href="#">ABOUT</a>
+                <ul class="depth2">
+                    <li><a href="#">Cafe Nescafe</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">채용정보</a></li>
+                </ul>
+            </li>
+        </ul>
+	</div>
+</div>
+
+<!-- main -->
+<div id="main">
+	<div class="main_visual">
+        <div class="visual1">
+        </div>
+        <div class="visual2">
+        </div>
+        <div class="visual3">
+        </div>
+        <div class="visual4">
+        </div>
+    </div>
+    <div class="main_product">
+    	<div class="product_inner">
+        	<ul class="btn_tab">
+            	<li class="on btn_new"><button type="button">NEW</button></li>
+                <li class="btn_hot"><button type="button">HOT</button></li>
+            </ul>
+            <div class="product_wrap">
+                <div class="pro_new">
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new1.png" alt="ice white chcolate mocha">
+                    <h3>아이스 화이트 초콜릿 모카</h3>
+                    <h4>Ice White Chocolate Mocha</h4>
+                    <img class="icon" src="images/icon_new.png" alt="icon_hot">
+                    </a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new2.png" alt="strawberry brownie">
+                    <h3>스트로베리 브라우니</h3>
+                    <h4>Strawberry Brownie</h4>
+                    <img class="icon" src="images/icon_new.png" alt="icon_hot"></a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new3.png" alt="strawberry brownie">
+                    <h3>포카치아 샌드위치</h3>
+                    <h4>Pocaccia Sandwiches</h4>
+                    <img class="icon" src="images/icon_new.png" alt="icon_hot"></a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new4.png" alt="Bicerin">
+                    <h3>비체린</h3>
+                    <h4>Bicerin</h4>
+                    <img class="icon" src="images/icon_new.png" alt="icon_hot"></a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new4.png" alt="Bicerin">
+                    <h3>비체린</h3>
+                    <h4>Bicerin</h4>
+                    <img class="icon" src="images/icon_new.png" alt="icon_hot"></a></div>
+                </div>
+                <div class="pro_hot">
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new1.png" alt="ice white chcolate mocha">
+                    <h3>아이스 화이트 초콜릿 모카</h3>
+                    <h4>Ice White Chocolate Mocha</h4>
+                    <img class="icon" src="images/icon_hot.png" alt="icon_hot">
+                    </a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new2.png" alt="strawberry brownie">
+                    <h3>스트로베리 브라우니</h3>
+                    <h4>Strawberry Brownie</h4>
+                    <img class="icon" src="images/icon_hot.png" alt="icon_hot"></a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new3.png" alt="strawberry brownie">
+                    <h3>포카치아 샌드위치</h3>
+                    <h4>Pocaccia Sandwiches</h4>
+                    <img class="icon" src="images/icon_hot.png" alt="icon_hot"></a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new4.png" alt="Bicerin">
+                    <h3>비체린</h3>
+                    <h4>Bicerin</h4>
+                    <img class="icon" src="images/icon_hot.png" alt="icon_hot"></a></div>
+                    
+                    <div><a href="menu.html"><img class="product_img" src="images/menu_new4.png" alt="Bicerin">
+                    <h3>비체린</h3>
+                    <h4>Bicerin</h4>
+                    <img class="icon" src="images/icon_hot.png" alt="icon_hot"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_nescafe">
+    	<div class="nescafe_inner">
+        	<div class="nescafe_inner_txt">
+            <h1><a href="#"><img src="images/logo_big.png" alt="cafenescafe"></a></h1>
+            <h2>커피의 역사와 전통이 있는 카페네스카페</h2>
+            <p>카페 네스카페는 세계적 식품회사 ‘네슬레’의 커피 브랜드인<br>
+            '네스카페’의 에스프레소 전문점입니다.<br><br>
+            150년 전통의 네슬레가 직접 관리 및 수확한 최상급 아라비카 원두를<br>
+            국내에서 로스팅하여 독점 공급 받고 있습니다.<br><br>
+            아늑한 북유럽풍의 공간에서 최고의 커피와 다양한 메뉴를 즐겨보세요.</p>
+            <button class="btn_brand" type="button"><span>브랜드 스토리</span></button>
+            </div>
+            <div class="nescafe_inner_img">
+            <img class="coffee3" src="images/coffee3.png" alt="">
+            <img class="coffee2" src="images/coffee2.png" alt="">
+            <img class="coffee1" src="images/coffee1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="main_store">
+    	<div class="main_store_inner">
+        	<div class="con1">
+                <h3 class="text1">Grand Open</h3>
+                <h4 class="text2">신규매장</h4>
+                <img class="store_new" src="images/grandop_inner.png" alt="store_go">
+                <h4 class="store_name">장안 노브랜드점</h4>
+                <button type="button">자세히 보기</button>
+            </div>
+            <div class="con2">
+                <h3 class="text1">Cafe Nescafe&acute;s Store</h3>
+                <h4 class="text2">매장찾기</h4>
+                <div class="search">
+                    <form>
+                    <fieldset>
+                    <legend>검색창</legend>
+                    <input class="store_search" type="text" placeholder="매장명 또는 주소를 입력하세요">
+                    <button type="button"></button>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="con3"><a href="#"><img src="images/franchise.png" alt="franchise">
+                <h3 class="text1 con3_txt1">Cafe Nescafe&acute;s Franchise</h3>
+                <h4 class="text2 con3_txt2">가맹문의</h4>
+                <h4 class="con3_txt3">1544-6829</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<div id="footer">
+	<div class="footer_inner">
+    	<div class="footer_wrap">
+            <h1><a href="index.html"><img src="images/logo3.png" alt="cafenescafe"></a></h1>
+            <ul class="footer_con">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이메일 무단수집 금지</a></li>
+                <li><a href="#">Site map</a></li>
+            </ul>
+            <address>
+            서울시 용산구 이태원로 49길 21-14 ㈜쥬노FNC     Tel. 070-7727-6810     Fax. 02-574-6798<br>
+            Copyright 2017 by junofnc all rights reserved.
+            </address>
+        </div>
+        <div class="footer_sns">
+        <a href="https://ko-kr.facebook.com/C.NESCAFE/" target="_blank"><img src="images/sns_fb_bt.png" alt=""></a>
+        <a href="http://blog.naver.com/cafe_nescafe" target="_blank"><img src="images/sns_bg_bt.png" alt=""></a>
+        </div>
+	</div>
+</div>
+
+</body>
+</html>

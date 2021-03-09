@@ -1,0 +1,1788 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;vertical-align: top;}
+
+html,body{width: 100%; height: 100%;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+button,input {border-radius: 0}
+button {cursor: pointer;}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+strong {font-weight: normal;}
+a {text-decoration: none}
+iframe {overflow: hidden;margin: 0;padding: 0;border: 0}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px
+}
+
+table {border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%; letter-spacing: -2px;}
+body {line-height: 1.5; }
+
+body,input,select,textarea,button,table {
+    font-family:'Noto Sans KR','맑은 고딕','malgun gothic',sans-serif;
+    font-size: 14px;
+    font-weight: normal; 
+}
+
+@keyframes moveBody{
+    100% {opacity: 1;}
+}
+
+body {
+    opacity: 0;
+    animation: moveBody 1.5s forwards;
+}
+
+#wrap {width: 100%; min-width: 1410px;; height: 100%; position: relative;}
+
+/*인트로-------------------------------------------------------------------*/
+
+#wrap.wrap_intro {background: pink;}
+
+#introMain {
+    width: 100%;
+    height: 100%;
+    background: url(../img/intro/intro_bg1.jpg) no-repeat;
+    background-size: cover;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .35s cubic-bezier(.55,.085,.68,.53);
+/*    transition: transform .35s cubic-bezier(.55,.085,.68,.53), .35s cubic-bezier(.55,.085,.68,.53);*/
+    transform: translateY(0);
+}
+
+
+#introMain.on {
+    transform: translateY(-120%);
+}
+
+
+/*svg 응용방법*/
+
+#introMain .logo_index {
+    color: mediumpurple;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+}
+
+#introMain .logo_index svg {
+    fill:currentColor;
+}
+
+#introMain .logo_index svg path {transition: all 0.5s;}
+
+#introMain .logo_index:hover svg path {
+    fill: pink;
+    stroke: skyblue;
+}
+
+
+
+/*css-trick 에서 보고 따온거*/
+#introMain .logo_index svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+#introMain .btn_wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    margin-left: -54px;
+}
+
+#introMain .btn_wrap .intro_btn {
+    width: 108px;
+    height: 108px;
+    text-align: center;
+    border-radius: 100%;
+    background: #f2f2f2;
+    font-size: 13px;
+    letter-spacing: .2em;
+    color: #2f3045;
+    font-weight: 900;
+    line-height: 108px;
+    transition: all 0.3s;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+#introMain .btn_wrap .intro_btn:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #191c39;
+    transition: all 0.3s;
+    transform: scale(0,0);
+    z-index: -1;
+}
+
+#introMain .btn_wrap .intro_btn:hover {
+    color: #f4f4f4;
+    z-index: 1;
+}
+
+#introMain .btn_wrap .intro_btn:hover:before {
+    transform: scale(1,1);    
+}
+
+
+
+
+/*인덱스------------------------------------------------------------------*/
+
+#main {
+    background:url(../img/index_images/bg1.jpg) no-repeat 50% 50%;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#main .main_view .pone {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#main .app_wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 384px;
+    height: 800px;
+    margin-left: -189px;
+    margin-top: -305px;
+}
+
+#main .app_wrap .list_app_icon li {
+    width: 97px;
+    float: left;
+    margin: 0px 15px 53px 15px;
+}
+
+#main .app_wrap .list_app_icon p {
+    color: #fff;
+    display: block;
+    width: 100px;
+    text-align: center;
+    padding-top: 5px;
+    font-weight: 200;
+}
+
+#main .app_wrap .list_app_icon li:nth-child(7) {margin-bottom: 125px;}
+#main .app_wrap .list_app_icon li:nth-child(8) {margin-bottom: 125px;}
+#main .app_wrap .list_app_icon li:nth-child(9) {margin-bottom: 125px;}
+#main .app_wrap .list_app_icon li:nth-child(10) {margin-bottom: 0px;}
+#main .app_wrap .list_app_icon li:nth-child(11) {margin-bottom: 0px;}
+#main .app_wrap .list_app_icon li:nth-child(12) {margin-bottom: 0px;}
+
+#main .app_wrap .cell {
+    position: relative;
+}
+
+#main .app_wrap .cell .ph_main {
+    position: absolute;
+    top: -738px;
+    left: -28px;
+    display: none;
+    cursor: pointer;
+}
+
+#main .app_wrap .cell2 {
+    position: relative;
+}
+
+#main .app_wrap .cell2 .ph_main2 {
+    position: absolute;
+    top: -738px;
+    left: -154px;
+    display: none;
+    cursor: pointer;
+}
+
+#main .app_wrap .cell3 {
+    position: relative;
+}
+
+#main .app_wrap .cell3 .ph_main3 {
+    position: absolute;
+    top: -738px;
+    left: -281px;
+    display: none;
+    cursor: pointer;
+}
+
+
+/*1번째 어바웃 미*/
+#container.about_me {width: 100%;}
+
+#container.about_me .sub1_header {
+    width: 100%;
+    height: 640px;
+    background: url(../img/img_1/bg1_1.jpg) no-repeat 50% 0%;
+    background-attachment: fixed;
+}
+
+#container.about_me .sub1_header .header_txt {
+    width: 1350px;
+    height: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container.about_me .sub1_header .header_txt h1{
+position: absolute;
+    top: 23%;
+    left: 17%;
+    font-size: 100px;
+    color: #81789a;
+    letter-spacing: 20px;
+    font-weight: 700;
+}
+
+#container.about_me .sub1_main {
+    background: url(../img/img_1/main.jpg) no-repeat 50% 50%;
+    width: 100%;
+    height: 8618px;
+    position: relative;
+    overflow: hidden;
+}
+
+#container.about_me .sub1_main .img1 {
+    position: absolute;
+    left: 50%;
+    top: 4000px;
+    margin-left: -1010px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#container.about_me .sub1_main .img2 {
+    position: absolute;
+    left: 50%;
+    top: 4300px;
+    margin-left: 690px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+
+#container.about_me .sub1_main .img3 {
+    position: absolute;
+    left: 50%;
+    top: 4810px;
+    margin-left: -1010px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#container.about_me .sub1_main .img4 {
+    position: absolute;
+    left: 50%;
+    top: 5800px;
+    margin-left: 680px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#container.about_me .sub1_main .img5 {
+    position: absolute;
+    left: 50%;
+    top: 6200px;
+    margin-left: -1280px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#container.about_me .sub1_main .img6 {
+    position: absolute;
+    left: 50%;
+    top: 6650px;
+    margin-left: 480px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#container.about_me .sub1_footer {width: 100%;}
+#container.about_me .sub1_footer img {width: 100%;}
+
+
+
+/*2번째 연수타구램*/
+#container.yeonstagram { width: 100%;}
+#container.yeonstagram .header {
+    width: 100%;
+    height: 165px;
+    border-bottom: 1px solid #cbcbcb;
+    background: #fafafa;
+}
+
+#container.yeonstagram .header .top_header,.bottom_header {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+#container.yeonstagram .header .top_header .m_left {
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#container.yeonstagram .header .top_header p {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+#container.yeonstagram .header .top_header .m_right {
+    float: right;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#container.yeonstagram .header .bottom_header .back {
+    float: left;
+    margin-top: 30px;
+}
+
+#container.yeonstagram .header .bottom_header p {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+#container.yeonstagram .header .bottom_header .jum {
+    float: right;
+    margin-top: 50px;
+}
+
+/*모달팝업*/
+#container.yeonstagram .modal_video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0,0,0,0.9);
+    display: none;
+}
+
+#container.yeonstagram .modal_video .modal_con_wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#container.yeonstagram .modal_video .modal_con_wrap .modal_con {
+    display: none;
+}
+
+#container.yeonstagram .modal_video .modal_con_wrap .modal_con .btn_close{
+    position: absolute;
+    right: -48px;
+    top: 4px;
+    width: 29px;
+    height: 29px;
+    background: url(../img/img_2/bt_close3.png) no-repeat;
+    border: none;
+    text-indent: -99999px;
+}
+
+
+
+#container.yeonstagram .top_main,.midlle_main {
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#container.yeonstagram .top_main .left_section {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 30px;
+    padding-bottom: 30px;
+    float: left;
+}
+
+#container.yeonstagram .top_main .right_section {
+    display: inline-block;
+    width: 710px;
+    margin-top: 65px;
+    margin-left: 123px;
+    padding-bottom: 30px;
+    float: left;
+}
+
+#container.yeonstagram .top_main .right_section .counter {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    font-size: 66px;
+    text-align: center;
+}
+
+#container.yeonstagram .top_main .right_section .counter_txt {
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    width: 33%;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+/*메세지 부분 !!!*/
+#container.yeonstagram .top_main .message {
+    display: inline-block;
+    width: 678px;
+    margin-top: 15px;
+    margin-left: 145px;
+    float: left;
+    position: relative;
+}
+
+#container.yeonstagram .top_main .message .btn_msg1 {
+    display: inline-block;
+    width: 415px;
+    height: 80px;
+    border-radius: 15px;
+    border: 2px solid #959595;
+    background: #fff;
+    color: #959595;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 80px;
+    float: left;
+    margin-left: 33px;
+    position: relative;
+    cursor: pointer;
+}
+
+#container.yeonstagram .top_main .message .btn_msg2 {
+    display: inline-block;
+    width: 115px;
+    height: 80px;
+    border-radius: 15px;
+    border: 2px solid #959595;
+    float: left;
+    background: url(../img/img_2/btn_1.png) no-repeat 50% 48%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#container.yeonstagram .top_main .message .btn_msg3 {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    border: 2px solid #959595;
+    float: left;
+    background: url(../img/img_2/btn_2.png) no-repeat 50% 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#container.yeonstagram .top_main .message .btn_msg1.active {
+    border: 2px solid #93b4ff;
+    color: #2c6dff;
+}
+
+#container.yeonstagram .top_main .message .btn_msg2.active {
+    background: url(../img/img_2/btn_1_h.png) no-repeat 50% 48%;
+    border: 2px solid #93b4ff;
+    color: #2c6dff;
+}
+
+#container.yeonstagram .top_main .message .btn_msg3.active {
+    background: url(../img/img_2/btn_2_h.png) no-repeat 50% 50%;
+    border: 2px solid #93b4ff;
+    color: #2c6dff;
+}
+
+
+/*토오글_메세지 키고 끄기*/
+#container.yeonstagram .top_main .message .phone_number {
+    position: absolute;
+    top: -100px;
+    left: 35px;
+    display: none;
+}
+
+#container.yeonstagram .top_main .message .phone_number2 {
+    position: absolute;
+    top: -100px;
+    left: 463px;
+    display: none;
+}
+
+#container.yeonstagram .top_main .message .phone_number3 {
+    position: absolute;
+    top: -100px;
+    left: 590px;
+    display: none;
+}
+
+
+#container.yeonstagram .middle_main {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#container.yeonstagram .middle_main h3 {
+    font-size: 38px;
+    font-weight: 700;
+    padding-top: 10px;
+    margin-left: 30px;
+}
+
+#container.yeonstagram .middle_main p {
+    color: #7b7b7b;
+    font-size: 28px;
+    line-height: 40px;
+    margin-top: 10px;
+    letter-spacing: -1px;
+    margin-left: 32px;
+}
+
+#container.yeonstagram .middle_main .link p{
+    color: #063f75;
+    font-size: 30px;
+    margin-top: 13px;
+    display: inline-block;
+}
+
+#container.yeonstagram .middle_main span {color: #000;}
+#container.yeonstagram .middle_main img {padding: 50px 0;}
+
+#container.yeonstagram .middle_bar {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+#container.yeonstagram .middle_bar .bar_btn{width: 1100px; margin: 0 auto; overflow: hidden;}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+
+#container.yeonstagram .middle_bar li {
+    float: left;
+    display: inline-block;
+    margin: 20px 150px;
+    cursor: pointer;
+}
+
+#container.yeonstagram .middle_bar li:hover {
+	-webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+}
+
+#container.yeonstagram .bottom_section {
+    width: 1104px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#container.yeonstagram .bottom_section li {
+    float: left;
+    margin-left: 1px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+#container.yeonstagram .bottom_bar {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb; }
+
+#container.yeonstagram .bottom_bar .bottom_bar_btn{width: 1100px; margin: 0 auto; overflow: hidden;}
+
+#container.yeonstagram .bottom_bar li {
+    float: left;
+    display: inline-block;
+    margin: 20px 80px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*3번째  연툰----------------------------------------------------------*/
+#container.yeontoon {width: 100%;}
+
+#container.yeontoon .sub3_header {
+    width: 100%;
+    border-bottom: 1px solid #cbcbcb;
+    background: #fafafa;
+}
+
+#container.yeontoon .sub3_header .sub3_top_header,.sub3_middle_header,.sub3_bottom_header {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container.yeontoon .sub3_header .sub3_top_header .m_left {
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#container.yeontoon .sub3_header .sub3_top_header p {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+#container.yeontoon .sub3_header .m_right {
+    float: right;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#container.yeontoon .sub3_header .sub3_middle_header .back {
+    float: left;
+    margin-top: 30px;
+}
+
+#container.yeontoon .sub3_header .sub3_middle_header p {
+    font-size: 38px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 18px;
+}
+
+#container.yeontoon .sub3_header .sub3_middle_header .popup {
+    float: right;
+    margin-top: 30px;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+#container.yeontoon .sub3_header .sub3_bottom_header {
+    position: relative;
+    height: 90px;
+}
+
+/*통통 튀는 애니메이션-----------------------------------------------------------*/
+.heart_wrap {overflow: hidden;}
+.heart_btn {
+    position: absolute;
+    top: 35%;
+    left: 1%;
+}
+#heart {cursor: pointer;}
+
+.plus_wrap {overflow: hidden;}
+.plus_btn {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+#plus {cursor: pointer;}
+
+/*통통 튀는 애니메이션*/
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-20px) }
+    60% {-webkit-transform: translateY(-20px);}
+} 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-20px);}
+} 
+.bounce {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+/*----------------------------------------------------------*/
+
+#container.yeontoon .sub3_header .sub3_bottom_header .heart_txt {
+    display: inline-block;
+    font-size: 20px;
+    float: left;
+    margin-left: 55px;
+    margin-top: 32px;
+}
+
+#container.yeontoon .sub3_header .sub3_bottom_header .plus_txt {
+    display: inline-block;
+    font-size: 20px;
+    float: left;
+    margin-left: 78px;
+    margin-top: 32px;
+}
+
+#container.yeontoon .sub3_header .sub3_bottom_header a {
+    font-size: 20px;
+    float: right;
+    margin-top: 30px;
+    color: #000;
+}
+
+#container.yeontoon .sub3_main {width: 100%;}
+#container.yeontoon .sub3_main .toon_wrap {width: 100%; border-bottom: 1px solid #cbcbcb;}
+
+#container.yeontoon .sub3_main .toon {
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#container.yeontoon .sub3_main .toon img{float: left;}
+
+#container.yeontoon .sub3_main .toon h3 {
+    float: left;
+    display: block;
+    font-size: 28px;
+    color: #2f2f2f;
+    line-height: 188px;
+    margin-left: 30px;
+}
+
+#container.yeontoon .sub3_main .toon .number_txt {
+    float: right;
+    font-size: 28px;
+    color: #9a9a9a;
+}
+
+#container.yeontoon .sub3_main .toon span {
+    color: #ff534c;
+}
+
+#container.yeontoon .sub3_main .toon p {
+    float: left;
+    margin-left: 20px;
+    line-height: 188px;
+    font-size: 23px;
+    color: #9a9a9a;
+}
+
+#container.yeontoon .sub3_footer {background: #f8f8f8;}
+#container.yeontoon .sub3_footer .top_footer {
+    width: 1100px;
+    height: 204px;
+    margin: 0 auto;
+}
+
+#container.yeontoon .sub3_footer .top_footer h4 {
+    font-size: 25px;
+    color: #2f2f2f;
+    float: left;
+    width: 870px;
+    margin-left: 100px;
+    margin-top: 41px;
+}
+
+#container.yeontoon .sub3_footer .top_footer p {
+    color: #7f7f81;
+    float: left;
+    font-size: 17px;
+    margin-left: 100px;
+    margin-top: 12px;
+    line-height: 30px;
+}
+
+#container.yeontoon .sub3_footer .bottom_footer {
+    border-top: 1px solid #cbcbcb;
+    overflow: hidden;}
+
+#container.yeontoon .sub3_footer .bottom_footer .bottom_txt {
+    margin: 0 auto;
+    text-align: center;
+    width: 1100px;
+}
+
+#container.yeontoon .sub3_footer .bottom_footer .bottom_txt ul{
+    margin: 0 auto;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#container.yeontoon .sub3_footer .bottom_footer .bottom_txt li {
+    float: left;
+    font-size: 17px;
+    font-weight: 200;
+    color: #a1a1a3;
+    margin: 30px 30px;
+    position: relative;
+}
+
+#container.yeontoon .sub3_footer .bottom_footer .bottom_txt li:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 95px;
+    width: 2px;
+    height: 20px;
+    background: #cbcbcb;
+}
+
+#container.yeontoon .sub3_footer .bottom_footer .bottom_txt li:last-child:after{
+    display: none;
+}
+
+#container.yeontoon .sub3_footer .bottom_footer .bottom_txt p {
+    padding-bottom: 30px;
+    color: #a1a1a3;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#container.yeontoon .bottom_tap {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb; }
+
+#container.yeontoon .bottom_tap .bottom_tap_btn{width: 1100px; margin: 0 auto; overflow: hidden;}
+
+#container.yeontoon .bottom_tap li {
+    float: left;
+    display: inline-block;
+    margin: 20px 77px;
+    cursor: pointer;
+}
+
+
+
+
+/*4번째 투썸앱-------------------------------------------------------------------*/
+
+#container.twosomeplcae {width: 100%;}
+
+#container.twosomeplcae .sub4_header {
+    width: 100%;
+    height: 980px;
+    background: url(../img/img_4/sub4_bg1_top_01.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+}
+
+#container.twosomeplcae .sub4_header .header_txt {
+    width: 1350px;
+    height: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#text-object {
+    position: absolute;
+    top: 25%;
+    left: 50%; 
+    transform: translateX(-50%);
+    font-size: 15px;
+    color: #ebebeb;
+    letter-spacing: 24px;
+    font-weight: 200;
+    text-align: center;
+    
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#container.twosomeplcae .sub4_header .header_txt h1{
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 30px;
+    font-weight: 700;
+}
+
+#container.twosomeplcae .sub4_header .header_txt h2{
+    position: absolute;
+    top: 53%;
+    right: -2%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 30px;
+    font-weight: 700;
+}
+
+#container.twosomeplcae .sub4_header .top_header {
+    width: 1750px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+#container.twosomeplcae .sub4_header .top_header .back {
+    display: inline-block;
+    margin-top: 60px;
+}
+
+#container.twosomeplcae .sub4_main {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    background: url(../img/img_4/main.jpg) no-repeat 50% 100%;
+    height: 12943px;
+}
+
+#container.twosomeplcae .sub4_main .txt_wrap {
+    display: block;
+    text-align: center;
+    color: #363636;
+}
+
+#container.twosomeplcae .sub4_main .txt_wrap img {
+    width: 231px;
+    height: 39px;
+    padding-top: 130px;
+}
+
+#container.twosomeplcae .sub4_main .txt_wrap h2 {
+    font-size: 57px;
+    font-weight: 700;
+    padding-top: 15px;
+    letter-spacing: -3px;
+}
+
+#container.twosomeplcae .sub4_main .txt_wrap span {
+    font-size: 25px;
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+#container.twosomeplcae .sub4_main .txt_wrap p {
+    font-size: 19px;
+    color: #727272;
+    padding-bottom: 145px;
+    letter-spacing: -1px;
+    font-weight: 400;
+    line-height: 37px;
+}
+
+#container.twosomeplcae .sub4_main img {
+    width: 100%;
+}
+
+#container.twosomeplcae .sub4_main .sub4_button {
+    height: 300px;
+}
+
+#container.twosomeplcae .sub4_main .sub4_button .btn_1 {
+    display: inline-block;
+    width: 352px;
+    height: 72px;
+    border: 2px solid #36363b;
+    background: #36363b;
+    color: #fff;
+    font-size: 20px;
+    line-height: 69px;
+}
+
+#container.twosomeplcae .sub4_main .sub4_button .btn_1:hover {
+    background: #fff;
+    border: 2px solid #36363b;
+    color: #36363b;
+    transition: all 0.5s; 
+}
+
+#container.twosomeplcae .sub4_main .sub4_button .btn_2 {
+    display: inline-block;
+    width: 352px;
+    height: 72px;
+    border: 2px solid #9d0b0e;
+    background: #9d0b0e;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 48px;
+    line-height: 69px;
+}
+
+#container.twosomeplcae .sub4_main .sub4_button .btn_2:hover {
+    background: #fff;
+    border: 2px solid #9d0b0e;
+    color: #9d0b0e;
+    transition: all 0.5s; 
+}
+
+#container.twosomeplcae .sub4_main .sub4_button .btn_3 {
+    display: inline-block;
+    width: 352px;
+    height: 72px;
+    border: 2px solid #101010;
+    background: #101010;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 69px;
+}
+
+#container.twosomeplcae .sub4_main .sub4_button .btn_3:hover {
+    background: #fff;
+    border: 2px solid #101010;
+    color: #101010;
+    transition: all 0.5s; 
+}
+
+
+
+/*5번째 캣썸-------------------------------------------------------------------*/
+
+#container.catsome {width: 100%;}
+
+#container.catsome .sub5_header {
+    width: 100%;
+    height: 980px;
+    background: url(../img/img_5/sub5_bg1_top.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+}
+
+#container.catsome .sub5_header .header_txt {
+    width: 1350px;
+    height: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container.catsome .sub5_header .header_txt p {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    font-size: 15px;
+    color: #ebebeb;
+    letter-spacing: 24px;
+    font-weight: 200;
+}
+
+#container.catsome .sub5_header .header_txt h1{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 30px;
+    font-weight: 700;
+}
+
+#container.catsome .sub5_header .header_txt h2{
+    position: absolute;
+    top: 53%;
+    right: 0%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 30px;
+    font-weight: 700;
+}
+
+#container.catsome .sub5_header .top_header {
+    width: 1750px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+#container.catsome .sub5_header .top_header .back {
+    display: inline-block;
+    margin-top: 60px;
+}
+
+#container.catsome .sub5_main {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container.catsome .sub5_main .txt_wrap {
+    display: block;
+    text-align: center;
+    color: #363636;
+}
+
+#container.catsome .sub5_main .txt_wrap img {
+    width: 231px;
+    height: 39px;
+    padding-top: 130px;
+}
+
+#container.catsome .sub5_main .txt_wrap h2 {
+    font-size: 57px;
+    font-weight: 700;
+    padding-top: 15px;
+    letter-spacing: -3px;
+}
+
+#container.catsome .sub5_main .txt_wrap span {
+    font-size: 25px;
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+#container.catsome .sub5_main .txt_wrap p {
+    font-size: 19px;
+    color: #727272;
+    padding-bottom: 145px;
+    letter-spacing: -1px;
+    font-weight: 400;
+    line-height: 37px;
+}
+
+#container.catsome .sub5_main img {
+    width: 100%;
+}
+
+#container.catsome .sub5_main .sub5_button {
+    height: 300px;
+}
+
+#container.catsome .sub5_main .sub5_button .btn_1 {
+    display: inline-block;
+    width: 352px;
+    height: 72px;
+    border: 2px solid #36363b;
+    background: #36363b;
+    color: #fff;
+    font-size: 20px;
+    line-height: 69px;
+}
+
+#container.catsome .sub5_main .sub5_button .btn_1:hover {
+    background: #fff;
+    border: 2px solid #36363b;
+    color: #36363b;
+    transition: all 0.5s; 
+}
+
+#container.catsome .sub5_main .sub5_button .btn_2 {
+    display: inline-block;
+    width: 352px;
+    height: 72px;
+    border: 2px solid #9d0b0e;
+    background: #9d0b0e;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 48px;
+    line-height: 69px;
+}
+
+#container.catsome .sub5_main .sub5_button.btn_2:hover {
+    background: #fff;
+    border: 2px solid #9d0b0e;
+    color: #9d0b0e;
+    transition: all 0.5s; 
+}
+
+#container.catsome .sub5_main .sub5_button .btn_3 {
+    display: inline-block;
+    width: 352px;
+    height: 72px;
+    border: 2px solid #101010;
+    background: #101010;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 69px;
+}
+
+#container.catsome .sub5_main .sub5_button .btn_3:hover {
+    background: #fff;
+    border: 2px solid #101010;
+    color: #101010;
+    transition: all 0.5s; 
+}
+
+#container.catsome .main_img {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*7번째 웹디자인 포트폴리오*/
+
+#container.p_web_design {
+    width: 100%;
+}
+
+#container.p_web_design .sub7_header {
+    width: 100%;
+    height: 640px;
+    background: url(../img/img_7/bg1.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+}
+
+#container.p_web_design .sub7_header .header_txt {
+    width: 1350px;
+    height: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container.p_web_design .sub7_header .header_txt h1{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 20px;
+    font-weight: 700;
+}
+
+/*모달팝업*/
+#container.p_web_design .modal_web_design {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0,0,0,0.9);
+    display: none;
+}
+
+#container.p_web_design .modal_web_design .modal_con_wrap1 {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    height: 700px;
+    transform: translate(-50%);
+    overflow-x: hidden;
+}
+
+#container.p_web_design .modal_web_design .modal_con_wrap1 .modal_con1 {
+    display: none;
+}
+
+/*모달 끝---------------------------*/
+
+
+#container.p_web_design .sub7_top_section{
+    width: 100%;
+    text-align: center;
+}
+
+#container.p_web_design .sub7_top_section h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-top: 123px;
+}
+
+#container.p_web_design .sub7_top_section p {
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 10px;
+    margin-top: 72px;
+    padding-bottom: 120px;
+}
+
+
+
+#container.p_web_design .sub7_middle_section .list_web_img {
+    width: 1400px;
+    border: 1px solid red;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#container.p_web_design .sub7_middle_section .list_web_img li {
+    float: left;
+    margin: 1px 0 0 1px;
+    overflow: hidden;
+}
+
+#container.p_web_design .sub7_middle_section .list_web_img li:nth-child(3n) {
+    margin-right: -1px;
+} 
+
+#container.p_web_design .sub7_middle_section .list_web_img li a {
+    display: block;
+    width: 466px;
+    height: 466px;
+    background: url(../img/img_7/dan.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    transition: all 0.3s;
+    transform: scale(1,1);
+}
+
+#container.p_web_design .sub7_middle_section .list_web_img li:nth-child(2) a {
+    background-image: url(../img/img_7/dan.jpg); 
+}
+
+#container.p_web_design .sub7_middle_section .list_web_img li a:hover {
+    transform: scale(1.05,1.05);
+}
+
+#container.p_web_design .modal_web_design .btn_close1{
+    position: absolute;
+    left: 50%;
+    top: 98px;
+    margin-left: 400px;
+    width: 29px;
+    height: 29px;
+    background: url(../img/img_7/bt_close3.png) no-repeat 50% 50%;
+    background-size: 29px;
+    border: none;
+    outline: none;
+    text-indent: -99999px;
+}
+
+#container.p_web_design.sub7_bottom_section {
+    width: 100%;
+}
+
+#container.p_web_design .sub7_bottom_section h3{
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-top: 123px;
+    text-align: center;
+}
+
+/*카운터*/
+#container.p_web_design .sub7_bottom_section .counter_wrap {
+    width: 1200px;
+    overflow: hidden;
+    margin: 100px auto 0;
+}
+
+#container.p_web_design .sub7_bottom_section .counter {
+    float: left;
+    width: 25%;
+    font-size: 45px;
+    text-align: center;
+}
+
+#container.p_web_design .sub7_bottom_section .counter_txt {
+    float: left;
+    font-size: 25px;
+    width: 25%;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+#container.p_web_design .sub7_footer {
+    height: 310px;
+    overflow: hidden;
+    margin-top: 90px;
+    background: url(../img/img_7/bg22.png) no-repeat 50% 50%;
+}
+
+
+/*8번째 드로잉 포트폴리오앱-------------------------------------------------------*/
+
+#container.single_project_d {
+    width: 100%;
+}
+
+#container.single_project_d .sub8_header {
+    width: 100%;
+    height: 640px;
+    background: url(../img/img_8/bg2.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+}
+
+#container.single_project_d .sub8_header .header_txt {
+    width: 1350px;
+    height: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container.single_project_d .sub8_header .header_txt h1{
+    position: absolute;
+    top: 30%;
+    left: 17%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 20px;
+    font-weight: 700;
+}
+
+#container.single_project_d .sub8_top_section{
+    width: 100%;
+    text-align: center;
+}
+
+#container.single_project_d .sub8_top_section h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-top: 123px;
+}
+
+#container.single_project_d .sub8_top_section p {
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 10px;
+    margin-top: 72px;
+    padding-bottom: 120px;
+}
+
+/*드로잉 슬라이드*/
+#container.single_project_d .sub8_middle_section {
+    width: 1200px;
+    height: 990px;
+    margin: 0 auto 100px;
+/*    border: 1px solid red;*/
+    position: relative;
+}
+
+#container.single_project_d .sub8_middle_section .drawing_slider {
+    width: 1100px;
+    height: 990px;
+    position: static;
+/*    border: 1px solid red;*/
+}
+
+#container.single_project_d .sub8_middle_section .drawing_slider a {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+#container.single_project_d .sub8_middle_section .drawing_slider p {
+    margin-top: 22px;
+    font-size: 25px;
+}
+
+/*슬라이더 좌우화살표*/
+#container.single_project_d .sub8_middle_section .drawing_slider .swiper-button-prev {
+    width: 20px;
+    height: 34px;
+    background: url(../img/img_8/carouselLeft.png) no-repeat;
+    margin-top: -31px;
+    left: 0px;
+    outline: none;
+}
+#container.single_project_d .sub8_middle_section .drawing_slider .swiper-button-next {
+    width: 20px;
+    height: 34px;
+    background: url(../img/img_8/carouselRight.png) no-repeat;
+    margin-top: -31px;
+    right: 0;
+    outline: none;
+}
+
+#container.single_project_d .sub8_bottom_section {
+    width: 100%;
+}
+
+#container.single_project_d .sub8_bottom_section h3{
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-top: 123px;
+    text-align: center;
+}
+
+/*카운터*/
+#container.single_project_d .sub8_bottom_section .counter_wrap {
+    width: 1200px;
+    overflow: hidden;
+    margin: 100px auto 0;
+}
+
+#container.single_project_d .sub8_bottom_section .counter {
+    float: left;
+    width: 25%;
+    font-size: 45px;
+    text-align: center;
+}
+
+#container.single_project_d .sub8_bottom_section .counter_txt {
+    float: left;
+    font-size: 25px;
+    width: 25%;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+#container.single_project_d .sub8_footer {
+    height: 310px;
+    overflow: hidden;
+    margin-top: 90px;
+    background: url(../img/img_8/bg22_1.jpg) no-repeat 50% 50%;
+}
+
+
+
+/*9번째 기타작업앱-------------------------------------------------------*/
+
+#container.other_work {
+    width: 100%;
+}
+
+#container.other_work .sub9_header {
+    width: 100%;
+    height: 640px;
+    background: url(../img/img_9/bg2.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+}
+
+#container.other_work .sub9_header .header_txt {
+    width: 1350px;
+    height: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container.other_work .sub9_header .header_txt h1{
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    font-size: 50px;
+    color: #ebebeb;
+    letter-spacing: 20px;
+    font-weight: 700;
+}
+
+#container.other_work .sub9_top_section{
+    width: 100%;
+    text-align: center;
+}
+
+#container.other_work .sub9_top_section h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-top: 123px;
+}
+
+#container.other_work .sub9_top_section p {
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 10px;
+    margin-top: 72px;
+    padding-bottom: 120px;
+}
+
+/*드로잉 슬라이드*/
+#container.other_work .sub9_middle_section {
+    width: 1200px;
+    height: 990px;
+    margin: 0 auto 100px;
+/*    border: 1px solid red;*/
+    position: relative;
+}
+
+#container.other_work .sub9_middle_section .drawing_slider {
+    width: 1100px;
+    height: 990px;
+    position: static;
+/*    border: 1px solid red;*/
+}
+
+#container.other_work .sub9_middle_section .drawing_slider a {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+#container.other_work .sub9_middle_section .drawing_slider p {
+    margin-top: 22px;
+    font-size: 25px;
+}
+
+/*슬라이더 좌우화살표*/
+#container.other_work .sub9_middle_section .drawing_slider .swiper-button-prev {
+    width:22px;
+    height: 22px;
+    background: url(../img/img_9/carouselLeft.png) no-repeat;
+    margin-top: -31px;
+    left: 0px;
+    outline: none;
+}
+#container.other_work .sub9_middle_section .drawing_slider .swiper-button-next {
+    width:22px;
+    height: 22px;
+    background: url(../img/img_9/carouselRight.png) no-repeat;
+    margin-top: -31px;
+    right: 0;
+    outline: none;
+}
+
+#container.other_work .sub9_bottom_section {
+    width: 100%;
+}
+
+#container.other_work .sub9_bottom_section h3{
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-top: 123px;
+    text-align: center;
+}
+
+/*카운터*/
+#container.other_work .sub9_bottom_section .counter_wrap {
+    width: 1200px;
+    overflow: hidden;
+    margin: 100px auto 0;
+}
+
+#container.other_work .sub9_bottom_section .counter {
+    float: left;
+    width: 25%;
+    font-size: 45px;
+    text-align: center;
+}
+
+#container.other_work .sub9_bottom_section .counter_txt {
+    float: left;
+    font-size: 25px;
+    width: 25%;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+#container.other_work .sub9_footer {
+    height: 310px;
+    overflow: hidden;
+    margin-top: 90px;
+    background: url(../img/img_9/bg22.png) no-repeat 50% 50%;
+}

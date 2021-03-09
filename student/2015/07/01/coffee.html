@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>pascucci</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.gnb').mouseenter(function(){
+		$('.sub_wrap').stop().slideDown();
+	});
+	
+	$('.header_wrap').mouseleave(function(){
+		$('.sub_wrap').stop().slideUp();
+	});
+	
+	var num=0;
+	
+	$('.fm').click(function(){
+		if(num==0){
+			$('.fm_menu').show();
+			num=1;
+		} else {
+			$('.fm_menu').hide();
+			num=0;
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+        <div class="top_menu">
+            <ul>
+                <li><a href="#" class="login">LOGIN</a></li>
+                <li class="join"><a href="#">JOIN</a></li>
+                <li><a href="https://www.facebook.com/pascucci1883"><img src="img/facebook.png" alt="facebook">facebook</a></li>
+                <li><a href="https://instagram.com/pascucci_kr/"><img src="img/instagram.png" alt="instagram">instagram</a></li>
+            </ul>
+        </div>
+        <h1><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+        <div class="gnb_wrap">
+            <ul class="gnb">
+                <li><a href="story.html" class="story">STORY</a></li>
+                <li>
+                    <a href="#" class="pro">PRODUCTS</a>
+                </li>
+                <li>
+                    <a href="#" class="fra">FRANCHISE</a>
+                </li>
+                <li>
+                    <a href="#" class="eve">EVENT</a>
+                </li>
+                <li>
+                    <a href="#" class="sto">STORE</a>
+                </li>
+                <li>
+                    <a href="#" class="cus">CUSTOMER</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub_wrap">
+        <div class="sub">
+            <ul>
+                <li><a href="story.html">브랜드스토리</a></li>
+                <li><a href="#">커피스토리</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Coffee</a></li>
+                <li><a href="#">Beverage</a></li>
+                <li><a href="#">Bakery</a></li>
+                <li><a href="#">Gelato</a></li>
+                <li><a href="#">MD</a></li>
+                <li><a href="#">On-line shop</a></li>
+                <li><a href="#">영양성분표</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">CAFFE PASCUCCI</a></li>
+                <li><a href="#">가맹 개설 안내</a></li>
+                <li><a href="#">추천점포</a></li>
+                <li><a href="#">정보공개서</a></li>
+                <li><a href="#">가맹설명회 안내</a></li>
+                <li><a href="#">FAQ/가맹문의</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">진행 중 이벤트</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">매장소식</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">제휴혜택</a></li>
+                <li><a href="#">1:1 문의하기</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main">
+	<h3><img src="img/home.png" alt=""> > PRODUCTS > <span>Coffe</span></h3>
+    <div class="sub_menu">
+    	<ul>
+        	<li><a href="story.html" >STORY</a>
+            	<ul class="menu">
+                </ul>
+            </li>
+            <li><a href="coffee.html"class="on">PRODUCTS</a>
+                <ul class="menu">
+                	<li><a href="coffee.html" class="on">Coffee</a></li>
+                    <li><a href="#">Beverage</a></li>
+                    <li><a href="#">Bakery</a></li>
+                    <li><a href="#">Gelato</a></li>
+                    <li><a href="#">MD</a></li>
+                    <li><a href="#">On-line shop</a></li>
+                    <li><a href="#">영양성분표</a></li>
+                </ul>
+            </li>
+            <li><a href="#">FRANCHISE</a>
+            </li>
+            <li><a href="#">EVENT</a>
+            </li>
+            <li><a href="#">STORE</a>
+            </li>
+            <li><a href="#">CUSTOMER</a>
+            </li>
+        </ul>
+    </div>
+    <div class="contents">
+    	<div class="box_01">
+            <h1>Coffee</h1>
+            <p>장인정신을 바탕으로 각자 맡은바 최선을 다하는 파스쿠찌 정신은 오늘도 빛나고 있습니다.</p>
+        </div>
+        <div class="btn">
+        	<a href="#"><img src="img/hot_btn_on.png" alt=""></a>
+            <a class="ice" href="#"><img src="img/ice_btn.png" alt=""></a>
+        </div>
+        <div class="products_main">
+        	<img src="img/hazelnut_01.jpg" alt="">
+            <div class="products_txt">
+            	<h1>헤이즐넛 카푸치노 / Hazelnut Cappuccino</h1>
+                <p>Regular: <span>5,000원</span> / Large: <span>5,500원</span></p>
+                <h6>* 1회 제공량 : R 183 / L 283.8Kcal<br>
+                * 제품 용량 : R 305 / L 415g<br>
+                헤이즐넛의 깊은 향과 부드러운 벨벳 밀크폼을 에스프레소와 혼합하여 달콤한 풍미를 느낄 수 있는 커피</h6>
+            </div>
+        </div>
+        <img src="img/coffee_bg_02.jpg" alt="">
+        <em class="size">제품 용량 사이즈 : <span>Regular size</span> : 13oz, <span>Large size</span> : 16oz</em>
+        <div class="products_box">
+        	<div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>오리지널 드립커피<br>Original Drip Coffee</h7>
+                    <div class="cf_img"><img src="img/coffee_01.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>3,900원</span> / Large: <span>4,400원</span></p>
+                        <p class="content">* 1회 제공량 : R 15 / L 20kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                        파스쿠찌의 Single Origin Coffee를 
+                        정성껏 추출한 이탈리안 정통 오리지널 
+                        드립식 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>아메리카노<br>Americano</h7>
+                    <div class="cf_img"><img src="img/coffee_02.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>4,000원</span> / Large: <span>4,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 15 / L 17Kcal<br>
+                       * 제품 용량 : R 300 / L 380g<br>
+                        뜨거운물에 에스프레소를 희석,
+                        한층 부드럽고 깊은 아로마를 느낄 수 있는 레귤러 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>카페라떼<br>Caffe' Latte</h7>
+                    <div class="cf_img"><img src="img/coffee_03.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>4,500원</span> / Large: <span>5,000원</span></p>
+                        <p class="content">* 1회 제공량 : R 140 / L 180Kcal<br>
+                        * 제품 용량 : R 260 / L 340g<br>
+                        에스프레소와 스팀우유를 혼합하여 우유의 고소함과 부드러운 마우스필을 함께 느낄 수 있는 마일드 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>카라멜 라떼 마끼아또<br>Latte Macchiato (Caramel)</h7>
+                    <div class="cf_img"><img src="img/coffee_04.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,000원</span> / Large: <span>5,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 229 / L 300Kcal <br>
+                        * 제품 용량 : R 295 / L 385g<br>
+                        달콤한 카라멜과 부드러운 스팀 밀크를 혼합 한 후, 에스프레소를 가미한 정통 이탈리안 라떼</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>바닐라 라떼 마끼아또<br>Latte Macchiato (Vanilla)</h7>
+                    <div class="cf_img"><img src="img/coffee_05.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,000원</span> / Large: <span>5,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 188 / L 257Kcal<br>
+                        * 제품 용량 : R 285 / L 375g<br>
+                        고소한 바닐라와 부드러운 스팀 밀크를 혼합 한 후, 에스프레소를 가미한 정통 이탈리안 라떼</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>화이트초콜릿 라떼마끼아또<br>Latte Macchiato (White Choclate)</h7>
+                    <div class="cf_img"><img src="img/coffee_06.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,000원</span> / Large: <span>5,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 222 / L 286Kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                        달콤 쌉싸름 화이트 초콜릿과 부드러운 스팀 밀크를 혼합후, 에스프레소를 가미한 정통 이탈리안 라떼</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>카페모카<br>Caffe' Mocha</h7>
+                    <div class="cf_img"><img src="img/coffee_07.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,000원</span> / Large: <span>5,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 232 / L 318Kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                        달콤한 다크 초콜릿과 에스프레소에 부드러운 스팀 밀크를 혼합 한 후, 생크림을 얹은 베리에이션 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>카라멜 모카<br>Caramel Mocha</h7>
+                    <div class="cf_img"><img src="img/coffee_08.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,500원</span> / Large: <span>6,000원</span></p>
+                        <p class="content">* 1회 제공량 : R 209 / L 323kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                        * 달콤한 초콜릿과 카라멜을 에스프레소와 부드러운 스팀밀크로 혼합한 후, 
+                        생크림을 얹은 베리에이션 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>티라미스모카<br>Tiramisu Mocha</h7>
+                    <div class="cf_img"><img src="img/coffee_09.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,500원</span> / Large: <span>6,000원</span></p>
+                        <p class="content">* 1회 제공량 : R 224 / L 338Kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                        티라미스 소스와 에스프레소에 부드러운 스팀 밀크를 혼합 한 후, 생크림을 얹은 베리에이션 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>카푸치노<br>Cappuccino</h7>
+                    <div class="cf_img"><img src="img/coffee_10.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>4,500원</span> / Large: <span>5,000원</span></p>
+                        <p class="content">* 1회 제공량 : R 146 / L 188Kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                       에스프레소와 부드러운 벨벳 밀크폼을 혼합하여 커피와 우유거품의 절묘한 풍미를 느낄 수 있는 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>헤이즐넛 카푸치노<br>Hazelnut Cappuccino</h7>
+                    <div class="cf_img"><img src="img/coffee_11.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,000원</span> / Large: <span>5,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 15 / L 20kcal<br>
+                        * 제품 용량 : R 300 / L 400g<br>
+                        헤이즐넛의 깊은 향과 부드러운 벨벳 밀크폼을 에스프레소와 혼합하여 달콤한 풍미를 느낄 수 있는 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>에스프레소 마끼아또<br>Espresso Macchiato</h7>
+                    <div class="cf_img"><img src="img/coffee_12.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>3,800원</span></p>
+                        <p class="content">* 1회 제공량 : 25kcal<br>
+                        * 제품 용량 : 50g<br>
+                        농도 짙은 에스프레소 위에 벨벳 밀크폼을 혼합하여 진하면서도 부드러운 마우스필을 느낄 수 있는 커피</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>에스프레소 도피오<br>Espresso Doppio</h7>
+                    <div class="cf_img"><img src="img/coffee_13.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>3,800원</span></p>
+                        <p class="content">* 1회 제공량 : 14Kcal<br>
+                        * 제품 용량 : R 40g<br>
+                        다크 초콜릿의 진한 달콤함과 농익은 오렌지필의 산미를 느낄 수 있는 이탈리안 정통 에스프레소 더블샷</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>에스프레소<br>Espresso</h7>
+                    <div class="cf_img"><img src="img/coffee_14.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>3,300원</span></p>
+                        <p class="content">* 1회 제공량 : R 7kcal<br>
+                        * 제품 용량 : R 20g<br>
+                        다크 초콜릿의 진한 달콤함과 농익은 오렌지필의 산미를 느낄 수 있는 이탈리안 정통 에스프레소</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>쏠티 & 바닐라 아포가또<br>Salty & Vanilla Affogato</h7>
+                    <div class="cf_img"><img src="img/coffee_15.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>3,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 113kcal<br>
+                        * 제품 용량 : R 120g<br>
+                        고급 천일염으로 만든 이태리 정통 젤라또에 에스프레소를 가미한 파스쿠찌 오리지날 아포가또</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small_box2">
+            	<div class="title">
+                	<img class="logo" src="img/small_logo.png" alt="">
+                    <h7>블랙 슈가 & 바닐라 아포가또<br>Black Sugar & Vanilla Affogato</h7>
+                    <div class="cf_img"><img src="img/coffee_16.png" alt=""></div>
+                    <div class="txt">
+                    	<p class="price">Regular: <span>5,500원</span></p>
+                        <p class="content">* 1회 제공량 : R 126kcal<br>
+                        * 제품 용량 : R 120g<br>
+                        인도양 모리셔스섬에서 최소한의 자연공정만 거친 몰라시스 비정제 흑설탕으로 만든 젤라또에 에스프레소를 가미한 오리지날 아포가또</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<h3><img src="img/footer_logo.png" alt=""></h3>
+        <div class="footer_box">
+        	<ul>
+            	<li><a href="#">해피포인트</a></li>
+                <li><a href="#"><span>개인정보취급방침</span></a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">윤리신고센터</a></li>
+                <li><a href="#">거래희망사전등록</a></li>
+            </ul>
+            <p>서울시 서초구 양재동 11-149번지 / Tel : 82 - 2 - 2276 - 6550 FAX : 0505 - 073 - 0210 / 고객 상담 센터 080 - 731 - 2027  <br>개인정보관리 책임자 : 조용찬</p>
+            <p>COPYRIGHT 2012 <span>THE PASCUCCI</span> ALL RIGHTS RESERVED</p>
+        </div>
+        <div class="family_site">
+            <a class="fm">Family Site<img src="img/family_up.png" alt=""></a>
+            <ul class="fm_menu">
+            	<li><a href="#">SPC그룹</a></li>
+                <li><a href="#">던킨도너츠</a></li>
+                <li><a href="#">베스킨라빈스31</a></li>
+                <li><a href="#">해피포인트카드</a></li>
+                <li><a href="#">파리바게트</a></li>
+                <li><a href="#">파리크라상</a></li>
+                <li><a href="#">해피콘</a></li>
+                <li><a href="#">우리밀愛</a></li>
+                <li><a href="#">(주)한불제과제빵학원</a></li>
+                <li><a href="#">파스쿠찌이탈리아</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

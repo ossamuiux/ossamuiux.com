@@ -1,0 +1,210 @@
+@charset "utf-8";
+*{box-sizing:border-box;}
+body,input,button {font-family:'맑은 고딕','malgun gothic','돋움',dotum,Helvetica,AppleSDGothicNeo,Titillium Web,sans-serif; font-size:13px;}
+html,body {height:100%;} 
+
+.header {height:70px;}
+.header .header_inner {margin:0 auto; max-width:950px; position:relative;}
+.header .header_inner h1 {position:absolute; float:left; left:0; top:24px;}
+.header .header_inner .shopping {position:absolute; right:0; top:23px;}
+.header .header_inner .gnb {width:100%; padding:0 90px 0 140px; position:relative;}
+
+/*gnb list*/
+.header .header_inner .gnb>li {position:relative; float:left;}
+.header .header_inner .gnb .gnb_li1 {width:13%;}
+.header .header_inner .gnb .gnb_li2 {width:17%;}
+.header .header_inner .gnb .gnb_li3 {width:13%;}
+.header .header_inner .gnb .gnb_li4 {width:17%;}
+.header .header_inner .gnb .gnb_li5 {width:15%;}
+.header .header_inner .gnb .gnb_li6 {width:10%;}
+.header .header_inner .gnb .gnb_li7 {width:15%;}
+
+/*gnb list 스타일*/
+.header .header_inner .gnb>li>a {display:block; height:70px; line-height:70px; font-size:18px; color:#6b6b6b; background:#fff; text-align:center; letter-spacing:-0.5px;}
+.header .header_inner .gnb>li>a:hover {font-weight:bold; color:#f47321;}
+
+/*gnb 호버 시 나올 메뉴*/
+.header .header_inner .gnb>li .menu {position:absolute; left:50%; margin-left:-100px; top:70px; z-index:200; text-align:center; padding:20px 0; background:#f47321 url(../images/sub_cur.png) center top no-repeat; display:none;}
+.header .header_inner .gnb>li .menu>li>a {display:block; line-height:25px; color:#fff; width:200px;}
+.header .header_inner .gnb>li .menu>li>a:hover {text-decoration:underline;}
+
+.main {position:relative; padding:0 30px; overflow:hidden;}
+.main .visual {margin:0 auto; max-width:1845px;} 
+.main .visual .slick-slide img {width:100%;}
+/*슬라이드 좌우 화살표 버튼*/
+.main .visual .slick-prev {position:absolute; left:2%; top:50%; margin-top:-25px; z-index:200; background:url(../images/btn_left.png) no-repeat; width:50px; height:50px; outline:none; border:none; text-indent:-9999px;}
+.main .visual .slick-next {position:absolute; right:2%; top:50%; margin-top:-25px; z-index:200; background:url(../images/btn_right.png) no-repeat; width:50px; height:50px; outline:none; border:none; text-indent:-9999px;}
+
+/*슬라이드 dots*/
+.main .visual .slick-dots {position:absolute; left:50%; margin-left:-62.5px;}
+.main .visual .slick-dots li {float:left; margin:20px 0 0 5px;}
+.main .visual .slick-dots li:first-child {margin-left:0;}
+.main .visual .slick-dots li button {background:black; width:60px; height:5px; border:none; outline:none; text-indent:-9999px;}
+.main .visual .slick-dots .slick-active button {background:#f47321;}
+
+/*메인이미지 하단 txt*/
+.main .visual_txt {height:110px; margin-top:50px;}
+.main .visual_txt .txt {text-align:center; letter-spacing:-1px;}
+.main .visual_txt .txt h2 {font-size:22px; color:#040a26; margin-bottom:10px;}
+.main .visual_txt .txt p {font-size:16px; color:#686868; padding-top:10px;}
+.main .visual_txt .txt p strong {font-weight:bold;}
+.main .visual_txt .txt p .m_show {display:none;}
+
+/*section1 box메뉴*/
+.main .section1 {width:100%; margin:30px auto 0; max-width:1845px; border-top:10px solid #f36d1e; overflow:hidden;}
+.main .section1 ul li {float:left;}
+.main .section1 ul li img {width:100%;}
+.main .section1 ul .catalogue,.video {width:50%;}
+.main .section1 ul .athletic,.camping,.product {width:33.3333%;}
+/*호버시 이미지 변경*/
+.main .section1 ul .catalogue:hover {img:url(../images/cata_ov.jpg);}
+
+
+
+/*section2*/
+.main .section2 {background:#ececec; width:100%; margin:0 auto; max-width:1845px;}
+.main .section2 .section2_inner {padding:0 50px; position:relative; padding-bottom:60px; overflow:auto; padding-bottom:50px;}
+.main .section2 .section2_inner h2 {position:absolute; left:50%; top:60px; margin-left:-144px; font-size:35px; color:#333;}
+.main .section2 .section2_inner h2 strong {color:#f47321;}
+/*sns*/
+.main .section2 .section2_inner .sns_box {padding-top:140px;}
+.main .section2 .section2_inner .sns_box li {float:left; width:25%;}
+.main .section2 .section2_inner .sns_box li img {width:100%;}
+.main .section2 .section2_inner .sns_box li a:hover {background:#000; opacity:0.7;}
+
+/*footer*/
+.footer {padding:30px; position:relative; height:120px;}
+/*footer 왼쪽*/
+.footer .gnb {float:left;}
+.footer .gnb li {float:left; left:0; top:0; margin-left:10px;}
+.footer .gnb li:first-child {margin-left:0;}
+.footer .gnb li a {color:#6c6c6c; font-size:15px;}
+.footer .gnb li a:hover {color:#000;}
+.footer .gnb li span {display:inline-block; margin:8px 10px 0 0;}
+/*copyright*/
+.footer p {font-size:14px; color:#8b8b8b; position:absolute; left:30px; top:60px;}
+
+/*lafuma.com*/
+.footer .links .lafuma {font-size:15px; position:absolute; right:200px; top:34px;} 
+.footer .links .lafuma img {margin-top:4px;}
+/*family site*/
+.footer .links .family {position:absolute; right:30px; top:30px;}
+.footer .links .family button {width:155px; height:28px; line-height:24px; border:1px solid #333; background:#fff url(../images/btn_select.png) right 0 no-repeat; font-size:15px; text-align:left; text-indent:10px; outline:none;} 
+/*site list 클릭시 show*/
+.footer .links .family .family_list {width:155px; height:140px; line-height:28px; border:1px solid #333; position:absolute; right:0; top:-139px; overflow:auto; display:none;} 
+.footer .links .family .family_list a {color:#6c6c6c; font-size:15px; display:block; background:#fff; text-indent:10px;}
+.footer .links .family .family_list a:hover {background:#eee; color:#000;}
+.footer .links .family .family_list .fam {background:#eee; color:#333;}
+
+
+/*모바일*/
+.header .header_inner .m_btn {display:none;}
+.header .header_inner .m_gnb {display:none;}
+
+.main .section2 .section2_inner .list_menu {display:none;}
+.m_footer{display:none;}
+
+@media screen and (max-width:1024px){
+
+	.header {height:140px;}
+	.header .header_inner h1 {left:50%; margin-left:-58px; z-index:50; top:40px;}
+	.header .header_inner .gnb {padding:70px 150px 0 50px;}
+	.header .header_inner .shopping {padding-top:70px; right:55px; top:22px;}
+	
+	/*gnb 슬라이드 메뉴 위치, 사이즈 변경*/
+	.header .header_inner .gnb>li .menu {left:50%; margin-left:-70px;}
+	.header .header_inner .gnb>li .menu>li>a {width:140px;}
+	
+	/*모바일 메뉴 가리기*/
+	.header .header_inner .m_btn {display:none;}
+	.header .header_inner .m_gnb {display:none;}
+
+	.main {padding:0 15px;}
+
+	/*sns*/
+	.main .section2 .section2_inner {padding:0 35px 35px 35px;}
+	.main .section2 .section2_inner .sns_box {padding-top:90px;}		
+	.main .section2 .section2_inner h2 {top:35px; margin-left:-105px; font-size:25px;}
+
+	/*footer*/
+	.footer {padding:30px 15px; position:relative;}
+	/*copyright*/
+	.footer p {left:15px; top:70px;}
+	/*lafuma.com*/
+	.footer .links .lafuma {right:15px; top:30px;} 
+	/*footer 오른쪽 family list 위치변경*/
+	.footer .links .family {right:15px; top:58px;}
+
+}
+
+@media screen and (max-width:767px){
+	.wrap {height:100%;}
+	
+	#cover {position:fixed; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.7; z-index:300; display:none;}
+	.header {height:45px;}
+	.header .header_inner h1 {margin-left:-58px; top:10px;}
+	.header .header_inner .gnb {display:none;}
+	.header .header_inner .shopping {padding-top:0; right:15px; top:10px;}
+	.header .header_inner .shopping img {width:21px;}
+	
+	/*모바일 메뉴 버튼*/
+	.header .header_inner .m_btn {display:inline-block; border:none; margin:13px 0 0 15px; outline:none;}
+	.header .header_inner .m_btn img {width:21px;}
+	.header .header_inner .m_gnb {position:fixed; left:0; top:0; width:75%; height:100%; background:#fff; z-index:300; overflow:auto; display:none;}
+
+	/*모바일 메뉴 리스트*/
+	.header .header_inner .m_gnb .m_top {height:45px; background:#333;} 
+	.header .header_inner .m_gnb .m_menu ul li,.header .header_inner .m_gnb .m_menu h2 {border-bottom:1px solid #ccc; width:100%; text-align:center;}
+	.header .header_inner .m_gnb .m_menu h2>a {background:#eee; display:block; height:45px; font-size:19px; font-weight:bold; line-height:45px; color:#333;}
+	
+	.header .header_inner .m_gnb .m_menu ul {overflow:hidden;}
+	.header .header_inner .m_gnb .m_menu ul li {float:left; width:50%;}/*넓이는 밖에서, 높이는 안에서*/
+	.header .header_inner .m_gnb .m_menu ul li a {display:block; height:90px; background:#fff; font-size:16px; color:#444; line-height:83px; vertical-align:middle;}
+	.header .header_inner .m_gnb .m_menu ul li .bar {background:url(../images/m_center_bar.gif) no-repeat left 12px;}
+	.header .header_inner .m_gnb .m_menu ul li a img {height:15px; vertical-align:middle; margin-top:-4px;}
+	.header .header_inner .m_gnb .m_menu ul li a .sns {height:18px;}	
+	
+	/*메인이미지 하단 txt*/
+	.main .visual_txt .txt h2 {font-size:22px;}
+	.main .visual_txt .txt p {font-size:14px; background:#eee; padding:12px 0;}
+	.main .visual_txt .txt p .m_show {display:inline-block;}
+	.main .visual_txt .txt p em {display:none;}
+	
+	.main {padding:0px;}
+	.main .section1 {margin:20px auto 0; border-top:5px solid #f36d1e;}	
+	.main .section1 ul .catalogue,.video {width:100%;}
+	.main .section1 ul .product {width:100%;}
+	.main .section1 ul .athletic,.camping {width:50%;}	
+	
+	/*sns*/
+	.main .section2 .section2_inner .sns_box {display:none;}
+	.main .section2 .section2_inner h2 {display:none;}
+	.main .section2 .section2_inner {padding:0;}
+	
+	/*하단 리스트메뉴*/
+	.main .section2 {background:none;}
+	.main .section2 .section2_inner .list_menu {display:block;}	
+	.main .section2 .section2_inner .list_menu li {width:100%;}
+	.main .section2 .section2_inner .list_menu li a {display:block; height:50px; border-bottom:1px solid #ccc; background:#FFF url(../images/m_arrow.gif) no-repeat 95% 14px; color:#444; font-size:16px; line-height:50px; padding-left:20px;}
+	
+	/*footer*/
+	.footer {background:#eee; height:175px;}
+	.footer .gnb {display:none;}	
+	
+	/*lafuma.com*/
+	.footer .links .lafuma {position:absolute; left:50%; margin-left:-60px; top:37px;} 
+
+	/*family site*/
+	.footer .links .family button {font-size:13px; height:33px;}
+	.footer .links .family {left:50%; margin-left:-78px; top:72px;}
+	.footer .links .family .family_list {left:0; top:-139px;} 
+	.footer .links .family .family_list a {font-size:13px;}
+	
+	/*copyright*/
+	.footer p {left:50%; top:116px; margin-left:-133px; font-size:13px;}
+		
+}
+
+
+
+

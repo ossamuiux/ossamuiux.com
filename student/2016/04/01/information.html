@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>탑승수속 안내</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	var sw2=true; //언어선택
+	//메인 서브메뉴  슬라이드
+	$('.gnb').mouseenter(function(){
+		$('.header .bottom_header').stop().slideDown();
+	});
+	$('.gnb').mouseleave(function(){
+		$('.header .bottom_header').stop().slideUp();
+	});	
+	//마우스가 메뉴로 내려갈 때
+	$('.header .bottom_header').mouseenter(function(){
+		$('.header .bottom_header').stop().slideDown();
+	});
+	$('.header .bottom_header').mouseleave(function(){
+		$('.header .bottom_header').stop().slideUp();
+	});
+	
+	//언어선택
+	$('.top_header_inner .util>li').eq(-1).click(function(){ //eq(-1) -----> 0이 첫번째 li, 그전인 다섯번째 li는 -1 
+		if(sw2==true){
+			$(this).find('a').addClass('on');
+			$('.util .lang').show();
+		} else {
+			$(this).find('a').removeClass('on');
+			$('.util .lang').hide();
+		}		
+		sw2 = !sw2;
+	});	
+});
+
+	
+</script>
+</head>
+
+<body>
+<div class="header">
+	<div class="top_header">
+    	<div class="top_header_inner">
+        	<ul class="util">
+            	<li><a href="login.html">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a class="util5" href="#">Language</a>
+                    <ul class="lang">
+                        <li><a class="lang1" href="#"><img src="images/english.jpg" alt=""> English</a></li>
+                        <li><a class="lang2" href="#"><img src="images/china.jpg" alt=""> 中文</a></li>
+                        <li><a class="lang3" href="#"><img src="images/japan.jpg" alt=""> 日本語</a></li>
+                    </ul>
+    			</li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle_header">
+        <div class="middle_header_inner">
+            <h1><a href="index.html"><img src="images/jin_logo.png" alt="logo"></a></h1>
+            <ul class="gnb">
+                <li><a class="gnb1" href="#">항공권 조회</a></li>
+                <li><a href="#">예약확인</a></li>
+                <li><a href="#">운항정보</a></li>
+                <li><a href="#">서비스안내</a></li>
+                <li><a class="gnb5" href="#">탑승혜택</a></li>
+            </ul>
+        </div>
+	</div>
+    <div class="bottom_header">
+    	<div class="bottom_header_inner">
+        	<div class="sub">
+        		<ul class="sub1">
+                    <li><a href="reservation.html">국내선 예매</a></li>
+                    <li><a href="#">국제선 예매</a></li>
+                    <li><a href="#">할인 항공권 조회</a></li>
+                    <li><a href="#">할인 제도</a></li>
+            	</ul>
+                <ul class="sub2">
+                    <li><a href="#">예약 확인</a></li>
+                    <li><a href="#">예약 변경 / 환불</a></li>
+                    <li><a href="#">구매내역</a></li>
+                </ul>    	 
+                <ul class="sub3">
+                    <li><a href="#">출도착 조회</a></li>
+                    <li><a href="#">스케쥴 조회</a></li>
+                    <li><a href="#">취항노선 안내</a></li>
+                </ul> 
+                <ul class="sub4">
+                    <li><a href="information.html">탑승수속 안내</a></li>
+                    <li><a href="#">도움이 필요한 승객</a></li>
+                    <li><a href="#">수하물 서비스</a></li>
+                    <li><a href="#">좌석 사전 예약</a></li>
+                    <li><a href="#">기타 서비스</a></li>
+                </ul>
+                <ul class="sub5">
+                    <li><a href="#">제휴할인 안내</a></li>
+                    <li><a href="#">나비포인트 안내</a></li>
+                    <li><a href="#">포인트 적립 / 조회</a></li>
+                    <li><a href="#">포인트 사용 기준</a></li>
+                </ul>     
+            </div>
+        </div>
+    </div>
+</div>
+<div class="top_sub">
+    <div class="top_sub_inner">
+    <h2><img src="images/sub_tit_info.png" alt=""></h2>
+    <p><a href="index.html">HOME</a> > 탑승수속 안내</p>
+    </div>
+</div>
+
+<div class="main information">
+	<div class="main_inner">
+    	<p class="tit">· 탑승 수속(check-in)이란 공항에서 출국하기 위한 첫번째 단계로, <br>
+		· 좌석을 배정받고 수하물을 부친 후 탑승권을 받는 과정입니다.</p>
+        
+        <div class="domestic">
+        	<h2>국내선 안내</h2>
+            <div class="check_list1">
+                <h3>탑승수속 시 준비물</h3>
+                <h4>1.신분증</h4>
+                <p>· 여권, 주민등록증, 운전면허증, 경로우대증 등<br>
+                · 유아 및 소아 동반 시 주민등록등본 또는 가족관계증명서 지참</p>
+                <h4>2.구매확인증</h4>            
+            </div>
+            <div class="check_list2">
+                <h3>탑승수속 절차</h3>
+                <h4 class="step1">공항 도착 및 탑승 수속</h4>
+                <p>
+                ▶진에어항공 탑승수속 카운터에서 체크인후 탑승권을 발급 받습니다.<br>
+                ▶부치실 수화물이 있는 경우 탑승수속 카운터에서 위탁합니다.<br>
+                ▶탑승 수속은 항공기 출발 20분전 탑승수속이 마감되오니<br>
+                <strong>　</strong>항공기 출발 1시간 전 도착하기를 권장드립니다.
+                </p>
+                <h4 class="step1 step2">보안 수속</h4> 
+                <p>
+                ▶출발장 입구에서 보안 요원에게 탑승권과 신분증을 제시한 후<br>
+				<strong>　</strong> 보안 검색을 완료하고 탑승 게이트로 이동합니다.
+                </p>
+                <h4 class="step1 step2 step3">항공기 탑승</h4> 
+                <p>
+                ▶항공기 탑승 시간에 맞추어 대기하여 주시기 바랍니다. <br>
+				▶출발 10분 전 탑승이 마감되오니 정시 출발에 협조 부탁드립니다. 
+				</p>                         
+            </div>
+        </div>
+        <div class="international">
+        	<h2>국제선 안내</h2>
+            <div class="check_list1">
+                <h3>탑승수속 시 준비물</h3>
+                <h4>1.여권</h4>
+                <p>· 여권, 주민등록증, 운전면허증, 경로우대증 등<br>
+                · 유아 및 소아 동반 시 주민등록등본 또는 가족관계증명서 지참</p>
+                <h4>2.비자</h4>     
+                <h4>3.E-티켓 확인증</h4> 
+                <p>· 구간 별 한 장 필요</p>
+            </div>
+            <div class="check_list2">
+                <h3>탑승수속 절차</h3>
+                <h4 class="step1">공항 도착 및 탑승 수속</h4>
+                <p>
+                ▶진에어항공 탑승수속 카운터에서 체크인후 탑승권을 발급 받습니다.<br>
+                ▶부치실 수화물이 있는 경우 탑승수속 카운터에서 위탁합니다.<br>
+                ▶탑승 수속은 항공기 출발 50분전 탑승수속이 마감되오니<br>
+                <strong>　</strong>항공기 출발 2시간 전 도착하기를 권장드립니다.<br>
+                <strong>　</strong>(호놀룰루 노선 이용 고객은 항공기 출발 3시간 전 공항 도착 권장)
+                </p>
+                <h4 class="step1 step2">병무 검사</h4> 
+                <p>
+                ▶25세 이상 병역미필 병역의무자가 국외를 여행하고자 할 때는<br>
+                <strong>　</strong>병무청에 국외여행허가를 받고 출국 당일 법무부 출입국에서 출국심사 시<br>
+                <strong>　</strong>국외여행허가 증명서를 제출하여야 합니다.<br> 
+                <strong>　</strong>(영주권사유 병역연기 및 면제자 포함)
+                </p>
+                <h4 class="step1 step2 step3">검역 신고</h4> 
+                <p>
+                ▶여행자 및 동식물에 대한 검역증명서 발급이 필요한 경우<br>
+                <strong>　</strong>탑승수속 전 검역소를 통해 절차를 밟아야 합니다.
+				</p>
+                <h4 class="step1 step2 step3 step4">세관 신고</h4> 
+                <p>
+                ▶고가품 및 반/출입 금지품목 등의 소지여부를 신고합니다
+				</p>
+				<h4 class="step1 step2 step3 step4 step5">보안 검색</h4> 
+                <p>
+                ▶여행객 및 휴대품을 대상으로 보안검색을 실시합니다.</p>
+				<h4 class="step1 step2 step3 step4 step5 step6">출국 심사</h4> 
+                <p>
+                ▶유효한 여권과 도착국가에서 요구하는 여행서류(비자)를 지참하여<br>
+				<strong>　</strong>출국심사를 받습니다.
+				</p>                          
+                <h4 class="step1 step2 step3 step4 step5 step6 step7">항공기 탑승</h4> 
+                <p>
+                ▶항공기 탑승 시작시간에 맞추어 탑승구 앞에 대기하여 주시기 바랍니다.<br>
+                ▶출발 10분 전에 탑승이 마감되오니 정시 출발에 협조를 부탁드립니다. 
+				</p>                         
+            </div>
+        </div>
+	</div>
+</div>
+<div class="footer">
+    <div class="top_footer">
+        <div class="top_footer_inner">
+            <ul class="sns">
+                <li><a href="#"><img src="images/btn_twiter.png" alt=""></a></li>
+                <li><a href="#"><img src="images/btn_facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="images/btn_naverblog.png" alt=""></a></li>
+                <li><a href="#"><img src="images/btn_youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="images/btn_instagram.png" alt=""></a></li>
+            </ul>
+            <!--검색창-->
+            <div class="search">
+                <input type="text">
+                <button type="button"><img src="images/btn_search.png" alt=""></button>
+            </div>
+            <!--관련사이트-->
+            <div class="family">
+            	<button type="button">FAMILY SITE</button>
+                <ul class="family_list">
+                    <li><a href="http://greenwings.jinair.com/">그린윙즈</a></li>
+                    <li><a href="http://www.jinair.com/Jinmarket/">진마켓</a></li>
+                </ul>
+            </div>  
+        </div>
+    </div>
+    <div class="footer_inner">
+        <div class="footer_left">
+            <h2><img src="images/footer_logo.png" alt=""></h2>
+            <ul class="footer_menu">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">운송약관</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">채용정보</a></li>
+            </ul>
+            <div class="bottom_txt1">
+                <p>(주)진에어 대표이사 최정호 ㅣ 서울특별시 강서구 공항대로 433<br>
+                사업자 등록번호 121-81-89086 ㅣ 통신판매업 신고번호 제2008-서울 강서-0408<br><br>
+                Copytight ⓒJIN AIR. All Rights reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer_right">
+            <h3>고객센터</h3>
+            <a href="#">자주 묻는 질문</a><br>
+            <a href="#">1:1 문의 게시판</a>
+            <h2>1600-6200</h2>
+            <p>상담 가능시간 06:00~20:00</p>
+        </div>
+	</div>
+</div>
+</body>
+</html>

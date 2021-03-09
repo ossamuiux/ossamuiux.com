@@ -1,0 +1,522 @@
+@charset "utf-8";
+body {font:13px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+p,a,th,td,h3 {color:#6d6d6d;}
+button {padding:0 0.25em;}
+
+
+
+/************************서브페이지**************************/
+.main {margin-left:240px; overflow:hidden; width:1360px; padding-bottom:60px;}
+
+
+/************************온라인예약**************************/
+
+/*제목*/
+.main .section {overflow:hidden; width:1310px;}
+.main .section h1 {float:left; font-size:35px; color:#313131; margin-top:64px;}
+.main .section ul {float:right; margin-top:88px;}
+.main .section ul li {float:left; padding:0 20px; background:url(../img/list_arrow.png) no-repeat left 5px;}
+.main .section ul li.lst {padding-right:0;}
+.main .section ul li:first-child {margin-top:5px; background:none;}
+
+/*큰 왼쪽 섹션*/
+.main .section1 {width:1060px; float:left;}
+
+/*객실 선택 첫번째 표*/
+.main .section1 .table1 {border:1px solid #e1e1e1; text-align:center; margin-top:40px; width:1060px;}
+.main .section1 .table1 th {height:50px; border:1px solid #e1e1e1; vertical-align:middle; font-size:16px; background:#eef5f5;}
+.main .section1 .table1 td {width:175px; border:1px solid #e1e1e1; height:50px; vertical-align:middle; font-size:15px;}
+.main .section1 .table1 td:hover {background:#eef5f5;}
+.main .section1 .table1 td a {display:block; line-height:50px;}
+.main .section1 .table1 td a.on {background:#eef5f5;}
+
+/*객실예약 제목*/
+.main .section1 h2 {margin-top:100px; font-size:20px; color:#313131; border-bottom:1px solid #e1e1e1; padding-bottom:15px;}
+
+/*날짜선택*/
+.main .section1 .condo {margin-top:40px; overflow:hidden; position:relative; width:1060px;}
+.main .section1 .condo h3 {font-size:16px; color:#535554;}
+.main .section1 .condo .room {margin-top:15px; position:relative; overflow:hidden;}
+.main .section1 .condo .room .bg {width:545px; height:50px; background:url(../img/background_color.png); position:absolute; left:0; bottom:0; color:#FFF; line-height:50px; padding-left:5px;}
+.main .section1 .condo .cancle {border:1px solid #e1e1e1; position:absolute; right:0; top:0; padding:3px 10px;}
+
+/*달력*/
+.main .section1 .condo .room .calendar {width:468px; overflow:hidden; float:right; border-right:1px solid #e1e1e1; border-left:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1; border-top:2px solid #d6f2f2;}
+.main .section1 .condo .room .calendar .tit {width:468px; height:48px; background:#eef5f5; border-bottom:1px solid #e1e1e1;}
+.main .section1 .condo .room .calendar .tit button {width:50px; height:48px; background:#eef5f5; border:none; cursor:pointer; background:url(../img/prev_arrow_btn.png) no-repeat center center;}
+.main .section1 .condo .room .calendar .tit button.prev_btn {float:left;}
+.main .section1 .condo .room .calendar .tit h3 {float:left; line-height:45px; margin-left:155px;}
+.main .section1 .condo .room .calendar .tit button.next_btn {float:right; background-image:url(../img/next_arrow_btn.png);}
+.main .section1 .condo .room .calendar .table4 {width:468px; text-align:center; height:304px; vertical-align:middle;}
+.main .section1 .condo .room .calendar .table4 th {vertical-align:middle; color:#313131; height:44px;}
+.main .section1 .condo .room .calendar .table4 td {vertical-align:middle;}
+.main .section1 .condo .room .calendar .table4 td a {display:block; height:43px; vertical-align:middle; line-height:43px;}
+.main .section1 .condo .room .calendar .table4 td a.on {background:url(../img/calendar_bg.png) no-repeat center center; color:#FFF;}
+
+/*날짜선택 두번째 표*/
+.main .section1 .condo .table2 {border:1px solid #e1e1e1; width:1060px; margin-top:20px;}
+.main .section1 .condo .table2 th {width:119px; border:1px solid #e1e1e1; height:39px; font-size:15px; vertical-align:middle; background:#eef5f5; text-align:center;}
+.main .section1 .condo .table2 td {border:1px solid #e1e1e1; width:233px; height:40px; vertical-align:middle;}
+.main .section1 .condo .table2 td select {width:70px; font-size:14px; height:28px; margin-left:8px; border:1px solid #e1e1e1; padding-left:5px; cursor:pointer; vertical-align:middle;}
+
+
+/*이용자 정보*/
+.main .section1 .condo.user {margin-top:60px;}
+.main .section1 .condo.user .table2 .name input {font-size:14px; height:22px; margin-left:8px; border:1px solid #e1e1e1; width:170px;}
+.main .section1 .condo.user .table2 .phone_num input {width:40px; font-size:14px; border:1px solid #e1e1e1; height:24px; vertical-align:middle;}
+
+
+/*예약 내용 확인*/
+.main .section1 .check h2 {border-bottom:none; margin-top:60px;}
+
+
+/*예약 내용 확인 표*/
+.main .section1 .check .table3 {width:1060px; text-align:center; vertical-align:middle; border:1px solid #e1e1e1;}
+.main .section1 .check .table3 th {border:1px solid #e1e1e1; height:40px; vertical-align:middle; font-size:15px; background:#eef5f5;}
+.main .section1 .check .table3 td {border:1px solid #e1e1e1; height:40px;}
+
+
+/*맨 아래쪽 예약버튼*/
+.main .section1 .center_btn {width:150px; height:50px; background:#0aa3a9; color:#FFF; border:none; font-size:20px; cursor:pointer; margin-top:70px; margin-left:455px;}
+
+
+/*오른쪽 회원정보 섹션*/
+.main .section2 {width:170px; height:1144px; border:1px solid #e1e1e1; float:left; margin:40px 0 0 50px; padding:0 15px;}
+.main .section2 h3 {margin-top:25px; font-size:16px; color:#535554; background:url(../img/info_icon.png) no-repeat left 5px; padding:0 0 10px 25px; border-bottom:1px solid #e1e1e1;}
+.main .section2 p.txt {margin-top:25px; padding-bottom:10px; border-bottom:1px solid #e1e1e1;}
+.main .section2 h3.tit {background-image:url(../img/info_icon01.png); margin-top:30px;}
+.main .section2 button {width:150px; height:50px; background:#0aa3a9; color:#FFF; border:none; font-size:20px; cursor:pointer; margin-top:70px; margin-left:10px;}
+
+
+
+/************************이벤트&amp;패키지**************************/
+.main.event {}
+
+/*제목*/
+.main.event .section {width:1200px; overflow:hidden;}
+.main.event .section .head {width:1200px; height:110px;}
+.main.event .section .tit {border-top:1px solid #e1e1e1; width:1200px; margin-top:10px;}
+.main.event .section .tit h3 {padding-top:10px;}
+
+/*패키지 전체 크기 잡기*/
+.main.event .package {width:1200px;}
+
+/*제목 아래 부가 설명*/
+
+
+/*패키지 내용 담은 컨텐츠 양옆으로 두개씩 담음*/
+.main.event .package .content {margin-top:50px; overflow:hidden;}
+
+/*왼쪽 패키지내용*/
+.main.event .package .content .box {border:1px solid #e1e1e1; float:left;}
+.main.event .package .content .box img {float:left;}
+.main.event .package .content .box .tit_box {float:right; width:277px; height:172px; padding:30px 0 0 20px; border-left:1px solid #e1e1e1;}
+.main.event .package .content .box .tit_box h3 {font-size:15px; color:#313131;}
+.main.event .package .content .box .tit_box p.txt {margin-top:20px;}
+.main.event .package .content .box .tit_box p.date {color:#0aa3a9; margin-top:80px;}
+.main.event .package .content .box:hover h3 {text-decoration:underline;}
+.main.event .package .content .box:hover p.txt {text-decoration:underline;}
+
+/*오른쪽 패키지내용*/
+.main.event .package .content .box1 {float:right;}
+
+/**/
+.main.event .package .content1 {margin-top:30px;} 
+
+/*페이지버튼*/
+.main.event .package .page_btn {text-align:center; margin-top:40px;}
+.main.event .package .page_btn li {display:inline-block; margin-left:10px;}
+.main.event .package .page_btn li:first-child {margin-left:0;}
+.main.event .package .page_btn li a {display:block; width:29px; height:29px; border:1px solid #e1e1e1; line-height:28px;}
+.main.event .package .page_btn li a.on {background:#0aa3a9; color:#FFF; border:1px solid #0aa3a9;}
+
+
+
+/************************숙박&amp;컨벤션**************************/
+.main.convention {}
+
+/*제목*/
+.main.convention .section {width:1200px; overflow:hidden;}
+.main.convention .section .head {width:1200px; height:110px;}
+.main.convention .section .tit {border-top:1px solid #e1e1e1; width:1200px; margin-top:10px;}
+.main.convention .section .tit h3 {padding-top:10px;}
+
+/*큰 메인 사진*/
+.main.convention .content {margin-top:50px; overflow:hidden;}
+.main.convention .content h3 {color:#0aa3a9; font-size:18px; margin-top:30px;}
+.main.convention .content p.txt {margin-top:20px; line-height:20px;}
+
+/*홀리데이 인 리조트 첫번째*/
+.main.convention .content1 {width:1200px; overflow:hidden; margin-top:50px;}
+.main.convention .content1 .box {display:inline-block; margin-left:100px; height:350px;}
+.main.convention .content1 .box h3 {color:#0aa3a9; font-size:16px; margin-top:20px;}
+.main.convention .content1 .box h3.tit {margin-top:50px;}
+.main.convention .content1 .box p.txt {margin-top:15px; line-height:20px;}
+
+/*홀리데이 인 리조트 두번째*/
+.main.convention .content2 {width:1200px; overflow:hidden; margin-top:40px;}
+.main.convention .content2 .box {display:inline-block; height:350px; margin-right:100px; width:545px;}
+.main.convention .content2 .box h3 {color:#0aa3a9; font-size:16px; margin-top:30px;}
+.main.convention .content2 .box p {margin-top:30px; line-height:20px;}
+.main.convention .content2 .box p.txt {margin-top:20px;}
+
+/*인터컨티넨탈 호텔 두번째*/
+.main.convention .content3 .box h3 {margin-top:20px;}
+.main.convention .content3 .box p {margin-top:15px;}
+.main.convention .content3 .box p.txt {margin-top:10px;}
+.main.convention .content3 .box h3.tit {margin-top:30px;}
+
+
+
+
+/************************스키&amp;보드**************************/
+.main.ski {}
+
+/*제목*/
+.main.ski .section {width:1200px; overflow:hidden;}
+.main.ski .section .head {width:1200px; height:110px;}
+.main.ski .section .tit {border-top:1px solid #e1e1e1; width:1200px; margin-top:10px;}
+.main.ski .section .tit h3 {padding-top:10px;}
+
+/*알펜시아 리조트 스키장*/
+.main.ski .content {margin-top:60px; width:1200px; overflow:hidden;}
+.main.ski .content h3 {color:#313131; font-size:18px;}
+/*크게 보여지는 사진*/
+.main.ski .content .slider_view {margin-top:20px;}
+
+/*작게 보여지고 누르면 바뀌는 사진*/
+.main.ski .content .slider_btn {width:1200px; margin-top:30px; position:relative; text-align:center; overflow:hidden;}
+.main.ski .content .slider_btn .slick-list {width:1000px; margin-left:100px;}
+.main.ski .content .slider_btn .btn {width:192px; height:135px; margin-left:10px;}
+.main.ski .content .slider_btn .btn img {width:192px; height:135px;}
+
+/*prev, next 버튼*/
+.main.ski .content .slider_btn .slick-arrow {border:none; background:none; width:17px; height:25px; font-size:0; position:absolute; left:0; top:0; cursor:pointer;}
+.main.ski .content .slider_btn .slick-prev {background:url(../img/prev_arrow_btn01.png) no-repeat; left:40px; top:60px;}
+.main.ski .content .slider_btn .slick-next {background:url(../img/next_arrow_btn01.png) no-repeat; left:1140px; top:60px;}
+
+/*slick-dots 페이지버튼*/
+.main.ski .content .slider_btn .slick-dots {display:inline-block; margin-top:10px;}
+.main.ski .content .slider_btn .slick-dots li {display:inline-block; margin-left:4px;}
+.main.ski .content .slider_btn .slick-dots li:first-child {margin-left:0;}
+.main.ski .content .slider_btn .slick-dots li button {background:url(../img/dot03.png) no-repeat left center; border:none; font-size:0; cursor:pointer; width:12px; height:12px;}
+.main.ski .content .slider_btn .slick-dots .slick-active button {background:url(../img/dot02.png) no-repeat left center; margin-left:1px;}
+
+
+/*슬로프&amp;리조트*/
+.main.ski .content1 {width:1200px; margin-top:90px; overflow:hidden;}
+.main.ski .content1 h3 {color:#313131; font-size:18px;}
+.main.ski .content1 .lift {margin-top:20px;}
+
+/*스키 슬로프 표*/
+.main.ski .content1 .table1 {margin-top:75px;}
+.main.ski .content1 .table1 h3 {font-size:16px;}
+.main.ski .content1 .table1 table {border:1px solid #e1e1e1; margin-top:15px; text-align:center;}
+.main.ski .content1 .table1 table tr {border:1px solid #e1e1e1; height:40px;}
+.main.ski .content1 .table1 table tr th {border:1px solid #e1e1e1; width:239px; background:#0aa3a9; color:#FFF; vertical-align:middle;}
+.main.ski .content1 .table1 table tr td {border:1px solid #e1e1e1; vertical-align:middle;}
+
+/*리프트 표*/
+.main.ski .content1 .table2 {margin-top:50px;}
+.main.ski .content1 .table2 h3 {font-size:16px;}
+.main.ski .content1 .table2 table {border:1px solid #e1e1e1; margin-top:15px; text-align:center;}
+.main.ski .content1 .table2 table tr {border:1px solid #e1e1e1;}
+.main.ski .content1 .table2 table tr th {border:1px solid #e1e1e1; vertical-align:middle; height:49px; width:100px; background:#0aa3a9; color:#FFF;}
+.main.ski .content1 .table2 table tr .th1 {height:24px;}
+.main.ski .content1 .table2 table tr td {height:39px; vertical-align:middle; border:1px solid #e1e1e1;}
+
+
+
+/************************회원가입 (약관동의)**************************/
+.main.join {}
+
+/*제목*/
+.main.join .section {width:1000px; overflow:hidden;}
+.main.join .section .head {width:1000px; height:110px;}
+.main.join .section .tit {border-top:1px solid #e1e1e1; width:1000px; margin-top:10px;}
+.main.join .section .tit h3 {padding-top:10px; font-size:16px; color:#313131;}
+.main.join .section .tit p {padding-top:5px;}
+
+/*legend 제목*/
+.main.join legend {position:absolute; left:0; top:-999999px;}
+
+/*STEP 순서표시*/
+.main.join form fieldset .menu {width:770px; height:80px; background:url(../img/bg_signup_step.gif) no-repeat left top; margin-top:50px;}
+.main.join form fieldset .menu li {float:left; margin-top:21px; margin-left:148px; color:#6d6d6d;}
+.main.join form fieldset .menu li:first-child {margin-left:80px;}
+.main.join form fieldset .menu li.on {color:#FFF;}
+
+/*회원 이용 약관*/
+.main.join form .provision_wrap {overflow:hidden; width:770px; margin-top:50px;}
+.main.join form .provision_wrap h3 {font-size:18px; font-weight:bold; padding-top:5px; background:url(../img/bg_tit_barg.gif) no-repeat left top;}
+.main.join form .provision_wrap h3 span {font-size:14px; color:#0aa3a9; line-height:27px;}
+.main.join form .provision_wrap .provision {width:768px; height:178px; border:1px solid #e1e1e1; margin-top:10px; overflow-y:scroll;}
+.main.join form .provision_wrap .provision p.txt {padding:20px;}
+.main.join form .provision_wrap .provision p.txt span {font-size:14px; color:#313131;}
+.main.join form .provision_wrap .total_btn {overflow:hidden; margin-top:15px;}
+.main.join form .provision_wrap .total_btn h4 {float:left; color:#6d6d6d;}
+.main.join form .provision_wrap .total_btn .btn {float:right;}
+.main.join form .provision_wrap .total_btn .btn input {margin-right:0;}
+
+/*개인정보 수집 동의*/
+.main.join form .provision_wrap2 {margin-top:120px;}
+
+/*마케팅 활용 동의*/
+.main.join form .provision_wrap3 {margin-top:120px;}
+.main.join form .provision_wrap3 h3 span {color:#313131;}
+.main.join form .provision_wrap3 .tit {color:#313131; margin-top:10px;}
+.main.join form .provision_wrap3 .btn_wrap {border-top:2px solid #313131; margin-top:20px; overflow:hidden;}
+.main.join form .provision_wrap3 .btn_wrap .total_btn {border-bottom:1px solid #e1e1e1; margin-top:0; padding:12px 0 12px 20px;}
+
+/*모두동의, 확인버튼*/
+.main.join form .total_btn1 {overflow:hidden; margin-top:40px; width:770px;}
+.main.join form .total_btn1 .btn1 {float:left; margin-top:15px;}
+.main.join form .total_btn1 .btn1 input {margin-top:4px; margin-right:0;}
+.main.join form .total_btn1 .btn1 label {font-size:16px;}
+.main.join form .total_btn1 .btn2 {float:right; width:120px; height:50px; text-align:center; line-height:50px; background:#0aa3a9; color:#FFF; font-size:16px;}
+
+
+
+
+/************************회원가입 (본인인증)**************************/
+.main.join_cer {}
+
+/*STEP 순서표시*/
+.main.join_cer form fieldset .menu {background-position:left -90px;}
+
+/*휴대폰 인증*/
+.main.join_cer form fieldset .phone_wrap {width:710px; height:140px; border-top:2px solid #e1e1e1; margin-top:60px; padding:30px; background:#eef5f5;}
+.main.join_cer form fieldset .phone_wrap h3 {font-size:18px; font-weight:bold;}
+.main.join_cer form fieldset .phone_wrap .phone {width:710px; overflow:hidden; margin-top:40px;}
+.main.join_cer form fieldset .phone_wrap .phone p {float:left;}
+.main.join_cer form fieldset .phone_wrap .phone a {float:right; width:100px; height:40px; text-align:center; line-height:40px; background:#0aa3a9; color:#FFF;}
+
+/*알려드립니다*/
+.main.join_cer form .report {margin-top:70px; width:770px; overflow:hidden;}
+.main.join_cer form .report h3 {font-size:18px; font-weight:bold; padding-top:5px; background:url(../img/bg_tit_barg.gif) no-repeat left top;}
+.main.join_cer form .report .txt {width:770px; margin-top:15px;}
+.main.join_cer form .report .txt li {padding-left:10px; background:url(../img/dot_gray_3by3.gif) no-repeat left 8px; margin-top:5px;}
+
+/*휴대폰 인증 팝업*/
+.main.join_cer form .phone_wrap1 {background:url(../img/bg_phone0.5.png); width:100%; height:100%; position:fixed; left:0; top:0; z-index:10000; display:none;}
+.main.join_cer form .phone_wrap1 .phone1 {width:500px; height:250px; position:fixed; left:50%; top:50%; margin-top:-125px; margin-left:-250px; padding-left:10; background:#FFF;}
+.main.join_cer form .phone_wrap1 .phone1 h3 {background:#000; color:#FFF; line-height:40px; padding-left:10px;}
+.main.join_cer form .phone_wrap1 .phone1 table {margin-top:30px; width:470px; margin-left:15px;}
+.main.join_cer form .phone_wrap1 .phone1 table tr {border:1px solid #e1e1e1;}
+.main.join_cer form .phone_wrap1 .phone1 table tr th {border:1px solid #e1e1e1; width:100px; height:40px; vertical-align:middle; background:#eef5f5;}
+.main.join_cer form .phone_wrap1 .phone1 table tr td {padding-left:10px;}
+.main.join_cer form .phone_wrap1 .phone1 table tr td button {border:none; background:#666; color:#FFF; width:100px; height:24px; padding-bottom:2px; cursor:pointer;}
+.main.join_cer form .phone_wrap1 .phone1 table tr select {width:80px; height:27px; padding-left:10px; border:1px solid #d9d9d9; vertical-align:middle;}
+.main.join_cer form .phone_wrap1 .phone1 table tr input {width:60px; height:20px; margin-top:8px; border:1px solid #d9d9d9;}
+.main.join_cer form .phone_wrap1 .phone1 table tr input.num {width:150px;}
+.main.join_cer form .phone_wrap1 .phone1 .chk {background:#0aa3a9; width:100px; height:40px; color:#FFF; margin:20px 0 0 200px; cursor:pointer; display:block; text-align:center; line-height:40px;}
+.main.join_cer form .phone_wrap1 .phone1 .close_btn {position:absolute; right:10px; top:10px; width:20px; height:20px; background:url(../img/close_btn.png) no-repeat;}
+
+
+
+/************************회원가입 (정보입력)**************************/
+.main.join_info {}
+
+/*STEP 순서표시*/
+.main.join_info form fieldset .menu {background-position:left -180px;}
+
+/*개인정보 입력*/
+.main.join_info form .tit1 {width:770px; overflow:hidden; margin-top:30px;}
+.main.join_info form .tit1 h3 {font-size:18px; font-weight:bold; padding-top:5px; background:url(../img/bg_tit_barg.gif) no-repeat left top; float:left;}
+.main.join_info form .tit1 p {padding-left:10px; background:url(../img/blt_required.gif) no-repeat left 8px; float:right;}
+
+/*정보입력창(표)*/
+.main.join_info form table {width:770px; margin-top:50px; border-top:2px solid #313131;}
+.main.join_info form table tr {border-bottom:1px solid #e1e1e1; height:50px;}
+.main.join_info form table tr.lst {border-bottom:1px solid #999;}
+.main.join_info form table tr.psw {height:70px;}
+.main.join_info form table th {vertical-align:middle; text-align:left; padding-left:20px; width:150px;}
+.main.join_info form table th span {display:inline-block; width:5px; height:5px; background:url(../img/blt_required.gif) no-repeat left top; vertical-align:middle; padding-left:5px; font-size:0;}
+.main.join_info form table td {vertical-align:middle;}
+.main.join_info form table td input {vertical-align:middle;}
+.main.join_info form table td select {vertical-align:middle;}
+.main.join_info form table td.name input {height:25px; border:1px solid #d9d9d9;}
+.main.join_info form table td.id .id1 {width:500px; height:25px; margin-top:7px; margin-right:10px; border:1px solid #d9d9d9;}
+.main.join_info form table td.id button {border:none; width:70px; background:#333; margin-top:5px; height:28px; vertical-align:middle; cursor:pointer; color:#FFF;}
+.main.join_info form table td.psw1 input {width:570px; height:25px; border:1px solid #d9d9d9;}
+.main.join_info form table td.psw1 p {margin-top:5px;}
+.main.join_info form table td.date select {width:80px; height:30px; padding-left:5px; border:1px solid #d9d9d9;}
+.main.join_info form table td.date input {height:25px; margin-right:5px;}
+.main.join_info form table td.num select {width:80px; height:30px; padding-left:5px; border:1px solid #d9d9d9;}
+.main.join_info form table td.num input {height:25px; width:80px; border:1px solid #d9d9d9;}
+.main.join_info form table td.add select.add1 {width:80px; height:30px; padding-left:5px; border:1px solid #d9d9d9;}
+.main.join_info form table td.add select.add2 {width:130px; height:30px; padding-left:5px; border:1px solid #d9d9d9; display:none;}
+.main.join_info form table td.email select {width:120px; height:30px; padding-left:5px; border:1px solid #d9d9d9;}
+.main.join_info form table td.email input {width:120px; height:25px; border:1px solid #d9d9d9;}
+.main.join_info form table td.email input.email1 {display:none; border:1px solid #d9d9d9;}
+
+/*가입 취소 버튼*/
+.main.join_info form .bot_btn {width:770px; overflow:hidden; text-align:right; margin-top:30px;}
+.main.join_info form .bot_btn a {display:inline-block; width:120px; height:40px; text-align:center; background:#333; color:#FFF; line-height:40px;}
+.main.join_info form .bot_btn a.bot_btn1 {background:#666; margin-right:5px;}
+
+
+
+
+/************************회원가입 (가입완료)**************************/
+.main.join_complete {}
+
+/*STEP 순서표시*/
+.main.join_complete .menu {width:770px; height:80px; background:url(../img/bg_signup_step.gif) no-repeat left -270px; margin-top:50px;}
+.main.join_complete .menu li {float:left; margin-top:21px; margin-left:148px; color:#6d6d6d;}
+.main.join_complete .menu li:first-child {margin-left:80px;}
+.main.join_complete .menu li.on {color:#FFF;}
+
+/*회원가입 완료 메시지*/
+.main.join_complete .complete {width:690px; height:450px; background:url(../img/join_complete.jpg) no-repeat; padding:40px; margin-top:50px;} 
+.main.join_complete .complete h2 {color:#FFF; font-size:25px; font-weight:bold; padding-top:8px; background:url(../img/bg_tit_white.gif) no-repeat left top;}
+.main.join_complete .complete p {color:#FFF; font-size:14px; margin-top:10px;}
+
+/*메인으로, 로그인 버튼*/
+.main.join_complete .bot_btn {text-align:center; width:770px; overflow:hidden; margin-top:30px;}
+.main.join_complete .bot_btn a {display:inline-block; width:120px; height:40px; text-align:center; background:#333; color:#FFF; line-height:40px;}
+.main.join_complete .bot_btn a.bot_btn1 {background:#666; margin-right:5px;}
+
+
+
+/************************로그인**************************/
+.main.login {}
+
+/*제목*/
+.main.login form .section {width:1000px; overflow:hidden;}
+.main.login form .section .head {width:1000px; height:110px;}
+.main.login form .section .tit {border-top:1px solid #e1e1e1; width:1000px; margin-top:10px;}
+.main.login form .section .tit h3 {padding-top:10px; font-size:16px; color:#313131;}
+.main.login form .section .tit p {padding-top:5px;}
+
+/*legend 제목*/
+.main.login legend {position:absolute; left:0; top:-999999px;}
+
+/*로그인*/
+.main.login form .login_box {width:770px; height:300px; margin-top:50px; border-top:2px solid #313131; border-bottom:1px solid #e1e1e1; background:#eef5f5}
+.main.login form .login_box .box1 {width:580px; overflow:hidden; margin:50px auto 0; position:relative;}
+.main.login form .login_box .box1 table {width:410px; height:90px;}
+.main.login form .login_box .box1 table th {width:180px; vertical-align:middle; font-size:15px; color:#313131;}
+.main.login form .login_box .box1 table td {vertical-align:middle; width:230px;}
+.main.login form .login_box .box1 table td input {width:210px; height:25px; border:1px solid #d9d9d9;}
+.main.login form .login_box .box1 button {position:absolute; right:80px; top:8px; width:90px; height:73px; border:none; background:#0aa3a9; color:#FFF; font-size:16px; cursor:pointer;}
+.main.login form .login_box .box1 .box2 {width:350px; margin-left:180px;}
+.main.login form .login_box .box1 .box2 .chk {margin-top:10px; color:#6d6d6d; margin-bottom:10px;}
+.main.login form .login_box .box1 .box2 .chk .chk1 {margin-right:5px;}
+.main.login form .login_box .box1 .box2 a {width:158px; display:inline-block; text-align:center; height:40px; line-height:40px; background:#333; color:#FFF;}
+
+/*로그인 방법*/
+.main.login form .tit2 {width:770px; overflow:hidden; margin-top:100px;}
+.main.login form .tit2 h3 {font-size:17px; border-bottom:1px solid #d9d9d9; color:#313131; padding-bottom:10px;}
+.main.login form .tit2 h4 {margin-top:40px; font-size:15px; color:#313131;}
+.main.login form .tit2 p {margin-top:10px; line-height:20px;}
+.main.login form .tit2 .btn {text-align:right; margin-top:20px;}
+.main.login form .tit2 .btn a {display:inline-block; text-align:center; width:120px; height:40px; line-height:40px; background:#333; color:#FFF;}
+
+
+
+
+
+/************************공지사항(리스트)**************************/
+.main.notice_list {}
+
+/*제목*/
+.main.notice form .section {width:1000px; overflow:hidden;}
+.main.notice form .section .head {width:1000px; height:110px;}
+.main.notice form .section .tit {border-top:1px solid #e1e1e1; width:1000px; margin-top:10px;}
+.main.notice form .section .tit h3 {padding-top:10px; font-size:16px; color:#313131;}
+.main.notice form .section .tit p {padding-top:5px;}
+
+/*legend 제목*/
+.main.notice legend {position:absolute; left:0; top:-999999px;}
+
+/*검색창*/
+.main.notice_list .search_wrap {width:1000px; overflow:hidden; margin-top:50px; text-align:right;}
+.main.notice_list .search_wrap select {width:100px; height:36px; padding-left:10px; margin-right:5px; border:1px solid #d9d9d9; cursor:pointer; vertical-align:middle;}
+.main.notice_list .search_wrap .txt {height:30px; width:200px; border:1px solid #d9d9d9; vertical-align:middle;}
+.main.notice_list .search_wrap button {width:70px; height:34px; border:none; background:#333; color:#FFF; cursor:pointer;}
+
+/*공지사항 리스트*/
+.main.notice_list .notice1 {width:1000px; text-align:center; border-top:2px solid #313131; margin-top:30px;}
+.main.notice_list .notice1 tr {height:50px; border-bottom:1px solid #e1e1e1;}
+.main.notice_list .notice1 tr th {vertical-align:middle; color:#313131; font-size:15px; background:#eef5f5;}
+.main.notice_list .notice1 tr th.grp {width:180px;}
+.main.notice_list .notice1 tr th.grp1 {width:110px;}
+.main.notice_list .notice1 tr th.grp2 {width:80px;}
+.main.notice_list .notice1 tr td {vertical-align:middle; font-size:14px;}
+.main.notice_list .notice1 tr td a:hover {text-decoration:underline;}
+.main.notice_list .notice1 tr td.tit {text-align:left;}
+
+
+/*공지사항 리스트 버튼*/
+.main.notice_list .list_btn {text-align:center; margin-top:20px; width:1000px; position:relative; height:40px; padding-top:20px;}
+.main.notice_list .list_btn ul {display:inline-block;}
+.main.notice_list .list_btn li {display:inline-block; margin-left:5px;}
+.main.notice_list .list_btn li:first-child {margin-left:0;}
+.main.notice_list .list_btn li a {display:block; width:29px; height:29px; border:1px solid #e1e1e1; line-height:28px;}
+.main.notice_list .list_btn li a.on {background:#0aa3a9; color:#FFF; border:1px solid #0aa3a9;}
+
+.main.notice_list .list_btn button {width:31px; height:31px; background:url(../img/btn-page-prev1.gif) no-repeat center center; font-size:0px; border:1px solid #e1e1e1; margin-right:5px; cursor:pointer;}
+.main.notice_list .list_btn button.prev_btn {background-image:url(../img/btn-page-prev2.gif);}
+.main.notice_list .list_btn button.next_btn1 {background-image:url(../img/btn-page-next1.gif); margin-left:5px;}
+.main.notice_list .list_btn button.next_btn {background-image:url(../img/btn-page-next2.gif); margin-right:0;}
+
+/*글쓰기 버튼*/
+.main.notice_list .list_btn .wirte {position:absolute; right:0; bottom:10px; width:100px; height:40px; line-height:39px; background:#333; color:#FFF;}
+
+
+
+
+
+/************************공지사항(뷰 화면)**************************/
+.main.notice_view {}
+
+/*view 내용 표*/
+.main.notice_view .view1 {width:1000px; margin-top:40px;}
+.main.notice_view .view1 .tr1 {height:60px; border-top:2px solid #313131; border-bottom:1px solid #d9d9d9; background:#eef5f5;}
+.main.notice_view .view1 .tr1 th {vertical-align:middle; font-size:17px; font-weight:bold; color:#313131;}
+.main.notice_view .view1 .tr1 th span {color:#0aa3a9;}
+.main.notice_view .view1 .tr2 {height:40px; border-bottom:1px solid #d9d9d9; font-size:15px;}
+.main.notice_view .view1 .tr2 th {vertical-align:middle; width:200px; background:url(../img/vline-table.gif) no-repeat right center;}
+.main.notice_view .view1 .tr2 td {vertical-align:middle; padding-left:20px; padding-right:50px;}
+.main.notice_view .view1 .tr3 td .img {text-align:center; padding-top:50px;}
+
+/*이전글*/
+.main.notice_view .view2 {width:1000px; margin-top:100px;}
+.main.notice_view .view2 tr {height:40px; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9;}
+.main.notice_view .view2 tr th {vertical-align:middle; background:url(../img/vline-table.gif) no-repeat right center; width:200px;}
+.main.notice_view .view2 tr th span {display:inline-block; width:9px; height:11px; background:url(../img/arrow-b1-bot.gif) no-repeat; margin:4px 0 0 15px;}
+.main.notice_view .view2 tr td {vertical-align:middle; padding-left:20px;}
+
+/*목록 버튼*/
+.main.notice_view .list_btn {width:1000px; overflow:hidden; margin-top:50px;}
+.main.notice_view .list_btn a {float:right; width:100px; height:40px; line-height:39px; background:#333; color:#FFF; text-align:center;}
+
+
+
+
+
+/************************1:1상담(작성)**************************/
+.main.notice_write {}
+
+/*작성 표*/
+.main.notice_write .write1 {width:1000px; margin-top:50px; border-top:2px solid #313131;}
+.main.notice_write .write1 tr {height:55px; border-top:1px solid #d9d9d9;}
+.main.notice_write .write1 tr th {vertical-align:middle; width:120px; text-align:left; padding-left:40px; background:url(../img/vline-table.gif) no-repeat right center;}
+.main.notice_write .write1 tr.lst th {background-position:right 15px;}
+.main.notice_write .write1 tr td {vertical-align:middle; padding-left:20px;}
+.main.notice_write .write1 tr td input {padding:8px 10px 8px; width:200px; border:1px solid #e1e1e1;}
+.main.notice_write .write1 tr td select {padding:7px 15px 7px 8px; border:1px solid #e1e1e1; cursor:pointer;}
+.main.notice_write .write1 tr.phone td input  {width:150px;}
+.main.notice_write .write1 tr.tit td input  {width:750px;}
+.main.notice_write .write1 tr.lst td textarea {width:755px; border:1px solid #e1e1e1; padding:7px 3px 0 12px; line-height:20px; resize:none;}
+.main.notice_write .write1 tr.lst td {padding-top:10px; padding-bottom:10px;}
+
+/*취소, 확인 버튼*/
+.main.notice_write .btn {width:1000px; overflow:hidden; margin-top:40px;}
+.main.notice_write .btn a {width:120px; height:45px; background:#333; color:#FFF; text-align:center; line-height:44px;}
+.main.notice_write .btn .btn1 {float:left;}
+.main.notice_write .btn .btn2 {float:right; background:#0aa3a9;}
+
+
+

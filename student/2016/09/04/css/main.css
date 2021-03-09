@@ -1,0 +1,215 @@
+@charset "utf-8";
+body {font:14px '맑은고딕','malgun gothic','돋움',dotum,sans-serif; letter-spacing:-0.05em; color:#232323;}
+h2 {font:85px 'Franklin Gothic',sans-serif; font-weight:600; letter-spacing:-0.05em;}
+
+
+
+/*********************주메뉴*********************/
+.gnb_wrap {height:60px; background:#0e0e0e; position:fixed; left:0; top:-60px; width:100%; z-index:9999; transition:all 0.5s ease-out; opacity:0;}
+.gnb_wrap.on {top:0px; opacity:1;}
+.gnb_wrap .gnb {width:1000px; height:60px; margin:0 auto;}
+.gnb_wrap .gnb ul {overflow:hidden;}
+.gnb_wrap .gnb ul li {float:left; height:60px;}
+.gnb_wrap .gnb ul li:first-child {margin-left:130px;}
+.gnb_wrap .gnb ul li a {color:#FFF; font-size:20px; padding:0 20px; display:block; transition:all 0.3s ease-out; height:50px; line-height:50px; margin-top:4px;}
+.gnb_wrap .gnb ul li:hover a {background:#FFF; color:#232323;}
+.gnb_wrap .gnb ul li a.on {background:#FFF; color:#232323;}
+
+
+/*********************인트로 섹션*********************/
+.section1 {background:url(../img/sec1_bg.jpg) #232323 no-repeat center top; overflow:hidden; position:relative;}
+.section1 .box {width:1000px; height:900px; position:absolute; left:50%; top:0; margin-left:-500px;}
+
+/*로고*/
+.section1 .box h1 {padding:255px 0 0 520px; opacity:0; transition:all 0.8s ease-out;}
+.section1 .box h1.on {opacity:1;}
+.section1 .box h1 a {display:block; width:204px; height:53px;}
+
+/*메뉴/ 영문 소개*/
+.section1 .box .intro {margin-top:60px; overflow:hidden;}
+.section1 .box .intro ul {float:left; width:480px; text-align:right; padding-right:20px; border-right:1px solid #FFF;}
+.section1 .box .intro ul li a {font-size:26px; color:#FFF; transition:all 0.3s ease-out;}
+.section1 .box .intro ul li a:hover {color:#232323;}
+.section1 .box .intro h2 {line-height:70px; float:left; margin-left:20px; color:#c4c4c4; transition:all 0.8s ease-out; opacity:0; transition-delay:0.2s}
+.section1 .box .intro h2.on {opacity:1;}
+
+/*스크롤 다운 화살표 키프레임*/
+@keyframes scroll_move {
+    0% {margin-top:5px;}
+	50% {margin-top:15px;}
+	100% {margin-top:5px;}
+}
+
+.section1 .box .scroll {width:70px; margin:255px auto 0;}
+.section1 .box .scroll p {color:#c4c4c4;}
+.section1 .box .scroll img {margin-left:21px; animation:scroll_move 1.5s infinite ease-out;}
+
+.section1 .cover {background:#000; opacity:0.5; height:900px;}
+
+
+
+/*********************섹션 공통 가운데 정렬 박스/ 제목*********************/
+.section .box {width:1000px; height:850px; margin:0 auto;}
+.section .box .tit h2 {padding-top:50px; padding-left:250px; transition:all 0.5s ease-out; opacity:0;}
+.section .box .tit .line {margin-left:75px; margin-top:30px; transition:all 0.5s ease-out; transform:rotateX(90deg); opacity:0; transition-delay:0.3s;}
+
+
+/*********************소개 섹션*********************/
+.section2 {height:780px; background:#f6f6f6;}
+
+/*스크롤 값에 따른 on처리 효과*/
+.section2 .box .tit h2.on {padding-left:312px; opacity:1;}
+.section2 .box .tit .line.on {transform:rotateX(0deg); opacity:1; transition-delay:0.2s;}
+
+.section2 .box {height:780px;}
+.section2 .box .info {width:958px; height:400px; margin:0 auto;}
+
+/*프로필의 li 내용*/
+.section2 .box .info li {float:left; width:304px; height:398px; margin-left:20px; text-align:center; transition:all 0.5s ease-out; opacity:0;}
+.section2 .box .info li .content {height:100%; border:1px solid #d9d9d9; transition:all 0.5s ease-out; background:url(../img/icon1.png) no-repeat center 35px;}
+.section2 .box .info li:first-child {margin-left:0;}
+.section2 .box .info li:nth-child(2) {transition-delay:0.2s;}
+.section2 .box .info li:nth-child(3) {transition-delay:0.4s;}
+.section2 .box .info li:nth-child(2) .content {background-image:url(../img/icon2.png);}
+.section2 .box .info li:nth-child(3) .content {background-image:url(../img/icon3.png);}
+.section2 .box .info li h3 {font-size:36px; font-weight:bold; padding-top:125px;}
+.section2 .box .info li p {color:#565656; line-height:28px; margin-top:25px;}
+
+/*SKILL에서 원 조절*/
+.section2 .box .info li:nth-child(3) .circle_wrap {width:306px; height:60px; margin-top:30px;}
+.section2 .box .info li:nth-child(3) .circle_wrap2 {margin-top:15px;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle {float:left; margin-left:30px; position:relative;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle1 {margin-left:40px;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle4 {margin-left:40px;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle p {position:absolute; left:20px; top:-12px;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle3 p {left:16px;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle4 p {left:11px;}
+.section2 .box .info li:nth-child(3) .circle_wrap .circle5 p {left:16px;}
+
+/*호버효과*/
+.section2 .box .info li .content:hover {background:url(../img/icon1_hover.png) #232323 no-repeat center 35px;}
+.section2 .box .info li:nth-child(2) .content:hover {background:url(../img/icon2_hover.png) #232323 no-repeat center 35px;}
+.section2 .box .info li:nth-child(3) .content:hover {background:url(../img/icon3_hover.png) #232323 no-repeat center 35px;}
+.section2 .box .info li .content:hover h3 {color:#FFF;}
+.section2 .box .info li .content:hover p {color:#FFF;}
+
+/*스크롤시 on처리*/
+.section2 .box .info li.on {margin-top:100px; opacity:1;}
+
+
+/*********************메인,모바일,반응형 프로젝트 섹션 부제목*********************/
+.section .box .tit h3 {font-size:36px; color:#c4c4c4; margin-top:50px; font-weight:bold; transition:all 0.5s ease-out; opacity:0; transition-delay:0.3s;}
+
+/*********************메인프로젝트 섹션*********************/
+.section3 {overflow:hidden; background:#232323;}
+.section3 .box .tit h2 {padding-left:450px; color:#c4c4c4;}
+.section3 .box .tit h3 {padding-left:590px;}
+
+/*스크롤 값에 따른 on처리 효과*/
+.section3 .box .tit h2.on {padding-left:350px; opacity:1;}
+.section3 .box .tit .line.on {transform:rotateX(0deg); opacity:1;}
+.section3 .box .tit h3.on {padding-left:296px; opacity:1;}
+
+.section3 .box .project {height:450px; margin-top:40px; position:relative;}
+
+/*pc모니터와 ipad on처리*/
+.section3 .box .project .pc_wrap {width:672px; height:450px; float:left; position:absolute; left:-300px; top:0; opacity:0; transition:all 0.5s ease-out; transition-delay:0.3s}
+.section3 .box .project .pc_wrap.on {left:0; opacity:1;}
+
+/*pc모니터*/
+.section3 .box .project .pc_wrap .pc {width:533px; position:absolute; right:0; top:0; z-index:99;}
+.section3 .box .project .pc_wrap .pc .cover a {position:absolute; left:24px; top:24px; width:485px; height:304px; background:#000; opacity:0.5; transition:all 0.3s ease-out;}
+.section3 .box .project .pc_wrap .pc .cover .ren {position:absolute; left:50%; top:170px; margin-left:-42px;}
+.section3 .box .project .pc_wrap .pc .cover:hover a {opacity:0;}
+.section3 .box .project .pc_wrap .pc .cover:hover .ren {display:none;}
+.section3 .box .project .pc_wrap .pc a.site_btn {position:absolute; right:0; bottom:15px; width:150px; height:30px; background:#055154; text-align:center; line-height:28px; border-radius:3px; color:#FFF;}
+
+/*아이패드*/
+.section3 .box .project .pc_wrap .ipad {width:238px; margin-top:96px; position:absolute; left:0; bottom:0;}
+.section3 .box .project .pc_wrap .ipad .cover a {position:absolute; left:12px; top:33px; width:215px; height:286px; background:#000; opacity:0.5; transition:all 0.3s ease-out;}
+.section3 .box .project .pc_wrap .ipad .cover .origin {position:absolute; left:12px; top:33px;}
+.section3 .box .project .pc_wrap .ipad .cover:hover a {opacity:0;}
+.section3 .box .project .pc_wrap .ipad .cover:hover .origin {display:none;}
+
+/*오리지날 사이트 보여주기*/
+.section3 .box .origin_view {position:fixed; left:0; right:0; top:0; bottom:0; z-index:10000; display:none;}
+.section3 .box .origin_view .cover {background:#000; opacity:0.9; width:100%; height:100%;}
+.section3 .box .origin_view .view {position:absolute; left:50%; top:50%; margin-left:-300px; margin-top:-214px;}
+.section3 .box .origin_view .view .close_btn {position:absolute; right:-20px; top:-20px; width:50px; height:50px; background:#f6f6f6; text-align:center;}
+.section3 .box .origin_view .view .close_btn a {display:table-cell; width:50px; height:50px; vertical-align:middle;}
+
+/*텍스트*/
+.section3 .box .project .txt {width:300px; height:450px; position:absolute; right:0; top:0;}
+.section3 .box .project .txt .txt1 {position:absolute; left:150px; top:0; transition:all 0.5s ease-out; opacity:0; transition-delay:0.6s; width:300px;}
+.section3 .box .project .txt .txt2 {top:140px; transition-delay:0.9s; margin-top:20px;}
+.section3 .box .project .txt .txt3 {top:310px; transition-delay:1.2s; margin-top:20px;}
+.section3 .box .project .txt h4 {font-size:26px; font-weight:bold; color:#e7e7e7;}
+.section3 .box .project .txt p {color:#c4c4c4; line-height:22px;}
+
+/*스크롤 값에 따른 on처리*/
+.section3 .box .project .txt .txt1.on {opacity:1; left:0;}
+
+
+/*********************모바일프로젝트 섹션*********************/
+.section4 {overflow:hidden; background:#f6f6f6;}
+
+/*스크롤 값에 따른 on처리 효과*/
+.section4 .box .tit h2.on {padding-left:360px; opacity:1;}
+.section4 .box .tit .line.on {transform:rotateX(0deg); opacity:1;}
+.section4 .box .tit h3.on {padding-left:316px; opacity:1; color:#232323;}
+
+.section4 .box .mobile {margin-top:40px; height:450px; position:relative;}
+
+/*텍스트*/
+.section4 .box .mobile .txt {width:300px; height:450px; position:absolute; left:75px; top:0;}
+.section4 .box .mobile .txt .txt1 {position:absolute; left:-100px; top:0; transition:all 0.5s ease-out; opacity:0; transition-delay:0.6s;}
+.section4 .box .mobile .txt .txt2 {top:140px; transition-delay:0.9s; margin-top:20px;}
+.section4 .box .mobile .txt .txt3 {top:310px; transition-delay:1.2s; margin-top:20px;}
+.section4 .box .mobile .txt h4 {font-size:26px; font-weight:bold;}
+.section4 .box .mobile .txt p {line-height:22px;}
+
+/*스크롤 값에 따른 on처리*/
+.section4 .box .mobile .txt .txt1.on {opacity:1; left:0;}
+
+/*폰 화면*/
+.section4 .box .mobile .phone {width:500px; height:450px; position:absolute; right:-250px; top:0; transition:all 0.5s ease-out; opacity:0; transition-delay:0.3s;}
+.section4 .box .mobile .phone .phone1 {float:left; position:relative;}
+.section4 .box .mobile .phone .phone1 .cover a {position:absolute; left:15px; top:54px; width:197px; height:342px; background:#000; opacity:0.5; transition:all 0.3s ease-out;}
+.section4 .box .mobile .phone .phone1 .cover .ico {position:absolute; left:50%; top:50%; margin-left:-17px; margin-top:-17px;}
+.section4 .box .mobile .phone .phone1 .cover:hover a {opacity:0;}
+.section4 .box .mobile .phone .phone1 .cover:hover .ico {display:none;}
+.section4 .box .mobile .phone .phone2 {float:right;}
+
+/*phone on처리*/
+.section4 .box .mobile .phone.on {opacity:1; right:0;}
+
+
+/*********************반응형프로젝트 섹션*********************/
+.section5 {overflow:hidden; background:#232323;}
+.section5 .box .tit h2 {padding-left:450px; color:#c4c4c4;}
+.section5 .box .tit h3 {padding-left:590px;}
+
+/*스크롤 값에 따른 on처리 효과*/
+.section5 .box .tit h2.on {padding-left:257px; opacity:1;}
+.section5 .box .tit .line.on {transform:rotateX(0deg); opacity:1;}
+.section5 .box .tit h3.on {padding-left:354px; opacity:1;}
+
+.section5 .box .respon {position:relative; height:450px; margin-top:40px;}
+
+/*pc모니터*/
+.section5 .box .respon .pc1 {position:absolute; left:-200px; top:0; width:1000px; height:450px; text-align:center; transition:all 0.5s ease-out; transition-delay:0.3s; opacity:0;}
+.section5 .box .respon .pc1 a.site_btn {position:absolute; left:50%; bottom:0px; width:150px; height:30px; background:#055154; text-align:center; line-height:28px; border-radius:3px; color:#FFF; margin-left:-32px;}
+
+/*pc 모니터 on처리*/
+.section5 .box .respon .pc1.on {left:50%; margin-left:-540px; opacity:1;}
+
+/*********************컨텍트 섹션*********************/
+.section6 {overflow:hidden; background:#f6f6f6;}
+.section6 .box {width:1000px; height:250px; margin:0 auto; position:relative;}
+.section6 .box h2 {font-size:60px; text-align:center; transition:all 0.5s ease-out; position:absolute; left:50%; top:-10px; margin-left:-113px; opacity:0;}
+.section6 .box h2.on {top:20px; opacity:1;}
+
+.section6 .box p {text-align:center; font-size:24px; line-height:42px; position:absolute; left:50%; top:70px; margin-left:-130px; transition:all 0.5s ease-out; transition-delay:0.4s; opacity:0;}
+.section6 .box p.on {opacity:1; top:110px;}
+
+

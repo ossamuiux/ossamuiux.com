@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>바빈스커피</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.slider_wrap').slick({
+	autoplay:true,//자동실행
+	autoplaySpeed:5000,//애니메이트 간격(시간)
+	speed:1000,//애니메이트 속도
+  });
+  
+    $('.thum_slider').slick({
+	autoplay:false,
+	slidesToShow: 2,
+	slidesToScroll: 2
+  });
+
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="top_wrap">
+    	<div class="top">
+    		<a href="index.html"><img src="img/logo.png" alt="바빈스커피"></a>
+        </div>
+    </div>
+    <div class="gnb_wrap">
+    	<div class="gnb">
+        	<ul class="gnb_menu">
+            	<li><a href="brand.html">Brand<span></span></a>
+                    <ul class="sub">
+                    	<li><a href="brand.html">Babeans is</a></li>
+                        <li><a href="#">Brunch</a></li>
+                        <li><a href="#">Babeans B.I</a></li>
+                        <li><a href="#">Babeans bean</a></li>
+                        <li><a href="#">Education center</a></li>
+                    </ul>
+                </li>
+                <li><a href="menu.html">Menu<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="menu.html">New& Hot</a></li>
+                        <li><a href="#">Coffee</a></li>
+                        <li><a href="#">Bbrunch</a></li>
+                        <li><a href="#">Dessert</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul>
+                </li>
+                <li><a href="franchise.html">Franchise<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="franchise.html">바빈스 Style</a></li>
+                        <li><a href="#">개설절차</a></li>
+                        <li><a href="#">창업비용</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1:1 상담신청</a></li>
+                        <li><a href="#">창업설명회 신청</a></li>
+                        <li><a href="#">Location</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Store<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">Store</a></li>
+                        <li><a href="#">New Store</a></li>
+                        <li><a href="#">점주님 공간</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">News<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">Nnotice</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Event</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main">
+	<div class="slider_wrap">
+    	<div><a href="#"><img src="img/main_visual01.jpg" alt=""></a></div>
+        <div><a href="#"><img src="img/main_visual02.jpg" alt=""></a></div>
+        <div><a href="#"><img src="img/main_visual03.jpg" alt=""></a></div>
+    </div>
+    <div class="product1">
+    	<div class="startup">
+        	<img src="img/startup.jpg" alt="">
+            <a href="#">성공창업의<br>비밀을 밝혀라!</a>
+        </div>
+        <div class="new">
+        	<div class="thumbnail">
+            	<h2>바빈스 브런치 신메뉴</h2>
+                <div class="thum_slider">
+                    <div class="thumb">
+                        <a href="#">
+                            <img src="img/new_menu01.jpg" alt="">
+                            <h3>빠네 크림 떡볶이</h3>
+                            <p>오븐에서 갓 구운 빵의 속을 파서<br>파스타면 대신 크림떡볶이를 넣은 메뉴</p>
+                        </a>
+                    </div>
+                    <div class="thumb thumb2">
+                        <a href="#">
+                            <img src="img/new_menu02.jpg" alt="">
+                            <h3>트로피칼 치킨샐러드</h3>
+                            <p>치킨텐더와 함께 신선한 과일과<br>채소에 상큼한 유자드레싱을 곁들인 메뉴</p>
+                        </a>
+                    </div>
+                    <div class="thumb thumb3">
+                        <a href="#">
+                            <img src="img/new_menu03.jpg" alt="">
+                            <h3>빠네 토마토 떡볶이</h3>
+                            <p>오븐에서 갓 구운 빵속에 상큼한 토마토와<br>함께 브로콜리와 모짜렐라치즈가 더해진 메뉴</p>
+                        </a>
+                    </div>
+                    <div class="thumb thumb4">
+                        <a href="#">
+                            <img src="img/new_menu04.jpg" alt="">
+                            <h3>컴비 퐁당 와플</h3>
+                            <p>부드러운 와플 빵과 함께 다양한 과일과<br>아이스크림, 생크림을 초코에 찍어먹는 메뉴</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+            	<a href="#">
+                	<img src="img/banner.jpg" alt="">
+                	<div class="banner_cover">
+                		<p>바빈스 브런치 메뉴 즐기러 가기</p>
+                	</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product2">
+    	<div class="box1">
+        	<div class="coffee">
+                <img src="img/special_coffee.jpg" alt="">
+                <a class="more_btn" href="#">자세히보기</a>
+            </div>
+            <div class="news">
+            	<h2>바빈스 뉴스<em> Notice</em></h2>
+                <a class="news_more" href="#"><img src="img/news_more_btn.png"></a>
+                <ul>
+                	<li><a href="#"><img src="img/news_list_dot.png" alt="">바빈스커피 부산 광안리 본점 오픈!</a></li>
+                    <li><a href="#"><img src="img/news_list_dot.png" alt="">바빈스커피. 제25회 신지식인 중소기업청장 표창 수상!</a></li>
+                    <li><a href="#"><img src="img/news_list_dot.png" alt="">MBC 주말특별기획 드라마 '여왕의 꽃' 제작 지원</a></li>
+                    <li><a href="#"><img src="img/news_list_dot.png" alt="">[헤럴드경제] 브런치&디저트카페 바빈스커피, 어떤 상권에 창업해도 수익성 높아</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+        	<a href="#">브런치&디저트 <br><strong>BABEANS COFFEE</strong>에서<br> 제작지원합니다.</a>
+        </div>
+    </div>
+    <div class="product3">
+    	<div class="event">
+        	<h3>Anniversary  3rd</h3>
+            <p>바빈스커피 <em>3주년 기념</em> 이벤트</p>
+            <a href="#">자세히보기</a>
+        </div>
+        <div class="todays">
+        	<a href="#">
+            	<img src="img/todays_menu.png" alt="">
+                <div class="more">
+                    <h3>오늘의 메뉴?</h3>
+                    <p>자세히 보기</p>
+                </div>
+            </a>
+        </div>
+        <div class="customer">
+            <img src="img/customer_phone.png" alt="">
+            <div class="num">
+                <h3>고객센터 & 창업문의</h3>
+                <p>1588-0672</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+        <ul>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">회사소개</a></li>
+        </ul>
+        <p>㈜ 퍼스트에이엔티  대표이사 : 백 호 근  사업자번호 : 105-86-43818<br>주소 : 경기도 고양시 덕양구 행신동 713 GL프라자 2층  전화 : 1588-0672  팩스 : 02-717-9976</p>
+        <p class="copy">Copyright ⓒ (주)퍼스트에이엔티 All Rights Reserved.</p>
+        <a class="blog" href="#"><img src="img/blog_btn.png" alt=""></a>
+    </div>
+</div>
+</body>
+</html>

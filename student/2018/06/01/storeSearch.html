@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200">
+<meta property="og:title" content="투썸플레이스">
+<meta property="og:url" content="http://byseop0.dothome.co.kr/twosome">
+<!--이미지경로는 절대경로(도메인주소모두)로 입력해야됨-->
+<meta property="og:image" content="http://byseop0.dothome.co.kr/twosome/images/open_graph.png">
+<meta property="og:description" content="투썸플레이스에서 나만의 작은 사치를 즐기세요.">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="images/touch_icon.png">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<!--배경색 애니메이션시 사용함-->
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=aaNXd65yhJTFbHKgLgEk&submodules=geocoder"></script>
+<script src="js/common.js"></script>
+<script src="js/storeSearch.js"></script>
+<title>TWOSOME PLACE</title>
+</head>
+
+<body>
+<ul id="skip">
+	<li><a href="#main">본문바로가기</a></li>
+    <li><a href="#footer">하단바로가기</a></li>
+</ul>
+<div id="header">
+	<div class="top_header">
+    	<div class="top_header_inner">
+        	<ul class="util">
+            	<li><a href="login.html">LOGIN</a></li>
+                <li><a href="login.html">CJ ONE</a></li>
+                <li><a href="login.html">CUSTOMER SERVICE</a></li>
+                <li><a href="login.html">NOTICE</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom_header">
+        <div class="bottom_header_inner">
+            	<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="투썸"></a></h1>
+                <!-- gnb-->
+                <ul class="gnb">
+                	<li>
+                    	<a href="brandStory.html">BRAND STORY</a>
+                        <ul class="depth2">
+                        	<li><a href="brandStory.html">브랜드 이야기</a></li>
+                            <li><a href="brandStory.html">커피 이야기</a></li>
+                            <li><a href="brandStory.html">디저트 이야기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<a href="newProduction.html">MENU</a>
+                        <ul class="depth2">
+                        	<li><a href="newProduction.html">신제품</a></li>
+                            <li><a href="newProduction.html">커피&amp;음료</a></li>
+                            <li><a href="newProduction.html">케이크</a></li>
+                            <li><a href="newProduction.html">디저트</a></li>
+                            <li><a href="newProduction.html">델리</a></li>
+                            <li><a href="newProduction.html">MD</a></li>
+                            <li><a href="newProduction.html">영양성분표</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<a href="storeSearch.html">STORE</a>
+                        <ul class="depth2">
+                        	<li><a href="storeSearch.html">매장찾기</a></li>
+                            <li><a href="storeSearch.html">로스터리카페</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<a href="#">EVENT</a>
+                        <ul class="depth2">
+                        	<li><a href="#">이벤트</a></li>
+                            <li><a href="#">매장별 이벤트</a></li>
+                            <li><a href="#">멤버쉽&amp;제휴</a></li>
+                            <li><a href="#">커피클래스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<a href="#">FRANCHISE</a>
+                        <ul class="depth2">
+                        	<li><a href="#">창업정보</a></li>
+                            <li><a href="#">온라인상담</a></li>
+                            <li><a href="#">정보공개서</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- //gnb-->
+        </div>
+        <div class="bg_gnb"></div>
+    </div> 
+</div>
+<div id="main" class="store_search">
+	<!-- 서브비주얼 -->
+    <div class="sub_visual">
+    	<div class="sub_visual_inner">
+        	<h2>매장찾기</h2>
+        	<h1>STORE</h1>
+        </div>
+    </div>
+    <!-- 서브비주얼끝 -->
+    
+    <!-- 로케이션 -->
+    <div class="page_nav">
+    	<div class="page_nav_inner">
+        	<div class="location">
+                <a class="home" href="index.html">HOME</a><span><img src="images/arrow_pagenav.png" alt=""></span>
+                <a href="brandStory.html">STORE</a><span><img src="images/arrow_pagenav.png" alt=""></span>
+                <span class="span_loc">매장찾기</span>
+            </div>
+        </div>
+    </div>
+    <!-- 로케이션 끝 -->
+    
+    <div class="contents_box">
+    	<!-- 네비게이션바 -->
+        <div class="bar_nav">
+            <div class="bar_nav_inner">
+                <ul class="bar">
+                    <li class="on"><a href="storeSearch.html"><p>매장찾기</p></a></li>
+                    <li><a href="storeSearch.html"><p>로스터리 카페</p></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 네비게이션바 끝 -->
+        <!-- 지도부분 -->
+        <div class="store_section">
+            <h2>나만의 작은 사치를 누릴수 있는 프리미엄 디저트카페 투썸플레이스를 찾아보세요</h2>
+            <div class="search_box">
+                <div id="map"></div>       
+                <div class="search_form">
+                	<form>
+                    	<fieldset>
+                    	<legend class="blind">매장검색</legend>
+                        <div class="loc">
+                            <p>매장위치</p>
+                            <div class="store_location">
+                                <select name="city">
+                                 <option value>시/도</option>
+                                 <option value="0">강원</option>
+                                 <option value="1">경기</option>
+                                 <option value="1">경남</option>
+                                 <option value="1">경북</option>
+                                 <option value="1">광주</option>
+                                 <option value="1">대구</option>
+                                 <option value="1">대전</option>
+                                 <option value="1">부산</option>
+                                 <option value="1">서울</option>
+                                 <option value="1">울산</option>
+                                 <option value="1">인천</option>
+                                 <option value="1">전남</option>
+                                 <option value="1">전북</option>
+                                 <option value="1">제주</option>
+                                 <option value="1">충남</option>
+                                 <option value="1">충북</option>                         
+                             </select>
+                                <select name="borough">
+                                 <option value>구/군</option>                  
+                             </select>
+                                <input type="text" name="user_name" placeholder="매장명을 입력해주세요.">
+                            </div>
+                        </div>
+                        <div class="kind">
+                            <p>매장종류</p>
+                            <div class="store_kind store_location">
+                                <select name="kind">
+                                 <option value>매장종류</option>
+                                 <option value="0">투썸플레이스</option>
+                                 <option value="1">투썸커피</option>                        
+                             </select>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <p class="service_p">매장서비스<span>(선택)</span></p>
+                            <div class="smoke">
+                                <input type="checkbox" id="smoke" class="blind">
+                                <label class="smoke_label" for="smoke">체크박스</label>
+                            </div>
+                            <div class="parking smoke">
+                                <input type="checkbox" id="parking" class="blind">
+                                <label class="parking_label" for="parking">체크박스</label>
+                            </div>
+                            <div class="wifi smoke">
+                                <input type="checkbox" id="wifi" class="blind">
+                                <label class="wifi_label" for="wifi">체크박스</label>
+                            </div>
+                            <div class="around smoke">
+                                <input type="checkbox" id="around" class="blind">
+                                <label class="around_label" for="around">체크박스</label>
+                            </div>
+                        </div>
+                        <div class="btn_search_wrap">
+                            <button type="submit" class="btn_search" name="submit"><span>검색하기</span></button>
+                        </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    	<!-- 지도부분끝 -->
+        <!-- 검색결과 -->
+        <div class="result_section">
+        	<h2>매장검색 결과</h2>
+            <table>
+            	<caption class="blind">매장구분, 지점명, 서비스, 주소로 이루어진 테이블</caption>
+            	<colgroup>
+                	<col style="width:20%">
+                    <col style="width:20%">
+                    <col>
+                    <col style="width:40%">
+                </colgroup>
+            	<tr>
+                	<th scope="col">매장구분</th>
+                    <th scope="col">지점명</th>
+                    <th scope="col">서비스</th>
+                    <th scope="col">주소</th>
+                </tr>
+                <tr>
+                	<td>투썸플레이스</td>
+                    <td>투썸화랑대역</td>
+                    <td><img src="images/wifi.png" alt="무선인터넷"><img src="images/parking.png" alt="주차가능"></td>
+                    <td>서울 노원구 공릉동 우토파크 프라자 B01호</td>
+                </tr>
+                <tr>
+                	<td>투썸플레이스</td>
+                    <td>투썸상계사거리</td>
+                    <td><img src="images/wifi.png" alt="무선인터넷"><img src="images/parking.png" alt="주차가능"><img src="images/24hours.png" alt="24시간"></td>
+                    <td>서울 노원구 동일로 1374</td>
+                </tr>
+                <tr>
+                	<td>투썸플레이스</td>
+                    <td>투썸상계</td>
+                    <td><img src="images/wifi.png" alt="무선인터넷"><img src="images/cigarette.png" alt="흡연장"></td>
+                    <td>서울 노원구 한글비석로 412</td>
+                </tr>
+                <tr>
+                	<td>투썸플레이스</td>
+                    <td>투썸노원공릉</td>
+                    <td><img src="images/wifi.png" alt="무선인터넷"></td>
+                    <td>서울 노원구 동일로 192길 52-0</td>
+                </tr>
+            </table>
+        </div>
+        <!-- 검색결과끝 -->
+    </div>
+</div>
+
+<div id="footer">
+	<div class="footer_inner">
+     	<ul class="footer_menu">
+              <li><a href="brandStory.html">회사소개</a></li>
+              <li><a href="#">CJ ONE</a></li>
+              <li><a href="#">리쿠르트</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li class="red"><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">이메일 무단수집거부</a></li>
+              <li><a href="#">법적고지</a></li>
+              <li><a href="#">윤리신고센터</a></li>
+        </ul>
+        <h2><img src="images/logo_footer_black.png" alt="투썸플레이스"></h2>
+        <div class="footer_text">
+        	<p>(우)04555 서울시 중구 마른내로34(초동 106-9번지) KT&amp;G을지로타워 3-6/8-11층 CJ푸드빌(주)<br>
+대표이사 : 구창근 개인정보보호책임자 : 배은 고객센터 : 1577-0700 팩스 : 02-6740-4349<br>대표이메일 : help_master@cj.net 통신판매업종신고증 제2011-서울중구-0771호 사업자등록번호 : 312-81-42519</p>
+            <address>Copyright ⓒ2015 CJ Foodville ALL RIGHTS RESERVED</address>
+        </div>
+        <ul class="sns">
+        	<li><a href="#"><img src="images/facebook.png" alt="페이스북"></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt="인스타그램"></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt="트위터"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+	
+	<script>
+	//네이버 지도api
+	var HOME_PATH = window.HOME_PATH || '.';
+	var position = new naver.maps.LatLng(37.5048377,127.0248436);
+	
+    var map = new naver.maps.Map('map', {
+    	center: position,
+    	zoom: 13
+	});
+
+	var markerOptions = {
+		position: position.destinationPoint(90, 15),
+		map: map,
+		icon: {
+			url: HOME_PATH +'/images/marker.png',
+			size: new naver.maps.Size(62, 48),
+			origin: new naver.maps.Point(0, 0),
+			anchor: new naver.maps.Point(62, 48)
+    	}
+	};
+	var marker = new naver.maps.Marker(markerOptions);
+    </script>
+</body>
+</html>

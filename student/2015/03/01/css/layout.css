@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+body,input,botton,select,textarea {font-family:'Nanum Gothic','돋움',dotum,sans-sarif; font-size:12px;}
+body {min-width: 1200px;}
+
+
+
+/*온라인주문,브랜드스토리*/
+.header_wrap .top { width:1200px;height:45px; margin:0 auto;}
+
+.header_wrap .top .order .on { float:left; width:132px; height:45px;  background: #ae0000;}
+.header_wrap .top .order .on li {text-align:center; padding: 8px; color:#FFF;}
+.header_wrap .top .order .on li a{ font-size:16px;color:#FFF;}
+
+.header_wrap .top .order .brand{ float: left;width:132px; height:45px;  background: #4b4949;} 
+.header_wrap .top .order .brand li{text-align:center; padding: 8px;}
+.header_wrap .top .order .brand li a{  font-size:16px; color:#FFF;}
+
+/*로그인*/
+.header_wrap .top .util {float :right;}
+.header_wrap .top .util li {float:left; padding:14px 12px 0;}
+.header_wrap .top .util li a{color:#000;}
+.header_wrap .top .util li a:hover {color:#C00;}
+
+/*메뉴바*/
+.header {height:100px;background: #ae0000;margin:0 auto;}
+.header .gnb_wrap {width:1200px;height:100px;background: #ae0000;margin:0 auto;}
+.header .gnb_wrap h1 {padding:13px 3px; float:left;}
+.header .gnb_wrap .gnb {float: right; text-align: center; margin-top:32px;}
+.header .gnb_wrap .gnb>li { float:left; position:relative; width:120px;padding-bottom:7px;}
+.header .gnb_wrap .gnb>li>a {font-size: 22px; color:#FFF; font-weight:bold; display:block;}
+.header .gnb_wrap .gnb>li>a:hover {color:#ed9999;}
+
+
+/*서브메뉴*/
+.gnb_wrap .gnb .sub {position:absolute; left:0; top:40px; padding:20px 0; width:100%;text-align:center; 
+line-height:26px; padding:10px 0; display:none; background:rgba(255,255,255,0.9); z-index:999; border-bottom:3px solid #ae0000;}
+.gnb_wrap .gnb .sub li:first-child {position:absolute; left:50%; top:-9px; margin-left:-9px;}
+.gnb_wrap .gnb .sub a {color:#666; font-weight:bold; font-size:12px;}
+.gnb_wrap .gnb .sub a:hover {color:#333; text-decoration:underline;}
+.gnb_wrap .gnb>li:hover .sub {display:block;}
+
+/*푸터*/
+.footer_wrap { width:1200px; margin:0 auto;}
+.footer {height:135px;border-bottom:1px solid #afafaf;}
+.footer .icon li {float:left; margin-top:10px;}
+.footer .footer1{font-size:14px;padding-top:20px; font-weight:bold;}
+.footer .footer1 li{float:left;background:url(../images/line2.png) no-repeat left 6px; padding-bottom:12px;}
+.footer .footer1 li:first-child { background:none;}
+.footer .footer1 a {color:#333; font-size:14px; font-weight:bold; display:block; padding:0 16px 0;}
+
+.footer .footer2{float:left;}
+.footer .footer2 li{float:left; right:20px;}
+.footer .footer2 .h4{font-size:14px; font-weight:bold; color:#999; margin-top:5px;padding:0 16px;}
+.footer .footer2 .h5 { color:#666;font-size:20px; font-weight:bold; color:#333; margin-bottom:20px; padding-right:30px;}
+.footer .footer2 .h6 { color:#666;font-size:20px; font-weight:bold; color:#333; margin-bottom:20px; padding-right:100px;}
+
+.footer .footer3 {float:left;padding:0 16px; margin-top:-10px;}
+.footer .footer3 li{float:left; left:100px;padding:0 5px;}
+
+
+
+/*푸터 주소*/
+.address {height:150px; overflow:hidden;}
+.address .copy {width:1000px; height:150px; float: left;}
+.address .barcode { float:left;padding:10px 16px;}
+.address .address2 p {float:left; margin-top:5px; padding:0 20px; font-size:12px; color:#666; font-weight:bold;}
+.address .address2 .img { float:left;position:absolute; margin-top:55px; margin-left:20px;}
+
+
+
+
+
+

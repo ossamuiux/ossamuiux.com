@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=yes">
+<title>일룸</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function(){
+	
+	//**슬라이드활성화, 버튼활성화**
+    $('.main .visual').slick({
+	  dots:true,
+	  pauseOnHover:false,//마우스오버시 멈춤기능off
+	  autoplay:true,
+	  fade:true, //슬라이드 화면 전환시 페이드(1번 점점 사라지면 2번 나타나는)효과
+	  speed:2000, //페이드시간
+	});
+	
+	//**모바일부분에서 비주얼화살표 가리기**
+	$(window).resize(function(){
+		var num=$(this).width();
+		
+		if(num<=750){
+			$('.main .visual .slick-prev,.main .visual .slick-next').hide();
+		}	else{
+			$('.main .visual .slick-prev,.main .visual .slick-next').show();
+			$('#cover').hide();
+			$('.m_gnb').css({'position':'fixed','left':'-300px','width':'226px'}); //?????창을 늘렸다 줄였을때 모바일메뉴 보이기
+		}
+		//console.log(num);
+		//**(pc,타블렛,모바일용)슬라이더 이미지변경하기**//
+		if(num>750){
+			$('.main .visual .visual01 img').prop('src','images/visual01.png');
+			$('.main .visual .visual02 img').prop('src','images/visual02.jpg');
+			$('.main .visual .visual03 img').prop('src','images/visual03.png');
+			$('.main .visual .visual04 img').prop('src','images/visual04.png');
+			$('.main .visual .visual05 img').prop('src','images/visual05.jpg');
+		}
+		else if(num<=750){
+			$('.main .visual .visual01 img').prop('src','images/m_visual01.jpg');
+			$('.main .visual .visual02 img').prop('src','images/m_visual02.jpg');
+			$('.main .visual .visual03 img').prop('src','images/m_visual03.jpg');
+			$('.main .visual .visual04 img').prop('src','images/m_visual04.jpg');
+			$('.main .visual .visual05 img').prop('src','images/m_visual05.jpg');
+		}
+	});
+	
+	var num=$(window).width();
+		
+	if(num<=750){
+		$('.main .visual .slick-prev,.main .visual .slick-next').hide();
+	}
+	
+	//**(pc,타블렛,모바일용)슬라이더 이미지변경하기**
+	if(num>750){
+		$('.main .visual .visual01 img').prop('src','images/visual01.png');
+		$('.main .visual .visual02 img').prop('src','images/visual02.jpg');
+		$('.main .visual .visual03 img').prop('src','images/visual03.png');
+		$('.main .visual .visual04 img').prop('src','images/visual04.png');
+		$('.main .visual .visual05 img').prop('src','images/visual05.jpg');
+	}
+	else if(num<=750){
+		$('.main .visual .visual01 img').prop('src','images/m_visual01.jpg');
+		$('.main .visual .visual02 img').prop('src','images/m_visual02.jpg');
+		$('.main .visual .visual03 img').prop('src','images/m_visual03.jpg');
+		$('.main .visual .visual04 img').prop('src','images/m_visual04.jpg');
+		$('.main .visual .visual05 img').prop('src','images/m_visual05.jpg');
+	}
+	
+	//**지점소개 슬라이더**
+	 $('.section3 .chain').slick({
+	  arrows:false,
+	  dots:true,
+	  pauseOnHover:false,
+	  autoplay:true
+	});
+		
+	
+});
+</script>
+
+
+</head>
+
+<body>
+<div id="cover"></div>
+<div class="wrap">
+    <div class="header">
+        <div class="header_inner">
+            <div class="util">
+                <ul class="left_util">
+                    <li>고객센터 1577-5670</li>
+                    <li>쇼핑몰상담 1588-6792</li>
+                </ul>
+                <div class="right_wrap">
+                    <ul class="right_util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <div class="search">
+                        <div class="search_inner">
+                            <form>
+                            <fieldset>
+                            <legend>검색창</legend>
+                            <input type="text">
+                            <button type="submit"><img src="images/btn-search.gif"></button>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="m_search"><a href="#"><img src="images/btn-search_m.png" alt=""></a></div>
+                </div>
+            </div>
+            <h1><a href="index.html"><img src="images/logo.gif" alt="로고"></a></h1>
+            <button type="button" class="m_btn"><img src="images/m_btn.png" alt=""></button>
+            <div class="m_gnb">
+                <div class="m_util">
+                    <a href="#" class="login"><img src="images/m_login.png" alt="로그인"></a>
+                    <a href="#" class="join"><img src="images/m_join.png" alt="회원가입"></a>
+                </div>
+                <button type="button" class="btn_close"><img src="images/btn_close.png" alt=""></button>
+                <ul class="m_menu">
+                    <li class="list1">
+                        <a class="on" href="#">쇼핑몰</a>
+                        <ul class="m_depth2 resize">
+                            <li><a href="#">침실</a></li>
+                            <li><a href="#">거실</a></li>
+                            <li class="full"><a href="#">홈라이브러리</a></li>
+                            <li><a href="#">주방</a></li>
+                            <li><a href="#">일룸키즈</a></li>
+                            <li><a href="#">공부방</a></li>
+                            <li><a href="#">서재</a></li>
+                            <li><a href="#">의자</a></li>
+                            <li><a href="#">싱글침대</a></li>
+                            <li><a href="#">매트리스</a></li>
+                            <li><a href="#">액세서리</a></li>
+                        </ul>
+                    </li>
+                    <li class="list2"><a href="#">신제품</a></li>
+                    <li class="list3"><a href="#">웹카탈로그</a></li>
+                    <li class="list4"><a href="#">매거진</a></li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="m_depth2">
+                            <li><a href="#">일룸 제품 사용후기</a></li>
+                            <li><a href="#">일룸 이벤트</a></li>
+                            <li><a href="#">전시품 할인판매</a></li>
+                            <li><a href="#">공간제안 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="m_depth2">
+                            <li><a href="#">AS/주문/배송문의</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1친절상담</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">매장 개설상담</a></li>
+                            <li><a href="#">쇼핑몰 공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">일룸소개</a>
+                        <ul class="m_depth2">
+                            <li><a href="#">브랜드스토리</a></li>
+                            <li><a href="#">핵심가치</a></li>
+                            <li><a href="#">친환경 이야기</a></li>
+                            <li><a href="#">그룹가치관</a></li>
+                            <li><a href="#">일룸광고</a></li>
+                            <li><a href="#">일룸스마트서비스</a></li>
+                            <li><a href="#">인재채용</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="m_sns">
+                    <li><a href="#"><img src="images/m_sns1.png" alt="페이스북"></a></li>
+                    <li><a href="#"><img src="images/m_sns2.png" alt="블로그"></a></li>
+                    <li><a href="#"><img src="images/m_sns3.png" alt="인스타그램"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="gnb_inner">
+            <div class="gnb_inner_box">
+                <div class="first_depth2">
+                    <ul>
+                        <li>침실</li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">침실</a></li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                </div>
+                <ul class="gnb">
+                    <li class="first">
+                        <a href="#">쇼핑몰</a>
+                        <div class="first_depth2 depth2">
+                    <ul>
+                        <li>침실</li>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">화장대</a></li>
+                        <li><a href="#">옷장</a></li>
+                        <li><a href="#">드레스룸</a></li>
+                    </ul>
+                    <ul>
+                        <li>거실</li>
+                        <li><a href="#">거실장</a></li>
+                        <li><a href="#">소파테이블</a></li>
+                        <li><a href="#">조합형소파</a></li>
+                        <li><a href="#">커버형소파</a></li>
+                        <li><a href="#">일반형소파</a></li>
+                        <li><a href="#">싱글(노마)</a></li>
+                    </ul>
+                    <ul>
+                        <li>홈라이브러리</li>
+                        <li><a href="#">리브레</a></li>
+                        <li><a href="#">글렌</a></li>
+                        <li><a href="#">에디</a></li>
+                        <li><a href="#">폰테스</a></li>
+                        <li><a href="#">지니</a></li>
+                        <li><a href="#">레아테이블</a></li>
+                    </ul>
+                    <ul>
+                        <li>주방</li>
+                        <li><a href="#">식탁</a></li>
+                        <li><a href="#">홈카페</a></li>
+                    </ul>
+                    <ul>
+                        <li>일룸키즈</li>
+                        <li><a href="#">팅클-팝</a></li>
+                        <li><a href="#">캐빈</a></li>
+                        <li><a href="#">허비</a></li>
+                        <li><a href="#">트위니</a></li>
+                    </ul>
+                    <ul>
+                        <li>공부방</li>
+                        <li><a href="#">링키플러스</a></li>
+                        <li><a href="#">로이</a></li>
+                        <li><a href="#">이타카-네오</a></li>
+                        <li><a href="#">글렌</a></li>
+                        <li><a href="#">링키</a></li>
+                        <li><a href="#">캐럿</a></li>
+                        <li><a href="#">올리</a></li>
+                        <li><a href="#">쿼드</a></li>
+                    </ul>
+                    <ul>
+                        <li>서재</li>
+                        <li><a href="#">노마</a></li>
+                        <li><a href="#">젬마</a></li>
+                        <li><a href="#">케플러</a></li>
+                        <li><a href="#">빈티저</a></li>
+                    </ul>
+                    <ul>
+                        <li>의자</li>
+                        <li><a href="#">어린이의자</a></li>
+                        <li><a href="#">공부방의자</a></li>
+                        <li><a href="#">서재의자</a></li>
+                        <li><a href="#">공용의자</a></li></ul>
+                    <ul>
+                        <li>싱글침대</li>
+                        <li><a href="#">싱글침대</a></li>
+                    </ul>
+                    <ul>
+                        <li>매트리스</li>
+                        <li><a href="#">보노매트리스</a></li>
+                    </ul>
+                    <ul>
+                        <li>액세서리</li>
+                        <li><a href="#">액세서리</a></li>
+                    </ul>
+                </div>
+                    </li>
+                    <li><a href="#">신제품</a></li>
+                    <li><a href="#">웹카탈로그</a></li>
+                    <li><a href="#">매거진</a></li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="depth2">
+                            <li><a href="#">일룸 제품 사용후기</a></li>
+                            <li><a href="#">일룸 이벤트</a></li>
+                            <li><a href="#">전시품 할인판매</a></li>
+                            <li><a href="#">공간제안 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="depth2">
+                            <li><a href="#">AS/주문/배송문의</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1친절상담</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">매장 개설상담</a></li>
+                            <li><a href="#">쇼핑몰 공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">일룸소개</a>
+                        <ul class="depth2">
+                            <li><a href="#">브랜드스토리</a></li>
+                            <li><a href="#">핵심가치</a></li>
+                            <li><a href="#">친환경 이야기</a></li>
+                            <li><a href="#">그룹가치관</a></li>
+                            <li><a href="#">일룸광고</a></li>
+                            <li><a href="#">일룸스마트서비스</a></li>
+                            <li><a href="#">인재채용</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="visual">
+            <div class="visual01"><a href="#"><img src="images/visual01.png" alt=""></a></div>
+            <div class="visual02"><a href="#"><img src="images/visual02.jpg" alt=""></a></div>
+            <div class="visual03"><a href="#"><img src="images/visual03.png" alt=""></a></div>
+            <div class="visual04"><a href="#"><img src="images/visual04.png" alt=""></a></div>
+            <div class="visual05"><a href="#"><img src="images/visual05.jpg" alt=""></a></div>
+        </div>
+        <div class="section1">
+            <a href="#" class="pc_img"><img src="images/section1_img.jpg"></a>
+            <a href="#" class="m_img"><img src="images/section1_m_img.jpg"></a>
+        </div>
+        <div class="section2">
+            <ul>
+                <li>
+                    <a href="#">
+                        <!--<div class="cover img01_cover"></div>-->
+                        <img src="images/section2_img01.jpg" alt="">
+                        <p>일룸 고객의 생생한 사용후기</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!--<div class="cover img02_cover"></div>-->
+                        <img src="images/section2_img02.jpg" alt="">
+                        <p>2016 하반기 구매 금액별 프로모션</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="section3">
+            <ul class="quick">
+                <li>
+                    <a href="#">
+                        <img src="images/quick01.png" alt="">
+                        <p>대리점찾기</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/quick02.png" alt="">
+                        <p>전시품판매</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/quick03.png" alt="">
+                        <p>공간제안서비스</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/quick04.png" alt="">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/quick05.png" alt="">
+                        <p>고객후기</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="chain">
+                <div class="chain01"><a href="#"><img src="images/shop_img01.jpg" alt=""></a></div>
+                <div class="chain02"><a href="#"><img src="images/shop_img02.jpg" alt=""></a></div>
+                <div class="chain03"><a href="#"><img src="images/shop_img03.jpg" alt=""></a></div>
+                <div class="chain04"><a href="#"><img src="images/shop_img04.png" alt=""></a></div>
+                <div class="chain05"><a href="#"><img src="images/shop_img05.png" alt=""></a></div>
+        </div>
+        </div>
+        <div class="section4">
+            <ul>
+                <li class="imgbox01">
+                    <a href="#">
+                        <img src="images/section4_img01.jpg" alt="">
+                        <p>침실에 모션을 더한 프리미엄 부부침실</p>
+                    </a>
+                </li>
+                <li class="imgbox02">
+                    <a href="#">
+                        <img src="images/section4_img02.jpg" alt="">
+                        <p>천사같은 우리 아이의 첫 소파, 아코 소파</p>
+                    </a>
+                </li>
+                <li class="imgbox03">
+                    <a href="#">
+                        <img src="images/section4_img03.jpg" alt="">
+                        <p>우리집에 딱 맞는 인테리어 제안서비스</p>
+                    </a>
+                </li>
+                <li class="imgbox04">
+                    <a href="#">
+                        <img src="images/section4_img04.jpg" alt="">
+                        <p>스타일을 입은 학생방, 로이</p>
+                    </a>
+                </li>
+                <li class="imgbox05">
+                    <a href="#">
+                        <img src="images/section4_img05.jpg" alt="">
+                        <p>아이의 학습 유형에 따라 만드는 공부방, 링키플러스</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="section5">
+            <a href="#">
+                <img src="images/section5_img.jpg" alt="">
+                <p>2016 신제품 카탈로그</p>
+            </a>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_inner">
+            <div class="box1">
+                <h2><a href="index.himl"><img src="images/foot_logo.png" alt=""></a></h2>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">대리점 개설 안내</a></li><br>
+                    <li class="list4"><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                </ul>
+                <ul class="foot_sns">
+                    <li><a href="#"><img src="images/sns01.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/sns02.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/sns03.png" alt=""></a></li>
+                </ul>               
+            </div>
+            <div class="box2">
+                <h3>(주)일룸</h3>
+                <address>
+                대표이사 강성문<br>
+                서울시 송파구 오금로 311 (오금동 45-1)
+                </address>
+                <P class="txt2">
+                사업자등록번호 : 215-86-93600<br>
+                통신판매업신고 : 2009-서울송파-0069호<br>
+                부가통신사업신고필증 : 021129
+                </p>
+                <p>Copyright (c) 2014 iloom CO, LTD</p>
+                <ul class="family">
+                    <li><a href="#"><img src="images/btn-foot2.gif" alt=""></a></li>
+                    <li><a href="#"><img src="images/btn-foot3.gif" alt=""></a></li>
+                    <li><a href="#"><img src="images/btn-foot4.gif" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="box3">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li>
+                        <h4> 고객센터 &nbsp;· &nbsp;AS</h4>
+                        <p>1577-5670<span><br>평일 : 09:00 ~ 17:30</span></p>
+                    </li>
+                    <li>
+                        <h4>대리점구매상담</h4>
+                        <p>1577-9199<span><br>월~일 : 10:00 ~ 20:00</span></p>
+                    </li>
+                    <li>
+                        <h4>쇼핑몰구매상담</h4>
+                        <p>1588-6792<span><br>평일 : 10:00 ~ 18:00</span></p>
+                    </li>
+                </ul>
+                <p class="box3_txt">
+                    Fax : 031-730-8659<br>
+                    이메일 : webmaster@iloom.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

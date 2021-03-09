@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VDL</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	//slick슬라이더
+	$('.main .slider').slick({
+		vertical:false,//세로 슬라이드
+		autoplay:true,//자동실행
+		speed:1000,//슬라이드,페이드 속도
+		pauseOnHover:false//마우스오버시 멈춤0
+  });
+  
+   /*슬라이더 일시정지버튼*/
+  var num=0; //변수선언
+  $('.main .pause_btn').click(function(e){
+	  e.preventDefault();
+	  if(num==0){
+	  	  $(this).addClass('on');
+		  num=1;
+		  $('.slider').slick('slickPause');
+	  } else {
+		  $(this).removeClass('on');
+		  num=0;
+		  $('.slider').slick('slickPlay');
+	  }
+  });
+  
+  //제품쪽 버튼
+  $('.product_wrap .product').slick({
+		speed:1000,//슬라이드,페이드 속도
+		autoplay:true,
+		pauseOnHover:false,//마우스오버시 멈춤0
+		arrows:false,//prev,next버튼 없어짐
+		dots:true//페이지버튼
+  });
+  
+  $('.login_input').focusout(function(){
+		if($(this).val()=="");
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+		<div class="top">
+        	<h1><a href="index.html"><img src="img/logo.png" alt="vdl"></a></h1>
+            <ul class="left">
+            	<li><a href="#">KOREAN</a></li>
+                <li><a href="#">ENGLISH</a></li>
+            </ul>
+            <ul class="right">
+            	<li><a href="sub_login.html">LOGIN</a></li>
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="gnb_wrap">
+    	<div class="gnb">
+        	<ul class="top_menu">
+            	<li><a href="sub_topseller.html">VDL SHOP<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="sub_topseller.html">TOP SELLER</a></li>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">MAKE UP</a></li>
+                        <li><a href="#">NAIL</a></li>
+                        <li><a href="#">SKIN CARE</a></li>
+                        <li><a href="#">CLEANSING</a></li>
+                        <li><a href="#">BODY&amp;HAIR</a></li>
+                        <li><a href="#">TOOLS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">VDL TREND<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">COLLECTION</a></li>
+                        <li><a href="#">COLOR FINDER</a></li>
+                        <li><a href="#">ALL ABOUT TREND</a></li>
+                        <li><a href="#">THE REAL BOOK</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MEET VDL<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">VDL STORY</a></li>
+                        <li><a href="#">MEET WENDY</a></li>
+                        <li><a href="#">VDL EPISODE</a></li>
+                        <li><a href="#">VDL MEDIA</a></li>
+                        <li><a href="#">STORE INFO</a></li>
+                        <li><a href="#">NEWS</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub_event.html">EVENT<span></span></a>
+                	<ul class="sub">
+                    	<li><a href="#">당첨자 발표</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub_login.html">MY VDL</a></li>
+            </ul>
+            <div class="search">
+                <form action="" method="">
+                    <fieldset>
+                        <legend>검색창</legend>
+                        <input type="text" placeholder="Search vdlcosmetics.com">
+                        <button type="submit">검색버튼</button>
+                    </fieldset>
+                </form>
+        	</div>
+        </div>
+    </div>
+</div>
+<div class="main_wrap">
+    <div class="location">
+        <a href="index.html"><img src="img/home.png" alt=""></a> <span> ></span> MY VDL <span> ></span>
+        <em>MY VDL</em>
+    </div>
+    <div class="login_wrap">
+    	<div class="login_header">
+            <h2><img src="img/login.png" alt=""></h2>
+            로그인 하시면 VDL사이트의 다양한 서비스를 이용하실 수 있습니다.
+        </div>
+        <div class="login">
+        	<div class="login_box">
+                <form action="" method="">
+                    <fieldset>
+                        <legend >로그인</legend>
+                        <div class="login_input">
+                            <label class="label1">아이디</label>
+                            <input type="text" class="user_id" placeholder=" 아이디를 입력해주세요.">
+                        </div>
+                        <div class="login_input pw_input">
+                            <label class="label1">비밀번호</label>
+                            <input type="password" class="user_id" placeholder=" 비밀번호를 입력해주세요.">
+                        </div>
+                        <div class="save_id">
+                        	<input type="checkbox">
+                            <label> 아이디 저장</label>
+                        </div>
+                        <div class="func">
+                        	<button type="submit" class="btn">로그인</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="common_menu">
+            	<a href="#">아이디 찾기</a>
+                <a href="#">비밀번호 찾기</a>
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<h2><img src="img/footer_logo.png" alt=""></h2>
+    	<div class="footer_txt">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보보호정책</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <p>
+                <span>서울시 종로구 새문안로 58 LG광화문빌딩</span><span>대표이사 : 배정태</span><span>사업자번호 : 113-81-17562</span><span>대표상담번호 : 1661-4169</span>
+            </p> 
+            <div class="copyright">Copyright VDL All right reserved</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

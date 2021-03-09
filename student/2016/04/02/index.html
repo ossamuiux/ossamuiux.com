@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>라푸마</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+<script>
+$(document).ready(function(){
+	var num=$(window).width();
+	
+	$('.main .visual').slick({
+		dots:true,
+		pauseOnHover:true,
+		autoplay:true,
+		autoplaySpeed:2000,
+	});
+	
+	$(window).resize(function(){
+		var num=$(this).width()
+		
+		//gnb 슬라이드 메뉴
+		if(num<=750){
+			$('.main .visual .slick-prev,.main .visual .slick-next').hide();
+		}else{
+			$('.main .visual .slick-prev,.main .visual .slick-next').show();
+		}
+		
+		if(num>750){ 
+			$('.main .visual01 img').prop('src','images/visual_a.jpg');
+			$('.main .visual02 img').prop('src','images/visual_b.jpg');
+			$('.header_inner .shopping img').prop('src','images/btn_lf_ot.png');
+//			$('.header_inner .m_gnb').hide();
+		} else {
+		if(num<=750)
+			$('.main .visual01 img').prop('src','images/m_visual_a.jpg');
+			$('.main .visual02 img').prop('src','images/m_visual_b.jpg');
+			$('.header_inner .shopping img').prop('src','images/m_mall.png');
+//			$('.header_inner .m_gnb').show();
+		}
+	});//resize이벤트 끝
+	
+		//새로고침 시, 바로 들어갔을 때 적용
+		if(num>750){
+			$('.main .visual01 img').prop('src','images/visual_a.jpg');
+			$('.main .visual02 img').prop('src','images/visual_b.jpg');
+			$('.header_inner .shopping img').prop('src','images/btn_lf_ot.png');
+		} else {
+		if(num<=750)
+			$('.main .visual01 img').prop('src','images/m_visual_a.jpg');
+			$('.main .visual02 img').prop('src','images/m_visual_b.jpg');
+			$('.header_inner .shopping img').prop('src','images/m_mall.png');
+		//gnb 슬라이드 메뉴 
+		if(num<=750){
+			$('.main .visual .slick-prev,.main .visual .slick-next').hide();
+		}else{
+			$('.main .visual .slick-prev,.main .visual .slick-next').show();
+		}
+	}
+});
+
+
+</script>
+<body>
+<!--전체커버-->
+<div id="cover"></div>
+
+<div class="wrap"><!--모바일 메뉴 show - 메인 스크롤 가리는 용도-->
+    <div class="header">
+        <div class="header_inner">
+            <h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+            <ul class="gnb">
+                <li class="gnb_li1">
+                    <a href="#">Lafuma</a>
+                    <ul class="menu li1">
+                        <li><a href="#">LAFUMA IDENTITY</a></li>
+                        <li><a href="#">LAFUMA HISTORY</a></li>
+                        <li><a href="#">VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_li2">
+                    <a href="#">Catalogue</a>
+                </li>
+                <li class="gnb_li3">
+                    <a href="#">Product</a>
+                    <ul class="menu li3">
+                        <li><a href="#">남성</a></li>
+                        <li><a href="#">여성</a></li>
+                        <li><a href="#">키즈</a></li>
+                        <li><a href="#">신발</a></li>
+                        <li><a href="#">용품</a></li>
+                        <li><a href="#">캠핑</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_li4">
+                    <a href="#">Collection</a>
+                    <ul class="menu li4">
+                        <li><a href="#">FRESH</a></li>
+                        <li><a href="#">RHYTHM</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_li5">
+                    <a href="#">Camping</a>
+                </li>
+                <li class="gnb_li6">
+                    <a href="#">Shop</a>
+                    <ul class="menu li6">
+                        <li><a href="#">매장찾기</a></li>
+                        <li><a href="#">매장개설안내</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_li7">
+                    <a href="#">Campaign</a>
+                    <ul class="menu li7">
+                        <li><a href="#">백두대간 스토리</a></li>
+                        <li><a href="#">리듬 스토리</a></li>
+                        <li><a href="#">북한산 둘레길</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+            <a class="shopping" href="http://www.lfmall.co.kr/display.do?cmd=getBrandMain&TBRAND_CD=1003" target="_blank"><img src="images/btn_lf_ot.png" alt=""></a>
+            
+            <!--모바일-->
+            <button type="button" class="m_btn"><img src="images/m_menu.png" alt=""></button>
+            <!--모바일메뉴창-->
+            <div class="m_gnb">
+                <div class="m_top">
+                    <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
+                </div>
+                <!--메뉴리스트-->
+                <div class="m_menu">
+                    <h2><a href="#">LAFUMA</a></h2>
+                    <ul>
+                        <li><a href="#"><img src="images/m_identity.png" alt=""> IDENTITY</a></li>
+                        <li><a class="bar" href="#"><img src="images/m_history.png" alt=""> HISTORY</a></li>                
+                    </ul>
+    
+                    <h2><a href="#">CATALOGUE</a></h2>
+                    
+                    <h2><a  href="#">PRODUCT</a></h2>
+                    <ul>
+                        <li><a href="#"><img src="images/m_boy.png" alt=""> 남성</a></li>
+                        <li><a class="bar" href="#"><img src="images/m_girl.png" alt=""> 여성</a></li>
+                        <li><a href="#"><img src="images/m_kids.png" alt=""> 키즈</a></li>
+                        <li><a class="bar" href="#"><img src="images/m_shoes.png" alt=""> 신발</a></li>
+                        <li><a href="#"><img src="images/m_gloves.png" alt=""> 용품</a></li>
+                        <li><a class="bar" href="#"><img src="images/m_icon_camping.png" alt=""> 캠핑</a></li>
+                    </ul>
+                    
+                    <h2><a href="#">COLLECTION</a></h2>
+                    
+                    <ul>
+                        <li><a href="#"><img src="images/m_fresh.png" alt=""> FRESH</a></li>
+                        <li><a class="bar" href="#"><img src="images/m_rhythm.png" alt=""> RHYTHM</a></li> 
+                    </ul>
+                    
+                    <h2><a href="#">CAMPING</a></h2>
+                    
+                    <h2><a href="#">SHOP</a></h2>
+                    <ul>
+                        <li><a href="#"><img src="images/m_search.png" alt=""> 매장찾기</a></li>
+                        <li><a class="bar" href="#"><img src="images/m_store.png" alt=""> 매장개설안내</a></li>
+                    </ul>
+                    
+                    <h2><a href="#">SNS</a></h2>
+                    <ul>
+                        <li><a href="#"><img class="sns" src="images/m_blog.png" alt=""> BLOG</a></li>
+                        <li><a class="bar" href="#"><img class="sns" src="images/m_facebook.png" alt=""> FACEBOOK</a></li>  
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="main">
+        <div class="visual">
+            <div class="visual01"><a href="#"><img src="images/visual_a.jpg" alt=""></a></div>
+            <div class="visual02"><a href="#"><img src="images/visual_b.jpg" alt=""></a></div>   
+        </div>  
+        <div class="visual_txt">
+            <div class="txt">
+                <h2>EVERYDAY REFRESH LAFUMA</h2>
+                <p>언제 어디서나 라푸마와 함께라면 <br class="m_show">당신의 액티브한 순간들은 더욱 FRESH하게<br class="m_show">변화 할 것입니다. <em><br>
+                2016년 라푸마의 <strong>‘리듬 컬렉션’</strong>과 <strong>‘프레쉬 컬렉션’</strong> 을 만나보세요.</em></p>
+            </div>        
+        </div>
+        <div class="section1">
+            <ul>
+                <li class="catalogue"><a href="http://www.lafumakorea.co.kr/catalogue.jsp" target="_blank"><img src="images/cata_ot.jpg" alt=""></a></li>
+                <li class="video"><a href="https://www.youtube.com/watch?v=PYEachLKiEA" target="_blank"><img src="images/video_ot.jpg" alt=""></a></li>
+                <li class="product"><a href="http://www.lafumakorea.co.kr/product.jsp" target="_blank"><img src="images/product_ot.jpg" alt=""></a></li>
+                <li class="athletic"><a href="http://www.lafumakorea.co.kr/identity.jsp" target="_blank"><img src="images/athletic_ot.jpg" alt=""></a></li>
+                <li class="camping"><a href="http://www.lafumakorea.co.kr/camping.jsp" target="_blank"><img src="images/camping_ot.jpg" alt=""></a></li>
+
+        </div>
+        <div class="section2">
+        	<div class="section2_inner">
+       			<h2><strong>LAFUMA</strong> SNS LIVE</h2>
+            	<ul class="sns_box">
+					<li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/04_blog.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/03_facebook.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/02_blog.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/01_facebook.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/05_blog.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/04_facebook.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/03_blog.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><img src="images/02_facebook.jpg" alt=""></a></li>
+				</ul>
+                <!--모바일 하단 리트스메뉴-->
+                <ul class="list_menu">
+                	<li><a href="http://www.lfmembers.co.kr/web/index.do" target="_blank">MEMBERSHIP CLUB</a></li>
+                    <li><a href="http://www.lfmembers.co.kr/web/customer/customer.do" target="_blank">HELP DESK</a></li>
+                    <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank">GO TO FACEBOOK</a></li>
+                    <li><a href="http://www.lafumablog.com/" target="_blank">GO TO BLOG</a></li>
+                    <li><a href="http://www.lfmall.co.kr/display.do?cmd=getBrandMain&TBRAND_CD=1003&af=LGB5"  target="_blank">LF MALL</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <ul class="gnb">
+            <li><a href="http://www.lfmembers.co.kr/web/index.do" target="_blank">MEMBERSHIP CLUB</a></li>
+            <li><a href="http://www.lfmembers.co.kr/web/customer/customer.do" target="_blank"><span><img src="images/dot.png" alt=""></span>HELP DESK</a></li>
+            <li><a href="https://www.facebook.com/Lafuma.kr/posts/1308063169234407" target="_blank"><span><img src="images/dot.png" alt=""></span>FACEBOOK</a></li>
+            <li><a href="http://www.lafumablog.com/" target="_blank"><span><img src="images/dot.png" alt=""></span>BLOG</a></li>
+            <li><a href="http://www.lfmall.co.kr/display.do?cmd=getBrandMain&TBRAND_CD=1003&af=LGB5"  target="_blank"><span><img src="images/dot.png" alt=""></span>LF MALL</a></li>
+        </ul>
+        <p>copyright (c) 1990-2016 lf all rights reserved.</p>
+        <!--오른쪽 family site-->
+        <div class="links">
+        	<a class="lafuma"><img src="images/france.jpg" alt=""> LAFUMA.COM</a>
+            <div class="family">
+            	<button type="button">FAMILY SITE</button>
+                <ul class="family_list">
+					<li><a class="fam">FAMILY SITE</a></li>
+                    <li><a href="http://www.tngt.co.kr/" target="_blank">TNGT</a></li>   
+                    <li><a href="http://www.daks.co.kr/" target="_blank">DAKS</a></li>   
+                    <li><a href="http://hazzys.lfmall.co.kr/display.do?cmd=shoppingMain&af=BR04&VIEW=" target="_blank">HAZZYS</a></li>   
+                    <li><a href="http://www.il-corso.com/_html/main.jsp" target="_blank">IL CORSO</a></li>   
+                    <li><a href="http://www.maestro.co.kr/index.jsp" target="_blank">MAESTRO</a></li>   
+                    <li><a href="http://www.jillstuartny.com/front/jill_ny/main.jsp" target="_blank">JILL STUART NY</a></li>   
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</body>
+</html>
+

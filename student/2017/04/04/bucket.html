@@ -1,0 +1,531 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1100">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Bespectacled</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script>
+        function initMap() {
+            var viewCenter = {
+                lat: 41.416176,
+                lng: 74.135261
+            };
+            var korea = {
+                lat: 37.552498,
+                lng: 126.989540
+            };
+            var manila = {
+                lat: 14.602642,
+                lng: 120.983507
+            };
+            var vladi = {
+                lat: 43.120517,
+                lng: 131.904679
+            };
+            var iruk = {
+                lat: 52.286913,
+                lng: 104.313842
+            };
+            var beijing = {
+                lat: 39.950157,
+                lng: 116.396451
+            };
+            var ulan = {
+                lat: 47.891104,
+                lng: 106.890877
+            };
+            var moscow = {
+                lat: 55.746971,
+                lng: 37.665349
+            };
+            var saintp = {
+                lat: 59.919213,
+                lng: 30.401938
+            };
+            var helsi = {
+                lat: 60.190524,
+                lng: 24.929392
+            };
+            var tallinn = {
+                lat: 59.430909,
+                lng: 24.778042
+            };
+            var riga = {
+                lat: 56.950057,
+                lng: 24.101690
+            };
+            var vilnius = {
+                lat: 54.697467,
+                lng: 25.258397
+            };
+            var warsza = {
+                lat: 52.224195,
+                lng: 20.969153
+            };
+            var krakow = {
+                lat: 50.055248,
+                lng: 19.929290
+            };
+            var berlin = {
+                lat: 52.502183,
+                lng: 13.361367
+            };
+            var praha = {
+                lat: 50.054800,
+                lng: 14.457180
+            };
+            var wien = {
+                lat: 48.195636,
+                lng: 16.379405
+            };
+            var budapest = {
+                lat: 47.490154,
+                lng: 19.025878
+            };
+            var zagreb = {
+                lat: 45.825503,
+                lng: 15.995861
+            };
+            var zadar = {
+                lat: 44.122056,
+                lng: 15.233097
+            };
+            var split = {
+                lat: 43.511915,
+                lng: 16.444949
+            };
+            var mostar = {
+                lat: 43.342529,
+                lng: 17.800981
+            };
+            var kotor = {
+                lat: 42.424743,
+                lng: 18.771048
+            };
+            var dubro = {
+                lat: 42.649524,
+                lng: 18.089237
+            };
+            var rome = {
+                lat: 41.919951,
+                lng: 12.475513
+            };
+            var firenze = {
+                lat: 43.775907,
+                lng: 11.271852
+            };
+            var pisa = {
+                lat: 43.725340,
+                lng: 10.400524
+            };
+            var venezia = {
+                lat: 45.447574,
+                lng: 12.299288
+            };
+            var milano = {
+                lat: 45.466501,
+                lng: 9.192824
+            };
+            var barcelona = {
+                lat: 41.393125,
+                lng: 2.221549
+            };
+            var london = {
+                lat: 51.551230,
+                lng: -0.123769
+            };
+            var paris = {
+                lat: 48.844967,
+                lng: 2.357993
+            };
+            var athena = {
+                lat: 37.988111,
+                lng: 23.722887
+            };
+            var thesal = {
+                lat: 40.636545,
+                lng: 22.929200
+            };
+            var shopia = {
+                lat: 42.691064,
+                lng: 23.308778
+            };
+            var plov = {
+                lat: 42.136399,
+                lng: 24.742232
+            };
+            var istan = {
+                lat: 40.987386,
+                lng: 28.935020
+            };
+            var jerus = {
+                lat: 31.764139,
+                lng: 35.206240
+            };
+            var thipei = {
+                lat: 25.033142,
+                lng: 121.559859
+            };
+            var hanoi = {
+                lat: 21.024328,
+                lng: 105.836272
+            };
+            var danang = {
+                lat: 16.054416,
+                lng: 108.200864
+            };
+            var hochi = {
+                lat: 10.789368,
+                lng: 106.590514
+            };
+            var nhatrang = {
+                lat: 12.229804,
+                lng: 109.224445
+            };
+            var phum = {
+                lat: 11.541558,
+                lng: 104.873623
+            };
+            var siem = {
+                lat: 13.370926,
+                lng: 103.862871
+            };
+            var bangkok = {
+                lat: 13.737311,
+                lng: 100.407552
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: viewCenter,
+                disableDefaultUI: true,
+            });
+            var marker = new google.maps.Marker({
+                position: korea,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: manila,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: vladi,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: iruk,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: beijing,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: ulan,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: moscow,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: saintp,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: helsi,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: tallinn,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: riga,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: vilnius,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: warsza,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: krakow,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: berlin,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: praha,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: wien,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: budapest,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: zagreb,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: zadar,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: split,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: mostar,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: kotor,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: dubro,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: rome,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: firenze,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: pisa,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: venezia,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: milano,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: barcelona,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: london,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: paris,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: athena,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: thesal,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: shopia,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: plov,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: istan,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: jerus,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: thipei,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: hanoi,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: danang,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: hochi,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: nhatrang,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: phum,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: siem,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: bangkok,
+                map: map
+            });
+        }
+
+        $(document).ready(function() {
+            $('.list_box li').mouseenter(function() {
+                $(this).find('.list_box_title').stop().slideDown('fast');
+            }).mouseleave(function() {
+                $(this).find('.list_box_title').stop().slideUp('fast');
+            });
+        });
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbyZisWYFPaxbHqoSXWRMLgpAYyaX_gWk&callback=initMap">
+    </script>
+</head>
+
+<body class="overflow">
+    <div id="header">
+        <h1 class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </h1>
+        <ul class="gnb">
+            <li>
+                <a href="Brandstory.html">Brand story</a>
+            </li>
+            <li>
+                <a href="whoami.html">Who am I</a>
+            </li>
+            <li>
+                <a href="project.html">Project</a>
+            </li>
+            <li>
+                <a href="log.html">Log</a>
+            </li>
+            <li>
+                <a href="bucket.html">Bucket_list</a>
+            </li>
+        </ul>
+        <ul class="sns">
+            <li class="kakao">
+                <a href="#">카카오톡</a>
+            </li>
+            <li class="instagram">
+                <a href="https://www.instagram.com/mkp_0131/">인스타그램</a>
+            </li>
+            <li class="facebook">
+                <a href="https://facebook.com/minkyu.park.186">페이스북</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main" class="bucket">
+        <div class="map_wrap">
+            <div id="map"></div>
+        </div>
+        <div class="list_box_wrap">
+            <h2 class="list_title">WORLD TOUR PROJECT</h2>
+            <ul class="list_box">
+                <li class="kotor">
+                    <h2 class="list_box_title">KOTOR</h2>
+                    <img src="images/project/kotor.jpg" alt="kotor">
+                </li>
+                <li class="barcelona">
+                    <h2 class="list_box_title">BARCELONA</h2>
+                    <img src="images/project/barcelona.jpg" alt="barcelona">
+                </li>
+                <li class="berlin">
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BIKAL</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+            </ul>
+            <ul class="list_box">
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+                <li>
+                    <h2 class="list_box_title">BERLIN</h2>
+                    <img src="images/project/berlin.jpg" alt="berlin">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+@charset "utf-8";
+body {font:13px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+p,a {color:#6d6d6d;}
+
+
+
+
+/************************메인**************************/
+
+/*메인 왼쪽 margin*/
+.main {margin-left:200px; overflow:hidden; width:1402px;}
+
+/*메인 visual*/
+.main .main_visual {width:1400px; overflow:hidden; position:relative;}
+
+/*슬라이더 페이지버튼 커스텀*/
+.main .main_visual .slick-dots {position:absolute; left:55px; bottom:45px;}
+.main .main_visual .slick-dots li {display:inline-block; margin-left:15px;}
+.main .main_visual .slick-dots li button {width:16px; height:16px; background:url(../img/dot01.png) no-repeat center center; text-indent:-9999px; border:none; cursor:pointer; outline:none; padding:0 0.25em;}
+.main .main_visual .slick-dots li.slick-active button {background-image:url(../img/dot.png);}
+
+/*플레이스,스톱버튼*/
+.main .main_visual .pause_btn {position:absolute; left:135px; bottom:46px; background:url(../img/pause_btn.png) no-repeat; width:13px; height:15px; text-indent:-9999px;}
+.main .main_visual .pause_btn.on {background-image:url(../img/play_btn.png);}
+
+/*배너*/
+.main .box {overflow:hidden; width:1050px; float:left;}
+
+/*왼쪽 배너*/
+.main .box .banner {width:700px; height:500px; position:relative; float:left;}
+.main .box .banner .banner1 {position:relative;}
+.main .box .banner .banner1 .tit {padding:40px 0 0 30px; height:150px; width:669px; border-left:1px solid #e4e4e4;}
+.main .box .banner .banner1 .tit h2 {color:#313131; font-size:22px;}
+.main .box .banner .banner1 .tit p.txt {padding-top:20px; font-size:15px;}
+.main .box .banner .banner1 .tit p.more_btn {border:1px solid #6d6d6d; display:inline-block; width:58px; height:18px; text-align:center; line-height:15px; margin-top:40px;}
+/*슬라이더 페이지버튼 커스텀*/
+.main .box .banner .slick-dots {position:absolute; right:55px; bottom:20px;}
+.main .box .banner .slick-dots li {display:inline-block; margin-left:5px;}
+.main .box .banner .slick-dots li button {width:12px; height:12px; background:url(../img/dot03.png) no-repeat center center; text-indent:-9999px; border:none; cursor:pointer; outline:none; padding:0 0.25em;}
+.main .box .banner .slick-dots li.slick-active button {background-image:url(../img/dot02.png);}
+/*플레이스,스톱버튼*/
+.main .box .banner .pause_btn {position:absolute; right:40px; bottom:24px; background:url(../img/play_btn01.png) no-repeat; width:9px; height:11px; text-indent:-9999px;}
+.main .box .banner .pause_btn.on {background-image:url(../img/pause_btn01.png);}
+
+
+/*가운데 배너*/
+.main .box .event_banner {width:350px;}
+.main .box .event_banner .banner1 .arrow {position:absolute; left:310px; top:302px;}
+.main .box .event_banner .banner1 .tit {background:#fbfbfb; width:319px;}
+.main .box .event_banner .banner1 .tit h2 {font-size:18px;}
+.main .box .event_banner .banner1 .tit p.txt {font-size:13px;}
+.main .box .event_banner .banner1 .tit p.more_btn {margin-top:50px;}
+/*슬리이더 페이지버튼*/
+.main .box .event_banner .slick-dots {right:30px;}
+/*플레이스,스톱버튼*/
+.main .box .event_banner .pause_btn {right:15px; background-image:url(../img/pause_btn01.png); width:9px; height:11px;}
+.main .box .event_banner .pause_btn.on {background-image:url(../img/play_btn01.png);}
+
+
+/*오른쪽 내용*/
+.main .box2 {width:350px; height:500px; overflow:hidden; float:left;}
+
+/*공지사항*/
+.main .box2 .notice {width:320px; height:290px; padding:20px 0 0 30px; position:relative; background:#fbfbfb;}
+.main .box2 .notice h3 {font-size:16px; color:#313131;}
+.main .box2 .notice ul {margin-top:30px;}
+.main .box2 .notice ul li.txt {margin-top:15px;}
+.main .box2 .notice ul li.date a {padding-top:5px; display:inline-block; color:#0aa3a9;}
+.main .box2 .notice ul li:first-child {margin-top:0; padding-top:0;}
+.main .box2 .notice ul li.txt:hover a {text-decoration:underline;}
+.main .box2 .notice a.more_btn {border:1px solid #6d6d6d; width:58px; height:18px; text-align:center; line-height:15px; position:absolute; right:10px; top:20px;}
+
+
+
+
+/*이용안내*/
+.main .box2 .guide {width:320px; height:170px; padding:20px 0 0 30px; background:#037a9c;}
+.main .box2 .guide h3 {font-size:16px; color:#FFF;}
+.main .box2 .guide ul {float:left; margin-top:25px; font-size:14px;}
+.main .box2 .guide ul.guide2 {margin-left:50px;}
+.main .box2 .guide ul li {margin-top:25px;}
+.main .box2 .guide ul li:first-child {margin-top:0;}
+.main .box2 .guide ul li a {color:#FFF; display:inline-block;}
+.main .box2 .guide ul li a span {display:block; height:1px; background:#FFF; margin-top:3px; display:none;}
+.main .box2 .guide ul li:hover a span {display:block; margin-bottom:-4px;}
+
+
+
+
+
+
+
+
+
+

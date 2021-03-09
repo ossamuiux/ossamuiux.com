@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">    
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>상담접수 | 농심</title>
+<meta name="description" content="농심">
+<meta name="viewport" content="width=1100">
+<meta property="og.type" content="website">
+<meta property="og:title" content="농심">
+<meta property="og:url" content="http://lady823.dothome.co.kr/nongshim/">
+<meta property="og:image" content="http://lady823.dothome.co.kr/nongshim/opengraph.png">
+<meta property="og:description" content="농심입니다.">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <ul id="skipnavi">
+        <li><a href="#gnbMenu">주메뉴바로가기</a></li>
+        <li><a href="#main">본문바로가기</a></li>
+    </ul>
+    <div id="wrap">
+        <div id="header">
+            <div class="header_inner_wrap">
+                <div class="header_top">
+                    <div class="header_top_inner">
+                        <ul class="list_sns">
+                            <li><a href="#" target="_blank" title="새창열기"><img src="images/facebook.png" alt="페이스북"></a></li>
+                            <li><a href="#" target="_blank" title="새창열기"><img src="images/instagram.png" alt="인스타그램"></a></li>
+                            <li><a href="#" target="_blank" title="새창열기"><img src="images/blog.png" alt="블로그"></a></li>
+                            <li><a href="#" target="_blank" title="새창열기"><img src="images/youtube.png" alt="유튜브"></a></li>
+                        </ul>
+                        <h1 class="logo"><a href="index.html"><img src="images/logo.jpg" alt="농심"></a></h1>
+                        <ul class="list_util">
+                            <li><a href="login.html">로그인</a></li>
+                            <li><a href="members_join.html">회원가입</a></li>
+                            <li><a href="#">마이페이지</a></li>
+                            <li><a href="#">Language</a></li>
+                            <li>
+                                <button class="search_btn">검색</button>
+                                <div class="search_wrap">
+                                    <form action="abc.php" method="post">
+                                        <fieldset>
+                                            <legend class="blind">전체 검색</legend>
+                                                <input class="input_search" type="text" placeholder="검색어를 입력하세요">
+                                                <button class="btn_search" type="submit" title="검색버튼">검색</button>
+                                                <button class="close" type="button"></button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header_bottom">
+                    <div class="header_bottom_inner">
+                        <ul class="gnb">
+                            <li>
+                                <a href="location.html">농심소개</a>
+                                <ul class="depth2">
+                                    <li><a href="location.html">회사소개</a></li>
+                                    <li><a href="location.html">사회공헌</a></li>
+                                    <li><a href="location.html">연구개발</a></li>
+                                    <li><a href="location.html">제품연혁</a></li>
+                                    <li><a href="location.html">농심그룹</a></li>
+                                    <li><a href="location.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="ramyun.html">식품정보</a>
+                                <ul class="depth2">
+                                    <li><a href="ramyun.html">식품안전</a></li>
+                                    <li><a href="ramyun.html">영양과건강</a></li>
+                                    <li><a href="ramyun.html">라면백과</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="list_notice.html">홍보센터</a>
+                                <ul class="depth2">
+                                    <li><a href="list_notice.html">공지사항</a></li>
+                                    <li><a href="list_notice.html">보도자료</a></li>
+                                    <li><a href="list_notice.html">공장견학</a></li>
+                                    <li><a href="list_notice.html">N.서포터즈</a></li>
+                                    <li><a href="list_notice.html">홍보영상</a></li>
+                                    <li><a href="list_notice.html">광고영상</a></li>
+                                    <li><a href="list_notice.html">사보(N:zin)</a></li>
+                                    <li><a href="list_notice.html">농심 50년</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">투자정보</a>
+                                <ul class="depth2">
+                                    <li><a href="#">주식에관한사항</a></li>
+                                    <li><a href="#">주가정보</a></li>
+                                    <li><a href="#">IR정보</a></li>
+                                    <li><a href="#">공시정보</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="customer.html">고객센터</a>
+                                <ul class="depth2">
+                                    <li><a href="customer.html">상담접수</a></li>
+                                    <li><a href="customer.html">상담처리절차</a></li>
+                                    <li><a href="customer.html">CCM이란?</a></li>
+                                    <li><a href="customer.html">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">소셜허브</a>
+                                <ul class="depth2">
+                                    <li><a href="#">소셜허브</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul id="quickMenu">
+            <li>QUICK<br>MENU</li>
+            <li><a href="index.html">농심</a></li>
+            <li><a href="#">브랜드관</a></li>
+            <li><a href="#">농시미</a></li>
+            <li><a href="#">누들푸들</a></li>
+            <li><a href="#">농심채용</a></li>
+            <li class="btn_top"><a href="#">Top</a></li>
+        </ul>
+        <div id="container" class="customer">
+            <div class="location_wrap">
+                <div class="location_inner">
+                    <ul class="location">
+                        <li><a href="index.html"><img src="images/location_home.png" alt=""></a></li>
+                        <li>고객센터</li>
+                        <li>
+                            상답접수
+                            <ul class="depth2">
+                                <li class="active"><a href="customer.html">상담접수</a></li>
+                                <li><a href="#">상담처리절차</a></li>
+                                <li><a href="#">CCM이란?</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="section_wrap">
+                    <div class="section1">
+                        <h3>상담접수</h3>
+                        <div class="service_txt_wrap">
+                            <h4>농심에 궁금한 사항을 문의해 주시면 담당자가 친절하게 답변해드리겠습니다.</h4>
+                            <div class="service_txt">
+                                <img src="images/customer_icon.png" alt="">
+                                <em>농심은 항상 한결같은 마음으로 고객님의 말씀에 귀기울이고, 더 좋은 제품과 서비스를 위해 고객님의 쓴소리도 기억하며, 적극 반영할 수 있도록 최선을 다하겠습니다.<br>또한, 전해주신 고객님의 말씀에 최대한 빠른 시일내에 답변드릴 것을 약속드리며, 언제나 고객님의 마음으로 귀기울이도록 하겠습니다.</em>
+                                <p>
+                                고객상담전화
+                                <span class="tel_num">080-023-5181</span>
+                                <span class="txt">(수신자부담)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section2">
+                        <div class="title_wrap">
+                            <h4>상담 접수</h4>
+                            <p class="txt01">아래 양식에 맞춰 문의 사항을 접수해주세요.</p>
+                            <p class="txt02"><em>*</em> 표시는 필수 입력내용입니다.<span> 회원 로그인하시면 이름, 이메일, 주소, 휴대폰번호가 자동으로 입력됩니다.</span></p> 
+                        </div>
+                        <div class="receive_form_wrap">
+                            <form name="상담접수양식" action="abc.php" method="post">
+                                <table>
+                                    <caption class="blind">상담접수양식</caption>
+                                    <colgroup>
+                                        <col style="width:20%">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th><p><span>*</span>이름</p></th>
+                                        <td>
+                                            <input type="text" id="user_name" placeholder="이름">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p><span>*</span>이메일</p></th>
+                                        <td>
+                                            <input type="text" id="user_email" placeholder="이메일">
+                                        </td>
+                                    </tr>
+                                    <tr class="phone_num">
+                                        <th><p><span>*</span>휴대전화</p></th>
+                                        <td>
+                                            <select name="PhoneNo">
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                            <em>-</em>
+                                            <input type="text" id="user_tel2_1" maxlength="4">
+                                            <em>-</em>
+                                            <input type="text" id="user_tel2_2" maxlength="4">
+                                            <span class="add_ment">(빠른 상담을 위해 꼭 적어주세요.)</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="address_wrap">
+                                        <th><p><span></span>주소</p></th>
+                                        <td class="addr_content">
+                                            <div class="zip_code">
+                                                <input id="zipCode" type="text" name="zip" maxlength="5">
+                                                <button class="btn" onclick="sample6_execDaumPostcode()" type="button">우편번호</button> 
+                                            </div>
+                                            <div class="addr_inner">
+                                                <input class="address01" id="address01" type="text" name="address1" placeholder="기본주소">
+                                                <input type="text" id="address02" name="address2" placeholder="나머지 주소">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p><span>*</span>거주국가</p></th>
+                                        <td>
+                                            <select name="cusSelect" id="cusSelect" class="selTxt">
+                                                <option value>거주국가</option>
+                                                <option value="korea">대한민국</option>
+                                                <option value="Etc">기타</option>
+                                            </select>
+                                            <select name="cusContinent" id="cusContinent" class="selTxt" title="대륙을 선택해주세요.">
+                                                <option value>대륙</option>
+                                                <option value="A00">아프리카</option>
+                                                <option value="B00">아메리카</option>
+                                                <option value="C00">아시아</option>
+                                                <option value="D00">유럽</option>
+                                                <option value="E00">오세아니아</option>
+                                                <option value="F00">남태평양</option>
+                                            </select>
+                                            <select name="cusCountry" id="cusCountry" class="selTxt">
+                                                <option value>국가</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="subject_wrap">
+                                        <th><p><span>*</span>주제분류</p></th>
+                                        <td>
+                                            <select name="user_categorize">
+                                                <option value="selected">질문유형을 선택하세요.</option>
+                                                <option value="문의">문의</option>
+                                                <option value="불만">불만</option>
+                                                <option value="제안">제안</option>
+                                                <option value="칭찬">칭찬</option>
+                                                <option value="로그문의/불만">켈로그문의/불만</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="title_wrap">
+                                        <th><p><span>*</span>제목</p></th>
+                                        <td>
+                                            <input type="text" id="title" placeholder="제목">
+                                        </td>
+                                    </tr>
+                                    <tr class="content_wrap">
+                                        <th><p><span>*</span>내용</p></th>
+                                        <td>
+                                        <textarea id="content" placeholder="(*1000자 이내로 작성합니다.)"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr class="add_file_wrap">
+                                        <th><p class="txt_box">파일첨부</p></th>
+                                        <td class="input_container">
+                                            <div id="fileBox">
+                                                <div class="file_wrap">
+                                                    <div class="input_file">
+                                                        <input type="hidden" name="file_seq" value="">
+                                                        <input type="hidden" name="file_seq_delete" value="">
+                                                        <input type="file" class="file" title="파일경로" name="UPFILE[]" value="" onchange="$(this).next('.file_txt').attr('value',this.value)">
+                                                        <input type="text" class="file_txt input_ty1" id="" readonly="readonly">
+                                                        <a href="#none" class="file_btn" onclick="fileClick(this);">파일선택</a>
+                                                    </div>
+                                                </div>      
+                                            </div>
+                                            <input type="button" id="btn_file" class="" value="" title="파일추가">
+                                            <div class="file_txt">
+                                                <p>* 첨부파일은 총 10MB까지 가능합니다.</p>
+                                                <p>* 첨부파일은 최대 5까지 가능합니다.</p>
+                                                <p>* 파일 형식은 jpg, jpeg, gif, bmp, png 가 적합합니다.</p>
+                                                <p><strong>* 파일찾기 후 파일첨부를 클릭해야 이미지가 서버에 업로드 됩니다.</strong></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="section3">
+                        <h3>개인정보 수집 및 이용에 대한 안내</h3>
+                        <div class="section3_inner">
+                            <div class="privacy01">
+                                <h4>1. 개인정보 수집 항목</h4>
+                                <p>회사는 고객문의 상담 및 해결을 위해 아래와 같은 개인정보를 수집하고 있습니다.</p><br>
+                                <p>- 수집 항목(필수) : 이름, 휴대폰 번호, 이메일<br>
+                                - 수집 항목(선택) : 주소, 고객 직접 입력 내용<br>- 서비스 이용 및 처리 과정에서 접속 IP정보, 접속 로그, 쿠키 생성/수집 가능</p>
+                            </div>
+                            <div class="privacy02">
+                                <h4>2. 이용목적</h4>
+                                <p>고객 문의 접수/처리 및 결과 안내</p>
+                            </div>
+                            <div class="privacy03">
+                                <h4>3. 개인정보 보유 및 이용기간</h4>
+                                <p>개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.<br>
+                                단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br><br>
+                                - 관련법령에 의한 정보보유 사유<br><br>
+                                상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.<br>이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.</p><br>
+                                <p>■ 소비자의 불만 또는 분쟁처리에 관한 기록</p>
+                                <p class="str_txt">- 보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률<br>
+                                <em>- 보존 기간 : <span>3년</span></em></p>
+                            </div>
+                        </div>
+                        <div class="agreement_wrap">
+                            <form name="개인정보 동의" action="a.jsp" method="post">
+                                <label for="agreement">
+                                    <input type="checkbox" id="agreement" value="agree" name="group" onclick="agreeCheck(this);" title="동의체크">
+                                    개인정보 수집 및 이용, 보유기간에 동의합니다.
+                                </label>
+                                <label for="disAgreement">
+                                    <input type="checkbox" id="disAgreement" value="opposition" onclick="agreeCheck(this);" name="group" title="동의체크">
+                                    동의하지 않습니다.
+                                </label>
+                                <div class="txt">
+                                    <p>‘개인정보 수집 및 이용에 대한 동의’를 거부하실 수 있으며, 동의를 거부하실 경우에는 온라인 상담접수가 되지 않습니다.</p>
+                                    <p><em>※ 켈로그 관련 문의/불만 사항은 남겨주신 고객정보와 함께 원활한 처리를 위해 켈로그 사에 전달될 수 있습니다.</em></p>
+                                </div>
+                                <div class="btn_submit_wrap">
+                                    <button class="btn_submit" type="submit">확인</button>
+                                    <a class="btn_reset" href="#">취소</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer_inner">
+                <div class="footer_top">
+                    <div class="footer_util_wrap">
+                        <ul class="footer_util">
+                            <li>
+                                <a href="location.html">
+                                    <img src="images/footer_icon_01.png" alt="오시는길">
+                                <p>오시는 길</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/footer_icon_02.png" alt="식문화 연구">
+                                    <p>식문화 연구</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/footer_icon_03.png" alt="N서포터즈">
+                                    <p>N서포터즈</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/footer_icon_04.png" alt="공장견학">
+                                    <p>공장견학</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/footer_icon_05.png" alt="특약점포탈">
+                                    <p>특약점포탈</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="service_center">
+                            <p>고객상담전화<span> (수신자부담)</span></p>
+                            <p class="tel">080.023.5181</p>
+                            <a href="customer.html"><img src="images/btn_email.png" alt=""></a>
+                        </div>
+                    </div>
+                    <ul class="footer_sns">
+                        <li><a href="#" target="_blank" title="새창열기" ><img src="images/facebook.png" alt="페이스북"></a></li>
+                        <li><a href="#" target="_blank" title="새창열기"><img src="images/instagram.png" alt="인스타그램"></a></li>
+                        <li><a href="#" target="_blank" title="새창열기"><img src="images/blog.png" alt="블로그"></a></li>
+                        <li><a href="#" target="_blank" title="새창열기"><img src="images/youtube.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+                <div class="footer_bottom">
+                    <h1 class="logo"><a href="index.html"><img src="images/footer_logo.png" alt="농심"></a></h1>
+                    <div class="introduce_wrap">
+                        <ul class="footer_gnb">
+                            <li><a href="#">K-infostation</a></li>
+                            <li><a href="#">특약점포탈</a></li>
+                            <li><a href="#">전자결제</a></li>
+                            <li><a href="#">RSS피드</a></li>
+                            <li><a href="#">이메일주소무단수집거부</a></li>
+                            <li><a href="#">고객상담</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">증명서조회</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                        <address>
+                        (주)농심<span></span>사업자등록번호 : 118-81-03914<span></span>대표이사 : 박준<span></span>대표전화 : 02-820-7114 / 고객센터 : 080-023-5181<br>
+주소 : 서울특별시 동작구 여의대방로 112 (신대방동)
+                        <p>COPYRIGHT(C) 2013 BY NONGSHIM CO.,LTD. ALL RIGHTS RESERVED.</p>
+                        </address>
+                    </div>
+                    <ul class="familySite_wrap">
+                        <li class="group_site_wrap">
+                            <button class="btn01" type="button">그룹사 바로가기</button>
+                            <div class="group_site">
+                                <ul class="group_site01">
+                                    <li><a href="#">농심홀딩스</a></li>
+                                    <li><a href="#">율촌화학</a></li>
+                                    <li><a href="#">메가마트</a></li>
+                                    <li><a href="#">태경농산</a></li>
+                                    <li><a href="#">오테이스트몰</a></li>
+                                    <li><a href="#">농심엔지니어링</a></li>
+                                    <li><a href="#">NDS</a></li>
+                                    <li><a href="#">농심기획</a></li>
+                                    <li><a href="#">호텔농심</a></li>
+                                    <li><a href="#">농심개발</a></li>
+                                    <li><a href="#">농심미분</a></li>
+                                    <li><a href="#">율촌재단</a></li>
+                                </ul>
+                                <ul class="group_site02">
+                                    <li><a href="#">Nongshim USA</a></li>
+                                    <li><a href="#">Nongshim China</a></li>
+                                    <li><a href="#">Nongshim Japan</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="brand_site_wrap">
+                            <button class="btn02" type="button">Brand Site</button>
+                            <div class="brand_site">
+                                <ul class="brand_site01">
+                                    <li><a href="#">새우깡</a></li>
+                                    <li><a href="#">신라면</a></li>
+                                    <li><a href="#">백산수</a></li>
+                                    <li><a href="#">코코이찌방야</a></li>
+                                </ul>
+                                <ul class="brand_site02">
+                                    <li><a href="#">식문화연구</a></li>
+                                    <li><a href="#">식문화전문도서관</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <script>
+        function sample6_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                    var fullAddr = ''; // 최종 주소 변수
+                    var extraAddr = ''; // 조합형 주소 변수
+
+                    // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                        fullAddr = data.roadAddress;
+
+                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                        fullAddr = data.jibunAddress;
+                    }
+
+                    // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                    if(data.userSelectedType === 'R'){
+                        //법정동명이 있을 경우 추가한다.
+                        if(data.bname !== ''){
+                            extraAddr += data.bname;
+                        }
+                        // 건물명이 있을 경우 추가한다.
+                        if(data.buildingName !== ''){
+                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                        }
+                        // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                        fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                    }
+
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('zipCode').value = data.zonecode; //5자리 새우편번호 사용
+                    document.getElementById('address01').value = fullAddr;
+
+                    // 커서를 상세주소 필드로 이동한다.
+                    document.getElementById('address02').focus();
+                }
+            }).open();
+        }
+    
+        function agreeCheck(el){
+           if($(el).prop('checked')){
+                $('input[type="checkbox"][name="group"]').prop('checked',false);
+                $(el).prop('checked',true);
+            }
+            //console.log(el);
+        }
+    
+    </script>
+    <script type="text/javascript">
+        
+		$(document).ready(function () {
+			//인풋필드 추가 제거 스크립트
+							
+            var num = 1; 
+            //첨부파일버튼
+
+            $("#btn_file").click (function () {
+                var html = $(".file_wrap").html();
+                var len2 = $("#fileBox >div").length;
+                //파일 추가 갯수 제한
+                if(len2 < 5 ){
+                    //num++; 
+                    //$(this).siblings("#file_box").children("div:last").after("<div style='margin:0 0 5px 0'><input type='hidden' name='file_seq' value=''><input type='hidden' name='file_seq_delete' value=''><input type='file' class='file' title='파일경로' name='file_name' value='' /> <input type='button' value='삭제' class='remove-input' /></div>");
+
+                    $(this).siblings("#fileBox").children("div:last").after("<div style='position:relative' class='file_wrap"+len2+"'>"+html+"<input type='button' value='' class='remove-input '/></div> ");
+                    $('#fileBox > div').eq(len2).find('.file_txt').attr('value',null);
+                    console.log('클릭');
+
+                } else {
+                    alert("더 이상 파일을 추가할 수 없습니다. (최대 갯수 5개)");
+
+                };
+                btnEv();
+        });
+
+            /* 인풋 제거 */
+            function btnEv(){
+                $(".remove-input").click (function () { 
+                    $(this).parent("div").remove();
+                });
+            }
+        });
+
+        function fileClick(eq){
+            var _target = $(eq);
+            _target.parent('.input_file').find('.file').trigger('click');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone = no">
+<link rel="apple-touch-icon" href="/m/img/mobileweb.png">
+<title>롯데시네마 모바일 : 영화관</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/font.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	//지역선택 스위치
+	var sw1=0;
+	$('.place .p_choose').click(function(e){
+		e.preventDefault();
+		
+		if(sw1==0){
+			$('.place>ul').slideDown();
+			$('.place .p_choose>span').addClass('on');
+			sw1=1;
+		} else {
+			$('.place>ul').slideUp();
+			$('.place .p_choose>span').removeClass('on');
+			sw1=0;
+		}
+	});
+	//지역 선택시 제목변경,지역별 영화관,영화관 사진 매치
+	$('.place .p_choose>h2:gt(0)').hide();
+	$('.place_theater .p_theater:gt(0)').hide();
+	$('.photo_wrap .photo:gt(0)').hide();
+	var num;
+	
+	$('.place>ul>li').click(function(e){
+		e.preventDefault();
+		
+		num=$(this).index();
+		//console.log(num);
+		sw1=0;
+		$('.place .p_choose>h2').hide();
+		$('.place .p_choose>h2').eq(num).show();
+		$('.place_theater .p_theater').hide();
+		$('.place_theater .p_theater').eq(num).show();
+		$('.place>ul>li').find('a').not(this).removeClass('on');
+		$(this).find('a').addClass('on');
+		$('.place>ul').slideUp();
+		$('.place .p_choose>span').removeClass('on');
+		$('.photo_wrap .photo').hide();
+		$('.photo_wrap .photo').eq(num).show();
+	});
+	//지역선택시 on처리
+	$('.place_theater .p_theater>li>a').click(function(e){
+		e.preventDefault();
+		
+		$(this).siblings().removeClass('on');
+		$(this).addClass('on');
+		$('.place_theater .p_theater>li>a').eq(num).eq(0).addClass('on');
+	});
+	//롤링 공지사항 슬라이더
+	$('.notice.theater').slick({
+	  	pauseOnHover:false,
+	  	autoplay:true,
+		autoplaySpeed:3000,
+		speed:500,
+		vertical:true,
+    	arrows:false,
+		dots: false
+  	});
+});
+</script>
+</head>
+<body>
+<div class="lnb">
+	<div class="lnb_top"><a href="index.html"></a></div>
+    <div class="lnb1">
+    	<a href="reserve.html"><img src="img/menu_cmovie.png" alt="">영화 먼저선택</a>
+        <a href="reserve.html?cinema=1"><img src="img/menu_ctheater.png" alt="">영화관 먼저선택</a>
+    </div>
+	<ul class="lnb2">
+    	<li>
+        	<a class="arrow" href="#"><img src="img/menu_movie.png" alt="">영화</a>
+        	<ul class="sub">
+            	<li><a class="on" href="#"><span class="on"></span>박스오피스</a></li>
+                <li><a href="#"><span></span>현재상영작</a></li>
+                <li><a href="#"><span></span>상영예정작</a></li>
+            </ul>
+        </li>
+    	<li>
+        	<a href="theater.html"><img src="img/menu_theater.png" alt="">영화관</a>
+        </li>
+        <li>
+        	<a href="cinemamall.html"><img src="img/menu_mall.png" alt="">시네마몰</a>
+        </li>
+        <li>
+        	<a href="event.html"><img src="img/menu_event.png" alt="">이벤트</a>
+        </li>
+        <li>
+        	<a href="#"><img src="img/menu_mycinema.png" alt="">마이시네마</a>
+        </li>
+        <li>
+        	<a href="#"><img src="img/menu_card.png" alt="">할인카드안내</a>
+        </li>
+    </ul>
+    <div class="lnb_bottom">
+		<a href="#"><img src="img/menu_login.png" alt="">로그인</a>
+        <a href="#"><em></em><img class="last" src="img/menu_costomer.png" alt="">고객센터</a>
+    </div>
+</div>    
+<div class="quick">
+	<h2>빠른예매</h2>
+    <a class="close_btn" href="#"></a>
+    <div class="quick_menu">
+        <a class="quick_m" href="reserve.html"><p>영화 먼저 선택</p></a>
+        <a class="quick_c" href="reserve.html?cinema=1"><p>영화관 먼저 선택</p></a>
+    </div>    
+</div>    
+<div class="wrap_hide">
+	<div class="cover"></div>
+    <div class="wrap">
+        <div class="header theater">
+            <a class="m_btn" href="#">모바일메뉴</a>
+            <h1>영화관</h1>
+            <a class="quick_btn" href="#">빠른예매</a>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" placeholder="지역 또는 롯데시네마 영화관명으로 검색">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <div class="place">
+        	<a class="p_choose" href="#">
+            	<p>지역</p>
+                <h2>서울 (23)</h2>
+                <h2>경기/인천 (34)</h2>
+                <h2>충청/대전 (07)</h2>
+                <h2>전라/광주 (08)</h2>
+                <h2>경북/대구 (11)</h2>
+                <h2>경남/부산 (20)</h2>
+                <h2>강원 (02)</h2>
+                <h2>제주 (02)</h2>
+                <span></span>
+            </a>
+            <ul>
+                <li><a class="on" href="#">서울 (23)</a></li>
+                <li><a href="#">경기/인천 (34)</a></li>
+                <li><a href="#">충청/대전 (07)</a></li>
+                <li><a href="#">전라/광주 (08)</a></li>
+                <li><a href="#">경북/대구 (11)</a></li>
+                <li><a href="#">경남/부산 (20)</a></li>
+                <li><a href="#">강원 (02)</a></li>
+                <li><a href="#">제주 (02)</a></li>
+            </ul>
+        </div>
+        <div class="place_theater">
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">월드타워</a><em></em>
+                	<a href="#">가산디지털</a><em></em>
+                    <a href="#">가양</a><em></em>
+                    <a href="#">강동</a><em></em>
+                    <a href="#">건대입구</a><br>
+                    <a href="#">김포공항</a><em></em>
+                    <a href="#">노원</a><em></em>
+                    <a href="#">누리꿈(상암)</a><em></em>
+                    <a href="#">독산</a><br>
+                    <a href="#">브로드웨이(신사)</a><em></em>
+                    <a href="#">서울대입구</a><em></em>
+                    <a href="#">수락산</a><em></em>
+                    <a href="#">신도림</a><br>
+                    <a href="#">신림</a><em></em>
+                    <a href="#">씨티(강남)</a><em></em>
+                    <a href="#">에비뉴엘(명동)</a><em></em>
+                    <a href="#">영등포</a><br>
+                    <a href="#">용산(전자랜드)</a><em></em>
+                    <a href="#">장안</a><em></em>
+                    <a href="#">청량리</a><em></em>
+                    <a href="#">합정</a><br>
+                    <a href="#">홍대입구</a><em></em>
+                    <a href="#">황학</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">검단</a><em></em>
+                	<a href="#">광교아울렛</a><em></em>
+                    <a href="#">광명(광명사거리)</a><em></em>
+                    <a href="#">광명아울렛</a><br>
+                    <a href="#">광주터미널</a><em></em>
+                    <a href="#">구리</a><em></em>
+                    <a href="#">구리아울렛</a><em></em>
+                    <a href="#">라페스타(일산)</a><br>
+                    <a href="#">마석</a><em></em>
+                    <a href="#">병점</a><em></em>
+                    <a href="#">부천(신중동역)</a><em></em>
+                    <a href="#">부천역</a><em></em>
+                    <a href="#">부평</a><br>
+                    <a href="#">부평역사</a><em></em>
+                    <a href="#">산본</a><em></em>
+                    <a href="#">영등포</a><em></em>
+                    <a href="#">성남</a><em></em>
+                    <a href="#">성남신흥</a><br>
+                    <a href="#">센트럴락(안산)</a><em></em>
+                    <a href="#">송탄</a><em></em>
+                    <a href="#">수원</a><em></em>
+                    <a href="#">시화</a><br>
+                    <a href="#">안산(롯데마트)</a><em></em>
+                    <a href="#">안산고잔</a><em></em>
+                    <a href="#">안성</a><em></em>
+                    <a href="#">안양(안양역)</a><br>
+                    <a href="#">양주고읍</a><em></em>
+                    <a href="#">오산</a><em></em>
+                    <a href="#">용인</a><em></em>
+                    <a href="#">인덕원</a><em></em>
+                    <a href="#">인천</a><br>
+                    <a href="#">주엽(일산)</a><em></em>
+                    <a href="#">진접</a><em></em>
+                    <a href="#">파주아울렛</a><em></em>
+                    <a href="#">평촌</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">대전(롯데백화점)</a><em></em>
+                    <a href="#">대전둔산(월평동)</a><em></em>
+                    <a href="#">서산</a><br>
+                    <a href="#">서청주</a><em></em>
+                    <a href="#">아산터미널</a><em></em>
+                    <a href="#">청주</a><em></em>
+                    <a href="#">청주 충대</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">광주(롯데백화점)</a><em></em>
+                	<a href="#">군산</a><em></em>
+                    <a href="#">목포</a><em></em>
+                    <a href="#">강동</a><em></em>
+                    <a href="#">수완</a><br>
+                    <a href="#">전주(롯데백화점)</a><em></em>
+                    <a href="#">전주평화</a><em></em>
+                    <a href="#">충장로</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">경산</a><em></em>
+                	<a href="#">경주</a><em></em>
+                    <a href="#">구미</a><em></em>
+                    <a href="#">구미공단</a><em></em>
+                    <a href="#">대구광장</a><br>
+                    <a href="#">대구율하</a><em></em>
+                    <a href="#">동성로</a><em></em>
+                    <a href="#">상인</a><em></em>
+                    <a href="#">성서</a><br>
+                    <a href="#">포항</a><em></em>
+                    <a href="#">프리미엄칠곡</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">광복(남포동)</a><em></em>
+                	<a href="#">김해</a><em></em>
+                    <a href="#">부원</a><em></em>
+                    <a href="#">김해아울렛</a><em></em>
+                    <a href="#">동래</a><br>
+                    <a href="#">동부산(아울렛)</a><em></em>
+                    <a href="#">마산(경남대)</a><em></em>
+                    <a href="#">마산터미널</a><br>
+                    <a href="#">부산본점(백화점)</a><em></em>
+                    <a href="#">사상(애플아울렛)</a><br>
+                    <a href="#">서면(NC백화점)</a><em></em>
+                    <a href="#">센텀시티(백화점)</a><em></em>
+                    <a href="#">양산</a><br>
+                    <a href="#">오투(부산대)</a><em></em>
+                    <a href="#">울산(백화점)</a><em></em>
+                    <a href="#">성남</a><em></em>
+                    <a href="#">진주</a><br>
+                    <a href="#">진해</a><em></em>
+                    <a href="#">창원</a><em></em>
+                    <a href="#">통영</a><em></em>
+                    <a href="#">해운대</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">남원주</a><em></em>
+                	<a href="#">동해</a>
+                </li>
+            </ul>
+            <ul class="p_theater">
+            	<li>
+                	<a class="on" href="#">서귀포</a><em></em>
+                	<a href="#">제주</a>
+                </li>
+            </ul>
+        </div>
+        <div class="photo_wrap">
+        	<div class="photo">
+            	<p class="txt">21개 상영관, 총 좌석 4,617석의 아시아 최대규모 영화관!<br>세계 최대 스크린 SUPER PLEX G를 비롯하여, SUPER SOUND관에<br>Dolby Atmos로 생동감 넘치는 사운드를 구현합니다.</p>
+            	<img src="img/cinema_soeul.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">유쾌한 문화 분출구, 롯데시네마 센트럴락 안산관은 안산 최대의 상권인<br>안산 중앙동에 위치하여 스페셜한 인테리어와 함께 주변 100m 내에서<br>모든 즐거움을  만끽할 수 있는 환경속에 자리잡고 있습니다.</p>
+            	<img src="img/cinema_kyeongki.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">롯데시네마 대전관은 대전지역 최초의 멀티플렉스 영화관으로<br>2010년 12월 새단장 공사를 통해 대전에서 가장 넓은<br>최고의 프리미엄 수퍼플렉스G 문화공간으로 재탄생 했습니다.</p>
+            	<img src="img/cinema_choongju.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">롯데백화점 9층에 위치한 롯데시네마 광주는 2012년 5월 리뉴얼을 통해<br>샤롯데관, 프레스티 좌석 ,전관 4Way, DID, 티켓판매기 등<br>최신시스템 도입으로 고객 감동을 실천하고 있습니다.</p>
+            	<img src="img/cinema_jeonla.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">전국 최고의 시설인 프리미엄 칠곡!! 고급스러운 인테리어와<br>프리미엄 쇼파를 전 좌석 도입하였으며, 최신 미디어 장비인 TBA,<br>Now Showing을 설치함으로 다양한 영화 정보를 전달합니다.</p>
+            	<img src="img/cinema_deagu.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">롯데시네마 센텀시티는 부산최초 프리미엄 영화관인 샤롯데와<br>색깔있는 영화를 접하실 수 있는 아르떼, 어린이 연극 및 공연중심의<br>아트플렉스가 들어선 최첨단 명품영화관입니다.</p>
+            	<img src="img/cinema_pusan.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">한반도의 중심부이자 , 강원도의 중심부인 원주에 대한민국 대표<br>문화 공간이 찾아옵니다.  강원지역 최대의 복합 문화공간 롯데시네마<br>남원주. 사랑 행복 감동을 롯데시네마 남원주에서 만나시기 바랍니다.</p>
+            	<img src="img/cinema_kangwon.jpg" alt="">
+            </div>
+            <div class="photo">
+            	<p class="txt">아르떼 센텀시티 특별관 개관으로 세미나에서 프리젠테이션까지!<br>SmartSeat와 테이블이 설치되어 있어 영화 관람뿐만 아니라,<br>기업강연, 기자회견, 발표회 등 다양한 행사가 가능한 상영관입니다.</p>
+            	<img src="img/cinema_jeju.jpg" alt="">
+            </div>
+        </div>
+        <div class="btn_wrap">
+        	<a href="#"><img class="my" src="img/cinema_my.png" alt="">마이 롯데시네마</a>
+            <a href="#"><img class="time" src="img/cinema_time.png" alt="">상영시간표</a>
+        </div>
+        <div class="notice theater">
+            <div><a href="#">롯데시네마 센텀시티를 이용해 주시는 고객님께 감사드리며 안내말씀 드립니다.</a></div>
+            <div><a href="#">&lt;바다탐험대 옥토넛 시즌4 : 빙하탐험선S&gt; 관람고객 대상 선착순 증정되는</a></div>
+            <div><a href="#">당사는 보다 개선된 서비스 제공을 위해 2/1(월) 부터 순차적으로</a></div>
+            <div><a href="#">롯데시네마 회원 약관이 2016년 3월 14일자로 개정되오니</a></div>
+            <div><a href="#">원활한 서비스 제공을 위해 시스템 정기 점검이 있을 예정입니다.</a></div>
+        </div>
+        <div class="banner theater"><a href="#"><img src="img/cinema_banner.jpg" alt=""></a></div>
+        <div class="footer_wrap">
+                <div class="m_banner"><a href="#"><img src="img/room_banner.jpg" alt=""></a></div>
+                <div class="footer">
+                    <a class="pc_btn" href="http://kkminseo.dothome.co.kr/cinema"><strong>PC</strong>버전보기</a>
+                    <a class="app_down" href="#">lotte cinema app down</a>
+                    <div class="info">
+                        <a class="info1" href="#">기업정보</a>
+                        <em></em>
+                        <a class="info1 info2" href="#">개인정보취급방침</a>
+                        <em></em>
+                        <a class="info1" href="#">이메일무단수집거부</a>
+                        <em></em>
+                        <a class="info1" href="#">회원안내</a> 
+                    </div>
+                    <div class="contact">
+                        <img class="map" src="img/footer_map.png" alt="">
+                        <p>서울특별시 송파구 올림픽로 269<br>(신천동, 롯데캐슬) 4층 롯데시네마</p>
+                        <img class="phone" src="img/footer_phone.png" alt="">
+                        <p>고객센터<br>1544-8855</p>
+                    </div>
+                    <div class="info3">
+                        <p>대표이사 이원준<br>사업자등록번호 215-85-13462<br>통신판매업신고번호 제1557호<br>개인정보관리책임자 상무 이관로</p>
+                        <a class="sns" href="#"><img src="img/footer_insta.png" alt=""></a>
+                        <a class="sns" href="#"><img src="img/footer_fb.png" alt=""></a>
+                        <a class="sns" href="#"><img src="img/footer_tw.png" alt=""></a>
+                    </div>  
+                </div>
+            </div>
+    </div>
+</div>        
+</body>
+</html>

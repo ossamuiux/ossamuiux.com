@@ -1,0 +1,913 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ALPENSIA</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*주메뉴*/
+	//아코디언메뉴 - 클릭했을때 펼쳐지고 다시 클릭했을때는 닫아지게
+	//그리고 다른 메뉴를 클릭했을때도 닫아지게
+	$('.gnb li').click(function(){
+		$('.gnb li').not(this).find('.sub').slideUp(200).removeClass('on');
+		$('.gnb li').not(this).find('a').removeClass('on');
+		//console.log($(this).find('.sub').hasClass('on'));
+		//hasClass - 변수를 판단하기 어려울때 가상으로 on을 걸었다 뺐다 하면서
+		//on이 있을때와 없을때를 판단하는 근거로 활용
+		if($(this).find('.sub').hasClass('on')){
+			$(this).find('.sub').removeClass('on').slideUp(200);
+			$(this).find('a').removeClass('on');
+		} else {
+			$(this).find('.sub').addClass('on').slideDown(200);
+			$(this).find('a').addClass('on');
+		}
+	});
+	$('.gnb>li>a').click(function(e){
+		e.preventDefault();
+	});
+	
+	
+	
+	
+	/*search버튼*/
+	$('.search .input_wrap').click(function(e){
+		e.preventDefault();
+		$(this).find('label').hide();
+	});
+	
+	$('.search .input_wrap').focusout(function(e){
+		e.preventDefault();
+		if($(this).find('input').val()==''){
+			$(this).find('label').show();
+		}
+	});
+	
+	$('.header').slimScroll({
+		width:'200px',
+        height: '100%'
+    });
+	//헤더 제이쿼리
+	
+	//주소에서 시/도 선택시 시/군/구 표시
+	$('#selectbox').change(function(){
+		if ($('#selectbox option:selected').val () == "시/도") {
+			$('.add2').hide();
+		}
+		if ($('#selectbox option:selected').val () == "강원") {
+			$('.add2').hide();
+			$('#add_1').show();
+		}
+		if ($('#selectbox option:selected').val () == "경기") {
+			$('.add2').hide();
+			$('#add_2').show();
+		}
+		if ($('#selectbox option:selected').val () == "경남") {
+			$('.add2').hide();
+			$('#add_3').show();
+		}
+		if ($('#selectbox option:selected').val () == "경북") {
+			$('.add2').hide();
+			$('#add_4').show();
+		}
+		if ($('#selectbox option:selected').val () == "광주") {
+			$('.add2').hide();
+			$('#add_5').show();
+		}
+		if ($('#selectbox option:selected').val () == "대구") {
+			$('.add2').hide();
+			$('#add_6').show();
+		}
+		if ($('#selectbox option:selected').val () == "대전") {
+			$('.add2').hide();
+			$('#add_7').show();
+		}
+		if ($('#selectbox option:selected').val () == "부산") {
+			$('.add2').hide();
+			$('#add_8').show();
+		}
+		if ($('#selectbox option:selected').val () == "서울") {
+			$('.add2').hide();
+			$('#add_9').show();
+		}
+		if ($('#selectbox option:selected').val () == "울산") {
+			$('.add2').hide();
+			$('#add_10').show();
+		}
+		if ($('#selectbox option:selected').val () == "인천") {
+			$('.add2').hide();
+			$('#add_11').show();
+		}
+		if ($('#selectbox option:selected').val () == "전남") {
+			$('.add2').hide();
+			$('#add_12').show();
+		}
+		if ($('#selectbox option:selected').val () == "전북") {
+			$('.add2').hide();
+			$('#add_13').show();
+		}
+		if ($('#selectbox option:selected').val () == "제주") {
+			$('.add2').hide();
+			$('#add_14').show();
+		}
+		if ($('#selectbox option:selected').val () == "충남") {
+			$('.add2').hide();
+			$('#add_15').show();
+		}
+		if ($('#selectbox option:selected').val () == "충북") {
+			$('.add2').hide();
+			$('#add_16').show();
+		}
+		//alert ( $("#selectbox option:selected").val () ) 
+	});
+	
+	//이메일에서 직접입력 클릭시 input창 생성
+	$('#emailbox').change(function(){
+		if ($('#emailbox option:selected').val () == "직접입력") {
+			$('.email1').show();
+			$('.email1').focus();
+		} else {
+			$('.email1').hide();
+		}
+	});	
+	
+	
+	//정보 입력 안될시 정보입력 알림 팝업 띄워주기
+	function fnJoin(){
+		if ($('#frm #name').val () == "") {
+			alert('이름을 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #id').val () == "") {
+			alert('아이디를 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #id').val ().length < 5) {
+			alert('아이디는 5자리 이상 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #psw').val () == "") {
+			alert('비밀번호를 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #psw').val ().length < 8) {
+			alert('비밀번호는 8자리 이상 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #psw1').val () == "") {
+			alert('비밀번호 확인을 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #psw').val () != $('#frm #psw1').val ()) {
+			alert('입력하신 비밀번호가 동일하지 않습니다.');
+			return;	
+		}
+		if (!$('#frm #solar').prop('checked') && !$('#frm #lunar').prop('checked')) {
+			alert('양력/음력을 선택해 주세요.');
+			return;	
+		}
+		if (!$('#frm #man').prop('checked') && !$('#frm #woman').prop('checked')) {
+			alert('성별을 선택해 주세요.');
+			return;	
+		}
+		if ($('#frm #num').val () == "") {
+			alert('휴대폰 번호를 입력해 주세요.');
+			return;	
+		}
+		if ($('#frm #num1').val () == "") {
+			alert('휴대폰 번호를 입력해 주세요.');
+			return;	
+		}
+		if ($('#selectbox option:selected').val () == "시/도") {
+			alert('주소를 선택해 주세요.');
+			return;
+		}
+		if ($('#frm #email_1').val () == "") {
+			alert('이메일 주소를 입력해 주세요.');
+			return;	
+		}
+		if ($('#emailbox option:selected').val () == "선택") {
+			alert('이메일 주소를 입력해 주세요.');
+			return;
+		}
+		if ($('#emailbox option:selected').val () == "직접입력" && $('#frm #email_2').val () == "") {
+			alert('이메일 주소를 입력해 주세요.');
+			return;
+		}
+		
+		$("#frm").attr("action", "join_complete.html");
+		$("#frm").submit();
+	}
+	$('.bot_btn1').click(function(e){
+		e.preventDefault();
+		fnJoin();
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<h1><a href="index.html"><img src="img/logo.png" alt="알펜시아"></a></h1>
+    <ul class="gnb">
+    	<li>
+        	<a href="#">온라인예약</a>
+            <ul class="sub">
+            	<li><a href="reservation.html">객실예약</a></li>
+                <li><a href="#">단체예약</a></li>
+                <li><a href="#">골프예약</a></li>
+                <li><a href="#">객실추첨예약</a></li>
+                <li><a href="#">알펜시아시즌권구매</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">이벤트&amp;할인</a>
+            <ul class="sub">
+            	<li><a href="event.html">패키지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">할인</a></li>
+                <li><a href="#">사이버쿠폰할인</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">숙박&amp;컨벤션</a>
+            <ul class="sub">
+            	<li><a href="convention.html">알펜시아 호텔</a></li>
+                <li><a href="#">홀리데이 인&amp;스위트</a></li>
+                <li><a href="#">컨벤션센터</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">레져&amp;편의</a>
+            <ul class="sub">
+            	<li><a href="ski.html">스키 보드</a></li>
+                <li><a href="#">트룬C.C회원제</a></li>
+                <li><a href="#">700골프클럽대중제</a></li>
+                <li><a href="#">오션700</a></li>
+                <li><a href="#">알파인코스터</a></li>
+                <li><a href="#">스포츠파크</a></li>
+                <li><a href="#">스키점프대(전망대)</a></li>
+                <li><a href="#">콘서트홀</a></li>
+                <li><a href="#">생태학습원</a></li>
+                <li><a href="#">뮤직텐트</a></li>
+                <li><a href="#">리테일빌리지</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">리조트소개</a>
+            <ul class="sub">
+            	<li><a href="#">현장소식</a></li>
+                <li><a href="#">홍보관</a></li>
+                <li><a href="#">사이버투어</a></li>
+                <li><a href="#">날씨정보</a></li>
+                <li><a href="#">주변관광안내</a></li>
+                <li><a href="#">종합이용요금</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">대중교통</a></li>
+                <li><a href="#">전화번호</a></li>
+                <li><a href="#">채용정보</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">고객센터</a>
+            <ul class="sub">
+            	<li><a href="notice_list.html">공지사항</a></li>
+                <li><a href="#">분양회원서비스</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">고객의소리</a></li>
+                <li><a href="#">분실물센터</a></li>
+                <li><a href="#">사이트운영정책</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sns_btn">
+    	<li><a href="#"><img src="img/twitter_icon.png" alt="트위터"></a></li>
+        <li><a href="#"><img src="img/facebook_icon.png" alt="페이스북"></a></li>
+        <li><a href="#"><img src="img/blog_icon.png" alt="블로그"></a></li>
+        <li><a href="#"><img src="img/magazine_icon.png" alt="매거진"></a></li>        
+    </ul>
+    <div class="search">
+    	<form action="" method="">
+            <!--form 요소를 묶어주는 그룹태그-->
+            <fieldset>
+            <legend>게시판검색</legend>
+            <div class="input_wrap">
+                <label for="box">Search</label>
+                <input type="text" id="box">
+            </div>
+            <button type="submit">검색버튼</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="top_menu">
+    	<ul class="lnb">
+        	<li><a href="login.html">로그인</a></li>
+            <li><a href="join.html">회원가입</a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/korea.png" alt="한국어"></a></li>
+            <li><a href="#"><img src="img/usa.png" alt="영어"></a></li>
+        </ul>
+        <ul class="language">
+        	<li><a href="#"><img src="img/japan.png" alt="일본어"></a></li>
+            <li><a href="#"><img src="img/china.png" alt="중국어"></a></li>
+        </ul>
+    </div>
+    <div class="footer_wrap">
+    	<ul>
+        	<li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="footer">
+        	<p>강원도 평창군 대관령면<br>솔봉로 325</p>
+            <p>Tel. 033-339-0000</p>
+            <address class="address">
+            Copyright(C)<br>Gangwondo Development<br>Corporation.<br>All Rights Reserved.
+            </address>
+        </div>
+    </div>
+</div>
+<div class="main join join_info">
+	<form id="frm" action="">
+    	<fieldset>
+        	<legend>회원가입(정보입력)</legend>
+			<div class="section">
+                <div class="head">
+                    <h1>회원가입</h1>
+                    <ul>
+                        <li><a href="index.html"><img src="img/home_btn.png" alt="홈버튼"></a></li>
+                        <li class="lst"><a href="join.html">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="tit">
+                    <h3>아직 알펜시아 회원이 아니신가요?</h3>
+                    <p>회원가입을 하시면 보다 다양한 정보를 제공해드립니다.</p>
+                </div>
+            </div>        	
+            <ul class="menu">
+            	<li>STEP 01<br>약관동의</li>
+                <li>STEP 02<br>본인인증</li>
+                <li class="on">STEP 03<br>정보입력</li>
+                <li>STEP 04<br>가입완료</li>
+            </ul>
+            <div class="tit1">
+            	<h3>개인정보 입력</h3>
+                <p>필수입력항목</p>
+            </div>
+            <table>
+            	<tr>
+                    <th><span>필수 입력 항목</span>이름</th>
+                    <td class="name"><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <th><span>필수 입력 항목</span>아이디</th>
+                    <td class="id"><input type="text" class="id1" id="id"><button type="button">중복확인</button></td>
+                </tr>
+                <tr>
+                    <th><span>필수 입력 항목</span>비밀번호</th>
+                    <td class="psw1"><input type="password" id="psw"></td>
+                </tr>
+                <tr class="psw">
+                    <th><span>필수 입력 항목</span>비밀번호 확인</th>
+                    <td class="psw1"><input type="password" id="psw1"><p>비밀번호와 동일하게 입력해주세요.</p></td>
+                </tr>
+                <tr>
+                    <th><span>필수 입력 항목</span>생년월일</th>
+                    <td class="date">
+                    	<select>
+                        	<option>2016년</option>
+                            <option>2015년</option>
+                            <option>2014년</option>
+                            <option>2013년</option>
+                            <option>2012년</option>
+                            <option>2011년</option>
+                            <option>2010년</option>
+                            <option>2009년</option>
+                            <option>2008년</option>
+                            <option>2007년</option>
+                            <option>2006년</option>
+                            <option>2005년</option>
+                            <option>2004년</option>
+                            <option>2003년</option>
+                            <option>2002년</option>
+                            <option>2001년</option>
+                            <option>2000년</option>
+                            <option>1999년</option>
+                            <option>1998년</option>
+                            <option>1997년</option>
+                            <option>1996년</option>
+                            <option>1995년</option>
+                            <option>1994년</option>
+                            <option>1993년</option>
+                            <option>1992년</option>
+                            <option>1991년</option>
+                            <option>1990년</option>
+                            <option>1989년</option>
+                            <option>1988년</option>
+                            <option>1987년</option>
+                            <option>1986년</option>
+                            <option>1985년</option>
+                            <option>1984년</option>
+                            <option>1983년</option>
+                            <option>1982년</option>
+                            <option>1981년</option>
+                            <option>1980년</option>
+                            <option>1979년</option>
+                            <option>1978년</option>
+                            <option>1977년</option>
+                            <option>1976년</option>
+                            <option>1975년</option>
+                            <option>1974년</option>
+                            <option>1973년</option>
+                            <option>1972년</option>
+                            <option>1971년</option>
+                            <option>1970년</option>
+                            <option>1969년</option>
+                            <option>1968년</option>
+                            <option>1967년</option>
+                            <option>1966년</option>
+                            <option>1965년</option>
+                            <option>1964년</option>
+                            <option>1963년</option>
+                            <option>1962년</option>
+                            <option>1961년</option>
+                            <option>1960년</option>
+                            <option>1959년</option>
+                            <option>1958년</option>
+                            <option>1957년</option>
+                            <option>1956년</option>
+                            <option>1955년</option>
+                            <option>1954년</option>
+                            <option>1953년</option>
+                            <option>1952년</option>
+                            <option>1951년</option>
+                            <option>1950년</option>
+                            <option>1949년</option>
+                            <option>1948년</option>
+                            <option>1947년</option>
+                            <option>1946년</option>
+                            <option>1945년</option>
+                            <option>1944년</option>
+                            <option>1943년</option>
+                            <option>1942년</option>
+                            <option>1941년</option>
+                            <option>1940년</option>
+                            <option>1939년</option>
+                            <option>1938년</option>
+                            <option>1937년</option>
+                            <option>1936년</option>
+                            <option>1935년</option>
+                            <option>1934년</option>
+                            <option>1933년</option>
+                            <option>1932년</option>
+                            <option>1931년</option>
+                            <option>1930년</option>
+                            <option>1929년</option>
+                            <option>1928년</option>
+                            <option>1927년</option>
+                            <option>1926년</option>
+                            <option>1925년</option>
+                            <option>1924년</option>
+                            <option>1923년</option>
+                            <option>1922년</option>
+                            <option>1921년</option>
+                            <option>1920년</option>
+                        </select>
+                        <select>
+                        	<option>1월</option>
+                            <option>2월</option>
+                            <option>3월</option>
+                            <option>4월</option>
+                            <option>5월</option>
+                            <option>6월</option>
+                            <option>7월</option>
+                            <option>8월</option>
+                            <option>9월</option>
+                            <option>10월</option>
+                            <option>11월</option>
+                            <option>12월</option>
+                        </select>
+                        <select>
+                        	<option>1일</option>
+                            <option>2일</option>
+                            <option>3일</option>
+                            <option>4일</option>
+                            <option>5일</option>
+                            <option>6일</option>
+                            <option>7일</option>
+                            <option>8일</option>
+                            <option>9일</option>
+                            <option>10일</option>
+                            <option>11일</option>
+                            <option>12일</option>
+                            <option>13일</option>
+                            <option>14일</option>
+                            <option>15일</option>
+                            <option>16일</option>
+                            <option>17일</option>
+                            <option>18일</option>
+                            <option>19일</option>
+                            <option>20일</option>
+                            <option>21일</option>
+                            <option>22일</option>
+                            <option>23일</option>
+                            <option>24일</option>
+                            <option>25일</option>
+                            <option>26일</option>
+                            <option>27일</option>
+                            <option>28일</option>
+                            <option>29일</option>
+                            <option>30일</option>
+                            <option>31일</option>
+                        </select>
+                        <label for="solar"><input type="radio" id="solar" name="agree1">양력</label>
+                        <label for="lunar"><input type="radio" id="lunar" name="agree1">음력</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span>필수 입력 항목</span>성별</th>
+                    <td>
+                        <label for="man"><input type="radio" id="man" name="agree2">남</label>
+                        <label for="woman"><input type="radio" id="woman" name="agree2">여</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span>필수 입력 항목</span>휴대폰 번호</th>
+                    <td class="num">
+                        <select>
+                            <option>010</option>
+                            <option>011</option>
+                            <option>016</option>
+                            <option>017</option>
+                            <option>018</option>
+                            <option>019</option>
+                        </select>
+                        -
+                        <input type="text" id="num" maxlength="4">
+                        -
+                        <input type="text" id="num1" maxlength="4">
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td class="add">
+                        <select class="add1" name="selectbox" id="selectbox">
+                            <option>시/도</option>
+                            <option>강원</option>
+                            <option>경기</option>
+                            <option>경남</option>
+                            <option>경북</option>
+                            <option>광주</option>
+                            <option>대구</option>
+                            <option>대전</option>
+                            <option>부산</option>
+                            <option>서울</option>
+                            <option>울산</option>
+                            <option>인천</option>
+                            <option>전남</option>
+                            <option>전북</option>
+                            <option>제주</option>
+                            <option>충남</option>
+                            <option>충북</option>
+                        </select>
+                        <select class="add2" id="add_1">
+                        	<option>시/군/구</option>
+                            <option>강릉시</option>
+                            <option>고성군</option>
+                            <option>동해시</option>
+                            <option>삼척시</option>
+                            <option>속초시</option>
+                            <option>양구군</option>
+                            <option>양양군</option>
+                            <option>영월군</option>
+                            <option>원주시</option>
+                            <option>인제군</option>
+                            <option>정선군</option>
+                            <option>철원군</option>
+                            <option>춘천시</option>
+                            <option>태백시</option>
+                            <option>평창군</option>
+                            <option>홍천군</option>
+                            <option>화천군</option>
+                            <option>횡성군</option>
+                        </select>
+                        <select class="add2" id="add_2">
+                        	<option>시/군/구</option>
+                            <option>가평군</option>
+                            <option>과천시</option>
+                            <option>광명시</option>
+                            <option>광주시</option>
+                            <option>구리시</option>
+                            <option>군포시</option>
+                            <option>김포시</option>
+                            <option>시흥시</option>
+                            <option>안성시</option>
+                            <option>양주시</option>
+                            <option>양평군</option>
+                            <option>여주군</option>
+                            <option>연천군</option>
+                            <option>오산시</option>
+                            <option>의왕시</option>
+                            <option>이천시</option>
+                            <option>파주시</option>
+                            <option>평택시</option>
+                            <option>포천시</option>
+                            <option>하남시</option>
+                            <option>남양주시</option>
+                            <option>동두천시</option>
+                            <option>의정부시</option>
+                            <option>고양시 덕양구</option>
+                            <option>부천시 소사구</option>
+                            <option>부천시 오정구</option>
+                            <option>부천시 원미구</option>
+                            <option>성남시 분당구</option>
+                            <option>성남시 수정구</option>
+                            <option>성남시 중원구</option>
+                            <option>수원시 권선구</option>
+                            <option>수원시 영통구</option>
+                            <option>수원시 장안구</option>
+                            <option>수원시 팔달구</option>
+                            <option>안산시 단원구</option>
+                            <option>안산시 상록구</option>
+                            <option>안양시 동안구</option>
+                            <option>안양시 만안구</option>
+                            <option>용인시 기흥구</option>
+                            <option>용인시 수지구</option>
+                            <option>용인시 처인구</option>
+                            <option>고양시 일산동구</option>
+                            <option>고양시 일산서구</option>
+                        </select>
+                        <select class="add2" id="add_3">
+                        	<option>시/군/구</option>
+                            <option>거제시</option>
+                            <option>거창군</option>
+                            <option>고성군</option>
+                            <option>김해시</option>
+                            <option>남해군</option>
+                            <option>밀양시</option>
+                            <option>사천시</option>
+                            <option>산청군</option>
+                            <option>양산시</option>
+                            <option>의령군</option>
+                            <option>진주시</option>
+                            <option>창녕군</option>
+                            <option>통영시</option>
+                            <option>하동군</option>
+                            <option>함안군</option>
+                            <option>함양군</option>
+                            <option>합천군</option>
+                            <option>창원시 성산구</option>
+                            <option>창원시 의창구</option>
+                            <option>창원시 진해구</option>
+                            <option>창원시 마산합포구</option>
+                            <option>창원시 마산회원구</option>
+                        </select>
+                        <select class="add2" id="add_4">
+                        	<option>시/군/구</option>
+                            <option>경산시</option>
+                            <option>경주시</option>
+                            <option>고령군</option>
+                            <option>구미시</option>
+                            <option>군위군</option>
+                            <option>김천시</option>
+                            <option>문경시</option>
+                            <option>봉화군</option>
+                            <option>상주시</option>
+                            <option>성주군</option>
+                            <option>안동시</option>
+                            <option>영덕군</option>
+                            <option>영양군</option>
+                            <option>영주시</option>
+                            <option>영천시</option>
+                            <option>예천군</option>
+                            <option>울릉군</option>
+                            <option>울진군</option>
+                            <option>의성군</option>
+                            <option>청도군</option>
+                            <option>청송군</option>
+                            <option>칠곡군</option>
+                            <option>포항시 남구</option>
+                            <option>포항시 북구</option>
+                        </select>
+                        <select class="add2" id="add_5">
+                        	<option>시/군/구</option>
+                            <option>남구</option>
+                            <option>동구</option>
+                            <option>북구</option>
+                            <option>서구</option>
+                            <option>광산구</option>
+                        </select>
+                        <select class="add2" id="add_6">
+                        	<option>시/군/구</option>
+                            <option>남구</option>
+                            <option>동구</option>
+                            <option>북구</option>
+                            <option>서구</option>
+                            <option>중구</option>
+                            <option>달서구</option>
+                            <option>달성군</option>
+                            <option>수성구</option>
+                        </select>
+                        <select class="add2" id="add_7">
+                        	<option>시/군/구</option>
+                            <option>동구</option>
+                            <option>서구</option>
+                            <option>중구</option>
+                            <option>대덕구</option>
+                            <option>유성구</option>
+                        </select>
+                        <select class="add2" id="add_8">
+                        	<option>시/군/구</option>
+                            <option>남구</option>
+                            <option>동구</option>
+                            <option>북구</option>
+                            <option>서구</option>
+                            <option>중구</option>
+                            <option>강서구</option>
+                            <option>금정구</option>
+                            <option>기장군</option>
+                            <option>동래구</option>
+                            <option>사상구</option>
+                            <option>사하구</option>
+                            <option>수영구</option>
+                            <option>연제구</option>
+                            <option>영도구</option>
+                            <option>부산진구</option>
+                            <option>해운대구</option>
+                        </select>
+                        <select class="add2" id="add_9">
+                        	<option>시/군/구</option>
+                            <option>중구</option>
+                            <option>강남구</option>
+                            <option>강동구</option>
+                            <option>강북구</option>
+                            <option>강서구</option>
+                            <option>관악구</option>
+                            <option>광진구</option>
+                            <option>구로구</option>
+                            <option>금천구</option>
+                            <option>노원구</option>
+                            <option>도봉구</option>
+                            <option>마포구</option>
+                            <option>서초구</option>
+                            <option>성동구</option>
+                            <option>성북구</option>
+                            <option>송파구</option>
+                            <option>양천구</option>
+                            <option>용산구</option>
+                            <option>은평구</option>
+                            <option>종로구</option>
+                            <option>중랑구</option>
+                            <option>동대문구</option>
+                            <option>서대문구</option>
+                            <option>영등포구</option>
+                        </select>
+                        <select class="add2" id="add_10">
+                        	<option>시/군/구</option>
+                            <option>남구</option>
+                            <option>동구</option>
+                            <option>북구</option>
+                            <option>중구</option>
+                            <option>울주군</option>
+                        </select>
+                        <select class="add2" id="add_11">
+                        	<option>시/군/구</option>
+                            <option>남구</option>
+                            <option>동구</option>
+                            <option>서구</option>
+                            <option>중구</option>
+                            <option>강화군</option>
+                            <option>계양구</option>
+                            <option>남동구</option>
+                            <option>부평구</option>
+                            <option>연수구</option>
+                            <option>옹진군</option>
+                        </select>
+                        <select class="add2" id="add_12">
+                        	<option>시/군/구</option>
+                            <option>강진군</option>
+                            <option>고흥군</option>
+                            <option>곡성군</option>
+                            <option>광양시</option>
+                            <option>구례군</option>
+                            <option>나주시</option>
+                            <option>담양군</option>
+                            <option>목포시</option>
+                            <option>무안군</option>
+                            <option>보성군</option>
+                            <option>순천시</option>
+                            <option>신안군</option>
+                            <option>여수시</option>
+                            <option>영광군</option>
+                            <option>영암군</option>
+                            <option>완도군</option>
+                            <option>장성군</option>
+                            <option>장흥군</option>
+                            <option>진도군</option>
+                            <option>함평군</option>
+                            <option>해남군</option>
+                            <option>화순군</option>
+                        </select>
+                        <select class="add2" id="add_13">
+                        	<option>시/군/구</option>
+                            <option>고창군</option>
+                            <option>군산시</option>
+                            <option>김제시</option>
+                            <option>남원시</option>
+                            <option>무주군</option>
+                            <option>부안군</option>
+                            <option>순창군</option>
+                            <option>완주군</option>
+                            <option>익산시</option>
+                            <option>임실군</option>
+                            <option>중수군</option>
+                            <option>정읍시</option>
+                            <option>진안군</option>
+                            <option>전주시 덕진구</option>
+                            <option>전주시 완산구</option>
+                        </select>
+                        <select class="add2" id="add_14">
+                        	<option>시/군/구</option>
+                            <option>제주시</option>
+                            <option>서귀포시</option>
+                        </select>
+                        <select class="add2" id="add_15">
+                        	<option>시/군/구</option>
+                            <option>계룡시</option>
+                            <option>공주시</option>
+                            <option>금산군</option>
+                            <option>논산시</option>
+                            <option>당진군</option>
+                            <option>보령시</option>
+                            <option>부여군</option>
+                            <option>서산시</option>
+                            <option>서천군</option>
+                            <option>아산시</option>
+                            <option>연기군</option>
+                            <option>예산군</option>
+                            <option>청양군</option>
+                            <option>태안군</option>
+                            <option>홍성군</option>
+                            <option>천안시 동남구</option>
+                            <option>천안시 서북구</option>
+                        </select>
+                        <select class="add2" id="add_16">
+                        	<option>시/군/구</option>
+                            <option>괴산군</option>
+                            <option>단양군</option>
+                            <option>보은군</option>
+                            <option>영동군</option>
+                            <option>옥천군</option>
+                            <option>음성군</option>
+                            <option>제천시</option>
+                            <option>중평군</option>
+                            <option>진천군</option>
+                            <option>천원군</option>
+                            <option>충주시</option>
+                            <option>청주시 상당구</option>
+                            <option>청주시 흥덕구</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="lst">
+                    <th>이메일</th>
+                    <td class="email">
+                    	<input type="text" id="email_1">
+                        @
+                        <input type="text" class="email1" id="email_2">
+                        <select class="email" name="emailbox" id="emailbox">
+                            <option>선택</option>
+                            <option>naver.com</option>
+                            <option>hanmail.net</option>
+                            <option>daum.net</option>
+                            <option>nate.com</option>
+                            <option>gmail.com</option>
+                            <option>hotmail.com</option>
+                            <option>직접입력</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="bot_btn">
+                 <a href="#" class="bot_btn1">가입</a>
+                 <a href="index.html">취소</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+
+

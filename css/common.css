@@ -1,0 +1,213 @@
+@charset "UTF-8";
+*,:before,:after {box-sizing: border-box}
+
+html,body {height: 100%;}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,code,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,footer,header,hgroup,menu,nav,section,main,audio,video {margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,.1)}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {display: block}
+
+body {line-height: 1.5; -webkit-text-size-adjust:none}
+button,input {border-radius: 0}
+button {cursor: pointer}
+fieldset,img {border: 0; vertical-align: top}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none; color: #1c1c1c}
+iframe {overflow: hidden; border: 0}
+table {border-collapse: collapse; border-spacing: 0; width: 100%}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%}
+input,select,textarea,button {vertical-align: middle; margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,.1);}
+textarea {resize: none}
+
+/* legend,caption,메뉴제목,섹션제목 블라인드 */
+.blind {position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px}
+
+/* 포커스시 점선 */
+textarea:focus,select:focus,button:focus,[type="checkbox"]:focus,[type="radio"]:focus,[tabindex]:focus,[href]:focus {outline: 1px dotted #000}
+
+/* 아이폰 인풋 자동확대 방지 */
+input[type="text"],input[type="password"],textarea {font-size:16px}
+
+/* Skip Navgation */
+#skipNavi {position: relative;}
+#skipNavi a {display:block;position:absolute; left:0; top:-999px; transition:all 0.5s; width:100%; padding:10px 0; background:#fff; z-index:99999; text-align:center}
+#skipNavi a:hover, #skipNavi a:active, #skipNavi a:focus {top:0}
+
+body,input,select,textarea,button,table {
+    font-family:'Open Sans','Noto Sans KR','맑은 고딕','malgun gothic',sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    color: #1c1c1c;
+}
+
+
+/* 테이블 공통 */
+table.tbl_con {width: 100%;margin: 15px 0;font-size: 16px;text-align: left;color: #666;}
+table.tbl_con thead th {border-top: 4px solid #009223;border-bottom: 1px solid #009223;color: #009223;}
+table.tbl_con th,table.tbl_con td {padding: 15px 0 15px 10px;border-bottom: 1px solid #d1d1d1;vertical-align: middle;}
+table.tbl_con tfoot {color: #292929;background: #f6f6f6;}
+table.tbl_con .tr2 th,table.tbl_con .tr2 td {padding-top:7px;padding-bottom: 7px;}
+
+/* 폼요소 공통 */
+input[type="text"] {height: 45px;background: #f8f8f8;width:100%;border: none;outline: none;padding-left: 15px;color: #292929;font-size: 16px;}
+
+/*.select_wrap {position: relative;display: inline-block;}
+.select_wrap:before {content: '';position: absolute;right: 15px;top: 50%;margin-top: -4px;width:12px;height: 7px;background: url(../images/icon_select_arr.png) no-repeat;background-size:12px;}*/
+select {
+    width:132px;
+    height: 45px;
+    border: 2px solid #dddddd;
+    outline: none;
+    font-size: 16px;
+    color: #999;
+    padding-left: 15px;
+    letter-spacing: -0.05em;
+    background: #fff;
+    border-radius: 0;
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none;    /* 화살표 없애기 for firefox*/
+    appearance: none;         /* 화살표 없애기 공통*/
+}
+select::-ms-expand {display:none;}
+
+textarea {width:100%;height: 200px;padding: 12px 15px;font-size: 16px;color: #292929;outline: none;background: #f8f8f8;border: none;border-radius: 0;}
+
+/* file 커스텀 */
+/*.file_wrap {position: relative;}
+.file_wrap:before {content: '';position: absolute;right: 96px;top: 50%;margin-top: -8px;width:2px;height: 16px;background: #e8e8e8;}
+input[type="file"] {
+    width:98px;
+    height: 41px;
+    margin-left: -4px;
+    opacity: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    position: relative;
+    z-index: 10;
+}
+.file_wrap:after {content: '파일선택';position: absolute;right: 19px;top: 50%;margin-top: -13px;font-size: 16px;color: #009223;cursor: pointer;}*/
+
+/* 체크박스 커스텀 */
+label {font-size: 16px;color: #292929;cursor: pointer;padding-left: 40px;position: relative;line-height: 30px;display: inline-block;}
+label:before {content: '';position: absolute;left: 0;top: 0;width:26px;height: 26px;border:2px solid #e0e0e0;border-radius: 100%;}
+/*label:after {content: '';position: absolute;left: 6px;top: 3px;width:0px;height: 19px;background: url(../images/icon_checkbox.png) no-repeat;background-size: 24px;transition: all 0.3s;}*/
+input[type="checkbox"]:checked+label:after {
+    width:24px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* 선택영역 */
+::-moz-selection {background: #e91e63; color:#fff;}
+::selection {background: #e91e63; color:#fff;}
+
+
+
+
+#wrap {min-width: 360px; position: relative; height: 100%; overflow: hidden;}
+
+/* 모바일 landscape 팝업 */
+#landscapePopup {display: none;}
+
+#cursorCir {width:6px;height: 6px;position: absolute;border-radius: 100%;border: 3px solid #e91e63;left: -6px;top: -6px;box-sizing: content-box;}
+
+/* header */
+#header {position: fixed; left: 0; top: 0; height: 100%; min-height: 360px; width: 42px; z-index: 9999;}
+
+/* header 애니메이션 */
+@keyframes moveHeader {
+    50% {transform: translateX(-100%);}
+}
+@keyframes moveHeader2 {
+    50% {transform: translateX(-100%);}
+}
+#header .header_inner {position: absolute; left: 0; top: 0; z-index: 100; width: 42px; height: 100%; border-right: 1px solid #e5e5e5; background: #fff; transition: all 0s 0.25s;}
+#header.on .header_inner {animation: moveHeader 0.5s; background: #1e1f24; border-right-color: #35363a;}
+#header.on2 .header_inner {animation: moveHeader2 0.5s;}
+
+/* 로고 컬러 애니메이션*/
+#header .header_inner .logo {transform: rotateZ(-90deg);position: absolute;left: -30px;top: 30px;}
+#header .header_inner .logo a {display: block; line-height: 41px; padding-right: 19px; transition: all 0s 0.25s; font-size: 16px; font-weight: 700;}
+#header .header_inner .logo em {color: #e91e63; transition: all 0s 0.25s;}
+#header.on .header_inner .logo a {color:#fff;}
+#header.on .header_inner .logo em {color: #9E9E9E;}
+
+#header .header_inner .btn_gnb {height:100%; border: none; background: none; width: 100%; outline: none;}
+#header .header_inner .btn_gnb .line {display: inline-block; width:2px; height: 30px; background: #979797; margin: 0 1px;}
+
+/* gnb_wrap 애니메이션*/
+#header .gnb_wrap {width:74vw; height: 100%; background: #1e1f24; transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1); transform: translateX(-100%); padding-left: 75px;}
+#header.on .gnb_wrap {transform: translateX(0); transition: all 0.7s 0.25s cubic-bezier(0.19, 1, 0.22, 1);}
+
+#header .gnb_wrap .contact {float: right; margin: 12px 5% 0 0; color: #a3a3a3; font-size: 13px; line-height: 1.4;}
+#header .gnb_wrap .contact h3 {float: left; margin-right: 40px; color: #fff;}
+#header .gnb_wrap .contact p {float: left; margin-right: 20px;}
+#header .gnb_wrap .contact a {width:90px;}
+
+/* gnb_wrap 링크 공통 애니메이션*/
+#header .gnb_wrap a {position: relative; display: inline-block; color: #a3a3a3;}
+#header .gnb_wrap a:after {content: '';position: absolute;left: 0;bottom: 1px;width:0;height: 1px;background: #a3a3a3; transition: all 0.3s;}
+#header .gnb_wrap a:hover:after {width:100%;}
+
+#header .gnb_wrap .bottom_gnb {position: absolute; left: 75px; top: 50%; margin-top: -30px; height: 52%;}
+#header .gnb_wrap .bottom_gnb .gnb a {
+    color: #fff;
+    font-size: 5vh;
+    line-height: 1.2;
+}
+#header .gnb_wrap .bottom_gnb .gnb a:after {background: #fff; bottom: 5px;}
+
+/* sns */
+#header .gnb_wrap .bottom_gnb .sns {margin-top: 70px;}
+
+#header .gnb_wrap .bottom_gnb .copy {color: #a3a3a3; position: absolute; left: 0; bottom: 0; font-size: 13px; white-space: nowrap;}
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width:767px) {
+    #header .gnb_wrap {padding-left: 58px;}
+    #header .gnb_wrap .contact p {margin-right: 0; margin-bottom: 10px;}
+    #header .gnb_wrap .contact p:nth-child(3) {margin-left:80px;}
+    
+    #header .gnb_wrap .bottom_gnb {margin-top: -22px; left: 58px;}
+    #header .gnb_wrap .bottom_gnb .gnb a {font-size: 5vw;}
+}
+
+/* 모바일 landscape 팝업(갤럭시 노트4 853 + 액션바 60) */
+@media screen and (max-width:920px) and (orientation:landscape) {
+    #landscapePopup {display: block; position: fixed; left: 0; top: 0; width:100%; height: 100%; background: #000 url(../images/rotate.jpg) no-repeat 50% 50%; z-index: 99999;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

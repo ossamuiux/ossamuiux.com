@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>장선아_포트폴리오</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/circle.js"></script>
+<script>
+$(function(){
+	//$('.header li a').on('mouseover',function(){
+			//$('header li .line1').animate({'left':'100px'});
+	//});
+	//$('.header li a').on('mouseout',function(){
+			//$('header li .line1').animate({'left':'0px'});
+	//});
+	
+	
+	
+	///////////////////탭메뉴////////////////////////////////////
+	$('.main .tab:gt(0)').hide()
+	$('.header .line').hide()
+	
+	var num;
+	$('.header li').click(function(){
+		num=$(this).index(); 
+		//console.log(num);
+		$('.main_wrap .main .tab').hide() // 초기화, 전부다 끄라 라는 명령
+		$('.main_wrap .main .tab').eq(num).show(); //num을 누른것만 보여줘라
+		
+		$('.header .line').hide() // 초기화, 전부다 끄라 라는 명령
+		$('.header .line').eq(num).show(); //num을 누른것만 보여줘라
+
+		//탭버튼의 모든 a에 걸린 on클래스 제거
+		$('.header li').removeClass('on').removeClass('line')
+		//클릭한 버튼 a에 on클래스를 추가
+		$(this).find('li').addClass('on') /*on을 a에다가 걸었기때문에*/
+		//$(this).find('span').addClass('line')
+		
+	//$('this').mouseover(function(){
+		//$('header li .line').animate({'left':'100px'});
+	//});
+		
+	});
+	
+	/////////////////////////스킬 바 액션 /////////////////////////////////////
+	var num3;
+	
+	$(window).scroll(function(e){
+			num3=$(this).scrollTop();
+			
+			if (num3>=500){
+				$('.tab_b2 .about_in_wrap .photo_per').stop().animate({'width':'690px'},600);
+				$('.tab_b2 .about_in_wrap .illu_per').stop().animate({'width':'680px'},600);
+				$('.tab_b2 .about_in_wrap .cod_per').stop().animate({'width':'550px'},600);
+				$('.tab_b2 .about_in_wrap .jquery_per').stop().animate({'width':'200px'},600);
+			}
+			if(num3<600){
+				$('.tab_b2 .about_in_wrap .photo_per').css({'width':'0px'});
+				$('.tab_b2 .about_in_wrap .illu_per').css({'width':'0px'});
+				$('.tab_b2 .about_in_wrap .cod_per').css({'width':'0px'});
+				$('.tab_b2 .about_in_wrap .jquery_per').css({'width':'0px'});
+			}
+	});
+	
+	////////////////////////////////프로젝트 클릭했을때 팝업 ////////////////////////////////////
+	
+	
+	$('.project_p .tab_b .tab_wrap .more_btn .btn1').click(function(e){
+			e.preventDefault(); //올라가지않게 하는 방법
+				$('.main_wrap .main .more_popup').show();
+		});
+	$('.main_wrap .main .more_popup').click(function(){  /*popup을 눌렀을때 팝업창 끄기*/
+			$(this).hide();
+		});
+	
+	
+	
+	
+	
+	
+	////////////////////////////////콘텍트 폰케이스 ////////////////////////////////////
+	
+
+
+	
+	
+	$('.header_wrap .header .contact').click(function(){
+		$('.main_wrap .contact_p .contact_infor .case').stop().animate({'top':'150px'},600).animate({'top':'80px'},600);
+	});
+	
+	$('.header_wrap .header li').not('.contact').click(function(){
+		$('.main_wrap .contact_p .contact_infor .case').css({'top':'-1200px'});
+	});
+	
+	
+	
+	
+	//$('.header_wrap .header .about').click(function(){
+		//$('.header_wrap').css({'background':'white'});
+	//});
+	
+	
+	
+	
+	
+
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<h1></h1>
+    <ul class="header">
+    	<li class="home on">
+            <a href="#"><img src="img/about.png" alt="나의소개"></a>
+        </li>
+        <li class="about">
+            <a href="#"><img src="img/about.png" alt="나의소개"></a>
+            <span></span>
+        </li>
+        <li class="project">
+            <a href="#"><img src="img/project.png" alt="프로젝트"></a>
+            <span></span>
+        </li>
+        <li class="prot">
+            <a href="#"><img src="img/portfolio.png" alt="포트폴리오"></a>
+            <span></span>
+        </li>
+        <li class="contact">
+            <a href="#" class="last"><img src="img/contact.png" alt="콘텍트"></a>
+            <span></span>
+        </li>
+    </ul>
+</div>
+<div class="main_wrap">
+ <div class="main">
+    <div class="tab main_f">
+     	<img class="main_5" src="img/main_5.png" alt="">
+     	<h1><img src="img/logo.png" alt=""></h1>
+    </div>
+    <div class="tab tab2 about_p">
+    	<div class="about_wrap">
+        </div>
+        <div class="section_1">
+            <div class="section_img">
+                <img src="img/tip034t025160.jpg" alt="">
+            </div>
+            <div class="arrow">
+       		</div>
+            <div class="section_txt_wrap">
+                <div class="txt">
+                    <p>안녕하세요 안녕하세요</p>
+                </div>
+            </div>
+        </div>
+        <div class="section_1">
+            <div class="section_img">
+                <img src="img/tip034t025160.jpg" alt="">
+            </div>
+            <div class="arrow">
+       		</div>
+            <div class="section_txt_wrap">
+                <div class="txt">
+                    <p>안녕하세요 안녕하세요</p>
+                </div>
+            </div>
+        </div>
+        <span class="cir1"></span>
+        <span class="cir2"></span>
+   	</div>
+    <div class="tab tab2 project_p">
+        <div class="tab_b">
+            <div class="tab_wrap">
+            	<img src="img/roseme.png" alt="로즈미 이미지">
+                <div class="more_btn">
+                	<a class="btn1" href="#"><img src="img/review_btn.png" alt="더보기"><span class="more_arrow"><img src="img/review_arrow.png" alt=""></span></a>
+                    <a class="link_btn" href="roseme/index.html" target="_blank">로즈미 리뉴얼 사이트</a>
+                </div>
+                <img class="concept" src="img/concept.png" alt="콘셉트">
+         	</div>
+            <span class="cir3"></span>
+        	<span class="cir4"></span>
+            
+        </div>
+     </div>
+     <div class="more_popup">
+            <div class="more">
+            	<ul class="roseme_main">
+                	<li><img src="img/project_main.jpg" alt="로즈미 메인"></li>
+                    <li><img src="img/project_sang.jpg" alt="로즈미 상세페이지"></li>
+                    <li><img src="img/project_list.jpg" alt="로즈미 상세페이지"></li>
+                    <li><img src="img/project_member.jpg" alt="로즈미 회원가입"></li>
+                    <li><img src="img/project_login.jpg" alt="로즈미 로그인"></li>
+                </ul>
+            </div>
+    </div>
+    <div class="tab tab2 prot_p">
+      	<div class="tab_b">
+            	<div class="prot_in_wrap">
+            	<ul class="box box1">
+                    <li><img src="img/port/a_target.jpg" alt=""></li>
+                    <li><img src="img/port/a_unteacher.jpg" alt=""></li>
+                    <li><img src="img/port/a_unteacher2.jpg" alt=""></li>
+                    <li><img src="img/port/a_lamon.jpg" alt=""></li>
+                    <li class="last"><img src="img/port/a_pride.jpg" alt=""></li>
+                </ul>
+                <ul class="box box2">
+                    <li><img src="img/port/a_music1.jpg" alt=""></li>
+                    <li><img src="img/port/a_lue.jpg" alt=""></li>
+                    <li><img src="img/port/a_engl.jpg" alt=""></li>
+                    <li><img src="img/port/a_kim.jpg" alt=""></li>
+                    <li class="last"><img src="img/port/a_kim2.jpg" alt=""></li>
+                </ul>
+                <ul class="box box3">
+                    <li><img src="img/port/a_isori.jpg" alt=""></li>
+                    <li><img src="img/port/a_hello.jpg" alt=""></li>
+                    <li><img src="img/port/a_hello2.jpg" alt=""></li>
+                    <li><img src="img/port/a_grace.jpg" alt=""></li>
+                    <li class="last"><img src="img/port/a_abc.jpg" alt=""></li>
+                </ul>
+                <ul class="box box4">
+                    <li><img src="img/port/a_arrow.jpg" alt=""></li>
+                    <li><img src="img/port/a_green.jpg" alt=""></li>
+                    <li><img src="img/port/a_ko.jpg" alt=""></li>
+                    <li><img src="img/port/a_open2.jpg" alt=""></li>
+                    <li class="last"><img src="img/port/a_open3.jpg" alt=""></li>
+                </ul>
+                <ul class="box box5">
+                    <li><img src="img/port/b_summer.jpg" alt=""></li>
+                    <li><img src="img/port/b_best.jpg" alt=""></li>
+                    <li><img src="img/port/b_marry.jpg" alt=""></li>
+                    <li><img src="img/port/b_merci.jpg" alt=""></li>
+                    <li class="last"><img src="img/port/b_shose.jpg" alt=""></li>
+                </ul>
+                <ul class="box box6">
+                    <li><img src="img/port/b_shose2.jpg" alt=""></li>
+                    <li><img src="img/port/b_jewerly.jpg" alt=""></li>
+                    <li><img src="img/port/b_jewerly2.jpg" alt=""></li>
+                    <li><img src="img/port/b_jewerly3.jpg" alt=""></li>
+                    <li class="last"><img src="img/port/b_shose3.jpg" alt=""></li>
+                </ul>
+        	</div>
+      	</div>
+     </div>
+    <div class="tab contact_p">
+        <iframe class="con_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.4708639409336!2d127.06439106558652!3d37.66164227643285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb9173232e587%3A0x9a942ae792326131!2z7ISc7Jq47Yq567OE7IucIOuFuOybkOq1rCDtlZzquIDruYTshJ3roZw0N-q4uA!5e0!3m2!1sko!2skr!4v1448718579938" frameborder="0" style="border:0" allowfullscreen></iframe>
+     	<div class="contact_infor">
+        	<img class="case" src="img/iphone-red.png" alt="">
+            <div class="txt2">
+            	<img src="img/me.png" alt="">
+            </div>
+        </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*******************************헤더************************************/
+.header { height:50px; background:#1abc9c; position:relative; }
+
+/*모바일 버튼*/
+.header .m_btn { float:left; background-size:30px; position:absolute; left:10px; top:10px;}
+.header .m_btn img {width:30px; height:30px;}
+
+
+.header .m_gnb { position:fixed; left:-250px; top:50px; width:250px; height:100%; background:#efefef; z-index:11;}
+/*로그인 버튼*/
+.header .m_gnb .login { height:80px; background:#FFF; }
+.header .m_gnb .login li {float:left; background:url(../img/login_btn.png) no-repeat center 13px; background-size:25px; width:25%; text-align:center; cursor:pointer;} 
+.header .m_gnb .login li:nth-child(2) {background-image:url(../img/membership_btn.png); background-size:22px;}
+.header .m_gnb .login li:nth-child(3) {background-image:url(../img/mypage_btn.png); background-size:30px;}
+.header .m_gnb .login li:nth-child(4) {background-image:url(../img/cart_btn.jpg); background-size:32px;}
+.header .m_gnb .login li a {font-size:11px; display:inline-block; margin-top:52px; color:#262626;}
+
+/*gnb*/
+
+.header .m_gnb .gnb>li { border-bottom:10px solid #FFF; line-height:36px;}
+.header .m_gnb .gnb>li>a {font-size:15px; color:#262626; background:url(../img/arrow-bottom_btn.png) no-repeat 95% center; display:block; background-size:15px; margin-left:10px;}
+
+.header .m_gnb .gnb>li>a.on {background:url(../img/arrow-bottom_btn_on.png) no-repeat 95% center; background-size:15px;}
+
+.header .m_gnb .gnb .sub { display:none; background:#FFF;}
+.header .m_gnb .gnb .sub li {border-bottom:1px solid #e7e7e7;}
+.header .m_gnb .gnb .sub li a {font-size:12px; color:#262626; display:block; margin-left:10px;}
+
+
+
+/*로고*/
+.header h1 {position:absolute; left:50%; top:15px; margin-left:-86px;}
+.header h1 img { width:172px;}
+
+/*검색벝튼*/
+.header .search_btn { position:absolute; right:10px; top:10px;}
+.header .search_btn img {width:30px; height:30xp;}
+
+.header .cover {background:#000; position:fixed; left:0; top:50px; width:100%; height:100%; opacity:0.6; display:none; z-index:10;}
+
+
+/***********************************풋터**************************************/
+.footer {width:100%; background:#FFF; overflow:hidden;}
+
+/*풋터 상단바*/
+.footer .footer_top {height:30px; background:#e7e7e7; overflow:hidden;}
+.footer .footer_top li {width:25%; text-align:center; float:left; line-height:30px; background:url(../img/footer_line.gif) no-repeat left center; background-size:1px; cursor:pointer;}
+.footer .footer_top li:first-child {background:none;}
+.footer .footer_top li a {font-size:13px; color:#656565; font-weight:700;}
+.footer .footer_top li:nth-child(4) a { color:#1abc9c;}
+
+
+/*풋터 하단 설명*/
+
+.footer .footer_bottom { width:100%; position:relative; overflow:hidden;}
+.footer .footer_bottom .logo {text-align:center; display:block; margin-top:20px;}
+.footer .footer_bottom .tit { text-align:center; display:block; margin-top:20px; font-size:15px; color:#1abc9c;}
+
+
+.footer .footer_bottom p {font-size:11px; color:#656565; margin-top:20px; text-align:center;}
+.footer .footer_bottom p span {color:#1abc9c;}
+.footer .footer_bottom .copy {font-size:10px; margin-bottom:10px;}
+

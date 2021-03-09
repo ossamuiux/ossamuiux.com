@@ -1,0 +1,983 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>제품카테고리 과일</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/store_search.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="pa.ico">
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/storebox.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- <style type="text/css">.main_visual .slider .slider1, .slider2, .slider3 {background-attachment:fixed;}</style> -->
+<script>
+$(document).ready(function(){
+	
+	//버튼클릭시 슬라이드해서 보이기
+	var sw=0;
+	$('.news_wrap .more').click(function(e){
+		e.preventDefault();
+		if(sw==0){
+			$('.slide_box1').fadeIn(100).slideDown({'bottom':'362px'},1000);
+
+
+		sw=1;		
+		} else if(sw==1) {
+			$('.slide_box2').fadeIn(100).slideDown({'bottom':'362px'},1000);
+
+		sw=2;
+		} else {
+			$('.slide_box1, .slide_box2').slideUp({'bottom':'0px'},2000);
+
+		sw=0;
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div id="quick_menu_wrap">
+	<a class="quick_cancel" href="#">닫기</a>
+	<div class="quick_menu">
+		<div class="quick_ico">
+			<h1><a class="quick_ico1" href="#"></a>카테고리</h1>
+			<h1><a class="quick_ico1 quick_ico2" href="#"></a>싱싱팜톡</h1>
+			<h1><a class="quick_ico1 quick_ico3" href="#"></a>나의농장</h1>
+			<h1><a class="quick_ico1 quick_ico4" href="store_search.html"></a>다팜소개</h1>
+			<h1><a class="quick_ico1 quick_ico5" href="#"></a>다팜소식</h1>
+		</div>
+		<h2>
+			<a href="#">가까운매장</a>
+			<a href="#">친환경인증확인</a>
+			<a href="#">고객지원</a>
+			<img src="images/logo_white.png" alt="">
+		</h2>
+	</div>	
+</div>
+<div class="quick_cart_firstwrap">
+	<div id="quick_cart_wrap">
+		<div class="quick_cart">
+			<div class="cart_prod_wrap">
+				<div class="cart_prod">
+					<div class="prod_txt_left">
+						<h1>목장우유(PET) 900ML</h1>
+						<p>자연드림 수유점</p>
+						<h2>3,500 Seed</h2>
+					</div>
+					<div class="prod_txt_right">
+						<p class="heart"><img src="images/cart_heart.png" alt="">&nbsp;5.0</p>
+						<div class="cart_arrow">
+							<p>2</p>
+							<div class="arrow_wrap">
+								<a class="arrow1" href="#">위</a>
+								<a class="arrow2" href="#">아래</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart_prod prod2">
+					<div class="prod_txt_left">
+						<h1>무농약 고랭지배추 3포기</h1>
+						<p>한살림 노원점</p>
+						<h2>5,000 Seed <span>조합원할인 5,800Seed</span></h2>
+					</div>
+					<div class="prod_txt_right">
+						<p class="heart"><img src="images/cart_heart.png" alt="">&nbsp;4.8</p>
+						<div class="cart_arrow">
+							<p>1</p>
+							<div class="arrow_wrap">
+								<a class="arrow1" href="#">위</a>
+								<a class="arrow2" href="#">아래</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart_prod prod3">
+					<div class="prod_txt_left">
+						<h1>유기농쌀 백미 4kg</h1>
+						<p>초록마을 미아점</p>
+						<h2>15,700 Seed</h2>
+					</div>
+					<div class="prod_txt_right">
+						<p class="heart"><img src="images/cart_heart.png" alt="">&nbsp;4.9</p>
+						<div class="cart_arrow">
+							<p>1</p>
+							<div class="arrow_wrap">
+								<a class="arrow1" href="#">위</a>
+								<a class="arrow2" href="#">아래</a>
+							</div>
+						</div>
+					</div>
+				</div>		
+				<div class="cart_prod prod4">
+					<div class="prod_txt_left">
+						<h1>고등어 구이용 (중) 2마리</h1>
+						<p>자연드림 수락점</p>
+						<h2>4,200 Seed<span>조합원 할인 4,500 Seed</span></h2>
+					</div>
+					<div class="prod_txt_right">
+						<p class="heart"><img src="images/cart_heart.png" alt="">&nbsp;4.8</p>
+						<div class="cart_arrow">
+							<p>2</p>
+							<div class="arrow_wrap">
+								<a class="arrow1" href="#">위</a>
+								<a class="arrow2" href="#">아래</a>
+							</div>
+						</div>
+					</div>
+				</div>							
+			</div>
+			<div class="price_wrap">
+				<div class="price">
+					<h1>총 상품 <span>2</span>개</h1>
+					<p class="p1">7,000<span class="deco1">Seed</span></p>
+					<p class="p2">
+						<span class="deco2">조합원혜택</span>
+						<span class="deco3">8,000Seed</span>
+					</p>
+				</div>
+				<div class="order">
+					<a class="order1" href="#">장바구니</a>
+					<a class="order2" href="#">바로주문</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cart_bg_left">
+		<a href="#"><img src="images/cart_left_cancel.png" alt="취소"></a>
+		<div class="left_prod">
+			<a href="#"><img src="images/cart_left_open_btn.png" alt="바로가기">자세히보기</a>
+		</div>	
+	</div>
+</div>
+<div id="header_wrap">
+	<div class="header">
+        <div class="header_in">
+            <h1><a href="index.html"><img src="images/logo_color.png" alt="그린스토어 다팜"></a></h1>
+            <div class="ico_wrap">
+                <div class="search">
+
+                    <form>
+                    	<fieldset>
+     	                   <legend>검색창</legend>
+                        </fieldset>
+                     	<label for="ex_input">원하시는 상품을 검색하세요</label>
+						<input type="text" id="ex_input">
+                    </form>
+                </div>
+                <div class="ico_menu">
+                    <a class="icon1" href="#">검색</a>
+                    <a class="icon2" href="#">장바구니</a>
+                    <a class="icon3" href="#">메뉴</a>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="gnb_wrap">
+    	<div class="gnb_wrap_in">
+			<div class="util_wrap">
+				<a href="category01_fruits.html">이지은 새싹조합원님 <span>LOGOUT</span></a>
+			</div>
+			<ul class="gnb">
+				<li><a class="gnb1" href=""><span>전체카테고리</span></a></li>
+				<li>
+					<a class="gnb2" href="store_search.html">다팜소개</a>
+					<ul class="gnb_sub ">
+						<li><a href="store_search.html">다팜스토리</a></li>
+						<li><a href="store_search.html">조합가입안내</a></li>
+						<li><a href="store_search.html">함께하는생협</a></li>
+						<li><a href="store_search.html">친환경인증</a></li>
+						<li><a href="store_search.html">매장찾기</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="gnb3" href="">상품정보</a>
+					<ul class="gnb_sub gnbsub3">
+						<li><a href="#">최근본상품</a></li>
+						<li><a href="#">이벤트팜</a></li>
+						<li><a href="#">BEST</a></li>
+						<li><a href="#">NEW</a></li>
+						<li><a href="#">SALE</a></li>
+						<li><a href="#">기획상품</a></li>
+						<li><a href="#">공동구매</a></li>
+						<li><a href="#">택배예약</a></li>					
+					</ul>
+				</li>
+				<li>
+					<a class="gnb4" href="">나의농장</a>
+					<ul class="gnb_sub gnbsub4">
+						<li><a href="#">마이페이지</a></li>
+						<li><a href="#">내가쓴글</a></li>
+						<li><a href="#">찜한상품</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="last_gnb" href="">SING SING FARM</a>
+					<ul class="gnb_sub gnbsub5">
+						<li><a href="#">DAFARM NEWS</a></li>
+						<li><a href="#">레시피팜</a></li>
+						<li><a href="#">자유게시판</a></li>
+						<li><a href="#">우리동네이야기</a></li>
+						<li><a href="#">고객지원</a></li>
+					</ul>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="subwrap_allcate">
+		<div class="sub_allcate">
+			<ul class="tit_txt_all">
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">과일</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">과일 | 냉동과일</a></li>
+						<li><a href="category01_fruits.html">과채성과일</a></li>
+						<li><a href="category01_fruits.html">견과</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">채소</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">잎채소 | 열매채소</a></li>
+						<li><a href="category01_fruits.html">뿌리채소</a></li>
+						<li><a href="category01_fruits.html">버섯 | 나물류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">주잡곡/우리밀</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">주곡 | 잡곡</a></li>
+						<li><a href="category01_fruits.html">밀/가루제품</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">반찬류</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">김치류 | 밑반찬류</a></li>
+						<li><a href="category01_fruits.html">햄/어묵류</a></li>
+						<li><a href="category01_fruits.html">즉석조리식품</a></li>
+						<li><a href="category01_fruits.html">두부/나물/묵류</a></li>
+						<li><a href="category01_fruits.html">장아찌/절임류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">양념류</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">생협조미류</a></li>
+						<li><a href="category01_fruits.html">장류/기름류</a></li>
+						<li><a href="category01_fruits.html">드레싱/소스류</a></li>
+						<li><a href="category01_fruits.html">소금/설탕류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">축산</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">한우 | 돈육</a></li>
+						<li><a href="category01_fruits.html">닭/오리 | 냉장육</a></li>
+						<li><a href="category01_fruits.html">유정란</a></li>
+						<li><a href="category01_fruits.html">곰탕거리</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">커피/음료</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">과즙음료</a></li>
+						<li><a href="category01_fruits.html">차류/커피</a></li>
+						<li><a href="category01_fruits.html">건강음료</a></li>
+						<li><a href="category01_fruits.html">유제품 | 두유류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">수산</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">생선</a></li>
+						<li><a href="category01_fruits.html">조개/갑각류</a></li>
+						<li><a href="category01_fruits.html">해조류</a></li>
+						<li><a href="category01_fruits.html">건어물</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">우리밀가공식품</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">만두/피자</a></li>
+						<li><a href="category01_fruits.html">면류 | 찐빵류</a></li>
+						<li><a href="category01_fruits.html">견과</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">우리밀베이커리</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">우리밀빵류</a></li>
+						<li><a href="category01_fruits.html">식빵 | 잼류</a></li>
+						<li><a href="category01_fruits.html">우리밀쿠키류</a></li>
+						<li><a href="category01_fruits.html">베이커리 선물류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">간식/식사대용</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">과자 | 기타간식</a></li>
+						<li><a href="category01_fruits.html">아이스크림</a></li>
+						<li><a href="category01_fruits.html">떡류/죽류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">건강식품</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">건강기능식품</a></li>
+						<li><a href="category01_fruits.html">홍삼/녹용류</a></li>
+						<li><a href="category01_fruits.html">꿀/생식류</a></li>
+						<li><a href="category01_fruits.html">건강엑기스류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">생활용품</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">세제 | 생활용품</a></li>
+						<li><a href="category01_fruits.html">화장품</a></li>
+						<li><a href="category01_fruits.html">유아 | 주방용품</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="category01_fruits.html">바로가기</a>
+					<ul class="txt_box">
+						<li><a href="category01_fruits.html">재활용품 회수</a></li>
+						<li><a href="category01_fruits.html">대용량물품</a></li>
+						<li><a href="category01_fruits.html">유아동</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="main">
+	<div class="map_wrap">
+		<div id="map" style="height: 375px; width: 100%;"></div>
+		<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=8d28094ea7b50bb76668eced5f7f1ef9"></script>
+		<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = { 
+		        center: new daum.maps.LatLng(37.653442, 127.076620), // 지도의 중심좌표
+		        level: 3 // 지도의 확대 레벨
+		    };
+
+		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+		var map = new daum.maps.Map(mapContainer, mapOption);
+
+		var imageSrc = 'images/map_red.png', // 마커이미지의 주소입니다    
+		    imageSize = new daum.maps.Size(41, 57), // 마커이미지의 크기입니다
+		    imageOprion = {offset: new daum.maps.Point(22, -16)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+		// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+		var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOprion),
+		    markerPosition = new daum.maps.LatLng(37.653442, 127.076620); // 마커가 표시될 위치입니다
+
+		// 마커를 생성합니다
+		var marker = new daum.maps.Marker({
+		  position: markerPosition,
+		  image: markerImage // 마커이미지 설정 
+		});
+
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker.setMap(map);  
+		marker.setDraggable(true); 		
+
+		// 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		var content = '<div style="padding:5px; background: #d54d3d; color:#fff; font-size:12px; text-align:center; letter-spacing:-0.05em; margin-left:-7px;">자연드림 수유점<br><img src="images/map_info.png" alt=""><br><div style="font-size:10;">서울특별시 강북구 수유3동<br>131-2 자연드림 수유점</div></div>';
+
+		// 커스텀 오버레이가 표시될 위치입니다 
+		var position = new daum.maps.LatLng(37.653442, 127.076620);  
+
+		// 커스텀 오버레이를 생성합니다
+		var customOverlay = new daum.maps.CustomOverlay({
+		    map: map,
+		    position: position,
+		    content: content,
+		    yAnchor: 1 
+		});	
+
+		</script>
+	</div>
+	<div class="store_wrap">
+		<h1>매장소개</h1>
+		<div class="store">
+			<div class="store_btn">
+				<a class="store_btn1" href="#"></a>
+				<a class="store_btn2" href="#"></a>
+				<a class="store_btn3" href="#"></a>
+				<a class="store_btn4" href="#"></a>
+			</div>
+			<h2>서울특별시 강북구 수유3동 131-2 자연드림 수유점<br><span>주중 10:00 - 20:00 ㅣ 토 10:00 - 17:00 ㅣ 일요일, 공휴일 휴무</span></h2>
+			<h3><img src="images/call.png" alt="번호">02. 987. 1234</h3>
+		</div>
+	</div>
+	<div class="news_wrap">
+		<h3>
+			<a class="news_tit1" href="#">전체보기</a>
+			<a class="news_tit2" href="#">공지사항</a>
+			<a class="news_tit3" href="#">매장소식</a>
+			<a class="news_tit4" href="#">이벤트</a>
+		</h3>
+		<h4>
+			<a class="list1" href="#"></a>
+			<a class="list2" href="#"></a>
+		</h4>
+		<div class="news">
+			<div class="news_box1">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img1.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>공지사항<br>
+						<span>무농약 파프리카 공동구매 안내</span></h5>
+						<p>2016. 03. 03</p>
+					</a>
+				</div>
+			</div>
+			<div class="news_box1 box2">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img2.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>매장소식<br>
+						<span>엄마손으로 만드는 겨울간식</span></h5>
+						<p>2016. 02. 23</p>
+					</a>
+				</div>
+			</div>
+			<div class="news_box1 box3">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img3.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>이벤트<br>
+						<span>나만의 자연드림 떡국레시피</span></h5>
+						<p>2016. 01. 20</p>
+					</a>
+				</div>
+			</div>				
+			<div class="news_box1 box4">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img4.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>공지사항<br>
+						<span>수유점 제주감귤 공급계획</span></h5>
+						<p>2015. 11. 15</p>
+					</a>
+				</div>
+			</div>	
+			<div class="news_box1 box5">
+				<div class="box_img">
+				<h2></h2>				
+					<img src="images/store_img5.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>이벤트<br>
+						<span>인기라면 7종 5+2 판매</span></h5>
+						<p>2015. 10. 09</p>
+					</a>
+				</div>
+			</div>
+			<div class="news_box1 box6">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img6.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>이벤트<br>
+						<span>무농약 강낭콩 나눔</span></h5>
+						<p>2015. 09. 12</p>
+					</a>
+				</div>
+			</div>				
+			<div class="news_box1 box7">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img7.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>매장소식<br>
+						<span>자연드림 수유점의 두부이야기</span></h5>
+						<p>2015. 08. 23</p>
+					</a>
+				</div>
+			</div>	
+			<div class="news_box1 box8">
+				<div class="box_img">
+					<h2></h2>
+					<img src="images/store_img8.jpg" alt="">
+				</div>
+				<div class="box_tit">
+					<a href="#">
+						<h5>공지사항<br>
+						<span>한우 수제떡갈비 재고소진 안내</span></h5>
+						<p>2015. 08. 01</p>
+					</a>
+				</div>
+			</div>
+			<div class="slide_box1">
+				<div class="news_box1 box13">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img1.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>공지사항<br>
+							<span>무농약 파프리카 공동구매 안내</span></h5>
+							<p>2016. 03. 03</p>
+						</a>
+					</div>
+				</div>
+				<div class="news_box1 box14">
+					<h2></h2>
+					<div class="box_img">
+						<img src="images/store_img2.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>매장소식<br>
+							<span>엄마손으로 만드는 겨울간식</span></h5>
+							<p>2016. 02. 23</p>
+						</a>
+					</div>
+				</div>
+				<div class="news_box1 box15">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img3.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>이벤트<br>
+							<span>나만의 자연드림 떡국레시피</span></h5>
+							<p>2016. 01. 20</p>
+						</a>
+					</div>
+				</div>				
+				<div class="news_box1 box16">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img4.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>공지사항<br>
+							<span>수유점 제주감귤 공급계획</span></h5>
+							<p>2015. 11. 15</p>
+						</a>
+					</div>
+				</div>	
+				<div class="news_box1 box17">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img5.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>이벤트<br>
+							<span>인기라면 7종 5+2 판매</span></h5>
+							<p>2015. 10. 09</p>
+						</a>
+					</div>
+				</div>
+				<div class="news_box1 box18">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img6.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>이벤트<br>
+							<span>무농약 강낭콩 나눔</span></h5>
+							<p>2015. 09. 12</p>
+						</a>
+					</div>
+				</div>				
+				<div class="news_box1 box19">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img7.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>매장소식<br>
+							<span>자연드림 수유점의 두부이야기</span></h5>
+							<p>2015. 08. 23</p>
+						</a>
+					</div>
+				</div>	
+				<div class="news_box1 box20">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img8.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>공지사항<br>
+							<span>한우 수제떡갈비 재고소진 안내</span></h5>
+							<p>2015. 08. 01</p>
+						</a>
+					</div>
+				</div>								
+			</div>
+			<div class="slide_box2">
+				<div class="news_box1 box21">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img1.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>공지사항<br>
+							<span>무농약 파프리카 공동구매 안내</span></h5>
+							<p>2016. 03. 03</p>
+						</a>
+					</div>
+				</div>
+				<div class="news_box1 box22">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img2.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>매장소식<br>
+							<span>엄마손으로 만드는 겨울간식</span></h5>
+							<p>2016. 02. 23</p>
+						</a>
+					</div>
+				</div>
+				<div class="news_box1 box23">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img3.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>이벤트<br>
+							<span>나만의 자연드림 떡국레시피</span></h5>
+							<p>2016. 01. 20</p>
+						</a>
+					</div>
+				</div>				
+				<div class="news_box1 box24">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img4.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>공지사항<br>
+							<span>수유점 제주감귤 공급계획</span></h5>
+							<p>2015. 11. 15</p>
+						</a>
+					</div>
+				</div>	
+				<div class="news_box1 box25">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img5.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>이벤트<br>
+							<span>인기라면 7종 5+2 판매</span></h5>
+							<p>2015. 10. 09</p>
+						</a>
+					</div>
+				</div>
+				<div class="news_box1 box26">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img6.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>이벤트<br>
+							<span>무농약 강낭콩 나눔</span></h5>
+							<p>2015. 09. 12</p>
+						</a>
+					</div>
+				</div>				
+				<div class="news_box1 box27">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img7.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>매장소식<br>
+							<span>자연드림 수유점의 두부이야기</span></h5>
+							<p>2015. 08. 23</p>
+						</a>
+					</div>
+				</div>	
+				<div class="news_box1 box28">
+					<div class="box_img">
+						<h2></h2>
+						<img src="images/store_img8.jpg" alt="">
+					</div>
+					<div class="box_tit">
+						<a href="#">
+							<h5>공지사항<br>
+							<span>한우 수제떡갈비 재고소진 안내</span></h5>
+							<p>2015. 08. 01</p>
+						</a>
+					</div>
+				</div>								
+			</div>			
+			<a class="more" href="#"><img src="images/more_arrow.png" alt=""><span class="line"></span></a>	
+		</div>
+	</div>
+</div>
+<div id="header_wrap_fix">
+	<div class="header">
+		<div class="header_in">
+            <h1><a href="index.html"><img src="images/logo_color.png" alt="그린스토어 다팜"></a></h1>
+            <div class="ico_wrap">
+                <div class="search">
+                    <form>
+                    	<fieldset>
+     	                   <legend>검색창</legend>
+                        </fieldset>
+                     	<label for="ex_input">원하시는 상품을 검색하세요</label>
+						<input type="text" id="ex_input">
+                    </form>
+                </div>
+                <div class="ico_menu">
+                    <a class="icon1" href="#">검색</a>
+                    <a class="icon2" href="#">장바구니</a>
+                    <a class="icon3" href="#">메뉴</a>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="gnb_wrap">
+        <div class="gnb_wrap_in">    	
+            <div class="util_wrap">
+                <a href="#">이지은 새싹조합원님 <span>LOGOUT</span></a>
+            </div>
+            <ul class="gnb">
+                <li><a class="gnb1" href=""><span>&nbsp;전체카테고리</span></a></li>
+                <li>
+                    <a class="gnb2" href="store_search.html">다팜소개</a>
+                    <ul class="gnb_sub">
+                        <li><a href="store_search.html">다팜스토리</a></li>
+                        <li><a href="store_search.html">조합가입안내</a></li>
+                        <li><a href="store_search.html">함께하는생협</a></li>
+                        <li><a href="store_search.html">친환경인증</a></li>
+                        <li><a href="store_search.html">매장찾기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="gnb3" href="">상품정보</a>
+                    <ul class="gnb_sub gnbsub3">
+                        <li><a href="#">최근본상품</a></li>
+                        <li><a href="#">이벤트팜</a></li>
+                        <li><a href="#">BEST</a></li>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="#">기획상품</a></li>
+                        <li><a href="#">공동구매</a></li>
+                        <li><a href="#">택배예약</a></li>					
+                    </ul>
+                </li>
+                <li>
+                    <a class="gnb4" href="">나의농장</a>
+                    <ul class="gnb_sub gnbsub4">
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">내가쓴글</a></li>
+                        <li><a href="#">찜한상품</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="last_gnb" href="">SING SING FARM</a>
+                    <ul class="gnb_sub gnbsub5">
+                        <li><a href="#">DAFARM NEWS</a></li>
+                        <li><a href="#">레시피팜</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">우리동네이야기</a></li>
+                        <li><a href="#">고객지원</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+	</div>
+	<div class="subwrap_allcate">
+		<div class="sub_allcate">
+			<ul class="tit_txt_all">
+				<li class="tit">
+					<a class="green_tit" href="#">과일</a>
+					<ul class="txt_box">
+						<li><a href="#">과일 | 냉동과일</a></li>
+						<li><a href="#">과채성과일</a></li>
+						<li><a href="#">견과</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">채소</a>
+					<ul class="txt_box">
+						<li><a href="#">잎채소 | 열매채소</a></li>
+						<li><a href="#">뿌리채소</a></li>
+						<li><a href="#">버섯 | 나물류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">주잡곡/우리밀</a>
+					<ul class="txt_box">
+						<li><a href="#">주곡 | 잡곡</a></li>
+						<li><a href="#">밀/가루제품</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">반찬류</a>
+					<ul class="txt_box">
+						<li><a href="#">김치류 | 밑반찬류</a></li>
+						<li><a href="#">햄/어묵류</a></li>
+						<li><a href="#">즉석조리식품</a></li>
+						<li><a href="#">두부/나물/묵류</a></li>
+						<li><a href="#">장아찌/절임류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">양념류</a>
+					<ul class="txt_box">
+						<li><a href="#">생협조미류</a></li>
+						<li><a href="#">장류/기름류</a></li>
+						<li><a href="#">드레싱/소스류</a></li>
+						<li><a href="#">소금/설탕류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">축산</a>
+					<ul class="txt_box">
+						<li><a href="#">한우 | 돈육</a></li>
+						<li><a href="#">닭/오리 | 냉장육</a></li>
+						<li><a href="#">유정란</a></li>
+						<li><a href="#">곰탕거리</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">커피/음료</a>
+					<ul class="txt_box">
+						<li><a href="#">과즙음료</a></li>
+						<li><a href="#">차류/커피</a></li>
+						<li><a href="#">건강음료</a></li>
+						<li><a href="#">유제품 | 두유류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">수산</a>
+					<ul class="txt_box">
+						<li><a href="#">생선</a></li>
+						<li><a href="#">조개/갑각류</a></li>
+						<li><a href="#">해조류</a></li>
+						<li><a href="#">건어물</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">우리밀가공식품</a>
+					<ul class="txt_box">
+						<li><a href="#">만두/피자</a></li>
+						<li><a href="#">면류 | 찐빵류</a></li>
+						<li><a href="#">견과</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">우리밀베이커리</a>
+					<ul class="txt_box">
+						<li><a href="#">우리밀빵류</a></li>
+						<li><a href="#">식빵 | 잼류</a></li>
+						<li><a href="#">우리밀쿠키류</a></li>
+						<li><a href="#">베이커리 선물류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">간식/식사대용</a>
+					<ul class="txt_box">
+						<li><a href="#">과자 | 기타간식</a></li>
+						<li><a href="#">아이스크림</a></li>
+						<li><a href="#">떡류/죽류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">건강식품</a>
+					<ul class="txt_box">
+						<li><a href="#">건강기능식품</a></li>
+						<li><a href="#">홍삼/녹용류</a></li>
+						<li><a href="#">꿀/생식류</a></li>
+						<li><a href="#">건강엑기스류</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">생활용품</a>
+					<ul class="txt_box">
+						<li><a href="#">세제 | 생활용품</a></li>
+						<li><a href="#">화장품</a></li>
+						<li><a href="#">유아 | 주방용품</a></li>
+					</ul>
+				</li>
+				<li class="tit">
+					<a class="green_tit" href="#">바로가기</a>
+					<ul class="txt_box">
+						<li><a href="#">재활용품 회수</a></li>
+						<li><a href="#">대용량물품</a></li>
+						<li><a href="#">유아동</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer_wrap">
+	<div class="footer">
+		<div class="footer_left">
+			<div class="line"></div>
+			<h1><img src="images/footer_txt.png" alt="하단텍스트"></h1>
+			<h2><img src="images/footer_logo.png" alt="하단로고"></h2>
+			<p class="copyright">Copyright © 2015</p>
+			<p>다팜은 자연드림·한살림·아이쿱생협·두레생협·초록마을과 함께합니다.</p>
+		</div>
+		<div class="footer_right">
+			<div class="line"></div>
+			<p><span>주소</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서울 강남구 테헤란로 98길 8 8층 (KT&amp;G 대치타워 8층)</p>
+			<p><span>전화</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02.2670.7800</p>
+			<p><span>이메일</span>&nbsp;&nbsp;INFO@dafarm_korea.com</p>
+			<p class="footer_list">
+				<a href="#">회사소개</a>
+				<a href="#">이용약관</a>
+				<a href="#">개인정보취급방침</a>
+				<a href="#">이메일주소수집거부</a>
+			</p>	
+			<h2><a href="#"><img src="images/SNS_tweet.png" alt="트위터"></a></h2>
+			<h2><a href="#"><img src="images/SNS_face.png" alt="페이스북"></a></h2>
+		</div>
+		<div class="top_btn">
+			<a href=""><img src="images/arrow_fixed_top.png" alt="탑버튼"></a>
+		</div>	
+	</div>
+</div>
+
+</body>
+</html>
+
+

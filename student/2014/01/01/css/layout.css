@@ -1,0 +1,97 @@
+@charset "utf-8";
+/*200,300,400(기본),700*/
+body {font-family:'Nanum Barun Gothic','맑은 고딕','malgun gothic','돋움',dotum,sans-serif; font-size:12px; color:#333;}
+body {min-width:1000px;}
+
+
+
+/*---------------------------------퀵버튼-------------------------------------*/
+.quick {background:url(../images/top_btn_bg.png) no-repeat; width:70px; height:70px; position:fixed; right:1%; bottom:2%; z-index:9999; text-indent:-9999px;}
+.quick a {display:block; width:70px; height:70px;}
+
+
+/*---------------------------------헤더-------------------------------------*/
+.header {width:1000px; height:110px; position:absolute; left:50%; top:0; margin-left:-500px; z-index:200;}
+.top_header {float:right; margin-top:15px;}
+
+/*유틸*/
+.top_header .util {float:left;}
+.top_header .util li {float:left;  padding:0 15px;  background:url(../images/util_leftbar.png) no-repeat center left;}
+.top_header .util li:first-child {background:none;}
+.top_header .util li a {color:#a2a1a2; display:block;}
+.top_header .util li:hover a {color:#FFF;}
+
+/*언어선택*/
+.top_header .lang_btn {float:left; text-align:center; position:relative;}
+.top_header .lang_btn .lang {color:#a2a1a2; width:52px;  font-size:12px; border:1px solid #a2a1a2; margin-top:-1px; line-height:20px; outline:none; background:url(../images/lang_arr.png) no-repeat 95% center; padding:0 10px 0 0;}
+.top_header .lang_btn .lang2 {background:#a2a1a2; position:absolute; left:0; top:20px;; z-index:300; width:52px; display:none;}
+.top_header .lang_btn .lang2 a {font-size:12px; line-height:20px;  padding:0 10px 0 0;}
+/*호버효과*/
+.top_header .lang_btn:hover .lang {color:#FFF; background-image:url(../images/lang_arr_wh.png);}
+.top_header .lang_btn:hover .lang2 {display:block;}
+
+
+
+
+/*로고*/
+.bottom_header {height:58px; margin-top:55px; background:#0863c1; position:relative; }
+.bottom_header .logo {background:#FFF; position:absolute; left:0; top:0; height:58px;}
+.bottom_header .logo h1 {padding:10px 16px;}
+
+/*메인메뉴 gnb*/
+.bottom_header .gnb {position:absolute; left:230px; top:0; width:770px; text-align:center;}
+.bottom_header .gnb>li {float:left; width:154px;}
+.bottom_header .gnb>li>a {color:#FFF; font-size:17px; display:block; line-height:58px;}
+.bottom_header .gnb>li:hover>a{background:#003b7f;}
+
+
+.bottom_header .gnb>li:hover .depth2 {display:block;} 
+/*서브메뉴*/
+.bottom_header .gnb .depth2 {position:absolute; left:0; top:58px; margin-left:-230px; width:1000px; height:47px;  background:#003b7f; display:none; }
+.bottom_header .gnb .depth2>li {float:left; margin:0 7px;}
+.bottom_header .gnb .depth2>li>a {display:block; line-height:47px; font-size:14px; color:#e4e4e4; padding:0 10px;}
+.bottom_header .gnb .depth2>li:hover>a {text-decoration:underline; color:#EEE;}
+
+/*서브메뉴 위치조정*/
+.bottom_header .gnb .depth2>li:first-child {margin-left:150px;}
+.bottom_header .gnb .gnb2 li:first-child {margin-left:320px;}
+.bottom_header .gnb .gnb3 li:first-child {margin-left:550px;}
+.bottom_header .gnb .gnb4 li:first-child {margin-left:600px;}
+.bottom_header .gnb .gnb5 li:first-child {margin-left:700px;}
+
+
+
+
+
+/*-----------------------------------푸터---------------------------------------------*/
+.footer {background:#e8e8e8; border-top:1px solid #b4b4b4;  position:relative;}
+.footer .footer_inner {width:1000px; overflow:hidden; margin:0 auto; padding-bottom:15px;}
+
+/*푸터메뉴*/
+.footer_inner .footer_menu {float:left;}
+.footer_inner .footer_menu li {float:left; margin:15px 0 0 15px; }
+.footer_inner .footer_menu li a {font-size:13px; color:#666; padding:0 30px; line-height:30px; background:url(../images/footer_menu_line.png) no-repeat center right;}
+.footer_inner .footer_menu li:first-child  a {padding-left:0;}
+.footer_inner .footer_menu .menu5 {background:none;}
+
+.footer_inner .footer_menu li:hover a {color:#19539b; font-weight:700;}
+
+
+/*패밀리사이트 버튼*/
+.footer_inner .family {position:relative;}
+.footer_inner .family .family_btn {width:190px; background:url(../images/footer_family_btn_bg.png) no-repeat center right; border:1px solid #0863c1; line-height:30px; margin-top:14px; float:right; font-size:13px; color:#0863c1; text-align:left; padding-left:15px; outline:none;}
+
+/*패밀리사이트 리스트*/
+.footer_inner .family .family_list {position:absolute; right:0; bottom:-15px; border:1px solid #19539b; width:188px; background:#FFF; display:none; z-index:500;}
+.footer_inner .family .family_list li a {font-size:12px; line-height:27px;  display:block; padding-left:15px; color:#0863c1;}
+.footer_inner .family .family_list li:hover a {background:#4d8ed2; color:#FFF;}
+
+/*로고 및 주소*/
+.footer_bottom {background:#e8e8e8; height:180px; border-top:1px solid #b4b4b4;}
+.footer_bottom_inner {margin:0 auto; width:1000px; text-align:center;}
+.footer_bottom_inner h1 {padding-top:40px;}
+.footer_bottom_inner address {padding-top:10px;  color:#666;}
+
+.fofooter_bottom_inner address span {font-size:14px; }
+
+

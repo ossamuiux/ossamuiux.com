@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body {background:#fff;}
+
+.main_wrap {padding:6px; box-sizing:border-box;}
+
+
+.main_wrap .main {height:100%;  border-top:1px solid transparent; background:#f1f3f0 url(../images/login_logo.jpg) no-repeat 50% 40px; background-size:180px; padding:20px; }
+
+
+.main h3 {width:100%; text-align:center; display:block; margin-top:120px; font-size:12px; font-weight:bold;}
+
+/*pc 키보드 자판보기*/
+.main .pc_btn {font-size:11px; margin-top:15px; text-align:center;  }
+.main .pc_btn .show_btn { width:100%; height:14px; display:inline-block;  }
+.main .pc_btn .show_btn p { display:inline-block;  float:left; }
+.main .pc_btn .show_btn a { float:left; background:url(../images/sp_img.png) no-repeat; width:8px; height:8px; display:block; margin-top:3px; margin-left:3px; } 
+
+/*키보드나오기*/
+.main .pc_btn .key_board { display:none;}
+.main .pc_btn .key_board span { background:url(../images/keyboard.png) no-repeat 50%;  width:100%; height:134px; margin:5px auto; clear:left;  margin-bottom:5px; display:block;  text-align:center;}
+.main .pc_btn .show_btn a.on {background-position-x:-12px;}
+
+/*로그인창*/
+.main form {width:100%; margin-top:10px;   text-align:center; }
+.main form fieldset {text-align:left;  display:inline-block; width:100%; } 
+.main legend {display:none;}
+.main form input {border:2px solid #ccc; width:100%; height:35px; text-indent:5px;  outline:none; box-sizing:border-box;}
+
+.main form .id {margin-bottom:5px;}
+.main form button {width:100%; height:35px; background:#de3608; outline:none; border:2px solid #ea4518; margin-top:10px; color:#fff; font-weight:bold; letter-spacing:0.1em;}
+
+/*회원가입*/
+.main .join {width:100%; height:35px; background:#666; display:inline-block; color:#fff; font-weight:bold; letter-spacing:0.1em; text-align:center; line-height:35px; margin-top:5px;}
+
+/*아이디찾기,비번찾기,비회원 주문*/
+.main .bottom {margin:10px auto;text-align:center; color:#ccc; font-weight:bold;}
+.main .bottom a {color:#8c8c8c; padding:0 5px;}

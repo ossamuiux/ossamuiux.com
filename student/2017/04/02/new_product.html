@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Bespectacled">
+  <meta name="description" content="This is my project.">
+  <meta name="keywords" content="웹퍼블리셔,웹표준,웹접근성">
+  <meta name="robots" content="all">
+  <meta name="format-detection" content="telephone=no">
+  <!-- <meta property="og:title" content="오리온">
+  <meta property="og:url" content="https://www.orionworld.com/">
+  <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+  <meta property="og:description" content="꼬북칩, 포카칩, 스윙칩, 오징어 땅콩, 오! 감자"> -->
+  <title>리뉴얼작업 뮤직포스</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png"> -->
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> -->
+  <!-- <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'> -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+  <link href="css/hamburgers.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]>
+    <p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+    <a style="color:#f57c00;" href="http://www.microsoft.com/korea/ie" target="_blank" >익스플로러,</a>
+    <a style="color:#f57c00;" href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+    <a style="color:#f57c00;" href="http://kr.opera.com/download/" target="_blank">오페라,</a>
+    <a style="color:#f57c00;" href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+    <a style="color:#f57c00;" href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+  <![endif]-->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=4dNCMV4WdfPNW0kmCfUA"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      var arr = [];
+
+      for (var i = 1; i < 4; i++) {
+        arr.push($('.new_product_section' + i).offset().top);
+      }
+
+      console.log(arr);
+
+
+      $(window).scroll(function() {
+
+        var num = $(window).scrollTop();
+        if (num >= 100) {
+          $('#main.new_product .new_product_visual ').addClass('on');
+        } else {
+          $('#main.new_product .new_product_visual ').removeClass('on');
+        }
+        if ($(this).scrollTop() > 1000) {
+          $('#main.new_product .new_product_section2 .visual').addClass('on');
+        } else if ($(this).scrollTop() < 1000) {
+          $('#main.new_product .new_product_section2 .visual').removeClass('on');
+        }
+        if ($(this).scrollTop() > 1900) {
+          $('#main.new_product .new_product_section3 .visual img').addClass('on');
+        } else if ($(this).scrollTop() < 1900) {
+          $('#main.new_product .new_product_section3 .visual img').removeClass('on');
+        }
+        if ($(this).scrollTop() > 2500) {
+          $('#main.new_product .new_product_section4 .visual img').addClass('on');
+        } else if ($(this).scrollTop() < 2500) {
+          $('#main.new_product .new_product_section4 .visual img').removeClass('on');
+        }
+        if ($(this).scrollTop() > 3500) {
+          $('#main.new_product .new_product_section5 .visual img').addClass('on');
+        } else if ($(this).scrollTop() < 3500) {
+          $('#main.new_product .new_product_section5 .visual img').removeClass('on');
+        }
+        if ($(this).scrollTop() > 4500) {
+          $('#main.new_product .new_product_section6 .visual img').addClass('on');
+        } else if ($(this).scrollTop() < 4500) {
+          $('#main.new_product .new_product_section6 .visual img').removeClass('on');
+        }
+      }); //visual 스크롤 축소
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="뮤직포스"></a>
+      </h1>
+      <div class="gnb_wrap">
+        <div class="gnb">
+          <h2 class="blind">주요서비스</h2>
+          <ul>
+            <li>
+              <a href="new_product.html">신상품</a>
+            </li>
+            <li>
+              <a href="#">쇼핑몰</a>
+            </li>
+            <li>
+              <a href="#">중고장터</a>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+            </li>
+            <li>
+              <a href="#">뮤직포스리뷰</a>
+            </li>
+            <li>
+              <a href="repairshop.html">리페어샵</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <h2 class="blind">유틸리티</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="hamburger hamburger--spin m_btn_gnb">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+      </button>
+    </header>
+    <main id="main" class="new_product">
+      <div class="main_cover"></div>
+      <div class="new_product_visual">
+        <div class="container">
+          <div class="visual">
+            <img src="images/new_product_model.jpg" alt="fender american standard">
+            <div class="title_wrap">
+              <h2><img src="images/new_product_logo.png" alt="fender"></h2>
+              <h3>American Professional Stratocaster</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="new_product_section1">
+        <div class="container">
+          <div class="txt_wrap">
+            <h2>American Professional Stratocaster</h2>
+            <h3>다른 모든 악기를 <span>평가하는 기준</span></h3>
+            <p>파워풀하고 뉘앙스가 살아 있는 톤을 선사하는 V-Mod 싱글-코일 픽업,<br>볼륨을 줄여도 고음역대가 살아있는 맑은 톤을 유지시켜주는 Treble Bleed 서킷,<br>매우 편안한 그립감의 Deep V 쉐입 넥, 편안한 밴딩과 코드 연주를 위한 Narrow-tall 프렛,<br>American Professional Stratocaster는 여러분의 창조적 잠재력을 일깨우고<br>다양한 음악적 영감을 선사해줄 것입니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="new_product_section2">
+        <div class="container">
+          <div class="visual">
+            <img src="images/new_product_pickups.png" alt="V-MOD PICKUPS">
+          </div>
+          <div class="txt_wrap">
+            <h2>V-MOD PICKUPS</h2>
+            <p>픽업 마스터 팀 쇼(Tim Shaw)가 개발한 새로운 V-Mod 싱글-코일 픽업입니다.<br>알니코 마그넷 타입을 블렌딩하여 펜더 기타톤의 DNA를 가지고 있으면서도<br>파워풀하고 뉘앙스가 살아있는 톤을 완성했으며,<br>각 포지션 별로 최적의 퍼포먼스를 내도록 디자인되었습니다.<br>고출력이면서도 펜더 고유의 깨끗하고 맑은 빈티지 톤을 선사합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="new_product_section3">
+        <div class="container">
+          <div class="visual">
+            <img src="images/new_product_treble.png" alt="">
+          </div>
+          <div class="txt_wrap">
+            <h2>TREBLE BLEED CIRCUIT</h2>
+            <p>트레블 블리드(Treble bleed) 서킷이 적용되어<br>볼륨을 줄이는 과정에서 고음역이 유지되어 선명한 톤이 유지됩니다.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="new_product_section4">
+        <div class="container">
+          <div class="visual">
+            <img src="images/new_product_flets.png" alt="">
+          </div>
+          <div class="txt_wrap">
+            <h2>NARROW-TALL FRETS</h2>
+            <p>9.5" 곡률의 내로우-툴(Narrow-tall) 프렛은 빈티지 하면서도 모던한 느낌으로<br>매우 편안한 연주감을 선사하며 작은 움직임에도 섬세하게 반응하여<br>연주자의 감정을 표현하는 능력이 뛰어납니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="new_product_section5">
+        <div class="container">
+          <div class="visual">
+            <img src="images/new_product_tuner.png" alt="">
+          </div>
+          <div class="txt_wrap">
+            <h2>STAGGERED TUNER</h2>
+            <p>천연 본(Genuine bone) 너트를 적용하여 더욱 선명한 울림을 갖도록 제작되었습니다.<br>Staggered Tuner는 죄정의 각도로 스트링과 너트를 더욱 긴밀하게 밀착시켜<br>긴 서스테인과 안정적인 튜닝을 보장합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="new_product_section6">
+        <div class="container">
+          <div class="visual">
+            <img src="images/new_product_neck.png" alt="">
+          </div>
+          <div class="txt_wrap">
+            <h2>NEW "DEEP V" NECK PROFILE</h2>
+            <p> 편안하고 빠른 연주에 최적화된 American Professional 시리즈의 "Deep C"는<br>"Modern C"와 "U" 쉐입 사이의 넥 프로파일입니다.<br>"Deep C" 넥 프로파일의 변경된 기하학적 구조로 인해 코드 연주뿐 아니라<br>솔로 연주에서도 최고의 퍼포먼스를 선사하며<br>새틴 피니쉬가 적용되어 최상의 연주감을 제공합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="new_product_section7">
+        <div class="container">
+          <div class="wrap">
+            <div class="visual">
+              <img src="images/new_product_guitar.png" alt="">
+            </div>
+            <div class="txt_wrap">
+              <img src="images/new_product_logo.png" alt="">
+              <h2>American Professional Stratocaster</h2>
+              <ul>
+                <li>NEW PICKUPS - V-MOD PICKUPS</li>
+                <li>"DEEP V" NECK SHAPE</li>
+                <li>NARROW-TALL FRETS</li>
+                <li>POP-IN TREMOLO ARM</li>
+                <li>TREBLE BLEED CIRCUIT</li>
+                <li>GENUINE BONE NUT</li>
+                <li>ELITE MOLDED CASE</li>
+                <li>NEW COLORS - SONIC GRAY, ANTIQUE OLIVE</li>
+              </ul>
+              <button type="button" class="btn btn_product">제품 자세히보기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>
+        <h2 class="blind">소셜미디어</h2>
+        <ul class="sns">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        </ul>
+      </p>
+      <p>
+        <h2 class="blind">회사정보</h2>
+        <ul class="info">
+          <li>
+            <a href="#">회사소개</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">개인정보취급방침</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+        </ul>
+      </p>
+      <p class="address">서울 강남구 역삼동 797 지하1층 뮤직포스</p>
+      <p class="copyright">Copyright (c) music force global All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

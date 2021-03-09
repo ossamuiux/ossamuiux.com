@@ -1,0 +1,228 @@
+@charset "utf-8";
+body,input,button,select {font:13px '나눔고딕','Nanum Gothic','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;}
+body {min-width:1100px; overflow:visible;}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+/************************************빠른예매*****************************************/
+
+/************빠른예매 팝업:영화**********/
+.reserve_wrap {position:fixed; left:0; top:0; background:url(../img/reserve_bg.png); width:100%; height:100%; z-index:9999; overflow-y:scroll;}
+.reserve_wrap .reserve {width:998px; height:698px; background:#FFF; border:1px solid #d2d2d2; margin-top:-1000px; margin-left:-491px; position:relative; left:50%;}
+.reserve_wrap .reserve legend {position:absolute; left:0; top:-9999px;}
+.reserve_wrap .reserve .reserve_close {position:absolute; left:50%; top:-36px; margin-left:464px; z-index:9999;}
+
+.reserve_movie {float:left; width:300px; height:698px; border-right:1px solid #d2d2d2;}
+.reserve_movie h2 {width:210px; height:42px; background:#c5695f; border-bottom:1px solid #d2d2d2; color:#FFF; font-size:18px; font-weight:600; padding:0 45px; line-height:42px;}
+.reserve_movie h2 .refresh {margin-left:10px; margin-top:12px;}
+.reserve_movie h2 .movie_icon {float:right; margin-top:13px;}
+
+.reserve_movie .movie_content {padding:24px 45px 35px; height:597px; width:210px;}
+.reserve_movie .movie_content .tab_menu {width:210px;}
+
+
+/*영화 텝메뉴*/
+.reserve_movie .movie_content .tab_menu .tab_btn {display:inline-block; height:33px; width:210px;}
+.reserve_movie .movie_content .tab_menu .tab_btn li {float:left; border:1px solid #dddddd; background:#f3f3f3; width:103px; text-align:center; }
+.reserve_movie .movie_content .tab_menu .tab_btn li.last {margin-left:-1px; color:#8d8d8d;}
+.reserve_movie .movie_content .tab_menu .tab_btn li:first-child {background:#FFF; padding-right:1px; border-bottom:#fff; }
+.reserve_wrap .reserve .reserve_movie .movie_content .tab_menu .tab_btn li a {display:inline-block; width:103px; height:33px; line-height:33px; color:#555555; font-size:14px; font-weight:600;}
+.reserve_movie .movie_content .tab_menu .tab_btn li a.on {background-color:#FFF;}
+.reserve_movie .movie_content .tab_menu .tab_btn li.last a.on2 {color:#8d8d8d;}
+.reserve_movie .movie_content .tab_menu .tab_btn li:hover a {background:#FFF; color:#555555;}
+
+/*텝메뉴 영화목록*/
+.reserve_movie .movie_content .m_content {padding:10px 0; width:210px; height:413px;}
+.reserve_movie .movie_content .m_content li {height:28px; width:200px; margin-bottom:6px;}
+.reserve_movie .movie_content .m_content li a {display:block; width:200px; height:28px; padding-left:10px; color:#777777; line-height:28px;}
+.reserve_movie .movie_content .m_content li:hover a {height:28px; width:200px; background:#555555; color:#FFF;}
+.reserve_movie .movie_content .m_content li a .grade {margin-top:4px;}
+.reserve_movie .movie_content .m_content li a h3 {display:inline-block; margin-left:5px;}
+
+/*텝메뉴 영화목록 하단 이미지*/
+.reserve_movie .movie_content .m_info {padding:10px 0 10px 10px; width:200px; height:108px; background:#555555;}
+.reserve_movie .movie_content .m_info .m_txt {float:left;}
+.reserve_movie .movie_content .m_info .m_txt .m_poster {padding-right:12px;}
+.reserve_movie .movie_content .m_info .m_txt h3 {display:inline-block; line-height:18px;  font-size:14px; color:#fff; margin-top:7px;}
+.reserve_movie .movie_content .m_info .m_txt .line4 {display:inline-block; background:#fff; height:1px; width:85px; margin-left:91px; margin-top:-55px;}
+.reserve_movie .movie_content .m_info .m_txt p {display:inline-block; font-size:13px; color:#fff; margin-left:91px;  margin-top:-59px; line-height:20px;}
+
+.reserve_movie .movie_content .m_txt1 {padding:10px 0 10px 10px; width:200px; height:108px; background:#555555; position:absolute;}
+.reserve_movie .movie_content .m_txt1 .m_poster {padding-right:12px;}
+.reserve_movie .movie_content .m_txt1 h3 {display:inline-block; line-height:18px;  font-size:14px; color:#fff; margin-top:7px;}
+.reserve_movie .movie_content .m_txt1 .line4 {display:inline-block; background:#fff; height:1px; width:85px; margin-left:91px; margin-top:-55px;}
+.reserve_movie .movie_content .m_txt1 p {display:inline-block; font-size:13px; color:#fff; margin-left:91px;  margin-top:-59px; line-height:20px;}
+
+
+/***********빠른예매 팝업:영화관***********/
+.reserve_cinema {float:left; width:300px; height:698px; border-right:1px solid #d2d2d2;}
+.reserve_cinema h2 {width:210px; height:42px; background:#c5695f; border-bottom:1px solid #d2d2d2; color:#FFF; font-size:18px; font-weight:600; padding:0 45px; line-height:42px;}
+.reserve_cinema h2 .refresh {margin-left:10px; margin-top:12px;}
+.reserve_cinema h2 .cinema_icon {float:right; margin-top:13px;}
+
+.reserve_cinema .cinema_content {padding:24px 45px 35px; height:597px; width:210px;}
+
+/*영화관 텝메뉴*/
+.reserve_cinema .cinema_content .tab_menu {width:210px; height:596px;}
+
+.reserve_cinema .cinema_content .tab_menu {display:inline-block; height:33px; width:210px;}
+.reserve_cinema .cinema_content .tab_menu li.first {float:left; border:1px solid #dddddd; background:#f3f3f3; width:103px; text-align:center;background:#FFF; padding-right:1px; border-bottom:#fff;  }
+.reserve_cinema .cinema_content .tab_menu li.last {float:left; border:1px solid #dddddd; background:#f3f3f3; width:103px; text-align:center; margin-left:-1px; color:#8d8d8d;}
+.reserve_cinema .cinema_content .tab_menu .tab_btn .first a.on {background-color:#FFF;display:inline-block; width:103px; height:33px; line-height:33px; color:#555555; font-size:14px; font-weight:600;}
+.reserve_cinema .cinema_content .tab_menu .tab_btn .last a.on2 {color:#8d8d8d; display:inline-block; width:103px; height:33px; line-height:33px; font-size:14px; font-weight:600;}
+.reserve_cinema .cinema_content .tab_menu .tab_btn li:hover a {background:#FFF; color:#555555;}
+
+/*텝메뉴 영화관 목록*/
+.reserve_cinema .cinema_content .tab_menu .gnb {float:left; width:104px; height:551px; padding-top:10px; padding-right:1px;}
+.reserve_cinema .cinema_content .tab_menu .gnb li {height:28px; width:104px; margin-bottom:6px;}
+.reserve_cinema .cinema_content .tab_menu .gnb li a {display:block; width:66px; height:28px; padding:0 19px; color:#777777; background:#f3f3f3; line-height:28px;}
+.reserve_cinema .cinema_content .tab_menu .gnb li a.first {height:28px; width:66px; background:#555555; color:#FFF;}
+.reserve_cinema .cinema_content .tab_menu .gnb li a.first span {background:url(../img/popup_cinema_choose.png) no-repeat right center; margin-left:35px; margin-top:9px; width:6px; height:9px; display:inline-block;}
+.reserve_cinema .cinema_content .tab_menu .gnb li:hover a {background:#555555; color:#FFF;}
+.reserve_cinema .cinema_content .tab_menu .gnb li:hover a span {background:url(../img/popup_cinema_choose.png) no-repeat right center; margin-left:35px; margin-top:9px; width:6px; height:9px; display:inline-block;}
+
+/*텝메뉴 영화관 서브*/
+.reserve_cinema .cinema_content .tab_menu .sub_content {float:right; width:105px; height:551px; padding-top:10px;}
+.reserve_cinema .cinema_content .tab_menu .sub_content .sub {display:block;}
+.reserve_cinema .cinema_content .tab_menu .sub_content .sub li {height:28px; width:105px; margin-bottom:6px; display:block; background:#FFF;}
+.reserve_cinema .cinema_content .tab_menu .sub_content .sub li a {display:block; width:79px; height:28px; padding-left:26px; background:#fff; color:#8d8d8d; line-height:28px;}
+.reserve_cinema .cinema_content .tab_menu .sub_content .sub li:hover a {color:#fff; background:#555555; line-height:28px;}
+
+
+/************빠른예매 팝업:달력***********/
+.reserve_date {float:left; width:396px; height:698px;}
+
+.reserve_date .reserve_calendar {width:396px; height:374px; border-bottom:1px solid #d2d2d2;}
+.reserve_date .reserve_calendar h2 {width:306px; height:42px; background:#c5695f; border-bottom:1px solid #d2d2d2; color:#FFF; font-size:18px; font-weight:600; padding:0 45px; line-height:42px;}
+.reserve_date .reserve_calendar h2 .calendar_icon {float:right; margin-top:12px;}
+
+.reserve_date .reserve_calendar .table_wrap {width:306px; height:283px; padding:24px 45px; }
+.reserve_date .reserve_calendar .table_wrap .year_tit {width:306px; height:30px; text-align:center;}
+.reserve_date .reserve_calendar .table_wrap .year_tit .prev {display:inline-block; float:left; border:1px solid #dddddd; width:30px; height:25px; padding-top:5px;}
+.reserve_date .reserve_calendar .table_wrap .year_tit h3 {display:inline-block; font-size:15px; font-weight:600; color:#555555; line-height:30px;}
+.reserve_date .reserve_calendar .table_wrap .year_tit .next {display:inline-block; float:right; border:1px solid #dddddd; width:30px; height:25px; padding-top:5px;}
+
+.reserve_date .reserve_calendar .table_wrap .year_txt {display:inline-block; width:306px; height:206px;color:#8d8d8d; text-align:center; margin-top:10px;}
+.reserve_date .reserve_calendar .table_wrap .year_txt .day {display:inline-block; background:#f3f3f3; width:306px; height:30px;}
+.reserve_date .reserve_calendar .table_wrap .year_txt .choose {display:inline-block; background:url(../img/popup_choose1.png) no-repeat 0 0; width:27px; height:27px; color:#FFF;}
+.reserve_date .reserve_calendar .table_wrap .year_txt .choose_other {display:inline-block; background:url(../img/popup_choose2.png) no-repeat 0 0; width:27px; height:27px;}
+
+.reserve_date .reserve_calendar .table_wrap .year_txt li {display:inline-block; padding:5px 5px; height:193px; text-align:center; font-size:13px; color:#8d8d8d; word-spacing:10px; line-height:28px; margin-top:-31px;}
+.reserve_date .reserve_calendar .table_wrap .year_txt li h3 {display:inline-block; margin-top:-4px; font-weight:600;}
+.reserve_date .reserve_calendar .table_wrap .year_txt li em {color:#ccc;}
+
+
+/************빠른예매 팝업:시간***********/
+.reserve_date .reserve_time {width:396px; height:374px;}
+.reserve_date .reserve_time h2 {width:306px; height:42px; background:#c5695f; border-bottom:1px solid #d2d2d2; color:#FFF; font-size:18px; font-weight:600; padding:0 45px; line-height:42px;}
+.reserve_date .reserve_time h2 .time_icon {float:right; margin-top:8px;}
+.reserve_date .reserve_time .time_wrap {width:396px; height:280px; padding:24px 45px 35px;}
+.reserve_date .reserve_time .time_wrap .time_info {width:306px; height:221px;}
+.reserve_date .reserve_time .time_wrap .time_info .t2 {padding-top:15px;}
+
+.reserve_date .reserve_time .time_wrap .time_info .theater {width:306px; height:27px; text-align:center; line-height:24px}
+.reserve_date .reserve_time .time_wrap .time_info .theater_nm {float:left; background:#d2cdcb; border:1px solid #b9ada4; width:59px; height:25px; font-size:15px; color:#FFF; ;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_info {float:right; border:1px solid #b9ada4; width:59px; height:25px; font-size:13px; color:#b9ada4;}
+
+.reserve_date .reserve_time .time_wrap .time_info .theater_time {width:306px; height:41px; border-bottom:1px solid #ddd;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time.last {height:26px; border-bottom:0;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time li {float:left; display:inline-block;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time li:first-child {background:none; padding-left:0;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time li span {background:url(../img/popup_bar.gif) no-repeat center; display:inline-block; width:1px; height:11px; margin-top:14px; padding:0 2px;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time li span.last {background:none;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time li a {display:inline-block; color:#555555; font-size:13px; padding:5px 5px; height:10px; width:35px; margin-top:10px; text-align:center; line-height:10px;}
+.reserve_date .reserve_time .time_wrap .time_info .theater_time li a:hover {background:#555555; color:#FFF; }
+
+
+/******************************헤더**************************************************/
+.header_wrap {width:100%; height:80px; position:relative;}
+
+/***************상영시간표, 빠른예매 퀵메뉴**********/
+.header_wrap .quick_btn {position:absolute; top:109px; right:50%; margin-right:-500px; z-index:9990;}
+.header_wrap .quick_btn .timetable {display:block; background:#c5695f; width:140px; height:27px; border:1px solid #963d34; text-align:center; padding-top:10px; }
+.header_wrap .quick_btn .reservation {display:block; margin-top:10px; background:#c5695f; width:140px; height:26px; border:1px solid #963d34; text-align:center; padding-top:11px;}
+
+/*헤더:소셜,탑메뉴*/
+.header_wrap .top_wrap {height:30px; background:#F2F2F2;}
+.header_wrap .top_wrap .top {width:1000px; margin:0 auto;}
+.header_wrap .top_wrap .top .social {float:left; margin-top:5px;}
+.header_wrap .top_wrap .top .social a {margin-right:10px;}
+.header_wrap .top_wrap .top .social a img {vertical-align:middle;}
+
+.header_wrap .top_wrap .top ul {float:right; line-height:30px;}
+.header_wrap .top_wrap .top li {float:left; padding-left:10px; margin-left:10px; background:url(../img/top_bar.gif) no-repeat left center;}
+.header_wrap .top_wrap .top li:first-child {background:none;}
+.header_wrap .top_wrap .top li a {color:#767676; font-weight:600;}
+
+/*헤더:로고,메뉴*/
+.header_wrap .gnb_wrap {height:48px; border-top:1px solid #DCDCDC; border-bottom:1px solid #DCDCDC;}
+.header_wrap .gnb_wrap .gnb {width:1000px; margin:0 auto;}
+.header_wrap .gnb_wrap .gnb h1 {float:left; margin-top:15px;}
+
+.header_wrap .gnb_wrap .gnb ul {float:right; border-right:1px solid #DCDCDC;}
+.header_wrap .gnb_wrap .gnb li {float:left; border-left:1px solid #DCDCDC;}
+.header_wrap .gnb_wrap .gnb li a {display:inline-block; width:130px; height:48px; text-align:center; line-height:49px; color:#555; font-size:16px; font-weight:600;}
+.header_wrap .gnb_wrap .gnb li a:hover {color:#c5695f;}
+.header_wrap .gnb_wrap .gnb li a.on {color:#c5695f;}
+
+/*************************************푸터***********************************/
+.footer_wrap {width:100%; height:292px; background:#555555; }
+.footer_wrap .footer {width:1000px; margin:0 auto; height:292px; position:relative;}
+.footer_wrap .footer h1 {float:left; margin-top:49px; }
+
+.footer_wrap .footer>ul {clear:left; float:left; margin-top:33px;}
+.footer_wrap .footer>ul>li {float:left; padding:0 5px; background:url(../img/footer_bar.gif) no-repeat right center;}
+.footer_wrap .footer>ul>li:first-child {padding-left:0;}
+.footer_wrap .footer>ul>li.last {background:none;}
+.footer_wrap .footer>ul>li a {font-size:12px; color:#999999;}
+.footer_wrap .footer>ul>li a.color {color:#d5d5d5;}
+
+.footer_wrap .footer .txt {float:left; margin-top:22px; width:430px; height:50px;}
+.footer_wrap .footer .txt p {font-size:12px; color:#999999; line-height:19px;}
+.footer_wrap .footer .txt p span {display:inline-block; background:url(../img/footer_bar.gif) no-repeat center center; height:9px; width:1px; margin-top:6px; padding:0 5px;}
+
+.footer_wrap .footer .copyright {clear:left; float:left; margin-top:31px;}
+.footer_wrap .footer .copyright p {font-size:11px; color:#d5d5d5;}
+
+/*패밀리사이트*/
+.footer_wrap .familysite {width:133px; position:absolute; right:0; top:97px;}
+
+.footer_wrap .familysite .tit_btn {display:block; height:25px; background:#c2c2c2; line-height:24px; padding:0 17px; font-size:12px; font-weight:600; color:#555555; margin-top:70px;}
+.footer_wrap .familysite .tit_btn span {display:inline-block; width:10px; height:7px; background:url(../img/family_showmenu_btn.png) no-repeat; vertical-align:middle; margin-bottom:2px; margin-left:19px;}
+
+.footer_wrap .familysite .tit_btn span.on {background:url(../img/family_closemenu_btn.png); height:6px; margin-bottom:0;}
+
+/*패밀리사이트 목록*/
+.footer_wrap .familysite ul {position:absolute; right:0; bottom:26px; width:133px; background:#c2c2c2; padding:10px 0; display:none;}
+.footer_wrap .familysite ul a {display:block; line-height:25px; font-size:12px; text-indent:15px; color:#555555; }
+.footer_wrap .familysite ul a:hover {color:#c5695f;}
+
+/*패밀리사이트 아래 KS-SQI*/
+.footer_wrap .etc {position:absolute; right:0; bottom:50px; display:inline-block; width:133px; height:35px;}
+.footer_wrap p {display:inline-block; font-size:10px; color:#999999; line-height:13px; margin-top:-3px; margin-left:3px;}

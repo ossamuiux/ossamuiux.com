@@ -1,0 +1,353 @@
+@charset "UTF-8";
+* {box-sizing: border-box;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;vertical-align: top;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+button,input {border-radius: 0}
+button {cursor: pointer;}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none}
+iframe {overflow: hidden;margin: 0;padding: 0;border: 0}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px
+}
+
+table {border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%;}
+
+input,button,select,textarea,label {vertical-align: middle; margin: 0; padding: 0;}
+/*모바일 브라우져에서 글자크기 자동확대 방지*/
+body {line-height: 1.5; -webkit-text-size-adjust:none;}
+
+
+
+html,body {height: 100%;}
+
+body,input,select,textarea,button,table {
+    font-family:'Noto Sans KR','맑은 고딕','malgun gothic',sans-serif;
+    font-size: 17px;
+}
+
+
+
+
+/*공통스타일링 요소
+1. 초기화css
+2. 폰트관련
+3. 표, 게시판 테이블
+4. 폼요소 스타일(input,textarea,select,button)
+5. 퀵메뉴
+6. header,footer,main,sub페이지 공통레이아웃 스타일
+*/
+
+/* 내용 테이블 공통스타일*/
+.tbl_con {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: left;
+    color: #666;
+}
+.tbl_con thead th,.tbl_con thead td{
+    border-top: 4px solid #009223;
+    border-bottom: 1px solid #009223;
+    color: #009223;
+}
+.tbl_con th,.tbl_con td {
+    padding: 15px 0 15px 10px;
+    border-bottom: 1px solid #d1d1d1;
+    vertical-align: middle;
+}
+.tbl_con tfoot {
+    color: #292929;
+    background: #f6f6f6;
+}
+.tbl_con .tr2 th,.tbl_con .tr2 td {
+    padding-top:7px;
+    padding-bottom: 7px;
+}
+
+/*폼요소 공통 스타일*/
+input[type="text"] {
+    height: 45px;
+    background: #f8f8f8;
+    width:100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    color: #292929;
+    font-size: 16px;
+}
+
+select {
+    width:132px;
+    height: 45px;
+    border: 2px solid #dddddd;
+    outline: none;
+    font-size: 16px;
+    color: #999;
+    padding-left: 15px;
+    letter-spacing: -0.05em;
+    background: #fff;
+    border-radius: 0;
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none;    /* 화살표 없애기 for firefox*/
+    appearance: none;         /* 화살표 없애기 공통*/
+}
+select::-ms-expand {display:none;}
+.select_wrap {
+    position: relative;
+    display: inline-block;
+}
+.select_wrap:before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -4px;
+    width:12px;
+    height: 7px;
+    background: url(../images/icon_select_arr.png) no-repeat;
+    background-size:12px;
+}
+
+textarea {
+    width:100%;
+    height: 200px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #292929;
+    outline: none;
+    background: #f8f8f8;
+    border: none;
+    resize:none;
+    border-radius: 0;
+}
+
+.file_wrap {
+    position: relative;
+}
+.file_wrap:before {
+    content: '';
+    position: absolute;
+    right: 96px;
+    top: 50%;
+    margin-top: -8px;
+    width:2px;
+    height: 16px;
+    background: #e8e8e8;
+}
+/*input file커스텀*/
+input[type="file"] {
+    width:98px;
+    height: 41px;
+    margin-left: -4px;
+    opacity: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    position: relative;
+    z-index: 10;
+}
+.file_wrap:after {
+    content: '파일선택';
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 16px;
+    color: #009223;
+    cursor: pointer;
+}
+
+/*체크박스 공통스타일*/
+label {
+    font-size: 16px;
+    color: #292929;
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+    line-height: 30px;
+    display: inline-block;
+}
+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:26px;
+    height: 26px;
+    border:2px solid #e0e0e0;
+    border-radius: 100%;
+}
+label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width:0px;
+    height: 19px;
+    background: url(../images/icon_checkbox.png) no-repeat;
+    background-size: 24px;
+    transition: all 0.3s;
+}
+input[type="checkbox"]:checked+label:after {
+    width:24px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+::-moz-selection { background: #ffe67b; }
+::selection { background: #ffe67b; }
+
+/*아이폰 인풋 자동확대 방지*/
+input[type="text"],input[type="password"],textarea {font-size:16px;}
+
+#wrap {overflow-x: hidden;}
+#header {
+    position: fixed;
+    left: 100px;
+    right: 100px;
+    top: 80px;
+    max-width: 100%;
+    z-index: 100;
+}
+#header .logo {
+	float: left;
+}
+
+#header .btn_menu {float: right; background: none; border: none; outline: none;}
+#header .btn_menu img {
+	width: 50px;
+    height: 70px;
+    margin-top: 3px;
+}
+#header .btn_menu.on .gnb {display: block;}
+#header .gnb .btn_close {
+	position: absolute;
+	right: 90px;
+	top: 90px;
+	background: none;
+	border: none;
+	outline: none;
+}
+#header .gnb {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+	opacity: 0;
+	overflow: hidden;
+    background: #fff;
+	transition: opacity 0.8s;
+}
+#header.on .gnb {
+	opacity: 1;
+	height: 100%;
+}
+
+#header .gnb .gnb_inner {
+	text-align: center;
+	margin-top: 434px;
+}
+#header .gnb .gnb_inner li {
+    display: inline-block;
+    position: relative;
+}
+#header .gnb .gnb_inner li a {
+    background: url(../images/menu_01.png) 50% 50% no-repeat;
+	width: 402px;
+    display: block;
+    height: 80px;
+}
+#header .gnb .gnb_inner li:nth-child(2) a {
+	background-image: url(../images/menu_02.png);
+	width: 507px;
+}
+#header .gnb .gnb_inner li:last-child a {
+	background-image: url(../images/menu_03.png);
+	width: 470px;
+}
+
+#header .gnb .gnb_inner li:nth-child(1):hover a {
+	background-image: url(../images/menu_01-active.png)
+}
+#header .gnb .gnb_inner li:nth-child(2):hover a {
+	background-image: url(../images/menu_02-active.png)
+}
+#header .gnb .gnb_inner li:last-child:hover a {
+	background-image: url(../images/menu_03-active.png)
+}
+
+#header .gnb .gnb_inner li .gnb_tit {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom:  -90px;
+	padding-top: 23px;
+}
+#header .gnb .gnb_inner li .gnb_tit1 {
+    left: 50px;
+    bottom: -90px;
+}
+#header .gnb .gnb_inner li .gnb_tit2 {
+    left: 50px;	
+}
+#header .gnb .gnb_inner li .gnb_tit3 {
+    left: 50px;	
+}
+
+#header .gnb .gnb_inner li:first-child:hover .gnb_tit1 {display: block;}
+#header .gnb .gnb_inner li:nth-child(2):hover .gnb_tit2 {display: block;}
+#header .gnb .gnb_inner li:last-child:hover .gnb_tit3 {display: block;}
+
+.percentage span {margin-left: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

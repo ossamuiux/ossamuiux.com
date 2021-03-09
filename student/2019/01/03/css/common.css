@@ -1,0 +1,396 @@
+@charset "utf-8";
+    
+* {box-sizing: border-box;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;vertical-align: top;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+button,input {border-radius: 0; margin: 0;padding: 0;}
+button {cursor: pointer;}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none}
+iframe {overflow: hidden;margin: 0;padding: 0;border: 0}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+table {border-collapse: collapse;border-spacing: 0; table-layout: fixed;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%;}
+input,button,select,label {vertical-align: middle;}
+
+/* -webkit-text-size-adjust:none; 
+모바일 브라우저에서 글자크기 자동확대 방지*/
+body {line-height: 1.5; -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
+
+html, body {height: 100%;}
+
+body,input,select,textarea,button,table {
+    font-family: '나눔 고딕', 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* user-scalable=yes 로 설정하고 폰트크기를 16px로 하면 아이폰에서 클릭시 확대 없어짐*/
+input[type='text'], input[type='password'] {font-size: 16px;}
+
+/* input[type='file'] 공통스타일 */
+input[type='file'] {
+    width: 98px;
+    height: 41px;
+    margin-left: -4px;
+    opacity: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    position: relative;
+    z-index: 5;
+}
+
+/* input 공통스타일 */
+input[type='text'] {
+    height: 45px;
+    background: #f6f6f6;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    color: #292929;
+    font-size: 16px;
+}
+
+#header {background: #000; position: fixed; left: 0; top: 0; width: 100%; z-index: 9999; padding: 0 22px 0 30px;}
+
+#mHeader {display: none;}
+
+#header .header_inner {max-width: 1200px; margin: 0 auto; overflow: hidden;}
+
+#header .header_inner .logo {float: left;}
+
+#header .header_inner .logo a {display: block; padding: 15px 0;}
+
+#header .header_inner .gnb_wrap {overflow: hidden; text-align: center;}
+
+#header .header_inner .gnb_wrap .gnb {
+    overflow: hidden;
+    display: inline-block;
+}
+
+#header .header_inner .gnb_wrap .gnb li {float: left; margin: 0 25px; position: relative;}
+
+#header .header_inner .gnb_wrap .gnb li a {color: #fff; display: inline-block; left: 80px; line-height: 80px; transition: all 0.3s; font-size: 17px;}
+
+#header .header_inner .gnb_wrap .gnb li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    height: 2px;
+    background: #ffd33a;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+#header .header_inner .gnb_wrap .gnb li.active a {color: #ffd33a;}
+
+#header .header_inner .gnb_wrap .gnb li.active a:before {opacity: 1;}
+
+#header .header_inner .gnb_wrap .gnb li:hover a {color: #ffd33a;}
+
+#header .header_inner .gnb_wrap .gnb li:hover a:before {opacity: 1;}
+
+#header .header_inner .lang_wrap {float: right;}
+
+#header .header_inner .lang_wrap img {margin-top: 32px;}
+
+#header .header_inner .lang_wrap a {color: #fff; margin: 0 8px; display: inline-block; height: 80px; line-height: 80px; position: relative;}
+
+#header .header_inner .lang_wrap a.active {font-weight: 900; color: #ffd33a;}
+
+#header .header_inner .lang_wrap a:before {
+    position: absolute;
+    content: '';
+    left: 27px;
+    top: 35px;
+    width: 1px;
+    height: 11px;
+    background: rgba(255,255,255,.5);
+}
+
+#header .header_inner .lang_wrap a:last-child:before {display: none;}
+
+#main {background: #000;}
+
+#main .tit {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+#main .tit span {position: relative;}
+
+#main .tit span:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #fff;
+}
+
+/* scroll button */
+#main .btn_scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -25px;
+    outline: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#main .btn_scroll img {display: block;}
+
+@keyframes moveSc {
+    50% {transform: translateY(10px);}
+}
+
+#main .btn_scroll .move_scroll {
+    margin-top: 10px;
+    animation: moveSc 1s linear infinite;
+}
+
+/* pagination */
+#main .main_slider .swiper-pagination {right: 40px; z-index: 20;}
+
+#main .main_slider .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    opacity: 1;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#main .main_slider .swiper-pagination-bullet-active {background: #ffd33a;}
+#main .main_slider .swiper-pagination-bullet:last-child {display: none;}
+
+#main .main_slider .line {
+    position: fixed;
+    right: 47px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, .5);
+    width: 1px;
+    height: 105px;
+    z-index: 10;
+}
+
+#main .main_slider .swiper-slide.footer {
+    background: #202020;
+    height: 200px;
+    text-align: left;
+    padding: 0;
+}
+
+#main .main_slider .footer .footer_inner {
+    padding: 0 45px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: #a0a0a0;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+#main .main_slider .footer .footer_inner .footer_logo {float: left; margin-top: 55px;}
+
+#main .main_slider .footer .footer_inner .txt_wrap {float: left; margin: 60px 0 60px 70px; max-width: 820px;}
+
+#main .main_slider .footer .footer_inner .txt_wrap span {margin: 0 7px;}
+
+#main .main_slider .footer .footer_inner .copy {color: #737373; margin-top: 25px;}
+
+
+
+
+@media screen and (max-width: 1154px) {
+    #main .main_slider .footer .footer_inner .footer_logo {
+        position: absolute;
+        left: 45px;
+        top: 0;
+    }
+    
+    #main .main_slider .footer .footer_inner .txt_wrap {
+        float: none;
+        max-width: none;
+        padding-left: 180px;
+        margin-top: 50px;
+    }
+}
+
+
+/* 타블렛 */
+@media screen and (max-width: 1024px) {
+    #header {display: none;}
+    
+    #mHeader {
+        display: block;
+        background: #000;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 9999;
+        padding: 0 30px;
+    }
+    
+    #mHeader .logo {float: left; padding: 15px 0 15px 20px;}
+    
+    #mHeader .btn_menu {float: right; text-indent: -9999px; background: url(../images/m_menu.png) no-repeat 50% 50%; width: 35px; height: 35px; border: none; outline: none; margin-top: 24px; transition: all 1s forwards;}
+    
+    #mHeader .btn_menu.on {background-image: url(../images/m_menu_on.png);}
+    
+    #mHeader .menu_wrap {
+        position: fixed;
+        left: 0;
+        top: 80px;
+        height: 0;
+        width: 100%;
+        background: rgba(0,0,0,.8);
+        transition: all 0.7s;
+        overflow: hidden;
+    }
+    
+    #mHeader .menu_wrap.on {height: 100%;}
+    
+    #mHeader .menu_wrap.on .m_gnb li {opacity: 1;}
+    
+    #mHeader .menu_wrap.on .lang_wrap {opacity: 1; transition: all 0.4s 0.3s;}
+    
+    #mHeader .menu_wrap .m_gnb {padding: 50px 0 0 30px;}
+    
+    #mHeader .menu_wrap .m_gnb li {margin-bottom: 60px; opacity: 0; transition: all 0.6s;}
+    
+    #mHeader .menu_wrap .m_gnb li:hover a {color: #ffd33a;}
+    
+    #mHeader .menu_wrap .m_gnb li a {color: #fff; font-size: 40px; font-weight: 900; padding: 0 20px; line-height: 1; transition: all 0.3s;}
+    
+    #mHeader .menu_wrap .lang_wrap {
+        position: absolute;
+        left: 55px;
+        bottom: 115px;
+        opacity: 0;
+        transition: all 0.4s;
+    }
+    
+    #mHeader .menu_wrap .lang_wrap a {color: #fff; margin: 0 8px; display: inline-block; height: 50px; line-height: 50px; position: relative; font-size: 20px;}
+    
+    #mHeader .menu_wrap .lang_wrap img {margin-top: 12px;}
+
+    #mHeader .menu_wrap .lang_wrap a.active {font-weight: 900; color: #ffd33a;}
+    
+    #mHeader .menu_wrap .lang_wrap a:last-child:before {display: none;}
+
+    #mHeader .menu_wrap .lang_wrap a:before {
+        position: absolute;
+        content: '';
+        left: 34px;
+        top: 17px;
+        width: 1px;
+        height: 15px;
+        background: rgba(255,255,255,.5);
+        cursor: inherit;
+    }
+    
+    #main .main_slider .swiper-pagination {right: 30px;}
+    #main .main_slider .line {right: 37px;}
+    
+    #main .main_slider .footer .footer_inner .txt_wrap {float: none;}
+}
+
+@media screen and (max-width: 978px) {
+    #main .main_slider .footer .footer_inner .txt_wrap {margin-top: 40px;}
+}
+
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+    #main .tit {font-size: 25px;}
+    #main .tit span:before {bottom: -30px; width: 30px;}
+    
+    #mHeader .menu_wrap .m_gnb li:hover a {color: #fff;}
+    
+    #mHeader .btn_menu {
+        width: 40px;
+        height: 40px;
+        background-size: 75%;
+        margin-top: 16px;
+    }
+    
+    #mHeader .btn_menu.on {
+        width: 40px;
+        height: 40px;
+        background-size: 75%;
+    }
+    
+    #mHeader .menu_wrap .lang_wrap {left: 35px; width: 133px;}
+    
+    #mHeader .menu_wrap .lang_wrap img {width: 19px; margin-top: 16px;}
+    
+    #mHeader .menu_wrap .lang_wrap a {font-size: 17px;}
+    
+    #mHeader .menu_wrap .lang_wrap a:before {
+        left: 30px;
+        top: 19px;
+        height: 13px;
+    }
+    
+    #main .btn_scroll {bottom: 25px;}
+    
+    #main .btn_scroll img {width: 80%;}
+    
+    #mHeader .logo {padding: 15px 0;}
+    
+    #mHeader .menu_wrap .m_gnb {padding: 25px 0 0 20px;}
+    
+    #mHeader .menu_wrap .m_gnb li {margin-bottom: 40px;}
+    
+    #mHeader .menu_wrap .m_gnb li a {font-size: 32px; padding: 0 10px;}
+    
+    
+    /* footer */
+    #main .main_slider .swiper-slide.footer {text-align: center; width: 100%; height: 260px;}
+    
+    #main .main_slider .footer .footer_inner {width: 100%; padding: 30px 15px;}
+    
+    #main .main_slider .footer .footer_inner .footer_logo {
+        position: static;
+        width: 110px;
+        margin: 0 0 20px 0;
+        float: none;
+    }
+    
+    #main .main_slider .footer .footer_inner .txt_wrap {float: none; margin: 0; font-size: 12px; padding-left: 0;}
+}

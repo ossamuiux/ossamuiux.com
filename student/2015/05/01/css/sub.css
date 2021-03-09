@@ -1,0 +1,486 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff2) format('woff2'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothicr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff2) format('woff2'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff2) format('woff2'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+
+
+
+body {background:url(../img/bg_main_body.gif) repeat center;}
+body,textarea {font:12px 'Nanum Gothic','나눔고딕',sans-serif;   }
+a {color:white;}
+input {font-size:11px; font:dotum,'돋움',sans-serif;}
+
+
+
+/**********************************************포커스발생시 아웃라인 제거********************************/
+.slick-slider div:focus {outline:none;}
+.slick-slider a:focus {outline:none;}
+.main_wrap_sub .slick-dots button:focus {outline:none;}
+.main_wrap .main .product_bot .tab2 input[type="file"]:focus {outline:none;}
+
+
+
+
+
+
+.quick {border:1px solid red; width:30px; height:300px; position:fixed; right:20%; top:16px;}
+
+
+
+
+
+/*헤더 위치잡기*/
+.header_wrap {width:100%; height:164px; }
+
+/*헤더위에 로그인 부분 */
+.header_wrap .login_wrap {height:28px; margin:0 auto; background:#3a3a3a;}
+
+/*헤더위에 로그인 내용틀*/
+.header_wrap .login_wrap .login {height:28px; width:1040px; margin:0 auto;}
+
+/*헤더위에 로그인 내용*/
+.header_wrap .login_wrap .login ul {float:right; margin-top:7px;}
+.header_wrap .login_wrap .login ul li {float:left;}
+.header_wrap .login_wrap .login ul li a {color:#a4a4a4; background:url(../img/login_background.jpg) no-repeat center right;  padding: 0 10px;}
+.header_wrap .login_wrap .login .last {background:none;}
+/*헤더 가운데 부분 위치잡기*/
+.header_wrap .header {width:100%; height:140px; background:#fcf6ec;}
+
+/*헤더 가운데 내용틀 잡기*/
+.header_wrap .header .gnb_wrap { width:1040px; height:136px; margin:0 auto; position:relative;}
+
+/*헤더 가운데 내용*/
+.header_wrap .header .gnb_wrap .logo { float:left; margin-top:23px;}
+.header_wrap .header .gnb_wrap .logo h1 { margin-left:290px;}
+
+.header_wrap .header .gnb_wrap .gnb_slider {float:left; margin-top:15px; margin-left:25px; width:130px;}
+
+
+/*슬라이더 좌우 버튼*/
+.header_wrap .header .gnb_wrap .gnb_slider .slick-prev {width:4px; height:7px; background:url(../img/arrow_pre.png) no-repeat left; border:none; font-size:0px; outline:none; position:absolute; top:20px; left:0; cursor:pointer; margin-left:-15px;}
+.header_wrap .header .gnb_wrap .gnb_slider .slick-next {width:4px; height:7px; background:url(../img/arrow_next.png) no-repeat right; border:none; font-size:0px; outline:none; position:absolute; top:20px; right:0; cursor:pointer;margin-right:-15px;}
+
+.header_wrap .header .gnb_wrap .gnb_slider .slick-dots {text-indent:-9999px; border:none; position:absolute; left:-9999px;}
+
+
+
+
+/*하얀색 배경에 빨간 선 패딩값을줘서 떨어트리기*/
+.header_wrap .search_wrap {clear:both; padding-top:10px;} 
+
+/*하얀색 배경에 빨간 선 부분 */
+.header_wrap .search_wrap .search_gnb {width:1040px; height:40px; background:url(../img/search_bg.png) no-repeat center; }
+.header_wrap .search_wrap .search_gnb .box {width:460px; height:40px; margin:0 auto; overflow:hidden;}
+
+/*하얀색 배경에 빨간 선 부분 내용*/
+.header_wrap .search_wrap .search_gnb .best {background:url(../img/best.png) no-repeat left; float:left; margin-top:13px; vertical-align:middle;}
+.header_wrap .search_wrap .search_gnb .best a {vertical-align:bottom; color:black; margin-left:70px; vertical-align:middle;}
+.header_wrap .search_wrap .search_gnb .search {float: left; margin-top:11px; font-size:0; margin-left:26px; vertical-align:middle;}
+
+/*서치창 꾸미기*/
+.header_wrap .search_wrap .search_gnb .search input {vertical-align:middle; width:120px;}
+.header_wrap .search_wrap .search_gnb .search button{background:url(../img/search.png) no-repeat center; width:21px; height:21px; font-size:0; text-indent:-99999px; border:none; background-color:#000; vertical-align:middle;} 
+
+
+/*헤더 메뉴*/
+.header_wrap .menu_wrap {width:1040px; height:38px; background:#ff5a89; position:relative;}
+.header_wrap .menu_wrap .menu li {float:left; width:147px;  height:38px; }
+.header_wrap .menu_wrap .menu li a {float:left;  margin-top:10px; margin-left:52px; width:137px; height:38px;}
+.header_wrap .menu_wrap .menu li a:hover { color:#FFF; }
+
+/*서브메뉴_틀*/
+.header_wrap .header .gnb_wrap .sub_wrap {width:1040px; height:300px; background:#FFF; opacity:0.9; position:absolute; border-bottom:2px solid ff5a89; display:none; z-index:999999; }
+
+
+/*서브메뉴_틀 내용잡기*/
+.header_wrap .header .gnb_wrap .sub_wrap .sub {height:300px;}
+.header_wrap .header .gnb_wrap .sub_wrap .sub ul {display:inline-block; width:144px;}
+.header_wrap .header .gnb_wrap .sub_wrap .sub ul li {text-align:center; line-height:40px; }
+.header_wrap .header .gnb_wrap .sub_wrap .sub ul li a {color:#000;}
+.header_wrap .header .gnb_wrap .sub_wrap .sub ul li a:hover { text-decoration:underline;}
+
+
+
+
+/***************************************Product 페이지******************************************/
+/*메인 전체틀*/
+.main_wrap {width:1040px; overflow:hidden; margin:0 auto; }
+
+/*메인 전체틀_location*/
+.main_wrap .location { margin-top:12px;}
+.main_wrap .location span {color:white; margin-left:6px;}
+
+/*메인_하얀배경틀*/
+.main_wrap .main {width:100%; overflow:hidden; background:white; margin-top:10px; padding-bottom:30px;}
+
+
+/*메인 내용틀*/
+.main_wrap .main .main_content { width:960px;; overflow:hidden; margin:0px auto; padding-top:30px;} 
+
+/*메인 내용틀_왼쪽부분*/
+.main_wrap .main .main_content .prodL { float:left; width:315px; overflow:hidden; }
+.main_wrap .main .main_content .prodL .bigimg { width:312px; height:312px;}
+.main_wrap .main .main_content .prodL .bigimg img{border:1px solid #ff5a89;}
+
+.main_wrap .main .main_content .prodL .smallimg {width:100px; height:100px; border:1px solid #eee6d9; margin-top:20px;}
+
+
+
+
+
+
+/*메인 내용틀_오른쪽부분*/
+.main_wrap .main .main_content .prodR { float: right; width:630px; overflow:hidden; } /*히든으로 바꾸기*/
+
+
+/*메인 내용틀_오른쪽부분_내용 정렬*/
+.main_wrap .main .main_content .prodR>table {border-top:1px solid #eee6d9; margin-top:20px;}
+.main_wrap .main .main_content .prodR>table tr th {vertical-align:middle; height:40px;}
+.main_wrap .main .main_content .prodR>table tr th img{float:left;}
+.main_wrap .main .main_content .prodR>table tr td{ vertical-align:middle;}
+
+
+
+.main_wrap .main .main_content .prodR .price {color:black; font-size:18px; color:#f48987; font-family:Tahoma; vertical-align:middle; padding-right:5px; display:inline-block;}
+.main_wrap .main .main_content .prodR .social {height:90px; background:#f7f7f7; margin-top:10px;}
+.main_wrap .main .main_content .prodR .buy_btn {border-top:1px solid #eee6d9; margin-top:20px;}
+.main_wrap .main .main_content .prodR .buy_btn ul {float:left; margin-top:20px;}
+.main_wrap .main .main_content .prodR .buy_btn ul li {float:left; margin-right:10px;}
+
+
+
+/*밑에부분*/
+.main_wrap .main .product {width:960px; margin:30px auto; border-bottom:1px solid #eee6d9; overflow:hidden;}
+.main_wrap .main .product ul {float:left; margin:10px;}
+.main_wrap .main .product ul li {float:left;  background:url(../img/mn_line.gif) no-repeat right; cursor:pointer;}
+.main_wrap .main .product ul li img{margin:0 10px ;vertical-align:middle;}
+
+.main_wrap .main .product ul .information {background:none; }
+
+
+/*밑에부분, 클릭했을때 보여지는 부분*/
+.main_wrap .main .product_bot { overflow:hidden; width:960px; margin:0 auto;}
+.main_wrap .main .product_bot .tab {}
+
+
+
+/*탭1_상세페이지*/
+.main_wrap .main .product_bot .tab { text-align:center;}
+.main_wrap .main .product_bot .tab1 img { }
+
+
+
+
+/*탭2_사용후기작성*/
+.main_wrap .main .product_bot .tab2 {}
+.main_wrap .main .product_bot .tab2 table {width:100%;}
+.main_wrap .main .product_bot .tab2 table tr {background-color:#f7f7f7;  border-top:1px solid #e6e6e6;}
+.main_wrap .main .product_bot .tab2 table td {  padding:5px 0 5px 20px; text-align:left;}
+.main_wrap .main .product_bot .tab2 table td img {vertical-align:middle; margin-right:5px;}
+.main_wrap .main .product_bot .tab2 table td select {vertical-align:middle; margin-right:20px;}
+.main_wrap .main .product_bot .tab2 table th { padding:8px 0 5px 15px; text-align:left;}
+.main_wrap .main .product_bot .tab2 table input[type="text"] { width:780px; border:1px solid #d2d2d2;}
+.main_wrap .main .product_bot .tab2 table textarea {border:1px solid #d2d2d2; resize:none; width:775px; height:300px;}
+.main_wrap .main .product_bot .tab2 [type="button"]{background:url(../img/btn_regist.gif) no-repeat; width:47px; height:24px; border:none; float:right; margin-right:12px;}
+.main_wrap .main .product_bot .tab2 .tab2_last {border-top:none; border-bottom:1px solid #e6e6e6; margin-bottom:10px;}
+
+
+
+/*탭3_Q&A*/
+.main_wrap .main .product_bot .tab3 table { background-color:#999999; width:100%; height:25px;}
+.main_wrap .main .product_bot .tab3 table th {vertical-align:middle; background:url(../img/bg_thw.gif) no-repeat left center;}
+.main_wrap .main .product_bot .tab3 .mn1 { width:960px; }
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box { border-bottom:1px solid #e6e6e6; height:25px;}
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box li {float:left; line-height:22px; background:url(../img/bg_thw.gif) no-repeat left center; height:25px;}
+
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box li.first { background:none;}
+
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .num {width:60px;}
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .answer {width:90px;}
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .que { width:130px;}
+
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .tit { width:500px;}
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .tit a{ color:black}
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .tit a:hover{ color:#ff5a8a;}
+
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .id {width:90px;}
+.main_wrap .main .product_bot .tab3 .mn1 .mn1_box .date { width:90px;}
+
+
+/*탭3_Q&A_tab*/
+.main_wrap .main .product_bot .tab3 .min1_tab { background:#e7e7e7; height:200px;}
+
+
+
+
+.main_wrap .main .product_bot .tab4 {}
+
+
+
+
+
+/***************************************Product 페이지******************************************/
+
+
+
+
+
+
+
+
+
+/***************************************skin 페이지******************************************/
+/*메인 내용틀*/
+.main_wrap.skin .main .main_content { width:980px; overflow:hidden; margin:0px auto; padding-top:30px;} 
+
+/*메인 내용틀_왼쪽부분*/
+.main_wrap.skin .main .main_content .prodL { float:left; width:140px; height:200px; }
+
+
+
+.main_wrap.skin .main .main_content .prodL ul li{float:left; width:150px; height:30px;}
+.main_wrap.skin .main .main_content .prodL ul img { text-align:center;}
+.main_wrap.skin .main .main_content .prodL ul li a {color:black; display:block; width:150px; height:30px; line-height:30px; padding-left:10px;}
+.main_wrap.skin .main .main_content .prodL ul li a:hover {background:#ff5a89; color:white;}
+
+
+
+
+
+/*메인 내용틀_오른쪽부분*/
+.main_wrap.skin .main .main_content .prodR { float:right; width:810px; overflow:hidden;  position:relative;}
+
+
+
+
+/*메인 내용틀_오른쪽부분_타이틀*/
+.main_wrap.skin .main .main_content .prodR .pro_title {position:absolute; top:0; left:0; z-index:9999;}
+
+
+
+
+
+
+
+/*메인 내용틀_오른쪽부분_슬라이더*/
+.main_wrap.skin .main .main_content .prodR .pro_slider{ margin-top:10px;}
+
+/*메인 내용틀_오른쪽부분_슬라이더 버튼제어*/
+.main_wrap.skin .main .main_content .prodR .pro_slider .slick-prev {width:11px; height:22px; background:url(../img/list_slider_arrowL.png) left; border:none; font-size:0px; outline:none; position:absolute; top:140px; left:0; cursor:pointer; z-index:999; margin-left:18px;}
+.main_wrap.skin .main .main_content .prodR .pro_slider .slick-next {width:11px; height:22px; background:url(../img/list_slider_arrowR.png) right; border:none; font-size:0px; outline:none; position:absolute; top:140px; right:0; cursor:pointer; z-index:999; margin-right:18px;}
+.main_wrap.skin .main .main_content .prodR .pro_slider .slick-dots {text-indent:-9999px; border:none; position:absolute; left:-9999px;}
+
+
+
+
+
+/*메인 내용틀_오른쪽부분_메뉴*/
+.main_wrap.skin .main .main_content .prodR .prodsubmn {height:50px; border:1px solid red; margin:15px 0;}
+
+
+
+
+
+
+/*메인 내용틀_오른쪽부분_리스트 틀*/
+.main_wrap.skin .main .main_content .prodR .list_wrap ul{border-top:1px solid #d9d9d9; display:inline-block;}
+.main_wrap.skin .main .main_content .prodR .list_wrap ul li { width:268px; height:250px; float:left; border-bottom:1px solid #d9d9d9; text-align:center;}
+
+
+
+
+.main_wrap.skin .prodR .list_wrap ul li .list_img {margin-top:10px;}
+.main_wrap.skin .prodR .list_wrap ul li .list_title {margin-top:10px;}
+.main_wrap.skin .prodR .list_wrap ul li .list_price {margin-top:10px;}
+.main_wrap.skin .prodR .list_wrap ul li .list_price span {color:#f48987; font-family:Tahoma; font-size:15px; vertical-align:middle; }
+.main_wrap.skin .prodR .list_wrap ul li .list_social button {background:linear-gradient(#4c69ba, #3b55a0); height:20px; }
+
+/***************************************skin 페이지******************************************/
+
+
+
+
+/***************************************로그인 페이지******************************************/
+
+
+/*메인 내용틀*/
+.main_wrap.login .main .main_content { width:980px; overflow:hidden; margin:0px auto; padding-top:30px; } 
+
+/*메인 내용틀_왼쪽부분*/
+.main_wrap.login .main .main_content .prodL { float:left; width:140px; height:200px; }
+
+
+.main_wrap.login .main .main_content .prodL ul {float:left;}
+.main_wrap.login .main .main_content .prodL ul li{float:left; width:150px; height:30px;}
+.main_wrap.login .main .main_content .prodL ul li a {color:black; display:block; width:150px; height:30px; line-height:30px; padding-left:10px;}
+.main_wrap.login .main .main_content .prodL ul li a:hover {background:#ff5a89; color:white;}
+
+
+
+
+
+
+/*메인 내용틀_오른쪽부분*/
+.main_wrap.login .main .main_content .prodR { float:right; width:810px; overflow:hidden; }
+
+.main_wrap.login .main .main_content .prodR .login_radio { margin-top:18px;  }
+.main_wrap.login .main .main_content .prodR .login_radio button {vertical-align:baseline;}
+.main_wrap.login .main .main_content .prodR .login_radio img{vertical-align:baseline;}
+
+
+/*로그인  전체틀*/
+.main_wrap.login .prodR .login_wrap { border:2px solid #e4e4e4; margin-top:8px; overflow:hidden; background:#fafafa; padding:20px 0;}
+
+
+/*로그인 왼쪽 틀*/
+.main_wrap.login .prodR .login_wrap .login_wrap_l {border-right:1px solid #e4e4e4; float:left;  overflow:hidden;  padding:23px 49px 23px 67px;}
+
+/*로그인 왼쪽 틀 내용틀*/
+.main_wrap.login .prodR .login_wrap .login_wrap_l .login_box{overflow:hidden; margin:0 auto;}
+
+
+.main_wrap.login .login_box_l {float:left;  width:210px;}
+
+
+/*로그인 왼쪽 틀 _ 로그인 박스와 이미지 정렬 제어*/
+.main_wrap.login .login_box_l .id {float:left; padding-bottom:5px; }
+.main_wrap.login .login_box_l .id legend {float:left;}
+.main_wrap.login .login_box_l .id legend img {vertical-align:middle; padding-top:9px; padding-right:11px;}
+.main_wrap.login .login_box_l .password {float:left;}
+.main_wrap.login .login_box_l .password legend {float:left;}
+.main_wrap.login .login_box_l .password legend img {vertical-align:middle; padding-top:9px;}
+.main_wrap.login .login_box_l input {margin-left:10px; width:146px; border:2px solid #ccc; height:26px;}
+
+
+/*로그인 오른쪽 틀 _ 버튼클릭 이미지*/
+.main_wrap.login .login_box_r {float:right; border:none; background:none; cursor:pointer;  }
+
+
+/*로그인 오른쪽 틀 _ 아래 체크*/
+.main_wrap.login .prodR .login_wrap .login_wrap_l .id_check { margin-top:10px;}
+.main_wrap.login .prodR .login_wrap .login_wrap_l .id_check img { vertical-align:baseline;}
+
+
+.main_wrap.login .prodR .login_wrap .login_wrap_r { float:right; overflow:hidden; width:350px; padding:28px 0 41px 42px;}
+
+.main_wrap.login .prodR .login_wrap .login_wrap_r .login_infor { float:left;}
+.main_wrap.login .prodR .login_wrap .login_wrap_r .txt {float:left; width:200px;}
+.main_wrap.login .prodR .login_wrap .login_wrap_r .txt img {margin-bottom:13px;}
+
+
+.main_wrap.login .prodR .login_wrap .login_wrap_r .button {float:right;}
+.main_wrap.login .prodR .login_wrap .login_wrap_r .button img {margin-bottom:4px;}
+
+/***************************************로그인 페이지******************************************/
+
+
+
+
+/***************************************회원가입 페이지******************************************/
+
+
+/*메인 내용틀*/
+.main_wrap.member .main .main_content { width:980px; overflow:hidden; margin:0px auto; padding-top:30px; } 
+
+/*메인 내용틀_왼쪽부분*/
+.main_wrap.member .main .main_content .prodL { float:left; width:140px; height:200px; }
+
+
+.main_wrap.member .main .main_content .prodL ul {float:left;}
+.main_wrap.member .main .main_content .prodL ul li{float:left; width:150px; height:30px;}
+.main_wrap.member .main .main_content .prodL ul li a {color:black; display:block; width:150px; height:30px; line-height:30px; padding-left:10px;}
+.main_wrap.member .main .main_content .prodL ul li a:hover {background:#ff5a89; color:white;}
+
+
+
+
+
+
+/*메인 내용틀_오른쪽부분*/
+.main_wrap.member .main .main_content .prodR { float:right; width:810px; overflow:hidden; }
+
+
+/*회원가입  전체틀*/
+.main_wrap.member .prodR .member_wrap { border:2px solid #e4e4e4; margin-top:8px; overflow:hidden; background:#fafafa; padding:20px;}
+
+/*회원가입  전체내용*/
+.main_wrap.member .prodR .member_wrap .member {overflow:hidden;}
+
+.main_wrap.member .prodR .member_wrap .member table {width:100%}
+.main_wrap.member .prodR .member_wrap .member th{vertical-align:middle; text-align:left; padding-left:7px;}
+.main_wrap.member .prodR .member_wrap .member td {vertical-align:middle;}
+.main_wrap.member .prodR .member_wrap .member tr {border-bottom:1px solid #e6e6e6; height:40px;}
+
+.main_wrap.member .prodR .member_wrap .member table input[type="text"] {border:1px solid #d2d2d2; height:15px;}
+.main_wrap.member .prodR .member_wrap .member table input[type="password"] {border:1px solid #d2d2d2; height:15px;}
+
+/*회원가입  text  길이제어*/
+
+.main_wrap.member .prodR .member_wrap .member .id input[type="text"] {width:100px;}
+.main_wrap.member .prodR .member_wrap .member .id input[type="button"] {height:20px; border:1px solid #d2d2d2;}
+.main_wrap.member .prodR .member_wrap .member .id input {margin-right:10px;}
+.main_wrap.member .prodR .member_wrap .member .id {background:url(../img/th_id_infor.png) no-repeat center;}
+.main_wrap.member .prodR .member_wrap .member .password input{width:140px;}
+.main_wrap.member .prodR .member_wrap .member .password_re input{width:140px;}
+.main_wrap.member .prodR .member_wrap .member .name input{width:90px;}
+.main_wrap.member .prodR .member_wrap .member .man input{ vertical-align:sub;}
+.main_wrap.member .prodR .member_wrap .member .mail input {width:100px;}
+.main_wrap.member .prodR .member_wrap .member .phone input {width:50px;}
+.main_wrap.member .prodR .member_wrap .member .phone select {border:1px solid #d2d2d2;}
+
+.main_wrap.member .prodR .member_wrap .member .button {margin-top:20px; float:right;}
+.main_wrap.member .prodR .member_wrap .member .button input[type="button"] {background:url(../img/btn_member.jpg) no-repeat; width:124px; height:34px; border:none; coursor:point;}
+
+
+/***************************************회원가입 페이지******************************************/
+
+
+
+
+
+
+
+.footer_wrap {margin-top:32px; width:100%; height:200px; background:#fcf6ec; }
+
+.footer_wrap .footer { margin:0 auto; width:1020px; padding-bottom:50px;}
+
+.footer .footer_top {  margin:0 auto; border-bottom:1px solid #999; }
+.footer .footer_top li{ padding:20px 0 15px 0;}
+.footer .footer_top a {color:black;}
+.footer .footer_top span {margin:0 18px; padding-right:26px; background:url(../img/more_allow.png) no-repeat right center;}
+
+.footer .footer_middel { overflow:hidden; padding:10px 0; margin:0 auto;  border-bottom:1px solid #999;}
+.footer .footer_middel li {float:left; margin-right:10px; }
+.footer .footer_middel li a {color:black;}
+
+.footer .footer_bottom {padding:10px 0; position:relative;}
+.footer .footer_bottom .footer_img {position:absolute; top:8px; left:220px;}
+.footer .footer_bottom li img{ padding:5px 0;}

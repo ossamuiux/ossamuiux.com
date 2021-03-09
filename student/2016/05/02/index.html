@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>내몸에 딱! 엘리트</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function(){
+	$('.main .visual').slick({
+		pauseOnHover:false,
+		autoplay:true,
+		dots:true
+	});
+	
+	$('.section3 .notice').slick({
+		pauseOnHover:false,
+		autoplay:true,
+		dots:true,
+		arrows:false
+	});
+		$(window).resize(function(){
+		var num=$(this).width();
+		
+		if(num<=750){
+			$('.main .visual .slick-prev,.main .visual .slick-next').hide();
+			$('.main .visual .slick-dots').show();
+		} else {
+			$('.main .visual .slick-prev,.main .visual .slick-next').show();
+			$('.main .visual .slick-dots').hide();
+		}
+		//슬라이더이미지 바꾸기
+		if(num>1007){
+			$('.main .visual .visual1 img').prop('src','images/visual01.jpg');
+			$('.main .visual .visual2 img').prop('src','images/visual02.jpg');
+			$('.main .visual .visual3 img').prop('src','images/visual03.jpg');
+			$('.main .visual .visual4 img').prop('src','images/visual04.jpg');
+			$('.main .box1 img').prop('src','images/img_story01.jpg');
+			$('.main .box2 img').prop('src','images/img_story02.jpg');
+			$('.main .box3 img').prop('src','images/img_story03.jpg');
+			$('.main .notice1 img').prop('src','images/img_blogevent160816.jpg');
+			$('.main .notice2 img').prop('src','images/img_facebookevent160816.jpg');
+			$('.main .notice3 img').prop('src','images/img_renewalevent1.jpg');
+			$('.main .notice4 img').prop('src','images/img_renewalevent2.jpg');
+		} else if(num<=1007 && num>750){
+			$('.main .visual .visual1 img').prop('src','images/visual01_t.jpg');
+			$('.main .visual .visual2 img').prop('src','images/visual02_t.jpg');
+			$('.main .visual .visual3 img').prop('src','images/visual03_t.jpg');
+			$('.main .visual .visual4 img').prop('src','images/visual04_t.jpg');
+			$('.main .box1 img').prop('src','images/img_story01.jpg');
+			$('.main .box2 img').prop('src','images/img_story02.jpg');
+			$('.main .box3 img').prop('src','images/img_story03.jpg');
+			$('.main .notice1 img').prop('src','images/img_blogevent160816.jpg');
+			$('.main .notice2 img').prop('src','images/img_facebookevent160816.jpg');
+			$('.main .notice3 img').prop('src','images/img_renewalevent1.jpg');
+			$('.main .notice4 img').prop('src','images/img_renewalevent2.jpg');
+
+		} else {
+			$('.main .visual .visual1 img').prop('src','images/visual01_m.jpg');
+			$('.main .visual .visual2 img').prop('src','images/visual02_m.jpg');
+			$('.main .visual .visual3 img').prop('src','images/visual03_m.jpg');
+			$('.main .visual .visual4 img').prop('src','images/visual04_m.jpg');
+			$('.main .box1 img').prop('src','images/img_story01_m.jpg');
+			$('.main .box2 img').prop('src','images/img_story02_m.jpg');
+			$('.main .box3 img').prop('src','images/img_story03_m.jpg');
+			$('.main .notice1 img').prop('src','images/img_blogevent160816_m.jpg');
+			$('.main .notice2 img').prop('src','images/img_facebookevent160816_m.jpg');
+			$('.main .notice3 img').prop('src','images/img_renewalevent1_m.jpg');
+			$('.main .notice4 img').prop('src','images/img_renewalevent2_m.jpg');
+
+		}
+	});
+	
+	var num=$(window).width();
+		
+		if(num<=750){
+			$('.main .visual .slick-prev,.main .visual .slick-next').hide();
+			$('.main .visual .slick-dots').show();
+		} else {
+			$('.main .visual .slick-prev,.main .visual .slick-next').show();
+			$('.main .visual .slick-dots').hide();
+		}
+	//슬라이더이미지 바꾸기
+		if(num>1007){
+			$('.main .visual .visual1 img').prop('src','images/visual01.jpg');
+			$('.main .visual .visual2 img').prop('src','images/visual02.jpg');
+			$('.main .visual .visual3 img').prop('src','images/visual03.jpg');
+			$('.main .visual .visual4 img').prop('src','images/visual04.jpg');
+			$('.main .box1 img').prop('src','images/img_story01.jpg');
+			$('.main .box2 img').prop('src','images/img_story02.jpg');
+			$('.main .box3 img').prop('src','images/img_story03.jpg');
+			$('.main .notice1 img').prop('src','images/img_blogevent160816.jpg');
+			$('.main .notice2 img').prop('src','images/img_facebookevent160816.jpg');
+			$('.main .notice3 img').prop('src','images/img_renewalevent1.jpg');
+			$('.main .notice4 img').prop('src','images/img_renewalevent2.jpg');
+		} else if(num<=1007 && num>750){
+			$('.main .visual .visual1 img').prop('src','images/visual01_t.jpg');
+			$('.main .visual .visual2 img').prop('src','images/visual02_t.jpg');
+			$('.main .visual .visual3 img').prop('src','images/visual03_t.jpg');
+			$('.main .visual .visual4 img').prop('src','images/visual04_t.jpg');
+			$('.main .box1 img').prop('src','images/img_story01.jpg');
+			$('.main .box2 img').prop('src','images/img_story02.jpg');
+			$('.main .box3 img').prop('src','images/img_story03.jpg');
+			$('.main .notice1 img').prop('src','images/img_blogevent160816.jpg');
+			$('.main .notice2 img').prop('src','images/img_facebookevent160816.jpg');
+			$('.main .notice3 img').prop('src','images/img_renewalevent1.jpg');
+			$('.main .notice4 img').prop('src','images/img_renewalevent2.jpg');
+		} else {
+			$('.main .visual .visual1 img').prop('src','images/visual01_m.jpg');
+			$('.main .visual .visual2 img').prop('src','images/visual02_m.jpg');
+			$('.main .visual .visual3 img').prop('src','images/visual03_m.jpg');
+			$('.main .visual .visual4 img').prop('src','images/visual04_m.jpg');
+			$('.main .box1 img').prop('src','images/img_story01_m.jpg');
+			$('.main .box2 img').prop('src','images/img_story02_m.jpg');
+			$('.main .box3 img').prop('src','images/img_story03_m.jpg');
+			$('.main .notice1 img').prop('src','images/img_blogevent160816_m.jpg');
+			$('.main .notice2 img').prop('src','images/img_facebookevent160816_m.jpg');
+			$('.main .notice3 img').prop('src','images/img_renewalevent1_m.jpg');
+			$('.main .notice4 img').prop('src','images/img_renewalevent2_m.jpg');
+
+		}
+		$('.section2 ul li').mouseenter(function(){
+			var txt=$(this).find('img').prop('src');
+			var txt2=txt.replace('_off','_on');
+			
+			$(this).find('img').prop('src',txt2);
+		});
+		$('.section2 ul li').mouseleave(function(){
+			var txt=$(this).find('img').prop('src');
+			var txt3=txt.replace('_on','_off');
+			
+			$(this).find('img').prop('src',txt3);
+		});
+});
+</script>
+</head>
+<body>
+<div id="cover"></div>
+<div class="header">	
+    <div class="header_inner">
+        <h1><a href="index.html"><img src="images/logo.png" alt="엘리트로고"></a></h1>
+        <ul class="gnb">
+            <li><a href="#">스타일</a>
+                <div class="wrap1">
+                    <ul class="depth2 gnb1">
+                        <li><a href="#">엘리트 솔루션</a></li>
+                        <li><a href="#">보이 핏</a></li>                    
+                        <li><a href="#">걸 핏</a></li>
+                        <li><a href="#">체육복 / 생활복</a></li>
+                        <li><a href="#">룩북</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">브랜드</a>
+                <div class="wrap1">
+                    <ul class="depth2 gnb2">
+                        <li><a href="#">히스토리</a></li>
+                        <li><a href="#">엘리트 어워드</a></li>
+                        <li><a href="#">사회 공헌 이야기</a></li>
+                        <li><a href="#">갤러리</a></li>
+                        <li><a href="#">모델 히스토리</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">스토어</a>
+                <div class="wrap1">
+                    <ul class="depth2 gnb3">
+                        <li><a href="#">매장찾기</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">교복생활연구소</a>
+                <div class="wrap1">
+                    <ul class="depth2 gnb4">
+                        <li><a href="#">교복생활연구소</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <button type="button" class="m_btn"><img src="images/m_btn.png" alt="모바일버튼"></button>
+        <button type="button" class="m_close"><img src="images/m_close.png" alt="모바일버튼"></button>
+        <div class="m_gnb">
+            <div class="m_header">
+                <h2><img src="images/m_gnb.jpg" alt="모바일메뉴타이틀"></h2>
+            </div>
+            <ul class="m_menu">
+                <li><h2>스타일</h2></li>
+                <li><a href="#">엘리트 솔루션</a></li>
+                <li><a href="#">보이 핏</a></li>
+                <li><a href="#">걸 핏</a></li>
+                <li><a href="#">생활복 / 체육복</a></li>
+                <li class="top"><a href="#">룩북</a></li>
+                <li><h2>브랜드</h2></li>
+                <li><a href="#">히스토리</a></li>
+                <li><a href="#">엘리트 어워드</a></li>
+                <li><a href="#">사회 공헌 이야기</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li class="top"><a href="#">모델히스토리</a></li>
+                <li><h2>스토어</h2></li>
+                <li><a href="#">매장찾기</a></li>
+                <li class="top"><a href="#">고객센터</a></li>
+                <li><h2>교복생활연구소</h2></li>
+                <li class="top"><a href="#">교복생활연구소</a></li>
+            </ul>
+    </div>
+    </div>
+</div>
+<div class="main">
+	<div class="visual">
+        <div class="visual1">
+            <img src="images/visual01.jpg" alt="비주얼이미지1">
+        </div>
+        <div class="visual2">
+            <img src="images/visual02.jpg" alt="비주얼이미지2">
+        </div>
+        <div class="visual3">
+            <img src="images/visual03.jpg" alt="비주얼이미지3">
+        </div>
+        <div class="visual4">
+            <img src="images/visual04.jpg" alt="비주얼이미지4">
+        </div>
+    </div>
+    <div class="search">
+    	<div class="search_wrap">
+        	<div class="search_store">
+            	<h2><img src="images/txt_store.png" alt="검색이미지"></h2>
+            </div>
+            <div class="search_area">
+            	<h2><img src="images/txt_area.png" alt="지역검색"></h2>
+                <div class="area_wrap">
+                    <select>
+                        <option >전체</option>
+                        <option>서울</option>
+                        <option>경기</option>
+                        <option>강원</option>
+                        <option>경남</option>
+                        <option>경북</option>
+                        <option>광주</option>
+                    </select>
+                    <select>
+                        <option>선택</option>
+                        <option>지역1</option>
+                        <option>지역2</option>
+                        <option>지역3</option>
+                        <option>지역4</option>
+                        <option>지역5</option>
+                        <option>지역6</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search_school">
+            	<h2><img src="images/txt_school.png" alt="학교명입력"></h2>
+                <div class="school_wrap">
+                    <input type="text" placeholder="학교명을 입력해주세요">
+                    <button type="button">매장찾기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section1">
+    	<div class="box box1">
+        	<a href="#"><img src="images/img_story01.jpg" alt="엘리트이야기"></a>
+            <p class="text">교복이 더 편하고 예쁠수록 학교생활은<br>더 즐거워집니다.</p>   
+        </div>
+        <div class="box box2">
+           <a href="#"><img src="images/img_story02.jpg" alt="엘리트이야기"></a>
+            <p class="text">학생들이 편하고, 예쁘게 입을 수 있도록<br>엘리트는 늘 연구하고 개발합니다.</p>   
+        </div>
+    	<div class="box box3">
+        	<a href="#"><img src="images/img_story03.jpg" alt="엘리트이야기"></a>
+            <p class="text">엘리트학생복이 만들어 나가는<br>'아름다운 세상'</p>    
+        </div>
+    </div>
+    <div class="section2">
+    	<div class="section2_inner">
+            <h2><img src="images/tit_artbook2.png" alt="갤러리"></h2>
+            <p>상큼발랄 I.O.I 와 대세남 펜타곤의 매력적인 화보를 만나보세요!</p>
+            <ul>
+                <li class="model model1"><a href="#"><img src="images/img_yt_off.jpg" alt=""></a></li>
+                <li class="model model2"><a href="#"><img src="images/img_mn_off.jpg" alt=""></a></li>
+                <li class="model model3"><a href="#"><img src="images/img_ws_off.jpg" alt=""></a></li>
+                <li class="model model4"><a href="#"><img src="images/img_yj_off.jpg" alt=""></a></li>
+                <li class="model model5"><a href="#"><img src="images/img_cy_off.jpg" alt=""></a></li>
+                <li class="model model6"><a href="#"><img src="images/img_sm_off.jpg" alt=""></a></li>
+                <li class="model model7"><a href="#"><img src="images/img_sh_off.jpg" alt=""></a></li>
+                <li class="model model8"><a href="#"><img src="images/img_sj_off.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section3">
+    	<h2><img src="images/tit_sns.png" alt="엘리트이벤트"></h2>
+        <p>엘리트가 전하는 즐겁고 다양한 소식을 만나보세요</p>
+        <div class="section3_inner">
+            <div class="notice">
+            	<div class="notice1">
+                    <a href="#"><img src="images/img_blogevent160816.jpg" alt=""></a>
+                </div>
+                <div class="notice2">
+                    <a href="#"><img src="images/img_facebookevent160816.jpg" alt=""></a>
+                </div>
+                <div class="notice3">
+                    <a href="#"><img src="images/img_renewalevent1.jpg" alt=""></a>
+                </div>
+                <div class="notice4">
+                    <a href="#"><img src="images/img_renewalevent2.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="video">
+            	<iframe width="560" height="315" src="https://www.youtube.com/embed/N9Lhww3OvYw" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+    	<div class="section4_inner">
+            <div class="box">
+                <h2><img src="images/bg_elite_sns.png" alt="sns"></h2> </div>
+            <div class="box_inner">
+                <ul>
+                    <li><a href="#"><img src="images/bg_facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/bg_insta.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/bg_blog.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/bg_kakao.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/bg_elmom.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/bg_youtube.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <a href="#" class="top_btn"><img src="images/btn_top.png" alt=""></a>
+    <div class="footer_inner">
+        <ul class="util">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li class="hide"><a href="#">제휴문의</a></li>
+            <li class="hide"><a href="#">대리점개설문의</a></li>
+            <li class="last_m"><a href="#">문의하기</a></li>
+        </ul> 
+        <address>서울시 강남구 테헤란로 38길 12(역삼동,디앤와이빌딩) 6층<br class="show"> 사업자등록번호 : 105-86-39463   대표 : 최병오, 홍종순<br>
+Tel : 080-023-8900 /  Fax : 02-3279-8080  /<br class="show"> E-mail : webmaster@hyungji-elite.com</address>
+        <p>COPYRIGHT © 2016 HYUNGJI ELITE ALL RIGHTS RESERVED.</p>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

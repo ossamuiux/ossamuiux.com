@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400; /*normal(regular)*/
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700; /*bold*/
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800; /*extra bold*/
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+body,input,button,select,textarea {font-family:'Nanum Gothic','malgun gothic','돋움',elveticaNeue-Light,AppleSDGothicNeo-Light,dotum,sans-serif; font-size:13px; }
+html,body {height:100%;}
+body {min-width:320px;}
+
+/*모바일메뉴*/
+.menu_wrap .login_wrap {height:30px; background:#de3608;  margin-bottom:1px; position:relative;}
+.menu_wrap .login_wrap a {width:49.8%; height:30px; display:block; float:left; background:#fff; font-size:14px;  3px; text-align:center; line-height:30px; color:#fff; background:#555;}
+.menu_wrap .login_wrap a:nth-child(1) {border-right:1px solid #fff;}
+.menu_wrap .login_wrap a:nth-child(2) {}
+
+
+/*모바일메뉴*/
+/*fix인 엘리먼트에 아래쪽 패딩을 적용하려면 옾이값을 빼고 top:0; bottom:0;을 적어서 기준점을 위와 아래에 동시에 선언*/
+.menu_wrap {width:275px; background:#f1f1f1; position:fixed; left:-275px; top:0; bottom:0; z-index:110; overflow:auto; padding-bottom:30px; }
+.menu_wrap .search_wrap {height:85px; background:#de3608; margin-bottom:5px; border-bottom:1px solid #fff;}
+.menu_wrap .search_wrap p {font-size:14px; color:#FFF; font-weight:bold; padding:15px 0  0 13px; background:url(../images/search_icon.png) no-repeat 15px 12px; background-size:20px; text-indent:23px; }
+.menu_wrap .search_wrap .search { padding: 10px 0 20px 13px; }
+.menu_wrap .search_wrap .search from { width:250px;}
+.menu_wrap .search_wrap .search legend {display:none;}
+.menu_wrap .search_wrap .search input{ border:1px solid #CCC; float:left; height:20px; border-radius:10px; text-indent:10px; display:inline-block; width:185px; outline:none;}
+.menu_wrap .search_wrap .search button {float:left; border:none; background:none; color:#fff; padding:5 5px; margin-top:-3px; outline:none;}
+.menu_wrap .search_wrap .search button img { width:34px; margin-left:-5px; }
+
+
+
+
+
+/*모바일메뉴*/
+
+.menu_wrap .m_gnb li {border-bottom:1px dashed #ccc;}
+.menu_wrap .m_gnb li a {display:block; height:48px; text-indent:-9999px;}
+
+.menu_wrap .m_gnb li:nth-child(1) a {background:url(../images/img_lnbtab01_off.png) no-repeat; background-size:274px;}
+.menu_wrap .m_gnb li:nth-child(2) a {background:url(../images/img_lnbtab02_off.png) no-repeat; background-size:274px;}
+.menu_wrap .m_gnb li:nth-child(3) a {background:url(../images/img_lnbtab03_off.png) no-repeat; background-size:274px;}
+.menu_wrap .m_gnb li:nth-child(4) a {background:url(../images/img_lnbtab04_off.png) no-repeat; background-size:274px;}
+.menu_wrap .m_gnb li:nth-child(5) a {background:url(../images/img_lnbtab05_off.png) no-repeat; background-size:274px;}
+
+.menu_wrap .call_number { display:block;  width:220px; height:30px; margin:15px 0 0 20px; text-align:center; line-height:30px; border-radius:5px; color:#fff; font-weight:bold; background:#1b512d; font-size:15px; }
+.menu_wrap .call_number strong {font-size:17px; color::#1b512d;}
+
+.close { }
+.close .close_btn {background: url(../images/lnb_close_btn.png) no-repeat; position:absolute; top:31px; left:-275px;  width:38px; height:38px; z-index:110; background-size:38px; }
+
+
+.wrap_hide {width:100%; height:100%;}
+
+/*전체내용 가리기*/
+.wrap_hide .cover {position:fixed; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:100; display:none;}
+
+.wrap {position:relative; }
+
+/*탑버튼*/
+.top_btn { position:relative;}
+.top_btn img {width:40px; z-index:90; overflow:hidden; position:fixed; bottom:10px; right:10px; }
+
+
+.header_wrap { height:42px; margin-bottom:5px;}
+.header {width:100%;  background:#1b512d; position:fixed; top:0; left:0; z-index:60; margin-bottom:6px; /*border-bottom:3px solid #1b512d;*/ }
+
+.header .m_btn {position:absolute; left:0; top:0;  width:45px; height:45px; background:url(../images/lnb_btn.png) no-repeat left top; background-size:33px; z-index:60; margin:5px 0 0 6px;}
+
+
+.header h1 {text-align:center;}
+.header h1 img {width:135px;  padding:5px 0; }
+
+.header .cart_btn {position:absolute; right:0; top:0; }
+.header .cart_btn img {width:33px; margin-top:4px; margin-right:6px; }
+.header .cart_num { display:block; width:18px; height:18px; background:#D70000; border-radius:18px; border:2px solid #fff; position:absolute; right:25px; top:8px; text-align:center; line-height:18px; color:#fff; font-weight:bold;}
+
+/*메뉴*/
+.header .gnb {height:35px;}
+.header .gnb ul li {width:24%; height:35px; float:left; background:#f6f4f4; box-sizing:30px;  margin-left:1.32%;}
+.header .gnb ul li:first-child {margin-left:0;}
+.header .gnb ul li a {float:left;  font-size:17px; color:#333130; text-align:center; width:100%; font-weight:bold; line-height:35px;}
+
+
+/*footer*/
+.footer {background:#1b512d; color:#fff; text-align:center; padding:20px;}
+.footer .line { margin:10px 0;}
+.footer .line a {color:#fff; padding:0 10px; font-size:13px; background:url(../images/line.png) no-repeat right center; margin-right:-3px; display:inline-block;}
+.footer .line a:last-child {background:none;}
+.footer .second .strong {color:#de3608;  font-weight:bold; }
+
+
+.footer .pc_view { display:inline-block; width:80px; height:25px; border:2px solid #fff; border-radius:10px; text-align:center; line-height:25px; color:#fff; font-weight:bold; margin-bottom:15px;}
+.footer .copy_right {font-size:13px;}
+
+
+
+
+
+@media screen and (max-width:450px){
+	
+
+}
+
+
+

@@ -1,0 +1,402 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Anton);
+body,button,input,select,table,textarea {font-family:'Anton','맑은 고딕','malgun gothic','돋움',dotum,HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif; font-size:18px; font-weight: 300;}
+body {min-width:320px;
+    height: 2000px;
+    background: #000;
+    color:#000;
+    }
+body, html {height: 100%; position: relative;}
+
+
+
+/*모바일헤더 가리기*/
+#header {display: none;}
+
+
+
+
+
+/*메인배경*/
+#main {background: url(../images/main_bg.jpg) no-repeat center center fixed; width: 100%; margin: 0 auto; background-size: cover; padding: 150px 130px 0; }
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection1ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#main .section1 {max-width: 1300px; margin: 0 auto; position: relative; }
+#main .section1 .section1_inner img {width: 100%; }
+#main .section1 .section1_inner .studio {margin-top: 20px; }
+#main .section1 .section1_inner h4 {width: 32px; height: 36px; margin: 0 auto; margin-top: 70px; }
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection2ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#main .section2 {width: 100%; margin-top: 80px; }
+#main .section2 h3 {margin-top: 100px; text-align: center; }
+#main .section2 h2 {position: fixed; left: 50px; top: 80px; }
+#main .section2 .btn_menu {float: right; position: fixed; right: 50px; top: 80px; z-index: 999;}
+#main .section2 .btn_menu li {border-bottom: 1px solid #ccc;}
+#main .section2 .btn_menu li:first-child {border-top: 1px solid #ccc; }
+#main .section2 .btn_menu li a {color: #fff;
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+#main .section2 .btn_menu li a:hover {color: #ec2027; }
+#main .section2 .btn_menu li.on a {color: #ec2027; }  
+
+
+/*캐릭터 슬라이더*/
+#main .swiper-wrapper .swiper-slide {float: right; }
+#main .character-top .swiper-slide .character1 {margin: 0 auto;
+      width: 950px;
+      overflow: hidden;
+}
+#main .character-top .swiper-slide .character1 li {float: left; }
+#main .character-top .swiper-slide .character1 .txt {text-align: center; }
+#main .character-top .swiper-slide .character1 .txt img {margin: 74px 0 0 150px; }
+
+#main .swiper-wrapper {
+      position: relative;
+      text-align: center;
+    }
+    .character-top {
+      text-align: center;
+      margin-top: 30px;
+      width: 100%;
+    }
+    .character-top .swiper-slide img {
+      text-align: center;
+    }
+    .character-thumbs {
+      box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .character-thumbs .swiper-slide {
+      width: 13%;
+      opacity: 0.4;
+    }
+    .character-thumbs .swiper-slide img {
+        text-align: center;
+        max-width: 100%;
+    }
+    .character-thumbs .swiper-slide-active {
+      opacity: 1;
+    }
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection3ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#main .section3 {width: 100%; margin-top: 80px; }
+#main .section3 h2 {margin-top: 100px; text-align: center; margin-bottom: 80px; }
+
+#main .section3 .video-container{
+    position:relative;
+    width: 66%;
+    padding-bottom:37.25%;
+    height:0;
+    overflow:hidden;
+    margin: 0 auto;
+} 
+#main .section3 .video-container iframe,.video-container object,.video-container embed {
+    position:absolute; top:0; left:0;
+    width: 100%; 
+    height: 100%; 
+} 
+#main .section3 h3 {
+    text-align: center;
+    margin: 50px 0 100px;
+}
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection4ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#main .section4 {overflow: hidden; text-align: center; }
+#main .section4 h2 {
+    margin-top: 50px; 
+    margin-bottom: 80px;
+}
+#main .section4 .product {
+    max-width: 1214px; 
+    overflow: hidden; 
+    margin: 0 auto; }
+#main .section4 .product li {
+    float:left;
+    width: 33.33%;
+    position:relative; 
+    overflow:hidden;
+    padding: 0 7px;
+}
+#main .section4 .product li:hover {color: #000; opacity: 0.3; }
+#main .section4 .product .ironman {margin-left:0; }
+#main .section4 .product li .product_img {width:100%; }
+#main .section4 .product li .product_logo {position:absolute; right:0; bottom:0; width: 100%; }
+
+
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection5ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#main .section5 {overflow: hidden; text-align: center; padding: 100px 0; }
+#main .section5 h2 {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+#main .section5 .product { 
+    max-width: 1214px; 
+    overflow: hidden; 
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+#main .section5 .product li {
+    float:left;
+    width: 33.33%;
+    overflow:hidden;
+    padding: 0 7px;
+}
+#main .section5 .product li:hover {color: #000; opacity: 0.3; }
+.section5 .product li .product_img {width:100%; }
+
+
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡfooterㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#footer {position: relative; background-color: #1f1f1f; width: 100%; height: 100px; }
+
+#footer .footer_wrap {overflow: hidden; text-align: center; padding-top: 30px; }
+#footer .footer_wrap li {background: url(../images/footer_section.png) no-repeat left 0px; overflow: hidden; display: inline-block; }
+#footer .footer_wrap li:first-child {background: none; }
+#footer .footer_wrap li a {padding: 0 8px; }
+#footer h3 {text-align: center; }
+#footer h4 {position: absolute; right: 10%; bottom: 25%; }
+#footer h4 p {display: none; }
+
+
+
+
+
+
+
+
+
+
+
+/*1200 분기점*/
+@media screen and (max-width:1200px){
+    #main {padding: 150px 60px 0; }
+    #main .character-top .swiper-slide .character1 {margin: 0 auto;
+      width: 800px;
+      overflow: hidden;
+    }
+    #main .character-top .swiper-slide .character1 {
+      margin: 0 auto;
+      width: 800px;
+      overflow: hidden; }
+    #main .character-top .swiper-slide .character1 .txt img {margin: 74px 0 0 10px; }
+    
+    #main .section3 {width: 100%; margin-top: 80px; overflow: hidden; }
+    #main .section3 .video-container{
+    position:relative;
+    width: 100%;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    margin: 0 auto;
+} 
+}
+
+
+/*1024이하이면 타블렛 분기점*/
+@media screen and (max-width:1024px){
+    #header {display: block; padding: 0 30px; width: 100%; height: 50px; background-color: black; }
+    #header .cover {position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:100; display:none; }
+    
+    #header h1 {text-align: center; padding-top: 12px; }
+    #header h1 img {width: 65px; height: 25px; }
+    #header .gnb {display: none;}
+    
+    /*햄버거메뉴*/
+    #header .btn_m {
+        width: 25px;
+        height: 17px;
+        background: url(../images/m_menu.png) no-repeat center center;
+        outline: none;
+        border: none;
+        display: block;
+        float: right;
+        margin-top: 12px;
+        position: absolute; right: 30px; top: 5px; 
+    }
+     /*모바일 메뉴*/
+    #header .m_menu {position: fixed; right: -50%; top: 0; width: 50%; height: 100%; background:#000000; overflow: auto; padding-bottom: 30px; transition: all 0.5s; display: block;  z-index: 200; }
+    #header .m_menu.on {transform: translateX(-100%);}
+    #header .m_menu .btn_close {
+        width: 25px;
+        height: 25px;
+        border: none;
+        background: url(../images/m_close.png) no-repeat;
+        outline: none;
+        float: right;
+        margin: 16px 30px 0 0;
+    }
+    /*모바일 메뉴 내용*/
+    #header .m_menu .m_gnb {clear: right; border-top:1px solid #ccc; width: 85%; margin: 100px auto; display: block; }
+    #header .m_menu .m_gnb li {border-bottom: 1px solid #ccc; }
+    #header .m_menu .m_gnb li a {
+        color: #fff;
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        line-height: 60px;
+    }
+    #header .m_menu .m_gnb li a:hover {color: #ec2027; }        
+    
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ메인ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main {background: url(../images/tab_bg.jpg) no-repeat center center fixed; width: 100%; margin: 0 auto; background-size: cover; }
+    
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection1ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main .section1 s{height: auto; }
+    #main .section1 .section1_inner h4 {margin-top: 50px; }
+    
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection2ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main .section2 h2 {display: none; }
+    #main .section2 .btn_menu {display: none; }
+    #main .section2 h3 img {width: 400px; }
+    
+    #main .character-top .swiper-slide .character1 {
+      margin: 0 auto;
+      width: 500px;
+      overflow: hidden; }
+    #main .character-top .swiper-slide .character1 li {float: none; }
+    #main .character-top .swiper-slide .character1 .txt img {margin: 0; }
+    #main .swiper-wrapper .character-thumbs {margin-top: 30px; }
+
+}
+
+
+
+
+
+
+
+/*767이하이면 모바일 분기점*/
+@media screen and (max-width:767px){    
+    #header {display: block; padding: 0 30px; width: 100%; height: 50px; background-color: black; }
+    #header h1 {text-align: center; padding-top: 12px; }
+    #header h1 img {width: 65px; height: 25px; }
+    #header .gnb {display: none;}
+    
+        
+    /*모바일햄버거메뉴*/
+    #header .btn_m {
+        width: 25px;
+        height: 17px;
+        background: url(../images/m_menu.png) no-repeat center center;
+        outline: none;
+        border: none;
+        display: block;
+        float: right;
+        margin-top: 12px;
+        position: absolute; right: 30px; top: 5px; 
+    }
+    
+     /*모바일 메뉴*/
+    #header .m_menu {position: fixed; right: -50%; top: 0; width: 50%; height: 100%; background:#000000; overflow: auto; padding-bottom: 30px; transition: all 0.5s; display: block;  z-index: 200; }
+    #header .m_menu.on {transform: translateX(-100%);}
+    
+    #header .m_menu .btn_close {
+        width: 25px;
+        height: 25px;
+        border: none;
+        background: url(../images/m_close.png) no-repeat;
+        outline: none;
+        float: right;
+        margin: 16px 30px 0 0;
+    }
+    
+    /*모바일 메뉴 내용*/
+    #header .m_menu .m_gnb {clear: right; border-top:1px solid #ccc; width: 85%; margin: 100px auto; display: block; }
+    #header .m_menu .m_gnb li {border-bottom: 1px solid #ccc; }
+    #header .m_menu .m_gnb li a {
+        color: #fff;
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        line-height: 60px;
+    }
+    #header .m_menu .m_gnb li a:hover {color: #ec2027; }
+    
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ메인ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main {background: url(../images/tab_bg.jpg) no-repeat center center fixed; width: 100%; margin: 0 auto; background-size: cover; padding: 200px 15px 0; }
+    
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection1ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main .section1 .section1_inner h2 {padding: 0 30px; }
+    #main .section1 .section1_inner h3 {padding: 0 30px; margin-top: 10px; }
+    #main .section1 .section1_inner h4 {display: none; }
+        
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection2ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main .section2 {background-attachment: scroll; background-size: cover;}
+    #main .section2 h2 {display: none; }
+    #main .section2 h3 img {width: 250px; margin-top: 80px; }
+    #main .section2 .btn_menu {display: none; }
+    
+    #main .character-top .swiper-slide .character1 {
+      margin: 0 auto;
+      width: 300px;
+      overflow: hidden; }
+    #main .character-top .swiper-slide .character1 li {float: none; }
+    #main .character-top .swiper-slide .character1 img {width: 100%; }
+    #main .swiper-wrapper .character-thumbs {margin-top: 30px; }
+    
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection3ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main .section3 {overflow: hidden; }
+    #main .section3 h2 img {width: 250px; }
+
+
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection4ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/  
+    #main .section4 {overflow: hidden; }
+    #main .section4 h2 img {width: 250px; }
+    #main .section4 .product li {
+        float: inherit; 
+        padding: 0;
+        width: 100%;
+    }
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡsection5ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #main .section5 {overflow: hidden; }
+    #main .section5 h2 img {width: 250px; }
+        #main .section5 .product li {
+        float: inherit; 
+        padding: 0;
+        width: 100%;
+    }
+    
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡfooterㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    #footer {height: 140px; overflow: hidden; }
+    #footer .footer_wrap {padding-top: 20px; }
+    #footer h4 {
+        text-align: center;
+        position: absolute;
+        height: 50px;
+        background: #b62427;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+        #footer h4 a {
+        display: block;
+        line-height: 50px;
+        color: #fff;
+    }
+    #footer h4 p {display: block; }
+    #footer h4 img {display: none; }
+}
+
+
+
+

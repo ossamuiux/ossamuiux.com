@@ -1,0 +1,212 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic.eot);
+  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic.woff) format('woff'),
+       url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/NanumGothicBold.eot);
+  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicBold.woff) format('woff'),
+       url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothicExtraBold.eot);
+  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothicExtraBold.woff) format('woff'),
+       url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+
+
+body,input,button{font:12px '맑은고딕','malgun gothic','돋움',dotum,sans-serif;}
+div:focus{outline:none;}
+a{text-decoration:none;}
+
+body{min-width:1300px; font-family:'Nanum Gothic',sans-serif;}
+
+/*모바일버튼*/
+.m_btn{position:fixed; left:10px; top:10px; z-index:1000; background:#767676; width:20px; height:20px; padding:10px; cursor:pointer; border-radius:20px;}
+.m_btn .bar{position:relative; width:20px; height:20px;}
+.m_btn .bar p{position:absolute; left:0; width:20px; height:4px; background:#FFF; border-radius:3px;}
+.m_btn .bar .bar1{top:0;}
+.m_btn .bar .bar2_1{top:8px; transition:all 0.5s ease-out;}
+.m_btn .bar .bar2_2{top:8px; transition:all 0.5s ease-out;}
+.m_btn .bar .bar3{top:16px;}
+
+/*모바일버튼_close변경*/
+.m_btn.on .bar .bar2_1 {transform:rotate(45deg);}
+.m_btn.on .bar .bar2_2 {transform:rotate(-45deg);}
+
+
+/*모바일메뉴*/
+.m_box{position:fixed;  left:-300px; top:0; width:300px; height:100%; background:url(../img/m_Bg.png); z-index:999;}
+.m_box .m_gnb{position:absolute; top:50%; margin-top:-300px; left:50px; width:200px;}
+.m_box .m_gnb li{margin:20px auto;}
+.m_box .m_gnb li a{color:#FFF; font-size:16px; display:block; width:130px; line-height:50px; padding-left:70px; opacity:0.7;}
+
+.m_box .m_gnb li a.li1{background:url(../img/m_view_1.png) no-repeat left center; }
+.m_box .m_gnb li a.li2{background:url(../img/m_view_2.png) no-repeat left center; }
+.m_box .m_gnb li a.li3{background:url(../img/m_view_3.png) no-repeat left center; }
+.m_box .m_gnb li a.li4{background:url(../img/m_view_4.png) no-repeat left center; }
+.m_box .m_gnb li a.li5{background:url(../img/m_view_5.png) no-repeat left center; }
+.m_box .m_gnb li a.li6{background:url(../img/m_view_6.png) no-repeat left center; }
+
+/*---------------------------------------------네이버 베스트 웹툰& 작가 소개---------------------------------------------------------*/
+
+.main{width:100%; height:950px; background:url(../img/main_bg.png) no-repeat center top;}
+.main .content{width:1000px; margin:0 auto; height:950px; text-align:center;}
+.main .content h1{padding-top:72px;}
+.main .content h2{font-size:40px; font-weight:600; letter-spacing:-0.5px; margin-top:65px; color:#FFF;}
+
+.main .gnb{overflow:hidden; margin-top:150px;}
+.main .gnb li{float:left; margin-left:10px; position:relative;}
+.main .gnb li:first-child{margin-left:0;}
+.main .gnb li a span{position:absolute; left:0; top:0; display:block; width:158px; height:157px; transition:all 0.3s ease-out; opacity:0;}
+.main .gnb li:hover a span{opacity:1;}
+
+.main .content p{color:#FFF; font-size:14px; margin-top:35px;}
+
+/*---------------------------------------------생활의 참견(김양수)---------------------------------------------------------*/
+
+.section1{width:100%; height:1000px; background:url(../img/section1_bg.png) no-repeat center top; position:relative; overflow:hidden;}
+.section1 .tit{position:absolute; left:50%; top:18px; margin-left:-550px; animation:tit 0.7s 0s infinite alternate linear;}
+@keyframes tit {
+    from {top:15px;}
+    to {top:25px;}
+}
+.section1 .char{position:absolute; left:50%; top:135px; margin-left:200px; animation:char11 0.7s 0s infinite alternate ease-out;}
+@keyframes char11 {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(-3deg);}
+}
+.section1 .bg2{position:absolute; top:0; left:50%; margin-left:-960px;}
+.section1 .content{width:1000px; height:950px; margin:0 auto; position:absolute; left:50%; bottom:50px; margin-left:-500px;}
+.section1 .content p{padding-top:394px;}
+.section1 .content .btn{position:absolute; top:662px; left:0;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+.section1 .content .btn a{color:#222222; font-size:16px; float:left; background:url(../img/arrow.png) no-repeat right center; width:80px; height:30px; }
+.section1 .content .btn a.on{background:url(../img/arrow_on.png) no-repeat right center; color:#FFF;}
+
+.section1 .content .btn2{position:absolute; top:662px; left:100px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+
+
+/*---------------------------------------------치즈인더트랩(순끼)---------------------------------------------------------*/
+
+.section2{width:100%; height:1000px; background:url(../img/section2_bg.png) no-repeat center top;}
+
+.section2 .tit{text-align:center;position:relative;}
+.section2 .tit span{position:absolute; left:50%; top:0; margin-left:-138px; animation:star 0.5s 0s infinite;}
+@keyframes star {
+    0% {opacity:0;}
+    50% {opactiy:1;}
+	100%{opactiy:0;}
+}
+.section2 .content{width:1000px; height:950px; margin:0 auto; position:relative;}
+.section2 .content p{padding-top:95px;}
+
+.section2 .content .btn1{position:absolute; top:380px; right:170px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+.section2 .content .btn1 a{color:#222222; font-size:16px; float:left; background:url(../img/arrow.png) no-repeat right center; width:80px; height:30px; }
+.section2 .content .btn1 a.on{background:url(../img/arrow_on.png) no-repeat right center; color:#FFF;}
+
+.section2 .content .btn2{position:absolute; top:380px; right:70px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+
+
+/*---------------------------------------------연애혁명(232)---------------------------------------------------------*/
+
+.section3{width:100%; height:1000px; background:url(../img/section3_bg.png) no-repeat center top;}
+.section3 .content{width:1000px; height:950px; margin:0 auto; position:relative;}
+.section3 .content .heart1{position:absolute; top:48px; right:655px; animation:heart1 1s 0s infinite;}
+@keyframes heart1 {
+    0% {opacity:1;}
+    50% {opacity:0;}
+	100%{opacity:1;}
+}
+.section3 .content .heart2{position:absolute; top:40px; right:323px; animation:heart2 1s 0s infinite;}
+@keyframes heart2 {
+	0% {opacity:0;}
+    50% {opacity:1;}
+	100%{opacity:0;}
+
+}
+.section3 .content .stroke{position:absolute; top:60px; right:35px; animation:stroke 0.3s 0s infinite;}
+@keyframes stroke {
+    0% {opacity:1;}
+    50% {opacity:0;}
+	100%{opacity:1;}
+	}
+.section3 .content p{padding-top:294px;}
+
+.section3 .content .btn{position:absolute; top:490px; left:0; border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+.section3 .content .btn a{color:#222222; font-size:16px; float:left; background:url(../img/arrow.png) no-repeat right center; width:80px; height:30px; }
+.section3 .content .btn a.on{background:url(../img/arrow_on.png) no-repeat right center; color:#FFF;}
+
+.section3 .content .btn2{position:absolute; top:490px; left:100px; border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+
+/*---------------------------------------------마음의 소리(조석)---------------------------------------------------------*/
+
+.section4{width:100%; height:1000px; background:url(../img/section4_bg.png) no-repeat center top;}
+.section4 .content{width:1000px; height:950px; margin:0 auto; position:relative;}
+.section4 .content .char{position:absolute; top:39px; right:83px; animation:char 0.3s 0s infinite alternate linear;}
+@keyframes char {
+    from {top:39px;}
+    to {top:35px;}
+}
+.section4 .content p{padding-top:190px;}
+.section4 .content .btn1{position:absolute; top:350px; left:75px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+.section4 .content .btn1 a{color:#222222; font-size:16px; float:left; background:url(../img/arrow.png) no-repeat right center; width:80px; height:30px; }
+.section4 .content .btn1 a.on{background:url(../img/arrow_on.png) no-repeat right center; color:#FFF;}
+
+.section4 .content .btn2{position:absolute; top:350px; left:175px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+
+
+/*---------------------------------------------조선왕조실톡(무적핑크)---------------------------------------------------------*/
+
+.section5{width:100%; height:1000px; background:#FFF;}
+.section5 .content{width:1000px; height:950px; margin:0 auto; position:relative;}
+.section5 .content .char1{position:absolute; top:150px; right:67px; animation:char5_1 0.7s 0s infinite alternate ease-out;}
+@keyframes char5_1 {
+    from {top:150px;}
+    to {top:165px;}
+}
+
+.section5 .content .char2{position:absolute; top:670px; left:103px; animation:char5_2 0.7s 0s infinite alternate ease-in-out;}
+@keyframes char5_2 {
+    from {transform:rotate(-2deg);}
+    to {transform:rotate(5deg);}
+}
+.section5 .content .btn{position:absolute; top:250px; left:330px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+.section5 .content .btn a{color:#222222; font-size:16px; float:left; background:url(../img/arrow.png) no-repeat right center; width:80px; height:30px; }
+.section5 .content .btn a.on{background:url(../img/arrow_on.png) no-repeat right center; color:#FFF;}
+
+.section5 .content .btn2{position:absolute; top:250px; left:430px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+
+/*---------------------------------------------유미의세포들(이동건)---------------------------------------------------------*/
+
+.section6{width:100%; height:950px; background:url(../img/section6_bg.png) no-repeat center top;}
+.section6 .content{width:1000px; height:950px; margin:0 auto;position:relative;}
+.section6 .content .char3{position:absolute; top:123px; right:101px; animation:char6 0.7s 0s infinite alternate ease-in-out}
+@keyframes char6 {
+    from {top:123px;}
+    to {top:133px;}
+}
+.section6 .content p{padding-top:325px;}
+.section6 .content .btn{position:absolute; top:480px; left:90px;border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+.section6 .content .btn a{color:#222222; font-size:16px; float:left; background:url(../img/arrow.png) no-repeat right center; width:80px; height:30px; }
+.section6 .content .btn a.on{background:url(../img/arrow_on.png) no-repeat right center; color:#FFF;}
+
+.section6 .content .btn2{position:absolute; top:480px; left:190px; border:1px solid #2f2f2f; line-height:30px; text-align:center; width:90px;}
+
+
+
+/*탑버튼*/
+.top{position:fixed; left:50%; bottom:10px; margin-left:650px; z-index:999;}

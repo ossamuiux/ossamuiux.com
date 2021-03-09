@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*메인*/
+.main {position:relative;}
+.main .slider_wrap{position:relative;}
+.main .slider_wrap .slider{position:relative;height:580px;margin:0 auto;}
+.main .slider_wrap .slider .sld_con1{height:580px;background:url(../images/slider_con_1.jpg) no-repeat center bottom;}
+.main .slider_wrap .slider .sld_con2{height:580px;background:url(../images/slider_con_2.jpg) no-repeat center bottom;}
+.main .slider_wrap .slider .sld_con3{height:580px;background:url(../images/slider_con_3.jpg) no-repeat center bottom;}
+
+.main .slider_wrap .slider .sld_con1 .sld_con_inner{width:1200px;height:580px; margin:0 auto;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1{width:540px; height:580px; padding-left:60px; font-weight:bold;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 h2{font-size:40px; margin-top:190px; position:relative;height:60px;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 h2 span{position:absolute;left:2px; top:2px;color:#606060; color:#fff;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 h2 span:first-child{left:0; top:0; color:#1a5dc6; z-index:10;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 p{position:relative;font-size:20px;margin-top:30px;height:60px;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 p span{position:absolute;left:1px; top:1px; color:#242424;}
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 p span:first-child{left:0; top:0; color:#fff; z-index:10;}
+
+.main .slider_wrap .slider .sld_con1 .sld_con_inner .sld_con_inner1 a{display:block; position:relative; width:140px; height:40px;margin-top:30px; background:#29485f;text-align:center; line-height:38px;font-size:20px;}
+
+.main .slider_wrap .slider .slick-arrow{display:none; position:absolute; border:none;width:55px; height:91px; top:45%; background:url(../images/slider_arrow.png) no-repeat 0 0; z-index:50; text-indent:-9999px;}
+.main .slider_wrap .slider .slick-arrow:hover{background-position-x:-65px;}
+.main .slider_wrap .slider .slick-prev{left:15%;}
+.main .slider_wrap .slider .slick-next{right:15%; background-position-y:-101px;}
+
+.main .slider_wrap .slider .slider_side_left{position:absolute;left:0; top:0;width:360px; height:580px;background:url(../images/slider_side_bg1.png) repeat-y right top; z-index:40;}
+.main .slider_wrap .slider .slider_side_right{position:absolute;right:0; top:0;width:360px; height:580px;background:url(../images/slider_side_bg2.png) repeat-y left top; z-index:40;}
+.main .slider_wrap .slider .slick-list{z-index:10;}/*익스 8,9버젼  z-index크로스브라우징*/
+
+.main .slider_wrap .slider_under_gra{background:url(../images/slider_under_gra.png)  no-repeat center top; width:1200px; height:49px; margin:0 auto;}
+
+
+/*게임슬라이더 background*/
+.main .slider_game{position:relative;width:100%;height:531px; border-top:1px solid #1b293a; background:#171a21;}
+
+
+/*게임슬라이더*/
+.main .slider_game .slider_game_inner{position:relative;width:1200px; height:531px; margin:0 auto;z-index:20;}
+
+/*게임 슬라이더 gnb*/
+.main .slider_game .slider_game_inner .slider_game_gnb{position:absolute; left:30px; top:-36px;z-index:20;}
+.main .slider_game .slider_game_inner .slider_game_gnb li{float:left; margin-left:1px; padding:5px 0;}
+.main .slider_game .slider_game_inner .slider_game_gnb li:hover{border-top:3px solid #29485f; padding:0;}
+.main .slider_game .slider_game_inner .slider_game_gnb li:hover a{padding:2px 0; background:#171a21 url(../images/slider_game_gnb_gra.png) repeat-x left top;}
+.main .slider_game .slider_game_inner .slider_game_gnb li a{display:block; width:90px; height:31px; text-align:center; line-height:31px;background:#171a21;}
+
+/*game_gnb 활성화 효과*/
+.main .slider_game .slider_game_inner .slider_game_gnb li.game_gnb_on{border-top:3px solid #29485f; padding:0;}
+.main .slider_game .slider_game_inner .slider_game_gnb li.game_gnb_on a{padding:2px 0; background:#171a21 url(../images/slider_game_gnb_gra.png) repeat-x left top;}
+
+/*게임 슬라이더 top gradiant*/
+.main .slider_game .slider_top_gra{position:absolute;left:0; top:-61px;width:100%; height:62px;background:url(../images/slider_top_gra.png) repeat-x left bottom; z-index:0;}
+
+/*게임 목록*/
+.slider_game_inner .steam_games{position:relative;width:1170px; height:520px;padding:45px 0 0 0;margin-left:0px;}
+
+.steam_games .game_wrap{position:relative;float:left; margin:0 0px 20px 30px;}
+.steam_games .game_wrap .game{position:relative; display:block; overflow:hidden; width:360px; height:220px; }
+.steam_games .game_wrap .game .game_hover{position:absolute; left:0px; bottom:-70px; width:336px; height:100px; background:url(../images/game_bottom_hover.png);padding:5px 12px;}
+.steam_games .game_wrap .game .game_hover h2{float:left; width:70%;font-size:20px; font-weight:bold;overflow:hidden;text-overflow: ellipsis;white-space: nowrap; color:#376fc5;}
+.steam_games .game_wrap .game .game_hover h3{float:right;}
+.steam_games .game_wrap .game .game_hover >div{float:right;}
+.steam_games .game_wrap .game .game_hover .game_price1{font-size:20px; font-weight:bold;}
+.steam_games .game_wrap .game .game_hover .game_price2{width:100%; margin-top:5px;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap{float:right;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap div{float:left; line-height:1;*line-height:1.4;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap div:first-child{background:#195abf; width:36px; height:16px;*height:18px;text-align:center; margin-right:10px;}
+.steam_games .game_wrap .game .game_hover .game_price2 .price2_wrap .price2_ori{text-decoration:line-through;}
+
+/*마우스오버시에 게임목록들의 효과*/
+.steam_games .game_wrap .game .game_hover .game_assist{float:right; clear:right; width:50%;}
+.steam_games .game_wrap .game .game_hover .game_assist li{float:right; background:url(../images/game_assist.png) no-repeat -128px; width:20px; height:20px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist1{background-position-x:-128px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist2{background-position-x:-103px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist3{background-position-x:-75px;}
+.steam_games .game_wrap .game .game_hover .game_assist .assist4{background-position-x:0px; width:68px;}
+
+/*steam_game*/
+.steam_games .slick-dots{position:absolute; left:50%; top:15px;}
+.steam_games .slick-dots li:first-child{margin-left:0;}
+.steam_games .slick-dots li {float:left;margin-left:8px;}
+.steam_games .slick-dots li button{display:block;width:16px; height:16px;background:url(../images/game_slider_btn.png) no-repeat; cursor:pointer; border:none; outline:none; text-indent:-9999px;}
+.steam_games .slick-dots li button:before{}
+.steam_games .slick-dots li.slick-active button{background-position-y:-16px}
+

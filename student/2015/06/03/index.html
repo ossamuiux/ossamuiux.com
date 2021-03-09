@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>풀무원</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	//모바일메뉴
+	$('.menu').click(function(e){
+		e.preventDefault();
+		$('.m_box').stop().animate({'left':'0px'},300,'easeOutExpo');
+		$('.cover').fadeIn(300);
+		$('.wrap').css({'overflow-y':'hidden'});
+	});
+	
+	$('.close_btn, .cover').click(function(e){
+		e.preventDefault();
+		$('.m_box').stop().animate({'left':'-300px'},300,'easeOutExpo');
+		$('.cover').hide();
+		$('.wrap').css({'overflow-y':'visible'});
+	});	
+	
+	//서브메뉴
+	$('.m_gnb>li').click(function(e){
+		e.preventDefault();
+			$('.sub').stop().slideUp(300);
+			$(this).find('.sub').stop().slideDown(300);
+			$('.m_gnb>li').removeClass('on');
+			$(this).addClass('on');
+	});
+	
+	//슬라이더
+	$('.slider_wrap').slick({
+		fade:true,
+		dots:true,
+		autoplay:true,
+		autoplaySpeed:3000,
+		speed:2000
+	});
+	
+	//신상품
+	$('.new_slider').slick({
+		  infinite: true,
+		  slidesToShow: 3,
+		  slidesToScroll: 2
+	});
+
+
+	
+});
+	
+</script>
+</head>
+
+<body>
+<div class="m_box">
+	<a href="#" class="close_btn"><img src="img/close.png" alt=""></a>
+    <div class="m_header">
+    	<a href="#"><div class="login">로그인</div></a>
+        <a href="#"><div class="join">회원가입</div></a>
+        <div class="icon">
+            <a href="#"><img src="img/bell.png" alt=""></a>
+            <a href="#"><img src="img/setting.png" alt=""></a>
+        </div>
+    </div>
+	<ul class="m_gnb">
+    	<li>
+        	<a href="#">브랜드스토리</a>
+            <ul class="sub">
+            	<li><a href="#">비전과 전략</a></li>
+                <li><a href="#">정신</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">사업소개</a></li>
+                <li><a href="#">IR</a></li>
+                <li><a href="#">CI소개</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">바른먹거리</a>
+            <ul class="sub">
+            	<li><a href="#">바른먹거리 캠페인</a></li>
+                <li><a href="#">바른식생활</a></li>
+                <li><a href="#">친환경생활 실천가이드</a></li>
+                <li><a href="#">바른먹거리 원칙</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제품 &amp; 브랜드</a>
+            <ul class="sub">
+            	<li><a href="#">제품정보</a></li>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">완전표시제</a></li>
+                <li><a href="#">식품생산정보공개제도</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">홍보센터</a>
+            <ul class="sub">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">광고</a></li>
+                <li><a href="#">홍보자료</a></li>
+                <li><a href="#">풀무원 공장견학</a></li>
+                <li><a href="#">풀무원 모니터</a></li>
+                <li><a href="#">풀무원 웹진</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">고객기쁨센터</a>
+            <ul class="sub">
+            	<li><a href="#">고객의 소리</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Q&amp;A</a></li>
+                <li><a href="#">파트너 안내</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">고객기쁨활동</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="cover"></div>
+<div class="wrap">
+    <div class="header">
+        <p class="menu"><a href="#"><img src="img/menu.png" alt="메뉴"></a></p>
+        <h1><a href="index.html"><img src="img/logo.png" alt="풀무원"></a></h1>
+        <p class="search"><a href="#"><img src="img/search.png" alt="찾기"></a></p>
+    </div>
+    <div class="main">
+        <div class="slider_wrap">
+            <div><img src="img/slider1.png" alt=""></div>
+            <div><img src="img/slider2.png" alt=""></div>
+            <div><img src="img/slider3.png" alt=""></div>
+        </div>
+        <div class="new_product">
+            <h2>NEW PRODUCT</h2>
+            <div class="new_slider">
+                <div><img src="img/new_1.png" alt=""></div>
+                <div><img src="img/new_2.png" alt=""></div>
+                <div><img src="img/new_3.png" alt=""></div>
+                <div><img src="img/new_4.png" alt=""></div>
+                <div><img src="img/new_5.png" alt=""></div>
+                <div><img src="img/new_6.png" alt=""></div>
+            </div>
+        </div>
+        <div class="box">
+            <ul>
+                <li><a href="#"><img src="img/shop.png" alt=""></a></li>
+                <li><a href="#"><img src="img/websize.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="notice_wrap">
+            <div class="notice">
+                <h2>NOTICE</h2>
+                <p class="line"></p>
+                <p class="more"><img src="img/more2.png" alt=""></p>
+                <ul class="tit">
+                    <li><a href="#">- 풀무원 44기 주부모니터 모집</a></li>
+                    <li><a href="#">- SKT 휴대전화 인증 일시 중단 안내</a></li>
+                    <li><a href="#">- 2015년도 상반기 연구소 주부패널 모집</a></li>
+                    <li><a href="#">- 2015년도 상반기 모니터 최종선발 결과발표</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="notice_wrap">
+            <div class="notice">
+                <h2>RECIPE</h2>
+                <p class="line"></p>
+                <p class="more"><img src="img/more2.png" alt=""></p>
+                <ul class="recipe">
+                    <li>
+                        <a href="#">
+                            <img src="img/recipe_1.png" alt="">
+                                <div class="tit">
+                                <h3>브라우니 핫케익 &amp; 바닐라 아이스크림</h3>
+                                <p>집에서도 고급스러운 디져트즐겨요!</p>
+                                </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/recipe_2.png" alt="">
+                                <div class="tit">
+                                <h3>연어 르꼴라 샐러드 피자</h3>
+                                <p>느끼한 피자는 No! 상큼한피자 Yes!</p>
+                                </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="movie">
+            <a href="#"><img src="img/movie.png" alt=""></a>
+        </div>
+        <div class="box">
+            <ul>
+                <li><a href="#"><img src="img/call.png" alt=""></a></li>
+                <li><a href="#"><img src="img/faq.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 취급방침</a></li>
+            <li><a href="#">PC 버전</a></li>
+        </ul>
+    </div>
+    <div class="footer2">
+        <p>서울특별시 강남구 수서동 724 3층  |  대표이사 이효율  |  찾아오시는 길<br><span>copyright ⓒ pulmuone co., Ltd All rights reserved</span></p>
+    </div>
+</div>
+</body>
+</html>

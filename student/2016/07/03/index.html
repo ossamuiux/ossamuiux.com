@@ -1,0 +1,714 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--IE8 호환성보기 버튼을 눌렀을 때 IE7로 렌더링되는걸 막아주는 역할-->
+<meta name="format-detection" content="telephone = no"><!--아이폰 전화번호형식 자동클릭기능 방지-->
+<link rel="apple-touch-icon" href="/hyundaicard/img/hyundai.png">
+<title>현대카드</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<!--익스용 조건부주석으로 ie8이하에서만 respond를 연결-->
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="js/main.js"></script>
+<script>
+$(document).ready(function(){
+	//마소니 라이브러리
+	$('.grid').masonry({
+	  itemSelector: '.section', //내용 리스트
+	  columnWidth: 10
+	});
+	//현대카드금융(PC)
+	$('.slider1_wrap').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		vertical:true,
+		verticalSwiping:true,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//메인비쥬얼 슬라이더 5종류(PC)
+	$('.slider2_wrap').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//라이프스타일(PC)
+	$('.slider3_wrap').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//이벤트(PC)
+	$('.slider4_wrap').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//공지사항(PC)
+	$('.slider5_wrap').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//메인비쥬얼 슬라이더 5종류(모바일,타블렛)
+	$('.slider2_wrap_t').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//라이프스타일,이벤트(모바일,타블렛)
+	$('.slider3_wrap_t').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//현대카드금융(모바일,타블렛)
+	$('.slider1_wrap_t').slick({
+		cssEase:'linear',
+		pauseOnHover:false,
+		dots:true,
+		infinite:true,
+		arrows: false,
+		speed:500,
+		autoplay: true,
+  		autoplaySpeed:5000
+	});
+	//롤링 공지사항 슬라이더(모바일,타블렛)
+	$('.notice_m').slick({
+	  	pauseOnHover:false,
+	  	autoplay:true,
+		autoplaySpeed:3000,
+		speed:500,
+		vertical:true,
+    	arrows:false,
+		dots: false
+  	});
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+    <div class="popup_wrap">
+        <div class="popup">
+            <a class="p_left" href="#">쓸수록 커지는 할인카드 X Edition2 출시</a>
+            <a class="p_right" href="#">오늘 하루 열지 않기<span></span><em></em></a>
+            <a class="p_close" href="#"></a>
+        </div>
+    </div>
+    <div class="header_wrap">
+        <div class="header">
+            <div class="nav">
+            	<ul class="apply">
+                	<li><a href="#">카드신청</a><em></em></li>
+                    <li><a href="#">금융신청</a></li>
+                </ul>
+            	<ul class="login">
+                	<li><a href="#">회원가입<span class="bar"></span></a></li>
+                    <li><a href="#">로그인<span class="bar"></span></a></li>
+                    <li><a href="#"><strong>개인</strong><em></em></a></li>
+                    <li><a href="#">사업자<em></em></a></li>
+                    <li><a href="#">법인<em></em></a></li>
+                    <li><a href="#">가맹점</a></li>
+                </ul>
+            </div>
+            <div class="gnb_wrap">
+            	<div class="gnb_btn">
+                	<a href="#"></a>
+                </div>
+                <ul class="gnb">
+                	<li>
+                    	<p class="gnb_menu">Cards &amp; Benefits</p>
+                    	<ul class="sub">
+                        	<li><a href="#">카드상품<em></em></a></li>
+                            <li><a href="#">포인트 혜택<em></em></a></li>
+                            <li><a href="#">할인 혜택<em></em></a></li>
+                            <li><a href="#">현대카드 금융<em></em></a></li>
+                            <li><a href="#">카드신청<em></em></a></li>
+                            <li><a href="#">클럽서비스<em></em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<p class="gnb_menu">Culture &amp; Life</p>
+                    	<ul class="sub">
+                        	<li><a href="#">문화/공연<em></em></a></li>
+                            <li><a href="#">라이프스타일<em></em></a></li>
+                            <li><a href="#">이벤트/공지<em></em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<p class="gnb_menu">My Account</p>
+                    	<ul class="sub">
+                        	<li><a href="#">명세서<em></em></a></li>
+                            <li><a href="#">My Card Benefits<em></em></a></li>
+                            <li><a href="#">결제서비스<em></em></a></li>
+                            <li><a href="#">카드/개인정보 관리<em></em></a></li>
+                            <li><a href="#">케어서비스<em></em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<p class="gnb_menu">고객센터</p>
+                    	<ul class="sub">
+                        	<li><a href="#">소비자포털<em></em></a></li>
+                            <li><a href="#">고객상담/문의<em></em></a></li>
+                            <li><a href="#">이용안내<em></em></a></li>
+                            <li><a href="#">고객안심서비스<em></em></a></li>
+                            <li><a href="#">약관/서식<em></em></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            	<ul class="t_login">
+                	<li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+                <ul class="t_gnb">
+                	<li class="t_menu"><a>Cards &amp; Benefits</a></li>
+                    <li class="t_menu"><a>Culture &amp; Life</a></li>
+                    <li class="t_menu"><a>My Account</a></li>
+                    <li class="t_menu"><a>고객센터</a></li>
+                </ul>
+                <div class="t_subwrap">
+                    <ul class="t_sub">
+                        <li><a href="#">카드상품</a></li>
+                        <li><a href="#">포인트 혜택</a></li>
+                        <li><a href="#">할인 혜택</a></li>
+                        <li><a href="#">현대카드 금융</a></li>
+                        <li><a href="#">카드신청</a></li>
+                        <li><a href="#">클럽서비스</a></li>
+                    </ul>
+                    <ul class="t_sub">
+                        <li><a href="#">문화/공연</a></li>
+                        <li><a href="#">라이프스타일</a></li>
+                        <li><a href="#">이벤트/공지</a></li>
+                    </ul>
+                    <ul class="t_sub">
+                        <li><a href="#">명세서</a></li>
+                        <li><a href="#">My Card Benefits</a></li>
+                        <li><a href="#">결제서비스</a></li>
+                        <li><a href="#">카드/개인정보 관리</a></li>
+                        <li><a href="#">케어서비스</a></li>
+                    </ul>
+                    <ul class="t_sub">
+                        <li><a href="#">소비자포털</a></li>
+                        <li><a href="#">고객상담/문의</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">고객안심서비스</a></li>
+                        <li><a href="#">약관/서식</a></li>
+                    </ul>
+                    <a class="slide_up" href="#">CLOSE<em class="s_close"></em></a>
+                </div>    
+                <div class="m_btn">
+                    <a href="#"></a>
+                </div>
+                <ul class="m_gnb">
+                	<div class="m_top">
+                    	<a href="#">쓸수록 커지는 할인카드 X Edition2 출시</a>
+                        <div class="m_close">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <li class="m_con">
+                        <p class="m_menu">Cards &amp; Benefits</p>
+                        <ul class="m_sub">
+                            <li><a href="#">카드상품<em></em></a></li>
+                            <li><a href="#">포인트 혜택<em></em></a></li>
+                            <li><a href="#">할인 혜택<em></em></a></li>
+                            <li><a href="#">현대카드 금융<em></em></a></li>
+                            <li><a href="#">카드신청<em></em></a></li>
+                            <li><a href="#">클럽서비스<em></em></a></li>
+                        </ul>
+                    </li>
+                    <li class="m_con">
+                        <p class="m_menu">Culture &amp; Life</p>
+                        <ul class="m_sub">
+                            <li><a href="#">문화/공연<em></em></a></li>
+                            <li><a href="#">라이프스타일<em></em></a></li>
+                            <li><a href="#">이벤트/공지<em></em></a></li>
+                        </ul>
+                    </li>
+                    <li class="m_con">
+                        <p class="m_menu">My Account</p>
+                        <ul class="m_sub">
+                            <li><a href="#">명세서<em></em></a></li>
+                            <li><a href="#">My Card Benefits<em></em></a></li>
+                            <li><a href="#">결제서비스<em></em></a></li>
+                            <li><a href="#">카드/개인정보 관리<em></em></a></li>
+                            <li><a href="#">케어서비스<em></em></a></li>
+                        </ul>
+                    </li>
+                    <li class="m_con">
+                        <p class="m_menu">고객센터</p>
+                        <ul class="m_sub">
+                            <li><a href="#">소비자포털<em></em></a></li>
+                            <li><a href="#">고객상담/문의<em></em></a></li>
+                            <li><a href="#">이용안내<em></em></a></li>
+                            <li><a href="#">고객안심서비스<em></em></a></li>
+                            <li><a href="#">약관/서식<em></em></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search">
+                    <form>
+                        <input type="text" placeholder="Need Help?">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+                <a class="m_search_btn" href="#"></a>
+                <div class="m_search">
+                    <form>
+                        <input type="text" placeholder="Need Help?">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+                <h1><a href="index.html"><img src="img/logo_header.gif" alt="현대카드"></a></h1>
+                <div class="customer">
+                	<a href="#">고객센터</a>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="grid">
+            <div class="section">
+                <img class="myaccount" src="img/txt_myaccount.gif" alt="login">
+                <a class="my1" href="#">로그인<em></em></a>
+                <a class="my1 my2" href="#">내 정보변경<em></em></a>
+            </div>
+            <div class="section2">
+                <a href="#"><img class="card" src="img/140328_txt_cardapp.gif" alt=""></a>
+                <a href="#"><img class="card2" src="img/140916_txt_benefits.gif" alt=""></a>
+                <img class="card3" src="img/visual_card.gif" alt="">
+            </div>
+            <div class="section3">
+                <a class="txt1" href="#"><img src="img/txt_card5.gif" alt=""><em></em></a>
+                <a class="txt1_t" href="#"><img src="img/txt_card5_t.gif" alt=""></a>
+                <a class="txt2" href="#"><img src="img/txt_card2.gif" alt=""><em></em></a>
+                <a class="txt2_t" href="#"><img src="img/txt_card2_t.gif" alt=""></a>
+                <a class="txt2 txt3" href="#"><img src="img/txt_card4.gif" alt=""><em></em></a>
+                <a class="txt3_t" href="#"><img src="img/txt_card4_t.gif" alt=""></a>
+                <a class="txt4" href="#"><img src="img/txt_card3.gif" alt=""></a>
+            </div>
+            <div class="section4">
+                <a href="#"><img class="offerbox" src="img/141103_offerbox_v1.gif" alt=""></a>
+            </div>
+            <div class="section5">
+            	<div class="slider1_wrap">
+                    <div class="slider1">
+                        <a href="#"><img class="s1_1" src="img/con_financial.gif" alt=""></a>
+                    </div>
+                    <div class="slider1">
+                        <a href="#"><img class="s1_2" src="img/con_financial02_160205.gif" alt=""></a>
+                    </div>
+                </div>
+                <div class="s1_btn"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section5_t">
+            	<div class="slider1_wrap_t">
+                    <div class="slider1_t">
+                        <a href="#"><img class="s1_1" src="img/con_financial_t.png" alt=""></a>
+                    </div>
+                    <div class="slider1_t">
+                        <a href="#"><img class="s1_2" src="img/con_financial02_160205_t.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="s1_btn_t"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section6">
+                <a class="point" href="#"><img src="img/con_point.gif" alt=""></a>
+                <a class="cash" href="#"><img src="img/con_cash.gif" alt=""></a>
+            </div>
+            <div class="section7">
+            	<div class="slider2_wrap">
+                    <div class="slider2">
+                        <a href="#"><img class="s2_1" src="img/gotit_160224.jpg" alt=""></a>
+                    </div>
+                    <div class="slider2">
+                        <a href="#"><img class="s2_2" src="img/channel_160229.jpg" alt=""></a>
+                    </div>
+                    <div class="slider2">
+                        <a href="#"><img class="s2_3" src="img/t_imaginecard_151230.jpg" alt=""></a>
+                    </div>
+                    <div class="slider2">
+                        <a href="#"><img class="s2_4" src="img/t_imaginecard_151127.jpg" alt=""></a>
+                    </div>
+                    <div class="slider2">
+                        <a href="#"><img class="s2_5" src="img/gaultier_160219.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="s2_btn"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section7_t">
+            	<div class="slider2_wrap_t">
+                    <div class="slider2_t1">
+                        <a href="#">
+                            <img class="s2_01" src="img/t_imaginecard_151127_t1.jpg" alt="">
+                            <img class="s2_02" src="img/t_imaginecard_151127_t2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slider2_t2">
+                        <a href="#">
+                        	<img class="s2_03" src="img/channel_160229_t1.png" alt="">
+                        	<img class="s2_04" src="img/channel_160229_t2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider2_t1 slider2_t3">
+                        <a href="#">
+                        	<img class="s2_01" src="img/gotit_160224_t1.jpg" alt="">
+                            <img class="s2_02 s2_06" src="img/gotit_160224_t2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider2_t1 slider2_t4">
+                        <a href="#">
+                        	<img class="s2_01" src="img/t_imaginecard_151230_t1.jpg" alt="">
+                            <img class="s2_02 s2_08" src="img/EV_151231_X.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider2_t1 slider2_t5">
+                        <a href="#">
+                        	<img class="s2_09" src="img/gaultier_160219_t1.png" alt="">
+                            <img class="s2_02 s2_10" src="img/gaultier_160219_t2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="s2_btn_t"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section8">
+            	<div class="slider3_wrap">
+                    <div class="slider3">
+                        <a href="#"><img class="s3_1" src="img/culture_global.gif" alt=""></a>
+                    </div>
+                    <div class="slider3">
+                        <a href="#"><img class="s3_2" src="img/lifestyle_tile01.gif" alt=""></a>
+                    </div>
+                    <div class="slider3">
+                        <a href="#"><img class="s3_3" src="img/lifestyle_library.gif" alt=""></a>
+                    </div>
+            	</div>
+            	<div class="s3_btn"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section8_t">
+                <div class="slider3_wrap_t">
+                    <div class="slider3_t1">
+                        <a href="#">
+                            <img class="s3_01" src="img/lifestyle_txt.png" alt="">
+                            <img class="s3_02" src="img/lifestyle_img.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider3_t2">
+                        <a href="#">
+                            <img class="s3_03" src="img/event_txt.png" alt="">
+                            <img class="s3_04" src="img/event_img.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider3_t2 slider3_t3">
+                        <a href="#">
+                            <img class="s3_03" src="img/event_txt2.png" alt="">
+                            <img class="s3_06" src="img/event_img2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider3_t1 slider3_t4">
+                        <a href="#">
+                            <img class="s3_01 s3_07" src="img/lifestyle_txt2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider3_t2 slider3_t5">
+                        <a href="#">
+                            <img class="s3_03" src="img/event_txt3.png" alt="">
+                            <img class="s3_09" src="img/event_img3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="s3_btn_t"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section8 section9">
+            	<div class="slider4_wrap">
+                    <div class="slider4">
+                        <a href="#"><img class="s4_1" src="img/event_20160225_special.gif" alt=""></a>
+                    </div>
+                    <div class="slider4">
+                        <a href="#"><img class="s4_2" src="img/event_20151230_XEdition2.gif" alt=""></a>
+                    </div>
+                    <div class="slider4">
+                        <a href="#"><img class="s4_3" src="img/event_20151027_emart.gif" alt=""></a>
+                    </div>
+                    <div class="slider4">
+                        <a href="#"><img class="s4_4" src="img/event_20160307.gif" alt=""></a>
+                    </div>
+                    <div class="slider4">
+                        <a href="#"><img class="s4_5" src="img/event_20160302.gif" alt=""></a>
+                    </div>
+                    <div class="slider4">
+                        <a href="#"><img class="s4_6" src="img/event_20150102.gif" alt=""></a>
+                    </div>
+            	</div>
+            	<div class="s3_btn s4_btn"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="section8 section10">
+            	<div class="slider5_wrap">
+                    <div class="slider5">
+                        <a href="#"><img class="s5_1" src="img/notice_160114.gif" alt=""></a>
+                    </div>
+                    <div class="slider5">
+                        <a href="#"><img class="s5_2" src="img/notice_151012.gif" alt=""></a>
+                    </div>
+                    <div class="slider5">
+                        <a href="#"><img class="s5_3" src="img/notice_150921.gif" alt=""></a>
+                    </div>
+                    <div class="slider5">
+                        <a href="#"><img class="s5_4" src="img/notice_150922.gif" alt=""></a>
+                    </div>
+                    <div class="slider5">
+                        <a href="#"><img class="s5_5" src="img/notice_150716.gif" alt=""></a>
+                    </div>
+                    <div class="slider5">
+                        <a href="#"><img class="s5_6" src="img/notice_150608.gif" alt=""></a>
+                    </div>
+                    <div class="slider5">
+                        <a href="#"><img class="s5_7" src="img/notice_150212.gif" alt=""></a>
+                    </div>
+                </div>
+                <div class="s3_btn s5_btn"><a class="pause_btn" href="#"></a></div>
+            </div>
+            <div class="notice_m">
+                <div><a href="#">'금융주소 한번에' 서비스 시행 안내 : 금융 소비자가 주소를 변경하기 위해 금융회사를 일일이 방문하거나 연락해야 하는 번거로움을 덜어드리고자 금융회사 간 협조하여 한 금융회사에서 신청하면 다른 금융회사로 소비자의 주소를 일괄적으로 변경·신청해주는 서비스입니다.</a></div>
+                <div><a href="#">현대카드 Non Active-X 보안프로그램 적용 및 시행 안내 : 다양한 인터넷 브라우저에서 Active-X 설치 없이 현대카드 홈페이지를 편리하게 이용하기 위해 보안 프로그램 재설치 안내를 드립니다.</a></div>
+                <div><a href="#">금융개혁으로 달라진 금융생활 : 글로벌 경쟁력, 돈이 도는 활기찬 경제, 이제 현대카드 금융의 차례입니다. 개인종합 자산관리계좌(ISA)와 계좌이동 서비스, 인터넷 전문은행, 온라인보험 슈퍼마켓 등</a></div>
+                <div><a href="#">핀테크 지원센터 운영프로그램 안내 : 금융회사 및 유관기관의 핀테크 전문가가 스타트업·예비 창업자의 핀테크 사업 관련 상담을 진행 합니다. 데모데이 행사에서 스타트업과 금융회사의 1:1 멘토링을 구성합니다. 금융회사는 엑셀러레이터로서 스타트업의 핀테크 사업 추진을 적극 지원합니다.</a></div>
+                <div><a href="#">보이스피싱 지킴이 사이트 안내 : 개인정보 유출로 인한 보이스피싱, 대포통장 등 금융사기 피해 급증과 이로 인한 금융사기의 위험성을 알리고 피해를 방지하기 위함으로 금융사기 예방과 피해에 대비하기 위한 공식 사이트를 아래와 같이 안내 드립니다.</a></div>
+                <div><a href="#">금융사기 관련 소비자 유의사항 안내 :항상 현대카드를 이용해 주시는 회원님들께 감사드립니다. 금융사기 피해예방을 위한 금융사기 관련 소비자 유의사항을 아래와 같이 안내해 드립니다.</a></div>
+                <div><a href="#">현대카드앱 리뉴얼 안내 : 혜택을 확인하고, 모바일로 결제하고, 카드 이용내역을 관리하는 카드생활의 모든 것. 이제 편리한 모바일에서 경험하세요. 하나의 앱에서 혜택 검색, 카드 이용내역 관리, 모바일로 결제할 수 있는 앱카드 기능까지 모두 사용 가능한 서비스입니다.</a></div>
+            </div>
+            <ul class="section11">
+            	<li class="box">
+                    <a class="b1" href="#"><img class="ac1" src="img/ac_0624_01.png" alt=""></a>
+                    <a class="b2" href="#"><img class="ac2" src="img/ac_0624_02.png" alt=""></a>
+                </li>
+                <li class="box box2">    
+                    <a class="b1" href="#"><img class="ac3" src="img/ac_0624_03.png" alt=""></a>
+                    <a class="b2" href="#"><img class="ac4" src="img/ac_0624_04.png" alt=""></a>
+                </li>
+                <li class="box box3">    
+                    <a class="b1" href="#"><img class="ac5" src="img/ac_0624_09.png" alt=""></a>
+                    <a class="b2" href="#"><img class="ac6" src="img/ac_0624_06.png" alt=""></a>
+                </li>
+                <li class="box box4">    
+                    <a class="b1" href="#"><img class="ac7" src="img/ac_0629_01.png" alt=""></a>
+                    <a class="b2" href="#"><img class="ac8" src="img/ac_1019_01.png" alt=""></a>
+                </li>
+                <li class="box box5">
+                    <a class="b1" href="#"><img class="ac9" src="img/ac_0624_07.png" alt=""></a>
+                    <a class="b2" href="#"><img class="ac10" src="img/ac_1124_01.png" alt=""></a>
+                </li>
+            </ul>
+            <div class="section11_t">
+            	<div class="left_wrap">
+                    <div class="left1">
+                        <a class="l1" href="#">M포인트 온라인쇼핑</a>
+                        <a class="l2" href="#">현대카드 PRIVIA</a>
+                        <a class="l3" href="#">모바일서비스</a>
+                    </div>
+                    <div class="left2">
+                        <a class="l4" href="#">현대카드 앱카드</a>
+                        <a class="l5" href="#">UNDERSTAGE by 현대카드</a>
+                    </div>
+                </div>
+                <div class="right_wrap">
+                    <div class="right">
+                    	<div class="right1">
+                            <a class="l6" href="#">현대카드 Library</a>
+                            <a class="l7" href="#">소비자포털 전자민원</a>
+                            <a class="l8" href="#">상품공시실</a>
+                        </div>
+                        <div class="right2">
+                            <a class="l9" href="#">현대카드 소셜미디어</a>
+                            <a class="l10" href="#">Digital 현대카드</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_wrap">
+        <div class="footer">
+            <ul>
+                <li>고객센터 대표번호 1577-6000 (해외:82-2-3015-9000)<em class="bar"></em></li>
+                <li>카드신청 <strong>1577-0100</strong><em></em></li>
+                <li>도난분실신고 <strong>1577-6200</strong><em class="bar"></em></li>
+                <li><a href="#"><strong>윤리경영</strong></a><em></em></li>
+                <li><a href="#"><strong>사이트맵</strong></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">영업점안내</a><em></em></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a><em></em></li>
+                <li><a href="#"><strong>개인정보취급방침</strong></a><em class="bar"></em></li>
+                <li><a href="#">고객권리안내</a><em></em></li>
+                <li><a href="#">이용약관</a><em></em></li>
+                <li><a href="#">업무위탁현황</a><em></em></li>
+                <li><a href="#"><strong>전자민원접수</strong></a><em class="bar"></em></li>
+                <li><a href="#">상품공시실</a><em></em></li>
+                <li>IR (<a class="last" href="#">한</a><em class="dot"></em><a class="last" href="#">E</a>)</li>
+            </ul>
+            <ul>
+                <li><a class="light" href="#">서울특별시 영등포구 의사당대로3 현대캐피탈빌딩</a><em class="bar"></em></li>
+                <li><a class="light" href="#">대표이사 정태영</a><em></em></li>
+                <li><a class="light" href="#">사업자등록번호 213-86-15419</a></li>
+            </ul>
+            <p class="copyright">© HYUNDAI CARD Corp. ALL RIGHTS RESERVED.</p>
+            <h1><img src="img/logo_footer.gif" alt=""></h1>
+            <div class="footer_right">
+                <ul class="r1">
+                    <li><a class="family" href="#">패밀리<span class="arrow"></span></a></li>
+                    <li><a class="group" href="#">그룹사<span class="arrow"></span></a></li>
+                </ul>
+                <ul class="r2">
+                    <li class="bsi"><a href="#"><img src="img/logo_bsi.gif" alt=""></a></li>
+                    <li class="wa"><a href="#"><img src="img/logo_wa.gif" alt=""></a></li>
+                </ul>
+                <div>
+                    <ul class="familysite">
+                        <li class="list"><a href="#">현대카드</a></li>
+                        <li class="list"><a href="#">현대캐피탈</a></li>
+                        <li class="list"><a href="#">현대커머셜</a></li>
+                        <li class="list list2"><a href="#">현대라이프</a></li>
+                        <li class="list list3"><a href="#">현대카드 현대캐피탈 MY BUSINESS</a></li>
+                        <li class="list"><a href="#">현대카드 MY COMPANY</a></li>
+                        <li class="list"><a href="#">현대카드 가맹점</a></li>
+                        <li class="list"><a href="#">현대카드 M포인트몰</a></li>
+                        <li class="list list2"><a href="#">현대카드 PRIVIA 여행</a></li>
+                        <li class="list list3"><a href="#">현대카드 UNDERSTAGE</a></li>
+                        <li class="list"><a href="#">현대카드 LIBRARY</a></li>
+                    </ul>
+                    <img class="line" src="img/familysite_line.gif" alt="">
+                    <div class="groupsite_wrap">
+                        <div class="groupsite">
+                            <p>현대자동차그룹</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대자동차그룹</a></li>
+                                <li class="g_txt"><a href="#">현대차 정몽구 재단</a></li>
+                                <li class="g_txt"><a href="#">현대차 미소금융재단</a></li>
+                                <li class="g_txt"><a href="#">현대·기아차 동반성장</a></li>
+                                <li class="g_txt"><a href="#">현대·기아차 벤처플라자</a></li>
+                                <li class="g_txt"><a href="#">현대자동차 산업연구소</a></li>
+                                <li class="g_txt"><a href="#">해피무브글로벌 청년봉사단</a></li>
+                                <li class="g_txt"><a href="#">현대자동차그룹 인재개발원</a></li>
+                            </ul>
+                        </div>
+                        <div class="groupsite g0">
+                            <p>완성차</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대자동차</a></li>
+                                <li class="g_txt"><a href="#">기아자동차</a></li>
+                            </ul>
+                        </div>
+                        <div class="groupsite g1">
+                            <p>철강</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대제철</a></li>
+                                <li class="g_txt"><a href="#">현대비앤지스틸</a></li>
+                                <li class="g_txt"><a href="#">현대종합특수강</a></li>
+                            </ul>
+                        </div>
+                        <div class="groupsite g2">
+                            <p>건설</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대건설</a></li>
+                                <li class="g_txt"><a href="#">현대엔지니어링</a></li>
+                                <li class="g_txt"><a href="#">현대스틸산업</a></li>
+                                <li class="g_txt"><a href="#">현대종합설계</a></li>
+                                <li class="g_txt"><a href="#">현대도시개발</a></li>
+                            </ul>
+                        </div>
+                        <div class="groupsite g3">
+                            <p>부품</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대모비스</a></li>
+                                <li class="g_txt"><a href="#">현대위아</a></li>
+                                <li class="g_txt"><a href="#">현대파워텍</a></li>
+                                <li class="g_txt"><a href="#">현대다이모스</a></li>
+                                <li class="g_txt"><a href="#">현대케피코</a></li>
+                                <li class="g_txt"><a href="#">현대오트론</a></li>
+                                <li class="g_txt"><a href="#">현대엠엔소프트</a></li>
+                                <li class="g_txt"><a href="#">현대엠시트</a></li>
+                                <li class="g_txt"><a href="#">현대아이에이치엘</a></li>
+                                <li class="g_txt"><a href="#">현대파텍스</a></li>
+                            </ul>
+                        </div>
+                        <div class="groupsite g4">
+                            <p>금융</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대캐피탈</a></li>
+                                <li class="g_txt"><a href="#">현대카드</a></li>
+                                <li class="g_txt"><a href="#">현대커머셜</a></li>
+                                <li class="g_txt"><a href="#">HMC투자증권</a></li>
+                                <li class="g_txt"><a href="#">현대라이프</a></li>
+                            </ul>
+                        </div>
+                        <div class="groupsite g5">
+                            <p>기타</p>
+                            <ul>
+                                <li class="g_txt"><a href="#">현대글로비스</a></li>
+                                <li class="g_txt"><a href="#">현대로템</a></li>
+                                <li class="g_txt"><a href="#">이노션 월드와이드</a></li>
+                                <li class="g_txt"><a href="#">해비치호텔&amp;리조트</a></li>
+                                <li class="g_txt"><a href="#">현대오토에버</a></li>
+                                <li class="g_txt"><a href="#">현대엔지비</a></li>
+                                <li class="g_txt"><a href="#">현대서산농장</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="line2" src="img/groupsite_line.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

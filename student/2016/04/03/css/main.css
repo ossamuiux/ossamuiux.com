@@ -1,0 +1,138 @@
+@charset "utf-8";
+body {font-family:'맑은 고딕','malgun gothic','돋움',dotum,Helvetica,AppleSDGothicNeo,sans-serif; font-size:13px; min-width:1100px;}
+
+/*인트로*/
+.intro {position:relative;}
+/*오른쪽 페이지 버튼*/
+.intro .btn_page {position:fixed; right:30px; top:50%; margin-top:-63px;}
+.intro .btn_page li {margin:15px 0;}
+.intro .btn_page li.on button {background-position:0 -17px;} 
+.intro .btn_page button {width:38px; height:17px; background:url(../images/page_bg.png) no-repeat; border:none; outline:none; text-indent:-9999px;}
+
+/*아래로 내려가기 버튼*/
+.intro .btn_down {position:absolute; left:50%; top:85%; background:url(../images/btn_con_01_arrow.png) no-repeat; border:none; text-indent:-9999px; width:46px; height:35px; margin-left:-23px; outline:none;}
+
+@keyframes picMove {
+	30%{transform:translateX(300px);}	
+}
+.intro {position:relative; height:1000px;}
+.intro .bg {background:url(../images/designer1.png) no-repeat top center; height:1000px;}
+.intro .pic {position:absolute; float:left; left:17%; top:37%; animation:picMove 5s infinite; z-index:-1;}
+
+/*타이틀상자*/
+.intro .tit {position:absolute; width:650px; height:400px; left:50%; top:50%; margin-left:-325px; margin-top:-200px; z-index:1;}
+.intro .tit ul {overflow:hidden;}
+.intro .tit ul li {float:left; margin-left:30px; background:#7F89C4; text-align:center;}
+.intro .tit ul li img {margin-top:8px;}
+.intro .tit ul .txt1 {width:155px; height:45px;}
+.intro .tit ul .txt2 {width:185px; height:45px;}
+.intro .tit ul .txt3 {width:205px; height:45px;}
+/*이름*/
+.intro .tit h2 {float:left; margin:200px 0 0 163px;}
+
+.main {height:5000px; background-image:url(../images/background.jpg); background-color:#E2D9EC; background-size:100%; background-repeat:no-repeat; background-attachment:fixed; background-position:center center; overflow:hidden;}/*배경 캐릭터애니메이션 넣기*/
+.main .section1 {height:1000px; overflow:hidden;}
+/*프로필*/
+.main .section1 .section1_inner {width:1100px; height:650px; margin:160px auto; background:url(../images/bg_aboutme.png) no-repeat center bottom; overflow:hidden; border-radius:15px; }
+/*제목*/
+.section1_inner h2 {float:left; margin:85px 0 0 440px; }
+.section1_inner>h3 {float:left; margin:20px 0 0 505px;}
+.section1_inner .aboutme {float:left; width:1100px; height:400px; margin-top:90px;}
+.section1_inner .aboutme li {float:left; width:222px; height:340px; border:3px solid #1B315E; border-radius:10px; margin-left:18px; position:relative;}
+.section1_inner .aboutme li:first-child {margin-left:68px;}
+/*소제목*/
+.section1_inner .aboutme li h3 {width:133px; height:43px; background:#1B315E; border-radius:10px; left:44px; top:-20px; position:absolute;}
+.section1_inner .aboutme li h3 .tit_profile {margin:11px 0 0 32px;} 
+.section1_inner .aboutme li h3 .tit_certificate {margin:11px 0 0 10px;} 
+.section1_inner .aboutme li h3 .tit_experience {margin:11px 0 0 10px;} 
+.section1_inner .aboutme li h3 .tit_interests {margin:12px 0 0 17px;} 	
+/*이미지*/
+.section1_inner .aboutme li .cover_box {position:relative; margin-top:40px;}
+.section1_inner .aboutme li .cover_box .cover {position:absolute; left:0; top:0; width:100%; height:100%;}
+.section1_inner .aboutme li .cover_box img {width:100%;}
+/*텍스트위치*/
+.section1_inner .aboutme li .txt_profile {margin:28px 0 0 28px;} 
+.section1_inner .aboutme li .txt_certificate {margin:40px 0 0 50px;} 
+.section1_inner .aboutme li .txt_experience {margin:49px 0 0 48px;} 
+.section1_inner .aboutme li .txt_interests {margin:48px 0 0 73px;} 
+/*about me 컬러박스*/
+.section1_inner .modal {position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:300; display:none;}
+.section1_inner .modal li {width:800px; margin:0 auto; height:500px; overflow:auto; overflow-x:hidden; position:absolute; left:50%; top:50%; margin-left:-400px; margin-top:-250px; display:none; background:#FFFFFF; text-align:center;}
+
+/*스킬*/
+.section2 {height:1000px; overflow:hidden;}
+.section2_inner {width:1100px; height:700px; margin:150px auto; background:url(../images/bg_skill.png) no-repeat; overflow:hidden; position:relative;}
+.section2_inner h2 {margin:80px 0 0 450px;}
+/*오각형*/
+.section2_inner .graph_box {position:relative; overflow:hidden; width:380px; height:360px; margin:130px 0 0 365px; z-index:2;}
+.section2_inner .graph_box .value {position:absolute; float:left; left:57px; top:42px; display:none;}
+/*스킬설명*/
+.section2_inner .txt_skills {position:absolute; width:1100px; height:500px; left:0px; top:140px;}
+.section2_inner .txt_skills .skill_html {position:absolute; left:450px; top:240px;}
+.section2_inner .txt_skills .skill_photo {position:absolute; left:450px; top:240px;}
+.section2_inner .txt_skills .skill_illust {position:absolute; left:450px; top:280px;}
+.section2_inner .txt_skills .skill_css {position:absolute; left:450px; top:280px;}
+.section2_inner .txt_skills .skill_jquery {position:absolute; left:450px; top:240px;}
+
+/*리뉴얼프로젝트*/
+.section3 {height:1000px; overflow:hidden;}
+.section3 .section3_inner {width:1100px; height:700px; margin:150px auto; background:url(../images/bg_project.png) no-repeat; overflow:hidden; position:relative;}
+.section3_inner h2 {margin:80px 0 0 450px;}
+.section3_inner h3 {margin:20px 0 0 422px;}
+/*버튼박스*/
+.section3_inner .left {width:195px; float:left; margin:150px 0 0 50px; overflow:hidden;}
+.section3_inner .left>a {display:block; width:195px; height:50px; line-height:49px; text-align:center;}
+.section3_inner .left .btn_ori1 {background:#E5E5E5; margin-bottom:10px; color:#333; letter-spacing:-1px; font-size:14px; font-weight:bold;}
+.section3_inner .left .btn_ori1:hover {background:#D7E5F2; color:#191919;}
+.section3_inner .left .btn_ori2 {background:#898B8C; color:#fff; font-size:16px;}
+
+.section3_inner .right {width:195px; float:right; margin:150px 50px 0 0; overflow:hidden;}
+.section3_inner .right>a {display:block; width:195px; height:50px;  line-height:49px; text-align:center;}
+.section3_inner .right .btn_new1 {background:#E5E5E5; margin-bottom:10px; color:#333; letter-spacing:-1px; font-size:14px; font-weight:bold;}
+.section3_inner .right .btn_new1:hover {background:#D7E5F2; color:#191919;}
+.section3_inner .right .btn_new2 {background:#03233E; color:#fff; font-size:16px;}
+
+/*모니터*/
+.section3_inner .monitor {width:550px; height:470px; background:url(../images/monitor.png) no-repeat; position:relative; position:absolute; left:275px;  top:190px}
+/*모니터 버튼*/
+.section3_inner .monitor .btn_monitor {position:absolute; left:50%; top:73%; margin-left:-16px; border:2px solid #ddd; background:#fff; border-radius:30px; width:35px; height:35px; text-indent:-9999px; outline:none;}
+/*모니터 on보여야 할 것*/
+.section3_inner .monitor .monitor_inner {display:none;}
+.section3_inner .monitor .monitor_inner .original {float:left; margin:14px 2px 14px 14px; width:260px; height:305px; background:url(../images/jin_original.jpg) no-repeat; position:relative;}
+.section3_inner .monitor .monitor_inner .renewal {float:left; margin-top:14px; width:260px; height:305px; background:url(../images/jin_renewal.jpg) no-repeat; position:relative;}
+/*마우스 오버시 나올 커버*/
+.section3_inner .original {width:260px; height:305px;}
+.section3_inner .original .cover1 {position:absolute; left:0; top:0; width:100%; height:100%; display:block;}
+.section3_inner .original .cover1>span {display:block; font-size:20px; color:#fff; margin-top:130px; text-align:center;}
+.section3_inner .original .cover1:hover {background:#000; opacity:0.5; transition:all 0.3s ease-out;}
+.section3_inner .renewal {width:260px; height:305px;}
+.section3_inner .renewal .cover2 {position:absolute; right:0; top:0; width:100%; height:100%; display:block;}
+.section3_inner .renewal .cover2>span {display:block; font-size:20px; color:#fff; margin-top:130px; text-align:center;}
+.section3_inner .renewal .cover2:hover {background:#000; opacity:0.5; transition:all 0.3s ease-out;}
+/*기획서*/
+.section3 .modal2 {position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:300; display:none;}
+.section3 .modal2 img {width:1000px; margin:0 auto; height:800px; overflow:auto; overflow-x:hidden; position:absolute; left:50%; top:50%; margin-left:-500px; margin-top:-400px; display:none; background:#FFFFFF; text-align:center; }
+.section3 .modal2 .btn_close {position:absolute; right:15%; top:8%; background:#fff; width:60px; height:60px; border:none; outline:none; background:#FFF url(../images/icon-close-round-48.png) no-repeat center center;}
+
+/*반응형프로젝트*/
+.section4 {height:1000px; overflow:hidden;}
+.section4 .section4_inner {width:1100px; height:700px; margin:150px auto; background:url(../images/bg_aboutme.png) no-repeat; overflow:hidden; position:relative;}
+.section4 .section4_inner h2 {margin:80px 0 0 410px;}
+
+/*작업물*/
+.section5 {height:1000px; overflow:hidden;}
+.section5 .section5_inner {width:1100px; height:700px; margin:150px auto; background:url(../images/bg_work.png) no-repeat; overflow:hidden; position:relative;}
+.section5 .section5_inner h2 {margin:80px 0 0 470px;}
+.section5 .work {width:1100px; height:400px; float:left; margin-top:100px; background:#D6DDEB;}
+.section5 .work .work_box {width:850px; height:400px; margin:0 auto; border:1px solid #D6DDEB;}
+.section5 .work .work_box>div {margin:110px 0 0 15px;}
+
+/*슬라이드 화살표*/
+.section5 .work_box .slick-prev {position:absolute; left:-127px; top:50%; margin-top:-53px; width:61px; height:106px; background:url(../images/arrow_prev.png) no-repeat; border:none; text-indent:-9999px; outline:none;}
+.section5 .work_box .slick-next {position:absolute; right:-127px; top:50%; margin-top:-53px; width:61px; height:106px; background:url(../images/arrow_next.png) no-repeat; border:none; text-indent:-9999px; outline:none;}
+/*슬라이드 on
+.section5 .work_box .slick-dots {position:absolute; left:20%; top:-100px;}
+.section5 .work_box .slick-dots li {float:left; margin-left:30px; }
+.section5 .work_box .slick-dots li button {width:100px; height:40px; background:#cc; border:none; outline:none;}
+.section5 .work_box .slick-dots li.slick-active button {width:100px; height:40px; background:#F66; border:none; outline:none; color:#fff;}
+*/

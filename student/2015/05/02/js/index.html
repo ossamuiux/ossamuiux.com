@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>장선아_포트폴리오</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/circle.js"></script>
+<script>
+$(function(){
+	//$('.header li a').on('mouseover',function(){
+			//$('header li .line1').animate({'left':'100px'});
+	//});
+	//$('.header li a').on('mouseout',function(){
+			//$('header li .line1').animate({'left':'0px'});
+	//});
+	
+	
+	
+	///////////////////탭메뉴////////////////////////////////////
+	$('.main .tab:gt(0)').hide()
+	$('.header .line').hide()
+	
+	var num;
+	$('.header li').click(function(){
+		num=$(this).index(); 
+		//console.log(num);
+		$('.main_wrap .main .tab').hide() // 초기화, 전부다 끄라 라는 명령
+		$('.main_wrap .main .tab').eq(num).show(); //num을 누른것만 보여줘라
+		
+		$('.header .line').hide() // 초기화, 전부다 끄라 라는 명령
+		$('.header .line').eq(num).show(); //num을 누른것만 보여줘라
+
+		//탭버튼의 모든 a에 걸린 on클래스 제거
+		$('.header li').removeClass('on').removeClass('line')
+		//클릭한 버튼 a에 on클래스를 추가
+		$(this).find('li').addClass('on') /*on을 a에다가 걸었기때문에*/
+		$(this).find('span').addClass('line')
+		
+	$('this').mouseover(function(){
+		$('header li .line').animate({'left':'100px'});
+	});
+		
+	});
+	
+	/////////////////////////스킬 바 액션 /////////////////////////////////////
+	var num3;
+	
+	$(window).scroll(function(e){
+			num3=$(this).scrollTop();
+			
+			if (num3>=700){
+				$('.tab_b2 .about_in_wrap .photo_per').stop().animate({'width':'690px'},600);
+				$('.tab_b2 .about_in_wrap .illu_per').stop().animate({'width':'680px'},600);
+				$('.tab_b2 .about_in_wrap .cod_per').stop().animate({'width':'550px'},600);
+				$('.tab_b2 .about_in_wrap .jquery_per').stop().animate({'width':'200px'},600);
+			}
+			if(num3<600){
+				$('.tab_b2 .about_in_wrap .photo_per').css({'width':'0px'});
+				$('.tab_b2 .about_in_wrap .illu_per').css({'width':'0px'});
+				$('.tab_b2 .about_in_wrap .cod_per').css({'width':'0px'});
+				$('.tab_b2 .about_in_wrap .jquery_per').css({'width':'0px'});
+			}
+	});
+	
+	////////////////////////////////프로젝트 클릭했을때 팝업 ////////////////////////////////////
+	
+	
+	$('.project_p .tab_b .tab_wrap .more_btn').click(function(e){
+			e.preventDefault(); //올라가지않게 하는 방법
+				$('.main_wrap .main .more_popup').show();
+		});
+	$('.main_wrap .main .more_popup').click(function(){  /*popup을 눌렀을때 팝업창 끄기*/
+			$(this).hide();
+		});
+	
+	
+	////////////////////////////////프로젝트 클릭했을때 팝업 ////////////////////////////////////
+	
+	
+	
+	
+	////////////////////////////////콘텍트 폰케이스 ////////////////////////////////////
+	
+
+
+	
+	
+	$('.header_wrap .header .contact').click(function(){
+		$('.main_wrap .contact_p .contact_infor .case').stop().animate({'top':'150px'},600).animate({'top':'120px'},600);
+	});
+	
+	$('.header_wrap .header li').not('.contact').click(function(){
+		$('.main_wrap .contact_p .contact_infor .case').css({'top':'-1200px'});
+	});
+
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<h1></h1>
+    <ul class="header">
+    	<li class="home on">
+            <a href="#"><img src="img/about.png" alt="나의소개"></a>
+            <span class="line"></span>
+        </li>
+        <li class="about">
+            <a href="#"><img src="img/about.png" alt="나의소개"></a>
+            <span></span>
+        </li>
+        <li class="project">
+            <a href="#"><img src="img/project.png" alt="프로젝트"></a>
+            <span></span>
+        </li>
+        <li class="prot">
+            <a href="#"><img src="img/portfolio.png" alt="포트폴리오"></a>
+            <span></span>
+        </li>
+        <li class="contact">
+            <a href="#" class="last"><img src="img/contact.png" alt="콘텍트"></a>
+            <span></span>
+        </li>
+    </ul>
+</div>
+<div class="main_wrap">
+ <div class="main">
+    <div class="tab main_f">
+     	<img class="main_5" src="img/main_5.png" alt="">
+     	<h1><img src="img/logo.png" alt=""></h1>
+    </div>
+    <div class="tab tab2 about_p">
+     	<h2><img src="img/tab_about.png" alt=""></h2>
+      	 <div class="txt">안녕하세요 안녕하세요 안녕하세요 안녕하세요<br>
+안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 <br>
+안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 
+        </div>
+         <div class="tab_b">
+          	<div class="tab_wrap">
+            	<img src="img/about_1.png" alt="">
+               	<div class="about_in_wrap">
+                  <ul class="box">
+                    <li>
+                      <div class="box_img img1">
+                      </div>
+                    </li>
+                    <li class="logo_txt">
+                      보면 아름답고 행복해지는 장미, 저는 꽃중에서 장미를 좋아합니다.<br>
+    일러스트로 장미를 그린 후 빨간색을 좋아하는 제 소중한 첫째딸을 생각하며 제작한 '장선아로고'입니다.
+                    </li>
+                    </ul>
+                  <ul class="box">
+                    <li>
+                      <div class="box_img img2">
+                      </div>
+                    </li>
+                    <li class="logo_txt">
+                      위 언급한바와 같이 장미를 좋아해, 웹디자이너로써 장선아라는 사람은<br>
+    보면 볼수록 신비하고, 멋있고 , 우아하며, 오래봐도 질리지 않다는 의미를 두기위해 하늘색/보라색으로 그라데이션을 주었습니다.
+                    </li>
+                  </ul>
+                  <ul class="box">
+                    <li>
+                      <div class="box_img img3">
+                      </div>
+                    </li>
+                    <li class="logo_txt">
+                      빨간색 : 열정적임을 뜻하며, 제 첫째딸이 빨간색을 좋아해, 제 마음속엔 딸을 생각하고 있다고생각하며 빨간색 배경이있는 장미를 적용시켰습니다<br>
+    파란색 : 평온하다는 의미를 뜻하며, 저가 좋아하는 색이기도 합니다.<br>
+    주황색: 장선아는 활발하다는 느낌을 주기위해서 선택한 색상입니다. 빨간색과 파란색에서 어울리만한 색이 무엇이 있을까 찾아보니,
+     주황색이 적당하다는 생각이들어, 적용했습니다.
+                    </li>
+                  </ul>
+                </div>
+          	</div>
+        </div>
+      	 <div class="tab_b tab_b2">
+          	<div class="tab_wrap">
+            	<img src="img/about_2.png" alt="">
+                <span class="percent"><img src="img/percent.png" alt=""></span>
+                <div class="about_in_wrap">
+                	<ul class="percent_bar">
+                    	<li>
+                        	<img src="img/about_photoshop.png">
+                        </li>
+                        <li>
+                        	<div class="photo_per">
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <ul class="percent_bar">
+                    	<li>
+                        	<img src="img/about_illu.png">
+                        </li>
+                        <li class="illu_per">
+                        </li>
+                        
+                    </ul>
+                    <ul class="percent_bar">
+                    	<li>
+                        	<img src="img/about_cod.png">
+                        </li>
+                        <li class="cod_per">
+                        </li>
+                        
+                    </ul>
+                    <ul class="percent_bar">
+                    	<li>
+                        	<img src="img/about_jquery.png">
+                        </li>
+                        <li class="jquery_per">
+                        </li>
+                    </ul>
+                    <p>DESIGN : 디자인을 위한 포토샵은 잘 다루는 편 입니다. 하지만 일러스트는 포토샵에 비해 약간 다루는 편 입니다.<br> 
+CODDING : 드림위버를 포함해 웹표준을 다루는 코딩에서는 속도가 늦은 편이일지 몰라도, 구축을 할 수 있는 편 입니다.<br>
+JQUERY:  쇼핑몰에 들어갈 자주 쓰이는 슬라이드 메뉴 / 슬라이드 등은 어느정도 구현을 할 수 있는 편입니다.</p>
+               </div>
+               </div>
+        </div>
+        <span class="cir1"></span>
+        <span class="cir2"></span>
+   	</div>
+    <div class="tab tab2 project_p">
+        <h2><img src="img/tab_project.png" alt=""></h2>
+        <div class="txt">안녕하세요 안녕하세요 안녕하세요 안녕하세요<br>
+    안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 <br>
+    안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 
+        </div>
+        <div class="tab_b">
+            <div class="tab_wrap">
+            	<img src="img/roseme.png" alt="로즈미 이미지">
+                <div class="more_btn">
+                	<a href="#"><img src="img/review_btn.png" alt="더보기"><span class="more_arrow"><img src="img/review_arrow.png" alt=""></span></a>
+                </div>
+                <img src="img/concept.png" alt="콘셉트">
+         	</div>
+            <span class="cir3"></span>
+        	<span class="cir4"></span>
+            
+        </div>
+     </div>
+     <div class="more_popup">
+            <div class="more">
+            </div>
+    </div>
+    <div class="tab tab2 prot_p">
+        <h2><img src="img/tab_port.png" alt=""></h2>
+        <div class="txt">안녕하세요 안녕하세요 안녕하세요 안녕하세요<br>
+        안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 <br>
+        안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 
+        </div>
+      	<div class="tab_b">
+        	<div class="tab_wrap">
+            	<div class="prot_in_wrap">
+            	<ul class="box box1">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="last"></li>
+                </ul>
+                <ul class="box box2">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="last"></li>
+                </ul>
+                <ul class="box box3">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="last"></li>
+                </ul>
+                <ul class="box box4">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="last"></li>
+                </ul>
+                <ul class="box box5">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="last"></li>
+                </ul>
+                <ul class="box box6">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="last"></li>
+                </ul>
+                </div>
+        	</div>
+      	</div>
+     </div>
+    <div class="tab contact_p">
+    	<div class="contact_wrap">
+            <h3><img src="img/contactme.png" alt=""></h3>
+        </div>
+        <iframe class="con_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.4708639409336!2d127.06439106558652!3d37.66164227643285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb9173232e587%3A0x9a942ae792326131!2z7ISc7Jq47Yq567OE7IucIOuFuOybkOq1rCDtlZzquIDruYTshJ3roZw0N-q4uA!5e0!3m2!1sko!2skr!4v1448718579938" frameborder="0" style="border:0" allowfullscreen></iframe>
+     	<div class="contact_infor">
+        	<img class="case" src="img/iphone-red.png" alt="">
+            <div class="txt2">
+            	<img src="img/me.png" alt="">
+            </div>
+        </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@charset "utf-8"; 
+
+a{color:#333130;}
+
+
+/*슬라이더*/
+.main {width:1100px;  margin:0 auto;}
+.main .slider {margin: 10px 0 20px;  position:relative;}
+
+/*슬라이더-좌우화살표 커스텀*/
+.main .slider .slick-prev { position:absolute; left:15px; top:50%; z-index:80; width:26px; height:54px; background:url(../images/btn_cycle_arrow1.png) no-repeat; text-indent:-9999px; border:none;  margin-top:-24px;  outline:none;}
+.main .slider .slick-next { position:absolute; right:15px; top:50%; z-index:80; width:26px; height:54px; background:url(../images/btn_cycle_arrow1.png) no-repeat -25px 0; text-indent:-9999px; border:none;  margin-top:-24px;  outline:none;}
+.main .slider .slick-prev.on {background-image:url(../images/btn_cycle_arrow_on.png);}
+.main .slider .slick-next.on {background-image:url(../images/btn_cycle_arrow_on.png);}
+
+/*슬라이더-버튼커스텀*/
+.main .slider .slick-dots {position:absolute; left:0; bottom:0px; width:100%; text-align:center;}
+.main .slider .slick-dots li {display:inline-block; margin:0 3px;}
+.main .slider .slick-dots li button {width:25px; height:4px; background:url(../images/btn_rolling_s_on.png) no-repeat; border:none; text-indent:-9999px; outline:none; }
+.main .slider .slick-dots li.slick-active button {background-position-y:-4px;}
+
+/*컨텐츠-검색창*/
+.main .content {overflow:hidden;}
+.main .content .box_wrap {width:350px; height:280px;  margin:0 25px 20px 0; float:left;  }
+.main .content .box_wrap .search {width:350px; height:130px; margin-bottom:20px; background:url(../images/search_back_07.jpg) no-repeat;}
+.main .content .box_wrap .search h3 {font-weight:bold; font-size:15px; margin:20px 20px;  display:inline-block;}
+.main .content .box_wrap h3 {font-weight:bold; font-size:15px; margin:20px 20px;  display:inline-block;}
+.main .content .box_wrap .search_wrap {margin: 0 68px 20px;}
+.main .content .box_wrap .search_wrap .search_store input {border:2px solid #213d2a; padding:5px 5px; text-indent:5px; float:left; outline:none;}
+.main .content .box_wrap .search_wrap button {float:right; width:45px; height:29px; background:#213d2a; border:none; color:#fff;}
+
+
+/*컨텐츠-비디오*/
+.main .content .video {width:350px; height:280px;  margin:0 25px 20px 0; float:left; }
+
+
+/*컨텐츠-sns*/
+.main .content .sns {width:350px; height:280px;  margin-bottom:20px; float:left; }
+.main .content .sns .top {height:80px; background:#e2ecee; position:relative;}
+
+.main .content .sns .top h3 {font-weight:bold; font-size:15px; margin:20px 20px;  display:inline-block; float:left;}
+.main .content .sns .top .icon {float:right; margin:15px 15px;}
+.main .content .sns .top .icon a {background:url(../images/sns_icon.png) no-repeat; width:26px; height:25px; display:inline-block; text-indent:-9999px;}
+.main .content .sns .top .icon .insta {background-position-x:-30px;}
+.main .content .sns .top .icon .blog {background-position-x:-60px;}
+
+.main .content .sns .top .navi {display:inline-block; position:absolute; top:50px; right:18px;}
+.main .content .sns .top .navi a {display:inline-block;}
+
+
+.main .content .sns .fbContent { width:348px; height:200px; border:1px solid #dcdcdc; border-top:none; overflow-y:scroll;}
+.main .content .sns .fbContent .first {background:url(../images/main_sns_f_text.png) no-repeat 36px 44px;}
+.main .content .sns .fbContent .txt {display:inline-block; margin:45px 22px 0 75px; font-size:14px; width:233px; height:90px; line-height:16px;}
+.main .content .sns .fbContent .txt:hover {text-decoration:underline;}
+
+.main .content .sns .fbContent .info {padding-left:75px; font-size:13px; color:#3d60b1; margin-bottom:30px;}
+.main .content .sns .fbContent .info strong {font-weight:bold; padding-right:4px; }
+
+/*컨텐츠-주문전화번호 배너*/
+.main .content .store_number { width:348px; height:278px;  margin:0 25px 40px 0; float:left; background:url(../images/banner_call.jpg) no-repeat ;}
+
+/*컨텐츠 -주목*/
+.main .content .attention {width:348px; height:278px;  margin:0 25px 40px 0; float:left; position:relative;}
+
+/*슬라이더-버튼커스텀*/
+.main .content .attention .slick-dots {margin:5px;}
+.main .content .attention .slick-dots {position:absolute; left:0; top:0;}
+.main .content .attention .slick-dots li {display:inline-block; padding:0 1px;}
+.main .content .attention .slick-dots li button {width:11px; height:11px; background:url(../images/btn_rolling_s_on1.png) no-repeat center center; border:none; text-indent:-9999px; outline:none; background-size:11px; }
+.main .content .attention .slick-dots li.slick-active button {background-image:url(../images/btn_rolling_s_on2.png);}
+
+
+
+/*컨텐츠 -공지사항*/
+.main .content .content_wrap {width:348px; height:278px; margin-bottom:40px; float:left; position:relative;}
+.main .content .content_wrap .notice {width:348px; height:173px; border:1px solid #dcdcdc; background:#F7F7F7; margin-bottom:5px;}
+.main .content .content_wrap .notice h3 {font-weight:bold; font-size:15px; margin:20px 20px 0;  display:inline-block; float:left;}
+.main .content .content_wrap .notice .txt {font-size:13px; display:inline-block; margin:20px 0 0 15px; }
+.main .content .content_wrap .notice .txt li {padding-bottom:5px;}
+.main .content .content_wrap .notice .txt li a:hover {text-decoration:underline;}
+.main .content .content_wrap .notice .detail {position:absolute; top:20px; right:10px;}
+.main .content .content_wrap .notice .detail:hover {text-decoration:underline;}
+/*컨텐츠-프랜차이즈 배너*/
+.main .content. .content_wrap .notice .franchise_banner  { margin-bottom:10px 1px 0 0; float:right;}
+
+
+/*사이트맵*/
+.main .site_map { margin-bottom:38px;  }
+.main .site_map .sitemap_button {border:1px solid #dcdcdc; background:#FFF;  height:30px; background:url(../images/bg_allmenu.gif) no-repeat 98% center; font-weight:bold; color:#8C8C8C; text-align:center; line-height:28px; display:block;}
+.main .site_map .sitemap_button.on {background-image:url(../images/bg_allmenuOff.gif) }
+.main .site_map .slide_sitemap {height:250px; border:1px solid #dcdcdc; padding:10px 7px; margin:0 auto; display:none; border-top:none;}
+.main .site_map .slide_sitemap ul {float:left; margin: 20px 20px;  text-align:center; }
+.main .site_map .slide_sitemap ul:first-child {margin-left:32px; }
+.main .site_map .slide_sitemap .order {color:#de3608;}
+.main .site_map .slide_sitemap ul p {font-weight:bold; font-size:15px; margin-bottom:10px;}
+.main .site_map .slide_sitemap ul li {padding-bottom:8px;}
+.main .site_map .slide_sitemap ul li a:hover {color:#de3608; }

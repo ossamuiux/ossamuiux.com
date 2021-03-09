@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>ALPENSIA MOBILE</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(document).ready(function(){
+	$('.main_slider').slick({
+	  	autoplay:false,//자동실행
+		speed:300,//애니메이션 속도
+    	arrows:false,//좌우 화살표버튼 끄기
+		dots:true//슬라이더 페이지버튼 넣기
+  	});
+	
+	$('.event_slider').slick({
+	  	autoplay:false,//자동실행
+		speed:300,//애니메이션 속도
+    	arrows:false,//좌우 화살표버튼 끄기
+		dots:true//슬라이더 페이지버튼 넣기
+  	});
+});
+</script>
+</head>
+
+<body>
+<div class="wrap_hide">
+	<!--메뉴 나왔을때 커버와 닫기버튼 (layout)-->
+    <div class="cover"></div>
+    <a href="#" class="close_btn"></a>
+    <!--메뉴 나왔을때 커버와 닫기버튼 끝 (layout)-->
+    <!--주메뉴 (layout)-->
+    <div class="lnb_wrap">
+        <ul class="info">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+        <div class="search_wrap">
+            <form>
+                <fieldset>
+                    <legend>검색창</legend>
+                    <input type="text" placeholder="Search">
+                    <button type="submit"></button>
+                </fieldset>
+            </form>
+        </div>
+        <ul class="lnb">
+            <li>
+                <a href="#">온라인예약</a>
+                <ul class="sub">
+                    <li><a href="reservation.html">객실예약</a></li>
+                    <li><a href="#">단체예약</a></li>
+                    <li><a href="#">골프예약</a></li>
+                    <li><a href="#">객실추첨예약</a></li>
+                    <li><a href="#">알펜시아시즌권구매</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">이벤트&amp;할인</a>
+                <ul class="sub">
+                    <li><a href="event.html">패키지</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">할인</a></li>
+                    <li><a href="#">사이버쿠폰할인</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">숙박&amp;컨벤션</a>
+                <ul class="sub">
+                    <li><a href="convention.html">알펜시아 호텔</a></li>
+                    <li><a href="#">홀리데이 인&amp;스위트</a></li>
+                    <li><a href="#">컨벤션센터</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">레져&amp;편의</a>
+                <ul class="sub">
+                    <li><a href="#">스키 보드</a></li>
+                    <li><a href="#">트룬C.C회원제</a></li>
+                    <li><a href="#">700골프클럽대중제</a></li>
+                    <li><a href="#">오션700</a></li>
+                    <li><a href="#">알파인코스터</a></li>
+                    <li><a href="#">스포츠파크</a></li>
+                    <li><a href="#">스키점프대(전망대)</a></li>
+                    <li><a href="#">콘서트홀</a></li>
+                    <li><a href="#">생태학습원</a></li>
+                    <li><a href="#">뮤직텐트</a></li>
+                    <li><a href="#">리테일빌리지</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">리조트소개</a>
+                <ul class="sub">
+                    <li><a href="#">현장소식</a></li>
+                    <li><a href="#">홍보관</a></li>
+                    <li><a href="#">사이버투어</a></li>
+                    <li><a href="#">날씨정보</a></li>
+                    <li><a href="#">주변관광안내</a></li>
+                    <li><a href="#">종합이용요금</a></li>
+                    <li><a href="#">찾아오시는길</a></li>
+                    <li><a href="#">대중교통</a></li>
+                    <li><a href="#">전화번호</a></li>
+                    <li><a href="#">채용정보</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">분양회원서비스</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">고객문의</a></li>
+                    <li><a href="#">고객의소리</a></li>
+                    <li><a href="#">분실물센터</a></li>
+                    <li><a href="#">사이트운영정책</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--주메뉴 끝 (layout)-->
+    <!--헤더 (layout)-->
+    <div class="header">
+        <h1><a href="index.html"><img src="img/logo.png" alt="로고"></a></h1>
+        <a href="#" class="m_btn"></a>
+    </div>
+    <!--헤더 끝 (layout)-->
+    <!--메인-->
+    <div class="main">
+        <div class="main_slider">
+            <div><a href="#"><img src="img/main_visual01.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/main_visual02.jpg" alt=""></a></div>
+        </div>
+        <div class="notice">
+            <h2>공지사항</h2>
+            <ul>
+            	<li><a href="#"><em>[호텔/콘도] 겨울 패키지</em><span>2015.11.02</span></a></li>
+                <li><a href="#"><em>[오션700] 시설 보수 휴장 안내</em><span>2015.10.16</span></a></li>
+                <li><a href="#"><em>[호텔/콘도] 관광 주간 패키지</em><span>2015.10.01</span></a></li>
+                <li><a href="#"><em>[호텔] 특별한 추석을 위한 특선 저녁 뷔페</em><span>2015.09.25</span></a></li>
+            </ul>
+        </div>
+        <div class="event_slider">
+        	<div><a href="#"><img src="img/banner01.jpg" alt=""><p><span>알펜시아 호텔,콘도 회원모집</span></p></a></div>
+            <div><a href="#"><img src="img/banner02.jpg" alt=""><p><span>14/15 스키장 시즌권 3차 판매</span></p></a></div>
+            <div><a href="#"><img src="img/banner03.jpg" alt=""><p><span>골프 패키지</span></p></a></div>
+            <div><a href="#"><img src="img/banner04.jpg" alt=""><p><span>겨울 패키지</span></p></a></div>
+            <div><a href="#"><img src="img/banner05.jpg" alt=""><p><span>생태학습원</span></p></a></div>
+            <div><a href="#"><img src="img/banner06.jpg" alt=""><p><span>콘서트홀</span></p></a></div>
+        </div>
+        <ul class="icon">
+        	<li><a href="reservation.html">객실예약</a></li>
+            <li><a href="#">요금안내</a></li>
+            <li><a href="#">교통안내</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </div>
+    <!--메인 끝-->
+    <!--푸터 (layout)-->
+    <div class="footer">
+    	<ul>
+        	<li><a href="#">로그인</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="http://whtkdgml3627.dothome.co.kr/alpensia">PC버전</a></li>
+        </ul>
+        <p>평창알펜시아리조트<br>주소 : 강원도 평창군 대관령면 솔봉로 325<br>Copyright(C) Gangwondo Development Corporation<br>All Rights Reserved.<br><a href="tel:033-339-0000">Tel : 033-339-0000</a></p>
+    </div>
+    <!--푸터 끝 (layout)-->
+</div>
+</body>
+</html>
+
+
+
+
+
+

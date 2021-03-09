@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200">
+<link rel="shortcut icon" type="image/x-icon" href="http://milkbebe.dothome.co.kr/favicon_ky.ico" />
+<title>DesignWatch</title>
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery.illuminate.0.7.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+	var index = $("li").index(this);
+	
+	$('.menu1 li:eq(0)').mouseenter(function() {
+		$(this).find('a').text('내 소개');
+	});
+	
+	$('.menu1 li:eq(0)').mouseleave(function() {
+		$(this).find('a').text('플레이');
+	});
+
+	$('.menu1 li:eq(1)').mouseenter(function() {
+		$(this).find('a').text('리뉴얼 사이트');
+	});
+	
+	$('.menu1 li:eq(1)').mouseleave(function() {
+		$(this).find('a').text('전투훈련');
+	});
+
+	$('.menu1 li:eq(2)').mouseenter(function() {
+		$(this).find('a').text('반응형 사이트');
+	});
+	
+	$('.menu1 li:eq(2)').mouseleave(function() {
+		$(this).find('a').text('영웅 갤러리');
+	});
+
+	$('.menu1 li:eq(3)').mouseenter(function() {
+		$(this).find('a').text('휴대폰 테마');
+	});
+	
+	$('.menu1 li:eq(3)').mouseleave(function() {
+		$(this).find('a').text('전리품 상자');
+	});
+	
+		$('.new_icon').illuminate({
+		'intensity': '0.9',
+		'color': '#845e2c',
+		'blink': 'true',
+		'blinkSpeed': '800',
+		'outerGlow': 'true',
+		'outerGlowSize': '70px',
+		'outerGlowColor': '#fcfb48'
+	});	
+	
+});
+</script>
+
+
+</head>
+
+<body>
+	<div id="header">
+    	<button class="btn_x" type="button">
+            <span></span>
+            <span></span>
+            <span></span>        
+        </button>
+    	<img class="profile" src="images/main.png" alt="">
+        <div class="quick_menu">
+        	<div class="quick_txt_wrap">
+            	<ul class="quick_txt">
+                	<li><a href="main.html">HOME</a></li>
+                    <li><a href="profile.html">내 소개</a></li>
+                    <li><a href="">리뉴얼 사이트</a></li>
+                    <li><a href="">반응형 사이트</a></li>
+                    <li><a href="">휴대폰 테마</a></li>
+                </ul>
+                <ul class="profile">
+                <li>이귀영</li>
+                <li style="color:#ef5350;">010.7444.2920(이구이영)</li>
+                <li>mmilkbebe@gmail.com</li>
+                <li>kakaotalk) milkybebe</li>
+                <li>LINE) milkbebe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<div id="main">
+    	<div class="main_bg">
+            <video width="320" height="240" loop muted autoplay>
+            <source src="video/main-bg-hanamura.mp4" type="video/mp4">
+            </video>
+            <h1><a href="main.html"><img class="logo" src="images/main-logo.png" alt="logo"></a></h1>
+            <div class="txt_wrap">
+                <ul class="menu1">
+                    <li><a href="profile.html">플레이</a><!--<img class="new_icon" src="images/main-new.png" alt=""></li>-->
+                        <button type="button" class="new_icon"><span>신규!</span></button></li>
+                    <li><a href="#">전투 훈련</a></li>
+                    <li><a href="http://milkbebe.net/rwd_bistopping" target="_blank">영웅 갤러리</a></li>
+                    <li><a href="theme.html" target="_blank">전리품 상자</a><img class="box_icon" src="images/main-randombox.png" alt=""></li>
+                </ul>
+                <ul class="menu2">
+                    <li><a href="#">소셜</a></li>
+                    <li><a href="#">프로필</a></li>
+                    <li><a href="#">설정</a></li>
+                    <li><a href="#">게임종료</a></li>
+                </ul>
+                <div class="modal_popup">
+                	<h4>정말로 가시는 거예요? ㅠ_ㅠ</h4>
+                	<button type="button" class="btn_yes">네, 다음에 또 올게요!</button>
+                	<button type="button" class="btn_no">아뇨, 조금 더 구경할게요.</button>
+                </div>
+            </div>
+            <div class="chat_wrap">
+            	<div class="chat_txt">
+                    <p class="txt3">[입사를체험하시오]: 코딩 6인팟 구합니다</p>
+                    <p class="txt2">[사랑을담아서귀바]: 로고디자인 같이 하실분~</p>
+                    <p class="txt1">[귀도우메이커]: 아이콘 등 소스 공유할 사람? 귓 ㄱㄱ</p>
+                </div>
+                <img src="images/main-chatbox.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

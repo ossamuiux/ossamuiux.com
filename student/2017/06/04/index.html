@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<title>Eunji's portfolio</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(document).ready(function() {
+	var mySwiper = new Swiper ('.slider1', {
+		nextButton: '.section4 .swiper-button-next',
+		prevButton: '.section4 .swiper-button-prev',
+		autoplay:2500,//자동실행
+		speed:800,//애니메이션속도
+		slidesPerView: 2,//centeredSlides:true로 하고 사용시 좌우슬라이드 가려짐
+		spaceBetween: 70,//음수마진으로 겹쳐서 간격 줄임
+		centeredSlides: true,
+		loopAdditionalSlides:2,
+        //simulateTouch:false,
+        //preventClicks:false,
+        //preventClicksPropagation:false,
+		loop: true//무한루프
+        
+	});
+		
+	$('.section4_inner .section4_wrap .swiper-slide').click(function(e) {
+		//e.preventDefault();
+	});
+			
+	$('.modal_popup .btn_close').click(function() {
+        $('.modal_popup').hide();
+		
+		var str = $('.modal_popup .con iframe').attr('src','');
+		
+		var arr = [];
+	
+	for(var i=1; i<7; i++){
+		arr.push($('.section'+i).offset().top);
+	}
+	
+	
+    $(window).scroll(function() {
+        var num = $(this).scrollTop();
+				
+		if(num>=arr[1]){
+			//$('#main').css({'position':'fixed','top':0});
+			$('.section1').addClass('on');
+		} else {
+			//$('#main').css({'position':'absolute','top':1277});
+			$('.section2').removeClass('on')
+		}	{
+			//$('#main').css({'position':'absolute','top':2544});
+			$('.section3').removeClass('on')
+		}	{
+			//$('#main').css({'position':'absolute','top':3831});
+			$('.section4').removeClass('on')
+		}	{
+			//$('#main').css({'position':'absolute','top':5108});
+			$('.section5').removeClass('on')
+		}	{
+			//$('#main').css({'position':'absolute','top':6385});
+			$('.section6').removeClass('on')
+		}
+		
+		//섹션위치에 따라 페이지버튼 on처리
+		if(num>=arr[0] && num<arr[1])	{
+			$('.btn_page li').eq(0).addClass('on').siblings().removeClass('on');	
+			$('.btn_page').removeClass('on');
+		}	else if(num>=arr[1] && num< arr[2])	{
+			$('.btn_page li').eq(1).addClass('on').siblings().removeClass('on');
+			$('.btn_page').addClass('on');
+		}	else if(num>=arr[2] && num< arr[3])	{
+			$('.btn_page li').eq(2).addClass('on').siblings().removeClass('on');
+			$('.btn_page').removeClass('on');
+		}	else if(num>=arr[3] && num< arr[4])	{
+			$('.btn_page li').eq(3).addClass('on').siblings().removeClass('on');	
+			$('.btn_page').removeClass('on');
+		}	else if(num>=arr[4] && num< arr[5])	{
+			$('.btn_page li').eq(4).addClass('on').siblings().removeClass('on');	
+			$('.btn_page').removeClass('on');
+		}	else	{
+			$('.btn_page li').eq(5).addClass('on').siblings().removeClass('on');	
+			$('.btn_page').removeClass('on');
+		}
+		
+		if(num>=arr[1]-500 && num<arr[2])	{
+			$('.btn_page').addClass('on');
+		}	else 	{
+			$('.btn_page').removeClass('on');
+		}	
+    });
+		
+	
+	//페이지버튼
+	$('.btn_page li').click(function(e) {
+		e.preventDefault();
+		
+        var num = $(this).index();
+		
+		if(num==0){
+			$('html,body').stop().animate({scrollTop : arr[0]}, 1000);
+		}	else if(num==1){
+			$('html,body').stop().animate({scrollTop : arr[1]}, 1000);	
+		}	else if(num==2){
+			$('html,body').stop().animate({scrollTop : arr[2]}, 1000);
+		}	else if(num==3){
+			$('html,body').stop().animate({scrollTop : arr[3]}, 1000);
+		}	else if(num==4){
+			$('html,body').stop().animate({scrollTop : arr[4]}, 1000);
+		}	else if(num==5){
+			$('html,body').stop().animate({scrollTop : arr[5]}, 1000);
+		}	else if(num==6){
+			$('html,body').stop().animate({scrollTop : arr[6]}, 1000);
+		}
+		});
+	});
+});
+</script>
+</head>
+<body>
+<div id="main">
+	<!--페이지버튼-->
+    <ul class="btn_page">
+    	<li class="btn1 on"><a href="#">1</a></li>
+        <li class="btn2"><a href="#">2</a></li>
+        <li class="btn3"><a href="#">3</a></li>
+        <li class="btn4"><a href="#">4</a></li>
+        <li class="btn5"><a href="#">5</a></li>
+        <li class="btn6"><a href="#">6</a></li>
+    </ul>
+	<!--section1_intro-->
+    <div class="section1">
+        <div class="section1_inner">
+            <!--메인이미지-->
+            <h1 class="animated"><img src="images/main_typo.png" alt=""></h1>
+            <!--얼굴-->
+            <h2 class="animated"><img src="images/main_face.png" alt=""></h2>
+		</div>
+    </div>
+    <!--section2_aboutme-->
+    <div class="section2">
+    	<div class="section2_inner">
+    	<!--about me 제목-->
+		<h3><img src="images/title_aboutme.png" alt=""></h3>
+        <!--얼굴이미지-->
+        <div class="menu">
+            <div class="face1">
+                <img class="cover" src="images/aboutme_face1.png" style="cursor:pointer" alt="">
+                <img class="cover2" src="images/aboutme_face1_hover.png" style="cursor:pointer" alt="">
+            </div>
+            <div class="face2">
+                <img class="cover" src="images/aboutme_face2.png" style="cursor:pointer" alt="">
+                <img class="cover2" src="images/aboutme_face2_hover.png" style="cursor:pointer" alt="">
+            </div>
+            <div class="face3">
+                <img class="cover" src="images/aboutme_face3.png" style="cursor:pointer" alt="">
+                <img class="cover2" src="images/aboutme_face3_hover.png" style="cursor:pointer" alt="">
+            </div>
+		</div>
+		</div>
+    </div>
+    <!--section3_skill-->
+    <div class="section3">
+    	<div class="section3_inner">
+            <!--skill me 제목-->
+            <h4><img src="images/title_skill.png" alt=""></h4>
+            <!--skill 메뉴-->
+            <ul class="skill_menu">
+            	<li class="skill1">1</li>
+                <li class="skill2">2</li>
+                <li class="skill3">3</li>
+                <li class="skill4">4</li>
+            </ul>
+        </div>
+    </div>
+    <!--section4_work-->
+    <div class="section4">
+    	<div class="section4_inner">
+            <!--work 제목-->
+            <h2><img src="images/title_work.png" alt=""></h2>
+            <!--슬라이더-->
+            <div class="section4_wrap">
+                <div class="swiper-container slider1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="pdf/seoulland.pdf" target="_blank"><img src="images/work_seoulland.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="pdf/marvel.pdf" target="_blank"><img src="images/work_marvel.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="pdf/thema_design.pdf" target="_blank"><img src="images/work_thema.png.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev">
+                	<img src="images/work_left_arrow.png" alt="">
+				</div>
+                <div class="swiper-button-next">
+                	<img src="images/work_right_arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--section5_valuable-->
+    <div class="section5">
+    	<div class="section5_inner">
+            <!--valuable 제목-->
+            <h2><img src="images/title_valuable.png" alt=""></h2>
+            <!--탭 배경-->
+            <ul class="section5_tab">
+                <li><img src="images/valuable_tab1.png" alt=""></li>
+                <li><img src="images/valuable_tab2.png" alt=""></li>
+                <li><img src="images/valuable_tab3.png" alt=""></li>
+            </ul>
+            </div>
+    </div>
+    <!--section6_end-->
+    <div class="section6">
+    	<div class="section6_inner">
+        	<!--thanks-->
+        	<h2><img src="images/ending_image.png" alt=""></h2>
+            <!--tel-->
+            <h3><img src="images/ending_image2.png" alt=""></h3>
+            <!--얼굴-->
+            <h4><img src="images/ending_face.png" alt=""></h4>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+

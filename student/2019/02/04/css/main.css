@@ -1,0 +1,312 @@
+@keyframes heightFolio {
+    100% {height: 740px;}
+}
+#main .my_portfolio {width: 1680px; height: 0; overflow: hidden; margin: 0 auto; background: #fff; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 999999; animation: heightFolio 0.5s forwards;}
+#main .my_portfolio:after {content: ''; position: absolute; left: 45px; right: 45px; top: 45px; bottom: 45px; border: 10px solid #cbc5ed;}
+
+#main .btn_menu {width: 50px; height: 50px; background: url(../images/btn_menu.png) no-repeat 50% 50%; border: none; outline: none; text-indent: -9999px; position: absolute; left: 35px; top: 50%; transform: translateY(-50%); z-index: 9999999;}
+#main .btn_close {width: 50px; height: 50px; background: url(../images/btn_close.png) no-repeat 50% 50%; border: none; outline: none; text-indent: -9999px; position: absolute; right: 35px; top: 50%; transform: translateY(-50%); z-index: 9999999;}
+
+#main .my_portfolio .me_slider {width: 100%; height: 100%; position: relative;}
+#main .my_portfolio .me_slider .swiper-button-prev {width: 32px; height: 50px; background: url(../images/btn_prev.png) no-repeat; background-size: 32px 50px; left: 102px;}
+#main .my_portfolio .me_slider .swiper-button-next {width: 32px; height: 50px; background: url(../images/btn_next.png) no-repeat; background-size: 32px 50px; right: 102px;}
+
+#main .my_portfolio .me_slider .profile {width: 1254px; height: 532px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main .my_portfolio .me_slider .profile .photo {float: left;}
+#main .my_portfolio .me_slider .profile:after {content: ''; position: absolute; left: 399px; top: 0; width: 1px; height: 100%; background: #cbc5ed;}
+
+#main .my_portfolio .me_slider .profile .pro_txt1 {float: left; margin: 30px 0 0 110px; text-align: left;}
+#main .my_portfolio .me_slider .profile .pro_txt1 h2 {font-family: '210Gothic030'; font-weight: bold; font-size: 30px; color: #7572b5;}
+#main .my_portfolio .me_slider .profile .pro_txt1 p {font-family: '210Gothic030'; font-size: 16px; color: #cbc5ed; margin-top: 2px;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .my_p {font-family: '210Gothic030'; font-size: 15px; color: #383838; margin-top: 13px;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .my_p span {font-weight: bold; position: relative; margin-right: 44px;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .my_p span:after {content: ''; position: absolute; right: -26px; top: 0; width: 10px; height: 15px; background: url(../images/pro_bar.png) no-repeat;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .phone, #main .my_portfolio .port_slider .profile .pro_txt1 .email {margin-top: 8px;}
+
+/*스킬 막대그래프*/
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill h4 {font-family: '210Gothic030'; font-weight: bold; font-size: 18px; position: relative; margin-top: 36px;} 
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill h4:after {content: ''; position: absolute; left: 0; bottom: -14px; width: 30px; height: 1px; background: #cbc5ed;}
+
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level {margin-top: 34px;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level li {float: left; position: relative; text-align: center; margin-left: 30px;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level li h6 {font-family: '210Gothic030'; font-weight: bold; font-size: 12px; margin-top: 11px;} 
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level .ps {margin-left: 0;}
+
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level .ps .level {left: 1px; bottom: 29px;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level .ai .level {left: 0; bottom: 29px; animation-delay: 0.2s;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level .hc .level {left: 1px; bottom: 47px; width: 40px; animation-delay: 0.4s;}
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level .js .level {left: 4px; bottom: 47px; width: 40px; animation-delay: 0.6s;}
+@keyframes scaleLevel{
+    100% {transform: scale(1, 1); opacity: 1;transform-origin: bottom;}
+}
+#main .my_portfolio .me_slider .profile .pro_txt1 .skill_level .level {position: absolute; z-index: -1; transform: scale(1, 0); opacity: 0; animation: scaleLevel 1s forwards;}
+
+#main .my_portfolio .me_slider .profile .pro_txt2 {float: right;}
+
+#main .my_portfolio .me_slider .itsme .box {float: left; margin: 385px 0 0 213px;}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap {width: 934px; height: 531px; float: right; margin: 105px 213px 0 0; position: relative;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap h3 {float: right; margin: -13px -2px 0 0; font-family: '210Gothic030'; font-weight: bold; font-size: 60px; color: #cbc5ed; position: relative;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap h3:after {content: ''; position: absolute; right: 2px; bottom: 11px; width: 934px; height: 1px; background: #cbc5ed;}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword {float: left; text-align: left; margin-top: 94px;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword li {margin-top: 20px;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword li:first-child {margin-top: 0;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword li a {font-family: '210Gothic030'; font-weight: bold; font-size: 30px; color: #383838; background: #cbc5ed; padding: 11px 13px 6px 12px;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword li:hover a {background: #7572b5; color: #fff;}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust {float: right; margin-top: -3px; width: 763px; position: relative;}
+@keyframes moveLine {
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line.on {animation: moveLine 3.2s ease-in-out infinite;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li {width: 100%; height: 10px; background: #cbc5ed; margin-top: 14px; transition: all 0.5s; opacity: 0;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li.on {opacity: 1;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(2) {transition-delay: 0.2s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(3) {transition-delay: 0.4s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(4) {transition-delay: 0.6s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(5) {transition-delay: 0.7s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(6) {transition-delay: 0.8s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(7) {transition-delay: 0.9s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(8) {transition-delay: 1s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(9) {transition-delay: 1.2s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(10) {transition-delay: 1.4s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(11) {transition-delay: 1.6s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(12) {transition-delay: 1.8s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(13) {transition-delay: 2s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(14) {transition-delay: 2.2s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(15) {transition-delay: 2.4s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(16) {transition-delay: 2.6s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(17) {transition-delay: 2.8s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(18) {transition-delay: 3s;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .line li:nth-child(19) {transition-delay: 3.2s;}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key {
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key.on {
+    display: none;
+}
+
+@keyframes moveKey0 {
+    1% {opacity: 1;}
+    50% {transform: rotateZ(360deg) scale(0.1, 0.1);}
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key0 {
+    position: absolute;
+    left: 275px;
+    top: 20px;
+    z-index: 1;
+    opacity: 0;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key0.on {
+    animation: moveKey0 3s ease-in-out infinite;
+    opacity: 1;
+}
+
+@keyframes moveKey12 {
+    25% {transform: rotateZ(4deg);}
+    50% {transform: rotateZ(-8deg);}
+    75% {transform: rotateZ(6deg);}
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key1 {
+    position: absolute;
+    left: 261px;
+    top: 44px;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key1.on {
+    animation: moveKey12 1.5s ease-in-out infinite;
+    transform-origin: center top;
+}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key2 {
+    position: absolute;
+    left: 144px;
+    top: 44px;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key2.on {
+    animation: moveKey12 1.5s ease-in-out infinite;
+    transform-origin: center top;
+}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key3 {
+    position: absolute;
+    left: 22px;
+    bottom: 77px;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key3.on {
+    animation: moveMerida 1s ease-in-out infinite;
+    transform-origin: center 120px;
+}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key4 {
+    position: absolute;
+    left: 185px;
+    bottom: 74px;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key4.on {
+    animation: movePoca 1s ease-in-out infinite;
+    transform-origin: center 120px;
+}
+
+@keyframes moveKey5 {
+    25% {transform: rotateZ(-10deg);}
+    50% {transform: rotateZ(5deg);}
+    75% {transform: rotateZ(-10deg);}
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key5 {
+    position: absolute;
+    right: 226px;
+    top: 63px;
+    z-index: 5;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key5.on {
+    animation: moveKey5 2s ease-in-out infinite;
+    transform-origin: 200px 250px;
+}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key6 {
+    position: absolute;
+    right: 19px;
+    bottom: 77px;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key6.on {
+    animation: moveAnna 1s ease-in-out infinite;
+    transform-origin: center 120px;
+}
+
+@keyframes moveKey7 {
+    50% {transform: translateX(-500px) rotateZ(-360deg);}
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key7 {
+    position: absolute;
+    right: 16px;
+    bottom: 48px;
+    z-index: 5;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key7.on {
+    animation: moveKey7 3s ease-in-out infinite;
+}
+
+@keyframes moveKey8 {
+    25% {transform: scale(1.2, 1.2);}
+    50% {transform: scale(-1, -1);}
+    75% {transform: scale(1.5, 1.5);}
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key8 {
+    position: absolute;
+    right: 183px;
+    top: 39px;
+    z-index: 1;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .key_illust .key8.on {
+    animation: moveKey8 3s ease-in-out infinite;
+}
+
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword_bg .bg {
+    position: absolute;
+    right: -1px;
+    top: 89px;
+    width: 765px;
+    height: 441px;
+    z-index: 10;
+    display: none;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword_bg .bg.on {display: block;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keybg_close {
+    outline: none;
+    border: none;
+    background: url(../images/itsme_close.png) no-repeat 50% 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 31px;
+    top: 101px;
+    text-indent: -9999px;
+    z-index: 10;
+    display: none;
+}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keyword_bg .bg.on {display: block;}
+#main .my_portfolio .me_slider .itsme .keyword_wrap .keybg_close.on {display: block;}
+
+/***********서브페이지***********/
+/***********웹 디자인***********/
+/*아쿠아리움 웹 페이지*/
+#main.web {background: #3598db;}
+#main.web .web_folio_wrap:after {border: 10px solid #3598db;}
+#main.web .web_folio_wrap .profile:after {display: none;}
+
+#main.web .web_folio_wrap .profile.web_folio {position: relative;}
+#main.web .web_folio_wrap .profile.web_folio .aquarium {background: url(../images/aquarium.png) no-repeat; width: 1254px; height: 440px;}
+#main.web .web_folio_wrap .profile.web_folio .aquarium .btn_wrap {position: absolute; left: 0; bottom: 0;}
+#main.web .web_folio_wrap .profile.web_folio .aquarium .btn_wrap li {display: inline-block; margin-right: 104px;}
+#main.web .web_folio_wrap .profile.web_folio .aquarium .btn_wrap li:last-child {margin-right: 0;}
+#main.web .web_folio_wrap .profile.web_folio .aquarium .btn_wrap li a {display: block; font-family: '210Gothic030'; font-weight: bold; font-size: 30px; color: #fff; background: #3598db; padding: 6px 23px 1px 22px;}
+
+#main.web .web_folio_wrap .web_prev {border: none; outline: none; background-image: url(../images/web_prev.png);}
+#main.web .web_folio_wrap .web_next {border: none; outline: none; background-image: url(../images/web_next.png);}
+
+/*닌텐도 스위치 웹 페이지*/
+#main.web {background: #3598db;}
+#main.web.on {background: #ff5f52;}
+#main.web .web_folio_wrap:after {border: 10px solid #3598db;}
+#main.web.on .web_folio_wrap:after {border: 10px solid #ff5f52;}
+#main.web .web_folio_wrap .profile:after {display: none;}
+
+#main.web .web_folio_wrap .profile.web_folio2 {position: relative;}
+#main.web .web_folio_wrap .profile.web_folio2 .nds_sw {background: url(../images/ndssw.png) no-repeat; width: 1254px; height: 440px;}
+#main.web .web_folio_wrap .profile.web_folio2 .nds_sw .btn_wrap {position: absolute; left: 0; bottom: 0;}
+#main.web .web_folio_wrap .profile.web_folio2 .nds_sw .btn_wrap li {display: inline-block; margin-right: 194px;}
+#main.web .web_folio_wrap .profile.web_folio2 .nds_sw .btn_wrap li:last-child {margin-right: 0;}
+#main.web .web_folio_wrap .profile.web_folio2 .nds_sw .btn_wrap li a {display: block; font-family: '210Gothic030'; font-weight: bold; font-size: 30px; color: #fff; background: #ff5f52; padding: 6px 23px 1px 22px;}
+
+#main.web.on .web_prev {border: none; outline: none; background-image: url(../images/web_prev2.png);}
+#main.web.on .web_next {border: none; outline: none; background-image: url(../images/web_next2.png);}
+.swiper-button-disabled {display: none;}
+
+/***********편집 디자인***********/
+#main.editorial {background: #7fbfde;}
+#main.editorial .editorial_folio_wrap:after {border: 10px solid #7fbfde;}
+#main.editorial .editorial_folio_wrap .profile:after {display: none;}
+#main.editorial .editorial_folio_wrap .profile.editorial_folio .editorial {background: url(../images/editorial.png) no-repeat; width: 1255px; height: 494px;}
+
+/***********아이덴티티 디자인***********/
+#main.identity {background: #9894c8;}
+#main.identity .identity_folio_wrap:after {border: 10px solid #9894c8;}
+#main.identity .identity_folio_wrap .profile:after {display: none;}
+#main.identity .identity_folio_wrap .profile.identity_folio .identity {background: url(../images/identity.png) no-repeat; width: 1256px; height: 566px;}
+
+#main.identity .identity_folio_wrap .profile.identity_folio .identity .btn_wrap {position: absolute; left: 0; bottom: 0;}
+#main.identity .identity_folio_wrap .profile.identity_folio .identity .btn_wrap li {display: inline-block; margin-right: 137px;}
+#main.identity .identity_folio_wrap .profile.identity_folio .identity .btn_wrap li:last-child {margin-right: 0;}
+#main.identity .identity_folio_wrap .profile.identity_folio .identity .btn_wrap li a {display: block; font-family: '210Gothic030'; font-weight: bold; font-size: 30px; color: #fff; background: #9894c8; padding: 6px 23px 1px 22px;}
+
+/***********이벤트페이지 디자인***********/
+#main.eventp {background: #ffd743;}
+#main.eventp .eventp_folio_wrap:after {border: 10px solid #ffd743;}
+#main.eventp .eventp_folio_wrap .profile:after {display: none;}
+#main.eventp .eventp_folio_wrap .profile.eventp_folio .eventp {background: url(../images/eventpage.png) no-repeat; width: 1256px; height: 566px;}
+
+#main.eventp .eventp_folio_wrap .profile.eventp_folio .eventp .btn_wrap {position: absolute; left: 0; bottom: 0;}
+#main.eventp .eventp_folio_wrap .profile.eventp_folio .eventp .btn_wrap li {display: inline-block; margin-right: 137px;}
+#main.eventp .eventp_folio_wrap .profile.eventp_folio .eventp .btn_wrap li:last-child {margin-right: 0;}
+#main.eventp .eventp_folio_wrap .profile.eventp_folio .eventp .btn_wrap li a {display: block; font-family: '210Gothic030'; font-weight: bold; font-size: 30px; color: #fff; background: #ffd743; padding: 6px 23px 1px 22px;}
+
+/***********졸업전시***********/
+#main.exhibition {background: #f47920;}
+#main.exhibition .exhibition_folio_wrap:after {border: 10px solid #f47920;}
+#main.exhibition .exhibition_folio_wrap .profile:after {display: none;}
+#main.exhibition .exhibition_folio_wrap .profile.exhibition_folio .exhibition {background: url(../images/exhibition1.png) no-repeat; width: 1256px; height: 566px;}
+#main.exhibition .exhibition_folio_wrap .profile.exhibition_folio2 .exhibition2 {background: url(../images/exhibition2.png) no-repeat; width: 1256px; height: 566px;}
+
+#main.exhibition .exhibition_folio_wrap .exhibition_prev {border: none; outline: none; background-image: url(../images/exhibition_prev.png);}
+#main.exhibition .exhibition_folio_wrap .exhibition_next {border: none; outline: none; background-image: url(../images/exhibition_next.png);}
+
+/***********일러스트레이션***********/
+#main.illustration .illustration_folio_wrap .profile:after {display: none;}
+#main.illustration .illustration_folio_wrap .profile.illustration_folio .illustration {background: url(../images/illustration1.png) no-repeat; width: 1256px; height: 566px;}
+#main.illustration .illustration_folio_wrap .profile.illustration_folio2 .illustration2 {background: url(../images/illustration2.png) no-repeat; width: 1256px; height: 566px;}

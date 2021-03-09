@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1000">
+<title>starbucks_menu</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  	$('.slider').slick({
+	  dots:true,
+	  autoplay:true,
+	  autoplaySpeed:1000,
+	  fade:true,
+	  arrows:false
+	});
+});	
+
+$(document).ready(function(){
+	$('.gnb').mouseenter(function(){		
+		$('.gnb_wrap .sub').stop().slideDown(200);
+	});
+	$('.gnb_wrap').mouseleave(function(){		
+		$('.gnb_wrap .sub').stop().slideUp(200);
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header_wrap">
+	<div class="header">
+		<div class="login_top">
+        	<a class="top" href="#">Login</a>
+            <a class="top" href="#">Join</a>
+           <a class="top" href="#">English</a>
+            <a class="top" href="#">Q&amp;A</a>
+            <a href="#"><img src="img/facebook_icon.png" alt="페이스북"></a>
+			<a href="#"><img src="img/youtube_icon.png" alt="페이스북"></a>
+            <a href="#"><img src="img/instagram_icon.png" alt="페이스북"></a>
+		</div>
+        <h1><a href="index.html"><img src="img/starbucks_logo.png" alt="스타벅스"></a></h1> 
+    </div>
+    <div class="gnb_wrap">
+        <ul class="gnb">
+            <li><a href="blond_lost.html">COFFEE</a></li>
+            <li><a class="on" href="drink.html">MENU</a></li>
+            <li><a href="social_starbucks.html">COFFEE HOUSE</a></li>
+            <li><a href="card.html">CARD</a></li>
+            <li><a href="whatsnews.html">WHAT'S NEWS</a></li>
+         </ul>
+         <div class="sub">
+              <div class="sub_box">
+                  <ul class="box1">
+                      <li><a href="#">블론드 로스트</a></li>
+                      <li><a href="#">미디엄 로스트</a></li>
+                      <li><a href="#">다크 로스트</a></li>
+                      <li><a href="#">시즌 한정커피</a></li>
+                      <li><a href="#">커피 전체보기</a></li>
+                      <li><a href="#">커피 이야기</a></li>
+                  </ul>
+                  <ul class="box2">
+                      <li><a href="#">음료</a></li>
+                      <li><a href="#">푸드</a></li>
+                      <li><a href="#">상품</a></li>
+                      <li><a href="#">스타벅스 케익예약</a></li>
+                  </ul>
+                  <ul class="box3">
+                      <li><a href="#">소셜 스타벅스</a></li>
+                      <li><a href="#">스타벅스 애플리케이션</a></li>
+                      <li><a href="#">스타벅스 즐기기</a></li>
+                      <li><a href="#">제휴카드</a></li>
+                  </ul>
+                  <ul class="box4">
+                      <li><a href="#">스타벅스 카드</a></li>
+                      <li><a href="#">스타벅스 카드 e-Gift</a></li>
+                      <li><a href="#">스타벅스 카드 관리</a></li>
+                      <li><a href="#">마이 스타벅스 리워드</a></li>
+                  </ul>
+                  <ul class="box5">
+                      <li><a href="#">프로모션</a></li>
+                      <li><a href="#">이벤트</a></li>
+                      <li><a href="#">e-프로퀀시</a></li>
+                      <li><a href="#">공지사항</a></li>
+                  </ul>
+              </div>
+         </div>                 
+     </div> 
+</div>
+<div class="main menu">
+	<div class="visual">
+        <h2>MENU<strong>음료 & 푸드</strong></h2>
+        <p class="line"></p>
+        <a href="#"><img src="img/sub2_menu_img_03.jpg" alt=""></a>
+        	<div class="menu_box">
+            	<div class="menu">
+                    <div class="menu1">
+                        <h3>Drink</h3>
+                        <p>특별한 스타벅스 경험을<br>고객 한 분, 한 분에게 한잔의 음료를<br>통해 전달합니다.</p>
+                        <a href="#">음료보기</a>
+                    </div>
+                    <div class="menu1">
+                        <h3>Food</h3>
+                        <p>신선함과 영양이 가득한<br>스타벅스 푸드, 완벽한 하루를<br>만들어 드립니다.</p>
+                        <a href="#">푸드보기</a>
+                    </div>
+                    <div class="menu1">
+                        <h3>Merchandise</h3>
+                        <p>독특하고 다양한<br>스타벅스만의 상품은 당신에게<br>특별한 선물이 될 것입니다.</p>
+                        <a href="#">상품보기</a>
+                    </div>
+                    <div class="menu1">
+                        <h3>Special cake order</h3>
+                        <p>기념하고 싶은 날,<br>스타벅스 케익이 더 특별한<br>하루를 만들어 드립니다.</p>
+                        <a href="#">케익보기</a>
+                    </div>
+                  </div>
+            </div>
+	</div>
+    <div class="new_wrap">
+    	<div class="new1">
+        	<h4>NEW Drink</h4>
+              <div class="food1">
+                  <a href="#">
+                      <img src="img/sub2_drink01_03.png" alt="">
+                      <p>아이스 쉐이큰 레몬그라스 젠 티 레모네이드 피지오</p>
+                  </a>
+              </div>
+              <div class="food1 pizzo">
+                  <a href="#">
+                      <img src="img/sub2_drink02_03.png" alt="">
+                    <p>아이스 쉐이큰 패션 후르츠 티 피지오</p>
+                  </a>
+               </div>
+              <div class="food1 pizzo">
+                  <a href="#">
+                      <img src="img/sub2_drink03_03.png" alt="">
+                      <p>요거트 주스 & 망고 젤리 피지오</p>
+                  </a>
+               </div>   
+              <div class="food1 banana">
+                  <a href="#">
+                      <img src="img/sub2_drink04_03.png" alt="">
+                     <p>망고/라즈베리<br>바나나 블렌디드</p>
+                  </a>
+                </div>
+        </div>
+    	<div class="new1 new2">
+        	<h4>NEW Food</h4>
+              <div class="food1 apple">
+                  <a href="#">
+                      <img src="img/sub2_food01_03.jpg" alt="">
+                      <p>아몬드 초콜릿 데니쉬</p>
+                  </a>
+              </div>
+              <div class="food1 apple apple2">
+                  <a href="#">
+                      <img src="img/sub2_food02_03.jpg" alt="">
+                      <p>애플 시나몬 데니쉬 롤</p>
+                  </a>
+               </div>
+              <div class="food1">
+                  <a href="#">
+                      <img src="img/sub2_food03_03.jpg" alt="">
+                      <p>단.백.질. (蛋.白.質.)</p>
+                  </a>
+               </div>   
+              <div class="food1 dark">
+                  <a href="#">
+                      <img src="img/sub2_food04_03.jpg" alt="">
+                      <p>로스티드 피칸 앤<br>다크 초콜릿</p>
+                  </a>
+                </div>
+        </div>
+        <div class="new1 new3">
+        	<h4>NEW Merchandise</h4>
+              <div class="food1">
+                  <a  href="#">
+                      <img src="img/sub2_merchan01_07.jpg" alt="">
+                      <p>스플래싱 고래 콜드컵 591ml</p>
+                  </a>
+              </div>
+              <div class="food1 summer">
+                  <a href="#">
+                      <img src="img/sub2_merchan02_03.jpg" alt="">
+                      <p>2015 서머 고래 참 텀블러 473ml</p>
+                  </a>
+               </div>
+              <div class="food1 demi">
+                  <a href="#">
+                      <img src="img/sub2_merchan03_03.jpg" alt="">
+                      <p>사이렌 고래 데미 머그 89ml</p>
+                  </a>
+               </div>   
+              <div class="food1 pink">
+                  <a href="#">
+                      <img src="img/sub2_merchan04_03.jpg" alt="">
+                      <p>스타벅스 프로즌 드링크 메이커(핑크/라임)</p>
+                  </a>
+                </div>
+        </div>
+    </div>        
+</div>
+<div class="footer_wrap">
+	<div class="footer">
+    	<ul>
+        	<li><a href="#">회사소개</a></li>
+            <li><a href="#">매장</a></li>
+            <li><a href="#">입점 및 협력사 포털</a></li>
+            <li><a href="#">고객</a></li>
+            <li><a class="privacy"href="#">개인정보취급방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">사이트맵</a></li>
+        </ul>
+    	<p>사업자등록번호 201-81-21515 (주)스타벅스커피 코리아 대표이사 이석구     TEL : 02) 3015-1100    FAX : 02) 3015-1106    개인정보 책임자 : 강기원<br><strong>ⓒ 2011 Starbucks Coffee Company. All Rights Reserved.</strong></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone = no">
+<link rel="apple-touch-icon" href="/m/img/mobileweb.png">
+<title>롯데시네마 모바일 : 시네마몰</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/font.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	//시네마몰 선택 스위치
+	var sw1=0;
+	$('.choose .choose_btn').click(function(e){
+		e.preventDefault();
+		
+		if(sw1==0){
+			$('.choose>ul').slideDown();
+			$('.choose .choose_btn>span').addClass('on');
+			sw1=1;
+		} else {
+			$('.choose>ul').slideUp();
+			$('.choose .choose_btn>span').removeClass('on');
+			sw1=0;
+		}
+	});
+	//시네마몰 선택시 제목변경
+	$('.choose .choose_btn>h2:gt(0)').hide();
+	var num;
+	
+	$('.choose>ul>li').click(function(e){
+		e.preventDefault();
+		
+		num=$(this).index();
+
+		sw1=0;
+		$('.choose .choose_btn>h2').hide();
+		$('.choose .choose_btn>h2').eq(num).show();
+		$('.choose>ul>li').find('a').not(this).removeClass('on');
+		$(this).find('a').addClass('on');
+		$('.choose>ul').slideUp();
+		$('.choose .choose_btn>span').removeClass('on');
+	});
+});
+</script>
+</head>
+<body>
+<div class="lnb">
+	<div class="lnb_top"><a href="index.html"></a></div>
+    <div class="lnb1">
+    	<a href="reserve.html"><img src="img/menu_cmovie.png" alt="">영화 먼저선택</a>
+        <a href="reserve.html?cinema=1"><img src="img/menu_ctheater.png" alt="">영화관 먼저선택</a>
+    </div>
+	<ul class="lnb2">
+    	<li>
+        	<a class="arrow" href="#"><img src="img/menu_movie.png" alt="">영화</a>
+        	<ul class="sub">
+            	<li><a class="on" href="#"><span class="on"></span>박스오피스</a></li>
+                <li><a href="#"><span></span>현재상영작</a></li>
+                <li><a href="#"><span></span>상영예정작</a></li>
+            </ul>
+        </li>
+    	<li>
+        	<a href="theater.html"><img src="img/menu_theater.png" alt="">영화관</a>
+        </li>
+        <li>
+        	<a href="cinemamall.html"><img src="img/menu_mall.png" alt="">시네마몰</a>
+        </li>
+        <li>
+        	<a href="event.html"><img src="img/menu_event.png" alt="">이벤트</a>
+        </li>
+        <li>
+        	<a href="#"><img src="img/menu_mycinema.png" alt="">마이시네마</a>
+        </li>
+        <li>
+        	<a href="#"><img src="img/menu_card.png" alt="">할인카드안내</a>
+        </li>
+    </ul>
+    <div class="lnb_bottom">
+		<a href="#"><img src="img/menu_login.png" alt="">로그인</a>
+        <a href="#"><em></em><img class="last" src="img/menu_costomer.png" alt="">고객센터</a>
+    </div>
+</div>    
+<div class="quick">
+	<h2>빠른예매</h2>
+    <a class="close_btn" href="#"></a>
+    <div class="quick_menu">
+        <a class="quick_m" href="reserve.html"><p>영화 먼저 선택</p></a>
+        <a class="quick_c" href="reserve.html?cinema=1"><p>영화관 먼저 선택</p></a>
+    </div>    
+</div>    
+<div class="wrap_hide">
+	<div class="cover"></div>
+    <div class="wrap">
+        <div class="header cinemamall">
+            <a class="m_btn" href="#">모바일메뉴</a>
+            <h1>시네마몰</h1>
+            <a class="quick_btn" href="#">빠른예매</a>
+        </div>
+        <div class="choose">
+        	<a class="choose_btn" href="#">
+                <h2>무비패키지</h2>
+                <h2>시네티콘</h2>
+                <h2>매점콤보</h2>
+                <span></span>
+            </a>
+            <ul>
+                <li><a class="on" href="#">무비패키지</a></li>
+                <li><a href="#">시네티콘</a></li>
+                <li><a href="#">매점콤보</a></li>
+            </ul>
+        </div>
+        <div class="p1">
+        	<img src="img/mall01.jpg" alt="">
+            <div class="info">
+                <h2 class="tit">super combo family PACK</h2>
+                <h2 class="txt">일반관람권 4매 + 수퍼콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">46,000</p>
+            	<a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/mall_btn.png" alt="">구매하기</a>
+            </div>
+        </div>
+        <div class="p1 p2">
+        	<img src="img/mall02.jpg" alt="">
+            <div class="info">
+                <h2 class="tit">double combo family PACK</h2>
+                <h2 class="txt">일반관람권 4매 + 더블콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">41,000</p>
+            	<a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/mall_btn.png" alt="">구매하기</a>
+            </div>
+        </div>
+        <div class="p1">
+        	<img src="img/mall03.jpg" alt="">
+            <div class="info">
+                <h2 class="tit">3d super combo family PACK</h2>
+                <h2 class="txt">3D관람권 4매 + 수퍼콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">60,000</p>
+            	<a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/mall_btn.png" alt="">구매하기</a>
+            </div>
+        </div>
+        <div class="p1 p3">
+        	<div class="p3_wrap"><p>SOLD OUT</p></div>
+            <img src="img/mall04.jpg" alt="">
+            <div class="info">
+                <h2 class="tit"><strong>007 SPECTRE</strong> combo PACK</h2>
+                <h2 class="txt">스페셜 무비 시네티콘 콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">56,000</p>
+                <a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/soldout.png" alt="">판매종료</a>
+            </div>
+        </div>
+        <div class="p1">
+        	<img src="img/mall05.jpg" alt="">
+            <div class="info">
+                <h2 class="tit">3d sweet combo PACK</h2>
+                <h2 class="txt">3D관람권 2매 + 스위트콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">31,000</p>
+            	<a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/mall_btn.png" alt="">구매하기</a>
+            </div>
+        </div>
+        <div class="p1 p2">
+        	<img src="img/mall06.jpg" alt="">
+            <div class="info">
+                <h2 class="tit"><strong>deadpool</strong> combo PACK</h2>
+                <h2 class="txt">스페셜 무비 시네티콘 콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">56,000</p>
+            	<a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/mall_btn.png" alt="">구매하기</a>
+            </div>
+        </div>
+        <div class="p1 p3 last">
+        	<div class="p3_wrap"><p>SOLD OUT</p></div>
+        	<img src="img/mall07.jpg" alt="">
+            <div class="info">
+                <h2 class="tit"><strong>eternal sunshine</strong> combo</h2>
+                <h2 class="txt">스페셜 무비 시네티콘 콤보 교환권</h2>
+                <p class="price1">￦</p><p class="price2">56,000</p>
+            	<a class="mall_info" href="#"><img src="img/mall_info.png" alt="">상품이용안내</a>
+                <a class="mall_btn" href="#"><img src="img/soldout.png" alt="">판매종료</a>
+            </div>
+        </div>
+        <div class="footer_wrap">
+                <div class="m_banner"><a href="#"><img src="img/deadpool_banner.jpg" alt=""></a></div>
+                <div class="footer">
+                    <a class="pc_btn" href="http://kkminseo.dothome.co.kr/cinema"><strong>PC</strong>버전보기</a>
+                    <a class="app_down" href="#">lotte cinema app down</a>
+                    <div class="info">
+                        <a class="info1" href="#">기업정보</a>
+                        <em></em>
+                        <a class="info1 info2" href="#">개인정보취급방침</a>
+                        <em></em>
+                        <a class="info1" href="#">이메일무단수집거부</a>
+                        <em></em>
+                        <a class="info1" href="#">회원안내</a> 
+                    </div>
+                    <div class="contact">
+                        <img class="map" src="img/footer_map.png" alt="">
+                        <p>서울특별시 송파구 올림픽로 269<br>(신천동, 롯데캐슬) 4층 롯데시네마</p>
+                        <img class="phone" src="img/footer_phone.png" alt="">
+                        <p>고객센터<br>1544-8855</p>
+                    </div>
+                    <div class="info3">
+                        <p>대표이사 이원준<br>사업자등록번호 215-85-13462<br>통신판매업신고번호 제1557호<br>개인정보관리책임자 상무 이관로</p>
+                        <a class="sns" href="#"><img src="img/footer_insta.png" alt=""></a>
+                        <a class="sns" href="#"><img src="img/footer_fb.png" alt=""></a>
+                        <a class="sns" href="#"><img src="img/footer_tw.png" alt=""></a>
+                    </div>  
+                </div>
+            </div>
+    </div>
+</div>        
+</body>
+</html>

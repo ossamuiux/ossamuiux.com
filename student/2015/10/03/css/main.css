@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+body,input,select,button {font:12px '맑은고딕','malgun gothic','돋움',dotum,sasn-serif; background:url(../img/portfoilo_bg2.jpg) no-repeat center top; height:4650px; }
+
+#header_wrap {width:100%;}
+#header_wrap .header {width:1200px; margin:0 auto; height:40px; margin-top:10px;}
+#header_wrap .header h1 {float:left;}
+#header_wrap .header ul {float:right;}
+#header_wrap .header ul li {float:left;}
+#header_wrap .header ul li a{display:inline-block; margin-left:60px; margin-top:7px;}
+
+/*모바일 메뉴*/
+#header_wrap .m_gnb {position:fixed; left:0; top:90px; height:100%; width:140px; padding:0 10px; margin-left:30px;}
+#header_wrap .m_gnb li {margin-top:40px;}
+#header_wrap .m_gnb li a:hover {background:url(../img/menu_bar_03.png) no-repeat left bottom; padding:0 0 10px 0;}
+#header_wrap .m_gnb li a.on {background:url(../img/menu_bar_03.png) no-repeat left bottom;padding:0 0 10px 0;}
+
+#header_wrap .m_gnb .sns {margin-top:50px; width:90px;  height:120px; display:block;}
+#header_wrap .m_gnb .face {float:left;}
+#header_wrap .m_gnb .instar {float:left; margin-left:40px;} 
+#header_wrap .m_gnb .resu {background:url(../img/menu_resu_03.png) no-repeat; width:50px; height:38px; float:left;}
+
+
+
+.main {height:750px; margin-top:80px;}
+.main .slider {width:1120px; margin:0 auto;}
+.main .slider img {width:1120px;} 
+
+.main .slider .slick-prev {background:url(../img/arrow_left_03.png) no-repeat; width:18px; height:31px; text-indent:-9999px; position:absolute; left:0; top:50%; border:none; z-index:100; outline:none; cursor:pointer;  margin-left:-50px;}
+
+.main .slider .slick-next {background:url(../img/arrow_right_03.png) no-repeat; width:18px; height:31px; text-indent:-9999px; position:absolute; right:0; top:50%; border:none; z-index:100; outline:none; cursor:pointer; margin-right:-50px;}
+
+
+
+.main .slider .slick-dots {width:50px; margin-top:5px; }
+.main .slider .slick-dots li {float:left; width:16px; height:16px; margin:0 3px;}
+/*ie7에서는 인라인블럭엘리먼트에 text-indent를 사용할 경우 태와 안쪽글자가 같이 움직이므로 display:block를 적용하여 상자로 바꿔야됨*/
+.main .slider .slick-dots button {background:url(../img/dot_off_03.png) no-repeat; width:16px; height:16px; border: none; text-indent:-9999px; cursor:pointer; float:left; display:block; outline:none;}
+.main .slider .slick-dots button:hover {background:url(../img/dot_on_03.png) no-repeat;}
+/*slick-active클래스를 통해 활성화된 이미지의 순서에 맞는 페이지버튼의 위치를 바꿔준다*/
+.main .slider .slick-dots li.slick-active button{background:url(../img/dot_on_03.png) no-repeat;}
+.main .slider .slick-dots button:active {outline:none;}
+
+
+.section1 { width:100%; margin-top:1400px;}
+.section1 .box {width:1235px; height:253px; margin:0 auto;}
+.section1 .company {width:385px; height:253px; background:url(../img/company_starbucks_03.jpg) no-repeat; float:left; margin-right:40px; text-indent:-9999px;}
+.section1 .company:hover {background:url(../img/starbucks_img_03.jpg) no-repeat;}
+.section1 .brand {width:385px; height:253px; background:url(../img/brand_ost_03.jpg) no-repeat; float:left;margin-right:40px; text-indent:-9999px;}
+.section1 .brand:hover {background:url(../img/ost_img_03.jpg) no-repeat;}
+.section1 .shopping {width:385px; height:253px; background:url(../img/shoppingmall_dark_03.jpg) no-repeat; float:left; text-indent:-9999px;}
+.section1 .shopping:hover {background:url(../img/darkvictory_03.jpg) no-repeat;}
+
+
+.section2 {width:100%; margin-top:370px;}
+.section2 .box2 {width:1000px; margin:0 auto;  overflow:hidden;}
+.section2 .box2 .don {background:url(../img/vusual_donkin_07.jpg) no-repeat; width:320px; height:340px; display:block; text-indent:9999px; float:left;}
+.section2 .box2 .don:hover {background:url(../img/donkin.jpg) no-repeat;}
+.section2 .box2 .dior {background:url(../img/visual_dior_03.jpg) no-repeat; width:320px; height:340px; display:block; text-indent:9999px; float:left; margin-left:20px;}
+.section2 .box2 .dior:hover {background:url(../img/dior.jpg) no-repeat;}
+.section2 .box2 .home {background:url(../img/visual_homeplus_03.jpg) no-repeat; width:316px; height:340px;; display:block; text-indent:9999px; float:left; margin-left:20px;}
+.section2 .box2 .home:hover {background:url(../img/home.jpg) no-repeat;}
+.section2 .box2 .star {background:url(../img/visual_star_03.jpg) no-repeat; width:320px; height:340px;; display:block; text-indent:9999px; float:left; margin-top:20px;}
+.section2 .box2 .star:hover {background:url(../img/star.jpg) no-repeat;}
+.section2 .box2 .vin {background:url(../img/visual_vintage_03.jpg) no-repeat; width:320px; height:340px;; display:block; text-indent:9999px; float:left; margin-top:20px;margin-left:20px;}
+.section2 .box2 .vin:hover {background:url(../img/vintage.jpg) no-repeat;}
+.section2 .box2 .bar {background:url(../img/visual_bar_03.jpg) no-repeat; width:316px; height:340px;; display:block; text-indent:9999px; float:left; margin-top:20px; margin-left:20px;}
+.section2 .box2 .bar:hover {background:url(../img/bar.jpg) no-repeat;}
+
+
+
+/*colorbox 커스텀*/
+#cboxWrapper{ background:#fff;}
+#cboxPrevious {background:url(../img/back_arrow.png) no-repeat center top; width:32px; height:32px; position:absolute; left:0; bottom:-25px; outline:none;}
+#cboxPrevious:hover {background:url(../img/back_arrow.png) no-repeat center top; width:32px; height:32px;outline:none;}
+
+#cboxNext{background:url(../img/next_arrow.png) no-repeat center top; width:32px; height:32px; position:absolute; left:0; bottom:-25px;margin-left:40px; outline:none;}
+#cboxNext:hover {background:url(../img/next_arrow.png) no-repeat center top; width:32px; height:32px; position:absolute; left:0; bottom:-25px; margin-left:40px; outline:none;}
+
+#cboxMiddleRight { background:#fff;}
+#cboxMiddleLeft { background:#fff;}
+#cboxTopCenter{ background:#fff; height:60px; }
+#cboxTopLeft{ background:#fff;}
+#cboxTopRight{ background:#fff;}
+#cboxBottomCenter{ background:#fff; height:40px;}
+#cboxBottomLeft{background:#fff;}
+#cboxBottomRight{ background:#fff;}
+#cboxClose {width:35px; height:35px; background:url(../img/close_icon_03.png) no-repeat center top; position:absolute; right:0; top:-45px; margin-left:275px; z-index:100; outline:none;}	
+#cboxClose:hover {background:url(../img/close_icon_03.png) no-repeat center top; outline:none;}	
+#cboxContent {background:#fff;}
+#cboxCurrent {text-indent:-9999px;}
+#cboxContent{overflow:visible;}
+
+
+#inline_content .btn_ori {position:absolute; left:50%; top:500px; margin-left:-150px;}
+#inline_content .btn_renew {position:absolute; left:50%; top:500px; margin-right:150px;}
+#inline_content .btn_mobile {position:absolute; left:50%; top:480px; margin-left:297px;}
+
+#ost_content .btn_ori {position:absolute; left:50%; top:500px; margin-left:-150px;}
+#ost_content .btn_renew {position:absolute; left:50%; top:500px; margin-right:150px;}
+#ost_content .btn_mobile {position:absolute; left:50%; top:480px; margin-left:297px;}
+
+#dark_content .btn_ori {position:absolute; left:50%; top:500px; margin-left:-150px;}
+#dark_content .btn_renew {position:absolute; left:50%; top:500px; margin-right:180px;}
+#dark_content .btn_mobile {position:absolute; left:50%; top:480px; margin-left:297px;}
+
+
+.section3 {width:100%; margin-top:180px;}
+.section3 .photo_wrap{width:1200px; margin:0 auto;}
+.section3 .box3 {width:785px; height:735px; margin-left:350px;}
+.section3 .box3 .photo1 {width:248px; height:232px; float:left; background:url(../img/photoimg01_03.jpg) no-repeat; float:left; margin-right:20px;}
+.section3 .box3 .photo1:hover {; background:url(../img/photo01_03.jpg) no-repeat;}
+.section3 .box3 .photo2 {width:248px; height:232px; float:left; background:url(../img/photoimg02_03.jpg) no-repeat;margin-right:20px;}
+.section3 .box3 .photo2:hover {; background:url(../img/photo02_03.jpg) no-repeat;}
+.section3 .box3 .photo3 {width:248px; height:232px; float:left; background:url(../img/photoimg03_03.jpg) no-repeat;}
+.section3 .box3 .photo3:hover {; background:url(../img/photo03_03.jpg) no-repeat;}
+.section3 .box3 .photo4 {width:248px; height:232px; float:left; background:url(../img/photoimg04_03.jpg) no-repeat;margin-right:20px;margin-top:20px;}
+.section3 .box3 .photo4:hover {; background:url(../img/photo04_03.jpg) no-repeat;}
+.section3 .box3 .photo5 {width:248px; height:232px; float:left; background:url(../img/photoimg05_03.jpg) no-repeat;margin-right:20px; margin-top:20px;}
+.section3 .box3 .photo5:hover {; background:url(../img/photo05_03.jpg) no-repeat;}
+.section3 .box3 .photo6 {width:248px; height:232px; float:left; background:url(../img/photoimg06_03.jpg) no-repeat;margin-top:20px;}
+.section3 .box3 .photo6:hover {; background:url(../img/photo06_03.jpg) no-repeat;}
+.section3 .box3 .photo7 {width:248px; height:232px; float:left; background:url(../img/photoimg07_03.jpg) no-repeat;margin-right:20px;margin-top:20px;}
+.section3 .box3 .photo7:hover {; background:url(../img/photo07_03.jpg) no-repeat;}
+.section3 .box3 .photo8 {width:248px; height:232px; float:left; background:url(../img/photoimg08_03.jpg) no-repeat;margin-right:20px;margin-top:20px;}
+.section3 .box3 .photo8:hover {; background:url(../img/photo08_03.jpg) no-repeat;}
+.section3 .box3 .photo9 {width:248px; height:232px; float:left; background:url(../img/photoimg09_03.jpg) no-repeat;margin-top:20px;}
+.section3 .box3 .photo9:hover {; background:url(../img/photo09_03.jpg) no-repeat;}

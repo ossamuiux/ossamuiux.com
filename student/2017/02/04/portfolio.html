@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1460">
+<title>다정다정한정식당:portfolio</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function() {
+    overAnimate();
+
+var posX, posY;
+function getDirection(ev,obj,state) {
+var	w = $(obj)[0].offsetWidth,
+		h = $(obj)[0].offsetHeight,
+		x = (ev.pageX - $(obj).offset().left - (w / 2) * (w > h ? (h / w) : 1)),
+		y = (ev.pageY - $(obj).offset().top - (h / 2) * (h > w ? (w / h) : 1)),
+		d = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180 ) / 22.5 ) + 15 )  % 16;
+		
+		switch(d) {
+			case 1 :
+				posX = -w;
+				posY = -h;
+				break;
+			case 2 :
+				posX = -(w/2);
+				posY = -h;
+				break;
+			case 3 :
+				posX = 0;
+				posY = -h;
+				break;
+			case 4 :
+				posX = w/2;
+				posY = -h;
+				break;
+			case 5 :
+				posX = w;
+				posY = -h;
+				break;
+			case 6 :
+				posX = w;
+				posY = -(h/2);
+				break;
+			case 7 :
+				posX = w;
+				posY = 0;
+				break;
+			case 8 :
+				posX = w;
+				posY = h/2;
+				break;
+			case 9 :
+				posX = w;
+				posY = h;
+				break;
+			case 10 :
+				posX = w/2;
+				posY = h;
+				break;
+			case 11 :
+				posX = 0;
+				posY = h;
+				break;
+			case 12 :
+				posX = -(w/2);
+				posY = h;
+				break;
+			case 13 :
+				posX = -w;
+				posY = h;
+				break;
+			case 14 :
+				posX = -w;
+				posY = h/2;
+				break;
+			case 15 :
+				posX = -w;
+				posY = 0;
+				break;
+			default :
+				posX = -w;
+				posY = -(h/2);
+				break ;
+		}
+};
+
+function overAnimate() {
+	$('.portfolio_inner li')
+	.mouseenter(function(ev){
+		getDirection(ev,$(this),'in');
+		$(this).find('.cover').css('background-position',''+posX+'px '+posY+'px').stop().animate({
+			backgroundPositionX:"0",
+			backgroundPositionY:"0"
+		}, {duration:300})
+	})
+	.mouseleave(function(ev){
+		getDirection(ev,$(this),'out');
+		$(this).find('.cover').stop().animate({
+			backgroundPositionX:posX,
+			backgroundPositionY:posY
+		}, {duration:300})
+	});
+}
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+	<div class="header_inner">
+    	<h1><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
+        <h2><a href="#"></a></h2>
+        <div class="modal_popup">
+            <button type="button" class="btn_close">모달팝업닫기</button>
+            <div class="menu">
+            	<ul class="menu_inner">
+                	<li><a href="index.html"><img src="images/menu1.png" alt=""><span></span></a></li>
+                    <li><a href="about.html"><img src="images/menu2.png" alt=""><span></span></a></li>
+                    <li><a href="portfolio.html"><img src="images/menu3.png" alt=""><span></span></a></li>
+                    <li><a href="epilogue.html"><img src="images/menu4.png" alt=""><span></span></a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+</div>
+<div id="main" class="portfolio">
+	<div class="main_visual sub_visual">
+    	<div class="sub_beach">
+        	<div class="portfolio_main_bg">
+        	<div class="cloud_wrap">
+                <div class="cloud1"><img src="images/cloud1.png" alt=""></div>
+                <div class="cloud2"><img src="images/cloud2.png" alt=""></div>
+                <div class="cloud3"><img src="images/cloud3.png" alt=""></div>
+            </div>
+       		<h1><img src="images/portfolio_tit.png" alt=""></h1>
+            <div class="section1">
+                <ul class="portfolio_inner">
+                    <li>
+                        <a href="subway.html">
+                            <div class="cover cover1"></div>
+                        	<img src="images/portfolio-img1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="cover cover2"></div>
+                        	<img src="images/portfolio-img2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="cover cover3"></div>
+                        	<img src="images/portfolio-img3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="cover cover4"></div>
+                        	<img src="images/portfolio-img4.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="cover cover5"></div>
+                        	<img src="images/portfolio-img5.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="cover cover6"></div>
+                        	<img src="images/portfolio-img6.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section2">
+            	<div class="starfish1"></div>
+                <div class="clam"></div>
+                <div class="ball"></div>
+                <div class="starfish2"></div>
+            </div>
+        </div>
+        </div>
+        <ul class="waves about_waves">
+        	<li class="layer">
+                <div class="wave wave-1"></div>
+			</li>
+            <li class="layer">
+                <div class="wave wave-2"></div>
+			</li>
+            <li class="layer">
+                <div class="wave wave-3"></div>
+			</li>
+    	</ul>
+	</div>
+</div>
+<div id="footer" class="sub">
+	<img src="images/footer.png" alt="">
+</div>
+</body>
+</html>
+
+

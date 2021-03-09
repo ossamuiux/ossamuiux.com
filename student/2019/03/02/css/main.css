@@ -1,0 +1,805 @@
+@charset "UTF-8";
+
+#main .main_slider img {
+    width: 100%;
+    margin-top: 68px;
+}
+
+#main .main_slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #27282b;
+    opacity: .7;
+}
+
+#main .main_slider .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #700500;
+}
+
+#main .login {
+    height: 76px;
+    width: 100%;
+    background: url(../images/login-bg.jpg) repeat;
+    position: relative;
+}
+
+#main .login .log_txt {
+    float: left;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+#main .login .log_txt img {
+    height: 51px;
+    width: 109px;
+    margin-top: -73px;
+    margin-left: 100px;
+}
+
+#main .login .log_txt h2 {
+    color: #e9cfbd;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#main .login .log_txt p {
+    color: #e9cfbd;
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: 6px;
+}
+
+#main .login .btn_login {
+    border: 1px solid #ddc574;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ddc574;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    line-height: 34px;
+    padding: 0 25px;
+}
+
+#main .brand_story {
+    background: url(../images/sec3_bg.jpg) repeat 50% 0;
+    background-size: cover;
+    padding: 0 15px;
+}
+
+#main .brand_story ul {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#main .brand_story ul>li {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#main .brand_story ul>li img {
+    width: 100%;
+}
+
+#main .brand_story ul>li a {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
+
+#main .rostery_cafe {
+    background: url(../images/sec4_bg_02.jpg) no-repeat 50% 0;
+    background-size: cover;
+    padding: 100px 45px;
+}
+
+#main .rostery_cafe .rostery_box {
+    padding: 35px 0;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+#main .rostery_cafe .rostery_box a{
+    display: inline-block;
+    padding: 10px 55px;
+    background: #94010b;
+    color: #fff;
+}
+
+#main .rostery_cafe .rostery_box h3 {
+    font-size: 16px;
+    color: #fff;
+}
+
+#main .rostery_cafe .rostery_box h3 span {
+    color: #73ead2;
+}
+
+#main .rostery_cafe .rostery_box h2 {
+    font-size: 38px;
+    font-weight: 500;
+    color: #73ead2;
+    padding-bottom: 50px;
+    margin-top: -10px;
+    position: relative;
+}
+
+#main .rostery_cafe .rostery_box h2:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    top: 56px;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    background: #94010b;
+}
+
+#main .rostery_cafe .rostery_box p {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 100;
+    padding-bottom: 25px;
+}
+
+#main .rostery_cafe .rostery_box p span{
+    color: #47d4f2;
+}
+
+#main .shop {
+    background: url(../images/sec5_bg.jpg) no-repeat 50% 0;
+    background-size: cover;
+    padding: 43px 15px;
+}
+
+#main .shop .shop_txt {
+    text-align: center;
+}
+
+#main .shop .shop_txt h3 {
+    font-size: 29px;
+    color: #fedd9e;
+    font-weight: 500;
+    line-height: 30px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+#main .shop .shop_txt h3:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    background: #94010b;
+}
+
+#main .shop .shop_txt p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 20px;
+    color: #fff;
+}
+
+#main .shop .btn_shop {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#main .shop .btn_shop li {
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+
+#main .shop .btn_shop li:first-child {
+    padding-right: 5px;
+}
+
+#main .shop .btn_shop li:last-child {
+    padding-left: 5px;
+}
+
+#main .shop .btn_shop li>a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    background: #1e1b20;
+    color: #fff;
+}
+
+#main .sns {
+    background: url(../images/sns-bg.jpg) repeat;
+    padding: 0 15px;
+    text-align: center;
+}
+
+#main .sns .txt_wrap {
+    position: relative;
+    padding-top: 30px;
+}
+
+#main .sns h2 {
+    font-size: 23px;
+    color: #fff;
+    background: #242425;
+    padding: 0 10px;
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+}
+
+#main .sns em {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 8;
+}
+
+#main .sns .sns_img {
+/*    border: 1px solid red;*/
+    border-bottom: 1px solid red;
+    padding: 30px 10px 30px 10px;
+    overflow: hidden;
+}
+
+#main .sns .sns_img li {
+    float: left;
+    width: 50%;
+}
+
+#main .sns .sns_img li:first-child {
+    padding-bottom: 10px;
+}
+
+#main .sns .sns_img li:nth-child(2) {
+    padding-bottom: 10px;
+}
+
+#main .sns .sns_img li:nth-child(even) {
+    padding-left: 5px;
+}
+
+#main .sns .sns_img li:nth-child(odd) {
+    padding-right: 5px; 
+}
+
+#main .sns .sns_img img {
+    width: 100%;
+}
+
+#main .sns .sns_btn {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#main .sns .sns_btn li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#main .sns .sns_btn img {
+    width: 45px;
+}
+
+
+
+/*컨테이너1 브랜드----------------------------------------------------*/
+#container .top_header {
+    height: 470px;
+    margin-top: 70px;
+    background: url(../images/con1_top_bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    text-align: center;
+}
+
+#container .top_header h2 {
+    font-size: 40px;
+    color: #fff;
+    padding-top: 90px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#container .top_header ul {
+    margin: 57px auto 0;
+    width: 288px;
+}
+
+#container .top_header li {
+    line-height: 55px;
+    border: 1px solid #fff;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-top: -1px;
+}
+
+#container .top_header li.on {
+    background-color: #9e0b0f;
+    border: 1px solid #9e0b0f;
+}
+
+#container .top_header li a {
+    font-size: 16px;
+    color: #fff;
+    display: block;
+}
+
+#container .section1 img{
+    width: 100%;
+}
+
+
+/*컨테이너2 메뉴----------------------------------------------------*/
+
+#container.coffe_menu {
+    background: url(../images/header_01.png) repeat;
+}
+
+#container.coffe_menu .top_header {
+    background: url(../images/sub2_topbg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+/*---내용 시작--------------------------------------*/
+
+#container.coffe_menu .sub2_title {
+    text-align: center;
+    margin-top: 57px;
+    padding-bottom: 20px;
+}
+
+#container.coffe_menu .sub2_title img {
+    margin-bottom: 30px;
+    width: 218px;
+}
+
+#container.coffe_menu .sub2_title h2 {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    margin-top: 26px;
+}
+
+#container.coffe_menu .sub2_title h2:before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    top: -56px;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    background: #94010b;
+}
+
+#container.coffe_menu .section2 {
+    padding: 0 10px 50px;
+    text-align: center;
+    background: url(../images/header_01.png) repeat;
+}
+
+#container.coffe_menu .section2 .menu_box {
+    overflow: hidden;
+}
+
+#container.coffe_menu .section2 .menu_box li {
+    float: left;
+    margin-top: 15px;
+    width: 50%;
+}
+
+#container.coffe_menu .section2 .menu_box li img {
+    width: 100%;
+}
+
+#container.coffe_menu .section2 .menu_box li:nth-child(odd){
+    padding-right: 5px;
+}
+#container.coffe_menu .section2 .menu_box li:nth-child(even) {
+    padding-left: 5px;
+}
+
+#container.coffe_menu .section2 .menu_box li a{
+    display: block;
+}
+
+#container.coffe_menu .section2 .menu_box li p {
+    color: #fff;
+    font-size: 15px;
+    height: 42px;
+    line-height: 36px;
+}
+
+
+
+/*서브2_상세내용 시작 */
+
+
+#container.coffe_menu .section3 {
+    padding: 0 15px 30px;
+    text-align: center;
+    background: url(../images/header_01.png) repeat;
+}
+
+#container.coffe_menu .section3 .coffe_product_view .h2_txt {
+    font-size: 23px;
+    color: #fff;
+    display: inline-block;
+    padding-top: 32px;
+}
+
+#container.coffe_menu .section3 .coffe_product_view .h2_txt span {
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 36px;
+}
+
+#container.coffe_menu .section3 .coffe_product_view .h2_txt img {
+    margin-top: 7px;
+    padding-left: 5px;
+}
+
+#container.coffe_menu .section3 .coffe_product_view .p_txt {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 30px 0;
+    position: relative;
+}
+
+#container.coffe_menu .section3 .coffe_product_view .p_txt:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 300px;
+    height: 1px;
+    background: #787878;
+}
+
+#container.coffe_menu .section3 .board_disclosure .case {
+    color: #fff;
+    font-size: 14px;
+    margin-left: -126px;
+    margin-top: 10px;
+    line-height: 50px;
+}
+
+#container.coffe_menu .section3 .board_disclosure table {
+    width: 296px;
+    color: #fff;
+    font-size: 14px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+
+#container.coffe_menu .section3 .board_disclosure table td {
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+#container.coffe_menu .section3 .board_disclosure .bottom_txt {
+    color: #727272;
+    font-size: 12px;
+    width: 296px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+#container.coffe_menu .section3 .board_disclosure .bottom_txt p {
+    padding-bottom: 13px;
+    text-indent: -7px;
+    padding-left: 7px;
+}
+
+
+
+/*로스터리카페--------------------------------------------------------*/
+
+
+#container.rostery_cafe .top_header {
+    height: 470px;
+    margin-top: 70px;
+    background: url(../images/sub4_rostery/bg1_02.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+
+#container.rostery_cafe .top_header .box_wrap {
+    width: 80%;
+    height: 70%;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+#container.rostery_cafe .top_header .box_wrap h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 44px;
+}
+
+#container.rostery_cafe .top_header .box_wrap img {
+    width: 250px;
+    margin-top: 20px;
+}
+
+#container.rostery_cafe .top_header .box_wrap h3 span{
+    color: #30bac2;
+}
+
+#container.rostery_cafe .top_header .box_wrap p {
+    color: #fff;
+    margin-top: 50px;
+    font-size: 15px;
+    position: relative;
+}
+
+#container.rostery_cafe .top_header .box_wrap p:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -26px;
+    transform: translateX(-50%);
+    width: 93px;
+    height: 2px;
+    background: #9e0b0f;
+}
+
+
+
+/*로스터리카페 섹션1----*/
+
+#container.rostery_cafe .sub4_section1 {
+    text-align: center;
+    color: #21364d;
+    padding: 0 20px;
+    position: relative;
+}
+
+#container.rostery_cafe .sub4_section1:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    height: 10px;
+    background: #259096;
+}
+
+#container.rostery_cafe .sub4_section1:after{
+    content: '';
+    position: absolute;
+    background: url(../images/sub4_rostery/bg2_1.png) no-repeat 50% 50%;
+    background-size: 100%;
+    left: 50%;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    transform: translateX(-50%);
+}
+
+#container.rostery_cafe .sub4_section1 h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 57px;
+}
+
+#container.rostery_cafe .sub4_section1 h2 span {
+    font-size: 28px;
+}
+
+
+#container.rostery_cafe .sub4_section1 h3 {
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+#container.rostery_cafe .sub4_section1 p {
+    font-size: 14px;
+    margin-top: 19px;
+}
+
+#container.rostery_cafe .sub4_section1 p:last-child {
+    padding-bottom: 70px;
+}
+
+
+/*로스터리 섹션2------------*/
+
+#container.rostery_cafe .sub4_section2 {
+    background: url(../images/sub4_rostery/bg3.jpg) repeat 50% 50%;
+    background-size: cover;
+    margin-top: -17px;
+}
+
+#container.rostery_cafe .sub4_section2 .list1 {
+    padding: 30px 28px;
+}
+
+#container.rostery_cafe .sub4_section2 .list1 img {
+    width: 100%;
+}
+
+#container.rostery_cafe .sub4_section2 .list1 h3 {
+    font-size: 18px;
+    color: #293441;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+#container.rostery_cafe .sub4_section2 .list1 p {
+    font-size: 14px;
+    color: #333745;
+    position: relative;
+}
+
+
+#container.rostery_cafe .sub4_section2 .list1 p:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -7px;
+    background: #259096;
+    width: 200px;
+    height: 2px;
+}
+
+#container.rostery_cafe .sub4_section2 .list1:last-child p {
+    padding-bottom: 58px;
+}
+
+#container.rostery_cafe .sub4_section2 .list1:first-child img{
+    padding-top: 40px;
+}
+
+
+
+/*섹션3-스페셜 메뉴---------------------------------------*/
+
+#container.rostery_cafe .sub4_section3 {
+    background: url(../images/sub4_rostery/bg4.jpg) repeat 50% 50%;
+    text-align: center;
+    padding: 0 25px;
+}
+
+#container.rostery_cafe .sub4_section3 h2 {
+    font-size: 28px;
+    line-height: 60px;
+    background: #6d3300;
+    color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    margin-top: 60px;
+}
+
+
+#container.rostery_cafe .sub4_section3 .section3_list1 {
+    padding: 0 30px;
+    margin-top: 50px;
+} 
+
+#container.rostery_cafe .sub4_section3 .section3_list1 img {
+    width: 100%;
+}
+
+#container.rostery_cafe .sub4_section3 .section3_list1 h3 {
+    font-size: 20px;
+    line-height: 40px;
+    background: #371b02;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+#container.rostery_cafe .sub4_section3 p  {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    word-break: keep-all;
+/*    단어별로 떨어지게함*/
+}
+
+#container.rostery_cafe .sub4_section3 p:last-child  {
+    padding-bottom: 50px;
+}
+
+
+/*섹션3-스페셜 메뉴---------------------------------------*/
+
+#container.rostery_cafe .sub4_section4 {
+    background: url(../images/sub4_rostery/bg5.jpg) repeat 50% 50%;
+    text-align: center;
+    padding: 0 30px;
+}
+
+#container.rostery_cafe .sub4_section4 h2 {
+    font-size: 35px;
+    color: #fff;
+    padding-top: 70px;
+}
+
+#container.rostery_cafe .sub4_section4 h3 {
+    font-size: 17px;
+    color: #cfcfcf;
+    padding: 15px 0 25px;
+    word-break: keep-all;
+}
+
+#container.rostery_cafe .sub4_section4 .section4_list {
+    padding: 30px 20px;
+}
+
+#container.rostery_cafe .sub4_section4 .section4_list p {
+    font-size: 15px;
+    font-weight: 200;
+    color: #cfcfcf;
+    padding: 15px 0;
+}
+
+#container.rostery_cafe .sub4_section4 .section4_list img {
+    width: 100%;
+}
+
+#container.rostery_cafe .sub4_section4 .section4_list:last-child p {
+    padding-bottom: 40px;
+}
+
+
+/*라스트다 이놈새끼들아----------------------------*/
+
+#container.rostery_cafe .sub4_section5 {
+    background: url(../images/sub4_rostery/bg6.png) repeat;
+    padding: 70px 15px;
+}
+#container.rostery_cafe .sub4_section5 img {
+    width: 100%;
+    margin-left: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

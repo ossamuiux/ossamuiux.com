@@ -1,0 +1,2977 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body,button,input,textarea,select,table {font-family:'Noto Sans KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif; font-size:12px;}
+body {min-width:1200px;}
+body.on {overflow:hidden;}
+
+#header {position:relative; overflow:hidden;}
+/*로고/버튼*/
+#header h1 {position:absolute; left:20px; top:20px; position:fixed; z-index:1000;}
+
+/*햄버거 메뉴 처리*/
+#header .btn_m {
+	width:60px;
+	height:50px;
+	float:right; 
+	background:none;
+	border:5px solid #000;
+	outline:none;
+	padding:1px 6px;
+	}
+
+#header .btn_m span {
+	display:block; 
+	height:6px; 
+	background:#000; 
+	margin:5px 0;
+	border-radius:8px;
+	transition:all 0.5s;
+	}
+	
+/*span 회전 중심축 변경*/
+#header .btn_m span:first-child {transform-origin:left center;}
+#header .btn_m.on span:first-child {
+	transform:rotateZ(45deg) translate(2px,-7px);
+	margin-left:-3px;
+	}
+#header .btn_m.on span:nth-child(2) {opacity:0;}
+#header .btn_m span:last-child {transform-origin:left center;}
+#header .btn_m.on span:last-child {
+	transform:rotateZ(-45deg) translate(1px,7px);
+	margin-left:-3px;
+	}
+
+
+/*메뉴 처리*/
+#header .gnb_wrap {float:right; position:fixed; right:30px; top:20px; z-index:1000;}
+#header .gnb_wrap .gnb {margin-top:46px; display:none;}
+#header .gnb_wrap .gnb li {
+	background:#FFF;
+	border:5px solid #000; 
+	display:block; text-align:center; border-bottom:none;}
+#header .gnb_wrap .gnb li:last-child {border-bottom:5px solid #000;}
+#header .gnb_wrap .gnb li a {font-size:20px; font-weight:800; color:#000; display:block; padding:8px 30px;}
+
+#header .gnb_wrap .gnb li:hover {background:#fce00f;}
+
+
+#main .btn_page {position:fixed; right:30px; top:50%; margin:-70px 0 0 0; z-index:1000;}
+#main .btn_page li {margin-top:10px;}
+#main .btn_page li:first-child {margin-top:none;}
+
+
+#main .btn_page li a {
+	display:block; 
+	width:18px; height:18px; 
+	background:url(../images/btn_page1.png) no-repeat;
+	text-indent:-9999px;
+}
+
+#main .btn_page li a:hover {background:url(../images/btn_page2.png) no-repeat;}
+#main .btn_page li.on a {background:url(../images/btn_page2.png) no-repeat;}
+
+
+
+
+/*intro 배경처리*/
+#main .section1 {background:url(../images/intro_bg.png) no-repeat center top; overflow:hidden;}
+#main .main_inner{width:1200px; height:980px; margin:0 auto; /*border:1px solid red;*/ position:relative;}
+
+/*일러스트요소 배치*/
+@keyframes chair1 {
+	50% {transform:translateX(-124px);}
+	100% {transform:translateX(-124px);}
+}
+#main .main_inner .chair {position:absolute; left:0px; top:665px; animation:chair1 4s 2s forwards;}
+@keyframes chair2 {
+	50% {transform:translateX(-124px);}
+	100% {transform:translateX(-124px);}
+}
+#main .main_inner .chair_hd {position:absolute; left:180px; top:460px; z-index:1; animation:chair2 4s 2s forwards;}
+#main .main_inner .desk {position:absolute; left:-360px; top:104px;}
+#main .main_inner .mac {position:absolute; left:-360px; top:93px;}
+
+
+@keyframes mac2 {
+	2% {opacity:1;}
+	4% {opacity:0;}
+	6% {opacity:1;}
+	100% {opacity:1;}
+}
+#main .main_inner .mac_2 {position:absolute; left:-359px; top:93px; opacity:0; animation:mac2 3.5s infinite;}
+/*-------------------------*/
+@keyframes bear {
+	75% {top:120px;}
+	87% {top:110px;}
+	100% {top:120px;}
+}
+#main .main_inner .bear {position:absolute; left:160px; top:-110px; animation:bear 0.6s ease-in; animation-fill-mode:forwards;}
+/*-------------------------*/
+@keyframes pan {
+	40% {transform:translateY(-40px) rotate(-45deg);}
+	100% {transform:translateY(0) rotate(0);}
+}
+#main .main_inner .pan {position:absolute; left:251px; top:298px; animation:pan 0.8s 0.6s forwards;}
+/*-------------------------*/
+@keyframes redPan {
+	40% {transform:translateY(-80px) rotate(120deg);}
+	100% {transform:translateZ(0) rotate();}
+}
+#main .main_inner .red_pan {position:absolute; left:304px; top:368px; animation:redPan 0.8s 0.6s forwards;}
+/*-------------------------*/
+@keyframes bluePan {
+	40% {transform:translateY(-90px) rotate(-180deg);}
+	100% {transform:translateZ(0) rotate(0);}
+}
+#main .main_inner .blue_pan {position:absolute; left:276px; top:383px; animation:bluePan 0.8s 0.6s forwards;}
+/*-------------------------*/
+#main .main_inner .pic_1 {position:absolute; left:502px; top:84px;}
+
+@keyframes pic2 {
+	50% {transform:rotateZ(10deg);}
+}
+#main .main_inner .pic_2 {
+	position:absolute; left:595px; top:147px; 
+	transform:rotateZ(-10deg);
+	transform-origin:center 5px;
+	animation:pic2 1.5s ease-in-out infinite;
+}
+
+@keyframes pic3 {
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+#main .main_inner .pic_3 {position:absolute; left:511px; top:111px; animation:pic3 2s infinite;}
+
+@keyframes doggd {
+	50% {transform:scale(0.9);}
+}
+#main .main_inner .dog_gd {position:absolute; left:1100px; top:810px; animation:doggd 2s infinite;}
+
+#main .main_inner .carpet {position:absolute; left:1107px; top:749px; animation:dog 2s infinite;}
+/*-------------------------*/
+@keyframes dog {
+	50% {transform:translateY(20px);}
+	100% {transform:translateY(0);}
+}
+#main .main_inner .dog {position:absolute; left:1180px; top:689px; animation:dog 2s infinite;}
+/*-------------------------*/
+@keyframes canvas {
+	/*50% {transform:scale(0.1,0.1);}*/
+	100% {transform:scale(1,1);}
+}
+#main .main_inner .canvas {position:absolute; left:724px; top:209px; transform:scale(0.001,0.001); animation:canvas 1s 2.8s forwards; transform-origin:center bottom;}
+
+@keyframes puppan {
+	100% {opacity:1;}
+}
+#main .main_inner .pup_pan {position:absolute; left:964px; top:553px; opacity:0; animation:puppan 1s 3.8s forwards;}
+
+@keyframes joomport {
+	100% {opacity:1;}
+}
+#main .main_inner .joomport {position:absolute; left:790px; top:292px; opacity:0; animation:joomport 1s 3.8s forwards;}
+/*-------------------------*/
+@keyframes t_pan {
+	40% {transform:translateY(-80px) rotateZ(-90deg);}
+	45% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	50% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	55% {transform:translate(20px,-50px) rotateZ(-80deg);}
+	60% {transform:translate(30px,-60px) rotateZ(-95deg);}
+	65% {transform:translateY(-90px) rotateZ(-90deg);}
+	70% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	75% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	80% {transform:translate(-20px,-50px) rotateZ(-80deg);}
+	85% {transform:translateY(-80px) rotateZ(-90deg);}
+	100% {transform:translate(0) rotateZ(0);}
+}
+#main .main_inner .t_pan {position:absolute; left:20px; top:374px; animation:t_pan 4s 0.2s forwards;}
+/*-------------------------*/
+
+@keyframes translateTrash {
+	100% {transform:translateX(350px) rotate(720deg);}
+}
+#main .main_inner .trash {
+	position:absolute; left:1100px; top:633px; 
+	animation:translateTrash 4s 3.5s forwards;
+}
+	
+@keyframes scroll2 {
+	50% {opacity:0.4;}
+}	
+#main .main_inner .scroll2 {
+	position:absolute; left:597px; top:870px;
+	opacity:1;
+	animation:scroll2 0.8s infinite;
+}	
+
+/*스크롤 버튼 처리*/
+#main .main_inner .btn_down {
+	background:url(../images/scroll.png) no-repeat;
+	width:41px; height:87px;
+	border:none;
+	margin:855px 579px 0;
+	text-indent:-9999px;
+	outline:none;
+	}
+
+/*=====================================================================================*/
+
+
+/*프로필*/
+
+#main .section2 {height:980px; margin:0 auto; /*border:1px solid red;*/ background:url(../images/main_bg.png) no-repeat center top; overflow:hidden;}
+
+#main .section2 .section2_inner {width:1200px; height:980px; /*border:1px solid pink;*/ margin:0 auto; position:relative;}
+
+#main .section2 .profile {width:615px; height:319px; position:absolute; left:298px; top:100px; background:url(../images/section1_pr.png) no-repeat;}
+
+/*@keyframes profile2 {
+	50% {transform:scale(1.1,1.1);}
+}*/
+#main .section2 .profile2 {width:310px; height:229px; position:absolute; left:460px; top:600px; background:url(../images/section1_pr2.png) no-repeat; transform:scale(1,1);}
+
+/*#main .section2.on .profile2 {animation:profile2 1s 0.5s;}
+*/
+
+#main .section2 .joom1 {width:169px; height:168px; position:absolute; left:510px; top:200px; background:url(../images/joom_1.png) no-repeat;}
+
+
+@keyframes joom2 {
+	49.9% {opacity:0;}
+	50% {opacity:1;}
+	99.9% {opacity:1;}
+}
+#main .section2 .joom2 {width:169px; height:168px; position:absolute; left:510px; top:200px; background:url(../images/joom_2.png) no-repeat; animation:joom2 1s infinite; opacity:0;}
+
+
+@keyframes studio1 {
+	100% {transform:translateX(700px);}
+}
+#main .section2 .studio1 {width:551px; height:512px; position:absolute; left:-1030px; top:200px; background:url(../images/studio1.png) no-repeat; }
+
+#main .section2.on .studio1 {animation:studio1 1s forwards;}
+
+
+
+@keyframes studio2 {
+	100% {transform:translateX(840px);}
+}
+#main .section2 .studio2 {width:384px; height:514px; position:absolute; left:-1030px; top:250px; background:url(../images/studio2.png) no-repeat; }
+
+#main .section2.on .studio2 {animation:studio2 1.2s 0.1s forwards;}
+
+
+
+@keyframes instar {
+	100% {transform:translate(-700px,0);}
+}
+#main .section2 .instar {width:379px; height:487px; position:absolute; right:-900px; top:400px; background:url(../images/section1_instar.png) no-repeat; }
+
+#main .section2.on .instar {animation:instar 1.3s 0.4s forwards;}
+
+/*=====================================================================================*/
+
+
+/*w줌 SWOT*/
+
+#main .section3 {height:980px; margin:0 auto; /*border:1px solid red;*/}
+#main .section3 .section3_inner {width:1200px; height:980px; /*border:1px solid pink;*/ margin:0 auto; position:relative;}
+#main .section3 .section3_inner .section3_h2 {position:absolute; left:444px; top:110px;}
+
+
+@keyframes joom {
+	100% {transform:scale(1,1);}
+}
+#main .section3 .section3_joom {
+	width:442px; height:865px;
+	background:url(../images/section3_joom.png) no-repeat;
+	position:absolute; left:50%; bottom:-67px;
+	margin-left:-221px;
+	z-index:100;
+	transform:scale(0,0);
+	transform-origin:bottom;
+	
+}
+
+#main .section3.on .section3_joom  {animation:joom 0.8s forwards;}	
+	
+/*swot 처리*/
+@keyframes joomS {
+	100% {transform:scale(1,1);}
+}
+#main .section3 .joom_s {
+	width:544px; height:274px; 
+	background:url(../images/joom_s.png) no-repeat;
+	position:absolute; left:75px; top:196px;
+	transform:scale(0,0);
+	transform-origin:center right;
+	}
+
+#main .section3.on .joom_s {animation:joomS 0.8s 0.3s forwards;}
+
+@keyframes joomW {
+	100% {transform:scale(1,1);}
+}
+#main .section3 .joom_w {
+	width:544px; height:274px; 
+	background:url(../images/joom_w.png) no-repeat;
+	position:absolute; left:626px; top:196px;
+	transform:scale(0,0);
+	transform-origin:center left;
+	}
+	
+#main .section3.on .joom_w {animation:joomW 1s 0.6s forwards;}
+	
+@keyframes joomO {
+	100% {transform:scale(1,1);}
+}	
+#main .section3 .section3_inner .joom_o {
+	width:600px; height:300px; 
+	background:url(../images/joom_o.png) no-repeat;
+	position:absolute; left:-1px; top:545px;
+	transform:scale(0,0);
+	transform-origin:center right;
+	}
+
+#main .section3.on .joom_o {animation:joomO 1s 0.9s forwards;}
+
+@keyframes joomT {
+	100% {transform:scale(1,1);}
+}	
+#main .section3 .section3_inner .joom_t {
+	width:544px; height:274px; 
+	background:url(../images/joom_t.png) no-repeat;
+	position:absolute; left:685px; top:640px;
+	transform:scale(0,0);
+	transform-origin:center left;
+	}
+
+#main .section3.on .joom_t {animation:joomT 1s 1.2s forwards;}
+
+/*=====================================================================================*/
+
+
+/*프로그램스킬*/
+
+
+
+#main .section4 {overflow:hidden; margin:0 auto; /*border:1px solid red;*/}
+#main .section4 .section4_inner {width:1200px; height:980px; /*border:1px solid pink;*/ margin:0 auto; position:relative;}
+#main .section4 .section4_inner .section4_h2 {position:absolute; left:497px; top:110px;}
+
+@keyframes skill1  {
+	100% {transform:scale(1,1);}
+}
+#main .section4 .section4_inner .skill1 {
+	width:178px; height:260px; 
+	background:url(../images/skill1.png) no-repeat;
+	position:absolute; left:255px; top:218px;
+	transform:scale(0,0);
+}
+
+#main .section4.on .section4_inner .skill1 {animation:skill1 1s forwards;}
+
+@keyframes skill2 {
+	100% {transform:scale(1,1);}
+}
+#main .section4 .section4_inner .skill2 {
+	width:178px; height:260px; 
+	background:url(../images/skill2.png) no-repeat;
+	position:absolute; left:508px; top:218px;
+	transform:scale(0,0);
+}
+
+#main .section4.on .section4_inner .skill2 {animation:skill2 1s forwards;}
+
+@keyframes skill3  {
+	100% {transform:scale(1,1);}
+}
+#main .section4 .section4_inner .skill3 {
+	width:240px; height:260px; 
+	background:url(../images/skill3.png) no-repeat;
+	position:absolute; left:731px; top:218px;
+	transform:scale(0,0);
+}
+
+#main .section4.on .section4_inner .skill3 {animation:skill3 1s forwards;}
+
+
+@keyframes skill4  {
+	100% {transform:scale(1,1);}
+}
+#main .section4 .section4_inner .skill4 {
+	width:178px; height:260px; 
+	background:url(../images/skill4.png) no-repeat;
+	position:absolute; left:255px; top:522px;
+	transform:scale(0,0);
+}
+
+#main .section4.on .section4_inner .skill4 {animation:skill4 1s forwards;}
+
+@keyframes skill5   {
+	100% {transform:scale(1,1);}
+}
+#main .section4 .section4_inner .skill5 {
+	width:178px; height:260px; 
+	background:url(../images/skill5.png) no-repeat;
+	position:absolute; left:508px; top:522px;
+	transform:scale(0,0);
+}
+#main .section4.on .section4_inner .skill5 {animation:skill5 1s forwards;}
+
+@keyframes skill6   {
+	100% {transform:scale(1,1);}
+}
+#main .section4 .section4_inner .skill6 {
+	width:224px; height:260px; 
+	background:url(../images/skill6.png) no-repeat;
+	position:absolute; left:731px; top:522px;
+	transform:scale(0,0);
+}
+
+#main .section4.on .section4_inner .skill6 {animation:skill6 1s forwards;}
+
+
+@keyframes notebook  {
+	100% {transform:translateX(700px);}
+}
+#main .section4 .section4_inner .notebook {
+	width:294px; height:387px; 
+	background:url(../images/notebook.png) no-repeat;
+	position:absolute; left:-1055px; top:409px;
+}
+
+#main .section4.on .section4_inner .notebook {animation:notebook 1s 0.2s forwards;}
+
+@keyframes coffee  {
+	100% {transform:translateX(700px) rotate(0deg);}
+}
+#main .section4 .section4_inner .coffee  {
+	width:294px; height:387px; 
+	background:url(../images/coffee.png) no-repeat;
+	position:absolute; left:-1000px; top:300px;
+	transform:rotate(-150deg);
+}
+
+#main .section4.on .section4_inner .coffee {animation:coffee 1s 0.4s forwards;}
+
+@keyframes work  {
+	100% {transform:translateX(-700px);}
+}
+#main .section4 .section4_inner .work {
+	width:613px; height:553px; 
+	background:url(../images/work.png) no-repeat;
+	position:absolute; right:-1150px; top:368px;
+}
+
+#main .section4.on .section4_inner .work  {animation:work 1s 0.8s forwards;}
+
+
+/*=====================================================================================*/
+
+
+/*수상내역*/
+
+#main .section5 {overflow:hidden; margin:0 auto; /*border:1px solid red;*/}
+#main .section5 .section5_inner {width:1200px; height:980px; /*border:1px solid pink;*/ margin:0 auto; position:relative;}
+#main .section5 .section5_inner .section5_h2 {position:absolute; left:541px; top:111px;}
+
+#main .section5 .section5_inner .awards {
+	width:990px; height:416px; 
+	background:url(../images/awards.png) no-repeat;
+	position:absolute; left:137px; top:194px;
+}
+
+#main .section5 .section5_inner .license {
+	width:624px; height:105px; 
+	background:url(../images/license.png) no-repeat;
+	position:absolute; left:286px; top:743px;
+}
+
+
+@keyframes joom3  {
+	100% {transform:translateX(700px);}
+}
+#main .section5 .section5_inner .section5_joom {
+	width:428px; height:620px; 
+	background:url(../images/section5_joom.png) no-repeat;
+	position:absolute; left:-1030px; top:246px;
+}
+
+#main .section5.on .section5_inner .section5_joom {animation:joom3 1s forwards;}
+
+@keyframes hand  {
+	100% {transform:translateX(-700px) rotate(0deg);}
+}
+#main .section5 .section5_inner .section5_hand {
+	width:428px; height:620px; 
+	background:url(../images/section5_hand.png) no-repeat;
+	position:absolute; right:-1200px; top:546px;
+	transform:rotate(150deg);
+}
+
+#main .section5.on .section5_inner .section5_hand {animation:hand 1s 0.3s forwards;}
+
+
+
+
+/*================================================================================================================*/
+/*================================================================================================================*/
+/*================================================================================================================*/
+
+
+/*서브 - app*/
+
+/*탑버튼 처리*/
+#sub_main .btn_top {position:fixed; right:40px; bottom:120px; border:5px solid #fce00f; width:54px; height:54px; display:none;}
+#sub_main .btn_top a {display:block; height:54px; text-align:center; color:#fce00f; font-size:15px; font-weight:bold; background:#FFF; line-height:38px; z-index:100;}
+#sub_main .btn_top a span {width:14px; height:8px; margin:0 auto; display:block;}
+
+#sub_main .btn_top a:hover {background:#fce00f; color:#FFF;}
+#sub_main .btn_top a:hover span {background-position:0 0;}
+
+/*================================================================================================================*/
+
+
+/*공통★★★★*/
+#sub_main {width:100%; overflow:hidden; background:url(../images/sub_bg.png) repeat-y;}
+#sub_main .sub_inner {width:1200px; height:4000px; margin:0 auto; /*border:1px solid red;*/ margin:0 auto;}
+#sub_main .sub_inner2 {width:1200px; height:5330px; margin:0 auto; /*border:1px solid red;*/ margin:0 auto;}
+#sub_main .sub_inner3 {width:1200px; /*height:3910px;*/ height:5250px; margin:0 auto; /*border:1px solid red;*/ margin:0 auto;}
+#sub_main .sub_inner4 {width:1200px; height:4350px; margin:0 auto; /*border:1px solid red;*/ margin:0 auto;}
+#sub_main .sub_inner .app_h2 {margin:84px 452px 0;}
+#sub_main .sub_inner2 .graphic_h2 {margin:84px 452px 0;}
+#sub_main .sub_inner3 .web_h2 {margin:84px 452px 0;}
+#sub_main .sub_inner4 .work_h2 {margin:84px 452px 0;}
+
+
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+#sub_main .sub_inner .app_section1 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+/*app 1 이미지 호버처리*/
+#sub_main .sub_inner .app_section1 .app_draw1 .app_button {width:426px; height:890px; background:url(../images/app_draw1.png) no-repeat; position:absolute; left:100px; top:50px; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner .app_section1 .app_draw1 .app_button:hover {background:url(../images/app1.png) no-repeat;}
+
+
+		
+/* app 1프레임 처리*/
+#sub_main .sub_inner .app_section1 {position:relative;}
+#sub_main .sub_inner .app_section1 .label3 {
+	width:175px; height:175px; 
+	background:url(../images/labal2.png) no-repeat;
+	position:absolute; left:20px; top:-10px;
+	z-index:100;
+}
+#sub_main .sub_inner .app_section1 .app_frame1 {
+	background:url(../images/frame1.png) no-repeat; width:659px; height:351px;
+	position:absolute; left:453px; top:350px;
+	}
+
+/* app 1 h3처리*/
+#sub_main .sub_inner .app_section1 .app_frame1 .app1_h3 {
+	background:url(../images/app1_h3.png) no-repeat; width:408px; height:162px;
+	position:absolute; left:150px; top:60px;
+	}
+
+/* app 1 버튼처리*/
+#sub_main .sub_inner .app_section1 .app_frame1 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:150px; top:250px; outline:none;}
+
+/* app 1 팝업 처리*/
+#sub_main .sub_inner .app_section1 .app_frame1 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section1 .app_frame1 .modal .modal_bg1 {
+	height:7060px; /*background:url(../images/modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section1 .app_frame1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner .app_section1 .app_frame1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+	
+#sub_main .sub_inner .app_section1 .app_frame1 .modal .logo_btn {
+	width:150px; height:40px; background:url(../images/logo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}	
+
+#sub_main .sub_inner .app_section1 .app_frame1 .modal .logo_btn:hover {background:url(../images/logo_btn_h.png) no-repeat;}
+
+/*app 1 [앱] 팝업처리*/
+
+
+/*app 1 [앱] 모달*/
+#sub_main .sub_inner .app_section1 .app_draw1 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section1 .app_draw1 .modal .modal_bg1 {
+	height:7060px; /*background:url(../images/modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section1 .app_draw1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner .app_section1 .app_draw1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+	
+#sub_main .sub_inner .app_section1 .app_draw1 .modal .logo_btn {
+	width:150px; height:40px; background:url(../images/logo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}	
+
+#sub_main .sub_inner .app_section1 .app_draw1 .modal .logo_btn:hover {background:url(../images/logo_btn_h.png) no-repeat;}
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+#sub_main .sub_inner .app_section2 {/*border:1px solid red;*/ width:1200px; height:950px; position:relative;}
+/*app 2 이미지 호버처리*/
+#sub_main .sub_inner .app_section2 .app_draw2 .app_button {width:427px; height:888px; background:url(../images/app_draw2.png) no-repeat; position:absolute; right:100px; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner .app_section2 .app_draw2 .app_button:hover {width:427px; height:888px; background:url(../images/app2.png) no-repeat left;}
+
+
+/* app 2 프레임 처리*/
+#sub_main .sub_inner .app_section2 .app_frame2 {
+	background:url(../images/frame2.png) no-repeat; width:666px; height:376px;
+	position:absolute; right:453px; top:360px;
+}
+
+/* app 2 h3처리*/
+#sub_main .sub_inner .app_section2 .app_frame2 .app2_h3 {
+	background:url(../images/app2_h3.png) no-repeat; width:408px; height:162px;
+	position:absolute; left:90px; top:70px;
+}
+
+
+/* app 2 버튼처리*/
+#sub_main .sub_inner .app_section2 .app_frame2 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:90px; top:260px; outline:none;}
+
+/* app 2 팝업 처리*/
+#sub_main .sub_inner .app_section2 .app_frame2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section2 .app_frame2 .modal .modal_bg2 {
+	height:7035px; /*background:url(../images/modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section2 .app_frame2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner .app_section2 .app_frame2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+	
+#sub_main .sub_inner .app_section2 .app_frame2 .modal .ppt_btn {
+	width:148px; height:42px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}	
+
+#sub_main .sub_inner .app_section2 .app_frame2 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png) no-repeat;}	
+
+/*app 2 [앱] 팝업처리*/
+/*app 2 [앱] 모달*/
+#sub_main .sub_inner .app_section2 .app_draw2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section2 .app_draw2 .modal .modal_bg2 {
+	height:7035px; /*background:url(../images/modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section2 .app_draw2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner .app_section2 .app_draw2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+#sub_main .sub_inner .app_section2 .app_draw2 .modal .ppt_btn {
+	width:148px; height:42px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}	
+	
+#sub_main .sub_inner .app_section2 .app_draw2 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png) no-repeat;}		
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+#sub_main .sub_inner .app_section3 {/*border:1px solid red;*/ width:1200px; height:980px; position:relative;}
+/*app 3 이미지 호버처리*/
+#sub_main .sub_inner .app_section3 .app_draw3 .app_button {width:448px; height:912px; background:url(../images/app_draw3.png) no-repeat; position:absolute; left:100px; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner .app_section3 .app_draw3 .app_button:hover {background:url(../images/app3.png) no-repeat;}
+
+
+/* app 3 프레임 처리*/
+#sub_main .sub_inner .app_section3 .app_frame3 {
+	background:url(../images/frame3.png) no-repeat; width:659px; height:375px;
+	position:absolute; left:453px; top:380px;
+	}
+
+/* app 3 h3처리*/
+#sub_main .sub_inner .app_section3 .app_frame3 .app3_h3 {
+	background:url(../images/app3_h3.png) no-repeat; width:396px; height:184px;
+	position:absolute; left:160px; top:60px;
+	}
+
+/* app 3 버튼처리*/
+#sub_main .sub_inner .app_section3 .app_frame3 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:160px; top:270px; outline:none;}
+
+/* app 3 팝업 처리*/
+#sub_main .sub_inner .app_section3 .app_frame3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section3 .app_frame3 .modal .modal_bg3 {
+	height:7400px; /*background:url(../images/modal_bg3.png) no-repeat;*/
+	background-color:#eee;
+}
+	
+#sub_main .sub_inner .app_section3 .app_frame3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/* app 3 팝업 버튼 3개 처리*/
+#sub_main .sub_inner .app_section3 .app_frame3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+#sub_main .sub_inner .app_section3 .app_frame3 .modal .viedo_btn {
+	width:146px; height:40px; background:url(../images/viedo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+#sub_main .sub_inner .app_section3 .app_frame3 .modal .viedo_btn:hover {background:url(../images/viedo_btn_h.png) no-repeat;}
+
+/*app 3 [앱] 팝업처리*/
+#sub_main .sub_inner .app_section3 .app_draw3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+/*app 3 [앱] 모달*/
+#sub_main .sub_inner .app_section3 .app_draw3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section3 .app_draw3 .modal .modal_bg3 {
+	height:7400px; /*background:url(../images/modal_bg3.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section3 .app_draw3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/* app 3 [앱] 팝업 버튼 3개 처리*/
+#sub_main .sub_inner .app_section3 .app_draw3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	}
+
+#sub_main .sub_inner .app_section3 .app_draw3 .modal .viedo_btn {
+	width:146px; height:40px; background:url(../images/viedo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+#sub_main .sub_inner .app_section3 .app_draw3 .modal .viedo_btn:hover {background:url(../images/viedo_btn_h.png) no-repeat;}
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+
+/**/
+#sub_main .sub_inner .app_section4 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+/*app 2 이미지 호버처리*/
+#sub_main .sub_inner .app_section4 .app_draw4 .app_button {width:445px; height:919px; background:url(../images/app_draw4.png) no-repeat; position:absolute; right:100px; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner .app_section4 .app_draw4 .app_button:hover {width:445px; height:919px; background:url(../images/app4.png) no-repeat left;}
+
+
+/* app 4 프레임 처리*/
+#sub_main .sub_inner .app_section4 .app_frame4 {
+	background:url(../images/frame4.png) no-repeat; width:666px; height:412px;
+	position:absolute; right:453px; top:350px;
+}
+
+/* app 4 h3처리*/
+#sub_main .sub_inner .app_section4 .app_frame4 .app4_h3 {
+	background:url(../images/app4_h3.png) no-repeat; width:441px; height:181px;
+	position:absolute; left:70px; top:80px;
+}
+
+
+/* app 4 버튼처리*/
+#sub_main .sub_inner .app_section4 .app_frame4 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:70px; top:290px; outline:none;}
+
+/* app 4 팝업 처리*/
+#sub_main .sub_inner .app_section4 .app_frame4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section4 .app_frame4 .modal .modal_bg4 {
+	height:7450px; /*background:url(../images/modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section4 .app_frame4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/* app 4 팝업버튼 3개 처리*/
+
+#sub_main .sub_inner .app_section4 .app_frame4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+#sub_main .sub_inner .app_section4 .app_frame4 .modal .ppt_btn {
+	width:148px; height:42px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+	
+#sub_main .sub_inner .app_section4 .app_frame4 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png) no-repeat;}	
+
+#sub_main .sub_inner .app_section4 .app_frame4 .modal .viedo_btn {
+	width:146px; height:40px; background:url(../images/viedo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-315px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+#sub_main .sub_inner .app_section4 .app_frame4 .modal .viedo_btn:hover {background:url(../images/viedo_btn_h.png) no-repeat;}
+
+
+/*app 4 [앱] 팝업처리*/
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:1490px; top:20px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+/*app 4 [앱] 모달*/
+#sub_main .sub_inner .app_section4 .app_draw4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .modal_bg4 {
+	height:7450px;/* background:url(../images/modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner .app_section4 .app_draw4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/* app 4 [앱] 팝업버튼 3개 처리*/
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .ppt_btn {
+	width:148px; height:42px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png) no-repeat;}		
+
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .viedo_btn {
+	width:146px; height:40px; background:url(../images/viedo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-315px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner .app_section4 .app_draw4 .modal .viedo_btn:hover {background:url(../images/viedo_btn_h.png) no-repeat;}
+
+
+
+/*배경 애니메이션*/
+@keyframes pic2 {
+	50% {transform:rotateZ(10deg);}
+}
+#sub_main .sub_inner .app_motion .pic_2 {
+	position:absolute; right:160px; top:980px; 
+	transform:rotateZ(-10deg);
+	transform-origin:center 5px;
+	animation:pic2 1.5s ease-in-out infinite;
+}
+
+@keyframes tablet {
+	50% {transform:translateY(40px);}
+}
+#sub_main .sub_inner .app_motion .tablet {
+	position:absolute; left:40px; top:500px;
+	animation:tablet 2s ease-in-out infinite;
+}
+
+
+@keyframes t_pan {
+	45% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	50% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	55% {transform:translate(20px,-50px) rotateZ(-80deg);}
+	60% {transform:translate(30px,-60px) rotateZ(-95deg);}
+	65% {transform:translateY(-90px) rotateZ(-90deg);}
+	70% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	75% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	80% {transform:translate(-20px,-50px) rotateZ(-80deg);}
+	85% {transform:translateY(-80px) rotateZ(-90deg);}
+}
+#sub_main .sub_inner .app_motion .t_pan {position:absolute; left:80px; top:580px; transform:translate(30px,-60px) rotateZ(-90deg); animation:t_pan 4s infinite; z-index:100;}
+
+
+@keyframes doggd {
+	50% {transform:scale(0.9);}
+}
+#sub_main .sub_inner .app_motion .dog_gd {position:absolute; left:200px; top:3250px; animation:doggd 2s infinite;}
+
+/*-------------------------*/
+@keyframes dog {
+	50% {transform:translateY(20px);}
+	100% {transform:translateY(0);}
+}
+#sub_main .sub_inner .app_motion .dog {position:absolute; left:250px; top:3150px; animation:dog 2s infinite;}
+
+#sub_main .sub_inner .app_motion .carpet {position:absolute; left:215px; top:3200px; animation:dog 2s infinite;}
+
+
+
+@keyframes pan {
+	50% {transform:translateY(-40px) rotate(120deg);}
+	100% {transform:translateY(0) rotate(0);}
+}
+#sub_main .sub_inner .app_motion .pan {position:absolute; right:300px; top:2320px; animation:pan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes redPan {
+	50% {transform:translateY(-80px) rotate(120deg);}
+	100% {transform:translateZ(0) rotate();}
+}
+#sub_main .sub_inner .app_motion .red_pan {position:absolute; right:264px; top:2350px; animation:redPan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes bluePan {
+	50% {transform:translateY(-90px) rotate(-180deg);}
+	100% {transform:translateZ(0) rotate(0);}
+}
+#sub_main .sub_inner .app_motion .blue_pan {position:absolute; right:276px; top:2380px; animation:bluePan 2s 0.6s infinite;}
+
+
+#sub_main .sub_inner .app_motion .pic_1 {position:absolute; left:200px; top:2050px;}
+
+@keyframes pic3 {
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+#sub_main .sub_inner .app_motion  .pic_3 {position:absolute; left:209px; top:2077px; animation:pic3 2s infinite;}
+
+
+
+
+
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+
+/*그래픽 페이지*/
+
+/*그래픽 페이지 섹션 1*/
+
+
+#sub_main .sub_inner2 .graphic_section1 {/*border:1px solid red;*/ width:1200px; height:1050px; position:relative;}
+/*graphic 1 이미지 호버처리*/
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .graphic_button {width:744px; height:990px; background:url(../images/graphic_draw1.png) no-repeat; position:absolute; left:0; top:45px; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .graphic_button:hover {background:url(../images/graphic1.png) no-repeat;}
+
+
+		
+/* graphic 1 프레임 처리*/
+#sub_main .sub_inner2 .graphic_section1 {position:relative;}
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 {
+	background:url(../images/graphic_frame1.png) no-repeat; width:565px; height:476px;
+	position:absolute; left:638px; top:446px;
+	}
+
+/* graphic 1 h3처리*/
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .graphic1_h3 {
+	background:url(../images/graphic1_h3.png) no-repeat; width:300px; height:243px;
+	position:absolute; left:150px; top:80px;
+	}
+
+/* graphic 1 버튼처리*/
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:150px; top:350px; outline:none;}
+
+
+
+/* graphic 1 팝업 처리*/
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .modal .g_modal_bg1 {
+	height:7389px; /*background:url(../images/g_modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .modal .viedo_btn {
+	width:146px; height:40px; background:url(../images/viedo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner2 .graphic_section1 .graphic_frame1 .modal .viedo_btn:hover {background:url(../images/viedo_btn_h.png) no-repeat;}
+
+
+/*graphic 1 [그래픽] 팝업처리*/
+/*graphic 1 [그래픽] 모달*/
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .modal .g_modal_bg1 {
+	height:7389px; /*background:url(../images/g_modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .modal .viedo_btn {
+	width:146px; height:40px; background:url(../images/viedo_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner2 .graphic_section1 .graphic_draw1 .modal .viedo_btn:hover {background:url(../images/viedo_btn_h.png) no-repeat;}
+
+
+/*===========================================================================================*/
+
+/*그래픽 페이지 섹션 2*/
+
+
+#sub_main .sub_inner2 .graphic_section2 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+#sub_main .sub_inner2 .graphic_section2 .label5 {
+	width:175px; height:175px; 
+	background:url(../images/label5.png) no-repeat;
+	position:absolute; right:-80px; top:-10px;
+	z-index:100;
+}
+
+/*graphic 1 이미지 호버처리*/
+#sub_main .sub_inner2 .graphic_section2 .graphic_draw2 .graphic_button {width:637px; height:990px; background:url(../images/graphic_draw2.png) no-repeat; position:absolute; right:0; top:50px;  border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner2 .graphic_section2 .graphic_draw2 .graphic_button:hover {background:url(../images/graphic2.png) no-repeat;}
+
+
+		
+/* graphic 2 프레임 처리*/
+#sub_main .sub_inner2 .graphic_section2 {position:relative;}
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 {
+	background:url(../images/graphic_frame2.png) no-repeat; width:640px; height:421px;
+	position:absolute; left:0; top:446px;
+	}
+
+/* graphic 2 h3처리*/
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 .graphic2_h3 {
+	background:url(../images/graphic2_h3.png) no-repeat; width:386px; height:235px;
+	position:absolute; left:90px; top:60px;
+	}
+
+/* graphic 2 버튼처리*/
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:95px; top:320px; outline:none;}
+
+
+
+/* graphic 2 팝업 처리*/
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 .modal .g_modal_bg2 {
+	height:7080px; /*background:url(../images/g_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner2 .graphic_section2 .graphic_frame2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+
+/*graphic 2 [그래픽] 팝업처리*/
+/*graphic 2 [그래픽] 모달*/
+#sub_main .sub_inner2 .graphic_section2 .graphic_draw2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section2 .graphic_draw2 .modal .g_modal_bg2 {
+	height:7080px; /*background:url(../images/g_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section2 .graphic_draw2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner2 .graphic_section2 .graphic_draw2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+
+/*===========================================================================================*/
+
+/*그래픽 페이지 섹션 3*/
+
+
+#sub_main .sub_inner2 .graphic_section3 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+/*graphic 3 이미지 호버처리*/
+#sub_main .sub_inner2 .graphic_section3 .graphic_draw3 .graphic_button {width:744px; height:990px; background:url(../images/graphic_draw3.png) no-repeat; position:absolute; left:0; top:70px; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner2 .graphic_section3 .graphic_draw3 .graphic_button:hover {background:url(../images/graphic3.png) no-repeat;}
+
+
+		
+/* graphic 3 프레임 처리*/
+#sub_main .sub_inner2 .graphic_section3 {position:relative;}
+#sub_main .sub_inner2 .graphic_section3 .label4 {
+	width:175px; height:175px; 
+	background:url(../images/label4.png) no-repeat;
+	position:absolute; left:-80px; top:0;
+	z-index:100;
+}
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 {
+	background:url(../images/graphic_frame3.png) no-repeat; width:640px; height:421px;
+	position:absolute; right:0; top:446px;
+	}
+
+/* graphic 3 h3처리*/
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 .graphic3_h3 {
+	background:url(../images/graphic3_h3.png) no-repeat; width:419px; height:235px;
+	position:absolute; left:140px; top:60px;
+	}
+
+/* graphic 3 버튼처리*/
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:145px; top:320px; outline:none;}
+
+
+
+/* graphic 3 팝업 처리*/
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 .modal .g_modal_bg3 {
+	height:7800px; /*background:url(../images/g_modal_bg3.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;
+}
+
+#sub_main .sub_inner2 .graphic_section3 .graphic_frame3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+
+/*graphic 3 [그래픽] 팝업처리*/
+/*graphic 3 [그래픽] 모달*/
+#sub_main .sub_inner2 .graphic_section3 .graphic_draw3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section3 .graphic_draw3 .modal .g_modal_bg3 {
+	height:7800px; /*background:url(../images/g_modal_bg3.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section3 .graphic_draw3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;
+}
+
+#sub_main .sub_inner2 .graphic_section3 .graphic_draw3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+
+/*===========================================================================================*/
+
+/*그래픽 페이지 섹션 4*/
+
+
+#sub_main .sub_inner2 .graphic_section4 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+/*graphic 4 이미지 호버처리*/
+#sub_main .sub_inner2 .graphic_section4 .graphic_draw4 .graphic_button {width:744px; height:990px; background:url(../images/graphic_draw4.png) no-repeat; position:absolute; right:-40px; top:55px;  border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner2 .graphic_section4 .graphic_draw4 .graphic_button:hover {background:url(../images/graphic4.png) no-repeat;}
+
+
+		
+/* graphic 4 프레임 처리*/
+#sub_main .sub_inner2 .graphic_section4 {position:relative;}
+#sub_main .sub_inner2 .graphic_section4 .label2 {
+	width:175px; height:175px; 
+	background:url(../images/label2.png) no-repeat;
+	position:absolute; right:600px; top:10px;
+	z-index:100;
+}
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 {
+	background:url(../images/graphic_frame4.png) no-repeat; width:571px; height:440px;
+	position:absolute; left:0; top:446px;
+	}
+
+/* graphic 4 h3처리*/
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 .graphic4_h3 {
+	background:url(../images/graphic4_h3.png) no-repeat; width:419px; height:235px;
+	position:absolute; left:80px; top:60px;
+	}
+
+/* graphic 4 버튼처리*/
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:80px; top:320px; outline:none;}
+
+
+
+/* graphic 4 팝업 처리*/
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 .modal .g_modal_bg4 {
+	height:2088px; /*background:url(../images/g_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;
+}
+
+#sub_main .sub_inner2 .graphic_section4 .graphic_frame4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+
+/*graphic 4 [그래픽] 팝업처리*/
+/*graphic 3 [그래픽] 모달*/
+#sub_main .sub_inner2 .graphic_section4 .graphic_draw4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section4 .graphic_draw4 .modal .g_modal_bg4 {
+	height:2088px; /*background:url(../images/g_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section4 .graphic_draw4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;
+}
+
+#sub_main .sub_inner2 .graphic_section4 .graphic_draw4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+
+
+
+/*===========================================================================================*/
+
+/*그래픽 페이지 섹션 5*/
+
+
+#sub_main .sub_inner2 .graphic_section5 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+
+#sub_main .sub_inner2 .graphic_section5 .label1 {
+	width:175px; height:175px; 
+	background:url(../images/label1.png) no-repeat;
+	position:absolute; left:-60px; top:60px;
+	z-index:100;
+}
+/*graphic 4 이미지 호버처리*/
+#sub_main .sub_inner2 .graphic_section5 .graphic_draw5 .graphic_button {width:744px; height:990px; background:url(../images/graphic_draw5.png) no-repeat; position:absolute; left:0; top:120px; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner2 .graphic_section5 .graphic_draw5 .graphic_button:hover {background:url(../images/graphic5.png) no-repeat;}
+
+
+		
+/* graphic 5 프레임 처리*/
+#sub_main .sub_inner2 .graphic_section5 {position:relative;}
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 {
+	background:url(../images/graphic_frame5.png) no-repeat; width:571px; height:440px;
+	position:absolute; right:0; top:446px;
+	}
+
+/* graphic 5 h3처리*/
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 .graphic5_h3 {
+	background:url(../images/graphic5_h3.png) no-repeat; width:419px; height:235px;
+	position:absolute; left:130px; top:60px;
+	}
+
+/* graphic 5 버튼처리*/
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:130px; top:280px; outline:none;}
+
+
+
+/* graphic 5 팝업 처리*/
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 .modal .g_modal_bg5 {
+	height:2088px; /*background:url(../images/g_modal_bg5.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner2 .graphic_section5 .graphic_frame5 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+
+/*graphic 5 [그래픽] 팝업처리*/
+/*graphic 5 [그래픽] 모달*/
+#sub_main .sub_inner2 .graphic_section5 .graphic_draw5 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner2 .graphic_section5 .graphic_draw5 .modal .g_modal_bg5 {
+	height:2088px; /*background:url(../images/g_modal_bg5.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner2 .graphic_section5 .graphic_draw5 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+#sub_main .sub_inner2 .graphic_section5 .graphic_draw5 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+/*===========================================================================================*/
+
+/*배경 애니메이션2*/
+@keyframes pic2 {
+	50% {transform:rotateZ(10deg);}
+}
+#sub_main .sub_inner2 .app_motion .pic_2 {
+	position:absolute; right:160px; top:980px; 
+	transform:rotateZ(-10deg);
+	transform-origin:center 5px;
+	animation:pic2 1.5s ease-in-out infinite;
+}
+
+@keyframes tablet {
+	50% {transform:translateY(40px);}
+}
+#sub_main .sub_inner2 .app_motion .tablet {
+	position:absolute; left:40px; top:500px;
+	animation:tablet 2s ease-in-out infinite;
+}
+
+
+@keyframes t_pan {
+	45% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	50% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	55% {transform:translate(20px,-50px) rotateZ(-80deg);}
+	60% {transform:translate(30px,-60px) rotateZ(-95deg);}
+	65% {transform:translateY(-90px) rotateZ(-90deg);}
+	70% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	75% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	80% {transform:translate(-20px,-50px) rotateZ(-80deg);}
+	85% {transform:translateY(-80px) rotateZ(-90deg);}
+}
+#sub_main .sub_inner2 .app_motion .t_pan {position:absolute; left:80px; top:580px; transform:translate(30px,-60px) rotateZ(-90deg); animation:t_pan 4s infinite; z-index:100;}
+
+
+@keyframes doggd {
+	50% {transform:scale(0.9);}
+}
+#sub_main .sub_inner2 .app_motion .dog_gd {position:absolute; left:200px; top:3360px; animation:doggd 2s infinite;}
+
+/*-------------------------*/
+@keyframes dog {
+	50% {transform:translateY(20px);}
+	100% {transform:translateY(0);}
+}
+#sub_main .sub_inner2 .app_motion .dog {position:absolute; left:250px; top:3230px; animation:dog 2s infinite;}
+
+#sub_main .sub_inner2 .app_motion .carpet {position:absolute; left:200px; top:3300px; animation:dog 2s infinite;}
+
+
+
+@keyframes pan {
+	50% {transform:translateY(-40px) rotate(120deg);}
+	100% {transform:translateY(0) rotate(0);}
+}
+#sub_main .sub_inner2 .app_motion .pan {position:absolute; right:300px; top:2320px; animation:pan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes redPan {
+	50% {transform:translateY(-80px) rotate(120deg);}
+	100% {transform:translateZ(0) rotate();}
+}
+#sub_main .sub_inner2 .app_motion .red_pan {position:absolute; right:264px; top:2350px; animation:redPan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes bluePan {
+	50% {transform:translateY(-90px) rotate(-180deg);}
+	100% {transform:translateZ(0) rotate(0);}
+}
+#sub_main .sub_inner2 .app_motion .blue_pan {position:absolute; right:276px; top:2380px; animation:bluePan 2s 0.6s infinite;}
+
+
+#sub_main .sub_inner2 .app_motion .pic_1 {position:absolute; left:200px; top:2050px;}
+
+@keyframes pic3 {
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+#sub_main .sub_inner2 .app_motion  .pic_3 {position:absolute; left:209px; top:2077px; animation:pic3 2s infinite;}
+
+
+
+
+
+/*================================================================================================================*/
+/*================================================================================================================*/
+/*================================================================================================================*/
+
+
+/*서브 - web*/
+
+
+/*웹 페이지 섹션 1*/
+
+
+#sub_main .sub_inner3 .web_section1 {/*border:1px solid red;*/ width:1200px; height:1100px; position:relative;}
+/* 웹 1 이미지 호버처리*/
+#sub_main .sub_inner3 .web_section1 .web_draw1 .web_button {width:807px; height:990px; background:url(../images/web_draw1.png) no-repeat; position:absolute; left:0; top:50px; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner3 .web_section1 .web_draw1 .web_button:hover {background:url(../images/web1.png) no-repeat;}
+
+
+		
+/* 웹 1 프레임 처리*/
+#sub_main .sub_inner3 .web_section1 {position:relative;}
+#sub_main .sub_inner3 .web_section1 .web_frame1 {
+	background:url(../images/web_frame1.png) no-repeat; width:512px; height:426px;
+	position:absolute; right:-50px; top:300px;
+	}
+
+/* 웹 1 h3처리*/
+#sub_main .sub_inner3 .web_section1 .web_frame1 .web1_h3 {
+	background:url(../images/web1_h3.png) no-repeat; width:361px; height:225px;
+	position:absolute; left:100px; top:60px;
+	}
+
+/* 웹 1 버튼처리*/
+#sub_main .sub_inner3 .web_section1 .web_frame1 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:100px; top:310px; outline:none;}
+
+
+
+/* 웹 1 팝업 처리*/
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .w_modal_bg1 {
+ 	height:7650px; /*background:url(../images/w_modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000;
+border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+	
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .resite_btn {
+	width:148px; height:42px; background:url(../images/resite_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .resite_btn:hover {background:url(../images/resite_btn_h.png) no-repeat;}
+	
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .orsite_btn {
+	width:148px; height:42px; background:url(../images/orsite_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-315px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .orsite_btn:hover {background:url(../images/orsite_btn_h.png) no-repeat;}
+
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .ppt_btn {
+	width:146px; height:40px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-160px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png);}	
+
+
+
+/* 웹 1 [웹] 팝업처리*/
+
+
+/* 웹 1 [웹] 모달*/
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .w_modal_bg1 {
+	height:7650px; /*background:url(../images/w_modal_bg1.png) no-repeat;*/
+	background:#eee;
+}
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000;
+border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+	
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .resite_btn {
+	width:148px; height:42px; background:url(../images/resite_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .resite_btn:hover {background:url(../images/resite_btn_h.png) no-repeat;}
+	
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .orsite_btn {
+	width:148px; height:42px; background:url(../images/orsite_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-315px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .orsite_btn:hover {background:url(../images/orsite_btn_h.png) no-repeat;}
+
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .ppt_btn {
+	width:146px; height:40px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-160px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section1 .web_draw1 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png);}	
+	
+/*==================================================================================*/
+
+/*웹 페이지 섹션 2*/
+
+
+#sub_main .sub_inner3 .web_section2 {/*border:1px solid red;*/ width:1200px; height:710px; position:relative;}
+/* 웹 2 이미지 호버처리*/
+#sub_main .sub_inner3 .web_section2 .web_draw2 .web_button {width:805px; height:644px; background:url(../images/web_draw2.png) no-repeat; position:absolute; right:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner3 .web_section2 .web_draw2 .web_button:hover {background:url(../images/web2.png) no-repeat;}
+
+
+		
+/* 웹 2 프레임 처리*/
+#sub_main .sub_inner3 .web_section2 {position:relative;}
+#sub_main .sub_inner3 .web_section2 .web_frame2 {
+	background:url(../images/web_frame2.png) no-repeat; width:790px; height:452px;
+	position:absolute; left:0; top:100px;
+	}
+
+/* 웹 2 h3처리*/
+#sub_main .sub_inner3 .web_section2 .web_frame2 .web2_h3 {
+	background:url(../images/web2_h3.png) no-repeat; width:361px; height:225px;
+	position:absolute; left:60px; top:100px;
+	}
+
+/* 웹 2 버튼처리*/
+#sub_main .sub_inner3 .web_section2 .web_frame2 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:60px; top:310px; outline:none;}
+
+
+
+/* 웹 2 팝업 처리*/
+#sub_main .sub_inner3 .web_section2 .web_frame2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section2 .web_frame2 .modal .w_modal_bg2 {
+	height:8300px; /*background:url(../images/w_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section2 .web_frame2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section2 .web_frame2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+#sub_main .sub_inner3 .web_section2 .web_frame2 .modal .ppt_btn {
+	width:146px; height:40px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section2 .web_frame2 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png) no-repeat;}
+
+
+/* 웹 2 [웹] 팝업처리*/
+
+
+/* 웹 2 [웹] 모달*/
+#sub_main .sub_inner3 .web_section2 .web_draw2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section2 .web_draw2 .modal .w_modal_bg2 {
+	height:8300px; /*background:url(../images/w_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section2 .web_draw2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section2 .web_draw2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:20px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner3 .web_section2 .web_draw2 .modal .ppt_btn {
+	width:146px; height:40px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section2 .web_draw2 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png) no-repeat;}
+	
+
+/*==================================================================================*/
+
+/*웹 페이지 섹션 3*/
+
+
+#sub_main .sub_inner3 .web_section3 {/*border:1px solid red;*/ width:1200px; height:1000px; position:relative;}
+
+/* 웹 3 이미지 호버처리*/
+#sub_main .sub_inner3 .web_section3 .web_draw3 .web_button {width:806px; height:990px; background:url(../images/web_draw3.png) no-repeat; position:absolute; left:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner3 .web_section3 .web_draw3 .web_button:hover {background:url(../images/web3.png) no-repeat;}
+
+
+		
+/* 웹 3 프레임 처리*/
+#sub_main .sub_inner3 .web_section3 {position:relative;}
+
+#sub_main .sub_inner3 .web_section3 .web_frame3 {
+	background:url(../images/web_frame3.png) no-repeat; width:512px; height:426px;
+	position:absolute; right:-70px; top:250px;
+	}
+
+/* 웹 3 h3처리*/
+#sub_main .sub_inner3 .web_section3 .web_frame3 .web3_h3 {
+	background:url(../images/web3_h3.png) no-repeat; width:343px; height:242px;
+	position:absolute; right:70px; top:60px;
+	}
+
+/* 웹 3 버튼처리*/
+#sub_main .sub_inner3 .web_section3 .web_frame3 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:100px; top:320px; outline:none;}
+
+
+
+/* 웹 3 팝업 처리*/
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal .w_modal_bg3 {
+	height:7817px; /*background:url(../images/w_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+	
+
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal .resite_btn {
+	width:148px; height:42px; background:url(../images/resite_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal .resite_btn:hover {background:url(../images/resite_btn_h.png) no-repeat;}
+	
+
+#sub_main .sub_inner3 .web_section3 .web_frame3 .modal .ppt_btn {
+	width:146px; height:40px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-315px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+#sub_main .sub_inner3 .web_section1 .web_frame1 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png);}	
+
+	
+
+
+
+/* 웹 3 [웹] 모달*/
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal .w_modal_bg3 {
+	height:7817px; /*background:url(../images/w_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:20px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+	
+
+
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal .resite_btn {
+	width:148px; height:42px; background:url(../images/resite_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal .resite_btn:hover {background:url(../images/resite_btn_h.png) no-repeat;}
+	
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal .ppt_btn {
+	width:146px; height:40px; background:url(../images/ppt_btn_pupup.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-315px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .web_section3 .web_draw3 .modal .ppt_btn:hover {background:url(../images/ppt_btn_pupup_h.png);}	
+
+
+	
+
+	
+
+/*==================================================================================*/
+
+
+
+/*상세페이지*/
+/*work 페이지 섹션 1*/
+
+
+#sub_main .sub_inner3 .work_section1 {/*border:1px solid red;*/ width:1200px; height:1100px; position:relative;}
+/* work 1 이미지 호버처리*/
+#sub_main .sub_inner3 .work_section1 .work_draw1 .work_button {width:640px; height:990px; background:url(../images/work_draw1.png) no-repeat; position:absolute; right:0; top:50px; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .work_button:hover {background:url(../images/work1.png) no-repeat;}
+
+
+		
+/* work 1 프레임 처리*/
+#sub_main .sub_inner3 .work_section1 {position:relative;}
+#sub_main .sub_inner3 .work_section1 .work_frame1 {
+	background:url(../images/work_frame1.png) no-repeat; width:660px; height:451px;
+	position:absolute; left:-50px; top:300px;
+	}
+
+/* work 1 h3처리*/
+#sub_main .sub_inner3 .work_section1 .work_frame1 .work1_h3 {
+	background:url(../images/work1_h3.png) no-repeat; width:471px; height:260px;
+	position:absolute; left:100px; top:60px;
+	}
+
+/* work 1 버튼처리*/
+#sub_main .sub_inner3 .work_section1 .work_frame1 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:100px; top:340px; outline:none;}
+
+
+
+/* work 1 팝업 처리*/
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .work_modal_bg1 {
+ 	height:14050px; /*background:url(../images/work_modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .macaron_btn {
+	width:159px; height:40px; background:url(../images/macaron_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .macaron_btn:hover {background:url(../images/macaron_btn_h.png) no-repeat;}
+	
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .eclair_btn {
+	width:137px; height:40px; background:url(../images/eclair_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-300px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .eclair_btn:hover {background:url(../images/eclair_btn_h.png) no-repeat;}
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .point_btn {
+	width:136px; height:40px; background:url(../images/point_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-153px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .point_btn:hover {background:url(../images/point_btn_h.png);}		
+
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .bubble_btn {
+	width:149px; height:40px; background:url(../images/bubble_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-5px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .bubble_btn:hover {background:url(../images/bubble_btn_h.png);}
+
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .brochure_btn {
+	width:166px; height:40px; background:url(../images/brochure_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:155px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner3 .work_section1 .work_frame1 .modal .brochure_btn:hover {background:url(../images/brochure_btn_h.png);}
+
+
+
+
+	
+
+/* work 1 [work] 팝업처리*/
+
+
+/* work 1 [work] 모달*/
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .work_modal_bg1 {
+	height:14050px; /*background:url(../images/work_modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+		
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .macaron_btn {
+	width:159px; height:40px; background:url(../images/macaron_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .macaron_btn:hover {background:url(../images/macaron_btn_h.png) no-repeat;}
+	
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .eclair_btn {
+	width:137px; height:40px; background:url(../images/eclair_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-300px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .eclair_btn:hover {background:url(../images/eclair_btn_h.png) no-repeat;}
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .point_btn {
+	width:136px; height:40px; background:url(../images/point_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-153px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .point_btn:hover {background:url(../images/point_btn_h.png);}		
+
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .bubble_btn {
+	width:149px; height:40px; background:url(../images/bubble_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-5px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .bubble_btn:hover {background:url(../images/bubble_btn_h.png);}
+
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .brochure_btn {
+	width:166px; height:40px; background:url(../images/brochure_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:155px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner3 .work_section1 .work_draw1 .modal .brochure_btn:hover {background:url(../images/brochure_btn_h.png);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================================*/
+
+/*웹 페이지 섹션 4*/
+
+
+#sub_main .sub_inner3 .web_section4 {/*border:1px solid red;*/ width:1200px; height:600px; position:relative;}
+/* 웹 4 이미지 호버처리*/
+#sub_main .sub_inner3 .web_section4 .web_draw4 .web_button {width:806px; height:538px; background:url(../images/web_draw4.png) no-repeat; position:absolute; left:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner3 .web_section4 .web_draw4 .web_button:hover {background:url(../images/web4.png) no-repeat;}
+
+
+		
+/* 웹 4 프레임 처리*/
+#sub_main .sub_inner3 .web_section4 {position:relative;}
+
+#sub_main .sub_inner3 .web_section4 .label7 {
+	width:175px; height:175px; 
+	background:url(../images/label7.png) no-repeat;
+	position:absolute; left:-80px; top:-60px;
+	z-index:100;
+}
+
+#sub_main .sub_inner3 .web_section4 .web_frame4 {
+	background:url(../images/web_frame4.png) no-repeat; width:552px; height:399px;
+	position:absolute; right:-30px; top:100px;
+	}
+
+/* 웹 4 h3처리*/
+#sub_main .sub_inner3 .web_section4 .web_frame4 .web4_h3 {
+	background:url(../images/web4_h3.png) no-repeat; width:342px; height:184px;
+	position:absolute; left:160px; top:70px;
+	}
+
+/* 웹 4 버튼처리*/
+#sub_main .sub_inner3 .web_section4 .web_frame4 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:160px; top:280px; outline:none;}
+
+
+
+/* 웹 4 팝업 처리*/
+#sub_main .sub_inner3 .web_section4 .web_frame4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section4 .web_frame4 .modal .w_modal_bg4 {
+	height:5621px; /*background:url(../images/w_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section4 .web_frame4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section4 .web_frame4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+
+
+/* 웹 4 [웹] 모달*/
+#sub_main .sub_inner3 .web_section4 .web_draw4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section4 .web_draw4 .modal .w_modal_bg4 {
+	height:5621px; /*background:url(../images/w_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section4 .web_draw4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section4 .web_draw4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:20px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+	
+
+/*==================================================================================*/
+
+
+
+/*==================================================================================*/
+
+/*웹 페이지 섹션 5*/
+
+
+#sub_main .sub_inner3 .web_section5 {/*border:1px solid red;*/ width:1200px; height:600px; position:relative;}
+/* 웹 4 이미지 호버처리*/
+#sub_main .sub_inner3 .web_section5 .web_draw5 .web_button {width:777px; height:546px; background:url(../images/web_draw5.png) no-repeat; position:absolute; right:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner3 .web_section5 .web_draw5 .web_button:hover {background:url(../images/web5.png) no-repeat;}
+
+
+		
+/* 웹 5 프레임 처리*/
+#sub_main .sub_inner3 .web_section5 {position:relative;}
+#sub_main .sub_inner3 .web_section5 .web_frame5 {
+	background:url(../images/web_frame5.png) no-repeat; width:540px; height:401px;
+	position:absolute; left:-50px; top:100px;
+	}
+
+/* 웹 5 h3처리*/
+#sub_main .sub_inner3 .web_section5 .web_frame5 .web5_h3 {
+	background:url(../images/web5_h3.png) no-repeat; width:354px; height:203px;
+	position:absolute; right:110px; top:70px;
+	}
+
+/* 웹 5 버튼처리*/
+#sub_main .sub_inner3 .web_section5 .web_frame5 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:80px; top:300px; outline:none;}
+
+
+
+/* 웹 5 팝업 처리*/
+#sub_main .sub_inner3 .web_section5 .web_frame5 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section5 .web_frame5 .modal .w_modal_bg5 {
+	height:1797px; /*background:url(../images/w_modal_bg5.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section5 .web_frame5 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section5 .web_frame5 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	}
+
+
+
+/* 웹 5 [웹] 모달*/
+#sub_main .sub_inner3 .web_section5 .web_draw5 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner3 .web_section5 .web_draw5 .modal .w_modal_bg5 {
+	height:1797px;/* background:url(../images/w_modal_bg5.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner3 .web_section5 .web_draw5 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner3 .web_section5 .web_draw5 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:20px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+
+	
+
+/*==================================================================================*/
+
+
+/*배경 애니메이션3*/
+@keyframes pic2 {
+	50% {transform:rotateZ(10deg);}
+}
+#sub_main .sub_inner3 .app_motion .pic_2 {
+	position:absolute; right:160px; top:980px; 
+	transform:rotateZ(-10deg);
+	transform-origin:center 5px;
+	animation:pic2 1.5s ease-in-out infinite;
+}
+
+@keyframes tablet {
+	50% {transform:translateY(40px);}
+}
+#sub_main .sub_inner3 .app_motion .tablet {
+	position:absolute; left:40px; top:500px;
+	animation:tablet 2s ease-in-out infinite;
+}
+
+
+@keyframes t_pan {
+	45% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	50% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	55% {transform:translate(20px,-50px) rotateZ(-80deg);}
+	60% {transform:translate(30px,-60px) rotateZ(-95deg);}
+	65% {transform:translateY(-90px) rotateZ(-90deg);}
+	70% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	75% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	80% {transform:translate(-20px,-50px) rotateZ(-80deg);}
+	85% {transform:translateY(-80px) rotateZ(-90deg);}
+}
+#sub_main .sub_inner3 .app_motion .t_pan {position:absolute; left:80px; top:580px; transform:translate(30px,-60px) rotateZ(-90deg); animation:t_pan 4s infinite; z-index:100;}
+
+
+@keyframes doggd {
+	50% {transform:scale(0.9);}
+}
+#sub_main .sub_inner3 .app_motion .dog_gd {position:absolute; left:200px; top:3360px; animation:doggd 2s infinite;}
+
+/*-------------------------*/
+@keyframes dog {
+	50% {transform:translateY(20px);}
+	100% {transform:translateY(0);}
+}
+#sub_main .sub_inner3 .app_motion .dog {position:absolute; left:250px; top:3230px; animation:dog 2s infinite;}
+
+#sub_main .sub_inner3 .app_motion .carpet {position:absolute; left:200px; top:3300px; animation:dog 2s infinite;}
+
+
+
+@keyframes pan {
+	50% {transform:translateY(-40px) rotate(120deg);}
+	100% {transform:translateY(0) rotate(0);}
+}
+#sub_main .sub_inner3 .app_motion .pan {position:absolute; right:300px; top:2820px; animation:pan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes redPan {
+	50% {transform:translateY(-80px) rotate(120deg);}
+	100% {transform:translateZ(0) rotate();}
+}
+#sub_main .sub_inner3 .app_motion .red_pan {position:absolute; right:264px; top:2850px; animation:redPan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes bluePan {
+	50% {transform:translateY(-90px) rotate(-180deg);}
+	100% {transform:translateZ(0) rotate(0);}
+}
+#sub_main .sub_inner3 .app_motion .blue_pan {position:absolute; right:276px; top:2880px; animation:bluePan 2s 0.6s infinite;}
+
+
+#sub_main .sub_inner3 .app_motion .pic_1 {position:absolute; left:200px; top:2050px;}
+
+@keyframes pic3 {
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+#sub_main .sub_inner3 .app_motion  .pic_3 {position:absolute; left:209px; top:2077px; animation:pic3 2s infinite;}
+
+
+
+
+
+/*================================================================================================================*/
+/*================================================================================================================*/
+/*================================================================================================================*/
+
+
+/*서브 - work*/
+
+	
+/*============================================================================*/	
+/*work 페이지 섹션 2*/
+
+
+#sub_main .sub_inner4 .work_section2 {/*border:1px solid red;*/ width:1200px; height:675px; margin-top:60px; position:relative;}
+
+#sub_main .sub_inner4 .work_section2 .label8 {
+	width:175px; height:175px; 
+	background:url(../images/label8.png) no-repeat;
+	position:absolute; right:-80px; top:-70px;
+	z-index:100;
+}
+
+/* work 2 이미지 호버처리*/
+#sub_main .sub_inner4 .work_section2 .work_draw2 .work_button {width:593px; height:614px; background:url(../images/work_draw2.png) no-repeat; position:absolute; right:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner4 .work_section2 .work_draw2 .work_button:hover {background:url(../images/work2.png) no-repeat;}
+
+	
+/* work 2 프레임 처리*/
+#sub_main .sub_inner4 .work_section2 {position:relative;}
+#sub_main .sub_inner4 .work_section2 .work_frame2 {
+	background:url(../images/work_frame2.png) no-repeat; width:666px; height:412px;
+	position:absolute; left:0; top:100px;
+	}
+
+/* work 2 h3처리*/
+#sub_main .sub_inner4 .work_section2 .work_frame2 .work2_h3 {
+	background:url(../images/work2_h3.png) no-repeat; width:542px; height:187px;
+	position:absolute; left:40px; top:80px;
+	}
+
+/* work 2 버튼처리*/
+#sub_main .sub_inner4 .work_section2 .work_frame2 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:40px; top:290px; outline:none;}
+
+
+
+/* work 2 팝업 처리*/
+#sub_main .sub_inner4 .work_section2 .work_frame2 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner4 .work_section2 .work_frame2 .modal .work_modal_bg2 {
+ 	height:10520px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section2 .work_frame2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section2 .work_frame2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+	
+#sub_main .sub_inner4 .work_section2 .work_frame2 .modal .news_btn {
+	width:149px; height:40px; background:url(../images/news_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner4 .work_section2 .work_frame2 .modal .news_btn:hover {background:url(../images/news_btn_h.png) no-repeat;}
+
+
+/* work 2 [work] 팝업처리*/
+
+
+/* work 2 [work] 모달*/
+#sub_main .sub_inner4 .work_section2 .work_draw2 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner4 .work_section2 .work_draw2 .modal .work_modal_bg2 {
+	height:10520px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section2 .work_draw2 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section2 .work_draw2 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+	
+#sub_main .sub_inner4 .work_section2 .work_draw2 .modal .news_btn {
+	width:149px; height:40px; background:url(../images/news_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner4 .work_section2 .work_draw2 .modal .news_btn:hover {background:url(../images/news_btn_h.png) no-repeat;}
+
+/*============================================================================*/	
+
+/*work 페이지 섹션 3*/
+
+
+#sub_main .sub_inner4 .work_section3 {/*border:1px solid red;*/ width:1200px; height:720px; position:relative;}
+
+#sub_main .sub_inner4 .work_section3 .label6 {
+	width:175px; height:175px; 
+	background:url(../images/label6.png) no-repeat;
+	position:absolute; right:-70px; top:-70px;
+	z-index:100;
+}
+/* work 3 이미지 호버처리*/
+#sub_main .sub_inner4 .work_section3 .work_draw3 .work_button {width:657px; height:657px; background:url(../images/work_draw3.png) no-repeat; position:absolute; right:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner4 .work_section3 .work_draw3 .work_button:hover {background:url(../images/work3.png) no-repeat;}
+		
+/* work 3 프레임 처리*/
+#sub_main .sub_inner4 .work_section3 {position:relative;}
+#sub_main .sub_inner4 .work_section3 .work_frame3 {
+	background:url(../images/work_frame3.png) no-repeat; width:659px; height:409px;
+	position:absolute; left:-10px; top:120px;
+	}
+
+/* work 3 h3처리*/
+#sub_main .sub_inner4 .work_section3 .work_frame3 .work3_h3 {
+	background:url(../images/work3_h3.png) no-repeat; width:401px; height:220px;
+	position:absolute; left:90px; top:60px;
+	}
+
+/* work 3 버튼처리*/
+#sub_main .sub_inner4 .work_section3 .work_frame3 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:90px; top:300px; outline:none;}
+
+
+/* work 3 팝업 처리*/
+#sub_main .sub_inner4 .work_section3 .work_frame3 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner4 .work_section3 .work_frame3 .modal .work_modal_bg3 {
+ 	height:6800px; /*background:url(../images/work_modal_bg3.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section3 .work_frame3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section3 .work_frame3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+	
+#sub_main .sub_inner4 .work_section3 .work_frame3 .modal .folio_btn {
+	width:200px; height:40px; background:url(../images/folio_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner4 .work_section3 .work_frame3 .modal .folio_btn:hover {background:url(../images/folio_btn_h.png) no-repeat;}
+
+
+/* work 3 [work] 팝업처리*/
+
+
+/* work 3 [work] 모달*/
+#sub_main .sub_inner4 .work_section3 .work_draw3 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner4 .work_section3 .work_draw3 .modal .work_modal_bg3 {
+	height:6800px; /*background:url(../images/work_modal_bg1.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section3 .work_draw3 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section3 .work_draw3 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner4 .work_section3 .work_draw3 .modal .folio_btn {
+	width:200px; height:40px; background:url(../images/folio_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+#sub_main .sub_inner4 .work_section3 .work_draw3 .modal .folio_btn:hover {background:url(../images/folio_btn_h.png) no-repeat;}		
+
+
+
+
+
+
+/*============================================================================*/	
+/*work 페이지 섹션 7*/
+
+
+#sub_main .sub_inner4 .work_section7 {/*border:1px solid red;*/ width:1200px; height:740px; position:relative;}
+
+#sub_main .sub_inner4 .work_section7 .label9 {
+	width:175px; height:175px; 
+	background:url(../images/label9.png) no-repeat;
+	position:absolute; right:-70px; top:-70px;
+	z-index:100;
+}
+
+/* work 7 이미지 호버처리*/
+#sub_main .sub_inner4 .work_section7 .work_draw7 .work_button {width:657px; height:657px; background:url(../images/work_draw7.png) no-repeat; position:absolute; right:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner4 .work_section7 .work_draw7 .work_button:hover {background:url(../images/work7.png) no-repeat;}
+
+	
+/* work 7 프레임 처리*/
+#sub_main .sub_inner4 .work_section7 {position:relative;}
+#sub_main .sub_inner4 .work_section7 .work_frame7 {
+	background:url(../images/work_frame7.png) no-repeat; width:659px; height:409px;
+	position:absolute; left:50px; top:150px;
+	}
+
+/* work 7 h3처리*/
+#sub_main .sub_inner4 .work_section7 .work_frame7 .work7_h3 {
+	background:url(../images/work7_h3.png) no-repeat; width:414px; height:220px;
+	position:absolute; left:100px; top:60px;
+	}
+
+/* work 7 버튼처리*/
+#sub_main .sub_inner4 .work_section7 .work_frame7 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:100px; top:270px; outline:none;}
+
+
+
+/* work 7 팝업 처리*/
+#sub_main .sub_inner4 .work_section7 .work_frame7 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner4 .work_section7 .work_frame7 .modal .work_modal_bg7 {
+ 	height:7266px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section7 .work_frame7 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section7 .work_frame7 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+
+#sub_main .sub_inner4 .work_section7 .work_frame7 .modal .line_btn {
+	width:200px; height:40px; background:url(../images/line_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner4 .work_section7 .work_frame7 .modal .line_btn:hover {background:url(../images/line_btn_h.png) no-repeat;}
+	
+
+
+/* work 7 [work] 팝업처리*/
+
+
+/* work 7 [work] 모달*/
+#sub_main .sub_inner4 .work_section7 .work_draw7 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner4 .work_section7 .work_draw7 .modal .work_modal_bg7 {
+	height:7266px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section7 .work_draw7 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section7 .work_draw7 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+
+#sub_main .sub_inner4 .work_section7 .work_draw7 .modal .line_btn {
+	width:200px; height:40px; background:url(../images/line_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}	
+
+#sub_main .sub_inner4 .work_section7 .work_draw7 .modal .line_btn:hover {background:url(../images/line_btn_h.png) no-repeat;}
+
+
+
+	
+/*============================================================================*/
+
+
+/*============================================================================*/	
+/*work 페이지 섹션 6*/
+
+
+#sub_main .sub_inner4 .work_section6 {/*border:1px solid red;*/ width:1200px; height:645px; position:relative;}
+
+#sub_main .sub_inner4 .work_section6 .label9 {
+	width:175px; height:175px; 
+	background:url(../images/label9.png) no-repeat;
+	position:absolute; left:-70px; top:-70px;
+	z-index:100;
+}
+
+/* work 6 이미지 호버처리*/
+#sub_main .sub_inner4 .work_section6 .work_draw6 .work_button {width:657px; height:570px; background:url(../images/work_draw6.png) no-repeat; position:absolute; left:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner4 .work_section6 .work_draw6 .work_button:hover {background:url(../images/work6.png) no-repeat;}
+
+	
+/* work 6 프레임 처리*/
+#sub_main .sub_inner4 .work_section6 {position:relative;}
+#sub_main .sub_inner4 .work_section6 .work_frame6 {
+	background:url(../images/work_frame6.png) no-repeat; width:645px; height:409px;
+	position:absolute; right:0; top:120px;
+	}
+
+/* work 6 h3처리*/
+#sub_main .sub_inner4 .work_section6 .work_frame6 .work6_h3 {
+	background:url(../images/work6_h3.png) no-repeat; width:414px; height:220px;
+	position:absolute; right:70px; top:70px;
+	}
+
+/* work 6 버튼처리*/
+#sub_main .sub_inner4 .work_section6 .work_frame6 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:160px; top:280px; outline:none;}
+
+
+
+/* work 6 팝업 처리*/
+#sub_main .sub_inner4 .work_section6 .work_frame6 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner4 .work_section6 .work_frame6 .modal .work_modal_bg6 {
+ 	height:7266px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section6 .work_frame6 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section6 .work_frame6 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+
+#sub_main .sub_inner4 .work_section6 .work_frame6 .modal .line_btn {
+	width:200px; height:40px; background:url(../images/line_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+#sub_main .sub_inner4 .work_section6 .work_frame6 .modal .line_btn:hover {background:url(../images/line_btn_h.png) no-repeat;}
+	
+
+
+/* work 6 [work] 팝업처리*/
+
+
+/* work 6 [work] 모달*/
+#sub_main .sub_inner4 .work_section6 .work_draw6 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner4 .work_section6 .work_draw6 .modal .work_modal_bg6 {
+	height:7266px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section6 .work_draw6 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section6 .work_draw6 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+
+
+#sub_main .sub_inner4 .work_section6 .work_draw6 .modal .line_btn {
+	width:200px; height:40px; background:url(../images/line_btn.png) no-repeat;
+	position:absolute; left:50%; top:556px; margin-left:-470px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}	
+
+#sub_main .sub_inner4 .work_section6 .work_draw6 .modal .line_btn:hover {background:url(../images/line_btn_h.png) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+/*============================================================================*/
+
+
+
+/*============================================================================*/	
+/*work 페이지 섹션 5*/
+
+
+#sub_main .sub_inner4 .work_section5 {/*border:1px solid red;*/ width:1200px; height:730px; position:relative;}
+
+/* work 5 이미지 호버처리*/
+#sub_main .sub_inner4 .work_section5 .work_draw5 .work_button {width:657px; height:657px; background:url(../images/work_draw5.png) no-repeat; position:absolute; left:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner4 .work_section5 .work_draw5 .work_button:hover {background:url(../images/work5.png) no-repeat;}
+
+	
+/* work 5 프레임 처리*/
+#sub_main .sub_inner4 .work_section5 {position:relative;}
+#sub_main .sub_inner4 .work_section5 .work_frame5 {
+	background:url(../images/work_frame5.png) no-repeat; width:645px; height:409px;
+	position:absolute; right:0; top:120px;
+	}
+
+/* work 5 h3처리*/
+#sub_main .sub_inner4 .work_section5 .work_frame5 .work5_h3 {
+	background:url(../images/work5_h3.png) no-repeat; width:406px; height:220px;
+	position:absolute; right:80px; top:60px;
+	}
+
+/* work 5 버튼처리*/
+#sub_main .sub_inner4 .work_section5 .work_frame5 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:160px; top:310px; outline:none;}
+
+
+
+/* work 5 팝업 처리*/
+#sub_main .sub_inner4 .work_section5 .work_frame5 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner4 .work_section5 .work_frame5 .modal .work_modal_bg5 {
+ 	height:7700px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section5 .work_frame5 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section5 .work_frame5 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+}
+	
+
+
+/* work 5 [work] 팝업처리*/
+
+
+/* work 5 [work] 모달*/
+#sub_main .sub_inner4 .work_section5 .work_draw5 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner4 .work_section5 .work_draw5 .modal .work_modal_bg5 {
+	height:7700px; /*background:url(../images/work_modal_bg2.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section5 .work_draw5 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section5 .work_draw5 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+}
+	
+
+
+	
+/*============================================================================*/	
+
+
+
+
+
+/*work 페이지 섹션 4*/
+
+#sub_main .sub_inner4 .work_section4 {/*border:1px solid red; */width:1200px; height:700px; position:relative;}
+/* work 4 이미지 호버처리*/
+#sub_main .sub_inner4 .work_section4 .work_draw4 .work_button {width:621px; height:614px; background:url(../images/work_draw4.png) no-repeat; position:absolute; left:0; top:0; border:none; outline:none; text-indent:-9999px;}
+
+#sub_main .sub_inner4 .work_section4 .work_draw4 .work_button:hover {background:url(../images/work4.png) no-repeat;}
+
+		
+/* work 4 프레임 처리*/
+#sub_main .sub_inner4 .work_section4 {position:relative;}
+#sub_main .sub_inner4 .work_section4 .work_frame4 {
+	background:url(../images/work_frame4.png) no-repeat; width:724px; height:412px;
+	position:absolute; right:-70px; top:100px;
+	}
+
+/* work 2 h3처리*/
+#sub_main .sub_inner4 .work_section4 .work_frame4 .work4_h3 {
+	background:url(../images/work4_h3.png) no-repeat; width:545px; height:227px;
+	position:absolute; right:70px; top:60px;
+	}
+
+/* work 4 버튼처리*/
+#sub_main .sub_inner4 .work_section4 .work_frame4 button {border:none; text-indent:-9999px; width:161px; height:37px; background:url(../images/design_btn.png) no-repeat; position:absolute; left:110px; top:310px; outline:none;}
+
+
+/* work 4 팝업 처리*/
+#sub_main .sub_inner4 .work_section4 .work_frame4 .modal {
+	position:fixed; left:0; top:0; 
+	height:100%; width:100%;
+	overflow:auto; 
+	z-index:10000; 
+	display:none; 
+	/*border:1px solid red;*/
+}
+
+#sub_main .sub_inner4 .work_section4 .work_frame4 .modal .work_modal_bg4 {
+ 	height:4200px; /*background:url(../images/work_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section4 .work_frame4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section4 .work_frame4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px;
+	margin-left:540px;
+	text-indent:-9999px;
+	}
+	
+
+/* work 4 [work] 팝업처리*/
+
+
+/* work 4 [work] 모달*/
+#sub_main .sub_inner4 .work_section4 .work_draw4 .modal {position:fixed; left:0; top:0; height:100%; overflow:auto; z-index:10000; display:none; width:100%;}
+
+#sub_main .sub_inner4 .work_section4 .work_draw4 .modal .work_modal_bg4 {
+	height:4200px; /*background:url(../images/work_modal_bg4.png) no-repeat;*/
+	background-color:#eee;
+}
+#sub_main .sub_inner4 .work_section4 .work_draw4 .modal img {position:absolute; left:50%; top:0; margin-left:-600px; border-right:5px solid #000; border-left:5px solid #000;}
+
+/*버튼 처리*/
+#sub_main .sub_inner4 .work_section4 .work_draw4 .modal .x_btn {
+	width:40px; height:39px; background:url(../images/x_btn.png) no-repeat;
+	position:absolute; left:50%; top:15px; margin-left:540px;
+	text-indent:-9999px;
+	border:none;
+	outline:none;
+	}
+	
+
+/*============================================================================*/	
+
+
+/*배경 애니메이션4*/
+@keyframes pic2 {
+	50% {transform:rotateZ(10deg);}
+}
+#sub_main .sub_inner4 .app_motion .pic_2 {
+	position:absolute; right:160px; top:980px; 
+	transform:rotateZ(-10deg);
+	transform-origin:center 5px;
+	animation:pic2 1.5s ease-in-out infinite;
+}
+
+@keyframes tablet {
+	50% {transform:translateY(40px);}
+}
+#sub_main .sub_inner4 .app_motion .tablet {
+	position:absolute; left:40px; top:200px;
+	animation:tablet 2s ease-in-out infinite;
+}
+
+
+@keyframes t_pan {
+	45% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	50% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	55% {transform:translate(20px,-50px) rotateZ(-80deg);}
+	60% {transform:translate(30px,-60px) rotateZ(-95deg);}
+	65% {transform:translateY(-90px) rotateZ(-90deg);}
+	70% {transform:translate(30px,-60px) rotateZ(-90deg);}
+	75% {transform:translate(10px,-100px) rotateZ(-90deg);}
+	80% {transform:translate(-20px,-50px) rotateZ(-80deg);}
+	85% {transform:translateY(-80px) rotateZ(-90deg);}
+}
+#sub_main .sub_inner4 .app_motion .t_pan {position:absolute; left:80px; top:280px; transform:translate(30px,-60px) rotateZ(-90deg); animation:t_pan 4s infinite; z-index:100;}
+
+
+/*@keyframes doggd {
+	50% {transform:scale(0.9);}
+}
+#sub_main .sub_inner4 .app_motion .dog_gd {position:absolute; left:200px; top:3320px; animation:doggd 2s infinite;}
+*/
+/*-------------------------*/
+/*@keyframes dog {
+	50% {transform:translateY(20px);}
+	100% {transform:translateY(0);}
+}
+#sub_main .sub_inner4 .app_motion .dog {position:absolute; left:250px; top:3210px; animation:dog 2s infinite;}
+
+#sub_main .sub_inner4 .app_motion .carpet {position:absolute; left:200px; top:3270px; animation:dog 2s infinite;}
+
+*/
+
+@keyframes pan {
+	50% {transform:translateY(-40px) rotate(120deg);}
+	100% {transform:translateY(0) rotate(0);}
+}
+#sub_main .sub_inner4 .app_motion .pan {position:absolute; right:300px; top:2430px; animation:pan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes redPan {
+	50% {transform:translateY(-80px) rotate(120deg);}
+	100% {transform:translateZ(0) rotate();}
+}
+#sub_main .sub_inner4 .app_motion .red_pan {position:absolute; right:264px; top:2460px; animation:redPan 2s 0.6s infinite;}
+/*-------------------------*/
+@keyframes bluePan {
+	50% {transform:translateY(-90px) rotate(-180deg);}
+	100% {transform:translateZ(0) rotate(0);}
+}
+#sub_main .sub_inner4 .app_motion .blue_pan {position:absolute; right:276px; top:2490px; animation:bluePan 2s 0.6s infinite;}
+
+
+#sub_main .sub_inner4 .app_motion .pic_1 {position:absolute; left:200px; top:2980px;}
+
+@keyframes pic3 {
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+#sub_main .sub_inner4 .app_motion  .pic_3 {position:absolute; left:209px; top:3007px; animation:pic3 2s infinite;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+
+/*푸터*/
+#footer {width:100%; height:60px; /*border:1px solid red;*/ background:#fce00f; margin:0 auto; text-align:center;} 
+#footer img {margin-top:20px;}
+
+
+
+
+
+
+

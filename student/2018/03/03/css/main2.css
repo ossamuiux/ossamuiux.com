@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*reset*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: top;
+}
+button,input {border-radius: 0}
+fieldset,img {border: 0}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none}
+iframe {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {display: block;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal}
+.blind {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px}
+button {cursor:pointer;}
+button, input, select {vertical-align: middle;}
+
+input[type="checkbox"] {opacity: 0; margin-right: 5px;}
+label{cursor: pointer;}
+input[type="checkbox"]+label {position: relative; margin-left: 10px;}
+input[type="checkbox"]+label:before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 16px;
+    width: 29px;
+    height: 29px;
+    background: url(http://dothome.co.kr/expirationinfo/404.html) no-repeat 0 0;
+}
+input[type="checkbox"]:checked+label:before{
+    background-position: -29px 0;
+}
+input[type="radio"]+label {margin-left: 5px;}
+
+/*접근성*/
+#accessibilityLink {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+#accessibilityLink a {
+    position: absolute;
+    left: 0;
+    top: -9999px;
+    font-size: 12px;
+    background: #333;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+}
+#accessibilityLink a:focus, #accessibilityLink a:active {
+    top: 0;
+}
+
+/*테이블 칸 여백빼기, 선합치기*/
+table {border-spacing: 0; border-collapse:collapse;}
+/*영문단어 중단점을 음절로 처리*/
+/*body {word-break: break-all;}*/
+
+@import url(../../../fonts.googleapis.com/earlyaccess/notosanskr.css);
+body,input,button,textarea,select,table {
+    font-size: 14px;
+    font-family:'Noto Sans KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+}
+
+
+#wrap {
+    margin:20px 0 0 50px;
+}
+#wrap h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+#wrap button a{
+    color: #fff;
+}
+#wrap2 {
+    margin:20px 0 0 50px;
+}
+#wrap2 h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+#wrap3 {
+    margin:20px 0 0 50px;
+}
+#wrap3 h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#wrap4 {
+    margin:20px 0 0 50px;
+}
+#wrap4 h1{
+    font-size: 50px;
+    font-weight: 600;
+}

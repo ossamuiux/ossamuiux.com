@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" >
+<title>bbia</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+</head>
+<script>
+$(document).ready(function(){
+	var sw=true;
+
+	$('.util .login').click(function(){
+		
+		if(sw==true){
+		//alert('click');
+			$('.login_popup').show();
+		} 
+	});
+		
+	$('.login_box .close').click(function(){
+	
+		if(sw==true){
+		//alert('click');
+			$('.login_popup').hide();
+		} 
+
+	});
+		
+	$('.side_open button').click(function(){
+		
+		if(sw==true){
+			$('.side_s').hide();
+			$('.side_b').show();
+		}
+	});
+		
+	$('.side_close button').click(function(){
+		
+		if(sw==true){
+			$('.side_s').show();
+			$('.side_b').hide();
+		}
+	});
+	
+	$(window).scroll(function(){
+		//윈도우의 스크롤바 y좌표를 변수에 저장.
+		var num=$(this).scrollTop()
+		
+		if(num>=300){
+			$('.side_s')
+			.css('position', 'fixed')
+			.css('top', '20px')
+			;
+		} else{
+			$('.side_s')
+			.css('position', 'absolute')
+			.css('top', '300px')
+			;
+		}
+		
+	});
+	
+	$(window).scroll(function(){
+		//윈도우의 스크롤바 y좌표를 변수에 저장.
+		var num=$(this).scrollTop()
+		
+		if(num>=300){
+			$('.side_b')
+			.css('position', 'fixed')
+			.css('top', '20px')
+			;
+		} else{
+			$('.side_b')
+			.css('position', 'absolute')
+			.css('top', '300px')
+			;
+		}
+		
+	});
+	
+	$('.side_con .side_top_s,.side_bcon .side_bcon_txt').click(function(e){
+		e.preventDefault();
+	});
+	
+});
+</script>
+<body>
+<div class="login_popup">
+	<div class="login_box">
+        <div class="close">
+            <a href="#"><img src="images/login_close.png" alt="닫기버튼"></a>
+ 	   </div>
+    	<div class="login_box_inner">
+        	<div class="login_section1">
+            	<h2><img src="images/login_txt.png" alt="회원로그인"></h2>
+                <a href="#">비회원(주문조회)</a>
+            </div>
+            <div class="login_section2">
+            	<div class="login_wrap">
+                	<div class="id">
+                    	<p>아이디</p>
+                        <input type="text" class="login">
+                    </div>
+                    <div class="pw">
+                     	<p>비밀번호</p>
+                       <input type="password" class="pw2">
+                   </div>
+                </div>
+                <button type="submit" class="btn_login">로그인</button>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="save_id">
+                <label for="save_id">아이디 저장</label>
+                <a href="#">아이디/비밀번호 찾기</a>        
+            </div>
+            <div class="login_section3">
+                <div class="login_txt">
+                    <p class="login_txt1">아직 삐아 회원이 아니신가요?</p>
+                    <p class="login_txt2">신규회원가입을 하시면 다양한 혜택을 만나실 수 있습니다.</p>
+                </div>
+                <a href="#">회원가입하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="side">
+    <div class="side_s">
+        <div class="side_con">
+            <ul>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon1.png" alt="장바구니"></a></li>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon2.png" alt="상품문의"></a></li>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon3.png" alt="입금계좌"></a></li>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon4.png" alt="주문조회"></a></li>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon5.png" alt="공지사항"></a></li>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon6.png" alt="소셜딜알람신청하기"></a></li>
+                <li class="side_top_s"><a href="#"><img src="images/side_icon7.png" alt="최근 본 상품"></a></li>
+                <li><a href="#"><img src="images/side_icon8.png" alt="맨 위로"></a></li>
+            </ul>
+        </div>
+        <div class="side_open">
+			<button type="button">열기버튼</button>
+        </div>
+    </div>
+    <div class="side_b">
+        <div class="side_bcon">
+            <div class="side_con side_bcon_inner">
+            	<ul>
+                    <li><a href="#"><img src="images/side_icon1.png" alt="장바구니"></a></li>
+                    <li><a href="#"><img src="images/side_icon2.png" alt="상품문의"></a></li>
+                    <li><a href="#"><img src="images/side_icon3.png" alt="입금계좌"></a></li>
+                    <li><a href="#"><img src="images/side_icon4.png" alt="주문조회"></a></li>
+                    <li><a href="#"><img src="images/side_icon5.png" alt="공지사항"></a></li>
+                    <li><a href="#"><img src="images/side_icon6.png" alt="소셜딜알람신청하기"></a></li>
+                    <li><a href="#"><img src="images/side_icon7.png" alt="최근 본 상품"></a></li>
+                </ul>
+            </div>
+            <div class="side_bcon_txt">
+                <ul>
+                	<li><a href="#"><p>장바구니</p></a></li>
+                	<li><a href="#"><p>상품문의</p></a></li>
+                	<li><a href="#"><p>입금계좌</p></a></li>
+                	<li><a href="#"><p>주문조회</p></a></li>
+                	<li><a href="#"><p>공지사항</p></a></li>
+                	<li><a href="#"><p class="bcon_txt6">소셜딜알람<br>신청하기</p></a></li>
+                	<li><a href="#"><p>최근 본 상품</p></a></li>
+                </ul>
+            </div>
+            <div class="side_top">
+                <a href="#"><img src="images/side_icon8.png" alt="맨 위로"><p>TOP</p></a>
+            </div>
+        </div>
+        <div class="side_close">
+			<button type="button">닫기버튼</button>
+        </div>
+    </div>
+</div>
+<div class="header">
+	<div class="header_inner">
+    	<div class="top_header">
+        	<h1><a href="index.html"><img src="images/logo.png" alt="bbia"></a></h1>
+            <div class="top_header_wrap">
+                <ul class="util">
+                    <li class="login"><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text">
+                    <button class="btn_search" type="submit">검색버튼</button>
+                </div>
+            </div>
+        </div>
+        <ul class="gnb">
+        	<li>
+                <a href="info.html">BRAND</a>
+                <ul class="sub sub1">
+                    <div class="point">
+                    	<div class="point_inner"></div>
+                    </div>
+                    <li><a href="#">ABOUT BBIA</a></li>
+                    <li><a href="#">MEDIA</a></li>
+                    <li><a href="#">온라인 매장안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">MAKE UP</a>
+                <ul class="sub sub2">
+                    <div class="point">
+                    	<div class="point_inner"></div>
+                    </div>
+                    <li><a href="point.html">POINT</a></li>
+                    <li><a href="#">BASE</a></li>
+                    <li><a href="#">TOOL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SKINCARE</a>
+                <ul class="sub sub3">
+                    <div class="point">
+                        <div class="point_inner"></div>
+                    </div>
+                   <li><a href="#">CLEANSING</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SET</a>
+            </li>
+            <li>
+                <a href="#">SALE</a>
+            </li>
+            <li>
+                <a href="#">COMMUNITY</a>
+                <ul class="sub sub4">
+                    <div class="point">
+                     	<div class="point_inner"></div>
+                    </div>
+                    <li><a href="#">포토리뷰</a></li>
+                    <li><a href="#">Q&amp;A</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+	<div class="main_inner">
+    	<div class="top">
+            <h2><img src="images/AB_txt.png" alt="삐아소개"></h2>
+            <div class="info_top_inner">
+                <ul>
+                    <li><a href="info.html">BRAND</a></li>
+                    <li><p> > </p></li>
+                    <li><a href="info.html">ABOUT BBIA</a></li>
+               </ul>
+           </div>
+        </div>
+        <div class="middle">
+            <img class="middle_bg" src="images/info_main.jpg" alt="">
+            <img class="middle_txt" src="images/info_txt.png" alt="">
+        </div>
+        <div class="bottom">
+        	<div class="bottom_inner">
+            	<div class="txt"></div>
+                <div class="dc">
+                    <img src="images/info_dc.jpg" alt="색">
+                    <h2>DYNAMIC COLOR</h2>
+                    <div class="line"></div>
+                    <P>외관의 선명함을 그대로 보여주는<br>
+컬러프린팅 테크놀로지 기술을 적용하여<br>
+선명한 발색을 구현합니다.</P>
+                </div>
+                <div class="ll">
+                    <img src="images/info_ll.png" alt="지속">
+                    <h2>LONG LAST</h2>
+                    <div class="line"></div>
+                    <P>한 번의 터치만으로도 최적의 발색을 선사하며<br>
+가벼운 마찰로는 잘 묻어나지 않아 처음 바른 색 그대로<br>
+변치 않는 아름다움을 선사합니다.</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="footer_inner">
+    	<h1><img src="images/footer_logo.png" alt="bbia"></h1>
+        <div class="info">
+        	<div class="con1">
+            	<ul>
+                	<li><a href="#">삐아소개</a></li>
+                	<li><a href="#">이용안내</a></li>
+                	<li><a href="#">이용약관</a></li>
+                	<li class="pd"><a href="#">개인정보 취급방침</a></li>
+                	<li><a href="#">블랙쉴드 작동중</a></li>
+                </ul>
+            </div>
+            <div class="con2">
+            	<p> (주)스카이007 대표이사 : 곽형금   개인정보 담당자 : 최은혜<br>
+사업장소재지 : 인천광역시 연수구 인천타워대로 323, C동 4302호(송도동, 센트로드오피스텔)<br>
+사업자등록번호 : 226-81-32030   통신판매업신고번호 : 제2015-인천연수구-0236  <a href="#">[사업자정보확인]</a><br>
+<span class="first">EMAIL</span> help@bbia.co.kr <span>FAX</span> 032-858-7785 <span>TEL</span> 080-022-0077</p>
+			</div>
+            <div class="con3">
+				<p>CopyrightⓒBBIA, All Rights Reserved</p>
+        	</div>
+        </div>
+        <div class="hana">
+        	<a href="#"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

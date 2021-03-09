@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Still waters run DEEP-</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.work .work_con .tab_con .slider').slick({
+	});
+
+	//쇼케이스 커버
+	$('.showcase').mouseenter(function(){
+		$(this).find('.cover').stop().fadeIn(300);
+	});
+	$('.showcase').mouseleave(function(){
+		$(this).find('.cover').stop().fadeOut(300);
+	});
+	
+	var sw=0;
+	
+	//메뉴
+	$('.m_btn').click(function(){
+		if(sw==0){
+			$('.m_gnb').animate({left:0},300);
+			$(this).animate({left:300},300);
+			$(this).addClass('on')
+			sw=1;
+		} else {
+			$('.m_gnb').animate({left:-280},300);
+			$(this).animate({left:50},300);
+			$(this).removeClass('on')
+			sw=0;
+		}
+	});
+	
+	//스크롤바가 움직일 때 발생
+	$(window).scroll(function(){
+		var num=$(this).scrollTop();
+		//스크롤 시 해당섹션에 오면 페이지버튼 on처리
+		if(num>=0 && num<1020){
+			$('.page_btn a').removeClass('on');
+			$('.page_btn a').eq(0).addClass('on');
+			
+			$('.m_btn').removeClass('on2');
+		} else if(num>=1020 && num<2420) {
+			$('.page_btn a').removeClass('on');
+			$('.page_btn a').eq(1).addClass('on');
+			
+			$('.m_btn').addClass('on2');
+		} else if(num>=2420 && num<3920) {
+			$('.page_btn a').removeClass('on');
+			$('.page_btn a').eq(2).addClass('on');
+		} else if(num>=3920) {
+			$('.page_btn a').removeClass('on');
+			$('.page_btn a').eq(3).addClass('on');
+		}
+	}); //스크롤이벤트 끝
+	
+	//페이지버튼으로 scrollTop이동
+	$('.page_btn a').click(function(e){
+		e.preventDefault();
+		var num=$(this).index();
+		
+		if(num==0){
+			$('html, body').animate({'scrollTop':0});
+		} else if (num==1){
+			$('html, body').animate({'scrollTop':1020});
+		} else if (num==2){
+			$('html, body').animate({'scrollTop':2420});
+		} else {
+			$('html, body').animate({'scrollTop':3920});
+		}
+	});
+	
+	//메뉴버튼으로 scrollTop이동
+	$('.gnb li').click(function(e){
+		e.preventDefault();
+		var num=$(this).index();
+		
+		if(num==0){
+			$('html, body').animate({'scrollTop':0});
+		} else if (num==1){
+			$('html, body').animate({'scrollTop':1020});
+		} else if (num==2){
+			$('html, body').animate({'scrollTop':2420});
+		} else {
+			$('html, body').animate({'scrollTop':3920});
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<!--메뉴-->
+<div class="m_gnb">
+	<ul class="gnb">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+<div class="page_btn">
+	<a class="on" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+</div>
+<button type="button" class="m_btn"></button>
+<!--인트로-->
+<div class="intro">
+	<h1>Still Waters Run Deep</h1>
+</div>
+<!--첫번째 소개-->
+<div class="about">
+	<div class="about_con">
+		<h2>ABOUT</h2>
+        <ul class="list">
+        	<li>
+            	<div class="profile">
+                	<div class="top"><img src="images/profile.png" alt=""></div>
+                    <h3>PROFILE</h3>
+                    <p><br>오재희(Oh Jae Hee)<br>1991.12.15<br>010-9890-4112<br>jhojh1215@naver.com<br>GTQ 1급</p>
+                </div>
+            </li>
+            <li>
+            	<div class="profile">
+                	<div class="top"><img src="images/edu.png" alt=""></div>
+                    <h3>EDUCATION</h3>
+                    <p><br><br>한림대학교 언론정보학부 디지털콘텐츠<br>하이미디어 컴퓨터학원<br>- 반응형웹디자인 퍼블리셔 과정 수료</p>
+                </div>
+            </li>
+            <li>
+            	<div class="profile">
+                	<div class="top"><img src="images/skill.png" alt=""></div>
+                    <h3>SKILL</h3>
+                    <p><img src="images/skill_detail.png" alt=""></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--두번째 소개-->
+<div class="about2">
+	<div class="about2_con">
+		<h2>What I Do</h2>
+   		<ul class="list2">
+        	<li>
+            	<img src="images/icon_web.png" alt="">
+                <div class="txt">
+                	<h3>WEB DESIGN</h3>
+                    <p>더 나은 경험을 제공하기 위해<br>깔끔하고 편안한 디자인,<br>새로운 디자인을 만들고자 노력합니다.</p>
+                </div>
+            </li>
+            <li>
+            	<img src="images/icon_html.png" alt="">
+                <div class="txt">
+                	<h3>HTML / CSS</h3>
+                    <p>다양한 환경에서도 접근할 수 있도록<br>웹표준을 기반으로 하여<br>HTML과 CSS를 적용합니다.<br></p>
+                </div>
+            </li>
+            <li>
+            	<img src="images/icon_js.png" alt="">
+                <div class="txt">
+                	<h3>JAVA / JQUERY</h3>
+                    <p>자바스크립트와 Jquery를 적용하여<br>동적인 웹 콘텐츠를 제작하고 <br>이러한 작업을 빠르고 쉽게 처리합니다.</p>
+                </div>
+            </li>
+        </ul>
+	</div>
+</div>
+<!--작업물 모음-->
+<div class="work">
+	<div class="work_con">
+    	<h2>WORK</h2>
+        <ul class="work_title">
+        	<li>WEBDESIGN</li>
+        </ul>
+        <div class="tab_con">
+        	<div class="slider">
+            	<div class="slider_con">
+                	<div class="showcase">
+                    	<img src="images/monitor.png" alt="">
+                        <a href="http://jhojh1215.dothome.co.kr/audi/" target="_blank">
+                        	<div class="cover">
+                        		<ul>
+                            		<li>MAIN PROJECT</li>
+                               	 	<li class="bar">------------------</li>
+                                	<li>AUDI RENEWAL</li>
+                           		</ul>
+                        	</div>
+                    	</a>
+                    </div>
+                    <div class="outline">
+                    	<strong>프로젝트 개요</strong>
+                        <p><em>*ORIGINAL SITE</em><br>기존의 사이트는 메인에 고화질의 영상이 있으나 영상 이외의 다른 콘텐츠의 영역과 내용이 적으며 텍스트의 강조가 없어 단조롭게 느껴진다. 또한 메뉴가 영어로 되어있고 중복되는 메뉴와 서브메뉴 안의 또다른 메뉴로 인해 원하는 정보를 바로 찾기 힘들다.</p><br>
+                        <p><em>*RENEWAL SITE</em><br>고해상도의 자동차 이미지로 어떤 사이트인지 아이덴티티를 드러내며 이미지배너를 통해 원하는 정보를 한 눈에 찾을 수 있게 한다. 메뉴는 직관적으로 변경하며 'MODELS'메뉴는 하위메뉴를 이미지로 구성하여 효율적인 정보 전달을 가능하게 한다.</p><br>
+                        <p><em>*작업내용</em><br> 메인시안 제작, 크로스브라우징, 코딩, Jquery슬라이더, 탭메뉴 등</p>
+                    </div>
+                    <div class="process">
+                    	<strong>프로젝트 제작과정</strong>
+                        <ul>
+                        	<li>사이트명</li>
+                            <li>컬러컨셉</li>
+                            <li>ORIGINAL SITE</li>
+                            <li>RENEWAL SITE</li>
+                        </ul>
+                        <ul class="detail">
+                        	<li>아우디코리아</li>
+                            <li><p class="color1">●</p><p class="color2">●</p><p class="color3">●</p><p class="color4">●</p><p class="color5">●</p></li>
+                            <li><a href="#">VIEW</a></li>
+                            <li><a href="#">VIEW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slider_con">
+                	<div class="showcase">
+                    	<img src="images/monitor.png" alt="">
+                    </div>
+                    <div class="outline">
+                    	
+                    </div>
+                    <div class="process">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--이력서다운-->
+<div class="resume">
+	<div class="resume_con">
+		<h5>RESUME DOWNLOAD</h5>
+    	<a href="#">CLICK HERE TO DOWNLOAD</a>
+	</div>
+</div>
+<!--콘택트-->
+<div class="contact">
+	<div class="contact_con">
+    	<h2 class="title">CONTACT</h2>
+        <div class="info_wrap">
+        	<div class="info">
+                <ul>
+                    <li>
+                    	<div class="txt">
+                    		<h4>Phone</h4>
+                        	<p>010-9890-4112</p>
+                    	</div>
+                    </li>
+                    <li>
+                    	<div class="txt">
+                    		<h4>Email</h4>
+                        	<p>jhojh1215@naver.com</p>
+                    	</div>
+                    </li>
+                    <li>
+                    	<div class="txt">
+                    		<h4>Address</h4>
+                        	<p>Jungnang-ru, Souel, South Korea</p>
+                    	</div>
+                    </li>
+                </ul>
+        	</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

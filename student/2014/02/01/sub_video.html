@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>스팀에 오신 것을 환영합니다.</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/sub.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$('.slider_game_gnb li').click(function(){
+		$('.slider_game_gnb li').removeClass('game_gnb_on');
+		$(this).addClass('game_gnb_on');	
+	});
+	
+	$('.steam_games .game').mouseover(function(){
+		$(this).find('.game_hover').stop().animate({'bottom':'0'},500,'easeOutExpo');
+	});
+	$('.steam_games .game').mouseleave(function(){
+		$(this).find('.game_hover').stop().animate({'bottom':'-70'},500,'easeOutExpo');
+	});
+	
+	/*할인된 게임목록에 수치를 가져와 자동으로 할인율div를 생성해주는 함수*/
+	$('.price2_wrap>div:first-child').val(function(){
+		if($(this).text()=='100%'){
+			$(this).parent().find('div').css('display','none');
+			$(this).parent().css('height','14px');
+		}
+		else{
+			$(this).parent().parent().parent().parent().val(function(){
+				$("<div>", {
+					css: {
+						width: "62px",
+						height: "48px",
+						position:"absolute",
+						left:"-10px",
+						top:"0",
+						background:"url(images/game_sale.png)",
+						fontSize:"20px",
+						fontWeight:"bold",
+						textAlign:"center",
+						lineHeight:"40px"
+					},
+					text:$(this).children('.game_hover').children('.game_price2').children('.price2_wrap').children('div:first-child').text()
+					}).appendTo($(this).parent());		
+			});
+		}/*else문 끝*/
+	});
+	/*화면 크기 리사이징에 따른 변화하는 gradiant와 버튼의 left,right 함수*/
+	var per=0;
+	var sld_side=0;
+	var sld_btn=0
+	function main_slider_gra(){
+		if($(document).outerWidth()==1200){
+			$('.section1 .slider_side_left').css('width','0px');
+			$('.section1 .slider_side_right').css('width','0px');
+		}
+		else{
+			per=Math.round(($(document).outerWidth()-1200)/7);
+			sld_side=Math.round(per*3.6);
+			sld_btn=Math.round(per/10)+5;
+			if(sld_side>360){sld_side=360;}
+			if(sld_btn>15){sld_btn=15;}
+			$('.section1 .slider_side_left').css('width',sld_side+'px');
+			$('.section1 .slider_side_right').css('width',sld_side+'px');
+		}
+	}
+	$(window).resize(function(){
+     	main_slider_gra();
+	}).resize();
+	
+	/*검색시 나오는 문구*/
+	$('.search_btn').click(function(){
+		$('.con7 label .txt1').text('위 조건과');
+		$('.con7 label .txt2').text(" '"+$('.search_text').val()+"' ");
+		$('.con7 label .txt3').text('관련검색');
+	});
+	$('.steam_games_util_inner li a').click(function(){
+		$('.steam_games_util_inner li a').removeClass('on');
+		$('.steam_games_util_inner li').eq($(this).parent().index()).children('a').addClass('on');
+	});
+	
+	/*하단 게임목록 번호*/
+	$('.sn_inner >div a').click(function(){
+		$('.sn_inner >div a').removeClass('on');
+		$(this).addClass('on');
+	});
+	
+});
+
+</script>
+</head>
+<body>
+<div class="header">
+	<div class="header_inner">
+        <div class="header_top">
+        	<div class="util">
+            	<ul>
+                	<li><a href="#none" class="util1">로그인</a></li>
+                    <li><a href="#none" class="util2">스팀다운로드</a></li>
+                    <li><a href="#none" class="util3">언어</a></li>
+                </ul>
+                <div class="search">
+                	<input type="text" title="검색어 입력창" class="search1">
+                	<button type="submit" class="search1">버튼</button>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+        	<ul class="gnb">
+            	<li><a href="index.html"><img src="images/steam_logo.png" alt="스팀로고"></a></li>
+                <li><a href="sub_game.html">게임</a>
+                	<div class="sub_gnb">
+                    	<ul class="sub_gnb1">
+                        	<li><a href="sub_game.html">무료</a></li>
+                            <li><a href="sub_game.html">신작</a></li>
+                            <li><a href="sub_game.html">인기</a></li>
+                            <li><a href="sub_game.html">출시예정</a></li>
+                            <li><a href="sub_game.html">할인</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                        	<li><a href="sub_game.html">레이싱</a></li>
+                            <li><a href="sub_game.html">RPG</a></li>
+                            <li><a href="sub_game.html">스포츠</a></li>
+                            <li><a href="sub_game.html">시뮬레이션</a></li>
+                            <li><a href="sub_game.html">액션</a></li>
+                            <li><a href="sub_game.html">어드벤쳐</a></li>
+                            <li><a href="sub_game.html">인디</a></li>
+                            <li><a href="sub_game.html">전략</a></li>
+                            <li><a href="sub_game.html">캐주얼</a></li>
+                        </ul>
+                        <ul class="sub_gnb11">
+                        	<li><a href="sub_game.html">Win OS</a></li>
+                            <li><a href="sub_game.html">스팀 OS</a></li>
+                            <li><a href="sub_game.html">맥 OS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#none">SW&amp;HW</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="#none">개발엔진</a></li>
+                            <li><a href="#none">그래픽엔진</a></li>
+                            <li><a href="#none">오디오엔진</a></li>
+                            <li><a href="#none">웹퍼블리싱</a></li>
+                            <li><a href="#none">유틸리티</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="#none">컨트롤러</a></li>
+                            <li><a href="#none">스팀링크</a></li>
+                            <li><a href="#none">스팀머신</a></li>
+                            <li><a href="#none">HTCVIVE</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#none">동영상</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="#none">튜토리얼</a></li>
+                            <li><a href="#none">다큐</a></li>
+                            <li><a href="#none">삽화</a></li>
+                            <li><a href="#none">영화</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="#none">드라마</a></li>
+                            <li><a href="#none">게임</a></li>
+                            <li><a href="#none">스릴러/공포</a></li>
+                            <li><a href="#none">공상과학</a></li>
+                            <li><a href="#none">액션</a></li>
+                            <li><a href="#none">코미디</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="sub_news.html">소식</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="sub_news.html">업데이트</a></li>
+                            <li><a href="sub_news.html">보도자료</a></li>
+                            <li><a href="sub_news.html">비평</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="sub_commu.html">커뮤니티</a>
+                	<div class="sub_gnb">
+                        <ul class="sub_gnb1">
+                            <li><a href="sub_commu.html">허브</a></li>
+                            <li><a href="sub_commu.html">큐레이터</a></li>
+                            <li><a href="sub_commu.html">리뷰</a></li>
+                            <li><a href="sub_commu.html">토론</a></li>
+                            <li><a href="sub_commu.html">아트</a></li>
+                            <li><a href="sub_commu.html">방송</a></li>
+                        </ul>
+                        <ul class="sub_gnb2">
+                            <li><a href="sub_commu.html">그린라이트</a></li>
+                            <li><a href="sub_commu.html">워크샵</a></li>
+                            <li><a href="sub_commu.html">스팀마켓</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main sub_video">
+	<div class="section1">	
+    	 <div class="section1_bg">
+        </div>
+    	<div class="main_util">
+        	<a href="#">홈</a> > <a href="#">동영상</a>
+        </div>
+    	<div class="search_video">
+            	<fieldset>
+                <div class="search_video1">
+                	<h3>동영상</h3>
+                    <div class="con_wrap">
+                        <div class="con1">
+                        	<h4>분류</h4>
+                            <input type="checkbox" id="chk1_1"><label for="chk1_1">튜토리얼</label>
+                            <input type="checkbox" id="chk1_2"><label for="chk1_2">다큐멘터리</label>
+                            <input type="checkbox" id="chk1_3"><label for="chk1_3">삽화</label>
+                            <input type="checkbox" id="chk1_4"><label for="chk1_4">영화</label>
+                            <input type="checkbox" id="chk1_5"><label for="chk1_5">드라마</label>
+                            <input type="checkbox" id="chk1_6"><label for="chk1_6">게임</label>
+                            <input type="checkbox" id="chk1_6"><label for="chk1_6">스릴러/공포</label>
+                            <input type="checkbox" id="chk1_6"><label for="chk1_6">공상과학</label>
+                            <input type="checkbox" id="chk1_6"><label for="chk1_6">액션</label>
+                            <input type="checkbox" id="chk1_6"><label for="chk1_6">코미디</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_video1">
+                    <h3>검색어</h3>
+                    <div class="con_wrap">
+                        <div class="con7">
+                            <h4>&nbsp;</h4>
+                            <input type="text" class="search_text" title="동영상 검색창">
+                			<button type="button" class="search_btn">버튼</button>
+                            <label><span class="txt1"></span><span class="txt2"></span><span class="txt3"></span></label>
+                        </div>
+                    </div>
+                </div>
+                </fieldset>
+        </div>
+        <p class="slider_side_left"></p>
+        <p class="slider_side_right"></p>
+    </div>
+    <div class="slider_game">
+        <div class="slider_game_inner"> 
+        	<div class="steam_games_util">
+            	<ul class="steam_games_util_inner">
+                	<li><a href="#none" class="on">출시일</a></li>
+                	<li><a href="#none">인기순</a></li>
+                	<li><a href="#none">가격순</a></li>
+                </ul>
+            </div> 
+            <div class="video">
+            	<div class="video1">
+                	<a href="sub_video_product.html" class="video_img"><img src="images/video/video01.jpg" alt=""></a>
+                	<div class="video_info">
+                    	<h4><a href="sub_video_product.html">Forest Ground Tiling Texture Tutorial - \ 54,000</a></h4>
+                        <p>Learn to make Realistic Organic Textures with the most up to date Industry Techniques. Follow along from start to finish as we cover the
+entire process without skipping a beat.</p>
+                        <div class="video_info1"><span>출시일 : 2016년 2월 22일</span><span class="playtime">재생시간 : 979분</span><span>동영상해상도 : 1080p (37.2GB)</span></div>
+                    </div>
+                </div>
+                <div class="video1">
+                	<a href="sub_video_product.html" class="video_img"><img src="images/video/video02.jpg" alt=""></a>
+                	<div class="video_info">
+                    	<h4><a href="sub_video_product.html">Medieval Blocks - Substance Designer Tutorial - \ 16,000</a></h4>
+                        <p>Tutorial video explaining how to achieve a procedural material of medieval blocks.</p>
+                        <div class="video_info1"><span>출시일 : 2016년 2월 3일 </span><span class="playtime">재생시간 : 274분</span><span>동영상해상도 : 720p (6.4GB)</span></div>
+                    </div>
+                </div>
+                <div class="video1">
+                	<a href="sub_video_product.html" class="video_img"><img src="images/video/video03.jpg" alt=""></a>
+                	<div class="video_info">
+                    	<h4><a href="sub_video_product.html">Robotpencil Presents: Painting with Confidence - \ 5,500</a></h4>
+                        <p>This video covers how to be more confident in your painting techniques.</p>
+                        <div class="video_info1"><span>출시일 : 2016년 1월 29일</span><span class="playtime">재생시간 : 49분</span><span>&nbsp;</span></div>
+                    </div>
+                </div>
+                <div class="video1">
+                	<a href="sub_video_product.html" class="video_img"><img src="images/video/video04.jpg" alt=""></a>
+                	<div class="video_info">
+                    	<h4><a href="sub_video_product.html">Robotpencil Presents: Lines to Painting - \ 3,300</a></h4>
+                        <p>This covers basic line sketch, how to manage laters and when you should paint over your lines.</p>
+                        <div class="video_info1"><span>출시일 : 2016년 1월 22일</span><span class="playtime">재생시간 : 34분</span><span>&nbsp;</span></div>
+                    </div>
+                </div>
+                <div class="video1">
+                	<a href="sub_video_product.html" class="video_img"><img src="images/video/video05.jpg" alt=""></a>
+                	<div class="video_info">
+                    	<h4><a href="sub_video_product.html">Robotpencil Presents: Lighting Tools and Tips - \ 21,000</a></h4>
+                        <p>This tutorial demonstrates the tools you can use to increase workflow as well as explain the basic understanding of light to give your 
+character that 3D feeling.</p>
+                        <div class="video_info1"><span>출시일 : 2016년 1월 15일</span><span class="playtime">재생시간 : 170분</span><span>&nbsp;</span></div>
+                    </div>
+                </div>
+                <div class="video1">
+                	<a href="sub_video_product.html" class="video_img"><img src="images/video/video06.jpg" alt=""></a>
+                	<div class="video_info">
+                    	<h4><a href="sub_video_product.html">Forest Ground Tiling Texture Tutorial - \ 54,000</a></h4>
+                        <p>Learn to make Realistic Organic Textures with the most up to date Industry Techniques. Follow along from start to finish as we cover the
+entire process without skipping a beat.</p>
+                        <div class="video_info1"><span>출시일 : 2016년 1월 8일</span><span class="playtime">재생시간 : 137분</span><span>&nbsp;</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sel_num">
+            	<div class="sn_inner">
+                    <button class="btn_first" title="맨 첫 페이지 이동버튼"></button>
+                    <button class="btn_prev" title="이전 페이지 이동버튼"></button>
+                    <div>
+                        <a href="#none" class="on">1</a>
+                        <a href="#none">2</a>
+                        <a href="#none">3</a>
+                        <a href="#none">4</a>
+                        <a href="#none">5</a>
+                        <a href="#none">6</a>
+                        <a href="#none">7</a>
+                        <a href="#none">8</a>
+                        <a href="#none">9</a>
+                        <a href="#none">10</a>
+                    </div>
+                    <button class="btn_next" title="다음 페이지 이동 버튼"></button>
+                    <button class="btn_last" title="맨 마지막 페이지 이동버튼"></button>
+            	</div>
+                <div class="sn_bottom">
+                	<label>163개의 결과 중에서 1-6개 표시 중</label>
+                </div>
+            </div>
+    	</div><!--class="slider_game_inner" end-->
+    </div>
+</div>
+<div class="footer">
+	<div class="footer_inner">
+    	<h2><img src="images/footer_logo.png" alt="스팀 본사 Valve의 로고"></h2>
+        <div class="copyright">
+        	<div>© 016 Valve Corporation. All rights reserved. 모든 상표는 미국 및 기타 국가에서 해당하는 소유자의 재산입니다.</div>
+            <ul>
+            	<li>부가가치세 포함</li>
+            	<li class="footer_valve"><a href="#none">Valve 개인 정보 정책</a></li>
+            	<li><a href="#none">사용권</a></li>
+            	<li><a href="#none">Steam 이용약관</a></li>
+            	<li><a href="#none">환불</a></li>
+            </ul>
+            <ul>
+            	<li><a href="#none">Valve 정보</a></li>
+                <li><a href="#none">비즈니스 솔루션</a></li>
+                <li><a href="#none">Steamworks</a></li>
+                <li><a href="#none">채용정보</a></li>
+                <li><a href="#none">Steam 배포</a></li>
+                <li><a href="#none" class="footer_steam">Steam</a></li>
+                <li><a href="#none" class="footer_steamgame">@steam_games</a>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1200">
+<title>portfolio</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.section3 .page2 .work_list').slick({
+		arrows:true,
+		autoplay:true,
+	    pauseOnHover:false,
+		dots:false,
+		slide:'div',
+		slidesToShow: 3,//보여질 슬라이드갯수
+        slidesToScroll: 1//스크롤갯수
+		});
+		
+	$('.modal .slimScrollDiv').hide();
+	$('.work_list li').click(function(e){
+		e.preventDefault();
+		var num=$(this).index();
+		//console.log(num);
+		$('.modal').show();
+		$('.modal .slimScrollDiv').hide();
+		$('.modal .slimScrollDiv').eq(num).show();
+	});
+	
+	$('.modal .close_btn').click(function(e){
+		e.preventDefault();
+		$('.modal').hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<div class="section1">
+	<div class="page_btn">
+    	<ul>
+        	<li><a href="#"><img src="images/top_btn1.png" alt=""></a></li>
+            <li><a href="#"><img src="images/top_btn2.png" alt=""></a></li>
+            <li><a href="#"><img src="images/top_btn3.png" alt=""></a></li>
+            <li><a href="#"><img src="images/top_btn4.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="arrow">
+    	<a href="#"><img src="images/arrow.png" alt=""></a>
+    </div>
+</div>
+<div class="section2">
+	<div class="page_1">
+        <ul>
+            <li><img src="images/oursklls.png" alt=""></li>
+            <li class="me_img"><img src="images/me_img11.png" alt=""></li>
+            <li class="me"><img src="images/aboutme.png"alt=""></li>
+        </ul>
+        <div class="arrow_1">
+        	<a href="#"><img src="images/arrow.png"></a>
+        </div>
+	</div>
+</div>
+<div class="section3">
+	<div class="page2">
+    	<h2><img src="images/work_st.png" alt=""></h2>
+        <div class="work_list">
+            <div>
+                <div class="first_list">
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span class="hover_1"><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+            </div>
+            <div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+                <div class="first_list">
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span class="hover_1"><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+            </div>
+            <div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+            </div>
+            <div>
+                <div class="first_list">
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span class="hover_1"><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+            </div>
+            <div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+                <div class="first_list">
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span class="hover_1"><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+            </div>
+            <div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+                <div>
+                   <a href="#">
+                        <img class="thumb" src="images/work_1.jpg" alt="">
+                   <div class="cover">
+                        <span><img src="images/work_page1.png" alt=""></span>
+                   </div>
+                   </a>
+                </div>
+            </div>
+        </div>
+        <div class="arrow1">
+        <a href="#"><img src="images/arrow.png" alt=""></a>
+    </div>
+    </div>
+    <div class="modal">
+        <div class="modal_con">
+            <img src="images/kin.jpg" alt=""> 
+        </div>
+    </div>
+</div>
+<div class="section4">
+	<div class="project">
+    	<h2><img src="images/work_st2.png" alt=""></h2>
+        <h3><img src="images/renewal_txt.png" alt=""></h3>
+        <ul class="first">
+        	<li><img src="images/pc_img.png" alt=""></li>
+            <li><img src="images/mb_img.png" alt=""></li>
+        </ul>      
+        <div class="text_btn">
+       <ul class="first">
+        	<li><img src="images/pc_txt.png" alt=""></li>
+            <li class="mb"><img src="images/mb_txt.png" alt=""></li>
+        </ul>  
+    	</div>
+        <div class="click_btn">
+        	<ul>
+            	<li><a href="#"><img src="images/original_btn.png" alt=""></a></li>
+                <li><img src="images/btween.png" alt=""></li>
+                <li><a href="#"><img src="images/renewal_btn.png" alt=""></a></li>
+            </ul>
+            <ul class="second">
+            	<li><a href="#"><img src="images/original_btn.png" alt=""></a></li>
+                <li><img src="images/btween.png" alt=""></li>
+                <li><a href="#"><img src="images/renewal_btn.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="arrow5">
+        	<a href="#"><img src="images/arrow.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<div class="section5">
+	<div class="epilogue">
+    	<h2><img src="images/work_st3.png" alt=""></h2>
+    	<h3><img src="images/epilogue_txt.png" alt=""></h3>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

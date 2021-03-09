@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/*****************************************visual*************************************************************/
+.main {margin-top:27px; }
+
+.main .visual .visual1 {background:url(../images/main1.jpg) no-repeat center center;outline:none;}
+.main .visual .visual2 {background:url(../images/main2.jpg) no-repeat center center;outline:none;}
+.main .visual .visual3 {background:url(../images/main3.jpg) no-repeat center center;outline:none;}
+.main .visual .visual4 {background:url(../images/main4.jpg) no-repeat center center;outline:none;}
+.main .visual .visual5 {background:url(../images/main5.jpg) no-repeat center center;outline:none;}
+
+.main .visual a {display:block; width:1202px; height:591px; margin:0 auto; outline:none; }
+/*내용보다 큰 이미지를 img로 직접 넣는 경우 좌상단 기준으로 배치되므로 가운데 정렬할 수 없음, 이럴경우 포지션 정렬공식 사용
+슬라이더 안의 모든 내용이 포지션일 경우 높이가 사라지므로 높이를 잡아줌
+다른슬라이드 안의 내용이 넘칠경우 overflow:hidden으로 마스크처리*/
+.main .visual .slick-slide {height:591px;}
+
+/*슬라이더 페이지버튼 커스텀*/
+.main .visual .slick-dots {position:absolute; left:50%; bottom:15px; margin-left:-60px;}
+.main .visual .slick-dots li {float:left; margin-left:3px; }
+.main .visual .slick-dots li button {width:20px; height:21px; background:url(../images/main_point.png) no-repeat center center; border:none; text-indent:-9999px; outline:none;}
+
+/*클릭한 슬라이드 페이지버튼 변경*/
+.main .visual .slick-dots li.slick-active button {background-image:url(../images/main_point_on.png); outline:none; border:none;}
+
+/**************************************베스트파트**********************************************************/
+
+/*the bbia best & special edition*/
+.main .section1 {width:100%;}
+.section1 .best {width:1202px; margin:0 auto;}
+.section1 .best h2 {margin:55px 0 34px 312px;} 
+
+/*best1상품*/
+.section1 .best .best_inner {height:724px; overflow:hidden; }
+.best .best_inner .best1 {float:left; background:url(../images/best1.jpg) no-repeat center center; width:593px; height:724px; position:relative;}
+
+/*best1상품 hover*/
+.best .best_inner .best1:hover { background-image:url(../images/best1_hover.jpg);}
+
+/*장바구니& 바로구매*/
+.best .best_inner .best1 ul li a {float:left; margin-top:580px; display:none; margin-left:75px; padding-left:15px;}
+.best .best_inner .best1:hover ul li a { display:block;}
+
+/*best2~5상품*/
+.best .best_inner .best_wrap {float:right; width:600px; height:724px;}
+.best .best_inner .best_wrap ul li {float:left;}
+
+.best .best_inner .best_wrap ul .best2 {background:url(../images/best2.jpg) no-repeat; width:296px; height:357px;}
+.best .best_inner .best_wrap ul .best3 {margin-left:8px; background:url(../images/best3.jpg) no-repeat;  width:296px; height:357px;}
+.best .best_inner .best_wrap ul .best4 {margin-top:10px; background:url(../images/best4.jpg) no-repeat;  width:296px; height:357px;}
+.best .best_inner .best_wrap ul .best5 {margin:10px 0 0 8px; background:url(../images/best5.jpg) no-repeat;  width:296px; height:357px;}
+
+/*best 상품 hover*/
+.best .best_inner .best_wrap ul .best2:hover {background-image:url(../images/best2_hover.jpg);}
+.best .best_inner .best_wrap ul .best3:hover {background-image:url(../images/best3_hover.jpg);}
+.best .best_inner .best_wrap ul .best4:hover {background-image:url(../images/best4_hover.jpg);}
+.best .best_inner .best_wrap ul .best5:hover {background-image:url(../images/best5_hover.jpg);}
+
+/*장바구니& 바로구매*/
+.best .best_inner .best_wrap ul li a {display:none; float:left; margin-top:290px; margin-left:35px;}
+.best .best_inner .best_wrap ul li:hover a {display:block;}
+
+/**************************************인스타그램파트**********************************************************/
+
+/*#bbia in instagram*/
+.section2 .insta {width:1202px; margin:0 auto;}
+.section2 .insta h2 {margin:55px 0 28px 409px;} 
+.section2 .insta .line {border:1px solid #0078ac;}
+.section2 .insta .insta_inner {height:393px; margin-top:33px; }
+
+.section2 .insta .insta_inner .inner1 ul li {float: left; margin-left:11px;}
+.section2 .insta .insta_inner .inner1 ul li:first-child {margin-left:0;}
+
+.section2 .insta .insta_inner .inner2 ul li {float: left; margin-left:11px; padding-top:11px;}
+.section2 .insta .insta_inner .inner2 ul li:first-child {margin-left:0;}
+
+/*official bbla*/
+.section3 .insta_offi {width:1202px; margin:0 auto;}
+.section3 .insta_offi  h2 {margin:55px 0 28px 464px;} 
+.section3 .insta_offi .line {border:1px solid #0078ac;}
+.section3 .insta_offi .insta_offi_inner {height:276px; margin-top:33px;}
+
+.section3 .insta_offi .insta_offi_inner ul li {float: left; margin-left:11px;}
+.section3 .insta_offi .insta_offi_inner ul li:first-child {margin-left:0;}
+
+/**************************************공지사항파트**********************************************************/
+
+.main .section4 {width:100%;}
+.section4 .section4_inner {height:337px; width:1202px; margin:0 auto; overflow:hidden;}
+
+/*shop*/
+.section4 .section4_inner .shop {float:left; height:302px; width:391px; background-color:#fcce54;}
+.section4 .section4_inner .shop h3 {color:#323232; font-size:23px; font-weight:900; margin:20px 0 30px 25px;}
+.section4 .section4_inner .shop .shop_inner1 {height:40px; margin-left:32px;}
+.section4 .section4_inner .shop .shop_inner1 ul li {float:left; margin-left:20px; display:inline-block; text-align:center;}
+.section4 .section4_inner .shop .shop_inner1 ul li:first-child { margin-top:13px; margin-left:0;}
+
+.section4 .section4_inner .shop .shop_inner2 {margin-top:28px; height:41px;}
+.section4 .section4_inner .shop .shop_inner2 ul li {float:left; margin-left:35px;}
+.section4 .section4_inner .shop .shop_inner2 ul li:first-child { margin-top:5px;}
+.section4 .section4_inner .shop .shop_inner2 ul li.gm { margin-top:10px;}
+
+.section4 .section4_inner .shop .shop_inner3 {margin-top:30px; height:32px;}
+.section4 .section4_inner .shop .shop_inner3 ul li:first-child { margin-top:4px;}
+.section4 .section4_inner .shop .shop_inner3 ul li {float:left; margin-left:32px;}
+.section4 .section4_inner .shop .shop_inner3 ul li.tm { margin-top:5px;}
+
+/*notice*/
+.section4 .section4_inner .ct {float:left; height:302px; width:391px; background-color:#4ec2e7; margin-left:14px;}
+.section4 .section4_inner .ct h3 {color:#323232; font-size:23px; font-weight:900; margin:20px 0 18px 25px;}
+
+.section4_inner .ct .icon1 {overflow:hidden; margin-left:70px;}
+.section4_inner .ct .icon1 ul li {float:left; margin-left:12px;}
+
+.section4_inner .ct .icon2 {overflow:hidden; margin-left:28px; margin-top:-10px;}
+.section4_inner .ct .icon2 ul li {float:left; margin-left:5px;}
+
+/*customer center*/
+.section4 .section4_inner .cc {float:left; height:302px; width:392px;  background-color:#ed5f55; margin-left:14px;}
+.section4 .section4_inner .cc h3 {color:#323232; font-size:23px; font-weight:900; margin:20px 0 20px 25px;}
+.section4 .section4_inner .cc p {color:#323232;  margin-left:25px;}
+.section4 .section4_inner .cc p.phone {font-size:30px; font-weight:bold; margin:-5px 0 20px 25px;}
+
+.section4 .section4_inner .con {margin:35px 0 0 8px; overflow:hidden;}
+.section4 .section4_inner .con ul li {float:left; width:101px; height:42px; background-color:#fe9a93; margin-left:18px;}
+.section4 .section4_inner .con ul li a {display:inline-block; width:101px; height:42px; font-weight:bold; line-height:42px; text-align:center; color:#2f2f2f;}
+
+
+
+
+
+
+
+
+
+
+
+
+

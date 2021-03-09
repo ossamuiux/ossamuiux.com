@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1200">
+<title>ND! Portfolio by SEO U Rim</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script>
+$(document).ready(function(){
+	var sw=0;
+	
+	$('.m_btn').click(function(e){
+		e.preventDefault();
+		
+		if(sw==0){
+			$(this).addClass('on');
+			$('.m_gnb').stop().animate({'left':'0'},300);
+			sw=1;
+		} else {
+			$(this).removeClass('on');
+			$('.m_gnb').stop().animate({'left':'-250px'},300);
+			sw=0;
+		}
+	});
+	//페이지 슬라이드 : 모바일 메뉴 눌렀을 때
+	$('.m_gnb li').click(function(e){
+		e.preventDefault();
+		
+		var num=$(this).index();
+		console.log(num);
+		
+		if(num==0){
+			$('body,html').stop().animate({'scrollTop':'0'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else	 if(num==1){
+			$('body,html').stop().animate({'scrollTop':'950px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else	 if(num==2){
+			$('body,html').stop().animate({'scrollTop':'1900px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else if(num==3){
+			$('body,html').stop().animate({'scrollTop':'2850px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else if(num==4){
+			$('body,html').stop().animate({'scrollTop':'3800px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else if(num==5){
+			$('body,html').stop().animate({'scrollTop':'4750px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else {
+			$('body,html').stop().animate({'scrollTop':'5700px'},300);
+			$('.m_gnb li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}
+	});
+	//페이지 슬라이드 : 오른쪽 라운드 버튼 눌렀을 때
+	$('.right_btn li').click(function(e){
+		e.preventDefault();
+		
+		var num=$(this).index();
+		console.log(num);
+		
+		if(num==0){
+			$('body,html').stop().animate({'scrollTop':'0'},300);
+			$('.right_btn li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else	 if(num==1){
+			$('body,html').stop().animate({'scrollTop':'950px'},300);
+			$('.right_btn li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else	 if(num==2){
+			$('body,html').stop().animate({'scrollTop':'1900px'},300);
+			$('.right_btn li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else if(num==3){
+			$('body,html').stop().animate({'scrollTop':'2850px'},300);
+			$('.right_btn li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else if(num==4){
+			$('body,html').stop().animate({'scrollTop':'3800px'},300);
+			$('.right_btn li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}else {
+			$('body,html').stop().animate({'scrollTop':'4750px'},300);
+			$('.right_btn li a').removeClass('on');
+			$(this).find('a').addClass('on');
+		}
+	});
+	
+	$(window).scroll(function(e){
+		e.preventDefault();
+		
+		var num2=$(this).scrollTop();
+		console.log(num2);
+		
+		if(num2>=0 && num2<950){
+			$('.right_btn li a').removeClass('on');
+			$('.right_btn li').eq(0).find('a').addClass('on');
+		} else if(num2>=950 && num2<1900) {
+			$('.right_btn li a').removeClass('on');
+			$('.right_btn li').eq(1).find('a').addClass('on');
+		} else if(num2>=1900 && num2<2850) {
+			$('.right_btn li a').removeClass('on');
+			$('.right_btn li').eq(2).find('a').addClass('on');
+		} else if(num2>=2850 && num2<3800) {
+			$('.right_btn li a').removeClass('on');
+			$('.right_btn li').eq(3).find('a').addClass('on');
+		} else if(num2>=3800 && num2<4750) {
+			$('.right_btn li a').removeClass('on');
+			$('.right_btn li').eq(4).find('a').addClass('on');
+		} else {
+			$('.right_btn li a').removeClass('on');
+			$('.right_btn li').eq(5).find('a').addClass('on');
+		}
+	});
+	
+	$('.branding_slider').slick({
+		autoplay:true,
+		speed:1000,
+		//보여질 갯수
+		slidesToShow:3,
+		//클릭 시 스크롤 갯수
+ 		slidesToScroll:1,
+		arrows:true,
+	});
+	
+	$('.printed_slider').slick({
+		autoplay:true,
+		speed:1000,
+		//보여질 갯수
+		slidesToShow:3,
+		//클릭 시 스크롤 갯수
+ 		slidesToScroll:1,
+		arrows:true,
+	});
+	
+	$('a.gallery').colorbox({rel:'gal'});
+	
+	$('.project_modal>a').click(function(e){
+		e.preventDefault();
+		$('.popup_wrap').show();
+	});
+	$('.popup_wrap>.close, .popup_wrap').click(function(e){
+		e.preventDefault();
+		$('.popup_wrap').hide();
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="header_wrap">
+	<div class="header">
+    	<a href="#" class="m_btn"><img class="img1" src="img/m_btn.png" alt=""><img class="img2" src="img/m_btn_close.png" alt=""></a>
+		<div class="m_gnb">
+            <ul>
+            	<li><a href="#home" class="on">HOME</a></li>
+                <li><a href="#about_nd">ABOUT ND!</a></li>
+                <li><a href="#about_me">ABOUT ME</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#project">PROJECT</a></li>
+                <li><a href="#epilogue">EPILOGUE</a></li>
+            </ul>
+		</div>            
+		<div class="name"><img src="img/header_right_name.png" alt=""></div>
+        <div class="right_btn">
+			<ul>
+		    	<li><a href="#home" class="on">1</a></li>
+				<li><a href="#about_nd">2</a></li>
+				<li><a href="#about_me">3</a></li>
+				<li><a href="#work">4</a></li>
+				<li><a href="#project">5</a></li>
+				<li><a href="#epilogue">6</a></li>
+			</ul>
+		</div>
+    </div>
+</div>
+
+<div id="home">
+	<video autoplay loop>
+  		 <source src="bg_29sec.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+	</video> 
+    <div class="home_cover">
+    	<img class="logo" src="img/nd_logo.png" alt="">
+        <img class="know_more" src="img/know_more.png" alt="">
+        <img class="more" src="img/under_arrow.png" alt="">
+	</div>
+</div>
+<div id="about_nd">
+	<video autoplay loop>
+  		 <source src="bg_29sec.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+	</video> 
+    <div class="nd_cover">
+    	<img class="title" src="img/about_nd_title.png" alt="">
+        <ul class="circle_txt">
+			<li>
+         		<a href="#about_nd">
+         			<strong>N</strong>
+            		<span>Necessary</span>
+            		<em>꼭! 필요한</em>
+         		</a>
+			</li>
+            <li>
+         		<a href="#about_nd">
+         			<strong>D</strong>
+            		<span>Design</span>
+            		<em>알맞은 디자인을</em>
+         		</a>
+			</li>
+            <li>
+         		<a href="#about_nd">
+         			<strong>!</strong>
+            		<span>Sensuously</span>
+            		<em>감각적으로!</em>
+         		</a>
+			</li>
+        </ul>
+    	<img class="logo" src="img/nd_logo.png" alt="">
+        <p><em>ND!</em>는 어디에서나 누구에게든지 꼭! 알맞는<br>
+        	필요한 디자인을 하기 위해 감각적으로 꾸준히 노력하려는<br>
+            저의 디자인 가치관과 태도를 담은<br>
+            Personal Branding Identity입니다.</p>
+	</div>
+</div>
+<div id="about_me">
+	<img class="title" src="img/about_me_title.png" alt="">
+    <div class="photo">
+    	<span>SEO</span>
+        <img src="img/profile_photo.png" alt="">
+        <em>U Rim</em>
+    </div>
+    <p>열정적이고 꼼꼼하고 책임감 강한 디자이너</p>
+    <ul class="profile">
+    	<li>
+        	<img src="img/proflie_icon.png" alt="">
+            <h2>PROFILE</h2>
+            <p>서 유 림 SEO U Rim</p>
+            <p>1984. 02. 04</p>
+            <p>서울특별시 노원구</p>
+            <p>010.2003.3817</p>
+            <p>damda3817@naver.com</p>
+        </li>
+        <li>
+        	<img src="img/edu_icon.png" alt="">
+            <h2>EDUCATION</h2>
+            <p>홍익대학교 미술대학<br>
+				목조형가구디자인과</p>
+            <p>더조은아카데미 북디자인 수료</p>
+            <p>하이미디어 디지털디자인 수료</p>
+        </li>
+        <li>
+        	<img src="img/career_icon.png" alt="">
+            <h2>CAREER</h2>
+            <p>보루네오 디자인연구소 홈디자인팀</p>
+            <p>(주)다인스 디자인팀</p>
+            <p>기업 연계 프리랜서</p>
+        </li>
+        <li>
+        	<img src="img/experience_icon.png" alt="">
+            <h2>EXPERIENCE</h2>
+            <p>뉴질랜드 어학연수</p>
+            <p>13개국 배낭여행 및 해외봉사</p>
+        </li>
+    </ul>
+    <div class="skills">
+    	<div class="skills_graphic">
+        	<img src="img/graphic_skills.png" alt="">
+        </div>
+        <div class="skills_coding">
+        	<img src="img/coding_skills.png" alt="">
+        </div>
+    </div>
+</div>
+<div id="work">
+	<img class="title" src="img/work_title.png" alt="">
+    <div class="branding">
+    	<h2>BRANDING</h2>
+        <div class="branding_slider">
+        	<div><a class="gallery" href="img/branding_popup_kium.jpg"><img class="img1" src="img/branding_thm_kium.png" alt=""><img class="img2" src="img/branding_thm_kium_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/branding_popup_ssiat.jpg"><img class="img1" src="img/branding_thm_ssiat.png" alt=""><img class="img2" src="img/branding_thm_ssiat_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/branding_popup_apps.jpg"><img class="img1" src="img/branding_thm_apps.png" alt=""><img class="img2" src="img/branding_thm_apps_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/branding_popup_cats.jpg"><img class="img1" src="img/branding_thm_cats.png" alt=""><img class="img2" src="img/branding_thm_cats_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/branding_popup_lk.jpg"><img class="img1" src="img/branding_thm_lk.png" alt=""><img class="img2" src="img/branding_thm_lk_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/branding_popup_yginpp.jpg"><img class="img1" src="img/branding_thm_yginpp.png" alt=""><img class="img2" src="img/branding_thm_yginpp_hover.png" alt=""></a></div>
+        </div>
+    </div>
+    <div class="printed_work">
+    	<h2>PRINTED WORK</h2>
+        <div class="printed_slider">
+        	<div><a class="gallery" href="img/printed_popup_grigo.jpg"><img class="img1" src="img/printed_thm_grigo.png" alt=""><img class="img2" src="img/printed_thm_grigo_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/printed_popup_dainsdesign.jpg"><img class="img1" src="img/printed_thm_dainsdesign.png" alt=""><img class="img2" src="img/printed_thm_dainsdesign_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/printed_popup_lmt.jpg"><img class="img1" src="img/printed_thm_lmt.png" alt=""><img class="img2" src="img/printed_thm_lmt_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/printed_popup_dainsdating.jpg"><img class="img1" src="img/printed_thm_dainsdating.png" alt=""><img class="img2" src="img/printed_thm_dainsdating_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/printed_popup_jct.jpg"><img class="img1" src="img/printed_thm_jct.png" alt=""><img class="img2" src="img/printed_thm_jct_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/printed_popup_cwin.jpg"><img class="img1" src="img/printed_thm_cwin.png" alt=""><img class="img2" src="img/printed_thm_cwin_hover.png" alt=""></a></div>
+            <div><a class="gallery" href="img/printed_popup_oaksan.jpg"><img class="img1" src="img/printed_thm_oaksan.png" alt=""><img class="img2" src="img/printed_thm_oaksan_hover.png" alt=""></a></div>
+        </div>
+    </div>	
+</div>
+<div id="project">
+	<img class="title" src="img/project_title.png" alt="">
+    <h2>RENEWAL PROJECT</h2>	
+    <div class="project_modal">
+		<a href="#">
+			<img src="img/project.png" alt="">
+            <div class="btn"><img src="img/project_more_btn.png" alt=""></div>
+		</a>
+	</div>
+    <div class="popup_wrap">
+    	<img src="img/project_modal_popup.jpg" alt="">
+		<a class="close" href="#"></a>
+    </div>
+    <div class="mobile">
+    	<h3>서울N타워 사이트 리뉴얼</h3>
+        <a href="m/index.html" target="_blank"></a>
+    </div>
+    <div class="pc_site">
+    	<div>
+        	<a class="original" href="http://www.nseoultower.co.kr/" target="_blank"></a>
+        	<a class="renewal" href="seoulntower/index.html" target="_blank"></a>
+   		</div>
+    </div>
+</div>
+<div id="epilogue">
+	<video autoplay loop>
+  		 <source src="bg_29sec.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+	</video>
+    <div class="epilogue_cover">
+    	<img class="logo" src="img/nd_logo.png" alt="">
+        <img class="title" src="img/epilogue_title.png" alt="">
+        <h2>MY DREAM MY WAY</h2>
+        <p>언제나 배우려는 겸손한 자세로<br>
+			한 걸음씩 열심히 나아가는<br>
+			감각적인 멀티 디자이너가 되는 것...
+		</p>
+        <h3>CONTACT ME</h3>
+        <div class="resume">
+        	<a href="SEO_U_Rim_Resume.pdf"><img src="img/resume.png" alt=""></a>
+        </div>
+        <div class="contact_wrap">
+        	<div class="contact">
+            	<a href="#"><img src="img/footer_phone.png" alt="">010.2003.3817</a>
+                <a href="#"><img src="img/footer_email.png" alt="">damda3817@naver.com</a>
+                <a href="http://dbfla24.dothome.co.kr"><img src="img/footer_pc.png" alt="">dbfla24.dothome.co.kr</a>
+            </div>
+        </div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
