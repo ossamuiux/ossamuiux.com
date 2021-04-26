@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--모바일 viewport 세팅
+width=device-width 접속한 장치의 가로길이만큼 모바일화면 사이즈 맞추기
+initial-scale=1.0 처음 접속했을때 화면비율
+minimum-scale=1.0 화면축소했을때의 비율
+maximum-scale=3.0 최대 화면확대 비율
+user-scalable=yes 화면확대축소설정
+* 아이폰에서 no가 작동하지않음
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>정직한 이름, 모닝글로리</title>
+<meta name="description" content="MorningGlory">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MorningGlory">
+<meta property="og:url" content="http://tyhj2960.dothome.co.kr/m/morningglory/index.html">
+<meta property="og:image" content="http://www.ossamuiux.com/m2/subway/subway_og.png">
+<meta property="og:description" content="MorningGlory">
+<!-- 아이폰 전화번호 자동링크 방지-->
+<meta name="format-detection" content="telephone=no">
+<!-- 모바일브라우져에서 홈화면에 추가기능 사용시 나오는 아이콘(64,72px png로 등록)-->
+<link rel="apple-touch-icon-precomposed" href="http://www.ossamuiux.com/m2/subway/mobile_android_7272.png">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h2 class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></h2>
+        <button class="btn_menu" type="button">메뉴</button>
+        <div class="dimm"></div>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <a class="shop" href="#"><p>Shop</p></a>
+<!--                <h2>정직한 이름, 모닝글로리</h2>-->
+                <button class="btn_close">닫기</button>
+            </div>
+            <div class="gnb_scroll">
+
+                <ul class="gnb">
+                    <li><a href="#">회사소개<span class="more_cross"></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">모닝글로리 소개</a></li>
+                            <li><a href="#">경영이념 및 비젼</a></li>
+                            <li><a href="#">사업소개<span class="more_cross"></span></a> 
+                                <ul class="depth3">
+                                <li><a href="#">&minus; 온라인 사업</a></li>
+                                <li><a href="#">&minus; 해외 사업</a></li>
+                                <li><a href="#">&minus; 특판 사업</a></li>
+                                <li><a href="#">&minus; 가맹점 사업</a></li>
+                                <li><a href="#">&minus; 사업 제휴</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="#">인재 채용<span class="more_cross"></span></a>
+                            <ul class="depth3">
+                                <li><a href="#">&minus; 채용 안내</a></li>
+                                <li><a href="#">&minus; 채용 공고</a></li>
+                            </ul>
+                                </li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제품소개<span class="more_cross"></span></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">생산ㆍ취급제품<span class="more_cross"></span></a>    <ul class="depth3">
+                                    <li><a href="product.html">&minus; 문구</a></li>
+                                    <li><a href="#">&minus; 패션잡화</a></li>
+                                    <li><a href="#">&minus; 생활용품</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">디자인 연구소<span class="more_cross"></span></a>
+                                <ul class="depth3">
+                                    <li><a href="productDesignLab.html">&minus; 디자인연구소 소개</a></li>
+                                    <li><a href="#">&minus; 디자인연구소 연혁</a></li>
+                                    <li><a href="#">&minus; 일인전담제</a></li>
+                                    <li><a href="#">&minus; 노트만들기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">캐릭터 소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">가맹점 안내<span class="more_cross"></span></a>
+                        <ul class="depth2">
+                                <li><a href="#">가맹점 소개</a></li>
+                                <li><a href="#">가맹점 찾기</a></li>
+                                <li><a href="#">신규가맹점 안내</a></li>
+                                <li><a href="#">사업설명회 신청</a></li>
+                        </ul></li>
+                    <li><a href="#">고객센터<span class="more_cross"></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">뉴스 및 공지사항</a></li>
+                            <li><a href="#">고객지원<span class="more_cross"></span></a>
+                                <ul class="depth3">
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">자주 묻는 질문</a></li>
+                                    <li><a href="inquiry.html">1:1 문의</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">E카타로그</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="gnb_bottom">
+                    <div class="gnb_sns">
+                    <a href="#"><img src="images/sns_face.png" alt=""></a>
+                    <a href="#"><img src="images/sns_blog.png" alt=""></a>
+                    <a href="#"><img src="images/sns_twitter.png" alt=""></a>
+                    <a href="#"><img src="images/sns_insta.png" alt=""></a>
+                </div>
+                    <div class="gnb_lang">
+                        <a href="#" class="active">KOR</a>
+                        <a href="#">ENG</a>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <main id="container" class="product_page">
+        <div class="sub_visual">
+            <img src="images/morning_glory_sub2_02.jpg" alt="container">
+            <h2>생산ㆍ취급제품</h2>
+        </div>
+        <div class="sub_location">
+            <button class="btn btn_location" type="button">문구<span class="more_cross location_more_cross"></span></button>
+            <ul class="list_location">
+                <li><a href="#">패션잡화</a>
+                </li>
+                <li><a href="#">생활용품</a></li>
+            </ul>
+        </div>
+        <section class="section1">
+            <h3 class="blind">문구</h3>
+            <ul class="product_list">
+                <li><a href="#">
+                   <div class="product_image"><img src="images/sub_product_page1_01.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>마하펜 시리즈</h2>
+                        <p>1000만자루 판매신화</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_02.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>그랜드볼 시리즈</h2>
+                        <p>300원의 저렴한 가격으로 만날 수 있는 우수한 품질</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_03.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>모닝펜 시리즈</h2>
+                        <p>높은 품질의 저점도 잉크를 사용한 부드러운 필기감</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_04.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>K칼라 3색 볼펜</h2>
+                        <p>심플한 디자인의 3색 볼펜</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_05.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>듀얼 캘리펜</h2>
+                        <p>두가지 타입의 펜촉으로 다양한 스타일의 손글씨를 쓸 수 있는 캘리그라피 전용</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_06.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>듀얼 브러쉬펜</h2>
+                        <p>유연한 브러쉬팁과 깔끔한 드로잉팁 두가지를 결합한 제품</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_07.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>녹스 형광펜</h2>
+                        <p>노크타입 개폐방식이며, 오토클립을 적용</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_08.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>마하 형광펜 시리즈</h2>
+                        <p>탱크타입으로 오랫동안 사용이가능</p>
+                        </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_09.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>3500 12색 수성 싸인펜</h2>
+                        <p>수성타입 싸인펜. KC마크를 획득한 안전하고 퀄리티가 우수한 제품</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_10.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>4000 삼각싸인펜</h2>
+                        <p>수성타입 싸인펜. KC마크를 획득한 안전하고 퀄리티가 우수한 제품</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_11.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>18000 아티스트 수채색연필</h2>
+                        <p></p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_12.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>3000 유성색연필</h2>
+                        <p></p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_13.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>1000 에너제도 샤프</h2>
+                        <p>인체공학적 유선형 모양</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_14.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>1500 제노 XT 샤프펜</h2>
+                        <p>손이 미끄러지지않고 부드럽게 잡을 수 있는 그립. 피로감이 적은 필기감</p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_15.jpg" alt=""></div>
+                    <div class="product_txt">
+                            <h2>1500 러블리베어 샤프</h2>
+                            <p></p>
+                    </div></a>
+                </li>
+                <li><a href="#">
+                    <div class="product_image"><img src="images/sub_product_page1_16.jpg" alt=""></div>
+                    <div class="product_txt">
+                        <h2>3000 트라이핏 샤프</h2>
+                        <p>고급스런 펄감의 바디와 삼각모양의 자연스럽고 편안한 그립감</p>
+                    </div></a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="top_footer">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">가맹점안내</a></li>
+            </ul>
+            <p><a class="tel" href="tel:02-2179-0240">[고객센터] 02-2179-0240</a></p>
+        </div>
+        <div class="bottom_footer">
+            <p>
+                법인명 : (주)모닝글로리&emsp;&ensp;대표자 : 허상일<br>사업자등록번호안내 : 105-81-63968<br>통신판매업신고번호 제2015-화성향남-0089호<br>
+                대표전화 : <a class="tel2" href="tel:02-719-0400">02-719-0400</a>&emsp;&ensp;팩스 : 02-2179-0228<br>경기도 화성시 향남읍 장안로 781-55 [18582]<br>개인정보관리책임자: 박상호(shpark@morningglory.co.kr)<br>Copryight (C) 2013 morningglory. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
