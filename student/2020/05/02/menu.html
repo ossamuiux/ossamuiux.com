@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 모바일 viewport 세팅
+width =device-width접속한 장치의 가로길이만큼 모바일화면 사이즈 맞추기
+initial-scale=1.0 처음 접속했을때 화면비율
+minimum-scale=1.0 화면축소했을때의 비율
+user-scalable=yes 화면 확대축소설정
+* 아이폰에서 no가 작동하지않음
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>BillyAngel</title>
+<meta name="description" content="케익전문점, 디저트카페, 조각케이크, 창업 등 안내">
+<!-- 아이폰 전화번호 자동링크 방지 -->
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="billyangel">
+<meta property="og:url" content="http://hy6110.dothome.co.kr/mBillyAngel/">
+<meta property="og:image" content="http://hy6110.dothome.co.kr/mBillyAngel/open_graph.png">
+<meta property="og:description" content="케익전문점, 디저트카페, 조각케이크, 창업 등 안내">
+<!-- 모바일브라우저에서 홈화면에 추가기능 사용시 나오는 아이콘(36,72px png롤 등록) -->
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://hy6110.dothome.co.kr/mBillyAngel/mobile_ios_iphone_180.png">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <a class="link_store" href="#"><span class="blind">매장찾기 링크</span></a>
+        <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="빌리엔젤"></a></h1>
+        <button class="btn_sidemenu" type="button">사이드메뉴</button>
+        <div class="dimm"></div>
+        <!-- gnb -->
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <button class="btn_close" type="button">사이드메뉴닫기</button>
+                <ul class="gnb_sns">
+                    <li><a href="#"><img src="images/ico_facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/ico_twitter.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/ico_instagram.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="gnb_scroll">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">Brand<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="brand.html">브랜드 소개</a></li>
+                            <li><a href="brand.html">HACCP</a></li>
+                            <li><a href="brand.html">Billy Angel CI/BI</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="menu.html">케이크</a></li>
+                            <li><a href="menu02.html">음료</a></li>
+                            <li><a href="menu03.html">빙수</a></li>
+                            <li><a href="menu04.html">케이크 예약</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Event<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Store<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Catering<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">케이터링 서비스</a></li>
+                            <li><a href="#">대관 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">프랜차이즈 문의</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /gnb -->
+    </header>
+    <main id="container" class="menu_page">
+        <div class="sub_visual">
+            <img src="images/sub_visual_menu.png" alt="">
+            <h2 class="sub_visual_tit">Menu</h2>
+        </div>
+        <div class="sub_location">
+            <ul class="list_location">
+                <li class="active"><a href="#">Cake</a></li>
+                <li><a href="#">Beverage</a></li>
+                <li><a href="#">BingSu</a></li>
+                <li><a href="#">Cake Reservation</a></li>
+            </ul>
+        </div>
+        <div class="content menu_cake on">
+            <h2 class="tab_tit">Cake</h2>
+            <ul class="list_menu list_cake">
+                <li>
+                    <a class="best" href="#">
+                        <img src="images/cake01.png" alt="">
+                        <h4>Maximum Chocolate Cake</h4>
+                    </a>
+                    <a class="best" href="#">
+                        <img src="images/cake02.png" alt="">
+                    <h4>Galaxy Cake</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/cake01.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Maximum Chocolate Cake</h4>
+                        <p>벨기에산 초콜릿과 이탈리아산 초콜릿으로 적절히 믹스해 쓰지도 너무 달지도 않은 맛있는 초콜릿 크레이프 케이크</p>
+                    </div>
+                    <em>8,500원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/cake02.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Galaxy Cake</h4>
+                        <p>플레인과 초코크림치즈로 아름다운 우주를 가득 표현한 빌리엔젤의 감성 케이크</p>
+                    </div>
+                    <em>7,500원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <li>
+                    <a href="#">
+                        <img src="images/cake03.png" alt="">
+                        <h4>Rainbow Cheese Cake</h4>
+                    </a>
+                    <a href="#">
+                        <img src="images/cake04.png" alt="">
+                    <h4>Red velvet Cake</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/cake03.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Rainbow Cheese Cake</h4>
+                        <p>특유의 레인보우 색감과 진한 크림치즈에 요구르트의 신맛을 플러스 시킨 빌리엔젤 명성에 어울리는 신제품 케이크</p>
+                    </div>
+                    <em>7,800원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/cake04.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Red velvet Cake</h4>
+                        <p>레드 카카오로 만든 초코 시트에 진하고 부드러운 크림치즈가 듬뿍 샌드된 케이크</p>
+                    </div>
+                    <em>7,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+            </ul>
+            <div class="btn_wrap">
+                <button class="btn_list_more">더보기</button>
+            </div>
+        </div>
+        <div class="content menu_beverage">
+            <h2 class="tab_tit">Beverage</h2>
+            <ul class="list_menu list_beverage">
+                <li>
+                    <a class="best" href="#">
+                        <img src="images/beverage01.png" alt="">
+                        <h4>Americano</h4>
+                    </a>
+                    <a class="best" href="#">
+                        <img src="images/beverage02.png" alt="">
+                    <h4>Cafe Late</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/beverage01.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Americano</h4>
+                        <p>아메리카노</p>
+                    </div>
+                    <em>HOT 4,600원 / ICE 4,800원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/beverage02.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Cafe Late</h4>
+                        <p>카페라떼</p>
+                    </div>
+                    <em>HOT 5,100원 / ICE 5,300원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <li>
+                    <a href="#">
+                        <img src="images/beverage03.png" alt="">
+                        <h4>Cafe Mocha</h4>
+                    </a>
+                    <a href="#">
+                        <img src="images/beverage04.png" alt="">
+                    <h4>Cappuccino</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/beverage03.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Cafe Mocha</h4>
+                        <p>카페모카</p>
+                    </div>
+                    <em>HOT 5,600원 / ICE 5,800원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/beverage04.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Cappuccino</h4>
+                        <p>카푸치노</p>
+                    </div>
+                    <em>HOT 5,800원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+            </ul>
+            <div class="btn_wrap">
+                <button class="btn_list_more">더보기</button>
+            </div>
+        </div>
+        <div class="content menu_bingsu">
+            <h2 class="tab_tit">BingSu</h2>
+            <ul class="list_menu list_bingsu">
+               <li>
+                    <a href="#">
+                        <img src="images/bingsu01.png" alt="">
+                        <h4>Strawberry Banana Milk Bingsu</h4>
+                    </a>
+                    <a href="#">
+                        <img src="images/bingsu02.png" alt="">
+                    <h4>Red Bean Bingsu</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/bingsu01.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Strawberry Banana Milk Bingsu</h4>
+                        <p>딸기 바나나 우유 빙수</p>
+                    </div>
+                    <em>13,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/bingsu02.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Red Bean Bingsu</h4>
+                        <p>팥빙수</p>
+                    </div>
+                    <em>12,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <li>
+                    <a class="best" href="#">
+                        <img src="images/bingsu03.png" alt="">
+                        <h4>Choco Macaron Bingsu</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/bingsu03.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Choco Macaron Bingsu</h4>
+                        <p>초코 마카롱 빙수</p>
+                    </div>
+                    <em>13,500원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+            </ul>
+            <div class="btn_wrap">
+                <button class="btn_list_more">더보기</button>
+            </div>
+        </div>
+        <div class="content menu_cake_reservation">
+            <h2 class="tab_tit">Birthday Cake Reservation</h2>
+            <ul class="list_menu list_cake_reserv">
+                <li>
+                    <a class="best" href="#">
+                        <img src="images/whole_cake01.png" alt="">
+                        <h4>Maximum Chocolate Cake</h4>
+                    </a>
+                    <a class="best" href="#">
+                        <img src="images/whole_cake02.png" alt="">
+                    <h4>Galaxy Cake</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/whole_cake01.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Maximum Chocolate Cake</h4>
+                        <p>벨기에산 초콜릿과 이탈리아산 초콜릿으로 적절히 믹스해 쓰지도 너무 달지도 않은 맛있는 초콜릿 크레이프 케이크</p>
+                    </div>
+                    <em>2호 45,000원 / 4호 68,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/whole_cake02.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Galaxy Cake</h4>
+                        <p>플레인과 초코크림치즈로 아름다운 우주를 가득 표현한 빌리엔젤의 감성 케이크</p>
+                    </div>
+                    <em>2호 39,000원 / 4호 58,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <li>
+                    <a href="#">
+                        <img src="images/whole_cake03.png" alt="">
+                        <h4>Rainbow Cheese Cake</h4>
+                    </a>
+                    <a href="#">
+                        <img src="images/whole_cake04.png" alt="">
+                    <h4>Red velvet Cake</h4>
+                    </a>
+                </li>
+                <div class="product_detail_wrap">
+                <div class="product_detail">
+                    <img src="images/whole_cake03.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Rainbow Cheese Cake</h4>
+                        <p>특유의 레인보우 색감과 진한 크림치즈에 요구르트의 신맛을 플러스 시킨 빌리엔젤 명성에 어울리는 신제품 케이크</p>
+                    </div>
+                    <em>4호 63,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+                <div class="product_detail_wrap">   
+                <div class="product_detail">
+                    <img src="images/whole_cake04.png" alt="">
+                    <div class="txt_wrap">
+                        <h4>Red velvet Cake</h4>
+                        <p>레드 카카오로 만든 초코 시트에 진하고 부드러운 크림치즈가 듬뿍 샌드된 케이크</p>
+                    </div>
+                    <em>1호 30,000원 / 2호 40,000원 / 4호 57,000원</em>
+                    <button class="btn_close" type="button">상품상세 닫기</button>
+                </div>
+                </div>
+            </ul>
+            <div class="btn_wrap">
+                <button class="btn_list_more">더보기</button>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <img src="images/footer_logo.png" alt="">
+        <div class="footer_wrap">
+            <p>(주)그래닉스 / GRANIX</p>
+            <p>사업자등록번호 120-87-84624</p>
+            <p>서울지사 _ 서울시 강남구 역삼동 819 케이스 퀘어 강남 타워 13<br>TEL  <a class="tel" href="tel:02-512-6257">02)512-6257</a> / FAX  070-5051-8119</p>
+            <p>© 2017 BILLY ANGEL, LLC, All Rights Reserved</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

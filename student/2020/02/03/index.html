@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>Museum SAN 홈페이지 방문을 환영합니다.</title>
+<meta name="description" content="반응형기본세팅">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Museum SAN">
+<meta property="og:url" content="http://uureach.dothome.co.kr/rwd/museumSan">
+<meta property="og:image" content="http://uureach.dothome.co.kr/rwd/museumSan/museumSan_og.jpg">
+<meta property="og:description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<!-- 아이폰 전화번호 자동링크 방지-->
+<meta name="format-detection" content="telephone=no">
+<!-- 모바일 브라우져에서 홈 화면에 추가기능 사용시 나오는 아이콘으로 36*36px, 72*72px로 등록-->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="mobile_ios_iphone_120120.png">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header_inner">
+            <h1 class="logo"><a href="index.html"></a></h1>
+            <nav class="gnb_wrap">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">뮤지엄</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">관장님 인사말</a></li>
+                                <li><a href="#">뮤지엄 스토리</a></li>
+                                <li><a href="#">뮤지엄 건축</a></li>
+                                <li><a href="#">MI 소개</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">현재 전시</a></li>
+                                <li><a href="#">과거 전시</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">제임스터렐관</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">작가 소개</a></li>
+                                <li><a href="#">작품 소개</a></li>
+                                <li><a href="#">Coloful Night<br>프로그램</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">명상관</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">공간 소개</a></li>
+                                <li><a href="#">상설 프로그램</a></li>
+                                <li><a href="#">스페셜 프로그램</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">판화공방</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">프로그램</a></li>
+                                <li><a href="#">신진판화 프로젝트</a></li>
+                                <li><a href="#">공방 소개</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">안내</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">관람안내</a></li>
+                                <li><a href="#">뮤지엄 소식</a></li>
+                                <li><a href="#">멤버십 안내</a></li>
+                                <li><a href="#">부대시설</a></li>
+                                <li><a href="#">대관안내</a></li>
+                                <li><a href="#">홍보</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">예약</a>
+                        <div class="depth2_wrap">
+                            <ul class="depth2">
+                                <li><a href="#">단체 예약</a></li>
+                                <li><a href="#">Colorful Night<br>예약</a></li>
+                                <li><a href="#">명상관 예약</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util_wrap">
+                <ul class="util">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">SNS</a></li>
+                </ul>
+            </div>
+            <button class="btn_menu" type="button">모바일메뉴열기</button>
+            <div class="dimm"></div>
+            <div class="m_gnb_wrap">
+                <div class="m_gnb_top">
+                    <img src="images/m_gnb_logo.png" alt="">
+                    <button class="btn_close" type="button">모바일메뉴닫기</button>
+                    <a href="#">로그인및회원가입</a>
+                </div>
+                <div class="m_gnb_bottom">
+                    <ul class="m_gnb">
+                        <li>
+                            <a href="#">뮤지엄</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">관장님 인사말</a></li>
+                                    <li><a href="#">뮤지엄 스토리</a></li>
+                                    <li><a href="#">뮤지엄 건축</a></li>
+                                    <li><a href="#">MI 소개</a></li>
+                                    <li><a href="#">찾아오시는 길</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">전시</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">현재 전시</a></li>
+                                    <li><a href="#">과거 전시</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">제임스터렐관</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">작가 소개</a></li>
+                                    <li><a href="#">작품 소개</a></li>
+                                    <li><a href="#">Colorful Night 프로그램</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">명상관</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">공간 소개</a></li>
+                                    <li><a href="#">상설 프로그램</a></li>
+                                    <li><a href="#">스페셜 프로그램</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">판화공방</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">프로그램</a></li>
+                                    <li><a href="#">신진판화 프로젝트</a></li>
+                                    <li><a href="#">공방 소개</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">안내</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">관람안내</a></li>
+                                    <li><a href="#">뮤지엄 소식</a></li>
+                                    <li><a href="#">멤버십 안내</a></li>
+                                    <li><a href="#">부대시설</a></li>
+                                    <li><a href="#">대관안내</a></li>
+                                    <li><a href="#">홍보</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">예약</a>
+                            <div class="m_depth2_wrap">
+                                <ul>
+                                    <li><a href="#">단체 예약</a></li>
+                                    <li><a href="#">Colorful Night 예약</a></li>
+                                    <li><a href="#">명상관 예약</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="m_gnb_sns">
+                    <li><a href="#"><img src="images/sns1.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/sns2.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>  
+    </header>
+    
+    <main id="main">
+        <div class="swiper-container main_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider1"></div>
+                <div class="swiper-slide slider2"></div>
+                <div class="swiper-slide slider3"></div>
+            </div>
+        </div>
+        <section class="section1">
+            <div class="section1_inner">
+                <h2>전시</h2>
+                <div class="show1">
+                    <div class="swiper-container show_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider1">
+                                <a href="#">
+                                    <img src="images/show1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide slider2">
+                                <a href="#">
+                                    <img src="images/show2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide slider3">
+                                <a href="#">
+                                    <img src="images/show3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="show2">
+                    <a href="#"><img src="images/section2_1.jpg" alt="명상관"></a>
+                    <div class="show2_inner">
+                        <h3><a href="#">명상관</a></h3>
+                        <button class="btn_more" type="button"></button>
+                        <div class="pp"><p>나를 발견하는 여행이시작되는 이 곳,</p><p>뮤지엄산 ‘명상관’이 여러분을 기다립니다.</p></div>
+                        <span>9월 프로그램 안내</span>
+                        <ul class="program_list">
+                            <li><a href="#">[가을, 향기명상]</a></li>
+                            <li><a href="#">[내 안의 평화로움을 발견하는 명상]</a></li>
+                            <li><a href="#">[음악명상 콘서트: 어른이를 위한 자장가]</a></li>
+                            <li><a href="#">[자신과의 관계를 위한 ‘자애명상1’]</a></li>
+                            <li><a href="#">[존재의 고요함을 위한 ‘평온 명상’]</a></li>
+                            <li><a href="#">[가을, 향기와 차 명상]</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="show3">
+                    <a href="#"><img src="images/section2_2.jpg" alt="제임스퍼렐"></a>
+                    <div class="show3_inner">
+                        <h3><a href="#">JAMES TURRELL</a></h3>
+                        <button class="btn_more" type="button"></button>
+                        <ul class="room_list">
+                            <li><a href="#">Skyspace</a></li>
+                            <li><a href="#">Space-Division</a></li>
+                            <li><a href="#">Horizon Room</a></li>
+                            <li><a href="#">Wedgework</a></li>
+                            <li><a href="#">Ganzfeld</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </section>
+        <section class="section2">
+            <div class="section2_inner">
+                <h2>판화공방</h2>
+                <ul class="program_wrap">
+                    <li>
+                        <a href="#">
+                            <img src="images/section3_1.jpg" alt="">
+                            <div class="txt">
+                                <em>판화특강</em>
+                                <p>권오신 작가의 Planography-Monotype</p>
+                            </div>
+                                <span>접수기간 : 2019.09.29~2019.09.29</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/section3_2.jpg" alt="">
+                            <div class="txt">
+                                <em>상시체험</em>
+                                <p>판화로 만드는 패브릭 아이템</p>
+                            </div>
+                                <span>접수기간 : 2019.01.01~2019.12.31</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/section3_3.jpg" alt="">
+                            <div class="txt">
+                                <em>대상맞춤</em>
+                                <p>아티스트 터널북 만들기</p>
+                            </div>
+                                <span>접수기간 : 2019.04.01~2019.12.31</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="section3_inner">
+                <h2>뮤지엄 소식</h2>
+                <div class="news_wrap">
+                    <h3>공지사항</h3>
+                    <button class="btn_more" type="button">더보기</button>
+                    <ul class="news">
+                        <li>
+                            <a href="#">
+                                <p>[명상관]</p>
+                                <em>9월-10월 스페셜 PRO_사전 예약 중</em>
+                                <span>2019.08.27</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>[무료이벤트]</p>
+                                <em>제16회 평창 대관령 음악제, 찾아가는…</em>
+                                <span>2019.07.29</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>[명상관]</p>
+                                <em>7-8월 스페셜 명상</em>
+                                <span>2019.07.21</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reservation_wrap">
+                    <h3>예약 및 안내사항</h3>
+                    <button class="btn_more" type="button">더보기</button>
+                    <ul class="reservation">
+                        <li>
+                            <a href="#">
+                                <img src="images/reservation1.png" alt="">
+                                <span></span>
+                                <p>단체<br>관람</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/reservation2.png" alt="">
+                                <span></span>
+                                <p>Colorful<br>Night<br>예약</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/reservation3.png" alt="">
+                                <span></span>
+                                <p>명상관<br>예약</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer">
+        <div class="footer_inner">
+            <img src="images/logo_on.png" alt="">
+            <ul class="footer_txt">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+            </ul>
+            <address>
+                26357 강원도 원주시 지정면 오크밸리 2길 260 Museum SAN
+            </address>
+            <span class="copy">copyright (c) Museum SAN. all rights reserved</span>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

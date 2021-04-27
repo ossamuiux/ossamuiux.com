@@ -18,10 +18,6 @@
 <link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
 <link rel="stylesheet" href="css/main.css?v=<?php echo time() ?>">
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/main.js?v=<?php echo time() ?>"></script>
 </head>
 <body>
 <div id="skipNavi">
@@ -84,6 +80,101 @@ what do you want?</p>
             <!-- 메인 슬라이더 -->
             <div class="swiper-container main_slider">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h2 class="tit">2020</h2>
+                        <!-- 수강생 산출물 슬라이더-->
+                        <div class="swiper-container list_student">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3>01 &mdash; 김윤지<span class="training_time">강의시간 - 840h</span></h3>
+                                    <div class="link_student">
+                                        <a href="http://ossamuiux.com/student/2020/01/01" target="_blank">
+                                            <h4>Desktop</h4>
+                                            <img src="images/1.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/01/02" target="_blank">
+                                            <h4>Mobile</h4>
+                                            <img src="images/2.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/01/03" target="_blank">
+                                            <h4>Rwd</h4>
+                                            <img src="images/3.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>02 &mdash; 김지혜</h3>
+                                    <div class="link_student">
+                                        <a href="http://ossamuiux.com/student/2020/02/01" target="_blank">
+                                            <h4>Desktop</h4>
+                                            <img src="images/4.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/02/02" target="_blank">
+                                            <h4>Mobile</h4>
+                                            <img src="images/5.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/02/03" target="_blank">
+                                            <h4>Desktop</h4>
+                                            <img src="images/6.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>03 &mdash; 이다미</h3>
+                                    <div class="link_student">
+                                        <a href="http://ossamuiux.com/student/2020/03/01" target="_blank">
+                                            <h4>Desktop</h4>
+                                            <img src="images/7.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/03/02" target="_blank">
+                                            <h4>Mobile</h4>
+                                            <img src="images/8.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/03/03" target="_blank">
+                                            <h4>Rwd</h4>
+                                            <img src="images/9.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>04 &mdash; 임재형</h3>
+                                    <div class="link_student">
+                                        <a href="http://ossamuiux.com/student/2020/04/01" target="_blank">
+                                            <h4>Desktop</h4>
+                                            <img src="images/10.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/04/02" target="_blank">
+                                            <h4>Mobile</h4>
+                                            <img src="images/11.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/04/03" target="_blank">
+                                            <h4>Rwd</h4>
+                                            <img src="images/12.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>05 &mdash; 조하연</h3>
+                                    <div class="link_student">
+                                        <a href="http://ossamuiux.com/student/2020/05/01" target="_blank">
+                                            <h4>Desktop</h4>
+                                            <img src="images/13.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/05/02" target="_blank">
+                                            <h4>Mobile</h4>
+                                            <img src="images/14.png" alt="">
+                                        </a>
+                                        <a href="http://ossamuiux.com/student/2020/05/03" target="_blank">
+                                            <h4>Rwd</h4>
+                                            <img src="images/15.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <!-- //수강생 산출물 슬라이더-->
+                    </div>
                     <div class="swiper-slide">
                         <h2 class="tit">2019</h2>
                         <!-- 수강생 산출물 슬라이더-->
@@ -980,20 +1071,13 @@ what do you want?</p>
                 </div>
                 <div class="swiper-scrollbar"></div>
             </div>
-<!-- //메인 슬라이더 -->
+            <!-- //메인 슬라이더 -->
         </section>
     </div>
 </div>
-<script>
-(function(w, d, a){
-	w.__beusablerumclient__ = {
-		load : function(src){
-			var b = d.createElement("script");
-			b.src = src; b.async=true; b.type = "text/javascript";
-			d.getElementsByTagName("head")[0].appendChild(b);
-		}
-	};w.__beusablerumclient__.load(a);
-})(window, document, '//rum.beusable.net/script/b190606e153201u510/ce7a25100e');
-</script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
 </body>
 </html>

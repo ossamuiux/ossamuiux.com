@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--모바일 viewport 세팅
+width=device-width 접속한 장치의 가로길이만큼 모바일화면 사이즈 맞추기
+initial-scale=1.0 처음 접속했을때 화면비율
+minimum-scale=1.0 화면축소했을때의 비율
+maximum-scale=3.0 최대 화면확대 비율
+user-scalable=yes 화면확대축소설정
+* 아이폰에서 no가 작동하지않음
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>안동 하회마을</title>
+<meta name="description" content="한국의 미와 전통이 살아있는 역사마을">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SUBWAY">
+<meta property="og:url" content="http://www.ossamuiux.com/m2/subway/">
+<meta property="og:image" content="http://www.ossamuiux.com/m2/subway/subway_og.png">
+<meta property="og:description" content="신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이">
+<!-- 아이폰 전화번호 자동링크 방지-->
+<meta name="format-detection" content="telephone=no">
+<!-- 모바일브라우져에서 홈화면에 추가기능 사용시 나오는 아이콘(36,72px png로 등록)-->
+<link rel="apple-touch-icon-precomposed" href="http://www.ossamuiux.com/subway/mobile_android_7272.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:300,500,700&display=swap&subset=korean" rel="stylesheet">
+
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+
+</head>
+<body>
+<div id="wrap">
+<header id="header">
+    <h1 class="logo">
+        <a href="http://dlawogud33.dothome.co.kr/mHahoeVillage/"><img src="images/logo_white.png" alt=""></a>
+    </h1>
+    <button type="button" class="btn_sidemenu">사이드메뉴</button>
+    <div class="background"></div>
+    <div class="gnb_wrap">
+        <div class="top_gnb">
+            <h1 class="logo"><img src="images/logo_white.png" alt=""></h1>
+            <button type="button" class="btn_close">닫기버튼</button>
+        </div>
+        <div class="gnb_util">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+        <div class="gnb_list_wrap">
+            <ul class="gnb_list">
+             <li><a href="#">세계유산</a>
+                        <ul class="depth2">
+                            <li><a href="#">유네스코 등재</a></li>
+                            <li><a href="#">등재기준</a></li>
+                            <li><a href="#">마을 문화유산</a></li>
+                            <li><a href="#">안동하회마을 보존회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">마을의 문화</a>
+                        <ul class="depth2">
+                            <li><a href="#">하회탈</a></li>
+                            <li><a href="#">징비록</a></li>
+                            <li><a href="#">종손가문적</a></li>
+                            <li><a href="#">종손가유물</a></li>
+                            <li><a href="#">하회의장인들</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">체험프로그램</a>
+                        <ul class="depth2">
+                            <li><a href="#">의례프로그램</a></li>
+                            <li><a href="#">민속프로그램</a></li>
+                            <li><a href="#">교육프로그램</a></li>
+                            <li><a href="#">문화프로그램</a></li>
+                        </ul>
+                    <li>
+                    <li><a href="#">관광안내</a>
+                        <ul class="depth2">
+                            <li><a href="#">드리는말씀</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                            <li><a href="#">안내센터</a></li>
+                            <li><a href="#">관광안내도</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">기념품구매 안내</a>
+                            <li><a href="#">식당 안내</a>
+                            <li><a href="#">민박 안내</a>
+                            <li><a href="#">마을홈페이지 안내</a>
+                        </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">자료실</a>
+                        <ul class="depth2">
+                            <li><a href="#">기사(보도)자료</a></li>
+                            <li><a href="#">사진 자료</a></li>
+                            <li><a href="#">간행물 자료</a></li>
+                            <li><a href="#">주제와 생각</a></li>
+                            <li><a href="#">하회마을문화재 자료</a></li>
+                        </ul>
+                    </li>
+        </ul>
+        </div>
+        <ul class="lang_list">
+            <li class="active"><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+            <li><a href="#">CHI</a></li>
+            <li><a href="#">JPN</a></li>
+        </ul>
+    </div>
+</header>
+<main id="main">
+    <div class="main_visual">
+        <h2>마을의 문화</h2>
+    </div>
+    <div class="btn_wrap">
+        <button class="btn_menu" type="button">하회탈</button>
+        <ul class="menu_list">
+            <li><a href="#">징비록</a></li>
+            <li><a href="#">종손가문적</a></li>
+            <li><a href="#">종손가유물</a></li>
+            <li><a href="#">하회의 장인들</a></li>
+        </ul>
+    </div>
+    <div class="mask_info">
+        <h2>국보 제 1212호 <span>‘ 하회탈 ’</span></h2>
+        <p>하회탈은 우리 나라에서 현존하는 가장 오래된 탈로서<br>
+        지금은 각시,중,양반,선비, 초랭이,이매,부네,백정,할미<br>
+        9개의 탈들만 전해지며, 3개의 탈이 분실되었다.</p>
+        <img src="images/sub_mask.jpg" alt="하회탈">
+        <div class="text_box">
+            <p>우리나라 학계에서는 먼저 그 소중함을 알아주지 않던
+            중에 류한상 전 안동문화원장이 하회탈을 맥타카드
+            (Arther Joseph Mactaggart)교수에게 소개하여,
+            1954년 그 가치를 인정하여 해외 학계에 발표함으로
+            써 하회탈이 세계제일의 가면으로 극찬을 받았으며, 
+            후에 국내 학계에서도 활발히 연구하여 국보로 인정
+            하게 되었다.<br><br>
+            하회탈의 작가는 허도령이라고 전해지고 있으며, 허도
+            령에게는 사랑하는 처녀가 있었는데,,허도령이 신의 계
+            시를 받고 탈의 조각을 위하여 홀로 외딴 집으로 가기전
+            에 탈을 완성하기까지는 절대로 찾아오지 말고 기다려
+            달라!고 말하였으나, 오래 기다리던 처녀가 사모하는 정
+            을가누지 못하고 허도령이 혼자 있는 집을 찾아가서 차
+            마 문을 열지는 못하고 문구멍을 뚫어서 안을 들어다 보
+            는 중 허도령은 이를 보자 부정을 타서 죽었다고 한다.</p>
+        </div>
+        <img src="images/sub_mask_01.jpg" alt="">
+        <div class="text_box">
+            <p>이것은 우리의 문화유산에 대하여 겉으로만 보지 말고 
+            깊이 연구하여, 그 소중함을 알아야 함을 우리에게 시
+            사한다. 잃어버린 탈(총각탈, 떡다리탈, 별채탈)을 저명
+            한 조각가와 화가 및 미술사관련 전문가들로 하여금 복
+            원을 추진하기도 하였으나, 운보 김기창 화백과 그 일행
+            이 하회탈을 면밀히 감상해 보고서 하회탈의 오묘한 이
+            치와 조형적 탁월성에 놀라 자기들로서는 복원이 불가
+            능하다.라고 하였다는 에피소드가 있다.</p>
+        </div>
+        <img src="images/sub_mask_02.jpg" alt="">
+        <div class="text_box">
+            <p>이것을 현대적으로 해석하면 신의 계시란 강렬한 예술
+            적 영감을 의미하며 부정을 타서 죽었다.란 심혈을 다
+            하여 작업 중에 있던 허도령이 영감이 흩어지게 되자 쇼
+            크에 의한 사망으로 생각되며, 이처럼 목숨바쳐 이룩한
+            작품이기에 오늘날 세계 제일의 가면으로 되어 있다.</p>
+        </div>
+        <h2 class="mask_list_title">하회탈 종류</h2>
+        <img class="mask_list" src="images/sub_mask_03.jpg" alt="">
+    </div>
+</main>
+<footer id="footer">
+    <ul class="logo_wrap">
+        <li class="unesco"><img src="images/logo_unesco.png" alt=""></li>
+        <li class="logo"><img src="images/logo_white.png" alt=""></li>
+    </ul>
+    <p>전화 : (054) 853-0109 / 팩스 : (054) 853-4331<br>
+    주소 : (36760) 경북 안동시 풍천면 하회종가길 2-1<br>
+    Copyright ⓒ 2002~2015 (사)안동하회마을보존회 All rights reserved.</p>
+    <div class="family_site">
+        <button class="btn_familysite" type="button">Family Site</button>
+        <ul class="family_list">
+            <li><a href="#">가경재</a></li>
+            <li><a href="#">가람 초연재</a></li>
+            <li><a href="#">덕여재</a></li>
+            <li><a href="#">세계 탈박물관</a></li>
+            <li><a href="#">지산고택</a></li>
+            <li><a href="#">양진당</a></li>
+        </ul>
+    </div>
+</footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

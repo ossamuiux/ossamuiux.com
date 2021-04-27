@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--모바일 viewport 세팅
+width=device-width : 접속한 장치의 가로길이만큼 모바일화면 사이즈 맞추기
+initial-secale : 처음 접속했을 때 화면 비율
+minimum-scale=1.0 : 화면 축소 했을 때의 비율
+maximum-scale=3.0 : 화면 확대 했을 때의 비율
+user-scalable=yes : 화면 확대, 축소의 유무 (아이폰에서 no가 작동하지 않음, 그래서 no를 적어도 아이폰은 확대 축소가 되나 안드로이드계열은 안됐었음)-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>GS25</title>
+<meta name="description" content="일상생활의 중심, 하루의 시작 Lifestyle Platform GS25">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GS25">
+<meta property="og:url" content="http://uureach.dothome.co.kr/m/GS25/">
+<meta property="og:image" content="http://uureach.dothome.co.kr/m/open_graph">
+<meta property="og:description" content="일상생활의 중심, 하루의 시작 Lifestyle Platform GS25">
+<!-- 아이폰 전화번호 자동링크 방지-->
+<meta name="format-detection" content="telephone=no">
+<!--<link rel="shortcut icon" type="image/x-icon" href="subway_favicon.ico">-->
+<!-- 모바일 브라우져에서 홈 화면에 추가기능 사용시 나오는 아이콘으로 36*36px, 72*72px로 등록-->
+<link rel="apple-touch-icon-precomposed" href="mobile_ios_iphone_120120.png">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <button class="btn_menu" type="button">메뉴열기</button>
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="GS25"></a></h1>
+        <a class="btn_login" href="#">마이페이지</a>
+       
+        <!--네비게이션-->
+        <div class="dimm"></div>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <img class="gnb_logo" src="images/logo.png" alt="">
+                <a class="option" href="#">옵션</a>
+                <button class="btn_close" type="button">메뉴닫기</button>
+                <p class="login_tit">로그인 해주세요</p>
+                <span class="login_txt">
+                    <a href="#">로그인</a>
+                    <a  href="#">회원가입</a>
+                </span>
+                <img class="profile" src="images/nav_profile.png" alt="">
+            </div>
+            <div class="bottom_gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">상품<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">행사상품</a></li>
+                            <li><a href="product.html">유어스(PB상품)</a></li>
+                            <li><a href="product.html">심플리쿡</a></li>
+                            <li><a href="product.html">e카탈로그</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">진행중 이벤트</a></li>
+                            <li><a href="product.html">종료이벤트/당첨발표</a></li>
+                            <li><a href="product.html">고객만족평가</a></li>
+                            <li><a href="product.html">마케터즈</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">매장/서비스<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">매장검색</a></li>
+                            <li><a href="product.html">생활서비스</a></li>
+                            <li><a href="product.html">카운터FF점포</a></li>
+                            <li><a href="product.html">GSTV</a></li>
+                            <li><a href="product.html">나만의 냉장고</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">멤버십<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">멤버십(GS&amp;POINT)란?</a></li>
+                            <li><a href="product.html">멤버십(GS&amp;POINT)가입/등록</a></li>
+                            <li><a href="product.html">멤버십(GS&amp;POINT)혜택안내</a></li>
+                            <li><a href="product.html">제휴카드/상품권 안내</a></li>
+                            <li><a href="product.html">멤버십FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">창업안내<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">창업가이드</a></li>
+                            <li><a href="guide.html">1:1상담</a></li>
+                            <li><a href="guide.html">가맹전자계약</a></li>
+                            <li><a href="guide.html">추천점포소개</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">상생협력<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">경영주복지몰</a></li>
+                            <li><a href="guide.html">운영 지원제도</a></li>
+                            <li><a href="guide.html">참여제도</a></li>
+                            <li><a href="guide.html">복리후생</a></li>
+                            <li><a href="guide.html">GS25명예의 전당</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">GS25 소개<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">GS25 소개</a></li>
+                            <li><a href="guide.html">비전</a></li>
+                            <li><a href="guide.html">기업연혁</a></li>
+                            <li><a href="guide.html">GS25 사업본부</a></li>
+                            <li><a href="guide.html">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">정도경영 목소리</a></li>
+                            <li><a href="guide.html">파트너사 목소리</a></li>
+                            <li><a href="guide.html">CEO에게 말한다</a></li>
+                            <li><a href="guide.html">GS리테일 입점상담</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="app_banner">
+                    <a href="#"><img src="images/app_banner.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="container" class="franchise_page">
+        <div class="sub_location">
+            <button type="button" class="btn_location"><span>행사상품</span></button>
+            <ul class="list_location">
+                <li class="on"><a href="#">행사상품</a></li>
+                <li><a href="#">유어스(PB)상품</a></li>
+                <li><a href="#">심플리쿡</a></li>
+                <li><a href="#">e카탈로그</a></li>
+            </ul>           
+        </div>
+        <div class="franchise_guide">
+            <button type="button" class="btn_franchise"><span>GS25의 특징</span></button>
+            <ul class="list_franchise">
+                <li class="on"><a href="#">GS25의 특징</a></li>
+                <li><a href="#">가맹타입</a></li>
+                <li><a href="#">창업절차</a></li>
+                <li><a href="#">창업 전 필수 확인사항</a></li>
+            </ul> 
+        </div>
+        <div class="franchise_content">
+            <ul class="tap">
+                <li class="trust_tit on"><a href="#">고객과 경영주에게<br>신뢰받는GS25</a></li>
+                <li class="grow_tit"><a href="#">경영주와 함께<br>성장하는 GS25</a></li>
+            </ul>
+        </div>
+        <div class="tap_content">
+            <div class="trust_wrap taps">
+                <div class="trust trust_part1">
+                    <h2>고객과 경영주에게 신뢰받는 GS25</h2>
+                    <img src="images/franchise_image1.png" alt="">
+                    <p>GS25는 고객만족을 최우선 가치로, 고객과 경영주 중심의 상생 경영을 실천하여 고객과 경영주 모두에게 신뢰받고 있습니다.
+                    <br><br>
+                    또한 유통, 서비스 부문의 지속적인 수상으로 고객만족경영의 성과를 인정받고 있습니다.</p>
+                </div>
+                <div class="trust trust_part2">
+                    <ul class="award">
+                        <li>
+                            <img class="type1" src="images/franchise_image2.png" alt="">
+                            <p>한국산업의 고객만족도<br>편의점 부문 1위(16년 연속)</p>
+                        </li>
+                        <li>
+                            <img class="type1" src="images/franchise_image3.png" alt="">
+                            <p>한국서비스 품질지수<br>편의점 부문 1위(7회 연속, 총 16회)</p>
+                        </li>
+                        <li>
+                            <img class="type2" src="images/franchise_image4.png" alt="">
+                            <p>한국에서 가장 존경받는 기업<br>편의점 부문 1위(16년 연속)</p>
+                        </li>
+                        <li>
+                            <img class="type2" src="images/franchise_image5.png" alt="">
+                            <p>한국의 경영대상<br>명예의전당 헌액</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="trust trust_part3">
+                    <h3>GS25 연혁</h3>
+                    <img src="images/gs_history.png" alt="">
+                </div>
+            </div>
+            <div class="grow_wrap taps">
+                <h2>경영주와 함께 성장하는 GS25</h2>
+                <img class="image1" src="images/franchise_image6.jpg" alt="">
+                <img class="image2" src="images/franchise_image7.jpg" alt="">
+                <img class="image3" src="images/franchise_image8.jpg" alt="">
+            </div>
+        </div>
+        <a class="btn_top" href="#"><img src="images/btn_top.jpg" alt="맨위로 가기"></a>
+    </main>
+    <footer id="footer">
+        <ul class="quick_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">정도경영 제보</a></li>
+        </ul>
+        <ul class="quick_link">
+            <li><a href="#">개인정보처리방침</a><span></span></li>
+            <li><a href="#">GS리테일 멤버십(GS&amp;POINT) 회원약관</a></li>
+        </ul>
+        <address>주소 : 서울시 강남구 논현로 508(역삼동 679번지 GS타워)<br>대표이사 : 허연수 <span></span> 사업자등록번호 : 116-81-18745<br>GS리테일 1:1 문의 <span></span> GS25 : 1644-5425<br><em>Copyright 2015 GSRetail. Co. Ltd., ALL Right Reserved.</em></address>
+        <div class="family_site">
+            <button class="btn_retail" type="button">GS리테일 보기</button>
+            <ul class="family_list">
+                <li><a href="http://www.gsretail.com/gsretail/ko/main" target="_blank">GS리테일</a></li>
+                <li><a href="http://uureach.dothome.co.kr/mGS25/index.html" target="_blank">GS25</a></li>
+                <li><a href="http://gssuper.gsretail.com/gssuper/ko/main" target="_blank">GS THE FRESH</a></li>
+                <li><a href="http://www.gsfresh.com/eretail.main.dev?retRef=Y&source=http://gs25.gsretail.com/gscvs/ko/main" target="_blank">GS fresh</a></li>
+                <li><a href="http://lalavla.gsretail.com/lalavla/ko/main" target="_blank">랄라블라</a></li>
+                <li><a href="https://m.lalavla.com/service/main/main.html" target="_blank">랄라블라 온라인몰</a></li>
+                <li><a href="http://www.popcard.co.kr/popcard/ko/main" target="_blank">팝카드</a></li>
+                <li><a href="https://seoul.intercontinental.com/" target="_blank">그랜드 인터컨티넨탈 서울 파르나스</a></li>
+                <li><a href="http://ntm1.ninetreehotel.com/NTM1/" target="_blank">나인트리호텔 명동</a></li>
+                <li><a href="http://www.parnasmall.com/html/main.html" target="_blank">파르나스몰</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

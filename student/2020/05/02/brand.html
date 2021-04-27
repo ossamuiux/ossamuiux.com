@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 모바일 viewport 세팅
+width =device-width접속한 장치의 가로길이만큼 모바일화면 사이즈 맞추기
+initial-scale=1.0 처음 접속했을때 화면비율
+minimum-scale=1.0 화면축소했을때의 비율
+user-scalable=yes 화면 확대축소설정
+* 아이폰에서 no가 작동하지않음
+-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>BillyAngel</title>
+<meta name="description" content="케익전문점, 디저트카페, 조각케이크, 창업 등 안내">
+<!-- 아이폰 전화번호 자동링크 방지 -->
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="billyangel">
+<meta property="og:url" content="http://hy6110.dothome.co.kr/mBillyAngel/">
+<meta property="og:image" content="http://hy6110.dothome.co.kr/mBillyAngel/open_graph.png">
+<meta property="og:description" content="케익전문점, 디저트카페, 조각케이크, 창업 등 안내">
+<!-- 모바일브라우저에서 홈화면에 추가기능 사용시 나오는 아이콘(36,72px png롤 등록) -->
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://hy6110.dothome.co.kr/mBillyAngel/mobile_ios_iphone_180.png">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <a class="link_store" href="#"><span class="blind">매장찾기 링크</span></a>
+        <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="빌리엔젤"></a></h1>
+        <button class="btn_sidemenu" type="button">사이드메뉴</button>
+        <div class="dimm"></div>
+        <!-- gnb -->
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <button class="btn_close" type="button">사이드메뉴닫기</button>
+                <ul class="gnb_sns">
+                    <li><a href="#"><img src="images/ico_facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/ico_twitter.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/ico_instagram.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="gnb_scroll">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">Brand<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="brand.html">브랜드 소개</a></li>
+                            <li><a href="brand.html">HACCP</a></li>
+                            <li><a href="brand.html">Billy Angel CI/BI</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="menu.html">케이크</a></li>
+                            <li><a href="menu02.html">음료</a></li>
+                            <li><a href="menu03.html">빙수</a></li>
+                            <li><a href="menu04.html">케이크 예약</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Event<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Store<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Catering<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">케이터링 서비스</a></li>
+                            <li><a href="#">대관 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">프랜차이즈 문의</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /gnb -->
+    </header>
+    <main id="container" class="brand_page">
+        <div class="sub_visual">
+            <img src="images/sub_visual_brand.png" alt="">
+            <h2 class="sub_visual_tit">Brand</h2>
+        </div>
+        <div class="sub_location">
+            <ul class="list_location">
+                <li class="active"><a href="#">브랜드 소개</a></li>
+                <li><a href="#">HACCP</a></li>
+                <li><a href="#">Billy Angel CI/BI</a></li>
+            </ul>
+        </div>
+        <div class="content brand_intro on">
+            <h2 class="tab_tit">브랜드 소개</h2>
+            <div class="introduction">
+                <img src="images/brand_intro_visual01.png" alt="">
+                <p>빌리엔젤 케이크 컴퍼니는 해외 유명 베이커리,<br>요리 학교 출신들의 파티쉐분들과 함께 새롭고<br>신선한 케이크를 제공합니다.</p>
+            </div>
+            <div class="philosophy">
+                <h3>Billy Angel's Philosophy</h3>
+                <ul class="list_philo">
+                    <li>
+                        <img src="images/brand_philo_visual01.png" alt="">
+                        <h4>HOMEMADE STYLE</h4>
+                        <p>빌리엔젤은 100% 홈메이드 스타일을 표방함으로써, 최고의 재료로 만든 프리미엄 홈메이드 케이크를 제공합니다.</p>
+                    </li>
+                    <li>
+                        <img src="images/brand_philo_visual02.png" alt="">
+                        <h4>HOMEMADE STYLE</h4>
+                        <p>빌리엔젤은 100% 홈메이드 스타일을 표방함으로써, 최고의 재료로 만든 프리미엄 홈메이드 케이크를 제공합니다.</p>
+                    </li>
+                    <li>
+                        <img src="images/brand_philo_visual03.png" alt="">
+                        <h4>HOMEMADE STYLE</h4>
+                        <p>빌리엔젤은 100% 홈메이드 스타일을 표방함으로써, 최고의 재료로 만든 프리미엄 홈메이드 케이크를 제공합니다.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="introduction2">
+                <img src="images/brand_intro_visual02.png" alt="">
+                <div class="txt_wrap">
+                    <h3>빌리엔젤은<br><span>감성</span>을 판매합니다.</h3>
+                    <p>케이크는 소중한 사람들에게<br>잊지 못할 추억을 선물합니다.</p>
+                    <p>그래서 빌리엔젤은 제품을 판매하기보다<br>감성을 판매한다고 생각하고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content brand_haccp">
+            <h2 class="tab_tit">HACCP</h2>
+        </div>
+        <div class="content brand_cibi">
+            <h2 class="tab_tit">Billy Angel CI/BI</h2>
+        </div>
+    </main>
+    <footer id="footer">
+        <img src="images/footer_logo.png" alt="">
+        <div class="footer_wrap">
+            <p>(주)그래닉스 / GRANIX</p>
+            <p>사업자등록번호 120-87-84624</p>
+            <p>서울지사 _ 서울시 강남구 역삼동 819 케이스 퀘어 강남 타워 13<br>TEL  <a class="tel" href="tel:02-512-6257">02)512-6257</a> / FAX  070-5051-8119</p>
+            <p>© 2017 BILLY ANGEL, LLC, All Rights Reserved</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

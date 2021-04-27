@@ -1,7 +1,7 @@
 'use strict';
 
-$(document).ready(function () {
-    
+(function() {
+
     // 커서 애니메이션
     var $cursorCir = $('#cursorCir');
     var $body = $('body');
@@ -39,7 +39,7 @@ $(document).ready(function () {
     });
     
     // 메인 슬라이더
-    var mySwiper = new Swiper('.main_slider', {
+    var mainSlider = new Swiper('.main_slider', {
         simulateTouch:true,
         slidesPerView:'auto',
         mousewheel:false,
@@ -54,7 +54,7 @@ $(document).ready(function () {
     });
     
     // 수강생 산출물 슬라이더
-    var mySwiper2 = new Swiper('.list_student', {
+    var studentSlider = new Swiper('.list_student', {
         simulateTouch:false,
         slidesPerView:'auto',
         direction:'vertical',
@@ -68,26 +68,14 @@ $(document).ready(function () {
     // window resize시 슬라이드 크기를 500ms후 update
     $(window).on('resize', function () {
         setTimeout(function () {
-            mySwiper.update();
-            mySwiper2.forEach(function(v,i) {
-                mySwiper2[i].update();   
+            mainSlider.update();
+            studentSlider.forEach(function(v, i) {
+                studentSlider[i].update();   
             });
         },500);
     });
-});
 
-// 함수 주석 작성 예시
-/********************************************
-@함수명    initCircle
-@설명     circleProgress를 초기화한다
-@인자   	초기화할 엘리먼트, 그라디언트색
-@반환    	없음
-@작성일  	2019.04.30
-@작성자  	오영호
-@변경일		변경자      변경내역 
-2019.04.30    오영호      최초작성
-*********************************************/
-
+})();
 
 
 

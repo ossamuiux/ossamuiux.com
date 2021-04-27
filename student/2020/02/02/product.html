@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--모바일 viewport 세팅
+width=device-width : 접속한 장치의 가로길이만큼 모바일화면 사이즈 맞추기
+initial-secale : 처음 접속했을 때 화면 비율
+minimum-scale=1.0 : 화면 축소 했을 때의 비율
+maximum-scale=3.0 : 화면 확대 했을 때의 비율
+user-scalable=yes : 화면 확대, 축소의 유무 (아이폰에서 no가 작동하지 않음, 그래서 no를 적어도 아이폰은 확대 축소가 되나 안드로이드계열은 안됐었음)-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+<title>GS25</title>
+<meta name="description" content="일상생활의 중심, 하루의 시작 Lifestyle Platform GS25">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GS25">
+<meta property="og:url" content="http://uureach.dothome.co.kr/m/GS25/">
+<meta property="og:image" content="http://uureach.dothome.co.kr/m/open_graph">
+<meta property="og:description" content="일상생활의 중심, 하루의 시작 Lifestyle Platform GS25">
+<!-- 아이폰 전화번호 자동링크 방지-->
+<meta name="format-detection" content="telephone=no">
+<!--<link rel="shortcut icon" type="image/x-icon" href="subway_favicon.ico">-->
+<!-- 모바일 브라우져에서 홈 화면에 추가기능 사용시 나오는 아이콘으로 36*36px, 72*72px로 등록-->
+<link rel="apple-touch-icon-precomposed" href="mobile_ios_iphone_120120.png">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time() ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time() ?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <button class="btn_menu" type="button">메뉴열기</button>
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="GS25"></a></h1>
+        <a class="btn_login" href="#">마이페이지</a>
+       
+        <!--네비게이션-->
+        <div class="dimm"></div>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <img class="gnb_logo" src="images/logo.png" alt="">
+                <a class="option" href="#">옵션</a>
+                <button class="btn_close" type="button">메뉴닫기</button>
+                <p class="login_tit">로그인 해주세요</p>
+                <span class="login_txt">
+                    <a href="#">로그인</a>
+                    <a  href="#">회원가입</a>
+                </span>
+                <img class="profile" src="images/nav_profile.png" alt="">
+            </div>
+            <div class="bottom_gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">상품<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">행사상품</a></li>
+                            <li><a href="product.html">유어스(PB상품)</a></li>
+                            <li><a href="product.html">심플리쿡</a></li>
+                            <li><a href="product.html">e카탈로그</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">진행중 이벤트</a></li>
+                            <li><a href="product.html">종료이벤트/당첨발표</a></li>
+                            <li><a href="product.html">고객만족평가</a></li>
+                            <li><a href="product.html">마케터즈</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">매장/서비스<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">매장검색</a></li>
+                            <li><a href="product.html">생활서비스</a></li>
+                            <li><a href="product.html">카운터FF점포</a></li>
+                            <li><a href="product.html">GSTV</a></li>
+                            <li><a href="product.html">나만의 냉장고</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">멤버십<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="product.html">멤버십(GS&amp;POINT)란?</a></li>
+                            <li><a href="product.html">멤버십(GS&amp;POINT)가입/등록</a></li>
+                            <li><a href="product.html">멤버십(GS&amp;POINT)혜택안내</a></li>
+                            <li><a href="product.html">제휴카드/상품권 안내</a></li>
+                            <li><a href="product.html">멤버십FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">창업안내<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">창업가이드</a></li>
+                            <li><a href="guide.html">1:1상담</a></li>
+                            <li><a href="guide.html">가맹전자계약</a></li>
+                            <li><a href="guide.html">추천점포소개</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">상생협력<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">경영주복지몰</a></li>
+                            <li><a href="guide.html">운영 지원제도</a></li>
+                            <li><a href="guide.html">참여제도</a></li>
+                            <li><a href="guide.html">복리후생</a></li>
+                            <li><a href="guide.html">GS25명예의 전당</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">GS25 소개<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">GS25 소개</a></li>
+                            <li><a href="guide.html">비전</a></li>
+                            <li><a href="guide.html">기업연혁</a></li>
+                            <li><a href="guide.html">GS25 사업본부</a></li>
+                            <li><a href="guide.html">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터<i class="arrow"></i></a>
+                        <ul class="depth2">
+                            <li><a href="guide.html">정도경영 목소리</a></li>
+                            <li><a href="guide.html">파트너사 목소리</a></li>
+                            <li><a href="guide.html">CEO에게 말한다</a></li>
+                            <li><a href="guide.html">GS리테일 입점상담</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="app_banner">
+                    <a href="#"><img src="images/app_banner.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="container" class="event_goods">
+        <div class="sub_location">
+            <button type="button" class="btn_location"><span>행사상품</span></button>
+            <ul class="list_location">
+                <li class="on"><a href="#">행사상품</a></li>
+                <li><a href="#">유어스(PB)상품</a></li>
+                <li><a href="#">심플리쿡</a></li>
+                <li><a href="#">e카탈로그</a></li>
+            </ul>           
+        </div>
+        <h2>GS25가 고객님께 드리는 정성 듬뿍!<br>대박 혜택 이달의 행사상품을 만나보세요!</h2>
+        <div class="swiper-container sub_product_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/product/md_product1.png" alt="">
+                    <p>서울우유) 복숭아우유 300ML</p>
+                    <span>1,500원</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/product/md_product2.png" alt="">
+                    <p>유어스)스누피오렌지주스450ML</p>
+                    <span>1,500원</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/product/md_product3.png" alt="">
+                    <p>로아카)밀크초콜릿2500</p>
+                    <span>2,500원</span>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <p class="warning">※ 일부 점포는 행사에서 제외될 수 있으며, 행사상품 이미지는 실제와 다를 수 있습니다.  행사상품은 팝카드 결제시 10% 할인이 적용(일부 상품 제외)됩니다.</p>
+        <div class="product_wrap">
+            <div class="search_wrap">
+                <form>
+                    <fieldset>
+                        <legend>제품검색</legend>
+                        <input class="product_search" type="text" title="제품검색" placeholder="청포도스파클링">
+                        <button class="search_btn" type="button">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+            
+            <div class="product_content_tap">
+                <ul class="product_tap">
+                    <li class="active"><a href="#">1+1</a></li>
+                    <li><a href="#">2+1</a></li>
+                    <li><a href="#">덤 증정</a></li>
+                    <li><a href="#">전체</a></li>
+                </ul>
+            </div>
+            <div class="product_content_con">
+                <ul class="product_list one active">
+                    <li>
+                        <img src="images/product_sub/one1.jpg" alt="">
+                        <p class="product_tit">HAO)밀크츄수박맛1500</p>
+                        <span class="product_txt">1,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one2.jpg" alt="">
+                        <p class="product_tit">HAO)밀크츄옥수수맛1500</p>
+                        <span class="product_txt">1,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one3.jpg" alt="">
+                        <p class="product_tit">광동)마인드포인트V350ML</p>
+                        <span class="product_txt">1,200원</span>
+                        </li>
+                    <li>
+                        <img src="images/product_sub/one4.jpg" alt="">
+                        <p class="product_tit">광동)에이치포인트V350ML</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one5.jpg" alt="">
+                        <p class="product_tit">유어스)벚꽃딸기에이드345ML</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one6.jpg" alt="">
+                        <p class="product_tit">유어스)유채꽃한라봉에이드410ML</p>
+                        <span class="product_txt">1,400원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one7.jpg" alt="">
+                        <p class="product_tit">유어스)장미레몬에이드410ML</p>
+                        <span class="product_txt">1,400원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one8.jpg" alt="">
+                        <p class="product_tit">유어스)벚꽃스파클링345ML</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one9.jpg" alt="">
+                        <p class="product_tit">롯데)데일리C아트워터500ML</p>
+                        <span class="product_txt">1,700원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/one10.jpg" alt="">
+                        <p class="product_tit">흥선)크렁크체리스파클링350ML</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                </ul>
+                <ul class="product_list two">
+                    <li>
+                        <img src="images/product_sub/two1.jpg" alt="">
+                        <p class="product_tit">매일)스피키피넛버터우유190ML</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two2.jpg" alt="">
+                        <p class="product_tit">영진)구론산바몬드오리지날150ML</p>
+                        <span class="product_txt">1,000원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two3.jpg" alt="">
+                        <p class="product_tit">썬키스트훼미리달콤한행복세트</p>
+                        <span class="product_txt">12,000원</span>
+                        </li>
+                    <li>
+                        <img src="images/product_sub/two4.jpg" alt="">
+                        <p class="product_tit">CJS)스모크치킨오리지널190G</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two5.jpg" alt="">
+                        <p class="product_tit">오늘의반찬)멸치견과조림</p>
+                        <span class="product_txt">2,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two6.jpg" alt="">
+                        <p class="product_tit">오늘의반찬)무말랭이</p>
+                        <span class="product_txt">2,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two7.jpg" alt="">
+                        <p class="product_tit">오늘의반찬)양념깻잎</p>
+                        <span class="product_txt">2,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two8.jpg" alt="">
+                        <p class="product_tit">오늘의반찬)햄볶음김치</p>
+                        <span class="product_txt">2,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two9.jpg" alt="">
+                        <p class="product_tit">오늘의반찬)매콤오징어채조림</p>
+                        <span class="product_txt">2,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/two10.jpg" alt="">
+                        <p class="product_tit">오늘의반찬)메추리알장조림</p>
+                        <span class="product_txt">2,500원</span>
+                    </li>
+                    
+                </ul>
+                <ul class="product_list three">
+                    <li>
+                        <img src="images/product_sub/dum.gif" alt="">
+                        <p class="product_tit">하림)프로틴쉐이크(검은콩&amp;곡물)</p>
+                        <p class="product_tit">+ 서울)우유200ML</p>
+                        <span class="product_txt">3,900원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/dum2.gif" alt="">
+                        <p class="product_tit">하림)프로틴쉐이크(단호박&amp;고구마)</p>
+                        <p class="product_tit">+ 서울)우유200ML</p>
+                        <span class="product_txt">3,900원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/dum3.gif" alt="">
+                        <p class="product_tit">유어스)김치우동243G</p>
+                        <p class="product_tit">+ 한울)꼬마단무지120G</p>
+                        <span class="product_txt">2,900원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/dum4.gif" alt="">
+                        <p class="product_tit">리뉴)멀티플러스355ML</p>
+                        <p class="product_tit">+ 리뉴)여행용패키지60ML</p>
+                        <span class="product_txt">7,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/dum5.gif" alt="">
+                        <p class="product_tit">SM)쥬라기캅스(불빛팽이)8500</p>
+                        <p class="product_tit">+ 아코르)빅빅초코바1000</p>
+                        <span class="product_txt">8,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/dum6.gif" alt="">
+                        <p class="product_tit">오늘참치못회120G</p>
+                        <p class="product_tit">+ CJ)토종김(참기름)5G</p>
+                        <span class="product_txt">6,900원</span>
+                    </li>
+                </ul>
+                <ul class="product_list four">
+                    <li>
+                        <img src="images/product_sub/four1.jpg" alt="">
+                        <p class="product_tit">허쉬)아이스브레이커듀오포도</p>
+                        <span class="product_txt">3,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four2.jpg" alt="">
+                        <p class="product_tit">허쉬)아이스브레이커베리3500</p>
+                        <span class="product_txt">3,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four3.jpg" alt="">
+                        <p class="product_tit">허쉬)아이스브레이커수박3500</p>
+                        <span class="product_txt">3,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four4.jpg" alt="">
+                        <p class="product_tit">허쉬)아이스브레이커쿨민트3500</p>
+                        <span class="product_txt">3,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four5.jpg" alt="">
+                        <p class="product_tit">바바파파)딸기크림젤리1500</p>
+                        <span class="product_txt">1,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four6.jpg" alt="">
+                        <p class="product_tit">바바파파)후르츠믹스젤리1500</p>
+                        <span class="product_txt">1,500원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four7.jpg" alt="">
+                        <p class="product_tit">비달)베어스젤리300</p>
+                        <span class="product_txt">300원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four8.jpg" alt="">
+                        <p class="product_tit">하이트)새벽헛개500ML</p>
+                        <span class="product_txt">2,000</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four9.jpg" alt="">
+                        <p class="product_tit">동아)박카스맛젤리1200</p>
+                        <span class="product_txt">1,200원</span>
+                    </li>
+                    <li>
+                        <img src="images/product_sub/four10.jpg" alt="">
+                        <p class="product_tit">CJ)새싹보리500ML</p>
+                        <span class="product_txt">2,000원</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product_more">
+                <a href="#">더보기</a>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <ul class="quick_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">정도경영 제보</a></li>
+        </ul>
+        <ul class="quick_link">
+            <li><a href="#">개인정보처리방침</a><span></span></li>
+            <li><a href="#">GS리테일 멤버십(GS&amp;POINT) 회원약관</a></li>
+        </ul>
+        <address>주소 : 서울시 강남구 논현로 508(역삼동 679번지 GS타워)<br>대표이사 : 허연수 <span></span> 사업자등록번호 : 116-81-18745<br>GS리테일 1:1 문의 <span></span> GS25 : 1644-5425<br><em>Copyright 2015 GSRetail. Co. Ltd., ALL Right Reserved.</em></address>
+        <div class="family_site">
+            <button class="btn_retail" type="button">GS리테일 보기</button>
+            <ul class="family_list">
+                <li><a href="http://www.gsretail.com/gsretail/ko/main" target="_blank">GS리테일</a></li>
+                <li><a href="http://uureach.dothome.co.kr/mGS25/index.html" target="_blank">GS25</a></li>
+                <li><a href="http://gssuper.gsretail.com/gssuper/ko/main" target="_blank">GS THE FRESH</a></li>
+                <li><a href="http://www.gsfresh.com/eretail.main.dev?retRef=Y&source=http://gs25.gsretail.com/gscvs/ko/main" target="_blank">GS fresh</a></li>
+                <li><a href="http://lalavla.gsretail.com/lalavla/ko/main" target="_blank">랄라블라</a></li>
+                <li><a href="https://m.lalavla.com/service/main/main.html" target="_blank">랄라블라 온라인몰</a></li>
+                <li><a href="http://www.popcard.co.kr/popcard/ko/main" target="_blank">팝카드</a></li>
+                <li><a href="https://seoul.intercontinental.com/" target="_blank">그랜드 인터컨티넨탈 서울 파르나스</a></li>
+                <li><a href="http://ntm1.ninetreehotel.com/NTM1/" target="_blank">나인트리호텔 명동</a></li>
+                <li><a href="http://www.parnasmall.com/html/main.html" target="_blank">파르나스몰</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

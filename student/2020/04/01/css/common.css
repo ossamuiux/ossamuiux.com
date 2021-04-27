@@ -1,0 +1,1260 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'DXPnM-KSCpc-EUC-H';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/DXPnM-KSCpc-EUC-H.eot);/* ie 6-9 */
+    src: url(../font/DXPnM-KSCpc-EUC-H?#iefix) format('embedded-opentype'),
+         url(../font/DXPnM-KSCpc-EUC-H.woff) format('woff'),/* 최신브라우져 */
+         url(../font/DXPnM-KSCpc-EUC-H.ttf) format('truetype');/* 기타브라우져 */
+}
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,code,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,footer,header,hgroup,menu,nav,section,main,audio,video {margin: 0; padding: 0;}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {display: block}
+
+button {cursor: pointer}
+fieldset,img {border: 0; vertical-align: top}
+ol,ul {list-style: none}
+address,em {font-style: normal}
+a {text-decoration: none; /*color: #1c1c1c*/}
+iframe {overflow: hidden; border: 0}
+table {border-collapse: collapse; border-spacing: 0; width: 100%; table-layout: fixed;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%}
+input,select,textarea,button {vertical-align: middle; margin: 0; padding: 0}
+textarea {resize: none}
+body {line-height: 1.5; -webkit-text-size-adjust:none}
+
+legend,caption,.blind {position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px}
+
+
+body,button,input,select,textarea,table {
+    font-family: 'Noto Sans KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    font-size: 16px;
+    letter-spacing:-0.035em;
+}
+
+/* 파일선택폼 */
+.file_wrap {border: 2px solid #dddddd;display:inline-block;width:368px;padding-right: 98px;position:relative;}
+.file_wrap input {background: none !important; cursor:default; border: none !important;}
+.file_wrap:before {content: ''; position: absolute; right:96px; top: 50%; margin-top: -8px; width:2px; height: 16px; background: #e8e8e8;}
+.file_wrap label {position: absolute; color: #009223; right: 0; top: 0; width: 98px; text-align: center; cursor: pointer; line-height: 45px;}
+
+/* 공통스타일 */
+input[type="text"]::-ms-clear {
+  display:none;
+}
+::selection {
+    background: rgb(50, 113, 152);
+    color: #fff;}
+
+#wrap {min-width: 1200px; position: relative;}
+body.on {overflow: hidden;}
+
+/***********************전체메뉴 ****************************/
+.all_wrap {
+    width: 1920px;
+    height: 1080px;
+    background: #244b60;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.all_wrap .menu_wrap {
+    width: 1100px;
+    height: 655px;
+    margin: 0 auto;
+    padding-top: 220px;
+    position: relative;
+}
+
+.all_wrap .menu_wrap .btn_close {
+    position: absolute;
+    top: 15px;
+    right: -47px;
+    background: url(../images/btn_close.png) no-repeat;
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin: 50px 50px 0 0;
+    text-indent: -9999px;
+    outline: none;
+}
+
+.all_wrap .menu_wrap .menu_list>li:hover:before{
+    transform: translateX(0);
+}
+
+.all_wrap .menu_wrap .menu_list>li{
+   display: block;
+    width: 220px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.all_wrap .menu_wrap .menu_list>li:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #b64f60;
+    height: 4px;
+    width: 30%;
+    transition: all 0.5s;
+    transform: translateX(-70px);
+    
+}
+
+.all_wrap .menu_wrap .menu_list>li:last-child:after {
+    display: none;
+}
+.all_wrap .menu_list>li>a {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+.all_wrap .menu_wrap .menu_list .sub_list {
+    margin-top: 60px;
+/*    border: 1px solid blue;*/
+
+}
+.all_wrap .menu_list .sub_list>li>a {
+    color: white;  
+    font-size: 16px;
+    line-height: 55px;
+}
+.all_wrap .menu_list .sub_list>li:hover>a {
+    color: #ffcbd3;
+}
+.all_wrap .menu_list .sub_list .depth3 a {
+    color: rgba(255, 255, 255, 0.71);
+    font-size: 14px;
+    font-weight: 300;
+}
+.all_wrap .menu_list .sub_list .depth3 {
+    margin-top: -15px;
+}
+
+/*********************헤더**********************/
+#header {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+#header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/header_back.png) no-repeat 50% 0;
+    transition: all 0.4s;
+    height: 0;
+    width: 100%;
+}
+#header .header_inner {
+    width: 1100px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    transition: all 2s;
+}
+
+/* 로고 */
+#header .header_inner .logo {
+    background: url(../images/logo_white.png) no-repeat;
+    height: 48px;
+    width: 213px;
+    margin: 35px 0 0 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+  
+}
+#header .header_inner .logo a{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/* 상단헤더 ( 로그인, 회원가입, 언어선택) */
+#header .header_inner .top_header  {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    
+}
+#header .header_inner .top_header .util>li {
+    position: relative;
+    float: left;
+}
+
+#header .header_inner .top_header .util>li:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background: white;
+    width: 1px;
+    height: 16px;
+    transition: all 1s;
+}
+#header .header_inner .top_header .util>li:last-child:before {
+    display: none;
+}
+
+
+#header .header_inner .top_header .util>li>a {
+    color: white;
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 300;
+    transition: all 1s;
+}
+
+/* 언어선택 버튼*/
+#header .header_inner .top_header .util .btn_lang {
+    color: white;
+    font-size: 12px;
+    background: none;
+    border: none;
+    font-weight: 300;
+    margin-top: -3px;
+    padding: 0 29px 0 17px;
+    transition: all 1s;
+    outline: none;
+}
+
+#header .header_inner .top_header .util .btn_lang:after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 0;
+    background: url(../images/arrow_down_white.png) no-repeat;
+    width: 12px;
+    height: 8px;
+    transition: all 1s;
+}
+#header .header_inner .top_header .util .lang {
+    z-index: 100;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    background: white;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+    display: none;
+}
+
+#header .header_inner .top_header .util .lang a{
+    display: block;
+    color: #141414;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 5px 30px 5px 17px;
+    
+}
+#header .header_inner .top_header .util .lang a:hover {
+    background: rgba(52, 108, 140, 0.28);
+
+}
+
+/* 하단메뉴 ( gnb )*/
+#header .header_inner .gnb {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+
+}
+
+#header .header_inner .gnb_menu>li {
+    font-size: 18px;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    float: left;
+    position: relative; 
+}
+#header .header_inner .gnb_menu>li:hover .depth2 {
+    display: block;
+}
+
+#header .header_inner .gnb_menu>li>a {
+    display: block;
+    color: white;
+    line-height: 80px;
+    padding: 0 25px;
+    position: relative;
+}
+#header .header_inner .gnb .gnb_menu>li:hover>a{
+   color: #ad4455;
+}
+#header .header_inner .gnb_menu>li>a:after {
+    content: '';
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    height: 4px;
+    width: 75px;
+    background: #346c8c;
+    display: none;
+}
+
+#header .header_inner .gnb .btn_all {
+    text-indent: -9999px;
+    background: url(../images/ico_all.png) no-repeat;
+    border: none;
+    width: 21px;
+    margin-left: 25px;
+    margin-top: 30px;
+    transition: all 1s;
+    outline: none;
+}
+
+/* depth2 */
+#header .header_inner .gnb_menu .depth2 {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 1s;
+    display: none;
+    
+}
+
+
+
+#header .header_inner .gnb_menu .depth2 a {
+    display: block;
+    padding: 8px 0 8px 25px;
+    font-size: 15px;
+    font-family: 'Noto sans KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    color: black;
+    font-weight: 300;
+    letter-spacing:-0.035em;
+    
+}
+#header .header_inner .gnb_menu .depth2 li:first-child a{
+    padding-top: 20px;
+}
+#header .header_inner .gnb_menu .depth2 li:last-child a{
+    padding-bottom: 20px;
+}
+#header .header_inner .gnb_menu .depth2 li:hover a {
+    color: #3c82aa;
+
+}
+
+/* 헤더 on*/
+#header.on:before {
+    height: 100%;
+}
+
+#header.on .logo {
+    background-image:url(../images/logo_color.png);
+}
+#header.on .header_inner .gnb_menu>li>a {
+    color: #141414;
+}
+
+#header.on .header_inner .gnb .btn_all {
+    background-image: url(../images/ico_all_blackpng.png)
+}
+#header.on .header_inner .top_header .util>li>a {
+    color: #141414;
+}
+#header.on .header_inner .top_header .util>li:before {
+    background: #5a5a5a;
+}
+#header.on .header_inner .top_header .util .btn_lang {
+    color: #141414;
+}
+#header.on .header_inner .top_header .util .btn_lang:after {
+    background-image: url(../images/arrow_down_black.png)
+}
+
+
+
+
+
+
+
+/*******메인*/
+#main {
+    background: url(../images/main_back.png) no-repeat 50% 700px;
+    height: 3000px;
+
+}
+#main .swiper-wrapper .main_slider1{
+    height: 700px;
+    background: url(../images/main_visual01.png) no-repeat 50% 50%;
+}
+#main .swiper-wrapper .main_slider2{
+    height: 700px;
+    background: url(../images/main_visual02.png) no-repeat 50% 50%;
+}
+#main .swiper-wrapper .main_slider3{
+    height: 700px;
+    background: url(../images/main_visual03.png) no-repeat 50% 50%;
+}
+#main .swiper-wrapper .main_slider4{
+    height: 700px;
+    background: url(../images/main_visual04.png) no-repeat 50% 50%;
+}
+#main .main_slider h2 {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'DXPnM-KSCpc-EUC-H', sans-serif;
+    color: white;
+    letter-spacing:-0.07em;
+    margin: 0 auto;
+    margin-top: 220px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#main .main_slider .swiper-slide-active h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 2s;
+}
+#main .swiper-container .swiper-wrapper .swiper-slide h2 span {
+    font-family: 'Noto Serif KR',sans-serif;
+}
+#main .swiper-container .swiper-wrapper .swiper-slide h2 em {
+    font-size: 30px;
+}
+
+#main .main_slider .swiper-pagination .swiper-pagination-bullet {
+    background: none;
+    width: 45px;
+    height: 7px;
+    opacity: 1;
+    border-radius: 0;
+    outline: none;
+    margin-bottom: 50px;
+    position: relative;
+    
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 7px;
+}
+#main .main_slider .swiper-pagination .swiper-pagination-bullet:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 40px;
+    height: 5px;
+    opacity: 0.5;
+}
+#main .main_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+    opacity: 1;
+}
+#main .main_slider .swiper-button-prev {
+    background-image: url(../images/arrow_prev.png);
+    margin-left: 100px;
+    width: 34px;
+    height: 67px;
+    background-size: auto;
+    margin-top: 0;
+    outline: none;
+}
+#main .main_slider .swiper-button-next {
+    background-image: url(../images/arrow_next.png);
+    margin-right: 100px;
+    width: 34px;
+    height: 67px;
+    background-size: auto;
+    margin-top: 0;
+    outline: none;
+}
+
+
+
+/***************  진행중인 프로그램 ******************/
+    
+#main .section2 {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+#main .section2 h3 {
+    text-align: center;
+    color: #141414;
+    font-size: 40px;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    position: relative;
+    margin-top: 100px;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 2s 0.2s;
+}
+#main .section2.on h3 {
+    transform: translateX(0);
+    opacity: 1;
+}
+#main .section2 h3:after {
+    content: '';
+    position: absolute;
+    top: -55px;
+    left:50%;
+    margin-left: -27px;
+    background: url(../images/ico_korea_red.png) no-repeat;
+    height: 55px;
+    width: 55px;
+}
+#main .section2 p {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    transform: translateX(-90px);
+    transition: all 2.5s;
+    opacity: 0;
+}
+#main .section2.on p {
+    opacity: 1;
+    transform: translateX(0);
+}
+#main .section2 .program {
+    margin-top: 60px;
+    width: 1100px;
+    height: 475px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px;
+    background: white;
+    position: relative;
+    transform: translateX(-100px);
+    transition: all 2.5s;
+    opacity: 0;
+}
+#main .section2.on .program {
+    opacity: 1;
+    transform: translateX(0);
+}
+#main .section2 .program .swiper-pagination {
+    position: absolute;
+    top: 245px;
+    width: 120px;
+    left: 40px;
+}
+#main .section2 .program .swiper-pagination-bullet {
+    position: relative;
+    width: 120px;
+    border-radius: 0;
+    background: none;
+    padding: 10px 0;
+    opacity: 1;
+    color: #383838;
+   
+}
+#main .section2 .program .swiper-pagination-bullet-active {
+    font-weight: 700;
+    position: relative;
+}
+#main .section2 .program .swiper-pagination-bullet-active:after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background: #ad4455;
+}
+#main .section2 .program .swiper-pagination-bullet:before {
+    content:'전통 혼례 체험';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#main .section2 .program .swiper-pagination-bullet:nth-child(2):before{
+    content: '내림음식문화전승'
+}
+#main .section2 .program .swiper-pagination-bullet:nth-child(3):before{
+    content: '세시풍속'
+}
+#main .section2 .program .swiper-pagination-bullet:nth-child(4):before{
+    content: '짚공예장 체험'
+}
+#main .section2 .program .swiper-pagination-bullet:nth-child(5):before{
+    content: '서원스테이. 강학'
+}
+#main .section2 .program .swiper-pagination-bullet:nth-child(6):before{
+    content: '가훈쓰기 체험'
+}
+#main .section2 .program .swiper-pagination-bullet:nth-child(7):before{
+    content: '접빈다례,예절교육'
+}
+#main .section2 .program:before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 0;
+    background: #346c8c;
+    width: 90px;
+    height: 7px;
+}
+#main .section2 .program:after {
+    content: '';
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+    background: #ad4455;
+    width: 90px;
+    height: 7px;
+}
+#main .section2 .program .swiper-slide {
+    position: relative;
+}
+
+#main .section2 .program .swiper-slide .btn_more {
+    text-indent: -9999px;
+    background: url(../images/icon_more.png) no-repeat;
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: 75px;
+    border: none;
+}
+
+#main .section2 .program .swiper-slide .img_box {
+    float: left;
+    display: block;
+    background: url(../images/event01.png) no-repeat;
+    height: 475px;
+    width: 512px;
+    margin-left: 195px;
+    transition: all 0.5s;
+}
+#main .section2 .program .swiper-slide .img_box a{
+    display: block;
+    background: rgba(0, 0, 0, 0.26);
+    width: 100%;
+    height: 100%;
+}
+#main .section2 .program .swiper-slide .img_box:hover {
+   transform: scale(1.02);
+}
+#main .section2 .program .swiper-slide .text_box {
+    float: left;
+    margin: 80px 0 0 40px; 
+
+}
+#main .section2 .program .swiper-slide .text {
+    color: #141414;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.06em;
+}
+
+#main .section2 .program .swiper-slide span {
+    font-size: 25px;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif; 
+}
+#main .section2 .program .swiper-slide strong {
+    font-weight: 500;
+}
+#main .section2 .program .pswiper-slide em {
+    line-height: 40px;
+    height: 40px;
+}
+#main .section2 .program .program_02 .img_box{
+    background-image: url(../images/event02.png);
+}
+#main .section2 .program .program_03 .img_box{
+    background-image: url(../images/event03.png);
+}
+#main .section2 .program .program_04 .img_box{
+    background-image: url(../images/event04.png);
+}
+#main .section2 .program .program_05 .img_box{
+    background-image: url(../images/event05.png);
+}
+#main .section2 .program .program_06 .img_box{
+    background-image: url(../images/event06.png);
+}
+#main .section2 .program .program_07 .img_box {
+    background-image: url(../images/event07.png);
+}
+
+
+#main .section3 {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 130px;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: all 1.5s;
+}
+#main .section3.on {
+    transform: translateY(0);
+    opacity: 1;
+}
+#main .section3:after {
+    content: '';
+    display: block;
+    clear: both;
+    
+}
+#main .section3 .info_list li{
+    float: left;
+    background: url(../images/info01.png) no-repeat;
+    width: 225px;
+    height:370px;
+    margin: 0 20px;
+    position: relative;
+}
+#main .section3 .info_list li:first-child{
+    margin-left: 40px;
+}
+#main .section3 .info_list li:first-child a{
+    padding-top: 160px;
+    height: 210px;
+}
+#main .section3 .info_list li:hover a {
+    background: black;
+    opacity: 0.7;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.6);  
+}
+#main .section3 .info_list li:hover:after {
+    opacity: 1;
+}
+#main .section3 li a {
+    display: block;
+    width: 100%;
+    height: 230px;
+    padding-top: 140px;
+    color: white;
+    font-size: 28px;
+    font-family: 'DXPnM-KSCpc-EUC-H', sans-serif;
+    text-align: center;
+    transition: all 0.5s;
+}
+#main .section3 .info_list li:after {
+    content: '자세히보기';
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    padding-top: 6px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -60px;
+    border: 1px solid white;
+    height: 30px;
+    width: 120px;
+    border-radius: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+#main .section3 .info_list li:nth-child(2) {
+    background-image: url(../images/info02.png);
+}
+#main .section3 .info_list li:nth-child(3) {
+    background-image: url(../images/info03.png);
+}
+#main .section3 .info_list li:nth-child(4) {
+    background-image: url(../images/info04.png);
+}
+#main .section4 {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 135px;  
+}
+#main .section4 h3 {
+    text-align: center;
+    color: #141414;
+    font-size: 40px;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    position: relative;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 2s 0.2s;
+}
+#main .section4.on h3 {
+   transform: translateX(0);
+    opacity: 100;
+}
+
+#main .section4 h3:after {
+    content: '';
+    position: absolute;
+    top: -55px;
+    left:50%;
+    margin-left: -27px;
+    background: url(../images/ico_korea_blue.png) no-repeat;
+    height: 55px;
+    width: 55px;
+}
+#main .section4>p {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Noto Serif KR','맑은 고딕','malgun gothic','돋움',dotum,sans-serif;
+    transform: translateX(-90px);
+    transition: all 2.5s;
+    opacity: 0;
+}
+#main .section4.on>p {
+    transform: translateX(0);
+    opacity: 1;
+}
+#main .section4 .unesco_img {
+    margin-top: 52px;
+    display: inline-block;
+    background: url(../images/unesco01.png) no-repeat;
+    height: 698px;
+    width: 488px;
+    border: 1px solid #d2d2d27a;
+    transform: translateX(-150px);
+    transition: all 1.5s;
+    opacity: 0;
+}
+#main .section4.on .unesco_img {
+    opacity: 1;
+    transform: translateX(0);
+}
+#main .section4 .unesco_txt {
+    position: absolute;
+    right: 0;
+    top: 282px;
+    width: 495px;
+    height: 340px;
+    background: white;
+    border: 1px solid #d2d2d27a;
+    padding: 35px 25px 35px 40px;
+    transform: translateX(150px);
+    transition: all 1.5s;
+    opacity: 0;
+}
+#main .section4.on .unesco_txt {
+    opacity: 1;
+    transform: translateX(0);
+} 
+#main .section4 .unesco_txt strong {
+    font-family: 'Noto Serif KR',sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 80px;
+    position: relative;
+}
+#main .section4 .unesco_txt strong:after {
+    content: '';
+    position: absolute;
+    right: -315px;
+    top: 10px;
+    background: url(../images/icon_more.png) no-repeat;
+    height: 20px;
+    width: 21px;
+    cursor: pointer;
+}
+#main .section4 .unesco_txt .second_strong:after {
+   display: none;
+}
+#main .section4 .unesco_txt p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+}
+#main .section4 .unesco_txt:before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 0;
+    background: #346c8c;
+    width: 80px;
+    height: 7px;
+}
+#main .section4 .unesco_txt:after {
+    content: '';
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+    background: #ad4455;
+    width: 80px;
+    height: 7px;
+}
+#main .section4 .unesco_img2 {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    background: url(../images/unesco02.png) no-repeat;
+    width: 560px;
+    height: 235px;
+    transform: translateX(150px);
+    transition: all 1.5s;
+    opacity: 0;
+}
+#main .section4.on .unesco_img2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+#footer {
+    background: url(../images/footer_back.png)no-repeat 50% 0;
+}
+#footer .footer_wrap {
+    margin: 0 auto;
+    height: 200px;
+    width: 1100px;
+    position: relative;
+}
+#footer .footer_wrap h1 {
+    float: left;
+    background: url(../images/logo_white.png) no-repeat;
+    height: 48px;
+    width: 213px;
+    margin-top: 77px;
+}
+#footer .footer_wrap .adress{
+    display: inline-block;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+#footer .footer_wrap span {
+    font-size: 14px;
+    color: white;
+    letter-spacing: -0.02em;
+}
+#footer .footer_wrap .family_site_wrap {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+#footer .footer_wrap .btn_family {
+    float: right;
+    border: 1px solid #b2b2b2;
+    background: none;
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 70px;
+    outline: none;
+    position: relative;
+}
+#footer .footer_wrap .btn_family:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: url(../images/arrow_family.png) no-repeat;
+    background-size: 10px;
+    height: 7px;
+    width: 13px;
+    transition: all 0.5s;
+}
+#footer .footer_wrap .btn_family.on:after {
+    transform: rotateZ(-180deg);
+}
+#footer .footer_wrap .family_site_wrap .family_list {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 9999;
+    background: #424242;
+    width: 148px;
+    border: 1px solid #b2b2b2;
+    display: none;
+    border-bottom: none;
+}
+#footer .footer_wrap .family_site_wrap .family_list a {
+    color: white;
+    font-size: 12px;
+    line-height: 25px;
+    width: 133px;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid #5d5d5d;
+}
+#footer .footer_wrap .family_site_wrap .family_list li:last-child  a{
+    border-bottom: none;
+}
+
+#footer .footer_wrap .family_site_wrap .family_list a:hover {
+    color: #7ca9c3;
+}
+
+
+
+
+/*********************** 서브 하회탈소개 ****************************/
+#main.content {
+    background: url(../images/login_back.png) no-repeat 50% 0;
+    height: auto;
+}
+#main.content .sub_header {
+    height: 420px;
+    background: url(../images/sub_header.png) no-repeat 50% 0;
+}
+#main.content .sub_header h3 {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-family: 'Noto Serif KR',sans-serif;
+    padding-top: 240px;
+    font-weight: 300;
+}
+#main.content .sub {
+    background: url(../images/sub_back.png) no-repeat 50% 0;
+}
+#main.content .sub .sub_wrap {
+    width: 1100px;
+    background: white;
+    height: 2085px;
+    margin: 0 auto;
+}
+#main.content .sub .sub_wrap .menu_list {
+    overflow: hidden;
+}
+#main.content .sub .sub_wrap .menu_list li {
+    float: left;
+}
+#main.content .sub .sub_wrap .menu_list a {
+    color: #141414;
+    font-family: 'Noto Serif KR',sans-serif;
+    font-size: 17px;
+    line-height: 70px;
+    display: block;
+    height: 70px;
+    width: 220px;
+    text-align: center;
+    border-bottom: 1px solid #d1d1d1;
+    box-sizing: border-box;
+}
+#main.content .sub .sub_wrap .menu_list li:first-child a {
+    color: #346c8c;
+    font-weight: 700;
+    border-bottom: 3px solid #346c8c;
+}
+
+#main.hahoemask_page .sub .sub_wrap .sub_img_01 {
+    height: 385px;
+    padding-top: 150px;
+}
+
+#main.hahoemask_page .sub .sub_wrap .section1 {
+    padding-top: 80px;
+    display: inline-block;
+}
+#main.hahoemask_page .sub .sub_wrap .section1 h2{
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 105px;
+    position: relative;
+}
+#main.hahoemask_page .sub .sub_wrap .section1 h2:before{
+    content: '';
+    position: absolute;
+    left: 71px;
+    top: 5px;
+    background: url(../images/ico_korea_red.png) no-repeat;
+    background-size: 27px;
+    width: 55px;
+    height: 55px;
+}
+#main.hahoemask_page .sub .sub_wrap .section1 .txt {
+    float: left;
+    width: 445px;
+    display: block;
+    font-size: 15px;
+    margin-left: 70px;
+    margin-top: 40px;
+    
+}
+#main.hahoemask_page .sub .sub_wrap .section1 .img {
+    float: left;
+    padding-left: 75px;
+    padding-top: 20px;
+}
+#main.hahoemask_page .sub .sub_wrap .section1 .img .img_1 {
+    background: url(../images/sub_img_01.png) no-repeat;
+    height: 305px;
+    width: 443px;
+}
+#main.hahoemask_page .sub .sub_wrap .section1 .img .img_2 {
+    background: url(../images/sub_img_02.png) no-repeat;
+    height: 305px;
+    width: 443px;
+    margin-top: 30px;
+}
+
+#main.hahoemask_page .sub .sub_wrap .section2 {
+    padding-top: 80px;
+
+}
+#main.hahoemask_page .sub .sub_wrap .section2 h2{
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 105px;
+    position: relative;
+}
+#main.hahoemask_page .sub .sub_wrap .section2 h2:before{
+    content: '';
+    position: absolute;
+    left: 71px;
+    top: 5px;
+    background: url(../images/ico_korea_red.png) no-repeat;
+    background-size: 27px;
+    width: 55px;
+    height: 55px;
+}
+#main.hahoemask_page .sub .sub_wrap .section2 img {
+    padding: 60px 0 0 200px;
+}
+
+
+
+
+/***************************로그인 페이지**************************/
+#main.login_page .content_wrap {
+    margin: 0 auto;
+    background: white;
+    width: 1100px;
+    height: 913px;
+    text-align: center;
+    box-shadow: 0px 0px 12px -1px #f4f4f4;
+}
+#main.login_page .content_wrap>h2 {
+    font-size: 48px;
+    font-family: 'Noto Serif KR',sans-serif;
+    padding-top: 150px;
+    color: #141414;
+    font-weight: 500;
+}
+#main.login_page .content_wrap span {
+    color: #346c8c;
+}
+#main.login_page .content_wrap>p {
+    font-size: 32px;
+    font-family: 'Noto Serif KR',sans-serif;
+    text-align: center;
+    color: #141414;
+    margin-top: 10px;
+    line-height: 65px;
+}
+#main.login_page .content_wrap>em {
+    font-size: 16px;
+    font-family: 'Noto Sans KR',sans-serif;
+    line-height: 20px;
+}
+#main.login_page .content_wrap .login_box {
+    border:1px solid #c5c5c5;
+    width: 650px;
+    height: 445px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+#main.login_page .content_wrap .login_box .id_wrap {
+    margin-top: 30px;
+}
+#main.login_page .content_wrap .login_box .id_wrap p{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 97px;
+    font-weight: 300;
+    line-height: 35px;
+}
+#main.login_page .content_wrap .login_box .id_wrap .id_box {
+    height: 40px;
+    width: 450px;
+}
+#main.login_page .content_wrap .login_box .password_wrap {
+    margin-top: 15px;
+}
+#main.login_page .content_wrap .login_box .password_wrap p{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 97px;
+    font-weight: 300;
+    line-height: 35px;
+}
+#main.login_page .content_wrap .login_box .password_wrap .password_box {
+    height: 40px;
+    width: 450px;
+}
+#main.login_page .content_wrap .login_box .chk_box {
+    margin-left: 98px;
+    padding-left: 23px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 10px;
+    color: #3e3e3e;
+    cursor: pointer;
+    display: block;
+    width: 65px;
+    line-height: 19px;
+}
+#main.login_page .content_wrap .login_box label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    border: 1px solid #a5a5a5;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+input[type="checkbox"]:checked + label:after {
+    display: block;
+}
+input[type="checkbox"] + label:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    background: url(../images/icon_checkbox.png) no-repeat;
+    width: 18px;
+    height: 16px;
+    background-size: 18px;
+    display: none;
+}
+
+#main.login_page .content_wrap .login_box .btn_login {
+    background: #346c8c;
+    color: white;
+    border: none;
+    width: 450px;
+    height: 60px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+#main.login_page .content_wrap .login_box .util_list  { 
+    margin-left: 92px;
+    margin-top: 15px;
+}
+#main.login_page .content_wrap .login_box .util_list li {
+    float: left;
+    margin: 0 8px;
+}
+#main.login_page .content_wrap .login_box .util_list li a {
+    border: 1px solid #a5a5a5;
+    width: 215px;
+    line-height: 40px;
+    display: block;
+    color: #191919;
+    font-size: 13px;
+}
+
+
+
