@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1180">
+    <meta name="description" content="색다른 맛으로 세상을 즐겁게 바꿉니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paldo 팔도">
+    <!-- og:url, og:image는 절대경로로 연결 -->
+    <meta property="og:url" content="http://modacbull.com/paldo/">
+    <meta property="og:image" content="http://modacbull.com/paldo/paldo_og.jpg">
+    <meta property="og:description" content="색다른 맛으로 세상을 즐겁게 바꿉니다.">
+    <title>Paldo | 브랜드 - 면 브랜드 </title>
+    <!-- 프로젝트 루트에 파비콘넣고 파라메터 붙여서 연결 -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 외부 CSS연결 라이브러리(jqueryUI, Swiper) -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 공통CSS,브라우저 캐싱 방지 -->
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <!-- 크롬 transition버그로인해 시작시 애니메이션이 바로되며 js파일을 연결하면 해결됨. -->
+    <!-- 외부 js연결 라이브러리(jquery 3.5.1, jqueryUI, swiper) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!-- 공통JS -->
+    <script src="js/ui.common.js?v=<?php echo time(); ?>"></script>
+</head>
+
+<body>
+    <div id="skipNavi">
+        <a href="#container">본문바로가기</a>
+
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <div class="top_header">
+                    <h1 class="logo"><a href="index.html"><img src="images/paldo_logo.png" alt="팔도"></a></h1>
+                    <div class="util_wrap">
+                        <ul class="util">
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                        <div class="lang_wrap">
+                            <a class="btn_lang" href="#">KOR</a>
+                            <ul class="lang_etc">
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">CHI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_header">
+                    <nav class="gnb">
+                        <ul class="depth1 clearfix">
+                            <li>
+                                <a href="#">회사소개</a>
+                                <ul class="depth2">
+                                    <li><a href="company_overview.html">팔도 소개</a></li>
+                                    <li><a href="#">팔도 역사</a></li>
+                                    <li><a href="#">C.I. 소개</a></li>
+                                    <li><a href="#">사업영역</a></li>
+                                    <li><a href="#">인재채용</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#">브랜드</a>
+                                <ul class="depth2">
+                                    <li><a href="brand_ramen.html">면 브랜드</a></li>
+                                    <li><a href="#">음료 브랜드</a></li>
+                                    <li><a href="#">간편식 브랜드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">홍보센터</a>
+                                <ul class="depth2">
+                                    <li><a href="#">뉴스 &amp; 보도자료</a></li>
+                                    <li><a href="#">이벤트ㆍ프로모션</a></li>
+                                    <li><a href="#">CF 보기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">커뮤니티</a>
+                                <ul class="depth2">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">팔도 블로그</a></li>
+                                    <li><a href="#">SNS 공식채널</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">고객서비스</a>
+                                <ul class="depth2">
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- 서브페이지 container -->
+        <div id="container" class="sub_container brand_page brand_ramen">
+            <!-- LNB공통 -->
+            <div class="lnb_wrap">
+                <ul class="lnb">
+                    <li><a href="#">전체 제품</a></li>
+                    <li class="active"><a href="#">면 브랜드</a></li>
+                    <li><a href="#">음료 브랜드</a></li>
+                    <li><a href="#">간편식 브랜드</a></li>
+                </ul>
+            </div>
+            <!-- //LNB공통 -->
+            <!-- 서브비주얼 -->
+            <div class="sub_visual">
+                <div class="sub_tit">
+                    <h2>면 브랜드</h2>
+                    <p>대한민국 라면의 대명사! 팔도라면에 대해 알려 드립니다.</p>
+                </div>
+            </div>
+            <!-- //서브비주얼 -->
+            <!-- 면 브랜드 소개페이지 -->
+            <section class="sub_product ramen_section">
+                <h3 class="blind">면 브랜드 소개</h3>
+                <div class="inner clearfix">
+                    <p class="txt_wrap">총 <span>24개</span>의 면 제품이 있습니다.</p>
+                    <ul class="product_list">
+                        <li class="yellow">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen01.png" alt="참깨라면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 참깨라면</h4>
+                                    <p>똑 부러지는 고소함! 참깨라면도 이제 골라 먹자</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="pink">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen02.png" alt="BB면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 BB면</h4>
+                                    <p>팔도 비빔면과 미샤 BB크림이 만났다!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen03.png" alt="매운비빔면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 매운비빔면</h4>
+                                    <p>더 화끈한 매운맛!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen04.png" alt="비빔면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 비빔면</h4>
+                                    <p>오른손으로 비비고~ 왼손으로 비비고~</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen05.png" alt="쫄비빔면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 쫄비빔면</h4>
+                                    <p>강렬한 매운 맛과 쫄면 같은 면발이 입맛 땡기는 쫄비빔면</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen06.png" alt="도시락">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 도시락</h4>
+                                    <p>사각의 용기에서 느낄 수 있는 매콤한 맛!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="orange">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen07.png" alt="김치도시락">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 김치도시락</h4>
+                                    <p>사각의 용기에서 느낄 수 있는 매콤한 맛!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen08.png" alt="왕뚜껑">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>왕뚜껑</h4>
+                                    <p>맛있어서 왕! 푸짐해서 왕!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="yellow">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen09.png" alt="더 왕두껑">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>더 왕두껑</h4>
+                                    <p>맛있어서 왕! 푸짐해서 왕!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="yellow">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen10.png" alt="더 왕뚜껑 컵">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>더 왕뚜껑 컵</h4>
+                                    <p>맛있어서 왕! 푸짐해서 왕!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="black">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen11.png" alt="팔도 짜장면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 짜장면</h4>
+                                    <p>35년 전통의 액상스프 노하우가 담긴 풍부한 맛</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen12.png" alt="팔도 왕짬뽕">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 왕짬뽕</h4>
+                                    <p>진한 사골 국물의 전통짬뽕</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen13.png" alt="팔도 꼬꼬면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 꼬꼬면</h4>
+                                    <p>라면 요리대회에서 인정받은 바로 그 맛</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="black">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen14.png" alt="팔도 남자라면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 남자라면</h4>
+                                    <p>마늘과 소고기가 만나 매운맛을 제대로 살렸다!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen15.png" alt="틈새라면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>틈새라면</h4>
+                                    <p>더 맛있게 매워진! 틈새라면(9,413 SHU)</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="yellow">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen16.png" alt="체다치즈 틈새라면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>체다치즈 틈새라면</h4>
+                                    <p>각렬한 매운맛의 중독! 한국인의 새로운 맵부신 문화</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="black">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen17.png" alt="일품 짜장면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>일품 짜장면</h4>
+                                    <p>큼직한 건더기로 씹는 맛이 일품인 프리미엄 짜장라면</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="yellow">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen18.png" alt="일품 삼선짜장">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>일품 삼선짜장</h4>
+                                    <p>찾았다! 내 맛성비! 삼선이 짜장맛도 살렸다!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen19.png" alt="일품 해물라면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>일품 해물라면</h4>
+                                    <p>푸짐한 해물을 넣어 시원한 맛이 일품!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="yellow">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen20.png" alt="뽀로로 짜장">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>뽀로로 짜장</h4>
+                                    <p>짜지않아 고소하고 칼슘이 함유되어 있는 순하고 맛있는 어린이 간식</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="pink">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen21.png" alt="뽀로로 스파게티">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>뽀로로 스파게티</h4>
+                                    <p>상큼한 토마토와 고소한 크림의 스파게티 라면</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen22.png" alt="BIG3 볶음김치면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>BIG3 볶음김치면</h4>
+                                    <p>볶음 김치를 첨가하여 리얼 김치맛</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="black">
+                            <a href="brand_ramen_detail.html">
+                                <div class="img_wrap">
+                                    <img src="images/ramen23.png" alt="봉희 설렁탕컵">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>봉희 설렁탕컵</h4>
+                                    <p>30년 전통의 설렁탕 명가의 맛</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="red">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/ramen24.png" alt="팔도 사리면">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h4>팔도 사리면</h4>
+                                    <p>면발이 가늘고 쫄깃하여 사리를 이용한 요리에 최적화된 제품</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //면 브랜드 소개페이지 -->
+        </div>
+        <!-- //서브페이지 container -->
+        <!-- footer -->
+        <footer id="footer">
+            <div class="inner">
+                <div class="top_footer clearfix">
+                    <ul class="footer_list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일 무단수집거부</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">팔도몰</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                    <div class="family_wrap">
+                        <a class="btn_family" href="">패밀리사이트</a>
+                        <ul class="family_site_list">
+                            <li><a href="#">팔도 유튜브 공식채널</a></li>
+                            <li><a href="#">팔도 인스타 채널</a></li>
+                            <li><a href="#">팔도 네이버 공식 블로그</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="address_list">
+                    <div class="address_left">
+                        <p>대표이사 : 고정완<span></span>사업자등록번호 : 308-81-03161</p>
+                        <p>서울특별시 서초구 강남대로 577<span></span>전화 : 1577-8593<span></span>팩스 : 02-3449-6657</p>
+                        <p class="copy">COPYRIGHT (C) 2012 PALDO. ALL RIGHTS RESERVED.</p>
+                    </div>
+                    <div class="address_right">
+                        <dl>
+                            <dt>고객센터</dt>
+                            <dd>1577-8593</dd>
+                        </dl>
+                        <dl>
+                            <dt>고객문의</dt>
+                            <dd>080-023-8593</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="bottom_footer">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/footer_logo.png" alt="팔도"></a>
+                    </div>
+                    <div class="sns_wrap">
+                        <ul class="sns">
+                            <li><a class="icon naver" href="#" target="_blank" title="새창에서 열기">네이버</a></li>
+                            <li><a class="icon facebook" href="#" target="_blank" title="새창에서 열기">페이스북</a></li>
+                            <li><a class="icon youtube" href="#" target="_blank" title="새창에서 열기">유튜브</a></li>
+                            <li><a class="icon twitter" href="#" target="_blank" title="새창에서 열기">트위터</a></li>
+                            <li><a class="icon insta" href="#" target="_blank" title="새창에서 열기">인스타</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top_btn_wrap">
+                <a class="btn_top btn_round" href="#">상단으로 가기</a>
+                <a class="btn_home btn_round" href="index.html">홈으로 가기</a>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

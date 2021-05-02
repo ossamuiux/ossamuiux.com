@@ -1,0 +1,443 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'sw';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/Subway-Footlong.eot);
+    src: url(../font/Subway-Footlong.eot?#iefix) format('embedded-opentype'),
+         url(../font/Subway-Footlong.woff) format('woff'),
+         url(../font/Subway-Footlong.ttf) format('truetype');
+}
+
+/*모든요소와 모든 가상요소선택자에 box-sizing사용하여
+패딩과 border가 크기안으로 포함되도록함*/
+*, *:before, *:after {
+    box-sizing: border-box;
+/* 클릭시 생기는 배경색 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+/* 클릭시 생기는 테두리없애기 */
+    outline: none;
+}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,code,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,footer,header,hgroup,menu,nav,section,main,audio,video {margin: 0; padding: 0;}
+
+/*html5추가 시멘틱엘리먼트를 익스하위버전에서 블럭으로 인식되도록함*/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {display: block}
+
+/* button태그에 손모양 커서 */
+button {cursor: pointer}
+/* 익스하위버전에서 이미지 선없애기 */
+fieldset,img {border: 0; vertical-align: top}
+/* 리스트 기호 빼기 */
+ol,ul {list-style: none}
+/* 태그 기본 기울임꼴 제거 */
+address,em {font-style: normal}
+/* 페이지안에서 가장 많은 링크색 지정 */
+a {text-decoration: none; /*color: #1c1c1c*/}
+/* iframe으로 외부컨텐츠를 연결했을때
+외부컨텐츠안쪽내용이 우리페이지에 영향을 주지못하도록 가려줌
+*/
+iframe {overflow: hidden; border: 0; vertical-align: top;}
+/* 칸의 선을 합치기, 칸의 간격없애기, 가로를 늘려줌 */
+table {border-collapse: collapse; border-spacing: 0; width: 100%; table-layout: fixed;}
+/* 굵기 빼고 헤딩태그 폰트크기를 body에 선언한 크기와 일치시킴 */
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%}
+/* 폼요소의 높이가 다를때 요소끼리 세로정렬시킴 */
+input,select,textarea,button {vertical-align: middle; margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,.1);}
+/* textarea 리사이즈기능 빼기 */
+textarea {resize: none}
+/* 페이지안의 모든 폰트의 줄간격을 1.5로 통일시킴
+모바일 크롬, 모바일 사파리 브라우져의 텍스트 자동확대 방지
+*/
+body {line-height: 1.5; -webkit-text-size-adjust:none}
+
+/* legend,caption,메뉴제목,섹션제목 블라인드 */
+legend,caption,.blind {position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px}
+
+/* 공통스타일 */
+body,input,select,textarea,button,table {
+/*    아이폰 서체가 있을경우 해당폰트로 나오며 없을경우 스마트폰 기본고딕체로 나옴*/
+    font-family: 'Noto Sans KR','Helvetica Neue','Apple SD Gothic Neo',sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+a {color: #666;}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* 스킵네비게이션 */
+#skipNavi a {position: absolute;left: 0;top: 0;transform: translateY(-100%);width:100%;line-height: 40px;background:rgba(28, 28, 28, 0.6);color: #fff;text-align: center;z-index: 99999;}
+#skipNavi a:focus,
+#skipNavi a:active {
+    transform: translateY(0%);
+}
+
+
+/* placeholder공통 */
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bbbbbb;
+    font-size: 14px;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bbbbbb;
+    font-size: 14px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bbbbbb;
+    font-size: 14px;
+  opacity: 1; /* Firefox */
+}
+
+/* 테이블 공통스타일 */
+/*테이블 제목 공통*/
+.tbl_wrap {margin-top: 100px;}
+.tbl_wrap h3 {
+    font-family: 'high1WonchuriTitle',sans-serif;
+    font-size: 30px;
+    color: #333;
+    position: relative;
+}
+.tbl_wrap h3:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width:80px;
+    height: 3px;
+    background: #000;
+}
+.tbl_wrap h4 {
+    font-family: 'high1WonchuriTitle',sans-serif;
+    font-size: 25px;
+    color: #333;
+    margin-top: 40px;
+}
+.tbl_wrap .unit {float: right;}
+.tbl_wrap .warning { color: #9e897d; margin: 10px 0; padding-left: 25px; position: relative;}
+.tbl_wrap .warning:before {
+    content: '\f06a';
+    font-family: 'fontawesome',sans-serif;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+
+.tbl_wrap table thead th {
+    border: 1px solid #d9d9d9;
+    border-top:2px solid #333;
+    border-bottom: none;
+    height: 70px;
+    background: #f7f7f7;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.tbl_wrap table tbody th,
+.tbl_wrap table tbody td {
+    border: 1px solid #d9d9d9;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+.tbl_wrap table td.left_td {text-align: left;}
+.tbl_wrap table td.left_td a:hover {text-decoration: underline;}
+
+
+/* 게시판 페이징 공통 */
+.tbl_wrap .paging_wrap {text-align: center; margin-top: 20px;}
+.tbl_wrap .paging_wrap .paging {display: inline-block; vertical-align: top;}
+.tbl_wrap .paging_wrap .paging .btn_paging {float: left; width:22px; height: 40px; text-indent: -9999px; background: url(../images/sprite_pc.png) no-repeat -392px -296px;}
+.tbl_wrap .paging_wrap .paging .btn_prev {background-position: -362px -168px; margin-right: 5px;}
+
+.tbl_wrap .paging_wrap .paging .btn_num {float: left; width:38px; height: 38px; border: 1px solid #eee; line-height: 38px; margin: 0 5px;}
+.tbl_wrap .paging_wrap .paging span.on {background: #bb0841; color: #fff; border-color:#bb0841;}
+
+.tbl_wrap .paging_wrap .paging .btn_next {background-position: -21px -417px; margin-left: 5px;}
+.tbl_wrap .paging_wrap .paging .btn_last {background-position: -438px -374px;}
+
+/* 일반 표 스타일 공통 */
+.tbl_normal thead {border-top:4px solid #009223;border-bottom: 1px solid #009223;}
+.tbl_normal thead th {height: 56px; color: #009223; letter-spacing: -0.03em; text-align: left;font-weight: 500; padding-left: 10px;}
+.tbl_normal tbody th {height: 56px;padding-left: 10px;border-bottom: 1px solid #ddd; word-break:keep-all; text-align: left; font-weight: 400;color: #292929;}
+.tbl_normal td {border-bottom: 1px solid #ddd; height: 56px; padding-left: 10px;}
+.tbl_normal tfoot {background: #f6f6f6; color:#292929; font-weight: 500;}
+.tbl_normal tfoot th{border-bottom: 1px solid #ddd; text-align: left; padding-left: 10px;}
+    
+/* 폼요소 공통스타일 */
+input[type="text"],input[type="password"] {
+    border: 1px solid #ccc;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    color: #666;
+/*    outline: none;*/
+}
+/*
+input[type="text"]:focus,input[type="password"]:focus {border-color: #962639;}
+*/
+
+/* 체크박스 공통스타일 */
+.input_box {padding-top: 10px;}
+input[type="checkbox"] + label {position: relative; padding-left: 30px; cursor: pointer;}
+input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20px;
+    height: 20px;
+    z-index: 10;
+    background: url(../images/icons.png) no-repeat 0 -40px;
+}
+input[type="checkbox"]:checked + label:before {
+    background-position: -40px -40px;
+}
+
+/* 라디오버튼 공통 */
+input[type="radio"] + label {position: relative; padding-left: 26px; cursor: pointer;}
+input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width:21px;
+    height: 21px;
+    background: url(../images/icons.png) no-repeat 0 -80px;
+}
+input[type="radio"]:checked + label:before {
+    background-position-x:-40px;
+}
+
+/* 셀렉트 공통 */
+.select_wrap {
+    display: inline-block;
+    width: 196px;
+    border: 2px solid #dddddd;
+    position: relative;
+}
+
+/* 익스 셀렉트 화살표 제거 */
+select::-ms-expand {display: none;}
+.select_wrap select {
+    width: 100%;
+    border: none;
+    height: 41px;
+    color: #999999;
+    padding-left: 10px;
+    -moz-appearance: none;/* 파폭 */
+    -webkit-appearance: none;/* 크롬,사파리 */
+    appearance: none;
+}
+.select_wrap:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
+    width:12px;
+    height: 7px;
+    background: url(../images/icon_select_arr.png) no-repeat;
+}
+
+/* input file 공통스타일 */
+.file_wrap {
+    border: 2px solid #ddd;
+    width:466px;
+    padding-right: 98px;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+}
+.file_wrap input[type="text"] {height: 41px;background: none !important;}
+.file_wrap label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:98px;
+    line-height: 41px;
+    color:#009223;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    text-align: center;
+    cursor: pointer;
+}
+.file_wrap label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width:2px;
+    height: 16px;
+    margin-top: -8px;
+    background: #e8e8e8;
+}
+
+/****************** datepicker 달력 ***************/
+/*checkin요소를 기준으로 datepicker의 위치를 강제조정*/
+#ui-datepicker-div {left: -12px !important; top: 40px !important; padding: 5px 0 0; border: 1px solid #c3c3c3; background: #fff; box-shadow: 0 6px 12px rgba(0,0,0,.175);}
+#ui-datepicker-div:before {content: ''; position: absolute; right: 10px; top: -6px; width:10px; height: 10px; background: #fff; transform: rotateZ(45deg); border: 1px solid #c3c3c3; border-bottom: none; border-right: none;}
+#ui-datepicker-div .ui-datepicker-prev {width:30px; height: 26px; background: url(../images/angle-left.svg) no-repeat 50% 50%; background-size: auto 16px; left: 2px; top: 2px; cursor: pointer;}
+#ui-datepicker-div .ui-datepicker-next {width:30px; height: 26px; background: url(../images/angle-right.svg) no-repeat 50% 50%; background-size: auto 16px; right: 2px; top: 2px; cursor: pointer;}
+#ui-datepicker-div .ui-datepicker-prev:hover {background-color: #eee;}
+#ui-datepicker-div .ui-datepicker-next:hover {background-color: #eee;}
+
+#ui-datepicker-div .ui-datepicker-title {color: #333; font-weight: 500;}
+/*월뒤에 텍스트추가하기(옵션에 없음)*/
+#ui-datepicker-div .ui-datepicker-month:after {content: '월';}
+
+/*표안의 글자가운데정렬*/
+#ui-datepicker-div td span {text-align: center;}
+#ui-datepicker-div td a {text-align: center; line-height: 28px; padding:0; width: 28px; border-radius: 50%;}
+#ui-datepicker-div td a:hover {background: #ebebeb;}
+/*주말 글자색 변경*/
+#ui-datepicker-div .ui-datepicker-week-end a {color: #f16f5a;}
+/*오늘날짜*/
+#ui-datepicker-div .ui-datepicker-today a {background: #c19b76; color: #fff; }
+/*오늘날짜에 hover시 원래배경색넣기*/
+#ui-datepicker-div .ui-datepicker-today a:hover {background: #c19b76;}
+#ui-datepicker-div .ui-datepicker-other-month a {color: #9b9b97;}
+
+/*하단 현재월 버튼*/
+#ui-datepicker-div .ui-datepicker-buttonpane {padding: 0;}
+#ui-datepicker-div .ui-datepicker-current {width:50%; margin: 0; border: none; line-height: 35px; padding: 0; background: #57327d; color: #fff;}
+#ui-datepicker-div .ui-datepicker-close {width:50%; margin: 0; border: none; line-height: 35px; padding: 0; background: #341157; color: #fff;}
+
+
+
+/*
+body에 overflow:hidden을 하면 높이가 있더라도 창높이만큼
+가려지며 ios는 작동하지않음
+*/
+body.on {overflow: hidden;}
+#wrap {min-width: 360px;}
+
+/*헤더 높이 배경 지우기*/
+#header {width: 100%; height: 60px;min-width: 360px;position: fixed;z-index: 9999;background: rgba(0,0,0,.8);}
+#header .logo {position: absolute;left: 18px;top: 18px;}
+#header .logo img {width: 50%; height: 50%;}
+#header .btn_gnb {position: absolute;right: 18px;top: 18px;width: 26px;height: 26px;background: url(../images/m_btn_gnb.png) no-repeat;background-size: 26px;text-indent: -9999px;border: none;}
+
+/* 헤더 on 처리 */
+#header.on {height: 100%;}
+#header.on .btn_gnb {background: url(../images/m_btn_close_dropdown.png) no-repeat;width: 22px;height: 22px;background-size: 22px;}
+#header.on .btn_close {display: block;}
+#header.on .gnb_wrap {display: block;}
+
+
+
+/* gnb 랲 */
+#header .gnb_wrap {position: absolute;top: 60px;bottom: 0;width: 100%;background: #000;border-top: 1px solid rgba(255, 255, 255, 0.2);display: none;overflow: auto;text-align: center;padding: 0 15px 100px 15px;}
+#header .gnb_wrap .top_gnb {position: relative;}
+#header .gnb_wrap .top_gnb .input_search {background: #000;border: none;border-bottom: 1px solid rgba(255, 255, 255, 0.5);padding-right: 40px;}
+#header .gnb_wrap .top_gnb .btn_search {position: absolute;right: 15px;top: 15px;width: 21px;height: 21px;background: url(../images/m_gnb_icon_search.png) no-repeat;background-size: 21px;border: none;text-indent: -9999px;}
+#header .gnb_wrap .bottom_gnb {min-width: 330px;}
+#header .gnb_wrap .bottom_gnb .gnb > li {border-bottom: 1px solid rgba(255, 255, 255, .5);width: 100%;}
+#header .gnb_wrap .bottom_gnb .gnb > li > a {font-size: 20px;font-weight: 400;color: #f0f0f0;display: block;line-height: 64px;width: 100%;position: relative;}
+#header .gnb_wrap .bottom_gnb .gnb .depth2 {background: #000;display: none;padding: 10px 0;border-top: 1px solid rgba(255, 255, 255, 0.5);}
+#header .gnb_wrap .bottom_gnb .gnb .depth2 a {display: block;font-size: 15px;font-weight: 300;color: #d4d4d4;line-height: 40px;position: relative;}
+#header .gnb_wrap .bottom_gnb .gnb .depth2 li a span {position:relative;}
+#header .gnb_wrap .bottom_gnb .gnb .depth2 li a:hover span:after {content:'';position: absolute;width: 100%;height: 1px;left: 0;bottom: -3px;background: rgba(255, 255, 255, 0.5);}
+#header .gnb_wrap .util {float: left;margin-top: 25px;width: 100%;text-align: center;}
+#header .gnb_wrap .util a {display: inline-block;width: calc(50% - 25px);padding: 0 10px;margin: 0 8px;line-height: 45px;border: 1px solid rgba(255,255,255,.5);border-radius: 2px;color: #d4d4d4;position: relative;}
+#header .gnb_wrap .util a:after {content: '';position: absolute;width: 10px;height: 10px;right: calc(50% - 40px);top: 18px;border-top: 1px solid #d4d4d4;border-right: 1px solid #d4d4d4;transform: rotateZ(45deg);}
+#header .gnb_wrap .util a:nth-child(2):after {right: calc(50% - 50px);}
+#header .gnb_wrap .lang {float: left;margin-top: 10px;width: 100%;height: 50px;}
+#header .gnb_wrap .lang a {position: relative;}
+#header .gnb_wrap .lang a:first-child:after {content: '';position: absolute;width: 1px;height: 10px;right: -4px;top: 8px;background: #6d6d6d;}
+#header .gnb_wrap .lang a span {font-size: 14px;font-weight: 300;color: #e4e4e4;line-height: 40px;position: relative;margin: 0 6px;}
+
+
+
+
+/* 푸터 공통 */
+#footer {overflow: hidden;background: #2a2a2a;width: 100%;padding: 15px;color: #f4f4f4;position: relative;}
+#footer .footer_left {float: left;}
+#footer .footer_left .footer_top {padding-right: 40px;width: 100%;float: left;}
+#footer .footer_left .footer_top li {float: left;margin-right: 40px;position: relative;}
+#footer .footer_left .footer_top .list_top li:after {content: '';position: absolute;right: -20px;top: 50%;width: 1px;height: 10px;transform: translateY(-4px);background: rgba(247, 247, 247, 0.4);}
+#footer .footer_left .footer_top .list_top li:last-child:after {display: none;}
+#footer .footer_left .footer_top li a {display: block;font-weight: 300;font-size: 13px;width: 100%;height: 100%;color: #f4f4f4;line-height: 30px;}
+#footer .footer_left .footer_top .list_bottom {float: left;}
+#footer .footer_left .footer_top .list_bottom li:after {content: '';position: absolute;right: -20px;top: 50%;width: 1px;height: 10px;transform: translateY(-4px);background: rgba(247, 247, 247, 0.4);}
+#footer .footer_left .footer_top .list_bottom li:last-child:after {display: none;}
+#footer .footer_left .footer_top .list_bottom li strong {font-weight: 500;font-size: 13px;}
+#footer .footer_left .footer_bottom {float: left;margin-top: 10px;width: 100%;font-size: 12px;}
+#footer .logo_box {position: absolute;right: 15px;top: 15px;width: 50px;}
+#footer .logo_box a {display: block;position: relative;}
+#footer .logo_box a:before {content: '';position: absolute;left: -20px;top: 0;width: 1px;height: 100%;background: #f4f4f4;}
+#footer .logo_box a img {width: 100%;}
+
+
+
+
+
+
+
+
+
+
+/******************************
+*********서브페이지 공통 *********
+********************************/
+
+/*  서브페이지. 서브비쥬얼 공통 */
+#main.sub_main {background: #f4f4f4;}
+#main.sub_main .sub_visual {width: 100%;height: 205px;position: relative;}
+#main.sub_main .sub_visual .tit {position: absolute;left: 50%;top: 60%;font-size: 24px;font-weight: 700;color: #fff;text-align: center;z-index: 1;transform: translate(-50%, -50%);}
+/* 서브페이지. breadcrumb 공통 */
+#main.sub_main .breadcrumb .breadcrumb_item {width: 100%; text-align: center;float: left;position: relative;}
+#main.sub_main .breadcrumb .breadcrumb_item > a {display: block;width: 100%;line-height: 50px;position: relative;font-weight: 300;color: #4a4a4a;border-bottom: 1px solid #ddd;}
+#main.sub_main .breadcrumb .breadcrumb_item > a:after {content: '';position: absolute;right: 20px;top: 48%;width: 7px;height: 7px;border: 1px solid #4e4e4e;border-left: none;border-top: none;transform: rotateZ(45deg) translateY(-50%);}
+#main.sub_main .breadcrumb .breadcrumb_item .breadcrumb_list {position: absolute;top: 51px;width: 100%;border-bottom: 1px solid #ddd;border-top: none;padding: 10px 0;display: none;background: #f4f4f4;z-index:100;}
+#main.sub_main .breadcrumb .breadcrumb_item .breadcrumb_list.active {display: block;}
+#main.sub_main .breadcrumb .breadcrumb_item .breadcrumb_list li a {display: block;font-weight: 300;color: #4a4a4a;line-height: 40px;position: relative;}
+#main.sub_main .breadcrumb .breadcrumb_item .breadcrumb_list li a span {position: relative;}
+#main.sub_main .breadcrumb .breadcrumb_list li a:hover span:before {content: '';position: absolute;left: 0;bottom: -2px;width: 100%;height: 1px;background: #4a4a4a;display: block;}
+
+
+/* 서브 페이지. 타이틀 공통 */
+#main.sub_main .content {padding-top: 90px;}
+#main.sub_main .content .content_inner {width: 100%;overflow: hidden;padding-bottom: 100px;}
+#main.sub_main .content .content_inner .content_tit {font-size: 20px;text-align: center;padding-bottom: 40px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

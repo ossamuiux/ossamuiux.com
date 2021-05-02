@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 현재 페이지 인코딩 방식 : 유니코드 -->
+    <meta charset="UTF-8">
+    <!-- 익스8 호환성보기 버튼을 보이지 않게 함 -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- 모바일 브라우저의 화면 크기 -->
+    <meta name="viewport" content="width=1280">
+    <!-- description은 페이지에 대한 설명이며, content에 주요내용이 뭔지를 적어주면 검색 결과에 반영이됨 -->
+    <meta name="description" content="Make Today Special! 크리스피크림도넛">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Make Today Special! 크리스피크림도넛">
+    <meta property="og:url" content="http://yjstar1221.dothome.co.kr/krispykreme/">
+    <meta property="og:image" content="http://yjstar1221.dothome.co.kr/krispykreme/images/krispykreme_og.png">
+    <meta property="og:description" content="Make Today Special! 크리스피크림도넛">
+    <title>MENU | 크리스피크림도넛</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+    <!-- css, js 연결순서
+    1. 웹폰트
+    2. 외부라이브러리용 css : 순서 관계없음
+    3. 직접작성하는 css 
+    4. 제이쿼리 js
+    5. 제이쿼리 ui
+    6. 외부라이브러리용 js
+    7. 직접작성하는 js-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <!-- chrome css transition 버그로 인해 최초페이지 로드시 transition이 강제 실행되며 script로 js파일을 연결하면 해결됨 -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+</head>
+<body>   
+    <div id="skipNavi">
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#container">본문 바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <div class="top_header">
+                <div class="top_header_inner">
+                    <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="써브웨이"></a></h1>
+                </div>
+                <ul class="util_wrap">
+                    <li class="search">
+                        <button class="btn_search1" type="button">검색</button>
+                        <div class="search_wrap">
+                            <form>
+                                <fieldset>
+                                    <legend>통합검색</legend>
+                                    <div class="input_wrap">
+                                        <input type="text" placeholder="검색어를 입력하세요.">
+                                        <button class="btn_search2" type="button">검색</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="login">
+                        <a href="login.html">로그인</a>
+                    </li>
+                    <li class="lang">
+                        <a href="#">언어</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom_header"> 
+                <div class="bottom_header_inner">
+                    <nav class="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a class="active" href="menu.html">MENU</a>
+                                <ul class="depth2">
+                                    <li><a href="menu.html">신제품/인기제품</a></li>
+                                    <li><a href="menu.html">이달의 메뉴</a></li>
+                                    <li><a href="menu.html">도넛</a></li>
+                                    <li><a href="menu.html">커피/음료</a></li>
+                                    <li><a href="menu.html">아이스크림/프로즌</a></li>
+                                    <li><a href="menu.html">브랜딩</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="menu.html">EVENT</a>
+                                <ul class="depth2">
+                                    <li><a href="menu.html">진행 이벤트</a></li>
+                                    <li><a href="menu.html">종료 이벤트</a></li>
+                                    <li><a href="menu.html">당첨자 발표</a></li>
+                                    <li><a href="menu.html">제휴 서비스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">HOME SERVICE</a>
+                                <ul class="depth2">
+                                    <li><a href="#">크리스피크림 홈서비스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="notice.html">STORE</a>
+                                <ul class="depth2">
+                                    <li><a href="notice.html">매장찾기</a></li>
+                                    <li><a href="notice.html">가맹점모집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="brand_theater.html">BRAND</a>
+                                <ul class="depth2">
+                                    <li><a href="brand_theater.html">도넛극장</a></li>
+                                    <li><a href="brand_theater.html">브랜드스토리</a></li>
+                                    <li><a href="brand_theater.html">브랜드영상</a></li>
+                                    <li><a href="notice.html">상품권 구입안내</a></li>
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href="notice.html">설문조사</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> 
+        </header>
+        <div id="container" class="sub_container menu_wrap"> 
+            <div class="sub_visual">
+                <div class="lnb">
+                    <ul>
+                        <li><a href="#">신제품/인기제품</a></li>
+                        <li><a href="#">이달의 메뉴</a></li>
+                        <li><a href="#">도넛</a></li>
+                        <li><a href="#">커피/음료</a></li>
+                        <li><a href="#">아이스크림/프로즌</a></li>
+                        <li><a href="#">브랜딩 제품</a></li>
+                    </ul>
+                </div>
+                <h2>MENU</h2>
+                <p>We make Joy</p>
+            </div>
+            <div class="contents">
+                <div class="contents_inner">
+                    <div class="menu_con_wrap new_menu">
+                        <div>
+                            <h3>신제품/인기제품</h3>
+                            <a class="btn_more" href="menu.html">더보기</a>
+                            <ul class="inner_wrap">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu01_01.png" alt="행복하소">
+                                        <h4 class="new">행복하소</h4>
+                                        <p>Happy Cow Doughnut</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu01_02.png" alt="푸른 초원위 밀카무">
+                                        <h4 class="new">푸른 초원 위 밀카무</h4>
+                                        <p>Milka Choco Moo Doughnut</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu01_03.png" alt="크리스마스 위시트리">
+                                        <h4>크리스마스 위시 트리</h4>
+                                        <p>Christmas Wish Tree</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu01_04.png" alt="오리지널 글레이즈드">
+                                        <h4>오리지널 글레이즈드</h4>
+                                        <p>Original Glazed</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_con_wrap month_menu">
+                        <div>
+                            <h3 class="tit_red">이달의 메뉴</h3>
+                            <a class="btn_more red" href="menu.html">더보기</a>
+                            <ul class="inner_wrap">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu02_01.png" alt="행복하소">
+                                        <h4 class="new">행복하소</h4>
+                                        <p>Happy Cow Doughnut</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu02_02.png" alt="푸른 초원위 밀카무">
+                                        <h4 class="new">푸른 초원 위 밀카무</h4>
+                                        <p>Milka Choco Moo Doughnut</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu02_03.png" alt="퓨어스노우맨">
+                                        <h4>퓨어 스노우맨</h4>
+                                        <p>Pure Snowman</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu02_04.png" alt="스노우 크리스탈">
+                                        <h4>스노우 크리스탈</h4>
+                                        <p>Snow Crystal</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_con_wrap dough_menu">
+                        <div>
+                            <h3>도넛</h3>
+                            <a class="btn_more" href="#">더보기</a>
+                            <ul class="inner_wrap">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu03_01.png" alt="프리미엄 스트로베리필드">
+                                        <h4>프리미엄 스트로베리 필드</h4>
+                                        <p>Primium Strawberry Field</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu03_02.png" alt="리고 피넛버터도넛">
+                                        <h4>리고 피넛버터 도넛</h4>
+                                        <p>Ligo Peanut Butter Doughnut</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu03_03.png" alt="초코홀릭">
+                                        <h4>초코홀릭</h4>
+                                        <p>Chocoholic</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu03_04.png" alt="딸기 와플넛">
+                                        <h4>딸기 와플넛</h4>
+                                        <p>Strawberry Wafflenut</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_con_wrap coffee_menu">
+                        <div>
+                            <h3 class="tit_red">커피/음료</h3>
+                            <a class="btn_more red" href="#">더보기</a>
+                            <ul class="inner_wrap">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu04_01.png" alt="아메리카노">
+                                        <h4>아메리카노</h4>
+                                        <p>Americano</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu04_02.png" alt="아이스아메리카노">
+                                        <h4>아이스 아메리카노</h4>
+                                        <p>Ice Americano</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu04_03.png" alt="밀크티">
+                                        <h4>밀크티</h4>
+                                        <p>Milk Tea</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu04_04.png" alt="메론 스무디">
+                                        <h4>메론 스무디</h4>
+                                        <p>Melon Smoothies</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_con_wrap ice_menu">
+                        <div>
+                            <h3>아이스크림/프로즌</h3>
+                            <a class="btn_more" href="#">더보기</a>
+                            <ul class="inner_wrap">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu05_01.png" alt="아이스크림 프리미엄 스트로베리필드">
+                                        <h4>아이스크림 프리미엄 스트로베리 필드</h4>
+                                        <p>Icecream Inside Premium Strawberry Field</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu05_02.png" alt="순수우유 딸기쉐이크">
+                                        <h4>순수 우유 딸기 쉐이크</h4>
+                                        <p>Strawberry Shake</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu05_03.png" alt="순수우유 소프트콘">
+                                        <h4>순수 우유 소프트콘</h4>
+                                        <p>Pure Milk Soft Corn</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu05_04.png" alt="초코 쿠키 밀크쉑">
+                                        <h4>초코 쿠키 밀크쉑</h4>
+                                        <p>Choco Cookie Milk Shakk</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_con_wrap brand_menu">
+                        <div class="brand_menu_inner">
+                            <div class="branding clearfix">
+                                <h3 class="tit_brand">브랜딩 제품</h3>
+                                <a class="btn_more brand" href="#">더보기</a>
+                            </div>
+                            <ul class="inner_wrap">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu06_01.png" alt="머그 화이트">
+                                        <h4>머그 화이트</h4>
+                                        <p>Mug White</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu06_02.png" alt="머그 골드">
+                                        <h4>머그 골드</h4>
+                                        <p>Mug Gold</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu06_03.png" alt="머그 보타이">
+                                        <h4>머그 보타이</h4>
+                                        <p>Mug Bowtie</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/menu06_04.png" alt="캠핑카 블록">
+                                        <h4>캠핑카 블록</h4>
+                                        <p>Camping car Block</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="footer_inner">
+                <h2 class="logo"><img src="images/logo_02.png" alt="크리스피크림도넛"></h2>
+                <div class="txt_wrap">
+                    <ul class="info_top">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div class="info_bottom_wrap">
+                        <p>서울특별시 용산구 한강대로71길 47 대표문의:02-709-1114 (가맹문의, 행사안내 등)<br>고객지원센터 080-023-9776 (고객불만사항 등) 사업자 번호 : 106-81-234981 대표자:차우철</p>
+                        <p>COPYRIGHT © 2013 KRISPY KREME DOUGHNUTS. ALL RIGHTS RESERVED</p>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <div class="family_wrap">
+                        <button class="btn_family" type="button">Family Site</button>
+                        <div class="list_family_wrap">
+                            <ul class="list_family">
+                                <li><a href="http://www.lotte.co.kr" target="_blank" title="새 창으로 이동합니다.">롯데그룹</a></li>
+                                <li><a href="http://www.lottegrs.com" target="_blank" title="새 창으로 이동합니다.">LOTTE GRS</a></li>
+                                <li><a href="http://www.lotteria.com" target="_blank" title="새 창으로 이동합니다.">롯데리아</a></li>
+                                <li><a href="http://www.lotteriamall.com" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 롯데리아몰</a></li>
+                                <li><a href="http://www.angelinus.com" target="_blank" title="새 창으로 이동합니다.">엔제리너스 커피</a></li>
+                                <li><a href="http://shop.angelinus.com" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 엔제리너스 커피 몰</a></li>
+                                <li><a href="http://www.krispykreme.co.kr" target="_blank" title="새 창으로 이동합니다.">크리스피 크림 도넛</a></li>
+                                <li><a href="http://www.tgif.co.kr" target="_blank" title="새 창으로 이동합니다.">티지아이프라이데이스</a></li>
+                                <li><a href="http://www.lpoint.com" target="_blank" title="새 창으로 이동합니다.">L.POINT</a></li>
+                                <li><a href="http://job.lotte.co.kr" target="_blank" title="새 창으로 이동합니다.">롯데채용센터</a></li>
+                                <li><a href="http://www.lotteconf.co.kr" target="_blank" title="새 창으로 이동합니다.">롯데제과</a></li>
+                                <li><a href="http://www.pepero.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 빼빼로</a></li>
+                                <li><a href="http://www.lottehealth1.com" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 헬스원</a></li>
+                                <li><a href="http://www.natuur.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 나뚜루</a></li>
+                                <li><a href="http://company.lottechilsung.co.kr" target="_blank" title="새 창으로 이동합니다.">롯데칠성음료</a></li>
+                                <li><a href="http://mall.lottechilsung.co.kr/index.html" target="_blank" title="새 창으로 이동합니다.">롯데칠성몰</a></li>
+                                <li><a href="http://www.lottefoods.co.kr" target="_blank" title="새 창으로 이동합니다.">롯데푸드</a></li>
+                                <li><a href="http://www.pasteur.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 파스퇴르</a></li>
+                                <li><a href="http://www.pasteurmall.com" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 파스퇴르몰</a></li>
+                                <li><a href="http://www.pasteuri.com" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 파스퇴르아이</a></li>
+                                <li><a href="http://www.chefood.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 쉐푸드</a></li>
+                                <li><a href="http://www.en-nature.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 엔네이처</a></li>
+                                <li><a href="http://www.lottevienna.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 롯데비엔나</a></li>
+                                <li><a href="http://www.kisstick.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 키스틱</a></li>
+                                <li><a href="http://www.uiseongham.co.kr" target="_blank" title="새 창으로 이동합니다.">&nbsp;- 의성마늘햄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sns_wrap">
+                        <a href="#"><img src="images/footer_icon1.png" alt="트위터"></a>
+                        <a href="#"><img src="images/footer_icon2.png" alt="페이스북"></a>
+                        <a href="#"><img src="images/footer_icon3.png" alt="인스타그램"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- * 스크립트를 head에 연결시 ready이벤트안에 제이쿼리 작성하여 dom이 로딩된후 실행되게 함
+    * head에 연결시 연결 리소스를 한번에 볼수 있어 관리 측면에서 용이함
+    * 요즘 추세는 dom이 로딩된후 스크립트가 실행되야하므로 아래쪽에 붙이며 ready이벤트는 필요없어짐 
+    * 우리가 만드는 파일이기 때문에 캐싱방지해줌-->
+    <script src="js/main.js?v=<?php echo time(); ?>"></script>
+</body>
+</html>

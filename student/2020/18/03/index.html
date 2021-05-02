@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="SMEG">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SMEG">
+    <meta property="og:url" content="http://modacbull.com/rwdSmeg/">
+    <meta property="og:image" content="http://modacbull.com/rwdSmeg/images/common/og_img.png">
+    <meta property="og:description" content="SMEG">
+    <title>SMEG</title>
+    <!-- 데스크탑,안드로이드 크롬은 favicon.ico를 읽으므로
+    favicon을 128크기로 연결해주며 ios는 애플터치아이콘으로 따로 연결 -->
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="http://modacbull.com/rwdSmeg/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.common.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+    <div id="skipNavi">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <div class="header_inner">
+                <div class="top_header">
+                    <ul class="left_util">
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">NOTICE</a></li>
+                        <li><a href="#">EVENT</a></li>
+                        <li><a href="#">SMEGazine</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                    <ul class="right_util">
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">JOIN</a></li>
+                    </ul>
+                </div>
+                <div class="bottom_header">
+                    <h1 class="logo"><a href="index.html">SMEG</a></h1>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">냉장고</a>
+                            <ul class="depth2">
+                                <li><a href="#">FAB5</a></li>
+                                <li><a href="#">FAB10</a></li>
+                                <li><a href="#">FAB28</a></li>
+                                <li><a href="#">FAB30</a></li>
+                                <li><a href="#">FAB32</a></li>
+                                <li><a href="#">FAB50</a></li>
+                                <li><a href="#">SMEG500</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">커피</a>
+                            <ul class="depth2">
+                                <li><a href="#">밀크포머</a></li>
+                                <li><a href="#">커피 그라인더</a></li>
+                                <li><a href="#">반자동 커피머신</a></li>
+                                <li><a href="#">드립 커피머신</a></li>
+                                <li><a href="#">빌트인 커피머신</a></li>
+                                <li><a href="#">커피 원드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">주방/생활</a>
+                            <ul class="depth2">
+                                <li><a href="#">인덕션</a></li>
+                                <li><a href="#">빌트인 멀티오븐</a></li>
+                                <li><a href="#">식기세척기</a></li>
+                                <li><a href="#">세탁기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">소형가전</a>
+                            <ul class="depth2">
+                                <li><a href="#">토스터</a></li>
+                                <li><a href="#">전기포트</a></li>
+                                <li><a href="#">온도조절 전기포트</a></li>
+                                <li><a href="#">믹서기(블렌더)</a></li>
+                                <li><a href="#">핸드블렌더</a></li>
+                                <li><a href="#">반죽기(스탠드믹서)</a></li>
+                                <li><a href="#">착즙기</a></li>
+                                <li><a href="#">Sicily is my Love</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로페셔널</a>
+                            <ul class="depth2">
+                                <li><a href="#">업소용 식기세척기</a></li>
+                                <li><a href="#">420MFHK</a></li>
+                                <li><a href="#">45MFPGNK</a></li>
+                                <li><a href="#">43K</a></li>
+                                <li><a href="#">43GHK</a></li>
+                                <li><a href="#">43XEH</a></li>
+                                <li><a href="#">오븐랙</a></li>
+                                <li><a href="#">액세서리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">스메그서비스</a>
+                            <ul class="depth2">
+                                <li><a href="#">오븐 서비스</a></li>
+                                <li><a href="#">스메그 Gift 상품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">스메그클래스</a>
+                            <ul class="depth2">
+                                <li><a href="#">베이킹클래스 대체상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="menu_wrap">
+                        <a class="shop" href="#">
+                            <span class="blind">장바구니</span>
+                            <span class="numb">9</span>
+                        </a>
+                        <a class="menu" href="#">
+                            MENU
+                        </a>
+                        <div class="all_menu_wrap">
+                            <div class="global_search">
+                                <form>
+                                    <fieldset>
+                                        <legend>통합검색</legend>
+                                        <input type="text" title="검색어입력" placeholder="검색어를 입력하세요.">
+                                        <button class="btn_search" type="submit"><span class="blind">검색</span></button>
+                                    </fieldset>
+                                </form>
+                                <button class="btn_close" type="button">닫기</button>
+                            </div>
+                            <div class="list_wrap">
+                                <dl>
+                                    <dt><a href="#">REFRIGERATOR</a></dt>
+                                    <dd><a href="#">FAB5</a></dd>
+                                    <dd><a href="#">FAB10</a></dd>
+                                    <dd><a href="#">FAB28</a></dd>
+                                    <dd><a href="#">FAB30</a></dd>
+                                    <dd><a href="#">FAB32</a></dd>
+                                    <dd><a href="#">FAB50</a></dd>
+                                    <dd><a href="#">SMEG500</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">COFFEE</a></dt>
+                                    <dd><a href="#">밀크포머</a></dd>
+                                    <dd><a href="#">커피 그라인더</a></dd>
+                                    <dd><a href="#">반자동 커피머신</a></dd>
+                                    <dd><a href="#">드립 커피머신</a></dd>
+                                    <dd><a href="#">빌트인 커피머신</a></dd>
+                                    <dd><a href="#">커피 원드</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">KITCHEN</a></dt>
+                                    <dd><a href="#">인덕션</a></dd>
+                                    <dd><a href="#">빌트인 멀티오븐</a></dd>
+                                    <dd><a href="#">식기세척기</a></dd>
+                                    <dd><a href="#">세탁기</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">LIVING</a></dt>
+                                    <dd><a href="#">토스터</a></dd>
+                                    <dd><a href="#">전기포트</a></dd>
+                                    <dd><a href="#">온도조절 전기포트</a></dd>
+                                    <dd><a href="#">믹서기(블렌더)</a></dd>
+                                    <dd><a href="#">핸드블렌더</a></dd>
+                                    <dd><a href="#">반죽기(스탠드믹서)</a></dd>
+                                    <dd><a href="#">착즙기</a></dd>
+                                    <dd><a href="#">Sicily is my Love</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">PROFESSIONAL</a></dt>
+                                    <dd><a href="#">업소용 식기세척기</a></dd>
+                                    <dd><a href="#">420MFHK</a></dd>
+                                    <dd><a href="#">45MFPGNK</a></dd>
+                                    <dd><a href="#">43K</a></dd>
+                                    <dd><a href="#">43GHK</a></dd>
+                                    <dd><a href="#">43XEH</a></dd>
+                                    <dd><a href="#">오븐랙</a></dd>
+                                    <dd><a href="#">액세서리</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">SMEG CLASS</a></dt>
+                                    <dd><a href="#">베이킹클래스 대체상품</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">CUSTOMER SERVICE</a></dt>
+                                    <dd><a href="#">NOTICE</a></dd>
+                                    <dd><a href="#">EVENT</a></dd>
+                                    <dd><a href="#">1:1문의</a></dd>
+                                    <dd><a href="#">FAQ</a></dd>
+                                    <dd><a href="#">스메그 리뷰</a></dd>
+                                    <dd><a href="#">SMEGazine</a></dd>
+                                    <dd><a href="#">매장안내</a></dd>
+                                    <dd><a href="#">스메그 패밀리</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">MEMBERSHIP</a></dt>
+                                    <dd><a href="#">JOIN</a></dd>
+                                    <dd><a href="#">LOGIN</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">COMPANY</a></dt>
+                                    <dd><a href="#">HISOTRY</a></dd>
+                                    <dd><a href="#">DESIGNER</a></dd>
+                                    <dd><a href="#">TECHNOLOGY</a></dd>
+                                    <dd><a href="#">LOCATION</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m_gnb_wrap" id="mGnb">
+                <div class="top_gnb">
+                    <h2>전체메뉴</h2>
+                    <button class="btn_close" type="button">닫기</button>
+                </div>
+                <div class="m_global_search">
+                    <form>
+                        <fieldset>
+                            <legend>통합검색</legend>
+                            <input type="text" title="검색어입력" placeholder="검색어를 입력하세요.">
+                            <button class="btn_search" type="submit"><span class="blind">검색</span></button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="btn_wrap">
+                    <a class="btn_util login" href="">로그인</a>
+                    <a class="btn_util regist" href="">회원가입</a>
+                    <a class="etc" href="#">비회원 주문조회 </a>
+                </div>
+                <ul class="m_gnb">
+                    <li>
+                        <a href="#">냉장고</a>
+                        <ul class="depth2">
+                            <li><a href="#">FAB5</a></li>
+                            <li><a href="#">FAB10</a></li>
+                            <li><a href="#">FAB28</a></li>
+                            <li><a href="#">FAB30</a></li>
+                            <li><a href="#">FAB32</a></li>
+                            <li><a href="#">FAB50</a></li>
+                            <li><a href="#">SMEG500</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커피</a>
+                        <ul class="depth2">
+                            <li><a href="#">밀크포머</a></li>
+                            <li><a href="#">커피 그라인더</a></li>
+                            <li><a href="#">반자동 커피머신</a></li>
+                            <li><a href="#">드립 커피머신</a></li>
+                            <li><a href="#">빌트인 커피머신</a></li>
+                            <li><a href="#">커피 원드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">주방/생활</a>
+                        <ul class="depth2">
+                            <li><a href="#">인덕션</a></li>
+                            <li><a href="#">빌트인 멀티오븐</a></li>
+                            <li><a href="#">식기세척기</a></li>
+                            <li><a href="#">세탁기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">소형가전</a>
+                        <ul class="depth2">
+                            <li><a href="#">토스터</a></li>
+                            <li><a href="#">전기포트</a></li>
+                            <li><a href="#">온도조절 전기포트</a></li>
+                            <li><a href="#">믹서기(블렌더)</a></li>
+                            <li><a href="#">핸드블렌더</a></li>
+                            <li><a href="#">반죽기(스탠드믹서)</a></li>
+                            <li><a href="#">착즙기</a></li>
+                            <li><a href="#">Sicily is my Love</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">프로페셔널</a>
+                        <ul class="depth2">
+                            <li><a href="#">업소용 식기세척기</a></li>
+                            <li><a href="#">420MFHK</a></li>
+                            <li><a href="#">45MFPGNK</a></li>
+                            <li><a href="#">43K</a></li>
+                            <li><a href="#">43GHK</a></li>
+                            <li><a href="#">43XEH</a></li>
+                            <li><a href="#">오븐랙</a></li>
+                            <li><a href="#">액세서리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">스메그서비스</a>
+                        <ul class="depth2">
+                            <li><a href="#">오븐 서비스</a></li>
+                            <li><a href="#">스메그 Gift 상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">스메그클래스</a>
+                        <ul class="depth2">
+                            <li><a href="#">베이킹클래스 대체상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">CUSTOMER SERVICE</a>
+                        <ul class="depth2">
+                            <li><a href="#">NOTICE</a></li>
+                            <li><a href="#">EVENT</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">스메그 리뷰</a></li>
+                            <li><a href="#">SMEGazine</a></li>
+                            <li><a href="#">매장안내</a></li>
+                            <li><a href="#">스메그 패밀리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">COMPANY</a>
+                        <ul class="depth2">
+                            <li><a href="#">HISOTRY</a></li>
+                            <li><a href="#">DESIGNER</a></li>
+                            <li><a href="#">TECHNOLOGY</a></li>
+                            <li><a href="#">LOCATION</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="bottom_gnb">
+                    <div class="util_wrap">
+                        <a href="#">1:1 문의</a>
+                        <a href="#">자주 찾는 질문</a>
+                    </div>
+                    <p class="tel_numb">1588-2644</p>
+                    <p class="time">평일 09:00 ~ 17:00<br>주말/공휴일 제외</p>
+                </div>
+            </div>
+            <!-- 모바일에서 dim처리 -->
+            <div id="dim"></div>
+        </header>
+        <div id="container">
+            <!-- 데스크탑 메인 비주얼 영상 -->
+            <div class="main_video">
+                <iframe title="SMEG메인비주얼영상" width="560" height="315" src="https://www.youtube.com/embed/v2je4hMQkpI?controls=0&showinfo=0&autoplay=1&loop=1&mute=1&showinfo=0&playlist=v2je4hMQkpI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- //데스크탑 메인 비주얼 영상 -->
+            <!-- 모바일 비주얼 슬라이더 -->
+            <div class="m_main_visual">
+                <div class="swiper-container visual_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/m_main_01.png" alt="Milk frother">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h2>Milk frother</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/m_main_02.png" alt="Coffee grinder">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h2>Coffee grinder</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/m_main_03.png" alt="Coffee machine">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h2>Coffee machine</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/m_main_04.png" alt="Toaster">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h2>Toaster</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/m_main_05.png" alt="Induction">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h2>Induction</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/m_main_06.png" alt="FAB5">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h2>FAB5</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination white_border"></div>
+                </div>
+            </div>
+            <!-- //모바일 비주얼 슬라이더 -->
+            <!-- 메인 notice 섹션 -->
+            <section class="main_notice">
+                <h2 class="blind">공지사항</h2>
+                <!-- 메인 notice 슬라이더 -->
+                <div class="swiper-container notice_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <a href="#">
+                                    <img src="images/notice_bg_01.jpg" alt="신제품출시">
+                                </a>
+                            </div>
+                            <div class="txt_wrap">
+                                <a href="#">
+                                    <p class="txt1">신제품 출시</p>
+                                    <h3>MILK FROTHER &amp; <br> COFFEE GRINDER</h3>
+                                    <p class="txt2">밀크포너 &amp; 커피 그라인더</p>
+                                    <p class="txt3">
+                                        스메그 밀크포머와 커피 그라인더가 출시되었습니다. <br>
+                                        매일 아침 스메그와 함께 신선하고 향긋한 아침을 시작해 보세요.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <a href="#">
+                                    <img src="images/notice_bg_02.jpg" alt="신제품출시">
+                                </a>
+                            </div>
+                            <div class="txt_wrap">
+                                <a href="#">
+                                    <p class="txt1">신제품 출시</p>
+                                    <h3>THE NEW FAB SERIES</h3>
+                                    <p class="txt2">NEW Arrival</p>
+                                    <p class="txt3">
+                                        스메그 FAB5 / FAB10 / FAB30 제품이 새롭게 리뉴얼되었습니다. <br>
+                                        새로워진 FAB 시리즈를 만나보세요.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <a href="#">
+                                    <img src="images/notice_bg_03.jpg" alt="신제품출시">
+                                </a>
+                            </div>
+                            <div class="txt_wrap">
+                                <a href="#">
+                                    <p class="txt1">신제품 출시</p>
+                                    <h3>WIDE CONVECTION OVEN</h3>
+                                    <p class="txt2">와이드 컨벡션 오븐</p>
+                                    <p class="txt3"> 기존 60L 오븐 대비 약 1.6배 커진 용량과  <br> 상·하단 열선을 이용해 데크 오븐과 유사한 효과를 낼 수 있습니다
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <a href="#">
+                                    <img src="images/notice_bg_04.jpg" alt="신제품출시">
+                                </a>
+                            </div>
+                            <div class="txt_wrap">
+                                <a href="#">
+                                    <p class="txt1">신제품 출시</p>
+                                    <h3>DISH WASHER</h3>
+                                    <p class="txt2">업소용 식기세척기</p>
+                                    <p class="txt3">
+                                        스메그 업소용 식기세척기 3종이 출시되었습니다. <br>
+                                        스메그만의 노하우가 집약된 업소용 식기세척기를 만나보세요.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <a href="#">
+                                    <img src="images/notice_bg_05.jpg" alt="신제품출시">
+                                </a>
+                            </div>
+                            <div class="txt_wrap">
+                                <a href="#">
+                                    <p class="txt1">#DGSMEG</p>
+                                    <h3>Sicily is my Love</h3>
+                                    <p class="txt2">돌체앤가바나 콜라보레이션</p>
+                                    <p class="txt3">이탈리아 대표 브랜드 스메그와 돌체앤가바나가 창조적 영감을 빌어 탄생한 <br>
+                                        독창적이고 아름다운 프로젝트 Sicily is my Love 컬렉션을 소개합니다.												
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <a href="#">
+                                    <img src="images/notice_bg_06.jpg" alt="신제품출시">
+                                </a>
+                            </div>
+                            <div class="txt_wrap">
+                                <a href="#">
+                                    <p class="txt1">Large appliances</p>
+                                    <h3>DISH WASHER</h3>
+                                    <p class="txt2">식기세척기</p>
+                                    <p class="txt3">스메그만의 특허 기술인 궤도분사 시스템 방식으로 <br>
+                                        골고루 물을 분사시켜 식기에 묻은 각종 얼룩 및 음식물을 말끔히 씻겨줍니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev btn_arrow"></div>
+                    <div class="swiper-button-next btn_arrow"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //메인 notice 슬라이더 -->
+                <ol class="list_numb">
+                    <li class="active"><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                    <li><a href="#">06</a></li>
+                </ol>
+            </section>
+            <!-- //메인 notice 섹션 -->
+            <!-- 메인 news 섹션 -->
+            <section class="main_news">
+                <h2 class="tit">SMEG News</h2>
+                <!-- 메인 news 슬라이더 -->
+                <div class="swiper-container news_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/news_img_01.jpg" alt="NEWS">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/news_img_02.jpg" alt="NOTICE">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/news_img_03.jpg" alt="EVENT">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //메인 news 슬라이더 -->
+            </section>
+            <!-- //메인 news 섹션 -->
+            <!-- 메인 SMEGAzine 섹션 -->
+            <section class="main_megazine">
+                <h2 class="tit">SMEGazine</h2>
+                <div class="grid_wrap">
+                    <div class="left_big">
+                        <div class="con_box">
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <h3>[스메그로 오늘 뭐 굽지?] EP 08. 버터없이 만드는 밀봉 카스테라</h3>
+                                    <p class="txt">밀봉 카스테라</p>
+                                </div>
+                                <img src="images/megazine_bg_01.png" alt="밀봉 카스테라">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right_small">
+                        <div class="con_box ">
+                            <a href="#">
+                                <div class="txt_wrap txt_wrap_small">
+                                    <h3>[스메그로 오늘 뭐 굽지?] EP 07. 대파 체다치즈 스콘</h3>
+                                    <p class="txt">대파 체다치즈스콘</p>
+                                </div>
+                                <img src="images/megazine_bg_02.jpg" alt="대파 체다치즈스콘">
+                            </a>
+                        </div>
+                        <div class="con_box">
+                            <a href="#">
+                                <div class="txt_wrap txt_wrap_small">
+                                    <h3>[스메그로 오늘 뭐 굽지?] EP 06. 마론 타르트</h3>
+                                    <p class="txt">마론 타르트</p>
+                                </div>
+                                <img src="images/megazine_bg_03.jpg" alt="마론 타르트">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right_big">
+                        <div class="con_box">
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <h3>[스메그로 오늘 뭐 굽지?] EP 05. 아이스크림 콘 쌀케이크</h3>
+                                    <p class="txt">아이스크림 콘 쌀케이크</p>
+                                </div>
+                                <img src="images/megazine_bg_04.jpg" alt="컨텐츠">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="left_small">
+                        <div class="con_box">
+                            <a href="#">
+                                <div class="txt_wrap txt_wrap_small">
+                                    <h3>[스메그로 오늘 뭐 굽지?] EP 04. 콩가루 크럼블 쑥파운드</h3>
+                                    <p class="txt">콩가루 크럼블 쑥파운드</p>
+                                </div>
+                                <img src="images/megazine_bg_05.jpg" alt="컨텐츠">
+                            </a>
+                        </div>
+                        <div class="con_box">
+                            <a href="#">
+                                <div class="txt_wrap txt_wrap_small">
+                                    <h3>[스메그로 오늘 뭐 굽지?] EP 03. 레몬 위크엔드</h3>
+                                    <p class="txt">레몬 위크엔드</p>
+                                </div>
+                                <img src="images/megazine_bg_06.png" alt="컨텐츠">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SMEGazine 슬라이더 -->
+                <div class="swiper-container megazine_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cafe">
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <p>#스메그_공식카페 #정보공유</p>
+                                </div>
+                                <img src="images/megazine_slider_01.jpg" alt="정보공유">
+                            </a>
+                        </div>
+                        <div class="swiper-slide blog">
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <p>[The-edit] 냉장고를 부탁해, 스메그</p>
+                                </div>
+                                <img src="images/megazine_slider_02.jpg" alt="냉장고를 부탁해, 스메그">
+                            </a>
+                        </div>
+                        <div class="swiper-slide facebook">
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <p>#블렌더_미니_레시피</p>
+                                </div>
+                                <img src="images/megazine_slider_03.png" alt="#블렌더_미니_레시피">
+                            </a>
+                        </div>
+                        <div class="swiper-slide insta">
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <p>#찰떡궁합 #플렌테리어</p>
+                                </div>
+                                <img src="images/megazine_slider_04.png" alt="#찰떡궁합 #플렌테리어">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination white_border"></div>
+                </div>
+                <!-- //SMEGazine 슬라이더 -->
+            </section>
+            <!-- 메인 SMEGAzine 섹션 -->
+            <!-- 메인 review 섹션 -->
+            <section class="main_review">
+                <h2 class="tit">SMEG Review</h2>
+                <!-- 그리드 컨텐츠 영역 -->
+                <div class="grid_wrap">
+                    <div class="left_con">
+                        <div class="small_con">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/review_img_01.png" alt="배경">
+                                </div>
+                                <div class="txt_wrap">
+                                    <p class="txt1">
+                                        스메그 업소용 식기세척기를 구매해야 하는 이유 </p>
+                                    <p class="txt2">UD505DK / 스메그</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small_con small_con_left">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/review_img_02.png" alt="배경">
+                                </div>
+                                <div class="txt_wrap">
+                                    <p class="txt1">
+                                        오늘도 예쁨. 스메그 가정용 커피그라인더와 반자동 커피머신</p>
+                                    <p class="txt2">CGF01WHEU / 시월의 담</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="big_con">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/review_img_03.jpg" alt="배경">
+                                </div>
+                                <div class="txt_wrap">
+                                    <p class="txt1">
+                                        스메그 신제품 FAB50 메인 냉장고로 사용해요~</p>
+                                    <p class="txt2">FAB50 / 하니</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right_con">
+                        <div class="big_con">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/review_img_04.png" alt="배경">
+                                </div>
+                                <div class="txt_wrap">
+                                    <p class="txt1">
+                                        감성 홈카페 우유거품기 스메그 밀크포머로 업그레이드 해요</p>
+                                    <p class="txt2">MFF01WHEU / 채영이맘</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small_con">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/review_img_05.png" alt="배경">
+                                </div>
+                                <div class="txt_wrap">
+                                    <p class="txt1">
+                                        스메그 오븐을 선택하는 5가지 이유	</p>
+                                    <p class="txt2">ALFA43K / 스메그코리아</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small_con small_con_left">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="images/review_img_06.png" alt="배경">
+                                </div>
+                                <div class="txt_wrap">
+                                    <p class="txt1">
+                                        스메그 인덕션 만나고 즐거워진 요리시간</p>
+                                    <p class="txt2">PI964 / 바이줌</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //그리드 컨텐츠 영역 -->
+                <!-- 모바일 SMEG Review 슬라이더 -->
+                <div class="m_review_slider">
+                    <div class="swiper-container review_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/m_review_img_01.png" alt="컨텐츠">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="txt1">
+                                            스메그 업소용 식기세척기를 구매해야 하는 이유 </p>
+                                        <p class="txt2">UD505DK / 스메그</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/m_review_img_02.png" alt="컨텐츠">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="txt1">
+                                            오늘도 예쁨. 스메그 가정용 커피그라인더와 반자동 커피머신</p>
+                                        <p class="txt2">CGF01WHEU / 시월의 담</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/m_review_img_03.png" alt="컨텐츠">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="txt1">스메그 신제품 FAB50 메인 냉장고로 사용해요~  </p>
+                                        <p class="txt2">FAB50 / 하니</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/m_review_img_04.png" alt="컨텐츠">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="txt1">감성 홈카페 우유거품기 스메그 밀크포머로 업그레이드 해요 </p>
+                                        <p class="txt2">MFF01WHEU / 채영이맘</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/m_review_img_05.png" alt="컨텐츠">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="txt1">
+                                            스메그 오븐을 선택하는 5가지 이유 </p>
+                                        <p class="txt2">ALFA43K / 스메그코리아</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/m_review_img_06.png" alt="컨텐츠">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="txt1">
+                                            스메그 인덕션 만나고 즐거워진 요리시간 </p>
+                                        <p class="txt2">PI964 / 바이줌</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- 모바일 SMEG Review 슬라이더 -->
+                </div>
+            </section>
+            <!-- //메인 review 섹션 -->
+            <!-- 메인 브랜드 스토리 섹션 -->
+            <section class="main_brand">
+                <h2 class="blind">브랜드소개섹션</h2>
+                <ul class="list_tab">
+                    <li class="active"><a href="#">SMEG Brand Story</a></li>
+                    <li><a href="#">SMEG Design</a></li>
+                    <li><a href="#">SMEG Technology</a></li>
+                </ul>
+                <!-- 브랜드 슬라이더 -->
+                <div class="swiper-container brand_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <img src="images/brand_bg_01.jpg" alt="브랜드">
+                            </div>
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <h3>SMEG BRAND STORY</h3>
+                                    <p class="txt">SMEG는 1948년 이태리 북쪽 Reggio Emilia, Guastalla 지역의<br> 
+                                        Vittorio Bertazzoni 가문에 의해 설립된 Style가전 전문 기업입니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <img src="images/brand_bg_02.jpg" alt="브랜드">
+                            </div>
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <h3>SMEG DESIGN</h3>
+                                    <p class="txt">세계 3대 산업 디자이너인 마크 뉴슨의<br> 
+                                        창의성을 기본으로 곡선 라인 / 반투명함 / 명쾌함의 강조와<br> 
+                                        직선 스타일을 배제한 디자인이 특징입니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_wrap">
+                                <img src="images/brand_bg_03.jpg" alt="브랜드">
+                            </div>
+                            <a href="#">
+                                <div class="txt_wrap">
+                                    <h3>SMEG Technology</h3>
+                                    <p class="txt">SMEG는 식기세척기 / 오븐 / 전자레인지 / 드럼세탁기 / 냉장고<br> 
+                                        냉동고 / 가스오븐 / 쿡탑 / 후드 / 싱크 / 수전 등 거의 모든 주방기기를<br> 
+                                        이태리 공장에서 자체 생산하고 있습니다.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination white_border"></div>
+                    <div class="swiper-button-prev btn_arrow btn_arrow_white"></div>
+                    <div class="swiper-button-next btn_arrow btn_arrow_white"></div>
+                </div>
+                <!-- //브랜드 슬라이더 -->
+            </section>
+            <!-- //메인 브랜드 스토리 섹션 -->
+            <!-- 메인 멤버쉽 섹션 -->
+            <section class="main_membership">
+                <h2 class="blind">멤버쉽</h2>
+                <div class="top_membership">
+                    <a class="btn_membership" href="#">
+                        <img src="images/membership_img.png" alt="멤버쉽">
+                    </a>
+                </div>
+                <!-- 서비스 드롭다운 컨텐츠 -->
+                <div class="bottom_membership">
+                    <div class="txt_wrap">
+                        <h3 class="tit">SMEG SERVICE</h3>
+                        <p class="txt1">스메그를 소유하는 그 이상의 가치를 스메그 서비스를 통해 누려 보세요.</p>
+                    </div>
+                    <ul class="list_service">
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_membership_01.png" alt="기술지원">
+                                <span>기술지원</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_membership_02.png" alt="클리닝 서비스">
+                                <span>클리닝 서비스</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_membership_03.png" alt="방문점검">
+                                <span>방문점검</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_membership_04.png" alt="재설치">
+                                <span>재설치</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="notice">※ 스메그 서비스는 회사 사정에 따라 별도 고지 없이 변경/중단 될 수 있습니다.</p>
+                </div>
+                <!-- 서비스 드롭다운 컨텐츠 -->
+            </section>
+            <!-- //메인 멤버쉽 섹션 -->
+        </div>
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="top_footer">
+                    <ul class="list_footer">
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">협찬/제휴문의</a></li>
+                        <li><a href="#">매장안내</a></li>
+                        <li><a href="#">스메그 패밀리</a></li>
+                        <li><a href="#">스메그 리퍼즈샵</a></li>
+                    </ul>
+                    <ul class="sns_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_footer_cafe.png" alt="카페">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_footer_blog.png" alt="블로그">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_footer_facebook.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/ico_footer_insta.png" alt="인스타그램">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="bottom_footer">
+                    <h1 class="logo"><a href="index.html"><img src="images/footer_logo.png" alt="SMEG"></a></h1>
+                    <div class="left_addr">
+                        <p class="address">상호명 : (주)제이컬렉션<span></span>대표 : 정태호<span></span>주소 : 서울특별시 강남구 봉은사로
+                            449(삼성동44-17) 밤부타워 2,3,4,5층<br> 개인정보보호책임자 : 이한범<span></span>사업자등록번호 :
+                            206-86-72765<span></span>통신판매신고번호 : 제 2018-서울강남-04317호 </p>
+                        <a class="email" href="#">대표메일 : smeginfo@smegkorea.com</a>
+                        <p class="copy"> Copyright ⓒ 2017 SMEGKOREA Co., Ltd. All right reserved. </p>
+                        <p class="warn">본 사이트의 상품 이미지 및 저작물과 상표 등의 무단 도용 복제 시에는 사전 고지 없이 법적 조치될 수 있습니다.</p>
+                    </div>
+                    <div class="right_addr">
+                        <p class="txt1">고객지원</p>
+                        <p class="tel">1588-2644</p>
+                        <p class="txt2">평일 09:00 ~ 17:00 (주말/공휴일 제외)</p>
+                        <ul class="list_util">
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 모바일 푸터 하단 -->
+                <div class="m_bottom_footer">
+                    <div class="m_addr_wrap">
+                        <a href="#" class="btn_addr">
+                            <span>(주)제이컬렉션 사업자 정보</span>
+                        </a>
+                        <p class="m_addr_txt">
+                            대표 : 정태호<br>
+                            주소 : 서울특별시 강남구 봉은사로 449(삼성동44-17) 밤부타워 2,3,4,5층<br>
+                            고객센터 : 1588-2644 팩스 : 02-413-9401<br>
+                            사업자등록번호 : 206-86-72765 <br>
+                            통신판매신고번호 : 제 2018-서울강남-04317호<br>
+                            대표메일 : smeginfo@smegkorea.com<br>
+                            개인정보보호책임자 : 이한범
+                        </p>
+                    </div>
+                    <p class="copy">© 2017 SMEGKOREA Co., Ltd. All right reserved.</p>
+                </div>
+                <div class="btn_wrap">
+                    <a class="btn_top" href="#">상단으로 이동</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

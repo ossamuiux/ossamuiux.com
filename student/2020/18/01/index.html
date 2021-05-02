@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1180">
+    <meta name="description" content="색다른 맛으로 세상을 즐겁게 바꿉니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paldo 팔도">
+    <!-- og:url, og:image는 절대경로로 연결 -->
+    <meta property="og:url" content="http://modacbull.com/paldo/">
+    <meta property="og:image" content="http://modacbull.com/paldo/paldo_og.jpg">
+    <meta property="og:description" content="색다른 맛으로 세상을 즐겁게 바꿉니다.">
+    <title>Paldo | 메인</title>
+    <!-- 프로젝트 루트에 파비콘넣고 파라메터 붙여서 연결 -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 외부 CSS연결 라이브러리(jqueryUI, Swiper) -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 공통CSS,브라우저 캐싱 방지 -->
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <!-- 크롬 transition버그로인해 시작시 애니메이션이 바로되며 js파일을 연결하면 해결됨. -->
+    <!-- 외부 js연결 라이브러리(jquery 3.5.1, jqueryUI, swiper) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!-- 공통JS -->
+    <script src="js/ui.common.js?v=<?php echo time(); ?>"></script>
+</head>
+
+<body>
+    <div id="skipNavi">
+        <a href="#container">본문바로가기</a>
+
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <div class="top_header">
+                    <h1 class="logo"><a href="index.html"><img src="images/paldo_logo.png" alt="팔도"></a></h1>
+                    <div class="util_wrap">
+                        <ul class="util">
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                        <div class="lang_wrap">
+                            <a class="btn_lang" href="#">KOR</a>
+                            <ul class="lang_etc">
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">CHI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_header">
+                    <nav class="gnb">
+                        <ul class="depth1 clearfix">
+                            <li>
+                                <a href="company_overview.html">회사소개</a>
+                                <ul class="depth2">
+                                    <li><a href="company_overview.html">팔도 소개</a></li>
+                                    <li><a href="company_overview.html">팔도 역사</a></li>
+                                    <li><a href="company_overview.html">C.I. 소개</a></li>
+                                    <li><a href="company_overview.html">사업영역</a></li>
+                                    <li><a href="company_overview.html">인재채용</a></li>
+                                    <li><a href="company_overview.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="brand_ramen.html">브랜드</a>
+                                <ul class="depth2">
+                                    <li><a href="brand_ramen.html">면 브랜드</a></li>
+                                    <li><a href="brand_ramen.html">음료 브랜드</a></li>
+                                    <li><a href="brand_ramen.html">간편식 브랜드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">홍보센터</a>
+                                <ul class="depth2">
+                                    <li><a href="#">뉴스 &amp; 보도자료</a></li>
+                                    <li><a href="#">이벤트ㆍ프로모션</a></li>
+                                    <li><a href="#">CF 보기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">커뮤니티</a>
+                                <ul class="depth2">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">팔도 블로그</a></li>
+                                    <li><a href="#">SNS 공식채널</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">고객서비스</a>
+                                <ul class="depth2">
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- main container  -->
+        <div id="container">
+            <section class="main_visual">
+                <h2 class="blind">메인 슬라이더</h2>
+                <!-- 슬라이더 시작 -->
+                <!-- Slider main container -->
+                <div class="swiper-container main_visual_slider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slide01">
+                            <div class="slide_inner">
+                                <a href="brand_ramen_detail.html" class="btn_detail">자세히 보기</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide02">
+                            <div class="slide_inner">
+                                <a href="brand_ramen_detail.html" class="btn_detail">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- 슬라이더 끝 -->
+            </section>
+            <!-- 팔도 제품소개 섹션 -->
+            <section class="main_product">
+                <div class="tit_wrap">
+                    <h2 class="section_tit">팔도 제품소개</h2>
+                    <p class="section_txt1">Fun &amp; Yum</p>
+                    <p class="section_txt2">색다른 맛으로 세상을 즐겁게 바꿉니다.</p>
+                </div>
+                <div class="main_product_inner clearfix">
+                    <div class="left_product card_con">
+                        <h3 class="product_tit">신제품</h3>
+                        <!-- 신제품 슬라이더 시작 -->
+                        <div class="swiper-container new_product_slider product_slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="product_wrap" href="brand_ramen_detail.html">
+                                        <div class="img_wrap">
+                                            <img src="images/paldo_new_product02.png" alt="참깨라면">
+                                        </div>
+                                        <div class="txt_wrap">
+                                            <p>똑 부러지는 고소함! 참깨라면도 이제 골라 먹자</p>
+                                            <h4>참깨라면</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="product_wrap" href="brand_ramen_detail.html">
+                                        <div class="img_wrap">
+                                            <img src="images/paldo_new_product01.png" alt="팔도비빔면">
+                                        </div>
+                                        <div class="txt_wrap">
+                                            <p>팔도 비빔면과 미샤 BB크림이 만났다</p>
+                                            <h4>팔도 BB면</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="product_wrap" href="brand_ramen_detail.html">
+                                        <div class="img_wrap">
+                                            <img src="images/paldo_new_product03.png" alt="팔도비빔면">
+                                        </div>
+                                        <div class="txt_wrap">
+                                            <p>이게 바나나여? 아니 식혜여</p>
+                                            <h4>비락 바나나식혜</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- 신제품 슬라이드 끝 -->
+                    </div>
+                    <div class="right_product card_con">
+                        <h3 class="product_tit">대표 브랜드</h3>
+                        <ul class="brand_tab">
+                            <li class="active"><a href="#">라면</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">간편식</a></li>
+                        </ul>
+                        <!-- 대표브랜드 슬라이더 시작 + 탭메뉴처리-->
+                        <div class="tab_wrap">
+                            <!-- 면브랜드슬라이더 탭1-->
+                            <div class="product_slider_wrap active">
+                                <div class="swiper-container product_slider brand_product_slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_noodle01.png" alt="비빔면 매운맛">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>더 화끈~한 매운맛! </p>
+                                                    <h4>비빔면 매운맛</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_noodle02.png" alt="비빔면">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>오른손으로 비비고~ 왼손으로 비비고!</p>
+                                                    <h4>비빔면</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_noodle03.png" alt="쫄비빔면">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>쫄깃 쫄깃 탱탱한 면발!</p>
+                                                    <h4>쫄비빔면</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_noodle04.png" alt="틈새라면">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>더 맛있게 매워진! 틈새라면</p>
+                                                    <h4>틈새라면</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_noodle05.png" alt="도시락">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>사각의 용기에서 느낄 수 있는 매콤한 맛!</p>
+                                                    <h4>도시락</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_noodle06.png" alt="팔도BB면">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>사각의 용기에서 느낄 수 있는 매콤한 맛!</p>
+                                                    <h4>김치도시락</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <!-- 음료브랜드슬라이더 탭2 -->
+                            <div class="product_slider_wrap">
+                                <div class="swiper-container product_slider brand_product_slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_drink01.png" alt="비락식혜">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>어릴 적 할머니께서 직접 만들어 주시던 맛!</p>
+                                                    <h4>비락식혜</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_drink02.png" alt="비락수정과">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>계피와 생각, 곶감을 이용해 전통의 맛을 살린 음료</p>
+                                                    <h4>비락수정과</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_drink04.png" alt="뽀로로">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>어린이 음료계의 뽀통령!</p>
+                                                    <h4>뽀로로</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_drink05.png" alt="산타페">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>나만의 자유 산타페!</p>
+                                                    <h4>산타페 오리지널</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <!-- 간편식브랜드슬라이더 탭3 -->
+                            <div class="product_slider_wrap">
+                                <div class="swiper-container product_slider brand_product_slider">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_sauce01.png" alt="팔도비빔장 시그니처">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>매콤! 새콤! 달콤! 팔도만의 노하우!</p>
+                                                    <h4>비빔장 시그니처</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_sauce02.png" alt="팔도비빔장 버터간장소스">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>뉴질랜드산 리얼버터의 풍미가 가득!</p>
+                                                    <h4>비빔장 버터간장</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide small_product">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_sauce03.png" alt="팔도비빔장 매운맛">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>모든 매운 음식 요리에 딱!</p>
+                                                    <h4>비빔장 매운맛</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="product_wrap" href="brand_ramen_detail.html">
+                                                <div class="img_wrap">
+                                                    <img src="images/paldo_sauce04.png" alt="만능 비빔장">
+                                                </div>
+                                                <div class="txt_wrap">
+                                                    <p>무엇과 비벼 먹어도 맛있는 팔도만의 노하우!</p>
+                                                    <h4>만능 비빔장</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 대표브랜드 슬라이더 끝 -->
+                    </div>
+                </div>
+            </section>
+            <!-- // 팔도 제품소개 섹션 -->
+            <!-- 팔도 소식 섹션 -->
+            <section class="main_news">
+                <div class="tit_wrap">
+                    <h2 class="section_tit">팔도 소식</h2>
+                    <p class="section_txt1">Paldo News</p>
+                    <p class="section_txt2">팔도의 즐거운 소식, 색다른 이야기!</p>
+                </div>
+                <div class="main_news_inner">
+                    <!-- 뉴스 섹션 슬라이드 시작-->
+                    <div class="swiper-container news_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img00.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>보도자료</h3>
+                                        <p>팔도, ‘학교폭력·디지털성범죄 예방’
+                                            위한 공익캠페인 실시</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img01.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>보도자료</h3>
+                                        <p>‘팔도비빔면’, 1초당 5개 팔렸다
+                                            “역대 최단 기간 1억개 판매”</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img02.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>보도자료</h3>
+                                        <p>‘팔도 비빔면 매운맛’ 출시… 브랜드
+                                            라인업 확장</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img03.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>보도자료</h3>
+                                        <p>"800원이면 한 끼 해결"…러시아
+                                            국민라면 된 팔도 '도시락'</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img04.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>보도자료</h3>
+                                        <p>11번가, 팔도와 손잡고 '비락햇쌀'
+                                            선물세트 출시 (종합)</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img05.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>보도자료</h3>
+                                        <p>어린이 간식 ‘뽀로로 크리스피 핫도그
+                                            2종’ 출시</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news_slide">
+                                <a class="card_news card" href="#">
+                                    <div class="img_wrap">
+                                        <img src="images/news_img06.png" alt="뉴스자료1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <h3>공지사항</h3>
+                                        <p>'왕뚜껑 소녀' 황보라 "15년만 모델
+                                            재발탁</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- //뉴스 섹션 슬라이드 끝 -->
+                </div>
+            </section>
+            <!-- // 팔도 소식 섹션 -->
+            <!-- 팔도 레시피 섹션 -->
+            <section class="main_recipe">
+                <div class="tit_wrap">
+                    <h2 class="section_tit">팔도 레시피</h2>
+                    <p class="section_txt1">Paldo Recipe</p>
+                    <p class="section_txt2">온종일 맛있는 생각뿐!</p>
+                </div>
+                <div class="main_recipe_inner ">
+                    <ul class="list_recipe clearfix">
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img01.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>양푼이 비빔면</h3>
+                                    <p>팔도 먹을랭? 양푼이 비빔면편 <br> (feat.15초 레시피) </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img02.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>비락식혜 수박화채</h3>
+                                    <p>팔도먹을랭? 비락식혜 수박화채편!! </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img03.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>양푼이 비빔면</h3>
+                                    <p>물회 맛집 여기 군요~! 팔도 비빔장 활용 물회 레시피!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img04.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>매운 기름떡볶이</h3>
+                                    <p>전통시장 부럽지 않은 쫄깃 매콤한 매운 기름떡볶이 레시피! </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img05.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>누룽지 꼬꼬면</h3>
+                                    <p>중복이 왔습니닭~~! 맛있는 복날 음식 누룽지 꼬꼬면 레시피!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img06.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>아보카도 샐러드 비빔면</h3>
+                                    <p>상큼함이 가득한 아보카도 샐러드 비빔면 레시피~!!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img07.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>베이컨 파채 삼선짜장면 레시피</h3>
+                                    <p>가성비갑 베이컨 파채 삼선짜장면 레시피!</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card_recipe card" href="#">
+                                <div class="img_wrap">
+                                    <img src="images/recipe_img08.png" alt="뉴스자료1">
+                                </div>
+                                <div class="txt_wrap">
+                                    <h3>해물 게살냉라면 레시피</h3>
+                                    <p>해물향 가득한 냉라면 즐기기! 해물 게살 냉라면 레시피! </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn_more">레시피 더보기</a>
+                </div>
+            </section>
+            <!-- // 팔도 레시피 섹션 -->
+            <!-- 팔도 이벤트 섹션 -->
+            <section class="main_event">
+                <div class="tit_wrap">
+                    <h2 class="section_tit">팔도 이벤트</h2>
+                    <p class="section_txt1">Paldo Event</p>
+                    <p class="section_txt2">팔도와 함께, 색다른 즐거움 가득!</p>
+                </div>
+                <div class="main_event_inner clearfix">
+                    <div class="left_event event">
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="images/event_01.png" alt="광복절">
+                            </div>
+                            <div class="txt_wrap">
+                                <h3>[진행중] 세월이 지나도 언제나 기억하기, 815 도시락 인증샷 이벤트</h3>
+                                <p class="tag">&num;기억하기캠페인</p>
+                                <p class="tag">&num;815도시락</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="right_event event">
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="images/event_02.png" alt="비락식혜이벤트">
+                            </div>
+                            <div class="txt_wrap">
+                                <h3>[진행중] 오늘도 참으신 여러분! 비락 식혜로 오늘 스트레스 날리 식혜!</h3>
+                                <p class="tag">&num;스트레스해소</p>
+                                <p class="tag">&num;달달한비락식혜</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- // 팔도 이벤트 섹션 -->
+        </div>
+        <!-- //main container  -->
+        <!-- footer -->
+        <footer id="footer">
+            <div class="inner">
+                <div class="top_footer clearfix">
+                    <ul class="footer_list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일 무단수집거부</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">팔도몰</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                    <div class="family_wrap">
+                        <a class="btn_family" href="">패밀리사이트</a>
+                        <ul class="family_site_list">
+                            <li><a href="#">팔도 유튜브 공식채널</a></li>
+                            <li><a href="#">팔도 인스타 채널</a></li>
+                            <li><a href="#">팔도 네이버 공식 블로그</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="address_list">
+                    <div class="address_left">
+                        <p>대표이사 : 고정완<span></span>사업자등록번호 : 308-81-03161</p>
+                        <p>서울특별시 서초구 강남대로 577<span></span>전화 : 1577-8593<span></span>팩스 : 02-3449-6657</p>
+                        <p class="copy">COPYRIGHT (C) 2012 PALDO. ALL RIGHTS RESERVED.</p>
+                    </div>
+                    <div class="address_right">
+                        <dl>
+                            <dt>고객센터</dt>
+                            <dd>1577-8593</dd>
+                        </dl>
+                        <dl>
+                            <dt>고객문의</dt>
+                            <dd>080-023-8593</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="bottom_footer">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/footer_logo.png" alt="팔도"></a>
+                    </div>
+                    <div class="sns_wrap">
+                        <ul class="sns">
+                            <li><a class="icon naver" href="#" target="_blank" title="새창에서 열기">네이버</a></li>
+                            <li><a class="icon facebook" href="#" target="_blank" title="새창에서 열기">페이스북</a></li>
+                            <li><a class="icon youtube" href="#" target="_blank" title="새창에서 열기">유튜브</a></li>
+                            <li><a class="icon twitter" href="#" target="_blank" title="새창에서 열기">트위터</a></li>
+                            <li><a class="icon insta" href="#" target="_blank" title="새창에서 열기">인스타</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top_btn_wrap">
+                <a class="btn_top btn_round" href="#">상단으로 가기</a>
+                <a class="btn_home btn_round" href="index.html">홈으로 가기</a>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

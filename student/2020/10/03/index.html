@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--아래는 ex 엔진중에 최신 엔진으로 보이게 해라 라는 뜻-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--user-scalable=no는 아이폰과 안드로이드 상위버전에서 작동하지 않음-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+<!--ios, 안드로이드 10이상에서 최대치까지 확대가능하게함-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<!--위에 maximum-scale=1.0, ,user-scalable=no 지웠다. 이제 확대가능 -->
+<title>휘슬러</title>
+<meta name="description" content="타임스탬프 사용하기">
+<meta property="og:type" content="site">
+<meta property="og:title" content="타임스탬프 사용하기">
+<meta property="og:url" content="http://www.bibus95.dothome.co.kr/fissler/">
+<meta property="og:image" content="http://www.bibus95.dothome.co.kr/fissler/opengraph.png">
+<meta property="og:description" content="타임스탬프 사용하기">
+<link rel="apple-touch-icon-precomposed" href="mobile_android_7272.png">
+<!--모바일 브라우저 홈화면 등록용 터치아이콘-->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;display=swap&amp;subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<!--메뉴 나올 떄 스크롤바 제거-->
+<body>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><span></span></a></h1>
+        <nav class="gnb_wrap">
+            <ul class="gnb">
+                <li>
+                    <a href="#wrap">
+                        브랜드 캠페인
+                    </a>
+                    <div class="depth2_wrap">
+                        <ul class="depth2">
+                            <li>
+                                <a href="#wrap">Chop! Chop!</a>
+                                <a href="#wrap">Fissler And I</a>
+                                <a href="#wrap">Fissler Blossom</a>
+                                <a href="#wrap">Solar Family</a>
+                                <a href="#wrap">Fissler in Fantasy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#wrap">
+                        새로운 소식
+                    </a>
+                    <div class="depth2_wrap">
+                        <ul class="depth2">
+                            <li>
+                                <a href="#wrap">신제품</a>
+                                <a href="#wrap">뉴스레터</a>
+                                <a href="#wrap">이벤트</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="#wrap">
+                        제품소개
+                    </a>
+                    <div class="depth2_wrap">
+                        <ul class="depth2">
+                            <li>
+                                <a href="#wrap">제품소개</a>
+                                <a href="#wrap">스페셜세트</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#wrap">
+                        서비스 안내
+                    </a>
+                    <div class="depth2_wrap">
+                        <ul class="depth2">
+                            <li>
+                                <a href="#wrap">제품보관 및 손질법</a>
+                                <a href="#wrap">FAQ</a>
+                                <a href="#wrap">온라인A/S</a>
+                                <a href="#wrap">고객의 소리</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <span class="bar_gnb"></span>
+        </nav>
+        <ul class="util_wrap">
+            <li class="search">
+                <a href="#wrap"><span></span></a>
+            </li>
+            <li class="login">
+                <a href="#wrap"><span></span></a>
+            </li>
+            <button class="click" type="button">
+                메뉴호버버튼
+            </button>
+            <li class="open_btn">
+               <a href="#wrap">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+               </a>
+            </li>
+        </ul>
+        <div class="dimm"></div>
+        <nav class="m_gnb">
+            <ul class="depth1">
+                <li>
+                    <a href="#wrap">
+                       <span></span>
+                        브랜드 캠페인
+                    </a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#wrap">Chop! Chop!</a>
+                            <a href="#wrap">Fissler And I</a>
+                            <a href="#wrap">Fissler Blossom</a>
+                            <a href="#wrap">Solar Family</a>
+                            <a href="#wrap">Fissler in Fantasy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">
+                        <span></span>
+                        새로운 소식
+                    </a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#wrap">신제품</a>
+                            <a href="#wrap">뉴스레터</a>
+                            <a href="#wrap">이벤트</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">
+                        <span></span>
+                        제품소개
+                    </a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#wrap">제품소개</a>
+                            <a href="#wrap">스페셜세트</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">
+                        <span></span>
+                        서비스 안내
+                    </a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#wrap">제품보관 및 손질법</a>
+                            <a href="#wrap">FAQ</a>
+                            <a href="#wrap">온라인A/S</a>
+                            <a href="#wrap">고객의 소리</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_visual">
+            <div class="video_wrap">
+<!--               autoplay="autoplay"나muted="muted"처럼 속성명과 값이 같은 경우 값생략 가능-->
+                <video width="320" height="240" autoplay muted loop>
+                    <source src="video/main.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            </div>
+            <span class="main_logo"></span>
+        </div>
+        <section class="section1">
+            <div class="section1_inner">
+                <img src="images/logo_section1.png" alt="휘슬러로고">
+                <div class="brand">
+                    <h2>PERFECT EVERY TIME</h2>
+                    <p>전통과 혁신, 현대적 감각의 조화를  추구해 나가고 있는 휘슬러,<br>170년간 다져온 역사 위에 매순간 새로움을 창조해 나갑니다. </p>
+                </div>
+            </div>
+        </section>
+        <section class="section2">
+            <!--신제품 슬라이더-->
+            <div class="swiper-container newimage_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#wrap"><img src="images/visual1.png" alt="신제품1"></a> 
+                    </div>
+                    <div class="swiper-slide">
+                       <a href="#wrap">
+                           <img src="images/visual2_cooktop.png" alt="신제품2">
+                       </a>
+                    </div>
+                    <div class="swiper-slide">
+                       <a href="#wrap">
+                           <img src="images/visual3_novo.png" alt="신제품3">
+                       </a>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                       <a href="#wrap">
+                           <img src="images/visual4_cup.png" alt="신제품4">
+                       </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container newtext_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="new_txt">
+                            <h2>신제품 출시</h2>
+                            <img src="images/solar.png" alt="솔라임">
+                            <h3>#솔라임</h3>
+                            <p>솔라 solar의 오리지널리티를 계승하는 동시에 진보한 기능으로<br>
+    재탄생한  솔라임solaryme은 동시대 쿡웨어 중 가장 독보적이며,<br>
+    시대를 초월하는 또 하나의 클래식이 될 것임을 자신합니다.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="new_txt">
+                            <h2>신제품 출시</h2>
+                            <img src="images/infini.png" alt="쿡탑">
+                            <h3>#쿡탑</h3>
+                            <p>쿡탑의 최고 기술력이 집약된 플래그쉽 모델로서,<br>
+    마에스트 플렉스존을 통해 모든 형태의 쿡웨어를 사용할 수 있고<br>
+    단시간에 강한 화력이 작동합니다.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="new_txt">
+                            <h2>신제품 출시</h2>
+                            <img src="images/solea_novo.png" alt="솔레아노보">
+                            <h3>#솔레아 노보</h3>
+                            <p>솔레아 노보 컬렉션의 문장은 엄격한 품질관리를 통해 생산된<br>
+     최고의 제품을 의미합니다. 휘슬러 솔레아 노보 컬렉션으로<br>
+    시간이 전하는 고귀한 가치를 오롯이 느껴보세요.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="new_txt">
+                            <h2>신제품 출시</h2>
+                            <img src="images/espressomug.png" alt="에스프레소머그">
+                            <h3>#에스프레소 머그</h3>
+                            <p>감도 높은 홈다이닝 스타일을 완성하는<br>
+    솔라 리빙 컬렉션의 새로운 아이템을 소개합니다.<br>
+    당신의 아침을 깨워줄 에스프레소 머그입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev btn_arrow"></div>
+                <div class="swiper-button-next btn_arrow"></div>
+            </div>
+            <!--//신제품 슬라이더-->
+        </section>
+        <section class="section3">
+            <h2 class="tit">PRODUCT</h2>
+            <div class="swiper-container product_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product_wrap pot">
+                            <a href="#wrap">
+                                <span></span>
+                                <h3>POT</h3>
+                                <h4>냄비</h4>
+                                <p>11953년 다단계 압력솥을 최초로<br>
+    개발한 휘슬러의 독보적인 기술력과<br>
+    디자인의 결정체</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product_wrap living">
+                            <a href="#wrap"></a>
+                            <span></span>
+                            <h3>LIVING COLLECTION</h3>
+                            <h4>리빙컬렉션</h4>
+                            <p>170여 년의 전통과 혁신,<br>
+휘슬러의 역사적 가치와 <br>
+품질을 대변하는 리빙  컬렉션</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product_wrap cook">
+                            <a href="#wrap">
+                                <span></span>
+                            <h3>COOK PAN</h3>
+                            <h4>후라이팬</h4>
+                            <p>1미네랄 베이스로 된<br>
+세라믹 코팅으로 간편하고<br>
+건강한 요리를 할 수 있는 팬</p>
+                            </a>   
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product_wrap pressure">
+                            <a href="#wrap">
+                                <span></span>
+                            <h3>PRESSURE COOKER</h3>
+                            <h4>압력솥</h4>
+                            <p>1미네랄 베이스로 된<br>
+세라믹 코팅으로 간편하고<br>
+건강한 요리를 할 수 있는 팬</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product_wrap pot">
+                            <a href="#wrap">
+                                <span></span>
+                            <h3>POT</h3>
+                            <h4>냄비</h4>
+                            <p>11953년 다단계 압력솥을 최초로<br>
+개발한 휘슬러의 독보적인 기술력과<br>
+디자인의 결정체</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product_wrap living">
+                            <a href="#wrap">
+                                <span></span>
+                            <h3>LIVING COLLECTION</h3>
+                            <h4>리빙컬렉션</h4>
+                            <p>170여 년의 전통과 혁신,<br>
+휘슬러의 역사적 가치와 <br>
+품질을 대변하는 리빙  컬렉션</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="product_wrap cook">
+                            <a href="#wrap">
+                                <span></span>
+                            <h3>COOK PAN</h3>
+                            <h4>후라이팬</h4>
+                            <p>1미네랄 베이스로 된<br>
+세라믹 코팅으로 간편하고<br>
+건강한 요리를 할 수 있는 팬</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product_wrap pressure">
+                            <a href="#wrap">
+                                <span></span>
+                            <h3>PRESSURE COOKER</h3>
+                            <h4>압력솥</h4>
+                            <p>1미네랄 베이스로 된<br>
+세라믹 코팅으로 간편하고<br>
+건강한 요리를 할 수 있는 팬</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev btn_arrow"></div>
+                <div class="swiper-button-next btn_arrow"></div>
+            </div>
+        </section>
+        <section class="section4">
+            <h2 class="tit">CAMPAIGN</h2>
+            <div class="btn_wrap">
+                <div class="up_btn">
+                    <button data-tab="cmp_video1" class="active" type="button">Chop! Chop!</button>
+                    <button data-tab="cmp_video2" class="" type="button">Fissler And I</button>
+                </div>
+                <div class="down_btn">
+                    <button data-tab="cmp_video3" type="button">Fissler Blossom</button>
+                    <button data-tab="cmp_video4" type="button">Solar Family</button>
+                    <button data-tab="cmp_video5" type="button">Fissler in Fantasy</button>
+                </div>
+            </div>
+            <div id="cmp_video1" class="video_wrap active">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lOFwEm2BtRQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="cmp_video2" class="video_wrap">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/69NAWhcC5sk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="cmp_video3" class="video_wrap">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IpTcF-oyou0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="cmp_video4" class="video_wrap">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-3nuStKbJ8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="cmp_video5" class="video_wrap">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_o6iWH7jHRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="section5">
+            <h2 class="tit">HISSLER<em></em>S TABLE</h2>
+            <div class="table_wrap">
+                <a href="#wrap"><img src="images/table1_desk.png"></a>
+                <a href="#wrap"><img src="images/table2_desk.png"></a>
+                <a href="#wrap"><img src="images/table3_desk.png"></a>
+                <a href="#wrap"><img src="images/table4_desk.png"></a>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="sns">
+            <a href="#wrap"><img src="images/sns01_h.png"></a>
+            <a href="#wrap"><img src="images/sns02_h.png"></a>
+            <a href="#wrap"><img src="images/sns03_h.png"></a>
+            <a href="#wrap"><img src="images/sns04_h.png"></a>
+        </div>
+        <div class="top_footer">
+            <ul class="footer_menu">
+                <li><a href="#wrap"><em>개인정보취급방침</em></a></li>
+                <li><a href="#wrap">문의하기</a></li>
+                <li><a href="#wrap">이용약관</a></li>
+                <li><a href="#wrap">이메일수집거부</a></li>
+            </ul>
+        </div>
+        <div class="bottom_footer">
+            <img src="images/logo_footer.png" alt="푸터로고">
+            <div class="footer_content">
+                <address>
+                사업자등록번호 : 220-81-52076<span>|</span>상호명 : 휘슬러코리아(주)<span>|</span>대표 : 김정호<br>주소 : 서울특별시 강남구 강남대로566, 18층(논현동, 논현빌딩)<span>|</span>본사문의 : 02-3453-4100<span>|</span>제품문의 : 080-400-4100<span>|</span>이메일 : fissler@fissler.co.kr<br>개인정보관리책임자 : 이승환 / 02-3416-9732 / gorden@fissler.co.kr
+            </address>
+            <p>COPYRIGHT ©  <em>FISSLER.</em> ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

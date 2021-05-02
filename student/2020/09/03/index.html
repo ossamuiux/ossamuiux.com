@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--ios, 안드로이드 10이상에서 최대치까지 확대가능하게함-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>한샘닷컴</title>
+<meta name="description" content="타임스탬프 사용하기">
+<meta property="og:type" content="site">
+<meta property="og:title" content="타임스탬프 사용하기">
+<meta property="og:url" content="http://hyeseong.dothome.co.kr/hanssem/">
+<meta property="og:image" content="http://hyeseong.dothome.co.kr/hanssem/opengraph.png">
+<meta property="og:description" content="타임스탬프 사용하기">
+<link rel="apple-touch-icon-precomposed" href="mobile_android_7272.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;display=swap&amp;subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+        <div class="top_header">
+            <div class="top_header_inner">
+                <!--  이동 페이지  -->
+                <ul class="btn_link">
+                    <li>
+                        <a href="index.html">
+                            <span class="tit">한샘닷컴</span>
+                            <span>한샘매장을 한 눈에</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="tit">한샘몰</span>
+                            <span>바로 사는 온라인몰</span>
+                        </a>
+                    </li>
+                </ul>
+                <!--  //이동 페이지  -->
+                
+                <!--  로그인  -->
+                <ul class="util_wrap">
+                    <li><a href="index.html">로그인</a></li>
+                    <li><a href="index.html">회원가입</a></li>
+                    <li><a href="index.html">전시품할인판매</a></li>
+                    <li><a href="index.html">고객센터</a></li>
+                    <li><a href="index.html">회사소개</a></li>
+                </ul>
+                <!--  //로그인  -->
+            </div>
+        </div>
+        <div class="bottom_header">
+            <div class="bottom_header_inner">
+                <!--       한샘로고         -->
+                <h2 class="logo"><a href="index.html"><img src="images/pc_logo.png" alt="한샘"></a></h2>
+                <!--       //한샘로고         -->
+                <!--       모바일, 태블릿 한샘로고         -->
+                <h2 class="m_logo"><a href="index.html"><img src="images/m_logo.png" alt="한샘"></a></h2>
+                <!--       //모바일, 태블릿 한샘로고         -->
+                <!--      모바일 태블릿 모달 팝업         -->
+                <div class="modal_wrap">
+                    <a class="btn_modal" href="index.html"><img src="images/beside_logo.png" alt="모달"></a>
+                    <ul class="m_list_modal">
+                        <li><a href="index.html"><img src="images/m_btn_modal1.jpg" alt="한샘닷컴"></a></li>
+                        <li><a href="index.html"><img src="images/m_btn_modal2.jpg" alt="한샘몰"></a></li>
+                    </ul>
+                </div>
+                <!--      //모바일 태블릿 모달 팝업         -->
+                <div class="search">
+                    <input id="search" type="text">
+                    <label class="blind" for="search">검색창</label>
+                    <button class="btn_search" type="button">검색</button>
+                </div>
+                <!--      태블릿 모바일 로그인          -->
+                <div class="m_util">
+                    <button class="btn_search" type="button">검색</button>
+                    <a href="index.html"><img src="images/heart_icon.png" alt="로그인"></a>
+                    <a href="index.html"><img src="images/user_icon.png" alt="로그인"></a>
+                </div>
+                <!--      //태블릿 모바일 로그인          -->
+            </div>
+        </div>
+        <nav class="gnb_wrap">
+            <ul class="gnb">
+                <li>
+                    <a href="#">전체상품</a>
+                    <div class="depth2">
+                        <ul class="depth2_box">
+                            <li>
+                                <a href="#">리모델링</a>
+                                <ul class="depth3">
+                                    <li><a href="#">전체공사</a></li>
+                                    <li><a href="#">부분공사</a></li>
+                                    <li><a href="#">상품안내</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">키친&amp;바스</a>
+                                <ul class="depth3">
+                                    <li><a href="#">부엌+욕실 패키지</a></li>
+                                    <li><a href="#">부엌</a></li>
+                                    <li><a href="#">욕실</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">빌트인수납</a>
+                                <ul class="depth3">
+                                    <li><a href="#">빌트인플러스</a></li>
+                                    <li><a href="#">붙박이장</a></li>
+                                    <li><a href="#">드레스룸</a></li>
+                                    <li><a href="#">현관장</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">가구</a>
+                                <ul class="depth3">
+                                    <li><a href="#">침실</a></li>
+                                    <li><a href="#">수납</a></li>
+                                    <li><a href="#">거실</a></li>
+                                    <li><a href="#">다이닝</a></li>
+                                    <li><a href="#">자녀방</a></li>
+                                    <li><a href="#">서재</a></li>
+                                    <li><a href="#">맞춤패브릭</a></li>
+                                    <li><a href="#">수입브랜드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">생활용품</a>
+                                <ul class="depth3">
+                                    <li><a href="#">패브릭</a></li>
+                                    <li><a href="#">수납</a></li>
+                                    <li><a href="#">키친웨어</a></li>
+                                    <li><a href="#">소가구</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">홈케어</a>
+                                <ul class="depth3">
+                                    <li><a href="#">홈케어모아보기</a></li>
+                                    <li><a href="#">주거환경케어</a></li>
+                                    <li><a href="#">키친케어</a></li>
+                                    <li><a href="#">바스케어</a></li>
+                                    <li><a href="#">가구케어</a></li>
+                                    <li><a href="#">가전케어</a></li>
+                                    <li><a href="#">홈케어맴버쉽</a></li>
+                                    <li><a href="#">공간별케어</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">VR 집들이</a>
+                    <div class="depth2">
+                        <ul class="depth2_box depth2_box2">
+                            <li><a href="#">VR 집들이</a></li>
+                            <li><a href="#">트렌드 제안</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">집꾸밈 사례</a>
+                    <div class="depth2">
+                        <ul class="depth2_box depth2_box2">
+                            <li><a href="#">전문가 시공사례</a></li>
+                            <li><a href="#">우리집 사용설명서</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">매장 통합검색</a>
+                </li>
+                <li>
+                    <a href="#">이벤트/기획전</a>
+                    <div class="depth2">
+                        <ul class="depth2_box depth2_box2">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">기획전</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">빠른상담</a>
+                </li>
+            </ul>
+            <ul class="m_gnb">
+                <li><a href="#">VR집들이</a></li>
+                <li><a href="#">집꾸밈사례</a></li>
+                <li><a href="#">매장통합검색</a></li>
+                <li><a href="#">이벤트/기획전</a></li>
+            </ul>
+        </nav>
+        <!-- 모바일 gnb -->
+        <nav class="m_gnb_wrap">
+            <div class="m_gnb_header">
+                <a href="#">로그인</a>
+                <button class="btn_close" type="button">메뉴닫기</button>
+            </div>
+            <div class="category">
+                <span>카테고리</span>
+                <ul class="depth1">
+                    <li>
+                        <a href="#">
+                            <img src="images/hover_01.png" alt="리모델링">
+                            <em>리모델링</em>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">전체공사</a></li>
+                            <li><a href="#">부분공사</a></li>
+                            <li><a href="#">상품안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="depth1">
+                    <li>
+                        <a href="#">
+                            <img src="images/hover_02.png" alt="키친&바스">
+                            <em>키친&amp;바스</em>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">부엌+욕실 패키지</a></li>
+                            <li><a href="#">부엌</a></li>
+                            <li><a href="#">욕실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="depth1">
+                    <li>
+                        <a href="#">
+                            <img src="images/hover_03.png" alt="빌트인수납">
+                            <em>빌트인수납</em>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">빌트인플러스</a></li>
+                            <li><a href="#">붙박이장</a></li>
+                            <li><a href="#">드레스룸</a></li>
+                            <li><a href="#">현관장</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="depth1">
+                    <li>
+                        <a href="#">
+                            <img src="images/hover_04.png" alt="가구">
+                            <em>가구</em>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">침실</a></li>
+                            <li><a href="#">수납</a></li>
+                            <li><a href="#">거실</a></li>
+                            <li><a href="#">다이닝</a></li>
+                            <li><a href="#">자녀방</a></li>
+                            <li><a href="#">서재</a></li>
+                            <li><a href="#">맞춤패브릭</a></li>
+                            <li><a href="#">수입브랜드</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="depth1">
+                    <li>
+                        <a href="#">
+                            <img src="images/hover_05.png" alt="생활용품">
+                            <em>생활용품</em>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">패브릭</a></li>
+                            <li><a href="#">수납</a></li>
+                            <li><a href="#">키친웨어</a></li>
+                            <li><a href="#">소가구</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="depth1">
+                    <li>
+                        <a href="#">
+                            <img src="images/hover_06.png" alt="홈케어">
+                            <em>홈케어</em>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">홈케어모아보기</a></li>
+                            <li><a href="#">주거환경케어</a></li>
+                            <li><a href="#">키친케어</a></li>
+                            <li><a href="#">바스케어</a></li>
+                            <li><a href="#">가구케어</a></li>
+                            <li><a href="#">가전케어</a></li>
+                            <li><a href="#">홈케어맴버쉽</a></li>
+                            <li><a href="#">공간별케어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="case">
+                <span>집꾸밈 사례</span>
+                <ul class="depth1">
+                    <li><a href="#">집꾸밈 사례</a></li>
+                    <li><a href="#">전문가 시공 사례</a></li>
+                </ul>
+            </div>
+            <div class="idea">
+                <span>아이디어</span>
+                <ul class="depth1">
+                    <li><a href="#">트렌드 제안</a></li>
+                    <li><a href="#">우리집 사용 설명서</a></li>
+                </ul>
+            </div>
+            <div class="service">
+                <span>기타 서비스</span>
+                <ul class="depth1">
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">e카탈로그</a></li>
+                    <li><a href="#">전시품 할인판매</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">대리점 개설 안내</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- //모바일 gnb -->
+        <div class="dimm"></div>
+    </header>
+    <main id="main">
+        <section class="section1">
+            <!--  메인 슬라이더  -->
+            <div class="swiper-container main_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide slide1">
+                        <a href="#"><img src="images/main_visual01.jpg" alt="메인비주얼"></a>
+                    </div>
+                    <div class="swiper-slide slide slide2">
+                        <a href="#"><img src="images/main_visual02.jpg" alt="메인비주얼"></a>
+                    </div>
+                    <div class="swiper-slide slide slide3">
+                        <a href="#"><img src="images/main_visual03.jpg" alt="메인비주얼"></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--  //메인 슬라이더  -->
+            <div class="banner"><a href="#"><img src="images/banner.jpg" alt="배너"></a></div>
+        </section>
+        <section class="section2">
+            <div class="tit_wrap">
+                <h2 class="tit">720°VR 집들이</h2>
+                <p>한샘의 공간 전문가가 실제 아파트에 제안하는 집꾸밈을 VR로 확인해보세요</p>
+                <a class="btn_more" href="#">더보기</a>
+            </div>
+            <ul class="list_hwp">
+                <li>
+                    <a href="#">
+                        <img src="images/720_1.jpg" alt="720">
+                        <span>반포동 래미안퍼스티지 113T2㎡</span>
+                        <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/720_2.jpg" alt="720">
+                        <span>반포동 래미안퍼스티지 113T2㎡</span>
+                        <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/720_3.jpg" alt="720">
+                        <span>반포동 래미안퍼스티지 113T2㎡</span>
+                        <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                    </a>
+                </li>
+            </ul>
+            <div class="m_list_wrap">
+                <ul class="m_list_hwp">
+                    <li>
+                        <a href="#">
+                            <img src="images/m_720.jpg" alt="720">
+                            <span>반포동 래미안퍼스티지 113T2㎡</span>
+                            <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m_720_02.jpg" alt="720">
+                            <span>반포동 래미안퍼스티지 113T2㎡</span>
+                            <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m_720_03.jpg" alt="720">
+                            <span>반포동 래미안퍼스티지 113T2㎡</span>
+                            <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m_720_04.jpg" alt="720">
+                            <span>반포동 래미안퍼스티지 113T2㎡</span>
+                            <h3>7살 아이가 있는 집이라면 이런 공간이 딱이죠</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div class="m_btn_box">
+                    <a class="m_btn_more" href="#">집꾸밈 사례 더보기 </a>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="tit_wrap">
+                <h2 class="tit">나를 위한 맞춤 추천 상품</h2>
+            </div>
+            <!--  나를 위한 맞춤 추천 상품 슬라이더  -->
+            <div class="swiper-container product_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide">
+                        <a href="#"><img src="images/slider1.jpg" alt="슬라이더"></a>
+                        <span class="slide_label">BEST</span>
+                        <div class="txt_wrap">
+                            <h3>모던차콜2 30평대 패키지</h3>
+                            <span>3,733,653  ~  (12개월 납입가)</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <a href="#"><img src="images/slider2.jpg" alt="슬라이더"></a>
+                        <span class="slide_label">BEST</span>
+                        <div class="txt_wrap">
+                            <h3>모던차콜2 30평대 패키지</h3>
+                            <span>3,733,653  ~  (12개월 납입가)</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <a href="#"><img src="images/slider3.jpg" alt="슬라이더"></a>
+                        <span class="slide_label">BEST</span>
+                        <div class="txt_wrap">
+                            <h3>모던차콜2 30평대 패키지</h3>
+                            <span>3,733,653  ~  (12개월 납입가)</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <a href="#"><img src="images/slider4.jpg" alt="슬라이더"></a>
+                        <span class="slide_label">BEST</span>
+                        <div class="txt_wrap">
+                            <h3>모던차콜2 30평대 패키지</h3>
+                            <span>3,733,653  ~  (12개월 납입가)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--  //나를 위한 맞춤 추천 상품 슬라이더  -->
+        </section>
+        <section class="section4">
+            <div class="agencies">
+                <div class="tit_wrap">
+                    <h2 class="tit">한샘 매장에서 전문상담을 받아보세요</h2>
+                    <p>전문 상담원이 실제 주거환경에 맞춘 공간디자인을 제안합니다.<br>
+    한샘에서 가족의 재충전 공간을 설계해 보세요.</p>
+                    <a class="btn_agencies" href="#">가까운 매장 찾아보기</a>
+                    <div class="m_btn_agnescies">
+                        <a class="m_btn_more" href="#">가까운 매장 더보기</a>
+                    </div>
+                </div>
+                <!--  매장안내 슬라이더  -->
+                <div class="swiper-container agencies_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="images/agencies1.jpg" alt="지점안내"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="images/agencies2.jpg" alt="지점안내"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="images/agencies3.jpg" alt="지점안내"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev btn_arrow"></div>
+                    <div class="swiper-button-next btn_arrow"></div>
+                </div>
+                <!--  //매장안내 슬라이더  -->
+            </div>
+        </section>
+        <section class="section5">
+            <div class="tit_wrap">
+                <h2 class="tit">이달의 NEW&amp;BEST</h2>
+            </div>
+            <div class="best_wrap">
+                <ul class="list_best">
+                    <li class="active"><a href="#">가구</a></li>
+                    <li><a href="#">생활용품</a></li>
+                    <li><a href="#">키친&amp;바스</a></li>
+                    <li><a href="#">리모델링</a></li>
+                    <li><a href="#">홈케어</a></li>
+                    <li><a href="#">빌트인수납</a></li>
+                </ul>
+                <!--  이달의 NWE BEST 상품 리스트  -->
+                <div class="list_product">
+                    <ul class="product active">
+                        <li>
+                            <a href="#"><img src="images/furniture1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/furniture2.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/furniture3.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/furniture4.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/furniture5.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/furniture1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="product">
+                        <li>
+                            <a href="#"><img src="images/supplies1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/supplies2.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/supplies3.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/supplies4.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/supplies5.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/supplies1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="product">
+                        <li>
+                            <a href="#"><img src="images/Kitchen1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Kitchen2.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Kitchen3.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Kitchen4.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Kitchen5.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Kitchen1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="product">
+                        <li>
+                            <a href="#"><img src="images/model01.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/model02.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/model03.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/model04.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/model05.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/model01.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="product">
+                        <li>
+                            <a href="#"><img src="images/homecare1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/homecare2.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/homecare3.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/homecare4.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/homecare5.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/homecare1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="product">
+                        <li>
+                            <a href="#"><img src="images/Receiving1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Receiving2.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Receiving3.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Receiving4.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Receiving5.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/Receiving1.jpg" alt="가구"></a>
+                            <div class="txt_wrap">
+                                <h3>밀란5 스테디모던II</h3>
+                                <span>3,602,520 원</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--  //이달의 NWE BEST 상품 리스트  -->
+            </div>
+        </section>
+        <section class="section6">
+            <div class="section6_inner">
+                <div class="notice_wrap">
+                    <h3 class="tit"><a href="#">공지사항</a></h3>
+                    <!--  공지사항 리스트  -->
+                    <ul class="list_notice">
+                        <li><a href="#">[3월 31일 한샘XHD홈쇼핑]한샘바스어반 라이브방송</a></li>
+                        <li><a href="#">[3월 30일 한샘XGS홈쇼핑]식기건조대 시즌2 론칭방송</a></li>
+                        <li><a href="#">[CJ오쇼핑] 20년 3월 8일 홈쇼핑 방송 경품 당첨자 발표</a></li>
+                        <li><a href="#">[한샘] TV홈쇼핑 방송 20년 1월~2월 기간 경품 당첨자 발표[한샘] TV홈쇼핑 방송 20년 1월~2월 기간 경품 당첨자 발표</a></li>
+                    </ul>
+                    <!--  //공지사항 리스트  -->
+                </div>
+                <div class="service_wrap">
+                    <h3 class="tit"><a href="#">고객센터</a></h3>
+                    <div class="txt_wrap">
+                        <a href="#">한샘 서비스센터<span>as.hanssem.com</span></a>
+                        <span>ㄴ 더욱 쉽고 빠른 해결방법</span>
+                        <em>1588-0900</em>
+                    </div>
+                    <ul class="list_service">
+                        <li><a href="index.html">멤버십안내 </a></li>
+                        <li><a href="index.html">A/S안내</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="qna_wrap">
+                    <h3 class="tit"><a href="#">자주하는 질문</a></h3>
+                    <!--  자주하는 질문 리스트  -->
+                    <ul class="list_qna">
+                        <li><a href="#">ㆍ회원/정보관리</a></li>
+                        <li><a href="#">ㆍ상품</a></li>
+                        <li><a href="#">ㆍ주문/결제</a></li>
+                        <li><a href="#">ㆍ시공/AS</a></li>
+                        <li><a href="#">ㆍ포인트/상품권</a></li>
+                        <li><a href="#">ㆍ고객후기</a></li>
+                        <li><a href="#">ㆍ매장</a></li>
+                        <li><a href="#">ㆍ상담예약</a></li>
+                        <li><a href="#">ㆍ오류해결</a></li>
+                    </ul>
+                    <!--  //자주하는 질문 리스트  -->
+                </div>
+                <div class="sns_wrap">
+                    <h3 class="tit">공식 SNS 바로가기</h3>
+                    <div class="icon_wrap">
+                        <a href="http://blog.naver.com/hanssem70"><img src="images/blog.png" alt="블로그"></a>
+                        <a href="https://post.naver.com/my.nhn?memberNo=46828087"><img src="images/naver.png" alt="네이버"></a>
+                        <a href="https://www.instagram.com/hanssem_official/"><img src="images/instar.png" alt="인스타"></a>
+                        <a href="https://www.youtube.com/c/%ED%95%9C%EC%83%98%EC%9C%A0%ED%8A%9C%EB%B8%8C"><img src="images/youtube.png" alt="유튜브"></a>
+                        <a href="https://www.facebook.com/hanssemkorea/"><img src="images/facebook.png" alt="페이스북"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+    <div class="top_footer clearfix">
+        <ul class="list_footer">
+            <li><a href="#">회사소개</a></li>
+            <li class="active"><a href="#">이용약관</a></li>
+            <li><a href="#">위치정보 이용약관</a></li>
+            <li class="active"><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">대리점개설문의</a></li>
+            <li><a href="#">사이버감사실</a></li>
+            <li><a href="#">e카탈로그</a></li>
+        </ul>
+        <div class="family_wrap">
+            <button class="btn_family" type="button">FAMILY SITE</button>
+            <ul class="list_family">
+                <li><a href="#">(주)한샘</a></li>
+                <li><a href="#">한샘몰</a></li>
+                <li><a href="#">한샘서비스센터</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom_footer">
+        <div class="bottom_footer_inner">
+            <h2 class="footer_logo"><img src="images/ci_footer.png" alt="푸터 로고"></h2>
+            <address class="add">사업자등록번호 : 133-81-22865<span>|</span>대표자 : 강승수<span>|</span> 주소 : 425-110 경기도 안산시 성곡동 665</address>
+            <address class="shop">한샘디자인파크 잠실점 : 02-3430-6900 / 논현점 : 02-542-8558 / 방배점 : 02-591-2300 / 분당점 : 031-719-3100 / 부산센텀점 : 051-790-8500<br>하남스타필드점 : 031-8072-8955 / 목동점 : 02-6344-7000 / 대구범어점 : 053-749-8500 / 수원광교점 : 031-888-0800 / 용산아이파크몰점 : 02-6373-3500<br>고양스타필드점 : 031-5173-0030 / 상봉점 : 02-6244-5000</address>
+            <p class="copy">Copyright © 2019 HANSSEM Co. Ltd. All rights reserved</p>
+            <p class="m_copy">© HANSSEM</p>
+        </div>
+    </div>
+    <div class="footer_menu">
+        <ul class="m_list_menu">
+            <li><a class="m_btn_menu" href="#"><img src="images/f_m_menu.png" alt="메뉴"></a></li>
+            <li><a href="#"><img src="images/f_m_event_1.png" alt="이벤트"></a></li>
+            <li><a href="#"><img src="images/f_m_home.png" alt="홉버"></a></li>
+            <li><a href="#"><img src="images/f_m_location.png" alt="지점"></a></li>
+            <li><a href="#"><img src="images/f_m_red_1.png" alt="상담신청"></a></li>
+        </ul>
+    </div>
+</footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

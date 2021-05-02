@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* 메인 슬라이더 */
+#main {margin-top: 50px;}
+#main .main_slider img {width: 100%;}
+#main .main_slider .slide_inner {position: absolute;left: 50%;top: 120px;width: 100%;color: #fff;text-align: center;transform: translate(-50%,-50%);}
+#main .main_slider .slide3 .slide_inner {color: #414042;}
+#main .main_slider .slide_inner h2 {font-weight: bold; font-size: 40px; padding-bottom: 20px;}
+#main .main_slider .slide_inner p {font-size: 18px;}
+
+/* 메인슬라이더 페이지네이션 커스텀 */
+#main .section1 .main_slider .swiper-pagination {bottom: 50px;}
+#main .section1 .main_slider .swiper-pagination-bullet {width: 44px;height: 3px;background: #fff;border-radius: 0;opacity: 0.5;margin: 0 8px;}
+#main .section1 .main_slider .swiper-pagination .swiper-pagination-bullet-active {background: #fff;opacity: 1;}
+
+
+
+/* BEST MODEL */
+#main .section2 h2 {font-size: 30px;margin-top: 60px; text-align: center;font-weight: bold;}
+#main .section2 .product_slider {margin-top: 40px; position: relative;}
+#main .section2 .product_slider .swiper-slide:after {content: '';position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: rgba(255, 255, 255, 0.8);}
+#main .section2 .product_slider .swiper-slide-active:after {display: none;}
+#main .section2 .product_slider .swiper-slide-visible:not(.swiper-slide-active):hover .img {transform: scale(1.1);}
+#main .section2 .product_slider .swiper-slide a {display: block;text-align: center;}
+#main .section2 .product_slider .swiper-slide .img {width: 100%;max-width: 500px;transition: all 0.3s;}
+#main .section2 .product_slider .swiper-slide-active .img {transform: scale(1.3);}
+#main .section2 .product_slider .swiper-slide h3 {margin-top: 10px; font-size: 18px;color: #000;}
+#main .section2 .product_slider .swiper-slide p {font-size: 13px; margin-top: 5px;}
+
+
+
+/* 베스트 모델 페이지네이션 */
+#main .section2 .product_slider .page_wrap {margin-top: 20px;text-align: center;vertical-align: middle;}
+#main .section2 .product_slider .swiper-pagination {position: static;display: inline-block;}
+#main .section2 .product_slider .swiper-pagination span {width: 21px;height: 25px;border-radius: 0;background: none;position: relative;opacity: 1;margin: 0;transition: all 0.5s;}
+
+
+
+/* 베스트 모델 페이지네이션 active*/
+#main .section2 .product_slider .swiper-pagination .swiper-pagination-bullet-active {width: 65px;}
+#main .section2 .product_slider .swiper-pagination .swiper-pagination-bullet-active:before {width: 55px;background: #f3bc00;}
+#main .section2 .product_slider .swiper-pagination span:before {content: '';position: absolute;left: 5px;top: 15px;width: 9px;height: 9px;background: #979699;border-radius: 9px;transition: all 0.5s;}
+#main .section2 .product_slider .page_wrap .btn_toggle {width: 25px;height: 25px;border: none;border-radius: 50%;background: #aaa;text-indent: -9999px;vertical-align: middle;position: relative;}
+#main .section2 .product_slider .page_wrap .btn_toggle:before {content: '';position: absolute;left: 9px;top: 8px;width: 2px;height: 9px;background: #fff;}
+#main .section2 .product_slider .page_wrap .btn_toggle:after {content: '';position: absolute;left: 15px;top: 8px;width: 2px;height: 9px;background: #fff;}
+#main .section2 .product_slider .page_wrap .btn_toggle.on:before {border: 5px solid transparent;border-left-color: #fff;background: none;width: 0;height: 0;left: 10px;top: 7px;}
+#main .section2 .product_slider .page_wrap .btn_toggle.on:after {display: none;}
+
+
+
+/* thenew camaro video */
+#main .section3 h2 {font-size: 30px;text-align: center;font-weight: bold;color: #414042;margin-top: 60px;}
+#main .section3 h2 span {color: #f3bc00;}
+#main .section3 .video {position: relative;padding-bottom: 56.25%;margin-top: 25px;height: 0;}
+#main .section3 .video iframe {position: absolute;left: 0;top: 20px;width: 100%;height: 100%;}
+#main .section3 .tit_wrap {height: 150px;position: relative;background: #f6f6f6;margin-top: 21px;text-align: center;}
+#main .section3 .tit_wrap p {padding: 20px 0;}
+#main .section3 .tit_wrap a  {font-size: 13px; font-weight: bold;}
+
+
+
+/*  service center  */
+#main .section4 h2{font-size: 30px;font-weight: bold;margin: 60px 0 25px;text-align: center;}
+#main .section4 .list_service {overflow: hidden;}
+#main .section4 .list_service li {float: left;width: 50%;text-align: center;}
+#main .section4 .list_service li a {display: block;padding:20px 20px;}
+#main .section4 .list_service li a img {width: 100%;}
+#main .section4 .list_service li a h4 {font-size: 18px; font-weight: bold; padding-top: 10px;}
+
+/*  channel  */
+#main .section5 {position: relative;}
+#main .section5 h2 {margin: 60px 0 25px;font-size: 25px;font-weight: bold;padding-left: 10px;}
+#main .section5 .channel_slider {position: static;}
+#main .section5 .channel_slider .swiper-slide {text-align: center;}
+#main .section5 .channel_slider .swiper-slide img {width: 100%; padding-bottom: 20px;}
+#main .section5 .channel_slider .swiper-slide a {font-size: 14px; font-weight: bold;}
+#main .section5 .channel_slider .btn_arrow {top: 10px;}
+#main .section5 .channel_slider .btn_arrow:before {content: '';position: absolute;left: 0;top: 20px;width: 20px;height: 20px;border: 2px solid #000;transform: rotateZ(45deg);border-bottom: none;border-left: none;}
+#main .section5 .channel_slider .swiper-button-prev:before {content: '';position: absolute;left: 0;top: 20px;;width: 20px;height: 20px;border: 2px solid #000;transform: rotateZ(45deg);border-top: none;border-right: none;}
+#main .section5 .channel_slider .btn_arrow:after {display: none;}
+#main .section5 .channel_slider .swiper-button-prev {left: 80%;}
+
+/* notice */
+#main .section6 {position: relative; padding-bottom: 60px;}
+#main .section6 h2 {margin: 60px 0 25px; font-size: 25px; font-weight: bold; padding-left: 10px;position: relative;}
+#main .section6 .list_notice li {margin-left: 10px;}
+#main .section6 .list_notice li a {display: block;width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size: 14px;line-height: 24px;padding: 5px 0;}
+#main .section6 .list_notice li span {font-size: 14px;display: inline-block;}
+#main .section6 .btn_more {position: absolute;right: 20px;top: 5px;width: 25px;height: 25px;background: url(../images/btn_more.jpg) no-repeat 50% 50%;text-indent: -9999px;}
+
+
+
+/*****************************************************************************************************************************login 페이지**********************************/
+#main.login_page .login_wrap {text-align: center; margin-top: 75px;}
+#main.login_page .login_wrap h2 {font-size: 30px; font-weight: bold;}
+#main.login_page .login_wrap .input_box {padding: 25px 20px;}
+#main.login_page .login_wrap .input_box input:first-child {margin-bottom: 10px;}
+#main.login_page .login_wrap .input_box button {border: none; width: 100%; height: 50px; background: #414042; color: #fff; margin-top: 10px;}
+#main.login_page .login_wrap .tit_wrap {margin-top: 20px; font-size: 14px;padding-bottom: 60px;}
+#main.login_page .login_wrap .tit_wrap a {color: #e6b217;}
+
+
+
+
+
+/*****************************************************************************************************************************event 페이지**********************************/
+#main.event_page .event_inner {position: relative;}
+#main.event_page .event_inner .tit {position: absolute;left: 0;top: 100px;text-align: center;color: #fff;width: 100%;padding: 0 25px;}
+#main.event_page .event_inner .tit h2 {font-size: 40px; font-weight: bold;}
+#main.event_page .event_inner .tit p {margin-top: 10px;}
+#main.event_page .event_inner img {width: 100%;}
+
+/* event btn_menu */
+#main.event_page .btn_menu {margin-top: -1px;}
+#main.event_page .btn_menu .btn_more {border: none;width: 100%;background: #414042;color: #fff;line-height: 50px;position: relative;}
+#main.event_page .btn_menu .btn_more:before {content: '';position: absolute;top: 50%;right: 20px;width: 0;height: 0;margin-top: -2.5px;border: 5px solid transparent;border-top-color: #fff;}
+#main.event_page .btn_menu .btn_more.on:before {margin-top: -10px;border-top-color: transparent;border-bottom-color: #fff;}
+#main.event_page .btn_menu .btn_more.on {border: 1px solid #e6b217;}
+#main.event_page .btn_menu ul {display: none;}
+#main.event_page .btn_menu ul.on {display: block;}
+#main.event_page .btn_menu li {width: 100%;text-align: center;box-shadow: 1px 5px 10px rgba(0,0,0,0.1);}
+#main.event_page .btn_menu li a {display: block; color: #000;line-height: 50px;}
+#main.event_page .btn_menu li.active a{background: #414042; color: #fff;}
+
+/* event list */
+#main.event_page .event_inner2 .list_event {padding: 0 10px; margin-top: 20px;}
+#main.event_page .event_inner2 .list_event li {padding: 20px 0; text-align: center;}
+#main.event_page .event_inner2 .list_event li>a {display: block;}
+#main.event_page .event_inner2 .list_event li>a img {width: 100%;}
+#main.event_page .event_inner2 .list_event li>a .p_box {font-size: 13px; padding: 5px 0; text-align: left;}
+#main.event_page .event_inner2 .list_event li>a .p_box .title {font-weight: bold; font-size: 16px; padding-bottom: 10px;}
+#main.event_page .event_inner2 .list_event li>a .p_box p {padding-left: 10px;}
+#main.event_page .event_inner2 .list_event li>a:hover .p_box {background: #e6b217;}
+#main.event_page .event_inner2 .list_event li>a:hover .p_box p {color: #fff;}
+
+
+/* event pagination */
+#main.event_page .event_pagination {text-align: center;padding-bottom: 60px;}
+#main.event_page .event_pagination .event_num {display: inline-block;}
+#main.event_page .event_pagination .event_num a {margin-left: 10px;}
+#main.event_page .event_pagination .event_num a.active {color: #e6b217;}
+#main.event_page .event_pagination .btn_event img { margin-left: 10px;margin-top: 5px;}
+
+
+
+/*****************************************************************************************************************************test_drive 페이지*****************************/
+#main.test_drive_page .drive_inner {position: relative;}
+#main.test_drive_page .drive_inner .tit {position: absolute;left: 0;top: 100px;text-align: center;color: #292929;width: 100%;padding: 0 25px;}
+#main.test_drive_page .drive_inner .tit h2 {font-size: 40px; font-weight: bold;}
+#main.test_drive_page .drive_inner .tit p {margin-top: 10px;}
+#main.test_drive_page .drive_inner img {width: 100%;}
+
+/* test_drive button */
+#main.test_drive_page .btn_menu {margin-top: -1px;}
+#main.test_drive_page .btn_menu .btn_more {border: none; width: 100%; background: #414042; color: #fff;line-height: 50px; position: relative;}
+#main.test_drive_page .btn_menu .btn_more:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    margin-top: -2.5px;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+}
+#main.test_drive_page .btn_menu .btn_more.on:before {
+    margin-top: -10px;
+    border-top-color: transparent;
+    border-bottom-color: #fff;
+}
+#main.test_drive_page .btn_menu .btn_more.on {border: 1px solid #e6b217;}
+#main.test_drive_page .btn_menu ul {display: none;}
+#main.test_drive_page .btn_menu ul.on {display: block;}
+#main.test_drive_page .btn_menu li {width: 100%;text-align: center;box-shadow: 1px 5px 10px rgba(0,0,0,0.1);border: 1px solid #d4d3d3;box-sizing: border-box;}
+#main.test_drive_page .btn_menu li a {display: block; color: #000;line-height: 50px;}
+#main.test_drive_page .btn_menu li.active a{background: #414042; color: #fff;}
+#main.test_drive_page .btn_menu li.active {border: none;}
+
+/* test_drive drive_wrap */
+#main.test_drive_page .drive_wrap {text-align: center;padding-top: 10px;}
+#main.test_drive_page .drive_wrap h3 {font-size: 30px;padding: 30px 0;}
+#main.test_drive_page .drive_wrap .txt_box {padding: 0 10px;}
+#main.test_drive_page .drive_wrap .txt_box p {line-height: 28px; padding: 5px 0;}
+
+#main.test_drive_page .drive_wrap .icon_wrap {margin-top: 60px; overflow: hidden;}
+#main.test_drive_page .drive_wrap .icon_wrap li {float: left; width: 50%;padding: 20px;}
+#main.test_drive_page .drive_wrap .icon_wrap li>p {padding-top: 10px;font-size: 14px;}
+#main.test_drive_page .drive_wrap .icon_wrap li>a {display: block;}
+#main.test_drive_page .drive_wrap .icon_wrap img {width: 150px;}
+#main.test_drive_page .drive_wrap .icon_wrap .btn {width: 7px;}
+
+#main.test_drive_page .drive_wrap .btn_application {padding: 0 10px;}
+#main.test_drive_page .drive_wrap .btn_application button {border: none; height: 50px; width: 100%; background: #414042; color: #fff; margin: 5px 0;}
+#main.test_drive_page .drive_wrap .txt_wrap {margin: 30px 0 60px;;text-align: left;padding: 0 10px;}
+#main.test_drive_page .drive_wrap .txt_wrap p {text-indent: -14px;font-size: 14px; line-height: 20px;padding: 5px 0 0 14px;}
+
+#main.test_drive_page .drive_guide {padding: 50px 0 60px; 20px;}
+#main.test_drive_page .drive_guide img {width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************************************************************************************************faq 페이지************************************/
+#main.faq_page .faq_inner {position: relative;}
+#main.faq_page .faq_inner .tit h2{position: absolute;left: 0;top: 100px;text-align: center;color: #292929;width: 100%;padding: 0 25px;}
+#main.faq_page .faq_inner .tit h2 {font-size: 40px; font-weight: bold;}
+#main.faq_page .faq_inner img {width: 100%;}
+
+/*검색창*/
+#main.faq_page .input_box {padding: 10px;position: relative;}
+#main.faq_page .input_box input::placeholder {opacity: 1; color: #000;}
+#main.faq_page .input_box .btn_search {position: absolute;right: 35px;top: 25px;width: 21px;height: 21px;background: url(../images/search.png) no-repeat;background-size: 21px;border: none;text-indent: -9999px;}
+
+/*대분류,소분류,확인 버튼*/
+#main.faq_page .input_box2 {padding: 10px;}
+#main.faq_page .input_box2 .select_wrap {width: 100%;border: 1px solid #ccc;position: relative;}
+#main.faq_page .input_box2 .select_wrap:before {content: '';position: absolute;top: 50%;right: 20px;width: 0;height: 0;margin-top: -2.5px;border: 5px solid transparent;border-top-color: #000; }
+#main.faq_page .input_box2 .select_wrap.on:before {margin-top: -10px;border-top-color: transparent;border-bottom-color: #000;}
+#main.faq_page .input_box2 .select_wrap select {background: #fff color: #292929;}
+#main.faq_page .input_box2 .select1 {margin-bottom: 10px;}
+#main.faq_page .input_box2 button {width: 100%;height: 50px;border: none;background: #414042;color: #fff;margin-top: 10px;}
+
+/*faq_list*/
+#main.faq_page .list_wrap {padding: 0 15px;}
+#main.faq_page .list_wrap li {background-color: #f5f5f5;margin: 10px 0;}
+#main.faq_page .list_wrap li a {line-height: 50px;display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-right: 40px;padding-left: 10px;position: relative;}
+#main.faq_page .list_wrap li.on a {white-space:normal;line-height: 35px;}
+#main.faq_page .list_wrap li a:before {content: '';position: absolute;right: 20px;top: 39%;width: 10px;height: 10px;border: 2px solid #000;transform: rotateZ(45deg);border-top: none;border-left: none; }
+#main.faq_page .list_wrap li.on a:before {content: '';position: absolute;right: 20px;top: 45%;width: 10px;height: 10px;border: 2px solid #fff;transform: rotateZ(225deg);border-top: none;border-left: none;}
+#main.faq_page .list_wrap li.active a {background: #414042; color: #fff;}
+#main.faq_page .list_wrap li .tit_wrap {display: none;}
+#main.faq_page .list_wrap li .tit_wrap.on {display: block;}
+#main.faq_page .list_wrap li .tit_wrap p {font-size: 14px; padding: 10px;}
+
+
+/* faq_pagination */
+#main.faq_page .faq_pagination {text-align: center;margin: 30px 0;}
+#main.faq_page .faq_pagination .faq_num {display: inline-block;}
+#main.faq_page .faq_pagination .faq_num a {margin-left: 10px;}
+#main.faq_page .faq_pagination .faq_num a.active span {color: #e6b217;}
+#main.faq_page .faq_pagination .btn_faq img { margin-left: 10px;margin-top: 6px;}
+
+/* faq_footer */
+#main.faq_page .faq_footer {border-top: 1px solid #000; padding: 30px 0 60px; background: #f6f6f6;}
+#main.faq_page .faq_footer .faq_footer_wrap {text-align: center; padding: 0 10px;}
+#main.faq_page .faq_footer .faq_footer_wrap h2 { font-weight: bold;}
+#main.faq_page .faq_footer .faq_footer_wrap p {font-size: 14px; padding-top: 20px;}
+
+#main.faq_page .faq_footer .faq_footer_wrap button {
+    border: none;
+    background: #414042;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+}
+#main.faq_page .faq_footer .faq_footer_wrap .faq_btn1 {margin-top: 30px;}
+#main.faq_page .faq_footer .faq_footer_wrap .faq_btn2 {margin-top: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

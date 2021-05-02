@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="행복과 사랑이 넘치는 삼양식품 입니다.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>삼양식품 - 반응형</title>
+<link rel="apple-touch-icon-precomposed" href="touch_icon.png">
+<!-- <link rel="shortcut icon" type="image/x-icon" href="subway_favicon.ico?v=1"> -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/ui.common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="top_header">
+            <div class="top_header_inner">
+                <p>행복과 사랑이 넘치는 <strong>삼양식품</strong> 입니다</p>
+                <div class="utill">
+                    <ul class="sns">
+                        <li><a href="#"><img src="images/ico_sns_blog.png" alt="blog"></a></li>
+                        <li><a href="#"><img src="images/ico_sns_insta.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="images/ico_sns_twitter.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="images/ico_sns_facebook.png" alt="facebook"></a></li>
+                    </ul>
+                    <ul class="top_link">
+                        <li><a href="#">삼양맛샵</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">KOR</a>
+                            <!-- <ul>
+                                <li><a href="#">KOR</a></li>
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">CHN</a></li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_header">
+            <div class="bottom_header_inner">
+                <div class="logo_wrap">
+                    <a href="#" class="logo">logo</a>
+                </div>
+                <div class="shop_link"><a href="#">삼양맛샵</a></div>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li><a href="#">브랜드</a>
+                            <ul class="depth2">
+                                <li><a href="#">삼양라면</a></li>
+                                <li><a href="#">불닭볶음면</a></li>
+                                <li><a href="#">짜짜로니</a></li>
+                                <li><a href="#">별뽀빠이</a></li>
+                                <li><a href="#">삼양유기농우유</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">제품</a>
+                            <ul class="depth2">
+                                <li><a href="#">라면</a></li>
+                                <li><a href="#">스낵</a></li>
+                                <li><a href="#">유제품</a></li>
+                                <li><a href="#">소스·간편식</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">홍보관</a>
+                            <ul class="depth2">
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">홍보영상</a></li>
+                                <li><a href="#">광고영상</a></li>
+                                <li><a href="#">호치와 친구들</a></li>
+                                <li><a href="#">삼양역사관</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="depth2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">고객문의</a></li>
+                                <li><a href="#">삼양 사연</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">회사소개</a>
+                            <ul class="depth2">
+                                <li><a href="#">삼양식품</a></li>
+                                <li><a href="#">계열사</a></li>
+                                <li><a href="#">공장</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_gnb"></button>
+                <div class="mgnb_wrap">
+                    <ul class="mgnb">
+                        <li><a href="#">브랜드</a>
+                            <ul class="depth2">
+                                <li><a href="#">삼양라면</a></li>
+                                <li><a href="#">불닭볶음면</a></li>
+                                <li><a href="#">짜짜로니</a></li>
+                                <li><a href="#">별뽀빠이</a></li>
+                                <li><a href="#">삼양유기농우유</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">제품</a>
+                            <ul class="depth2">
+                                <li><a href="#">라면</a></li>
+                                <li><a href="#">스낵</a></li>
+                                <li><a href="#">유제품</a></li>
+                                <li><a href="#">소스·간편식</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">홍보관</a>
+                            <ul class="depth2">
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">홍보영상</a></li>
+                                <li><a href="#">광고영상</a></li>
+                                <li><a href="#">호치와 친구들</a></li>
+                                <li><a href="#">삼양역사관</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="depth2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">고객문의</a></li>
+                                <li><a href="#">삼양 사연</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">회사소개</a>
+                            <ul class="depth2">
+                                <li><a href="#">삼양식품</a></li>
+                                <li><a href="#">계열사</a></li>
+                                <li><a href="#">공장</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">인재채용</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <section class="main_slider_wrap">
+            <h2 class="blind">main_visual</h2>
+            <div class="swiper-container main_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#" class="slide01">
+                        <img src="images/mslider_01.jpg" alt="main slider 01">
+                    </a></div>
+                    <div class="swiper-slide"><a href="#" class="slide02">
+                        <img src="images/mslider_02.jpg" alt="main slider 02">
+                    </a></div>
+                    <div class="swiper-slide"><a href="#" class="slide03">
+                        <img src="images/mslider_03.jpg" alt="main slider 03">
+                    </a></div>
+                    <div class="swiper-slide"><a href="#" class="slide04">
+                        <img src="images/mslider_04.jpg" alt="main slider 04">
+                    </a></div>               
+                    <div class="swiper-slide"><a href="#" class="slide05">
+                        <img src="images/mslider_05.jpg" alt="main slider 05">
+                    </a></div>               
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev btn_arrow"></div>
+                <div class="swiper-button-next btn_arrow"></div>            
+            </div>
+        </section>
+        <section class="product_wrap">
+            <div class="product_intro">
+                <h3>삼양 제품소개</h3>
+                <span>Delicious Together!</span>
+                <p>다양한 제품을<br>한곳에서 즐기세요!</p>
+                <ul class="product_tap">
+                    <li class="tap01 on">라면<a href="#"></a></li>
+                    <li class="tap02">스낵<a href="#"></a></li>
+                    <li class="tap03">유제품<a href="#"></a></li>
+                    <li class="tap04">소스·간편식<a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="product_slider_wrap">
+                <div class="swiper-container product_slider active">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img01.png" alt="product 01">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img02.png" alt="product 02">
+                            <p>더 새콤달콤한 맛으로 돌아온</p>
+                            <strong>열무비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img03.png" alt="product 03">
+                            <p>백순대의 맛 그대로</p>
+                            <strong>큰컵 신림동 백순대볶음면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img04.png" alt="product 04">
+                            <p>추운 겨울에 어울리는 화끈한 불맛 짬뽕</p>
+                            <strong>불타는 고추짬뽕</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img05.png" alt="product 05">
+                            <p>시원칼칼한 국물맛이 일품</p>
+                            <strong>바지락술찜면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img06.png" alt="product 06">
+                            <p>미트 스파게티와 불닭의 화끈한 케미</p>
+                            <strong>미트스파게티 불닭볶음면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img07.png" alt="product 07">
+                            <p>미트 스파게티와 불닭의 화끈한 케미</p>
+                            <strong>큰컵 미트스파게티 불닭볶음면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img08.png" alt="product 08">
+                            <p>걱정을 Light하게 덜었다!</p>
+                            <strong>라이트 불닭볶음면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img09.png" alt="product 09">
+                            <p>시원하게 비벼먹는 불닭!</p>
+                            <strong>도전! 불닭비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product01_img10.png" alt="product 10">
+                            <p>알싸하게 매운 짜장라면</p>
+                            <strong>불타는 고추짜장</strong>
+                        </a></div>               
+                    </div>               
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-container product_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img01.png" alt="product 01">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img02.png" alt="product 02">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img03.png" alt="product 03">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img04.png" alt="product 04">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img05.png" alt="product 05">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img06.png" alt="product 06">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img07.png" alt="product 07">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img08.png" alt="product 08">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img09.png" alt="product 09">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product02_img10.png" alt="product 10">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>            
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-container product_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img01.png" alt="product 01">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img02.png" alt="product 02">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img03.png" alt="product 03">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img04.png" alt="product 04">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img05.png" alt="product 05">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img06.png" alt="product 06">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img07.png" alt="product 07">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img08.png" alt="product 08">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img09.png" alt="product 09">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product03_img10.png" alt="product 10">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-container product_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img01.png" alt="product 01">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img02.png" alt="product 02">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img03.png" alt="product 03">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img04.png" alt="product 04">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img05.png" alt="product 05">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img06.png" alt="product 06">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img07.png" alt="product 07">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img08.png" alt="product 08">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img09.png" alt="product 09">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                        <div class="swiper-slide"><a href="#">
+                            <img src="images/product04_img10.png" alt="product 10">
+                            <p>청양고추의 매운맛에 참깨로 고소한 풍미 더한 비빔면</p>
+                            <strong>불타는 고추비빔면</strong>
+                        </a></div>               
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="community_wrap">
+            <div class="community_title">
+                <h3>삼양 커뮤니티</h3>
+                <p>삼양식품은 여러분과 함께 맛있는 세상을 만들어갑니다.</p>
+            </div>
+            <div class="sns_wrap">
+                <ul class="sns">
+                    <li><a href="#"><img src="images/ico_facebook.png" alt="삼양식품 facebook link"></a></li>
+                    <li><a href="#"><img src="images/ico_insta.png" alt="삼양식품 instagram link"></a></li>
+                    <li><a href="#"><img src="images/ico_blog.png" alt="삼양식품 blog link"></a></li>
+                    <li><a href="#"><img src="images/ico_twitter.png" alt="삼양식품 twitter link"></a></li>
+                </ul>
+            </div>
+            <div class="community_block">
+                <div class="block1">
+                    <div class="facebook_view">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsamyangfoods&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden;" scrolling="no" allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                    <div class="event_slider_wrap">
+                        <div class="swiper-container event_slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#" class="slide01">
+                                    <img src="images/mevent_01.jpg" alt="event slider 01">
+                                </a></div>
+                                <div class="swiper-slide"><a href="#" class="slide02">
+                                    <img src="images/mevent_02.jpg" alt="event slider 02">
+                                </a></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="video">
+                        <h3>홍보영상</h3>
+                        <p>삼양식품의 다채로운 스토리를<br class="br"> 영상으로 보여드립니다.</p>
+                    </div>
+                    <div class="story">
+                        <h3>삼양 사연</h3>
+                        <p>삼양식품과 함께한<br class="br"> 여러분의 다양한 사연을 기다립니다.</p>
+                    </div>
+                </div>
+                <div class="block3">
+                    <div class="recipe">
+                        <h3>맛있는 나눔</h3>
+                        <p>모두가 행복한 맛있는 세상</p>
+                    </div>
+                    <div class="notice">
+                        <h3>공지사항</h3>
+                        <p>삼양사연 이벤트 참여하시고 선물 받아가세요!</p>
+                        <span>2019.03.28.</span>
+                    </div>
+                    <div class="shop">
+                        <h3>삼양 맛샵 오픈</h3>
+                        <p>삼양식품의 다양한 제품을 만나보세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <div class="footer_wrap">
+            <div class="footer_inner">
+                <div class="logo"><img src="images/flogo.png" alt=""></div>
+                <div class="family_wrap">
+                    <ul class="foot_sns">
+                        <li><a href="#"><img src="images/ico_sns_blog2.png" alt="blog"></a></li>
+                        <li><a href="#"><img src="images/ico_sns_insta2.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="images/ico_sns_twitter2.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="images/ico_sns_facebook2.png" alt="facebook"></a></li>
+                    </ul>                
+                    <button type="button" class="btn_family">Family Site</button>
+                    <ul class="family">
+                        <li><a href="http://www.sydeliciousshop.com/" target="_blank">삼양맛샵</a></li>
+                        <li><a href="http://www.samyangranch.co.kr" target="_blank">삼양목장</a></li>
+                        <li><a href="http://www.homyeondang.com/" target="_blank">호면당</a></li>
+                        <li><a href="http://www.saeahchim.co.kr/" target="_blank">삼양냉동</a></li>
+                        <li><a href="http://www.jejumilk.com/" target="_blank">제주우유</a></li>
+                    </ul>
+                    <div><img src="images/award_2017.jpg" alt=""></div>
+                </div>
+                <div class="policy_wrap">
+                    <ul class="policy">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div class="copy">
+                        <p>서울특별시 성북구 오패산로3길 104(하월곡동)</p>
+                        <p>Tel. 02-940-3000 Fax. 02-942-4350</p>
+                        <p>※ 고객지원센터 : 080-940-3333 (무료상담전화)</p>
+                        <p>상담시간 (평일) 오전 9시 - 오후 6시</p>
+                        <p>[점심시간 : 오후 12시 - 1시 ]</p>
+                        <p>Copyright © 2016 Samyangfoods. All rights reserved.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

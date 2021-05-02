@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+
+/* 메인 슬라이더 */
+#main .section1 .main_slider .swiper-slide a {left: 50%;top: 0;transform: translateX(-50%);}
+#main .main_slider img {width: 100%;}
+#main .section1 .main_slider .tit_slider {position: absolute;left: 50%;top: 50%;width: 100%;font-size: 6vw;font-weight: 300;letter-spacing: 8px;color: #fff;text-align: center;z-index: 1;transform: translate(-50%, -50%);}
+#main .section1 .main_slider .tit_bottom {position: absolute;left: 50%;top: 60%;width:100%;font-size: 7vw;color: #fff;text-align: center;z-index: 1;transform: translate(-50%, -50%);}
+
+/* 메인. 슬라이더 페이지네이션 커스텀 */
+#main .swiper-pagination {bottom: 6px;}
+#main .swiper-pagination span {width: 10px;height: 10px;background: #fff;opacity: .7;transition: all 0.5s;border-radius: 10px;border: none;margin: 0 8px;}
+#main .swiper-pagination .swiper-pagination-bullet-active {background: #a0d8cf;opacity: 1;}
+
+/* 메인. 섹션 제목 공통 */
+#main h2.tit_section {display: inline-block;font-size: 6vw;color: #4e4e4e;position: relative;padding: 0 10px;text-align: center;}
+#main h2.tit_section:before {content: '';position: absolute;background: #7c7c7c;width: 100%;height: 2px;top: -5px;left: 50%;transform: translateX(-50%);}
+
+
+
+
+
+/* 메인. 섹션2. 공간 */
+#main .section2 {padding: 60px 0 112px;text-align: center;}
+#main .section2 .section2_slider {padding: 30px 0 30px 15px;}
+#main .section2 .section2_slider .swiper-wrapper .swiper-slide {width: 60% !important;background: #fff;margin-right: 10px;box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .2);position: relative;}
+#main .section2 .section2_slider .swiper-slide:before {content: '';background: #a0d8cf;width: 100%;height: 2px;position: absolute;left: 0;top: 0;}
+#main .section2 .section2_slider .swiper-slide h3 {margin-top: 20px;font-size: 4vw;font-weight: 400;color: #4e4e4e;padding-bottom: 17px;}
+#main .section2 .section2_slider .swiper-slide a {display: block;width: 100%;}
+#main .section2 .section2_slider .swiper-slide .img {transition: all 0.5s;width: 100%;}
+/* 메인. 섹션2. 스와이퍼 스크롤바 커스텀 */
+#main .section2 .section2_slider .swiper-scrollbar {left: 50%;bottom: 0;transform: translateX(-50%);width: calc(100% - 30px);height: 0.5vh;background: rgba(0,0,0,.3);border-radius: 50px;}
+#main .section2 .section2_slider .swiper-scrollbar .swiper-scrollbar-drag {background: #a0d8cf;}
+
+
+
+/* 메인. 섹션3. 이벤트 & 소식 */
+#main .section3 {position: relative;background: #f7f7f7;text-align: center;padding: 60px 0 142px;overflow: hidden;}
+/* 메인. 섹션3. 상단 배너 랩 */
+#main .section3 .banner_wrap {padding: 30px 0 0 15px;}
+#main .section3 .banner_wrap .banner_list {float: left;width: calc(50% - 10px);margin-right: 10px;}
+#main .section3 .banner_wrap .list_right, #main .section3 .banner_wrap .list_bottom_right{margin-right: 0;}
+#main .section3 .banner_wrap .banner_list a {display: block;width: 100%;margin-bottom: 10px;}
+#main .section3 .banner_wrap .banner_list .banner {width: 100%;}
+/* 메인. 섹션3. 하단 배너 랩 */
+#main .section3 .banner_wrap.wrap_bottom {transition: all 0.5s;display: none;}
+#main .section3.on .banner_wrap.wrap_bottom {display: block;}
+/* 메인. 섹션3. 하단 배너 랩 버튼 */
+#main .section3 .btn_box {position: absolute;left: 0;bottom: 50px;width: 100%;height: 7vh;}
+#main .section3 .btn_box:after {content: '';position: absolute;left: 50%;top: 0;transform: translateX(-50%);width: 0;height: 100%;background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 15%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0) 100%);border-radius: 30px;opacity: 0;display: block;transition: width 0.3s 0.1s, opacity 0.3s 0.1s;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+#main .section3 .btn_box.on:after {opacity: .3;width: 100%;}
+#main .section3 .btn_box .btn_more {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);width: 43px;height: 43px;background: #fff;background-size: 16px;border-radius: 50px;box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .2);border: none;text-indent: -9999px;z-index: 1;}
+#main .section3 .btn_box .btn_more:after {content: '';position: absolute;width: 43px;height: 43px;left: 0;top: 0;background: url(../images/icon_more.png) no-repeat 50% 50%;background-size: 17px;}
+
+/* 메인. 섹션4. 교육 & 프로그램 */
+#main .section4 {position: relative;text-align: center;padding: 60px 0 70px;overflow: hidden;}
+#main .section4 .section4_list {padding: 30px 15px 0; }
+#main .section4 .section4_list li {float: left;width: 100%;box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .2);margin-bottom: 10px;border-top: 2px solid #a0d8cf;position: relative;}
+#main .section4 .section4_list li>a {display: block;float: left;width: 100%;height: 100%;}
+#main .section4 .section4_list li>a img {width: 50%;float: left;}
+#main .section4 .section4_list li .txt_box {position: absolute;right: 0;top: 0;float: left;width: 50%;height: 100%;}
+#main .section4 .section4_list li .txt_box p {position: absolute;left: 0;right: 0;top: 50%;transform: translateY(-50%);font-size: 5vw;color: #4e4e4e;padding: 0 15px;}
+
+/* 메인. 섹션5. 미디어 */
+#main .section5 {padding: 60px 15px 56px;text-align: center;background: #fbfbfb;overflow: hidden;}
+#main .section5 .media_wrap {text-align: left;padding-top: 30px;}
+/* 메인. 섹션5-1. 미디어_SNS */
+#main .section5 .media_wrap .media_top {overflow: hidden;}
+#main .section5 .media_wrap .media_top li {float: left;width: calc(50% - 5px);margin-right: 10px;background: #fff;position: relative;}
+#main .section5 .media_wrap .media_top li:nth-child(2) {margin-right: 0;}
+#main .section5 .media_wrap .media_top li .tag_box {display: block;float: left;width: 100%;}
+#main .section5 .media_wrap .media_top li .tag_box .tag {font-size: 13px;line-height: 22px;color: #003569;font-weight: 300;padding: 10px 0 0 40px;position: relative;}
+#main .section5 .media_wrap .media_top li:nth-child(2) .tag_box .tag {padding: 10px 0 0 44px;}
+#main .section5 .media_wrap .media_top li .tag_box .tag:before {content:'';position: absolute;left: 10px;top: 13px;width:22px;height: 22px;background: url(../images/m_media_icon_facebook.png) no-repeat;background-size: 22px;}
+#main .section5 .media_wrap .media_top li:nth-child(2) a .tag:before {background-image: url(../images/m_media_icon_instagram.png);width: 25px;height: 25px;background-size: 25px;}
+#main .section5 .media_wrap .media_top li .img {float: left; width: 100%;height: 100%;padding-top: 10px;}
+/* 메인. 섹션5-2. 미디어_유튜브, */
+#main .section5 .media_wrap .media_mid {margin: 10px 0;}
+#main .section5 .media_wrap .media_mid .youtube {position: relative;overflow: hidden;}
+#main .section5 .media_wrap .media_mid .youtube img {width: 100%;}
+#main .section5 .media_wrap .media_mid .youtube p {position: absolute;left: 3%;top: 2%;z-index: 1;color: #fff;font-size: 3vw;font-weight: 300;}
+#main .section5 .media_wrap .media_mid .youtube .btn_youtube {position: absolute;display: block;left: 0;top: 0;width: 100%;height: 100%;background: none;text-indent: -9999px;}
+#main .section5 .media_wrap .media_mid .youtube .btn_youtube:after {content:'';position: absolute;left: 50%;top: 50%;width: 54px;height: 38px;transform: translate(-50%, -50%);background: url(../images/m_icon_youtube.png) no-repeat;transition: all 0.1s;}
+#main .section5 .media_wrap .media_mid .youtube:hover .btn_youtube:after {background-image: url(../images/m_icon_youtube_hover.png);}
+#main .section5 .youtube_inner {position: relative;padding-bottom: 56.25%;height: 0;}
+#main .section5 .youtube_inner iframe {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+/* 메인. 섹션5-3. 미디어_프레스 */
+#main .section5 .media_wrap .media_bottom .press {width: 100%;height: 100%;background: #fff;padding: 0 15px 30px;}
+#main .section5 .media_wrap .media_bottom .press h4 {color: #4e4e4e;font-size: 22px;margin-top: 22px;display: inline-block;}
+#main .section5 .media_wrap .media_bottom .press .more {float: right;font-size: 15px;font-weight: 300;margin: 26px 22px 0 0;position: relative;}
+#main .section5 .media_wrap .media_bottom .press .more:after {content: '';position: absolute;width: 8px;height: 8px;left: 42px;top: 50%;border: 1px solid #4e4e4e;display: block;transform: rotateZ(45deg) translateY(-5px);border-left-width: 0;border-bottom-width: 0;}
+#main .section5 .media_wrap .media_bottom .press .press_inner {padding: 10px 0;}
+#main .section5 .media_wrap .media_bottom .press .press_inner li {margin: 4px 0;}
+#main .section5 .media_wrap .media_bottom .press .press_inner li a {
+    display: block;
+    line-height: 25px;
+    font-size: 15px;
+    color: #4e4e4e;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+#main .section5 .media_wrap .media_bottom .press .press_inner li a span {
+    position: relative;
+}
+
+#main .section5 .media_wrap .media_bottom .press .press_inner li a:hover span:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    background: #4e4e4e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************************
+********** 서브페이지_로그인 ************
+**************************************/
+#main.login_page {background: #f4f4f4;padding: 140px 40px 180px;overflow: hidden;}
+#main.login_page .content h2 {display: block;width: 100%;line-height: 54px;color: #4e4e4e;font-size: 30px;font-weight: 500;text-align: center;position: relative;}
+#main.login_page .content h2:after {content: '';position: absolute;width: 100%;height: 1px;left: 50%;transform: translateX(-50%);bottom: -12px;background: rgba(0, 0, 0, 0.6);}
+
+/* 로그인페이지. 좌측하단 */
+#main.login_page .login_wrap {float: left;margin-top: 45px;}
+#main.login_page .login_wrap {width: 100%;float: left;position: relative;}
+/* 아이디 & 비밀번호 텍스트 랩 */
+#main.login_page .login_wrap .input_wrap {float: left;width: 100%;position: relative;}
+#main.login_page .login_wrap .input_login {height: 42px;border: #b4b4b4;margin-bottom: 10px;padding-left: 50px;color: #666;}
+#main.login_page .login_wrap .input_login::placeholder {padding-left: 5px;}
+#main.login_page .login_wrap .input_wrap .icon_box {position: absolute;left: 15px;top: 12px;width: 16px;height: 18px;background: url(../images/icon_login.png) no-repeat;}
+#main.login_page .login_wrap .input_wrap .icon_box.icon_box2 {top: 64px;background-image: url(../images/icon_pw.png);}
+/* 아이디 저장 & 로그인 상태 유지 */
+#main.login_page .login_wrap .save_box {float: left;width: 100%;margin: 5px 0 40px;text-align: center;}
+#main.login_page .save_box input[type="checkbox"] + label {position: relative;cursor: pointer;font-weight: 400;color: #6d6d6d;font-size: 13px;padding-left: 24px;margin-right: 14px;}
+#main.login_page .save_box input[type="checkbox"].save_login + label {margin-right: 0;}
+#main.login_page .save_box input[type="checkbox"] + label:before {content: '';position: absolute;left: 0;top: 8px;width: 22px;height: 22px;background: url(../images/btn_idsave.png) no-repeat;}
+#main.login_page .save_box input[type="checkbox"]:checked + label:before {background-position-y: -24px;}
+/* 로그인 & 회원가입 버튼 */
+#main.login_page .login_wrap .btn_wrap {float: left;text-align: center;width: 100%;}
+#main.login_page .login_wrap .btn_wrap .btn {line-height: 40px;color: #fff;width: 80%;background: #a0d8cf;text-align: center;border: none;margin-bottom: 10px;}
+#main.login_page .login_wrap .btn_wrap .btn.btn_join {background: #e6e6e6;color: #6d6d6d;}
+#main.login_page .login_wrap .find_id {float: left;width: 100%;position: relative;text-align: center;}
+#main.login_page .login_wrap .bottom_txt {display: inline-block;color: #6d6d6d;font-size: 13px;margin-right: 27px;position: relative;}
+#main.login_page .login_wrap .bottom_txt:nth-child(2) {margin-right: 0;}
+#main.login_page .login_wrap .find_id .bottom_txt:first-child:after {content: '';position: absolute;width: 1px;height: 12px;right: -15px;top: 4px;background: #b9b9b9;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************
+******** 서브페이지_뉴스 & 이벤트(news_info) *******
+*************************************************/
+#main.news_page .sub_visual.info_visual {background: url(../images/info_visual.jpg) no-repeat 50% 0;}
+#main.news_page .content .content_inner {padding: 0 15px;}
+#main.news_page .content .content_inner .search_wrap {text-align: center;margin-top: 25px;}
+#main.news_page .content .content_inner .search_wrap .select_wrap {float: left;width: calc(25% - 5px);border: none;position: relative;margin-right: 5px;}
+#main.news_page .content .content_inner .search_wrap .select_wrap:after {content: '';position: absolute;width: 0;height: 0;border-top: 6px solid #4a4a4a;border-right: 4px solid transparent;border-bottom: 4px solid transparent;border-left: 5px solid transparent;}
+#main.news_page .content .content_inner .search_wrap .select_wrap > select {height: 31px;font-weight: 300;color: #4a4a4a;padding: 0 10px 3px 10px;background: #fff;}
+#main.news_page .content .content_inner .search_wrap .select_wrap > select option {font-weight: 300;color: #4a4a4a;}
+#main.news_page .content .search_wrap .search_box {float: left;height: 31px;width: calc(55% - 5px);vertical-align: middle;border: none;margin-right: 5px;}
+#main.news_page .content .search_wrap .btn_search {float: left;width: 20%;line-height: 31px;background: #4a4a4a;color: #fff;font-weight: 300;text-align: center;border: none;}
+
+
+/* 뉴스 페이지 테이블 커스텀 */
+#main.news_page .content .tbl_wrap {font-size: 13px;}
+#main.news_page .content .tbl_wrap thead {display: none;}
+#main.news_page .content .tbl_wrap tfoot {display: none;}
+#main.news_page .content .tbl_wrap .tg colgroup col:first-child {width: 10%;border-right: none;border-left: none;}
+#main.news_page .content .tbl_wrap .tg colgroup col:nth-child(2) {width: 75%;border-right: none;border-left: none;}
+#main.news_page .content .tbl_wrap .tg colgroup col:nth-child(3) {width: 15%;border-right: none;border-left: none;}
+#main.news_page .content .tbl_wrap .tg td {border-left: none;border-right: none;}
+#main.news_page .content .tbl_wrap tr:first-child {border-top: 2px solid #4a4a4a; }
+#main.news_page .content .tbl_wrap tr:last-child {border-bottom: 2px solid #4a4a4a;}
+#main.news_page .content .tbl_wrap .left_td {padding-left: 10px;word-break: keep-all;font-size: 13px;}
+#main.news_page .content .tbl_wrap .notice {font-weight: 700;}
+#main.news_page .content .tbl_wrap .center_td {text-align: left;padding-left: 20px;white-space: nowrap; overflow:hidden; text-overflow:ellipsis;font-size: 13px;}
+
+
+/* 테이블 페이지네이션 */
+#main.news_page .content .tbl_pagination {display: block;text-align: center;padding: 30px 0;}
+#main.news_page .content .tbl_pagination .pagination_wrap {display: inline-block;}
+#main.news_page .content .tbl_pagination a {float: left;background: #e6e6e6;display: block;width: 35px;text-align: center;line-height: 35px;margin: 0 3px;color: #4a4a4a;}
+#main.news_page .content .tbl_pagination a: {margin-right: 0;}
+#main.news_page .content .tbl_pagination a.active {background: #a0d8cf;color: #fff;}
+#main.news_page .content .tbl_pagination .btn_page {float: left;left: 0;top: 0;width: 35px;height: 35px;border: none;background: #4a4a4a;text-indent: -9999px;margin-right: 16px;position: relative;}
+#main.news_page .content .tbl_pagination .btn_page:after {content: '';position: absolute;left: 50%;top: 50%;width: 10px;height: 10px;border: 2px solid #fff;border-right: none;border-bottom: none;transform: translate(-50%, -50%) rotateZ(-45deg);}
+#main.news_page .content .tbl_pagination .btn_page.btn_page_next { text-indent: -9999px;margin-right: 0;margin-left: 20px;position: relative;}
+#main.news_page .content .tbl_pagination .btn_page.btn_page_next:after {border: 2px solid #fff;border-left: none;border-bottom: none;transform: translate(-50%, -50%) rotateZ(45deg);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************
+********** 서브페이지. 찾아오시는 길(location_museum) ********
+**********************************************************/
+
+#main.location_museum .sub_visual.museum_visual {background: url(../images/museum_visual.jpg) no-repeat 50% 0;}
+
+/* 지도 섹션 */
+#main.location_museum .content_inner {padding: 0 15px;}
+#main.location_museum .content .map_wrap {padding: 25px 0 40px 0;border-bottom: 1px solid #ddd;overflow: hidden;}
+#main.location_museum .content .map_wrap .map_area {float: left;width:100%;left:0; right:0; height: 300px;}
+#main.location_museum .content .map_wrap .map_detail {float: left;padding: 15px;}
+#main.location_museum .content .map_wrap .map_detail dl {width:100%;float: left;}
+#main.location_museum .content .map_wrap .map_detail dt {float: left;font-size: 18px;font-weight: 500;color: #4a4a4a;line-height: 30px;width: 60px;}
+#main.location_museum .content .map_wrap .map_detail dd {float: left;width: calc(100% - 60px);font-size: 14px;color: #4a4a4a;line-height: 23px;padding-top: 2px;word-break: keep-all;}
+#main.location_museum .content .map_wrap .map_detail .tel {padding-top: 3px; }
+#main.location_museum .content .map_wrap .map_detail .link {float: left;padding-top: 15px;}
+#main.location_museum .content .map_wrap .map_detail .link span {float: left;font-size: 18px;font-weight: 500;color: #4a4a4a;line-height: 35px;width: 60px;}
+#main.location_museum .content .map_detail .link .link_list {float: left;width: calc(100% - 60px);}
+#main.location_museum .content .map_detail .link .link_list .btn_link {font-size: 18px;font-weight: 500;width: 180px;line-height: 50px;color: #4e4e4e;background: none;border: 3px solid #ddd;border-radius: 5px;text-align: left;padding-left: 70px;display: block;position: relative;margin-bottom: 15px;}
+#main.location_museum .content .map_detail .link .link_list .btn_link:before {content: '';position: absolute;width: 30px;height: 30px;left: 20px;top: 50%;transform: translateY(-50%);background: url(../images/m_logo_daum.png) no-repeat;}
+#main.location_museum .content .map_detail .link .link_list li:nth-child(2) .btn_link.naver:before {background-image: url(../images/m_logo_naver.png);}
+#main.location_museum .content .map_detail .link .link_list li:nth-child(3) .btn_link.google:before {background-image: url(../images/m_logo_google.png);}
+
+
+/* 이동수단 */
+#main.location_museum .content .vehicle_wrap {margin-top: 80px;width: 100%;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner {float: left;width: 100%;box-sizing: border-box;padding-left: 15px;position: relative;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner.vehicle_bus {padding-bottom: 60px;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner.vehicle_bus:after {content: '';position: absolute;width: 80%;height: 1px;left: 50%;bottom: 65px;transform: translateX(-50%);background: #b7b7b7;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner h4 {font-size: 20px;font-weight: 500;color: #4a4a4a;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner h4 span {font-size: 14px;font-weight: 400;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner .vehicle {float: left;width: 100%;}
+#main.location_museum .content .vehicle_wrap .vehicle_inner .vehicle .img {float: left;width: 20vw;height: 15vh;margin-top: 35px;background: url(../images/location_bus.png) no-repeat;background-size: 100%;}
+#main.location_museum .content .vehicle_inner .vehicle .img.img_train {background-image: url(../images/location_train.png);}
+#main.location_museum .content .vehicle_inner .vehicle .route {float: right;padding: 30px 0;position: relative;}
+#main.location_museum .content .vehicle_inner .vehicle .route:before {content: '';position: absolute;width: 2px;height: 150px;left: -30px;top: 40px;background: #ddd;}
+#main.location_museum .content .vehicle_inner .vehicle .route.route_train:before {height: 170px;}
+#main.location_museum .content .vehicle_inner .vehicle .route p {display: block;font-size: 15px;color: #4a4a4a;margin-bottom: 30px;position: relative;}
+#main.location_museum .content .vehicle_inner .vehicle .route p:before {content: '';position: absolute;width: 10px;height: 10px;left: -34px;top: 9px;background: #a0d8cf;border-radius: 50%;}
+#main.location_museum .content .vehicle_inner .vehicle .route p span {font-weight: 600;}
+
+/* 운행 시간 안내 버튼 */
+#main.location_museum .content .vehicle_info {width: 100%;float: left;padding-top: 20px;text-align: center;}
+#main.location_museum .content .vehicle_info div {display: inline-block;width: 80%;margin-bottom: 10px;background: #a0d8cf;}
+#main.location_museum .content .vehicle_info div:last-child {margin-right: 0;}
+#main.location_museum .content .vehicle_info div:nth-child(2) {background: #a0d0a0}
+#main.location_museum .content .vehicle_info div:last-child {background: #4f81bd;}
+#main.location_museum .content .vehicle_info div a {display: block;line-height: 50px;color: #fff;font-weight: 500;font-size: 15px;padding: 0 40px;border-radius: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************
+********* 서브페이지. 제임스터렐 페이지(turrell_space) ********
+**********************************************************/
+#main.turrell_space .sub_visual.space_visual {background: url(../images/space_visual.jpg) no-repeat 50% 0;}
+
+
+/* 제임스터렐. 작품 소개 공통 */
+#main.turrell_space .turrell_wrap {padding: 0 15px;}
+#main.turrell_space .turrell_wrap .item {display: block;margin-top: 60px;padding-bottom: 60px;position: relative;overflow: hidden;}
+#main.turrell_space .turrell_wrap .item .img_box {position: relative;display: block;float: left;width: 100%;}
+#main.turrell_space .turrell_wrap .item .img_box:after {content: '© James Turrell Photo: Florian Holzherr';position: absolute;right: 0;bottom: -16px;font-size: 12px;color: #4a4a4a;font-weight: 300;}
+#main.turrell_space .turrell_wrap .item .img_box img {width: 100%;}
+
+/* 제임스터렐. 작품 소개 공통. 각 작품 하단 구분선 */
+#main.turrell_space .turrell_wrap .item:after { content: '';position: absolute;left: 0;bottom: 0;width: 100%;height: 2px;background: #ddd;}
+#main.turrell_space .turrell_wrap .item5:after {display: none;}
+
+/* 제임스터렐. 작품 소개 공통. 타이틀 */
+#main.turrell_space .turrell_wrap .item .txt_wrap {float: left;padding-top: 70px;}
+#main.turrell_space .turrell_wrap .item .txt_wrap .tit_wrap {float: left;width: 50%;}
+#main.turrell_space .turrell_wrap .item .txt_wrap .tit_wrap .tit {width: 100%;float: left;font-size: 16px;font-weight: 500;color: #4a4a4a;}
+#main.turrell_space .turrell_wrap .item .txt_wrap .tit_wrap .tit span {position: relative;}
+#main.turrell_space .turrell_wrap .item .txt_wrap .tit_wrap .tit span:before {content: '';position: absolute;width: 100%;height: 2px;left: 0;top: -5px;background: #a0d8cf;}
+/* 제임스터렐. 작품 소개 공통. 타이틀 - 영어*/
+#main.turrell_space .turrell_wrap .item .txt_wrap .tit_wrap .tit_eng {float: left;font-size: 16px;color: #2a2a2a;line-height: 40px;}
+#main.turrell_space .turrell_wrap .item .txt_wrap .txt {width: 50%;float: left;font-size: 13px;color: #4a4a4a;word-break: keep-all;}
+/* 제임스터렐. item_1 */
+#main.turrell_space .turrell_wrap .item1 .img_box {width: 50%;}
+#main.turrell_space .turrell_wrap .item1 .txt_wrap {width: 50%;padding-left: 15px;padding-top: 0;}
+#main.turrell_space .turrell_wrap .item1 .txt_wrap .tit_wrap {padding-top: 5px;width: 100%;}
+#main.turrell_space .turrell_wrap .item1 .txt_wrap .txt {margin-top: 40px;font-size: 13px;color: #4a4a4a;width: 100%;word-break: keep-all;}
+
+
+
+

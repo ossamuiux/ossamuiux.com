@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--user-scalable=no는 아이폰과 안드로이드 상위버전에서 작동하지 않음-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>이월드모바일</title>
+<meta name="description" content="대구 E-WORLD">
+<meta property="og:type" content="site">
+<meta property="og:title" content="대구 E-WORLD">
+<meta property="og:url" content="http://bibus95.dothome.co.kr/mEworld/">
+<meta property="og:image" content="http://bibus95.dothome.co.kr/mEworld/opengraph.png">
+<meta property="og:description" content="꿈과 희망이 가득한">
+<link rel="apple-touch-icon-precomposed" href="mobile_android_7272.png">
+<!--모바일 브라우저 홈화면 등록용 터치아이콘-->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;display=swap&amp;subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+        <button class="btn_menu" type="button">메뉴열기</button>
+        <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="이월드로고"></a></h1>
+        <button class="btn_search" type="button">찾기버튼</button>
+        <div class="search_wrap">
+            <form>
+                <fieldset>
+                    <legend>전체검색</legend>
+                    <label><input type="text" placeholder="검색어를 입력해주세요."></label>
+                    <button class="btn_small_search" type="submit">전체검색버튼</button>
+                </fieldset>
+            </form>
+            <ul class="example">
+                <li class="ex"><em>ex</em></li>
+                <li><a href="#wrap">놀이시설</a></li>
+                <li><a href="#wrap">메가스윙</a></li>
+                <li><a href="#wrap">이용요금</a></li>
+            </ul>
+        </div>
+        <div class="dimm"></div>
+        <div class="gnb_wrap">
+            <div class="login_gnb">
+                <a class="login" href="#wrap"><img src="images/login_icon.png" alt="로그인">로그인</a>
+                <div class="lang_wrap">
+                    <select>
+                        <option value="KOR">KOR</option>
+                        <option value="ENG">ENG</option>
+                        <option value="CHN">CHN</option>
+                        <option value="JPN">JPN</option>
+                    </select>
+                    <button class="btn_close" type="button">닫기버튼</button>
+                </div>
+            </div>
+            <div class="quick_gnb">
+                <a href="#wrap">회원가입</a>
+                <a href="#wrap">단체프로그램</a>
+                <a href="#wrap">온라인예매</a>
+            </div>
+            <ul class="home_gnb">
+                <li >
+                    <a href="#wrap"><img class="nav_home" src="images/home_icon.png" alt="홈">HOME</a>
+                </li>
+                <li>
+                    <a href="#wrap"><img class="nav_ticket"  src="images/nav_ticket_icon.png" alt="예매">온라인예매</a>
+                </li>
+            </ul>
+            <ul class="gnb">
+                <li>
+                    <a href="#wrap">이월드안내</a>
+                    <ul class="depth2">
+                        <li><a href="index.html">운영시간</a></li>
+                        <li><a href="index.html">이용요금</a></li>
+                        <li><a href="index.html">식당가</a></li>
+                        <li><a href="index.html">기프트샵</a></li>
+                        <li><a href="index.html">게임샵</a></li>
+                        <li><a href="index.html">편의시설</a></li>
+                        <li><a href="index.html">교통안내 및 주차안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">할인혜택</a>
+                    <ul class="depth2">
+                        <li><a href="index.html">제휴사할인</a></li>
+                        <li><a href="index.html">카드사할인</a></li>
+                        <li><a href="index.html">행사할인</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">놀이시설</a>
+                    <ul class="depth2">
+                        <li><a href="fantasy_world.html">안내지도</a></li>
+                        <li><a href="index.html">판타지월드</a></li>
+                        <li><a href="index.html">매직월드</a></li>
+                        <li><a href="index.html">어드벤처월드</a></li>
+                        <li><a href="index.html">다이나믹월드</a></li>
+                        <li><a href="index.html">83타워 스카이가든</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">행사와 축제</a>
+                    <ul class="depth2">
+                        <li><a href="index.html">진행중인 이벤트</a></li>
+                        <li><a href="index.html">공연일정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#wrap">83타워</a>
+                    <ul class="depth2">
+                        <li><a href="index.html">대구83타워안내</a></li>
+                        <li><a href="index.html">이벤트</a></li>
+                        <li><a href="index.html">컨텐츠</a></li>
+                        <li><a href="index.html">레스토랑/카페</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main id="main">
+        <div class="swiper-container main_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="index.html"><img class="banner" src="images/main_visual_01.png" alt="메인배너"></a></div>
+                <div class="swiper-slide"><a href="index.html"><img class="banner" src="images/main_visual_01.png" alt="메인배너"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <section class="section1">
+            <p>이용시간 10:30 ~ 21:30</p>
+            <div class="today_attraction">
+                <h3>운휴기종</h3>
+                <div class="notice_attraction">
+                    <div class="swiper-container notice_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide1">
+                            <a href="#wrap">[매직월드] 날으는 코끼리<em> 운휴</em></a>
+                            </div>
+                            <div class="swiper-slide slide2">
+                            <a href="#wrap">[판타지월드] 트램<em> 운휴</em></a>
+                            </div>
+                            <div class="swiper-slide slide3">
+                            <a href="#wrap">[다이나믹월드] 레인저<em> 안전정검</em></a>
+                            </div>
+                            <div class="swiper-slide slide4">
+                            <a href="#wrap">[판타지월드] 알라딘<em> 12시 OPEN</em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="quick_menu">
+                <li>
+                    <a href="#wrap"><span class="quick_coin">이용요금</span></a>
+                </li>
+                <li>
+                    <a href="#wrap"><span class="quick_map">안내지도</span></a>
+                </li>
+                <li>
+                    <a href="#wrap"><span class="quick_ticket">온라인예매</span></a>
+                </li>
+                <li>
+                    <a href="#wrap"><span class="quick_atrracion">놀이시설</span></a>
+                </li>
+            </ul>
+        </section>
+        <section class="section2">
+            <h2 class="tit">이월드의 할인혜택</h2>
+            <h3 class="txt">내가 찾던 할인정보들을 한눈에!</h3>
+            <ul class="discount">
+                <li><a href="#wrap"><img src="images/discount_01.png" alt="행사할인"><p>행사할인</p></a></li>
+                <li><a href="#wrap"><img src="images/discount_02.png" alt="카드할인"><p>카드사할인</p></a></li>
+                <li><a href="#wrap"><img src="images/discount_03.png" alt="제휴사할인"><p>제휴사할인</p></a></li>
+            </ul>
+            <a class="section2_more" href="#wrap">더 많은 할인 혜택</a>
+        </section>
+        <section class="section3">
+            <h2 class="tit">이월드의 시즌행사</h2>
+            <h3 class="txt">놓칠 수 없는 이월드의 다양한 겨울 이벤트!</h3>
+            <div class="swiper-container event_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_01.png" alt="이벤트">
+                            </a>
+                            <h4>별빛 크리스마스 판타지</h4>
+                            <p>2019.11.2~2019.12.25</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_02.png" alt="이벤트">
+                            </a>
+                            <h4>별빛 불꽃쇼</h4>
+                            <p>2019.12.25</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_03.png" alt="이벤트">
+                            </a>
+                            <h4>천만송이 꽃빛정원</h4>
+                            <p>2019.11.16~2020.3.1</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_01.png" alt="이벤트">
+                            </a>
+                            <h4>별빛 크리스마스 판타지</h4>
+                            <p>2019.11.2~2019.12.25</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_02.png" alt="이벤트">
+                            </a>
+                            <h4>별빛 크리스마스 판타지</h4>
+                            <p>2019.11.2~2019.12.25</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_03.png" alt="이벤트">
+                            </a>
+                            <h4>별빛 크리스마스 판타지</h4>
+                            <p>2019.11.2~2019.12.25</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#wrap">
+                                <img src="images/event_02.png" alt="이벤트">
+                            </a>
+                            <h4>별빛 크리스마스 판타지</h4>
+                            <p>2019.11.2~2019.12.25</p>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <a class="section3_more" href="#wrap">더 많은 정보 보기</a>
+        </section>
+        <section class="section4">
+            <h2 class="tit">이월드의 <em>이</em>모<em>저</em>모</h2>
+            <h3 class="txt">이월드에서만 즐길 수 있는 특별한 추억들!</h3>
+            <div class="swiper-container guide_slider">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                       <div class="concert_schedule">
+                            <a href="#wrap"><img src="images/concert.png" alt="공연정보"></a>
+                            <div class="today_concert">
+                                <!--<h4>공연안내</h4>-->
+                                <div class="calender">
+                                    <em class="today-date" id="todayRt_dateMsg">02월 14일(금)</em>
+                                    <button class="btn_calender" type="button"><span class="blind">공연달력</span></button>
+                                </div>
+                                <div class="custom_scrollbox">
+                                    <ul class="performing">
+                                        <li><p>11:30</p><span>코코몽뮤지컬 "겨울 이야기"</span></li>
+                                        <li><p>11:40</p><span>꽃의 여왕 별빛 포토스팟"</span></li>
+                                        <li><p>12:30</p><span>한밤의 라이팅 서커스"</span></li>
+                                        <li><p>14:00</p><span>해피 산타 퍼레이드</span></li>
+                                        <li><p>14:30</p><span>코코몽뮤지컬 "겨울 이야기"</span></li>
+                                        <li><p>14:30</p><span>코코몽뮤지컬 "겨울 이야기"</span></li>
+                                        <li><p>14:30</p><span>코코몽뮤지컬 "겨울 이야기"</span></li>
+                                        <li><p>14:30</p><span>코코몽뮤지컬 "겨울 이야기"</span></li>
+                                        <li><p>14:30</p><span>코코몽뮤지컬 "겨울 이야기"</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="attraction_top3">
+                            <ul>
+                                <li><a href="attraction.html"><img src="images/attraction01.png" alt="메가스윙"></a></li>
+                                <li><a href="#wrap"><img src="images/attraction03.png" alt="야놀자스카이드롭"></a></li>
+                                <li><a href="#wrap"><img src="images/attraction02.png" alt="허리케인"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev btn_arrow"></div>
+                <div class="swiper-button-next btn_arrow"></div>
+            </div>
+        </section>
+        <section class="section5">
+            <div class="news_notice">
+                <h2 class="tit">NEWS &amp; NOTICE</h2>
+                <a href="#wrap"><img src="images/btn_more_icon.png" alt="더보기"></a>
+                <ul class="news">
+                    <li>
+                        <a href="#wrap">
+                            유지로움 공사안내
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#wrap">
+                            NEW 진추하 서예 전시회 OPEN!
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#wrap">
+                            10/19 연간회원 스페셜 데이!
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#wrap">
+                            안전한 이월드를 만들기 위한 안내말씀드립니다.
+                        </a>
+                    </li>
+                </ul>
+                <ul class="guide">
+                    <li class="member">
+                        <a href="#wrap"><p>연간회원안내</p></a>
+                    </li>
+                    <li class="transport">
+                        <a href="#wrap"><img src="images/bus.png" alt="대중교통"><p>대중교통과 주차안내</p></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <ul class="recruitment">
+            <li>
+                <a href="#wrap">제휴/입점 업체문의</a>
+            </li>
+            <li>
+                <a href="#wrap">아르바이트 모집</a>
+            </li>
+        </ul>
+        <ul class="footer_menu first">
+            <li>
+                <a href="#wrap">회사소개</a>
+            </li>
+            <li>
+                <a href="#wrap">고객센터</a>
+            </li>
+            <li>
+                <a href="#wrap">채용안내</a>
+            </li>
+            <li>
+                <a href="#wrap">이용약관</a>
+            </li>
+        </ul>
+        <ul class="footer_menu second">
+            <li>
+                <a href="#wrap"></a>
+            </li>
+            <li>
+                <a class="privacy" href="#wrap">개인정보취급방침</a>
+            </li>
+            <li>
+                <a href="#wrap">이메일주소무단수집거부</a>
+            </li>
+            <li>
+                <a href="#wrap">PC버전</a>
+            </li>
+        </ul>
+        <ul class="footer_sns">
+            <li><a href="#wrap"><img src="images/sns01.png" alt="sns1"></a></li>
+            <li><a href="#wrap"><img src="images/sns02.png" alt="sns2"></a></li>
+            <li><a href="#wrap"><img src="images/sns03.png" alt="sns3"></a></li>
+            <li><a href="#wrap"><img src="images/sns04.png" alt="sns4"></a></li>
+        </ul>
+        <address>
+            종합안내전화 053-620-0001<span></span>연간회원문의 053-620-0100<br>
+            대표이사: 유병천<span></span>사업자등록번호 503-81-68487<br>
+            대구광역시 달서구 두류공원로 200 (주)이월드<br>
+            통신판매신고번호 제2011-대구달서-0301호
+        </address>
+        <p class="copy">
+            COPYRIGHT ©  E-WORLD. ALL RIGHTS RESERVED.
+        </p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

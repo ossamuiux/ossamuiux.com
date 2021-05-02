@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 모바일 브라우저 화면크기(viewport)를 장치의 크기에 맞추고
+    확대축소를 할수있게함 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="고객과 함께 성장하는 기업 ㈜무학 웹사이트입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MUHAK ㈜무학">
+    <meta property="og:url" content="http://zzinn.dothome.co.kr/mMuhak/">
+    <meta property="og:image" content="http://zzinn.dothome.co.kr/mMuhak/images/muhak_og.png">
+    <meta property="og:description" content="고객과 함께 성장하는 기업 ㈜무학 웹사이트입니다.">
+    <title>㈜무학 | 기업소개</title>
+    <!-- ios용 홈화면등록 아이콘 -->
+    <link rel="apple-touch-icon-precomposed" href="favicon.ico.png">
+    <!-- 안드로이드 홈화면등록 아이콘, pc파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="skipNavi">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="(주)무학"></a></h1>
+            <button class="btn_open" type="button">메뉴열기</button>
+            <nav class="gnb_wrap">
+                <div class="gnb_top">
+                    <ul class="gnb_util">
+                        <li><a href="#">고객문의</a></li>
+                        <li><a href="#">로그인</a></li>
+                    </ul>
+                    <button class="btn_close" type="button">메뉴닫기</button>
+                </div>
+                <div class="gnb_bottom">
+                    <ul class="gnb">
+                        <li>
+                            <a href="introduce.html">회사소개</a>
+                            <ul class="depth2">
+                                <li><a href="introduce.html">무학</a></li>
+                                <li><a href="#">CEO 인사</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">CI 소개</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                                <li><a href="#">윤리강령</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">제품소개</a>
+                            <ul class="depth2 depth2_more">
+                                <li>
+                                    <a href="#">소주<span></span></a>
+                                    <ul class="depth3">
+                                        <li><a href="#">딱!좋은데이</a></li>
+                                        <li><a href="#">청춘소주</a></li>
+                                        <li><a href="#">좋은데이1929</a></li>
+                                        <li><a href="#">화이트</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">과일소주<span></span></a>
+                                    <ul class="depth3">
+                                        <li><a href="#">좋은데이 컬러</a></li>
+                                        <li><a href="#">좋은데이 깔라만시</a></li>
+                                        <li><a href="#">톡소다</a></li>
+                                        <li><a href="#">진짜 맛있는 국화</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">프리미엄 소주<span></span></a>
+                                    <ul class="depth3">
+                                        <li><a href="#">매실마을</a></li>
+                                        <li><a href="#">국화면좋으리</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">기타주류<span></span></a>
+                                    <ul class="depth3">
+                                        <li><a href="#">좋은데이 담금주</a></li>
+                                        <li><a href="#">스파클링 와인</a></li>
+                                    </ul>
+                                </li>                        
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="notice.html">홍보센터</a>
+                            <ul class="depth2">
+                                <li><a href="notice.html">공지사항</a></li>
+                                <li><a href="#">뉴스</a></li>
+                                <li><a href="#">견학신청</a></li>
+                                <li><a href="#">제조과정</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">네트워크</a>
+                            <ul class="depth2">
+                                <li><a href="#">지점</a></li>
+                                <li><a href="#">공장</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">공고</a>
+                            <ul class="depth2">
+                                <li><a href="#">공고</a></li>
+                                <li><a href="#">투자</a></li>
+                                <li><a href="#">채용공고</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="gnb_bg"></div>
+        </header>
+        <div id="container" class="introduce_wrap">
+            <!-- 서브 상단 -->
+            <div class="sub_visual">
+                <h2 class="sub_tit">회사소개</h2>
+            </div>
+            <div class="lnb">
+                <a href="#">무학</a>
+                <ul class="lnb_list">
+                    <li><a class="on" href="#">무학</a></li>
+                    <li><a href="#">CEO인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">CI소개</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">윤리강령</a></li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="about_muhak">
+                    <div class="tit_wrap">
+                        <h3 class="mini_tit">ABOUT MUHAK</h3>
+                        <h2 class="tit">기업이념</h2>
+                        <p class="txt">주류 및 음료관련 사업 그리고 미래 산업 육성을 통하여<br>하루하루 새로운 창의력과 도전의식으로<br>고객과 무학가족에게 풍요로운 삶의 질을
+                            제공토록 공헌하겠습니다.</p>
+                    </div>
+                    <div class="about_img">
+                        <ul class="about_list">
+                            <li>
+                                <p>세계최고의<br><strong>경쟁력</strong><br>우위기업</p>
+                            </li>
+                            <li>
+                                <p>작지만<br><strong>야무진</strong><br>기업</p>
+                            </li>
+                        </ul>
+                        <ul class="about_list">
+                            <li>
+                                <p>사업부 단위<br><strong>책임경영</strong>과<br>하나의 문화</p>
+                            </li>
+                            <li>
+                                <p>지역적이면서<br><strong>세계적인</strong><br>기업</p>
+                            </li>
+                            <li>
+                                <p>고객만족,<br><strong>환경친화적</strong><br>기업</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="business">
+                    <div class="tit_wrap">
+                        <h3 class="mini_tit">BUSINESS</h3>
+                        <h2 class="tit">‘완전히 새로운 무학’</h2>
+                        <p class="txt">고객과 함께하는 무학의 경영방침</p>
+                    </div>
+                    <ul class="tab_list">
+                        <li class="on"><a href="#">공통부문</a></li>
+                        <li><a href="#">영업부문</a></li>
+                        <li><a href="#">지원부문</a></li>
+                        <li><a href="#">생산부문</a></li>
+                    </ul>
+                    <div class="business_wrap">
+                        <div class="business_slider_blind active">
+                            <div class="swiper-container business_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>01</h2>
+                                            <h3>철저한 예산관리 &amp; 통제시스템 구축</h3>
+                                            <ul>
+                                                <li>· 체계적인 예산관리 및 효율적 운용</li>
+                                                <li>· 목표달성을 통한 영업이익의 실현</li>
+                                                <li>· 제반 원가 절감 및 낭비요소 제거</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>02</h2>
+                                            <h3>고객중심의 차별화된 감성경영</h3>
+                                            <ul>
+                                                <li>· 고객 맞춤식 상품개발</li>
+                                                <li>· 고객욕구의 맞춤식 영업전략</li>
+                                                <li>· 지역중심의 나눔문화 확산</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>03</h2>
+                                            <h3>투명경영과 책임경영 실천</h3>
+                                            <ul>
+                                                <li>· 기업이념에 충실한 경영실천</li>
+                                                <li>· 목표달성과 예산집행의 책임경영</li>
+                                                <li>· 공사의 명확한 자금집행과 내실경영</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="business_slider_blind">
+                            <div class="swiper-container business_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>01</h2>
+                                            <h3>실천하는 영업</h3>
+                                            <ul>
+                                                <li>· 병소주 월 2,250만본 달성을 위한
+                                                1일 단위 목표관리</li>
+                                                <li>· 성과달성 가능한 영업활동의 집중과
+                                                불필요한 업무로스 제거</li>
+                                                <li>· 효율적 예산 관리를 통한 낭비요소 제거</li>
+                                                <li> · 1인 개별사업징형 관리체계구축</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>02</h2>
+                                            <h3>고객과 현장중심 영업</h3>
+                                            <ul>
+                                                <li>· 실시간 문제해결&빠른 의사결정</li>
+                                                <li>· 고객 밀착형 Detail한 영업</li>
+                                                <li>· 신속한 업무처리를 통한<br>
+                                                시간관리 효율성 제고</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>03</h2>
+                                            <h3>영업 역량 강화</h3>
+                                            <ul>
+                                                <li>· 소통력 강화를 통한 성과 창출</li>
+                                                <li>· 명확한 목표설정과 절대평가를 통한
+                                                성과관리로 공동목표 실현</li>
+                                                <li>· 핵심역량 강화를 위한 실무중심 교육훈련</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="business_slider_blind">
+                            <div class="swiper-container business_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>01</h2>
+                                            <h3>임직원 직무능력 향상 &amp; 역량강화</h3>
+                                            <ul>
+                                                <li>· 분기별 직무교육 및 영업역량 교육 강화</li>
+                                                <li>· 무학 아카데미 개설을 통한</li>
+                                                <li>· 계층별 관리자 교육이수</li>
+                                                <li>· 업무 목표 대 실적평가 결과 동기부여</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>02</h2>
+                                            <h3>업무 표준화 &amp; 메뉴얼 시스템 구축</h3>
+                                            <ul>
+                                                <li>· 표준화 및 메뉴얼 구축을 통한<br>
+                                                업무 능력 향상</li>
+                                                <li>· 불필요한 업무제거 &amp; 창의성 향상</li>
+                                                <li>· 팀 단위 워크샵을 통한 업무 표준화 구축</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>03</h2>
+                                            <h3>지역과 함께하는 사회공헌 기업문화</h3>
+                                            <ul>
+                                                <li>· 지역문화행사 적극참여 &amp; 지원확대</li>
+                                                <li>· 찾아가는 봉사활동을 통한 나눔 문화 확산</li>
+                                                <li>· 지역제품 애용 홍보를 통한 지역경제 기여</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="business_slider_blind">
+                            <div class="swiper-container business_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>01</h2>
+                                            <h3>클린사업장 운영 및 무결점 제품생산</h3>
+                                            <ul>
+                                                <li>· HACCP 기준 준수 및 위해요소관리 철저</li>
+                                                <li>· 공정불량 기준수립</li>
+                                                <li>· 모니터링을 통한 무결점 제품 생산</li>
+                                                <li>· 메뉴얼에 따른 공정관리</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>02</h2>
+                                            <h3>안전을 최우선으로 하는 시스템 </h3>
+                                            <ul>
+                                                <li>· 사고 재해별 분류를 통한</li>
+                                                <li>· 예방강화 &amp; 재발방지 방안수립</li>
+                                                <li>· 재난 대비 비상조치 훈련 및 시스템 운용 철저</li>
+                                                <li>· 공정안전관리(PSM) 철저</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="txt">
+                                            <h2>03</h2>
+                                            <h3>시장 트렌드 선도형 주류제품 개발</h3>
+                                            <ul>
+                                                <li>· 주류 평가단 월 1회 운영</li>
+                                                <li>· 지역 특산물 &amp; 탄산주 신제품 출시</li>
+                                                <li>· 해외 트렌드 조사</li>
+                                                <li>· 반기 1회 수출용 제품 개발</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="footer_wrap">
+                <div class="ft_top">
+                    <div class="family_site">
+                        <button class="btn_family" type="button">Family Site</button>
+                        <ul class="family_list">
+                            <li><a href="#">좋은데이</a></li>
+                            <li><a href="#">315마라톤</a></li>
+                            <li><a href="#">국화면좋으리</a></li>
+                            <li><a href="#">지리산산청샘물</a></li>
+                            <li><a href="#">무학주류상사</a></li>
+                            <li><a href="#">무학스틸</a></li>
+                        </ul>
+                    </div>
+                    <div class="sns">
+                        <a href="#">Facebook</a>
+                        <a href="#">Youtube</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="ft_bottom">
+                    <ul class="info_link">
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일무단 수집거부</a></li>
+                    </ul>
+                    <div class="info_txt">
+                        <p>경상남도 창원시 마산회원구 봉암공단 2길 6
+                        <br>
+                        대표전화 1588-2226<span></span>고객상담 1588-6719
+                        <br>해외영업 1588-6713<span></span>팩스 0502-291-2226</p>
+                        <p class="copy">COPYRIGHT(c) 2016 Muhak Co.LTD. ALL RIGHT RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js?v=<?php echo time(); ?>"></script>
+</body>
+</html>

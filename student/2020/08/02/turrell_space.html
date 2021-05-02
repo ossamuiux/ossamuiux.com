@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--user-scalable=no는 아이폰과 안드로이드 상위버전에서 작동하지않음-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Museum SAN 홈페이지 방문을 환영합니다.</title>
+<meta name="description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<meta property="og:type" content="site">
+<meta property="og:title" content="뮤지엄산">
+<meta property="og:url" content="http://kjh3420.dothome.co.kr/mMuseumsan">
+<meta property="og:image" content="http://kjh3420.dothome.co.kr/mMuseumsan/opengraph.png">
+<meta property="og:description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<!--모바일브라우저 홈화면등록용 터치아이콘-->
+<link rel="apple-touch-icon-precomposed" href="mobile_android.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header" class="sub_header">
+        <h1 class="logo"><a href="index.html"><img src="images/m_logo.png" alt="로고"></a></h1>
+        <button class="btn_gnb" type="button">메뉴열기</button>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <label for="inputText1" class="blind">검색창</label>
+                <input class="input_search" type="text" id="inputText1">
+                <button class="btn_search" type="button">검색버튼</button>
+            </div>
+            <div class="bottom_gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">뮤지엄 소개</a>
+                        <ul class="depth2">
+                            <li><a href="location_museum.html"><span>관장님 인사말</span></a></li>
+                            <li><a href="location_museum.html"><span>뮤지엄 스토리</span></a></li>
+                            <li><a href="location_museum.html"><span>뮤지엄 건축</span></a></li>
+                            <li><a href="location_museum.html"><span>MI 소개</span></a></li>
+                            <li><a href="location_museum.html"><span>찾아오시는 길</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="location_museum.html">전시</a>
+                        <ul class="depth2">
+                            <li><a href="location_museum.html"><span>현재 전시</span></a></li>
+                            <li><a href="location_museum.html"><span>과거 전시</span></a></li>
+                            <li><a href="location_museum.html"><span>예정 전시</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="turrell_space.html">공간</a>
+                        <ul class="depth2">
+                            <li><a href="turrell_space.html"><span>제임스 터렐관</span></a></li>
+                            <li><a href="turrell_space.html"><span>명상관</span></a></li>
+                            <li><a href="turrell_space.html"><span>판화공방</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="turrell_space.html">교육·행사</a>
+                        <ul class="depth2">
+                            <li><a href="turrell_space.html"><span>교육 프로그램</span></a></li>
+                            <li><a href="turrell_space.html"><span>문화 행사</span></a></li>
+                            <li><a href="turrell_space.html"><span>월간 일정</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news_info.html">안내</a>
+                        <ul class="depth2">
+                            <li><a href="news_info.html"><span>관람 안내</span></a></li>
+                            <li><a href="news_info.html"><span>뮤지엄 소식</span></a></li>
+                            <li><a href="news_info.html"><span>멤버쉽 안내</span></a></li>
+                            <li><a href="news_info.html"><span>부대 시설</span></a></li>
+                            <li><a href="news_info.html"><span>대관 안내</span></a></li>
+                            <li><a href="news_info.html"><span>홍보</span></a></li>
+                            <li><a href="news_info.html"><span>FAQ</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news_info.html">예약</a>
+                        <ul class="depth2">
+                            <li><a href="news_info.html"><span>단체 예약</span></a></li>
+                            <li><a href="news_info.html"><span>Colorful Night 예약</span></a></li>
+                            <li><a href="news_info.html"><span>명상관 예약</span></a></li>
+                            <li><a href="news_info.html"><span>판화 공방 예약</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="util">
+                <a href="login.html">로그인</a>
+                <a href="login.html">회원가입</a>
+            </div>
+            <div class="lang">
+                <a href="#"><span>KOR</span></a>
+                <a href="#"><span>ENG</span></a>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="sub_main turrell_space">
+    <div class="sub_visual space_visual">
+        <h2 class="tit">James Turrell</h2>
+    </div>
+    <div class="breadcrumb breadcrumb_news"> <!--breadcrumb_wrap-->
+            <div class="breadcrumb_item">
+                <a href="#">작품 소개</a>
+                <ul class="breadcrumb_list">
+                    <li><a href="turrell_space.html"><span>작가 소개</span></a></li>
+                    <li><a href="turrell_space.html"><span>작품 소개</span></a></li>
+                    <li><a href="turrell_space.html"><span>Colorful Night</span></a></li>
+                </ul>
+            </div>
+        </div>
+    <div class="content">
+        <div class="content_inner">
+            <h3 class="content_tit">작품 소개</h3>
+            <div class="turrell_wrap">
+                <div class="item item1">
+                    <div class="img_box"><img src="images/turrell_1.jpg" alt="스카이 스페이스"></div>
+                    <div class="txt_wrap">
+                        <div class="tit_wrap">
+                            <h4 class="tit"><span>스카이 스페이스</span></h4>
+                            <span class="tit_eng">Sky Space</span>
+                        </div>
+                        <p class="txt">하늘을 향해 열려있는 스카이스페이스는 마치 로마 판테온 신전에 있는 것 같은 기분을 선사합니다.<br><br>차분한 마음으로 하늘빛을 바라보다 보면, 시선은 어느 순간 우리의 내면을 향하게 됩니다.<br><br>열린 하늘공간 속에서 나 자신과 마주하는 가슴 벅찬 시간을 가져보시기 바랍니다.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="img_box"><img src="images/turrell_2.jpg" alt="스페이스 디비전"></div>
+                    <div class="txt_wrap">
+                        <div class="tit_wrap">
+                            <h4 class="tit"><span>스페이스 디비전</span></h4>
+                            <span class="tit_eng">Space-division</span>
+                        </div>
+                        <p class="txt">디비젼 프로그램은 미국 구겐하임미술관에서 47만명이 관람했던 ‘Aten Reign(2013)’ 작품과 유사한 컨셉으로, 일정 시간대와 우천시에만 운영되는 작품입니다.<br><br>빛으로 그려진 스카이스페이스와 호라이즌룸에서 또 다른 명상과 사색을 즐겨보세요.<br>*스카이스페이스에서 진행되는 작품입니다.</p>
+                    </div>
+                </div>
+     
+                <div class="item">
+                    <div class="img_box"><img src="images/turrell_3.jpg" alt="호라이즌 룸"></div>
+                    <div class="txt_wrap">
+                        <div class="tit_wrap">
+                            <h4 class="tit"><span>호라이즌 룸</span></h4>
+                            <span class="tit_eng">Horizon Room</span>
+                        </div>
+                        <p class="txt">간절한 순간에야 비로소 올려다보게 되는 하늘.<br><br>빛의 제단을 형상화한 호라이즌룸은 보이지 않는 계단 너머의 이상세계를 꿈꾸게 합니다.<br><br>숭고한 마음으로 하늘이 보여주는 세상을 직접 만나보시기 바랍니다.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img_box"><img src="images/turrell_4.jpg" alt="웨지워크"></div>
+                    <div class="txt_wrap">
+                        <div class="tit_wrap">
+                            <h4 class="tit"><span>웨지워크</span></h4>
+                            <span class="tit_eng">Wedgework</span>
+                        </div>
+                        <p class="txt">어두운 통로를 지나 드디어 마주하게 되는 장면에는 오랜 시간 빛을 연구해온 작가의 고민과 열정이 담겨있습니다.<br><br>빛이 만들어낸 모호한 경계는 미지의 세계에 대한 호기심을 자극합니다.<br><br>쐐기모양(wedge)으로 보여지는 빛의 환영은 존재 그 자체에 대한 의구심을 품게 합니다.</p>
+                    </div>
+                </div>
+                <div class="item item5">
+                    <div class="img_box"><img src="images/turrell_5.jpg" alt="간츠펠트"></div>
+                    <div class="txt_wrap">
+                        <div class="tit_wrap">
+                            <h4 class="tit"><span>간츠펠트</span></h4>
+                            <span class="tit_eng">Gantzfeld</span>
+                        </div>
+                        <p class="txt">간츠펠트는 독일어로 ‘완전한 영역’이라는 사전적인 의미이자 심리학에서 사용되는 용어입니다.<br><br>시시각각 다양한 색으로 변하는 스크린과 그 스크린이 감추고 있는 비밀을 알게 됐을 때 우리는 진실의 의미에 대하여 한번 더 생각해보게 됩니다.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+    <footer id="footer">
+            <div class="footer_left">
+                <div class="footer_top">
+                        <ul class="list_top">
+                            <li><a href="index.html">이용약관</a></li>
+                            <li><a href="index.html">Contact Us</a></li>
+                            <li><a class="btn_pc" href="http://kjh3420.dothome.co.kr/museumsan/">PC버전</a></li>
+                        </ul>
+                        <ul class="list_bottom">
+                            <li><a href="index.html"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="index.html">이메일무단수집거부</a></li>
+                        </ul>
+                </div>
+                <div class="footer_bottom">
+                    <address>26357 강원도 원주시 지정면 오크밸리 2길 260</address>
+                    <p class="copyright">COPYRIGHT ⓒ Museum SAN ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="index.html"><img src="images/m_logo_footer.png" alt="로고"></a>
+            </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

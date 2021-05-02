@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--user-scalable=no는 아이폰과 안드로이드 상위 버전에서 작동하지 않음-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Ashley</title>
+<meta name="description" content="타임스탬프 사용하기">
+<meta property="og:type" content="site">
+<meta property="og:title" content="My Ashley">
+<meta property="og:url" content="http://seong.dothome.co.kr/ashley/opengraph.png">
+<meta property="og:image" content="http://seong.dothome.co.kr/ashley/opengraph.png">
+<meta property="og:description" content="Ashley - Grill & Salad">
+<link rel="apple-touch-icon-precomposed" href="mobile_android_7272.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;display=swap&amp;subset=korean" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Solway:400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+    <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+<!--    <a href="#gnbMenu">주메뉴 바로가기</a>-->
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <div id="mainPopup">
+        <div class="popup_wrap">
+            <a href="notice.html"><img src="images/notice_caution.jpg" alt="이용안내 공지"></a>
+            <div class="btn_wrap">
+                <button class="btn_day_close" type="button">오늘은 그만 보기</button>
+                <button class="btn_popup_close" type="button">닫기</button>
+            </div>
+        </div>
+    </div>
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="images/logo_ashley.png" alt="애슐리"></a></h1>
+        <button class="btn_menu" type="button">메뉴</button>
+        <div class="dim"></div>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <span>ASHLEY, Grill &amp; Salad</span>
+                <div class="util_wrap">
+                    <ul class="util">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="login.html">회원가입</a></li>
+                    </ul>
+                    <button class="btn_gnb_close" type="button">주메뉴 닫기</button>
+                </div>
+            </div>
+            <div class="bottom_gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">Type</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="type.html">Ashley Classic</a>
+                            </li>
+                            <li>
+                                <a href="type.html">Ashley W</a>
+                            </li>
+                            <li>
+                                <a href="type.html">Ashley Queens</a>
+                            </li>
+                            <li>
+                                <a href="type.html">83GRILL</a>
+                            </li>
+                            <li>
+                                <a href="type.html">Online Food Market</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="menu.html">Salad Bar</a>
+                            </li>
+                            <li>
+                                <a href="menu.html">Main Menu</a>
+                            </li>
+                            <li>
+                                <a href="menu.html">Take Out</a>
+                            </li>
+                            <li>
+                                <a href="menu.html">Drink</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Membership</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="membership.html">E:land Membership</a>
+                            </li>
+                            <li>
+                                <a href="membership.html">Ashley For Kids</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Notice</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="notice.html">Notice</a>
+                            </li>
+                            <li>
+                                <a href="event.html">Event</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="store_link" href="store.html">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="main_banner">
+            <h2 class="blind">메인 비주얼</h2>
+            <div class="swiper-container main_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/mainvisual02_winter.png" alt="애슐리 겨울"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/mainvisual01_steak.png" alt="스테이크 이벤트"></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>            
+        </section>
+        <section class="section1">
+            <h2><a href="notice.html">Notice</a></h2>
+            <div class="swiper-container notice_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="notice.html">[이벤트] 인스타그램 팔로우하고 할인권 받아가세요! (애슐리W·퀸즈)</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="notice.html">[이용안내] 100%밀양 딸기, 안심하고 하루종일 무제한으로 즐겨보세요!</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="notice.html">[애슐리 오픈] 2020년 2월 13일(목) 애슐리퀸즈 롯데마트 계양점 OPEN!</a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev btn_arrow"></div>
+                <div class="swiper-button-next btn_arrow"></div>
+            </div>            
+        </section>
+        <section class="section2">
+            <h2 class="tit">Now Ashley</h2>
+            <div class="swiper-container event_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="event.html"><img src="images/event1.jpg" alt="애슐리 쉐프 박스"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="event.html"><img src="images/event2.jpg" alt="애슐리가 쏜다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="event.html"><img src="images/event3.jpg" alt="통합 멤버십"></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>            
+            <div class="event_more">
+                <a href="event.html">이벤트 전체보기</a>
+            </div>
+        </section>
+        <section class="section3">
+            <h2 class="tit">Type</h2>
+            <ul class="type">
+                <li><a href="type.html"><img src="images/type_classic.png" alt="애슐리 클래식"></a></li>
+                <li><a href="type.html"><img src="images/type_w.png" alt="애슐리 w"></a></li>
+                <li><a href="type.html"><img src="images/type_queens.png" alt="애슐리 퀸즈"></a></li>
+            </ul>
+            <h2 class="tit">Menu</h2>
+            <ul class="menu">
+                <li><a href="menu.html"><img src="images/menu_mainmenu.png" alt="메인 메뉴"></a></li>
+                <li><a href="menu.html"><img src="images/menu_drink.png" alt="음료"></a></li>
+                <li><a href="menu.html"><img src="images/menu_takeout.png" alt="포장"></a></li>
+            </ul>
+        </section>
+        <section class="section4">
+            <h2 class="tit">Membership</h2>
+            <ul class="list_mship">
+                <li>
+                    <a href="membership.html">
+                        <img src="images/mship_join.png" alt="멤버십 가입">
+                        <h3>JOIN</h3>
+                        <p>E:LAND E:AT<br>15종 레스토랑<br>통합 멤버십 가입</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="membership.html">
+                        <img src="images/mship_benefit.png" alt="멤버십 혜택">
+                        <h3>BENEFIT</h3>
+                        <p>E:LAND E:AT의<br>다양한 멤버십<br>할인과 혜택</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="membership.html">
+                        <img src="images/mship_kids.png" alt="키즈 멤버십">
+                        <h3>FOR KIDS</h3>
+                        <p>애슐리 키즈 패밀리<br>클럽 무료가입<br>어린이 멤버십</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="section5">
+            <h2 class="blind">Service</h2>
+            <ul class="list_service">
+                <li><a href="tel:1577-1259">고객센터</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">가맹정보</a></li>
+                <li><a href="store.html">매장찾기</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="top_footer">
+            <div class="list_wrap">
+                <ul class="list_top_footer">
+                    <li><a class="bold" href="#">개인정보처리방침</a></li>
+                    <li><a href="#">영상정보처리기기운영·관리방침</a></li>
+                    <li><a href="#">서비스 이용약관</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom_footer">
+            <div class="sns">
+                <a href="#">블로그</a>
+                <a href="#">인스타그램</a>
+                <a href="#">페이스북</a>
+            </div>
+            <div class="family_site">
+                <button class="btn_family" type="button">Family Site</button>
+                <div class="list_wrap">
+                    <ul class="list_family">
+                        <li><a href="#" target="_blank">리미니</a></li>
+                        <li><a href="#" target="_blank">피자몰</a></li>
+                        <li><a href="#" target="_blank">더카페</a></li>
+                        <li><a href="#" target="_blank">아시아몰</a></li>
+                    </ul>            
+                </div>
+            </div>
+            <div class="txt_wrap">
+                <address>(주) 이랜드이츠<span></span>서울특별시 금천구 가산디지털로1로 149<br>대표이사 : 김완식<span></span>개인정보보호 책임자 : 김완식<br>E POINT 멤버쉽 관련 문의 : <a href="tel:1833-6439">1833-6439</a><br>매장 이용관련 문의 및 불편사항 : <a href="tel:1577-1259">1577-1259</a><br> 이메일 : elandfood@eland.co.kr</address>
+                <p class="copyright">Copyright © 2013 ASHLEY., All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    function popupClose () {
+        function getCookie(name) {
+            //match 문자열함수안의 정규표현식에 의해 배열의 3번째 방에 쿠키명에 대한 value값이 들어감
+            //mainPopup이란 쿠키명이 있으면 done값이 반환되고, 없으면 null이 반환됨
+            var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return value ? value[2] : null;
+        };
+        
+        function setCookie(name, value, day) {
+            var date = new Date();
+
+            // day를 밀리세컨으로 변환하여 더한값으로 시간을 수정, day가 1이면 하루 더한 날짜로 세팅
+            // getTime(), 1970.01.01부터 현재까지의 밀리세컨드
+            date.setTime(date.getTime() + day * 24 * 60 * 60 * 1000);
+            document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+        };
+
+        //닫기버튼 클릭시 팝업을 안보이게
+        var mainPopup = document.querySelector('#mainPopup');
+        var btnToday = document.querySelector('#mainPopup .btn_day_close');
+        var btnClose = document.querySelector('#mainPopup .btn_popup_close');
+
+        //mainPopup 쿠키명이 있으면 mainPopup을 안보이게 함
+        if(getCookie('mainPopup')) {
+            mainPopup.style.display = 'none';
+        };
+
+        btnClose.onclick = function() {
+            //document객체 안의 style객체를 통해 css속성에 접근 가능
+            mainPopup.style.display = 'none';
+            document.body.classList.remove('on');
+
+        };
+
+        //오늘 하루 열지 않음 클릭시 쿠키 생성
+        //쿠키확인은 서버에 올려서 확인해야함
+        btnToday.onclick = function() {
+            //1일 뒤 만료로 쿠키생성
+            //1분뒤 만료(1/24/60)
+            setCookie('mainPopup', 'done', 1);
+            mainPopup.style.display = 'none';
+            document.body.classList.remove('on');
+        };
+    };
+    popupClose();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'netmarble';
+    src: url('netmarbleM.eot');
+    src: url('netmarbleM.eot?#iefix') format('embedded-opentype'),
+        url('netmarbleM.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'netmarble';
+    src: url('netmarbleB.eot');
+    src: url('netmarbleB.eot?#iefix') format('embedded-opentype'),
+        url('netmarbleB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'netmarble';
+    src: url('netmarbleL.eot');
+    src: url('netmarbleL.eot?#iefix') format('embedded-opentype'),
+        url('netmarbleL.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

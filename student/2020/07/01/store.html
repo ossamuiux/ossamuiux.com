@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200">
+<title>Ashley</title>
+<meta name="description" content="타임스탬프 사용하기">
+<meta property="og:type" content="site">
+<meta property="og:title" content="My Ashley">
+<meta property="og:url" content="http://seong.dothome.co.kr/ashley/opengraph.png">
+<meta property="og:image" content="http://seong.dothome.co.kr/ashley/opengraph.png">
+<meta property="og:description" content="Ashley - Grill & Salad">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;display=swap&amp;subset=korean" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Solway:400,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+<!--    <a href="#gnbMenu">주메뉴 바로가기</a>-->
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <div id="headerWrap">
+        <header id="header">
+            <div class="header_inner">
+                <div class="top_header">
+                    <h1 class="logo"><a href="index.html"><img src="images/logo_ashley.png" alt="ashley 로고"></a></h1>
+                    <ul class="util">
+                        <li><a href="login.html" title="새 창 열기" target="_blank">로그인</a></li>
+                        <li><a href="login.html" title="새 창 열기" target="_blank">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="bottom_header">
+                    <nav class="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a href="type.html">Type</a>
+                                <ul class="depth2">
+                                    <li><a href="type.html">Classic</a></li>
+                                    <li><a href="type.html">W</a></li>
+                                    <li><a href="type.html">Queens</a></li>
+                                    <li><a href="type.html">83GRILL</a></li>
+                                    <li><a href="type.html">Online Food Market</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="menu.html">Menu</a>
+                                <ul class="depth2">
+                                    <li><a href="menu.html">Salad Bar</a></li>
+                                    <li><a href="menu.html">Main Menu</a></li>
+                                    <li><a href="menu.html">Take Out</a></li>
+                                    <li><a href="menu.html">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="membership.html">Membership</a>
+                                <ul class="depth2">
+                                    <li><a href="membership.html">E:land Membership</a></li>
+                                    <li><a href="membership.html">Ashley For Kids</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="notice.html">Notice</a>
+                                <ul class="depth2">
+                                    <li><a href="notice.html">Notice</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="store.html">Store</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main id="main" class="sub_main store_page">
+        <div class="content">
+            <div class="map_wrap">
+                <div id="map" class="map_store"></div>
+                <div class="search_box">
+                    <h3>매장찾기</h3>
+                    <button class="btn_toggle" type="button">확대축소 버튼</button>
+                    <div class="search_wrap">
+                        <ul class="search_tab">
+                            <li class="active"><a href="#search1">지역 검색</a></li>
+                            <li><a href="#search2">매장명 검색</a></li>
+                        </ul>
+                        <div class="tab_wrap">
+                            <div id="search1" class="form_wrap">
+                                <form>
+                                    <fieldset>
+                                        <legend>지역 검색</legend>
+                                        <p>찾으시는 타입을 선택해주세요.</p>
+                                        <div class="chk_type">
+                                            <input type="checkbox" id="classicTypeLocal" checked class="blind">
+                                            <label for="classicTypeLocal">Classic</label>
+                                            <input type="checkbox" id="wTypeLocal" class="blind">
+                                            <label for="wTypeLocal">W</label>
+                                            <input type="checkbox" id="queensTypeLocal" class="blind">
+                                            <label for="queensTypeLocal">Queens</label>
+                                        </div>
+                                        <div class="search_area">
+                                            <input type="text" placeholder="찾으시는 지역을 검색해주세요.">
+                                            <button class="btn_search" type="button">검색</button>
+                                        </div>
+                                        <div class="search_inner">
+                                            <p>검색 결과 <strong>2</strong>개</p>
+                                            <ul class="list_store">
+                                                <li>
+                                                    <a href="store.html">
+                                                        <span class="name">애슐리 퀸즈 신촌점</span>
+                                                        <span class="address">서울특별시 서대문구 창천동 72-14</span>
+                                                        <span class="tel">02-326-5433</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="store.html">
+                                                        <span class="name">애슐리 W 홍대입구점</span>
+                                                        <span class="address">서울특별시 마포구 서교동 353-2</span>
+                                                        <span class="tel">02-332-9020</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div id="search2" class="form_wrap">
+                                <form>
+                                    <fieldset>
+                                        <legend>매장명 검색</legend>
+                                        <p>찾으시는 타입을 선택해주세요.</p>
+                                        <div class="chk_type">
+                                            <input type="checkbox" id="classicTypeName" checked class="blind">
+                                            <label for="classicTypeName">Classic</label>
+                                            <input type="checkbox" id="wTypeName" class="blind">
+                                            <label for="wTypeName">W</label>
+                                            <input type="checkbox" id="queensTypeName" class="blind">
+                                            <label for="queensTypeName">Queens</label>
+                                        </div>
+                                        <div class="search_area">
+                                            <input type="text" placeholder="찾으시는 매장명을 검색해주세요.">
+                                            <button class="btn_search" type="button">검색</button>
+                                        </div>
+                                        <div class="search_inner">
+                                            <p>검색 결과 <strong>3</strong>개</p>
+                                            <ul class="list_store">
+                                                <li>
+                                                    <a href="store.html">
+                                                        <span class="name">애슐리 퀸즈 신촌점</span>
+                                                        <span class="address">서울특별시 서대문구 창천동 72-14</span>
+                                                        <span class="tel">02-326-5433</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="store.html">
+                                                        <span class="name">애슐리 W 홍대입구점</span>
+                                                        <span class="address">서울특별시 마포구 서교동 353-2</span>
+                                                        <span class="tel">02-332-9020</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="store.html">
+                                                        <span class="name">애슐리 W 여의도점</span>
+                                                        <span class="address">서울특별시 영등포구 여의도동 여의나루로 81</span>
+                                                        <span class="tel">02-786-1259</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="new_store">
+                <div class="new_store_inner">
+                    <h2>신규 매장 안내</h2>
+                    <ul class="list_new clearfix">
+                        <li>
+                            <a href="store.html">
+                                <img src="images/store_new.png" alt="신규 점포">
+                                <div class="info_wrap">
+                                    <span>수원시</span>
+                                    <h3>애슐리 퀸즈 수원망포점</h3>
+                                    <em>Tel. 031-273-1032</em>
+                                    <div class="btn_info">매장정보</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="store.html">
+                                <img src="images/store_new.png" alt="신규 점포">
+                                <div class="info_wrap">
+                                    <span>수원시</span>
+                                    <h3>애슐리 퀸즈 수원망포점</h3>
+                                    <em>Tel. 031-273-1032</em>
+                                    <div class="btn_info">매장정보</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="store.html">
+                                <img src="images/store_new.png" alt="신규 점포">
+                                <div class="info_wrap">
+                                    <span>수원시</span>
+                                    <h3>애슐리 퀸즈 수원망포점</h3>
+                                    <em>Tel. 031-273-1032</em>
+                                    <div class="btn_info">매장정보</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="top_footer">
+            <div class="footer_inner clearfix">
+                <ul class="footer_menu">
+                    <li>
+                        <a class="bold" href="index.html">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="index.html">영상정보처리기기운영·관리방침</a>
+                    </li>
+                    <li>
+                        <a href="index.html">서비스 이용약관</a>
+                    </li>
+                </ul>
+                <div class="family_site">
+                    <button class="btn_family" type="button">Family Site</button>
+                    <ul class="list_family">
+                        <li><a href="index.html" title="새 창 열기" target="_blank">리미니</a></li>
+                        <li><a href="index.html" title="새 창 열기" target="_blank">피자몰</a></li>
+                        <li><a href="index.html" title="새 창 열기" target="_blank">더카페</a></li>
+                        <li><a href="index.html" title="새 창 열기" target="_blank">아시아몰</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_footer">
+            <div class="footer_inner clearfix">
+                <h2 class="footer_logo"><img src="images/footer_logo.png" alt="푸터 로고"></h2>
+                <div class="txt_footer">
+                    <address>(주) 이랜드이츠<span></span>서울특별시 금천구 가산디지털로1로 149<br>대표이사 : 김완식<span></span>개인정보보호 책임자 : 김완식<span></span>E POINT 멤버쉽 관련 문의 : 1833-6439<br>매장 이용관련 문의 및 불편사항 : 1577-1259<span></span>이메일 : elandfood@eland.co.kr</address>
+                    <p class="copyright">Copyright © 2013 ASHLEY., All Rights Reserved.</p>
+                </div>
+                <div class="sns">
+                    <a href="index.html" target="_blank" title="새 창 열기"><img src="images/sns_blog.png" alt="네이버 블로그"></a>
+                    <a href="index.html" target="_blank" title="새 창 열기"><img src="images/sns_instagram.png" alt="인스타그램"></a>
+                    <a href="index.html" target="_blank" title="새 창 열기"><img src="images/sns_facebook.png" alt="페이스북"></a>
+                </div>
+                <div class="quick_menu">
+                    <div>
+                        <a href="index.html"><span></span>고객문의</a>
+                    </div>
+                    <div>
+                        <a href="store.html"><span class="store"></span>매장찾기</a>
+                    </div>
+                    <div>
+                        <a class="btn_top" href="#wrap">위로 가기 버튼</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9f875b818a1a017003c64400eee5085"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.555294, 126.927593), // 지도의 중심좌표
+        level: 4 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+    var positions = [
+        {
+            content: ' <div class="store_layer"><h3>애슐리 퀸즈 신촌점</h3><div class="layer_inner"><div class="info"><dl><dt>타입</dt><dd>Queens</dd><dt>주소</dt><dd>서울특별시 서대문구 창천동 72-14</dd><dt>연락처</dt><dd>02-326-5433</dd><dt>영업시간</dt><dd>오전 10:30~오후 11:00</dd></dl></div><button class="btn_store btn_view" type="button">자세히 보기</button><button class="btn_store" type="button">예약하기</button><button class="btn_close" id="btnClose1" type="button">정보 닫기</button></div></div>', 
+            latlng: new kakao.maps.LatLng(37.556277, 126.934545)
+        },
+        {
+            content: ' <div class="store_layer"><h3>애슐리 W 홍대입구점</h3><div class="layer_inner"><div class="info"><dl><dt>타입</dt><dd>W</dd><dt>주소</dt><dd>서울특별시 마포구 서교동 353-2</dd><dt>연락처</dt><dd>02-332-9020</dd><dt>영업시간</dt><dd>오전 11:00~오후 11:00</dd></dl></div><button class="btn_store btn_view" type="button">자세히 보기</button><button class="btn_store" type="button">예약하기</button><button class="btn_close" id="btnClose2" type="button">정보 닫기</button></div></div>', 
+            latlng: new kakao.maps.LatLng(37.555004, 126.920661)
+        },
+    ];
+    
+
+    for (var i = 0; i < positions.length; i ++) {
+        // 마커 생성
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+        });
+        
+        // 인포윈도우 생성
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content,
+        });
+        
+        // 마커 클릭시 인포윈도우가 켜지는 클로저
+        kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+        
+        $(document).on('click', '#btnClose'+(i + 1), makeOutListener(infowindow));
+    }
+        
+    // 인포윈도우 온오프를 위한 클로저 생성함수
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }    
+    
+</script>    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

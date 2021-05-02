@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--user-scalable=no는 아이폰과 안드로이드 상위버전에서 작동하지않음-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Museum SAN 홈페이지 방문을 환영합니다.</title>
+<meta name="description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<meta property="og:type" content="site">
+<meta property="og:title" content="뮤지엄산">
+<meta property="og:url" content="http://kjh3420.dothome.co.kr/mMuseumsan">
+<meta property="og:image" content="http://kjh3420.dothome.co.kr/mMuseumsan/opengraph.png">
+<meta property="og:description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<!--모바일브라우저 홈화면등록용 터치아이콘-->
+<link rel="apple-touch-icon-precomposed" href="mobile_android.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header" class="sub_header">
+        <h1 class="logo"><a href="index.html"><img src="images/m_logo.png" alt="로고"></a></h1>
+        <button class="btn_gnb" type="button">메뉴열기</button>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <label for="inputText1" class="blind">검색창</label>
+                <input class="input_search" type="text" id="inputText1">
+                <button class="btn_search" type="button">검색버튼</button>
+            </div>
+            <div class="bottom_gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">뮤지엄 소개</a>
+                        <ul class="depth2">
+                            <li><a href="location_museum.html"><span>관장님 인사말</span></a></li>
+                            <li><a href="location_museum.html"><span>뮤지엄 스토리</span></a></li>
+                            <li><a href="location_museum.html"><span>뮤지엄 건축</span></a></li>
+                            <li><a href="location_museum.html"><span>MI 소개</span></a></li>
+                            <li><a href="location_museum.html"><span>찾아오시는 길</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="location_museum.html">전시</a>
+                        <ul class="depth2">
+                            <li><a href="location_museum.html"><span>현재 전시</span></a></li>
+                            <li><a href="location_museum.html"><span>과거 전시</span></a></li>
+                            <li><a href="location_museum.html"><span>예정 전시</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="turrell_space.html">공간</a>
+                        <ul class="depth2">
+                            <li><a href="turrell_space.html"><span>제임스 터렐관</span></a></li>
+                            <li><a href="turrell_space.html"><span>명상관</span></a></li>
+                            <li><a href="turrell_space.html"><span>판화공방</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="turrell_space.html">교육·행사</a>
+                        <ul class="depth2">
+                            <li><a href="turrell_space.html"><span>교육 프로그램</span></a></li>
+                            <li><a href="turrell_space.html"><span>문화 행사</span></a></li>
+                            <li><a href="turrell_space.html"><span>월간 일정</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news_info.html">안내</a>
+                        <ul class="depth2">
+                            <li><a href="news_info.html"><span>관람 안내</span></a></li>
+                            <li><a href="news_info.html"><span>뮤지엄 소식</span></a></li>
+                            <li><a href="news_info.html"><span>멤버쉽 안내</span></a></li>
+                            <li><a href="news_info.html"><span>부대 시설</span></a></li>
+                            <li><a href="news_info.html"><span>대관 안내</span></a></li>
+                            <li><a href="news_info.html"><span>홍보</span></a></li>
+                            <li><a href="news_info.html"><span>FAQ</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news_info.html">예약</a>
+                        <ul class="depth2">
+                            <li><a href="news_info.html"><span>단체 예약</span></a></li>
+                            <li><a href="news_info.html"><span>Colorful Night 예약</span></a></li>
+                            <li><a href="news_info.html"><span>명상관 예약</span></a></li>
+                            <li><a href="news_info.html"><span>판화 공방 예약</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="util">
+                <a href="login.html">로그인</a>
+                <a href="login.html">회원가입</a>
+            </div>
+            <div class="lang">
+                <a href="#"><span>KOR</span></a>
+                <a href="#"><span>ENG</span></a>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="sub_main news_page">
+        <div class="sub_visual info_visual">
+            <h2 class="tit">Information</h2>
+        </div>
+        <div class="breadcrumb breadcrumb_news"> <!--breadcrumb_wrap-->
+            <div class="breadcrumb_item">
+                <a href="#">뮤지엄 소식</a>
+                <ul class="breadcrumb_list">
+                    <li><a href="news_info.html"><span>관람 안내</span></a></li>
+                    <li><a href="news_info.html"><span>뮤지엄 소식</span></a></li>
+                    <li><a href="news_info.html"><span>멤버쉽 안내</span></a></li>
+                    <li><a href="news_info.html"><span>부대 시설</span></a></li>
+                    <li><a href="news_info.html"><span>대관 안내</span></a></li>
+                    <li><a href="news_info.html"><span>홍보</span></a></li>
+                    <li><a href="news_info.html"><span>FAQ</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_inner">
+                <h3 class="content_tit">뮤지엄 소식</h3>
+                <div class="search_wrap">
+                    <div class="select_wrap">
+                        <label for="selectOpt"></label>
+                        <select id="selectOpt">
+                            <option>전체</option>
+                            <option>뮤지엄 소개</option>
+                            <option>전시</option>
+                            <option>공간</option>
+                            <option>이벤트</option>
+                            <option>채용공고</option>
+                        </select>
+                    </div>
+                    <label for="searchBox"></label>
+                    <input id="searchBox" class="search_box" type="text" placeholder="검색어를 입력하세요">
+                    <button class="btn_search" type="button">검색</button>
+                </div>
+                <div class="tbl_wrap page1">
+                    <table class="tg">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead></thead>
+                        <tbody>
+                        <tr>
+                            <td class="left_td notice">공지</td>
+                            <td class="center_td notice"><a href="#"><span>[공지] 전시 종료/교체 및 신규 전시 안내</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td notice">공지</td>
+                            <td class="center_td notice"><a href="#"><span>[공사안내] 2/17-2/26 제임스터렐관 입장 및 관람 불가</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td notice">공지</td>
+                            <td class="center_td notice"><a href="#"><span>[공지] 워터가든 담수 완료 안내</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td notice">공지</td>
+                            <td class="center_td notice"><a href="#"><span>[명상관] 동절기_ 운영관련 변경 안내(1/14~ )</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td notice">공지</td>
+                            <td class="center_td notice">[<a href="#"><span>NEW 멤버십] Edition. 2 연간회원 혜택 안내</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td notice">공지</td>
+                            <td class="center_td notice"><a href="#"><span>[뮤지엄] 원주시 시티투어버스 운영안내</span></a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td">192</td>
+                            <td class="center_td"><a href="#">[명상관]명상특집2: 강의+명상_1/31(금)_</a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td">191</td>
+                            <td class="center_td"><a href="#">[전시] 전시 연계 프로그램③ - 인화체험(종료)</a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td">190</td>
+                            <td class="center_td"><a href="#">[명상관] 명상특집(강의+명상)_12/29(일)_*예약마감</a></td>
+                        </tr>
+                        <tr>
+                            <td class="left_td">189</td>
+                            <td class="center_td"><a href="#">[명상관] 11월 스페셜 PROGRAM </a></td>
+                        </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+                <div class="tbl_pagination">
+                    <div class="pagination_wrap">
+                        <button type="button" class="btn_page">이전페이지</button>
+                        <a class="active" href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <button type="button" class="btn_page btn_page_next">다음페이지</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+            <div class="footer_left">
+                <div class="footer_top">
+                        <ul class="list_top">
+                            <li><a href="index.html">이용약관</a></li>
+                            <li><a href="index.html">Contact Us</a></li>
+                            <li><a class="btn_pc" href="http://kjh3420.dothome.co.kr/museumsan/">PC버전</a></li>
+                        </ul>
+                        <ul class="list_bottom">
+                            <li><a href="index.html"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="index.html">이메일무단수집거부</a></li>
+                        </ul>
+                </div>
+                <div class="footer_bottom">
+                    <address>26357 강원도 원주시 지정면 오크밸리 2길 260</address>
+                    <p class="copyright">COPYRIGHT ⓒ Museum SAN ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="index.html"><img src="images/m_logo_footer.png" alt="로고"></a>
+            </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

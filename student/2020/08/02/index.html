@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!--user-scalable=no는 아이폰과 안드로이드 상위버전에서 작동하지않음-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Museum SAN 홈페이지 방문을 환영합니다.</title>
+<meta name="description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<meta property="og:type" content="site">
+<meta property="og:title" content="뮤지엄산">
+<meta property="og:url" content="http://kjh3420.dothome.co.kr/mMuseumsan">
+<meta property="og:image" content="http://kjh3420.dothome.co.kr/mMuseumsan/opengraph.png">
+<meta property="og:description" content="세계적인 건축가 안도 타다오가 설계한 전원형 뮤지엄">
+<!--모바일브라우저 홈화면등록용 터치아이콘-->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png?v=1">
+<link rel="apple-touch-icon-precomposed" href="mobile_android.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header" class="sub_header">
+        <h1 class="logo"><a href="index.html"><img src="images/m_logo.png" alt="로고"></a></h1>
+        <button class="btn_gnb" type="button">메뉴열기</button>
+        <div class="gnb_wrap">
+            <div class="top_gnb">
+                <label for="inputText1" class="blind">검색창</label>
+                <input class="input_search" type="text" id="inputText1">
+                <button class="btn_search" type="button">검색버튼</button>
+            </div>
+            <div class="bottom_gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">뮤지엄 소개</a>
+                        <ul class="depth2">
+                            <li><a href="location_museum.html"><span>관장님 인사말</span></a></li>
+                            <li><a href="location_museum.html"><span>뮤지엄 스토리</span></a></li>
+                            <li><a href="location_museum.html"><span>뮤지엄 건축</span></a></li>
+                            <li><a href="location_museum.html"><span>MI 소개</span></a></li>
+                            <li><a href="location_museum.html"><span>찾아오시는 길</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="location_museum.html">전시</a>
+                        <ul class="depth2">
+                            <li><a href="location_museum.html"><span>현재 전시</span></a></li>
+                            <li><a href="location_museum.html"><span>과거 전시</span></a></li>
+                            <li><a href="location_museum.html"><span>예정 전시</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="turrell_space.html">공간</a>
+                        <ul class="depth2">
+                            <li><a href="turrell_space.html"><span>제임스 터렐관</span></a></li>
+                            <li><a href="turrell_space.html"><span>명상관</span></a></li>
+                            <li><a href="turrell_space.html"><span>판화공방</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="turrell_space.html">교육·행사</a>
+                        <ul class="depth2">
+                            <li><a href="turrell_space.html"><span>교육 프로그램</span></a></li>
+                            <li><a href="turrell_space.html"><span>문화 행사</span></a></li>
+                            <li><a href="turrell_space.html"><span>월간 일정</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news_info.html">안내</a>
+                        <ul class="depth2">
+                            <li><a href="news_info.html"><span>관람 안내</span></a></li>
+                            <li><a href="news_info.html"><span>뮤지엄 소식</span></a></li>
+                            <li><a href="news_info.html"><span>멤버쉽 안내</span></a></li>
+                            <li><a href="news_info.html"><span>부대 시설</span></a></li>
+                            <li><a href="news_info.html"><span>대관 안내</span></a></li>
+                            <li><a href="news_info.html"><span>홍보</span></a></li>
+                            <li><a href="news_info.html"><span>FAQ</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news_info.html">예약</a>
+                        <ul class="depth2">
+                            <li><a href="news_info.html"><span>단체 예약</span></a></li>
+                            <li><a href="news_info.html"><span>Colorful Night 예약</span></a></li>
+                            <li><a href="news_info.html"><span>명상관 예약</span></a></li>
+                            <li><a href="news_info.html"><span>판화 공방 예약</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="util">
+                <a href="login.html">로그인</a>
+                <a href="login.html">회원가입</a>
+            </div>
+            <div class="lang">
+                <a href="#"><span>KOR</span></a>
+                <a href="#"><span>ENG</span></a>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="section1">
+            <div class="swiper-container main_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                         <a href="#"><img src="images/m_main_slide1.jpg" alt="슬라이더1"></a>
+                    </div>
+                    <div class="swiper-slide slide2">
+                       <a href="#"><img src="images/m_main_slide2.jpg" alt="슬라이더1">
+                        <h3 class="tit_slider">Space Art Nature</h3>
+                        <p class="tit_bottom">Museum SAN</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <a href="#"><img src="images/m_main_slide3.jpg" alt="슬라이더2">
+                        <h3 class="tit_slider">Space Art Nature</h3>
+                        <p class="tit_bottom">Museum SAN</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="section2">
+            <h2 class="tit_section">공간</h2>
+            <div class="swiper-container section2_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h3>제임스터렐관</h3>
+                        <a class="img_wrap" href="index.html">
+                                <img class="img" src="images/m_space_james.jpg" alt="제임스터렐관">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>명상관</h3>
+                        <a class="img_wrap" href="index.html">
+                                <img class="img" src="images/m_space_medi.jpg" alt="명상관">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>판화공방</h3>
+                        <a class="img_wrap" href="index.html">
+                                <img class="img" src="images/m_space_print2.jpg" alt="제임스터렐관">
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+        <section class="section3">
+            <h2 class="tit_section">이벤트&nbsp;&amp;&nbsp;소식</h2>
+            <div class="banner_wrap wrap_top">
+                <div class="banner_list list_left">
+                    <a href="#"><img class="banner" src="images/m_event1.jpg" alt="이벤트1"></a>
+                    <a href="#"><img class="banner" src="images/m_event2.jpg" alt="이벤트2"></a>
+                </div>
+                <div class="banner_list list_right">
+                    <a href="#"><img class="banner" src="images/m_event3.jpg" alt="이벤트3"></a>
+                    <a href="#"><img class="banner" src="images/m_event4.jpg" alt="이벤트4"></a>
+                </div>
+            </div>
+            <div class="banner_wrap wrap_bottom">
+                <div class="banner_list list_bottom_left">
+                        <a href="#"><img class="banner" src="images/m_event5.jpg" alt="이벤트5"></a>
+                        <a href="#"><img class="banner" src="images/m_event6.jpg" alt="이벤트6"></a>
+                    </div>
+                <div class="banner_list list_bottom_right">
+                        <a href="#"><img class="banner" src="images/m_event7.jpg" alt="이벤트7"></a>
+                        <a href="#"><img class="banner" src="images/m_event8.jpg" alt="이벤트8"></a>
+                </div>
+            </div>
+            <div class="btn_box">
+                <button class="btn_more" type="button" title="소식 더보기">소식 더보기<span></span></button> 
+            </div>
+        </section>
+        <section class="section4">
+            <div class="section4_wrap">
+                <h2 class="tit_section">교육&nbsp;&amp;&nbsp;프로그램</h2>
+                <ul class="section4_list">
+                    <li>
+                        <a href="#">
+                            <img src="images/m_edu_1.jpg" alt="머그컵">
+                            <div class="txt_box">
+                                <p>나만의 드로잉<br>머그컵 만들기</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m_edu_2.jpg" alt="핸드프린팅">
+                            <div class="txt_box">
+                                <p>레터프레스로<br>만드는<br>나만의 명함</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m_edu_3.jpg" alt="드로잉">
+                            <div class="txt_box">
+                                <p>작가와 관객이<br>함께 만드는<br>참여 프로젝트</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section5">
+            <h2 class="tit_section">미디어</h2>
+            <div class="media_wrap">
+                <ul class="media_top">
+                    <li>
+                        <a class="tag_box" href="https://www.facebook.com/search/posts/?q=%EB%AE%A4%EC%A7%80%EC%97%84%EC%82%B0&amp;epa=SERP_TAB">
+                            <p class="tag">#원주시티투어<br>#쉼표버스#뮤지엄산<br>#청바지버스</p>
+                        </a>
+                        <a href="#"><img class="img" src="images/m_media_facebook.jpg" alt="페이스북">
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a class="tag_box" href="https://www.instagram.com/explore/tags/museumsan/">
+                            <p class="tag">#뮤지엄산<br>#안도타다오<br>#andotadao</p>
+                        </a>
+                        <a href="#"><img class="img" src="images/m_media_instsagram.jpg" alt="인스타그램">
+                        </a>
+                    </li>
+                </ul>
+                <div class="media_mid">
+                    <div class="youtube">
+                        <div class="youtube_inner">
+                            <iframe src="https://www.youtube.com/embed/DkpDhXiC8rc" title="뮤지엄산 유튜브" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_bottom">    
+                    <div class="press">
+                        <h4>PRESS</h4>
+                        <a href="#"><span class="more">더보기</span></a>
+                        <ul class="press_inner">
+                            <li><a href="index.html"><span>[강원도민일보] 뮤지엄산 명상관, 웰니스 관광지 선정</span></a></li>
+                            <li><a href="index.html"><span>[보그코리아] 자연에 둘러싸여 느긋한  시간을 보낼 수 있는 갤러리 4</span></a></li>
+                            <li><a href="index.html"><span>[뉴스1] 여름밤 뮤지엄산이 선사하는 선물... 30일 찾아가는 음악회</span></a></li>
+                            <li><a href="index.html"><span>[코리아중앙데일리] Queitly opens its own meditative space</span></a></li>
+                            <li><a href="index.html"><span>[메종] 뮤지엄 산, 명상에 들다</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+            <div class="footer_left">
+                <div class="footer_top">
+                        <ul class="list_top">
+                            <li><a href="index.html">이용약관</a></li>
+                            <li><a href="index.html">Contact Us</a></li>
+                            <li><a class="btn_pc" href="http://kjh3420.dothome.co.kr/museumsan/">PC버전</a></li>
+                        </ul>
+                        <ul class="list_bottom">
+                            <li><a href="index.html"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="index.html">이메일무단수집거부</a></li>
+                        </ul>
+                </div>
+                <div class="footer_bottom">
+                    <address>26357 강원도 원주시 지정면 오크밸리 2길 260</address>
+                    <p class="copyright">COPYRIGHT ⓒ Museum SAN ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="index.html"><img src="images/m_logo_footer.png" alt="로고"></a>
+            </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
